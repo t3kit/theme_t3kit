@@ -1,0 +1,26 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        slider {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.description
+            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/slider.gif
+            tt_content_defValues {
+                CType = contentElementSlider
+            }
+        }
+    }
+    show := addToList(slider)
+}
+
+# Use layout field to customize Layout select-box on contentElementSlider
+TCEFORM.tt_content.layout {
+    types {
+        contentElementSlider {
+            # Based on that the default items still exists.
+            removeItems = 1,2,3
+            altLabels {
+                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
+            }
+        }
+    }
+}

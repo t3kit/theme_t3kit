@@ -1,0 +1,16 @@
+#############################################
+# Colors: Color constants
+#############################################
+
+# customsubcategory=main_colors=Main colors
+
+
+# Main colors
+# cat=colors,basic/main_colors/; type=color; label= Main Color
+themes.configuration.colors.mainColor = #66BD29
+
+# cat=colors,basic/main_colors/; type=color; label= Main Body Color
+themes.configuration.colors.mainBodyBg = #FFFFFF
+
+# cat=colors,basic/main_colors/; type=color; label= Main Text Color
+themes.configuration.colors.mainTextColor = #000000

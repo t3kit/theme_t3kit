@@ -1,0 +1,24 @@
+tt_content {
+    imageTextLink =< lib.fluidContent
+    imageTextLink {
+        templateName = imageTextLink
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+                as = media
+            }
+            20 = T3kit\T3kitExtensionTools\DataProcessing\FlexFormProcessor
+            20 {
+                fieldName = pi_flexform
+                as = settings
+            }
+            30 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+            30 {
+                classMappings {
+                    0 =
+                }
+            }
+        }
+    }
+}

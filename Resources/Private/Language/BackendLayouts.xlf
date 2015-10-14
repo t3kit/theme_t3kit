@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="themes_gridelements">
+        <header/>
+        <body>
+
+            <trans-unit id="default">
+                <source>Default</source>
+            </trans-unit>
+
+            <trans-unit id="content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="content_empty">
+                <source>Content Empty</source>
+            </trans-unit>
+            <trans-unit id="content_menu">
+                <source>Content Menu</source>
+            </trans-unit>
+            <trans-unit id="content_menu_sidebar">
+                <source>Content Menu Sidebar</source>
+            </trans-unit>
+            <trans-unit id="content_sidebar">
+                <source>Content Sidebar</source>
+            </trans-unit>
+            <trans-unit id="content_sidebar_menu">
+                <source>Content Sidebar Menu</source>
+            </trans-unit>
+            <trans-unit id="content_special">
+                <source>Content Special</source>
+            </trans-unit>
+            <trans-unit id="content_startsite">
+                <source>Content Startsite</source>
+            </trans-unit>
+
+            <trans-unit id="menu_content">
+                <source>Menu Content</source>
+            </trans-unit>
+            <trans-unit id="menu_content_sidebar">
+                <source>Menu Content Sidebar</source>
+            </trans-unit>
+            <trans-unit id="menu_sidebar_content">
+                <source>Menu Sidebar Content</source>
+            </trans-unit>
+
+            <trans-unit id="sidebar_content">
+                <source>Sidebar Content</source>
+            </trans-unit>
+            <trans-unit id="sidebar_content_menu">
+                <source>Sidebar Content Menu</source>
+            </trans-unit>
+            <trans-unit id="sidebar_menu_content">
+                <source>Sidebar Menu Content</source>
+            </trans-unit>
+
+            <trans-unit id="area_top">
+                <source>Top Content</source>
+            </trans-unit>
+            <trans-unit id="area_menu">
+                <source>Menu</source>
+            </trans-unit>
+            <trans-unit id="area_content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="area_sidebar">
+                <source>Sidebar</source>
+            </trans-unit>
+            <trans-unit id="area_extended">
+                <source>Extended</source>
+            </trans-unit>
+            <trans-unit id="area_unused">
+                <source>Unused Elements</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

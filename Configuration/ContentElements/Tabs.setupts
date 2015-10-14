@@ -1,0 +1,23 @@
+tt_content {
+    tabs =< lib.fluidContent
+    tabs {
+        templateName = Tabs
+
+        dataProcessing {
+
+            10 = T3kit\T3kitExtensionTools\DataProcessing\FlexFormProcessor
+            10 {
+                fieldName = pi_flexform
+                as = settings
+            }
+
+            1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+            1910 {
+                classMappings {
+                    0 = nav nav-tabs
+                    1 = nav nav-pills
+                }
+            }
+        }
+    }
+}

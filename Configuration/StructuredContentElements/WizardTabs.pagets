@@ -1,0 +1,5 @@
+mod.wizards.newContentElement.wizardItems {
+    structuredContentElements {
+        header = LLL:EXT:theme_t3kit/Resources/Private/Language/StructuredContentElements.xlf:tab.structuredContentElements
+    }
+}

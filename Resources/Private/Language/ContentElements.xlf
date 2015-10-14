@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit">
+        <header/>
+        <body>
+            <trans-unit id="tt_content.palette.imageSize">
+                <source>Size of images</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageWidth">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageHeight">
+                <source>Height</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageMaxWidth">
+                <source>Max width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageMaxHeight">
+                <source>Max height</source>
+            </trans-unit>
+
+            <trans-unit id="tt_content.tabs.settings">
+                <source>Additional settings</source>
+            </trans-unit>
+
+            <trans-unit id="tab.contentElements">
+                <source>Content elements</source>
+            </trans-unit>
+
+            <trans-unit id="slider.title">
+                <source>Slider</source>
+            </trans-unit>
+            <trans-unit id="slider.description">
+                <source>Slider with images and optional texts and link</source>
+            </trans-unit>
+            <trans-unit id="slider.tabs.slides">
+                <source>Slides</source>
+            </trans-unit>
+
+            <trans-unit id="bigIconTextButton.title">
+                <source>Icon,Text and Link</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.description">
+                <source>Big icon, header, text and link</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.buttonText">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.iconClass">
+                <source>Icon</source>
+            </trans-unit>
+
+            <trans-unit id="iconTextButton.title">
+                <source>Icon,Text and Button</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.description">
+                <source>Icon,Text and Button</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.buttonText">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.iconClass">
+                <source>Icon</source>
+            </trans-unit>
+
+            <trans-unit id="imageTextLink.title">
+                <source>Image text and link</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.description">
+                <source>Image text and link</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.linkText">
+                <source>Link text</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.tabs.media">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+
+            <trans-unit id="accordion.title">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="accordion.description">
+                <source>Accordion, added records will be used as "accordion", and the record inside "accordian" will be rendered as content.</source>
+            </trans-unit>
+            <trans-unit id="accordion.records_formlabe">
+                <source>Records to use as "accordions", title is displayed as accordian expand/collapse link, and their child records will be rendered inside the accordion.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode">
+                <source>Accordion mode</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenSingleSelect">
+                <source>First item is expanded at load, only one item can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allClosedMultiSelect">
+                <source>All items are collapsed at load, multiple items can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allClosedSingleSelect">
+                <source>All items are collapsed at load, only one item can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenMultiSelect">
+                <source>First item is expanded at load, multiple items can be expanded at the same time.</source>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allOpen">
+                <source>All items are expanded at load.</source>
+            </trans-unit>
+
+            <trans-unit id="logoCarousel.title">
+                <source>Logo Carousel</source>
+            </trans-unit>
+            <trans-unit id="logoCarousel.description">
+                <source>Carousel with images (logos) and optional link</source>
+            </trans-unit>
+            <trans-unit id="logoCarousel.tabs.logos">
+                <source>Logos</source>
+            </trans-unit>
+
+            <trans-unit id="quote.title">
+                <source>Quote</source>
+            </trans-unit>
+            <trans-unit id="quote.description">
+                <source>Quote with optional footer and link</source>
+            </trans-unit>
+            <trans-unit id="quote.linkText">
+                <source>Link text</source>
+            </trans-unit>
+            <trans-unit id="quote.header">
+                <source>Name, Title</source>
+            </trans-unit>
+            <trans-unit id="quote.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="quote.bodytext">
+                <source>Quote</source>
+            </trans-unit>
+
+            <trans-unit id="tabs.title">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="tabs.description">
+                <source>Tabs with content</source>
+            </trans-unit>
+            <trans-unit id="tabs.layout.0">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="tabs.layout.1">
+                <source>Pills</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

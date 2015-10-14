@@ -1,0 +1,33 @@
+mod.web_layout.BackendLayouts {
+    Content {
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/Content.png
+        name = Content
+        title = Content
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_content
+                                rowspan = 1
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_unused
+                                rowspan = 1
+                                colPos = -2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

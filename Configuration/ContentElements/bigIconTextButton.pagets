@@ -1,0 +1,32 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        bigIconTextButton {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.description
+            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/bigIconTextButton.gif
+            tt_content_defValues {
+                CType = bigIconTextButton
+            }
+        }
+    }
+    show := addToList(bigIconTextButton)
+}
+
+TCEFORM.tt_content.pi_flexform.bigIconTextButton.sDEF.iconClass {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.iconClass_none
+    }
+}
+
+# Use layout field to customize Layout select-box on contentElementSlider
+TCEFORM.tt_content.layout {
+    types {
+        bigIconTextButton {
+            # Based on that the default items still exists.
+            removeItems = 1,2,3
+            altLabels {
+                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
+            }
+        }
+    }
+}

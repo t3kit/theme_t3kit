@@ -1,0 +1,33 @@
+# Breadcrumb with itemscope and Bootstrap classes
+#
+# Constants:
+# {$themes.configuration.menu.breadcrumb.prefix}
+# {$themes.configuration.menu.breadcrumb.divider}
+# {$themes.configuration.menu.breadcrumb.cssClasses}
+#
+# Usage:
+# <f:cObject typoscriptObjectPath="lib.menu.breadcrumb"/>
+#
+lib.menu.breadcrumb = COA
+lib.menu.breadcrumb {
+	10 = HMENU
+	10 {
+		special = rootline
+		special.range = 0|-1
+		includeNotInMenu = {$themes.configuration.menu.breadcrumb.includeNotInMenu}
+		excludeUidList = {$themes.configuration.menu.breadcrumb.excludeUidList}
+		1 = TMENU
+		1 {
+			noBlur = 1
+			NO {
+				stdWrap.htmlSpecialChars = 1
+				doNotLinkIt = |*| 0 |*| 1
+				linkWrap = <li class="breadcrumbs__list-item"><span class="icons icon-t3-home"></span>|</li> |*| <li class="breadcrumbs__list-item">|</li> |*| <li class="breadcrumbs__list-item _active">|</li>
+				ATagParams = itemprop="url" class="breadcrumbs__list-link" title="{field:subtitle//field:title}"
+				ATagParams.insertData = 1
+				stdWrap.wrap = <span itemprop="title">|</span>
+			}
+			wrap = <div class="breadcrumbs"><div class="breadcrumbs__wrp container"><ol class="breadcrumbs__list">|</ol></div></div>
+		}
+	}
+}

@@ -1,0 +1,29 @@
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:themes_gridelements/Configuration/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library/" extensions="setupts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/Elements/TypoScript/" extensions="setupts">
+
+
+# Add this extensions rootPaths to lib.fluidcontent (fluid_styled_content)
+lib.fluidContent {
+    templateRootPaths {
+        1910 =  EXT:theme_t3kit/Resources/Private/Templates/ContentElements
+        1911 =  EXT:theme_t3kit/Resources/Private/Templates/FluidStyledContent
+    }
+    partialRootPaths {
+        1910 =  EXT:theme_t3kit/Resources/Private/Partials/ContentElements
+        1911 =  EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent
+    }
+    layoutRootPaths {
+        1910 =  EXT:theme_t3kit/Resources/Private/Layouts/ContentElements
+        1911 =  EXT:theme_t3kit/Resources/Private/Layouts/FluidStyledContent
+    }
+}
+# Overrides of fluid_styled_content
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent/" extensions="setupts">
+# Add our content elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements/" extensions="setupts">
+
+# Extensions
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/IndexedSearch/TypoScript/setup.txt">

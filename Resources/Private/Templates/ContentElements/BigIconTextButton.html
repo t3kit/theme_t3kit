@@ -1,0 +1,25 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:layout name="ContentFooter" />
+    <f:debug>{_all}</f:debug>
+
+    <f:section name="content">
+    <!-- theme_t3kit: Templates/ContentElements/bigIconTextButton.html [begin] -->
+    <div class="big-icon-text-btn {layoutClass}">
+        <f:if condition="{settings.iconClass}">
+            <span class="big-icon-text-btn__icon icons icon-{settings.iconClass}"></span>
+        </f:if>
+        <f:if condition="{data.header}">
+            <h3 class="big-icon-text-btn__header">{data.header}</h3>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <p class="big-icon-text-btn__p">{data.bodytext}</p>
+        </f:if>
+        <f:if condition="{data.header_link}">
+            <f:link.typolink parameter="{data.header_link}" class="big-icon-text-btn__link btn btn-default">{data.subheader}</f:link.typolink>
+        </f:if>
+    </div>
+    <!-- theme_t3kit: Templates/ContentElements/bigIconTextButton.html [end] -->
+    </f:section>
+</div>

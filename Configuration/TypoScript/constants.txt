@@ -1,0 +1,5 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library" extensions="constantsts">
+
+# Base configuration
+themes.configuration.siteName = CORE Theme
+

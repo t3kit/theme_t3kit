@@ -1,0 +1,51 @@
+page {
+    includeCSS {
+        bootstrap = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/bootstrap.less
+        bootstrap {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        components = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/components.css
+        components {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        header = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/header.less
+        header {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        /*
+        headerMin = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/headerMin.less
+        headerMin {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+        */
+        maincss = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/main.less
+        maincss {
+            excludeFromConcatenation = 1
+            disableCompression = 1
+        }
+    }
+# includeCSS {
+ #        bootstrap = EXT:theme_t3kit/Resources/Private/Dyncss/bootstrap.less
+ #        bootstrap {
+ #            excludeFromConcatenation = 1
+ #            disableCompression = 1
+ #        }
+ #        components = EXT:theme_t3kit/Resources/Private/Dyncss/components.less
+ #        components {
+ #            excludeFromConcatenation = 1
+ #            disableCompression = 1
+ #        }
+	# 	maincss = EXT:theme_t3kit/Resources/Private/Dyncss/maincss.less
+ #        maincss {
+ #            excludeFromConcatenation = 1
+ #            disableCompression = 1
+ #        }
+	# }
+}
+
+[globalVar = LIT:1 = {$themes.mode.isProduction}]
+[global]

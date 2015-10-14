@@ -1,0 +1,32 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        quote {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.description
+            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/quote.gif
+            tt_content_defValues {
+                CType = quote
+            }
+        }
+    }
+    show := addToList(quote)
+}
+
+TCEFORM.tt_content.pi_flexform.quote.sDEF.iconClass {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.flexform.iconClass_none
+    }
+}
+
+# Use layout field to customize Layout select-box on contentElementSlider
+TCEFORM.tt_content.layout {
+    types {
+        quote {
+            # Based on that the default items still exists.
+            removeItems = 1,2,3
+            altLabels {
+                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
+            }
+        }
+    }
+}

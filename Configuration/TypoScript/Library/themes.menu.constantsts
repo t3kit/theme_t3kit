@@ -1,0 +1,95 @@
+#############################################
+# Menu: Menu constants
+#############################################
+
+# customsubcategory=main_menu_view=Main Menu View
+
+
+# Main Menu View
+# cat=menu,basic/main_menu_view/; type=string; label= Nav Height
+themes.configuration.colors.navHeight = 64px
+
+# cat=menu,basic/main_menu_view/; type=color; label= Navigation Link Color
+themes.configuration.colors.navLinkColor = #000000
+
+# cat=menu,basic/main_menu_view/; type=color; label= Navigation Link Hover Background
+themes.configuration.colors.navLinkHoverBackground = #EEEEEE
+
+
+
+# Menu top
+#############################################
+# cat=menu,advanced/menu_top/; type=string; label= Menu top: Exclude uid list (12,13,...)
+themes.configuration.menu.top.excludeUidList =
+
+# cat=menu,expert/menu_top/; type=string; label= Menu top: Prefix for each menu item (for example: <span class="glyphicon glyphicon-chevron-right"></span>)
+themes.configuration.menu.top.prefix =
+
+# cat=menu,advanced/menu_top/; type=int+; label= Menu top: Container pid where the menu items are located
+themes.configuration.menu.top.containerPid = 8
+
+# cat=menu,expert/menu_top/; type=string; label= Menu top: CSS classes
+themes.configuration.menu.top.cssClasses = list-inline
+
+# cat=menu,expert/menu_top/; type=string; label= Menu top: Divider (for example: <li class="divider"> &#124; </li>, &#124; is equal to a | pipe)
+themes.configuration.menu.top.divider = <li class="divider"> &#124; </li>
+
+# cat=menu,advanced/menu_top/; type=options[0,1]; label= Menu top: Include also items which are marked as 'include not in menu'
+themes.configuration.menu.top.includeNotInMenu = 0
+
+
+
+# Menu main
+#############################################
+
+# cat=menu,advanced/menu_main/; type=string; label= Menu main: Exclude uid list (12,13,...)
+themes.configuration.menu.main.excludeUidList =
+
+# cat=menu,expert/menu_main/; type=string; label= Menu main: Prefix for each menu item in first entry level (for example: <span class="glyphicon glyphicon-chevron-right"></span>)
+themes.configuration.menu.main.prefixFirstLevel =
+
+# cat=menu,expert/menu_main/; type=string; label= Menu main: Prefix for each menu item in second entry level (for example: <span class="glyphicon glyphicon-chevron-right"></span>)
+themes.configuration.menu.main.prefixSecondLevel =
+
+# cat=menu,expert/menu_main/; type=options[0,1]; label= Menu top: Do not link first level pages, which have sub-pages
+themes.configuration.menu.main.doNotLinkFirstLevelPagesWithSubPages = 1
+
+
+
+# Menu sub
+#############################################
+
+# cat=menu,advanced/menu_sub/; type=string; label= Menu sub: Exclude uid list (12,13,...)
+themes.configuration.menu.sub.excludeUidList =
+
+# cat=menu,advanced/menu_sub/; type=options[0,1]; label= Menu sub: Include also items which are marked as 'include not in menu'
+themes.configuration.menu.sub.includeNotInMenu = 0
+
+# cat=menu,expert/menu_sub/; type=string; label= Menu sub: CSS classes
+themes.configuration.menu.sub.cssClasses = nav nav-pills nav-stacked
+
+# cat=menu,expert/menu_sub/; type=string; label= Menu sub: Prefix for each menu item in first entry level (for example: <span class="glyphicon glyphicon-chevron-right"></span>)
+themes.configuration.menu.sub.prefixFirstLevel =
+
+# cat=menu,expert/menu_sub/; type=string; label= Menu sub: Prefix for each menu item in second entry level (for example: <span class="glyphicon glyphicon-chevron-right"></span>)
+themes.configuration.menu.sub.prefixSecondLevel =
+
+
+
+
+# Menu breadcrumb
+#############################################
+# cat=menu,expert/menu_breadcrumb/; type=string; label= Menu breadcrumb: Prefix
+themes.configuration.menu.breadcrumb.prefix = :&nbsp;
+
+# cat=menu,expert/menu_breadcrumb/; type=string; label= Menu breadcrumb: Divider
+themes.configuration.menu.breadcrumb.divider = &gt;&nbsp;
+
+# cat=menu,expert/menu_breadcrumb/; type=string; label= Menu breadcrumb: CSS classes
+themes.configuration.menu.breadcrumb.cssClasses = list-inline
+
+# cat=menu,advanced/menu_breadcrumb/; type=options[0,1]; label= Menu breadcrumb: Include also items which are marked as 'include not in menu'
+themes.configuration.menu.breadcrumb.includeNotInMenu = 0
+
+# cat=menu,advanced/menu_breadcrumb/; type=string; label= Menu breadcrumb: Exclude uid list (12,13,...)
+themes.configuration.menu.breadcrumb.excludeUidList =

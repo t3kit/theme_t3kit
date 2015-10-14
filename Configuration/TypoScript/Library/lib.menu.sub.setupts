@@ -1,0 +1,48 @@
+lib.menu.sub = HMENU
+lib.menu.sub.entryLevel = 1
+lib.menu.sub.includeNotInMenu = {$themes.configuration.menu.sub.includeNotInMenu}
+lib.menu.sub.excludeUidList = {$themes.configuration.menu.sub.excludeUidList}
+lib.menu.sub.wrap = <div class="sub-navigation"><div class="sub-navigation__wrp"> | </div></div>
+lib.menu.sub.1 = TMENU
+lib.menu.sub.1 {
+	expAll = 0
+	NO = 1
+	NO {
+		# wrapItemAndSub.insertData = 1
+		# wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
+        ATagParams = class="sub-navigation__link"
+    }
+    CUR < .NO
+    CUR {
+        # wrapItemAndSub = <li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
+        ATagParams = class="sub-navigation__link _curent"
+    }
+    ACT < .CUR
+    ACT {
+        # wrapItemAndSub = <li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
+        ATagParams = class="sub-navigation__link _active"
+    }
+}
+lib.menu.sub.2 < 1
+lib.menu.sub.2 = TMENU
+lib.menu.sub.2 {
+    # wrap = <ul class="sub"> | </ul>
+    NO = 1
+    NO {
+        # wrapItemAndSub.insertData = 1
+        # wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>
+        ATagParams = class="sub-navigation__link _level-2"
+    }
+
+    CUR < .NO
+    CUR {
+        # wrapItemAndSub = <li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>
+        ATagParams = class="sub-navigation__link _level-2 _curent"
+    }
+    ACT < .CUR
+    ACT {
+        # wrapItemAndSub = <li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
+        ATagParams = class="sub-navigation__link _level-2 _active"
+    }
+
+}

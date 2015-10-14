@@ -1,0 +1,41 @@
+mod.web_layout.BackendLayouts {
+    ContentMenu {
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/ContentMenu.png
+        name = ContentMenu
+        title = ContentMenu
+        config {
+            backend_layout {
+                colCount = 4
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_content
+                                rowspan = 1
+                                colspan = 3
+                                colPos = 0
+                            }
+                            2 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_menu
+                                rowspan = 1
+                                colspan = 1
+                                colPos = 1
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_unused
+                                rowspan = 1
+                                colspan = 4
+                                colPos = -2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

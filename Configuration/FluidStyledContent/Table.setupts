@@ -1,0 +1,16 @@
+tt_content {
+    table {
+        dataProcessing {
+            1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+            1910 {
+                classMappings {
+                    0 = table
+                    1 = table table-striped
+                    2 = table table-striped table-bordered
+                    3 = table table-striped table-bordered table-condensed
+                    4 = table table-bordered table-condensed table-hover
+                }
+            }
+        }
+    }
+}

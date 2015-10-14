@@ -1,0 +1,18 @@
+#############################################
+# Footer: Footer constants
+#############################################
+
+# customsubcategory=footer_view=Footer View
+
+#Footer view
+# cat=footer,basic/footer_view/; type=color; label= Footer Background
+themes.configuration.colors.footerBackground = #323232
+
+# cat=footer,basic/footer_view/; type=color; label= Footer Color
+themes.configuration.colors.footerColor = #ACACAC
+
+# cat=footer,basic/footer_view/; type=color; label= Footer Link Color
+themes.configuration.colors.footerLinkColor = #ACACAC
+
+# cat=footer,basic/footer_view/; type=color; label= Footer Link Hover Color
+themes.configuration.colors.footerLinkHoverColor = #8EDB58

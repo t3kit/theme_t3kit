@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+    <f:layout name="Default" />
+    <f:section name="Default">
+    <!-- theme_t3kit: Templates/Theme/TopContentMenuContent.html [begin] -->
+
+    <div class="top-content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <f:render partial="Content/Top" section="Default" arguments="{_all}" />
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <f:render partial="Content/Menu" section="Default" arguments="{_all}" />
+            </div>
+            <div class="col-md-9">
+                <f:render partial="Content/Main" section="Default" arguments="{_all}" />
+            </div>
+        </div>
+    </div>
+
+    <!-- theme_t3kit: Templates/Theme/TopContentMenuContent.html [end] -->
+    </f:section>
+</div>

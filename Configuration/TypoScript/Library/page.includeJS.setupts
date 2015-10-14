@@ -1,0 +1,50 @@
+# Settings for the development system
+
+page {
+    includeJSFooter {
+        jquery = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/jquery.js
+        jquery {
+            external = 0
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        bootstrap = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/bootstrap.js
+        bootstrap {
+            external = 0
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        components = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/components.js
+        components {
+            external = 0
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        header = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/header.js
+        header {
+            external = 0
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        /*
+        headerMin = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/headerMin.js
+        headerMin {
+            external = 0
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+        */
+        mainjs = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/main.js
+        mainjs {
+            external = 0
+            disableCompression = 1
+            excludeFromConcatenation = 1
+        }
+    }
+}
+
+
+# Settings for the production system
+[globalVar = LIT:1 = {$themes.mode.isProduction}]
+
+[global]

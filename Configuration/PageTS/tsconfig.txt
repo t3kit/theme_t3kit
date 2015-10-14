@@ -1,0 +1,27 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/BackendLayouts" extensions="pagets">
+# Overrides of fluid_styled_content
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent" extensions="pagets">
+# Add our content elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements" extensions="pagets">
+
+# Just delete the backendlayouts which arn't required
+#
+#backendlayouts.Content >
+#backendlayouts.ContentMenu >
+#backendlayouts.ContentMenuSidebar >
+#backendlayouts.ContentSidebar >
+#backendlayouts.ContentSidebarMenu >
+#backendlayouts.Empty >
+#backendlayouts.MenuContent >
+#backendlayouts.MenuContentSidebar >
+#backendlayouts.MenuSidebarContent >
+#backendlayouts.SidebarContent >
+#backendlayouts.SidebarContentMenu >
+#backendlayouts.SidebarMenuContent >
+#backendlayouts.StartPage >
+#backendlayouts.TopContentContent >
+#backendlayouts.TopContentContentMenu >
+#backendlayouts.TopContentContentSidebar >
+#backendlayouts.TopContentMenuContent >
+#backendlayouts.TopContentMenuContentSidebar >
+#backendlayouts.TopContentSidebarContent >

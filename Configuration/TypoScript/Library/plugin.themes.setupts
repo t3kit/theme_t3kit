@@ -1,0 +1,14 @@
+
+plugin.tx_themes {
+    view {
+        templateRootPaths {
+            300 = EXT:theme_t3kit/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            300 = EXT:theme_t3kit/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            300 = EXT:theme_t3kit/Resources/Private/Layouts/
+        }
+    }
+}

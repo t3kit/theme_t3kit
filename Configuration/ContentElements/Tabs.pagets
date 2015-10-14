@@ -1,0 +1,29 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        tabs {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.description
+            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/tabs.gif
+            tt_content_defValues {
+                CType = tabs
+            }
+        }
+    }
+    show := addToList(tabs)
+}
+
+mod.web_layout.tt_content.preview.tabs = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Tabs.html
+
+# Use layout field to customize Layout select-box on tabs
+TCEFORM.tt_content.layout {
+    types {
+        tabs {
+            # Based on that the default items still exists.
+            removeItems = 2,3
+            altLabels {
+                0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.0
+                1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.1
+            }
+        }
+    }
+}

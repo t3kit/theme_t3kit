@@ -1,0 +1,42 @@
+plugin.tx_dyncss.overrides {
+
+    main-color = TEXT
+    main-color.value = {$themes.configuration.colors.mainColor}
+
+    main-body-bg = TEXT
+    main-body-bg.value = {$themes.configuration.colors.mainBodyBg}
+
+    main-text-color = TEXT
+    main-text-color.value = {$themes.configuration.colors.mainTextColor}
+
+    header-top-height = TEXT
+    header-top-height.value = {$themes.configuration.colors.headerTopHeight}
+
+    header-top-color = TEXT
+    header-top-color.value = {$themes.configuration.colors.headerTopColor}
+
+    header-border-color = TEXT
+    header-border-color.value = {$themes.configuration.colors.headerBorderColor}
+
+    nav-height = TEXT
+    nav-height.value = {$themes.configuration.colors.navHeight}
+
+    nav-link-color = TEXT
+    nav-link-color.value = {$themes.configuration.colors.navLinkColor}
+
+    nav-link-hover-background = TEXT
+    nav-link-hover-background.value = {$themes.configuration.colors.navLinkHoverBackground}
+
+    footer-background = TEXT
+    footer-background.value = {$themes.configuration.colors.footerBackground}
+
+    footer-color = TEXT
+    footer-color.value = {$themes.configuration.colors.footerColor}
+
+    footer-link-color = TEXT
+    footer-link-color.value = {$themes.configuration.colors.footerLinkColor}
+
+    footer-link-hover-color = TEXT
+    footer-link-hover-color.value = {$themes.configuration.colors.footerLinkHoverColor}
+
+}

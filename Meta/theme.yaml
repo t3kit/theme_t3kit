@@ -1,0 +1,22 @@
+# Name and description of the theme (required)
+title            : t3kit theme
+version          : 0.0.1
+description      :  |
+  A t3kit theme template -
+  This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings.
+
+# Keywords (optional)
+keywords:
+  - t3kit
+  - theme
+  - responsive design
+
+# Constants categories which are used for constants in this theme
+constants:
+  availableCategories: [theme,colors,font,meta,pages,container,slider]
+
+# Screenshots for the preview gallery (optional, multiple possible)
+screenshots:
+  -
+    file           : EXT:theme_t3kit/Meta/Screenshots/screenshot.png
+    caption        : t3kit theme

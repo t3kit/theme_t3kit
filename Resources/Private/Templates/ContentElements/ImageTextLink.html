@@ -1,0 +1,36 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:layout name="ContentFooter" />
+    <f:debug>{_all}</f:debug>
+    <f:debug>{data}</f:debug>
+
+    <f:section name="content">
+    <!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
+    <div class="img-text-link {layoutClass}">
+        <f:if condition="{media}">
+            <f:for each="{media}" as="mediaItem" iteration="mediaIteration">
+                <f:if condition="{mediaIteration.isFirst}">
+                    <f:media
+                        file="{mediaItem}"
+                        width="{data.imagewidth}"
+                        height="{data.imageheight}"
+                        alt="{mediaItem.media.alternative}"
+                        title="{mediaItem.media.title}"
+                    />
+                </f:if>
+            </f:for>
+        </f:if>
+        <f:if condition="{data.header}">
+            <h3 class="img-text-link__header">{data.header}</h3>
+        </f:if>
+        <f:if condition="{data.bodytext}">
+            <p class="img-text-link__p">{data.bodytext}</p>
+        </f:if>
+        <f:if condition="{data.header_link}">
+            <f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link">{data.subheader}</f:link.typolink>
+        </f:if>
+    </div>
+    <!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [end] -->
+    </f:section>
+</div>

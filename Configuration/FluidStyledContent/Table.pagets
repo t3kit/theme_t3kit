@@ -1,0 +1,17 @@
+# Added custom Table.html which adds classes in template depending on layout
+TCEFORM.tt_content.layout {
+    types {
+        table {
+            # Based on that the default items still exists.
+            altLabels {
+                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
+                1 = Striped
+                2 = Striped Bordered
+                3 = Striped Bordered Condesed
+            }
+            addItems {
+                4 = Bordered Condesed Hover
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+mod.web_layout.BackendLayouts {
+    TopContentMenuContentSidebar {
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/TopContentMenuContentSidebar.png
+        name = TopContentMenuContentSidebar
+        title = TopContentMenuContentSidebar
+        config {
+            backend_layout {
+                colCount = 5
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_top
+                                rowspan = 1
+                                colspan = 1
+                                colPos = 3
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_menu
+                                rowspan = 1
+                                colspan = 1
+                                colPos = 1
+                            }
+                            2 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_content
+                                rowspan = 1
+                                colspan = 3
+                                colPos = 0
+                            }
+                            3 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_sidebar
+                                rowspan = 1
+                                colspan = 1
+                                colPos = 2
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_unused
+                                rowspan = 1
+                                colspan = 5
+                                colPos = -2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

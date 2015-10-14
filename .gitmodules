@@ -1,0 +1,3 @@
+[submodule "Resources/Public/felayout_t3kit"]
+	path = Resources/Public/felayout_t3kit
+	url = git@github.com:t3kit/felayout_t3kit.git

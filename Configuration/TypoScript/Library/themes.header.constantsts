@@ -1,0 +1,35 @@
+#############################################
+# Header: Header constants
+#############################################
+
+# customsubcategory=header_view=Header View
+# customsubcategory=header_top=Header Top
+# customsubcategory=header_middle=Header Middle
+
+
+#Header view
+# cat=header,basic/header_view/; type=string; label= Header Top Height
+themes.configuration.colors.headerTopHeight = 50px
+
+# cat=header,basic/header_view/; type=color; label= Header Top Color
+themes.configuration.colors.headerTopColor = #999999
+
+# cat=header,basic/header_view/; type=color; label= Header Border Color
+themes.configuration.colors.headerBorderColor = #EEEEEE
+
+
+#Header Middle
+# cat=header,basic/header_middle/; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
+themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/images/logo.png
+
+# cat=header,basic/header_middle/; type=int+; label= Header-Logo: Width
+themes.configuration.header.logo.main.width = 209
+
+
+#Header Top
+# cat=header,basic/header_top/; type=string; label= Header phonenumber
+themes.configuration.header.phone = 555-555555
+
+# cat=header,basic/header_top/; type=string; label= Header E-Mailaddress
+themes.configuration.header.email = info@info.se
+

@@ -1,0 +1,12 @@
+plugin.tx_themes {
+	_LOCAL_LANG {
+		default {
+			languageMenu_label = Website-Sprache
+			breadcrumb_label = You are here
+			imprint_label = Imprint
+			quickSearch_label = Search
+			topLink_label = Top
+			printLink_label = Print
+		}
+	}
+}
