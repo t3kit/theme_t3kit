@@ -21,20 +21,13 @@
                         <a class="header-top__contact-email-link" href="mailto:{theme:constant(constant: 'themes.configuration.header.email')}">{theme:constant(constant: 'themes.configuration.header.email')}</a>
                     </div>
                 </div>
-                <div class="header-top__language-menu">
-                    <a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#">
-                        <span class="main-flag-icon flag-icon flag-icon-gb"></span>
-                    </a>
-                    <div class="header-top__language-menu-box js__header-top__language-menu-box">
-                        <a href="" class="header-top__language-menu-box-item active"><span class="flag-icon flag-icon-gb"></span> English</a>
-                        <a class="header-top__language-menu-box-item" href=""><span class="flag-icon flag-icon-se"></span> Swedish</a>
-                        <a class="header-top__language-menu-box-item" href=""><span class="flag-icon flag-icon-dk"></span> Danish</a>
-                        <a class="header-top__language-menu-box-item" href=""><span class="flag-icon flag-icon-fi"></span> Finnish</a>
-                        <a class="header-top__language-menu-box-item" href=""><span class="flag-icon flag-icon-de"></span> German</a>
-                        <a class="header-top__language-menu-box-item" href=""><span class="flag-icon flag-icon-no"></span> Norwegian</a>
-                        <a class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></a>
-                    </div>
-                </div>
+                <theme:widget.languageMenu
+                        availableLanguages="{theme:constant(constant: 'themes.languages.available')}"
+                        currentLanguageUid="{theme:constant(constant: 'themes.languages.current.uid')}"
+                        defaultLanguageIsoCodeShort="{theme:constant(constant: 'themes.languages.default.isoCodeShort')}"
+                        defaultLanguageLabel="{theme:constant(constant: 'themes.languages.default.label')}"
+                        defaultLanguageFlag="{theme:constant(constant: 'themes.languages.default.flag')}"
+                        />
                 <div class="main-navigation__search-btn-wrp _header-top-search-btn">
                     <a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
                 </div>
