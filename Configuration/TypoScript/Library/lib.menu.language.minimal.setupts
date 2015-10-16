@@ -1,0 +1,17 @@
+lib.menu.language.minimal =< lib.fluidContent
+lib.menu.language.minimal {
+    templateName = LanguageMenuMinimal
+
+    dataProcessing {
+
+        10 = T3kit\T3kitExtensionTools\DataProcessing\LanguagesProcessor
+        10 {
+            as = languages
+            availableLanguages= {$themes.languages.available}
+            currentLanguageUid= {$themes.languages.current.uid}
+            defaultLanguageIsoCode={$themes.languages.default.isoCodeShort}
+            defaultLanguageFlag={$themes.languages.default.flag}
+            defaultLanguageLabel={$themes.languages.default.label}
+        }
+    }
+}

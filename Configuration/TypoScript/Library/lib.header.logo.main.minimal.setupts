@@ -1,0 +1,19 @@
+lib.header.logo {
+	main.minimal = IMAGE
+	main.minimal.file = {$themes.configuration.header.logo.main.file}
+	main.minimal.file.width = {$themes.configuration.header.logo.main.width}
+	#main.minimal.file.height = {$themes.configuration.header.logo.main.minimal.height}
+	main.minimal.titleText = {$themes.configuration.siteName}
+    main.minimal.altText = {$themes.configuration.siteName}
+	main.minimal.altText = {$themes.configuration.siteName}
+    main.minimal.params = class="main-navigation-min__logo-img img-responsive"
+    main.minimal.stdWrap {
+        required = 1
+        typolink {
+            parameter = {$themes.configuration.pages.startsite}
+            parameter.insertData = 1
+            title = {$themes.configuration.siteName}
+            ATagParams = class="header-middle__logo-link"
+        }
+    }
+}

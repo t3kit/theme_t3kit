@@ -1,28 +1,21 @@
 page {
     includeCSS {
-        bootstrap = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/bootstrap.less
+        bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.less
         bootstrap {
             excludeFromConcatenation = 1
             disableCompression = 1
         }
-        components = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/components.css
+        components = {$themes.configuration.felayoutFullPath}/components.css
         components {
             excludeFromConcatenation = 1
             disableCompression = 1
         }
-        header = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/header.less
+        header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerLayout}.less
         header {
             excludeFromConcatenation = 1
             disableCompression = 1
         }
-        /*
-        headerMin = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/headerMin.less
-        headerMin {
-            excludeFromConcatenation = 1
-            disableCompression = 1
-        }
-        */
-        maincss = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/main.less
+        maincss = {$themes.configuration.felayoutFullPath}/main.less
         maincss {
             excludeFromConcatenation = 1
             disableCompression = 1
@@ -30,5 +23,23 @@ page {
     }
 }
 
-[globalVar = LIT:1 = {$themes.mode.isProduction}]
+[globalVar = LIT:0 = {$themes.configuration.feLayoutCssFileExtension}] && [globalVar = LIT:small = {$themes.configuration.feLayoutMode}]
+
+[global]
+
+[globalVar = LIT: = {$themes.configuration.feLayoutCssFileExtension}] && [globalVar = LIT:medium = {$themes.configuration.feLayoutMode}]
+
+[global]
+
+[globalVar = LIT: = {$themes.configuration.feLayoutCssFileExtension}] && [globalVar = LIT:big = {$themes.configuration.feLayoutMode}]
+    includeCSS {
+        bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.css
+        components = {$themes.configuration.felayoutFullPath}/components.css
+        header = {$themes.configuration.felayoutFullPath}/{themes.configuration.headerType}.css
+        maincss = {$themes.configuration.felayoutFullPath}/main.css
+    }
+[global]
+
+[globalVar = LIT: = {$themes.configuration.feLayoutCssFileExtension}] && [globalVar = LIT:multi-site = {$themes.configuration.feLayoutMode}]
+
 [global]

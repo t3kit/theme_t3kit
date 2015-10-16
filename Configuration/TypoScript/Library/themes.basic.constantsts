@@ -1,0 +1,26 @@
+#############################################
+# Basic: Basic constants
+#############################################
+
+# #customcategory=theme=Theme: Basic settings
+
+# General
+#############################################
+
+# Advanced
+#############################################
+
+# Expert
+#############################################
+
+# cat=theme,expert//; type=options[Small=small,Medium=medium,Big=big,Multi-site=multi-site]; label=Felayout project type
+themes.configuration.feLayoutMode = small
+
+# cat=theme,expert//; type=string; label=Path to felayout
+themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit/
+
+# cat=theme,expert//; type=options[Standard=header,Small=headerMin]; label=Header layout
+themes.configuration.headerLayout = header
+
+themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}{$themes.configuration.feLayoutMode}
+

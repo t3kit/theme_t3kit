@@ -1,0 +1,55 @@
+lib.menu.mainMinimal = HMENU
+lib.menu.mainMinimal {
+	entryLevel = 0
+	includeNotInMenu = 0
+	excludeUidList = {$themes.configuration.menu.main.excludeUidList}
+	wrap = <ul class="main-navigation-min__items-list js__main-navigation-min__items-list"> | </ul>
+	1 = TMENU
+	1 {
+		expAll = 1
+		NO = 1
+		NO {
+			wrapItemAndSub.insertData = 1
+			wrapItemAndSub = <li class="main-navigation-min__item js__main-navigation-min__item uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation-min__item-link js__main-navigation-min__item-link"
+        }
+        ACT < .NO
+        ACT {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation-min__item js__main-navigation-min__item  _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation-min__item-link js__main-navigation-min__item-link"
+        }
+        IFSUB < .NO
+        IFSUB {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation-min__item js__main-navigation-min__item _sub uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item _sub uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item _sub uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation-min__item-link js__main-navigation-min__item-link"
+            after = <a href="#" class="main-navigation-min__item-link-mobile js__main-navigation-min__item-link-mobile"></a>
+        }
+        ACTIFSUB < .ACT
+        ACTIFSUB {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation-min__item js__main-navigation-min__item  _sub _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item _sub _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation-min__item js__main-navigation-min__item _sub _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation-min__item-link js__main-navigation-min__item-link"
+            after = <a href="#" class="main-navigation-min__item-link-mobile js__main-navigation-min__item-link-mobile"></a>
+        }
+    }
+    2 = TMENU
+    2 {
+        expAll = 0
+        wrap = <ul class="main-navigation-min__sub-item-list"> | </ul>
+        NO = 1
+        NO {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation-min__sub-item uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation-min__sub-item uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation-min__sub-item uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation-min__sub-item-link"
+        }
+        ACT < .NO
+        ACT {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation-min__sub-item _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation-min__sub-item _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation-min__sub-item _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation-min__sub-item-link"
+        }
+    }
+}
+

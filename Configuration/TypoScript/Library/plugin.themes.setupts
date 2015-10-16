@@ -12,13 +12,3 @@ plugin.tx_themes {
         }
     }
 }
-
-plugin.tx_themes {
-    view {
-        widget {
-            KayStrobach\Themes\ViewHelpers\Widget\LanguageMenuViewHelper {
-                templateRootPath = EXT:theme_t3kit/Resources/Private/Templates/
-            }
-        }
-    }
-}

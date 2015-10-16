@@ -21,13 +21,9 @@
                         <a class="header-top__contact-email-link" href="mailto:{theme:constant(constant: 'themes.configuration.header.email')}">{theme:constant(constant: 'themes.configuration.header.email')}</a>
                     </div>
                 </div>
-                <theme:widget.languageMenu
-                        availableLanguages="{theme:constant(constant: 'themes.languages.available')}"
-                        currentLanguageUid="{theme:constant(constant: 'themes.languages.current.uid')}"
-                        defaultLanguageIsoCodeShort="{theme:constant(constant: 'themes.languages.default.isoCodeShort')}"
-                        defaultLanguageLabel="{theme:constant(constant: 'themes.languages.default.label')}"
-                        defaultLanguageFlag="{theme:constant(constant: 'themes.languages.default.flag')}"
-                        />
+
+                <f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+
                 <div class="main-navigation__search-btn-wrp _header-top-search-btn">
                     <a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
                 </div>
