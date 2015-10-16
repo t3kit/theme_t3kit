@@ -1,1 +1,2 @@
-a[onclick*="backend_layout"] img {width: 50px;}
+/*a[onclick*="backend_layout"] img {width: 50px;}*/
+td a img[src*="BackendLayouts"] {width: 50px;}
