@@ -26,23 +26,10 @@
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <ul class="nav contact-links" >
-                            <li>
-                            <p><span class="icons icon-t3-mobile"></span><span>CALL US ON</span> <a href="tel:+46-40-617-1230">tel:555-5555</a></p>
-                            </li>
-                            <li><p><span class="icons icon-t3-mail"></span><span>EMAIL US AT</span> <a href="#">info@info.se</a></p>
-                            </li>
+                            <li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" /></span> <a href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">tel:{theme:constant(constant: 'themes.configuration.header.phone')}</a></p></li>
+                            <li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" /></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.header.email')}" /></p></li>
                         </ul>
-                        <div class="social">
-                            <ul class="nav nav-pills" >
-                                <li><a href="#"><span class="icons icon-t3-facebook"></span></a></li>
-                                <li><a href="#"><span class="icons icon-t3-twitter"></span></a></li>
-                                <li><a href="#"><span class="icons icon-t3-linkedin"></span></a></li>
-                                <li><a href="#"><span class="icons icon-t3-vimeo"></span></a></li>
-                                <li><a href="#"><span class="icons icon-t3-googleplus"></span></a></li>
-                                <li><a href="#"><span class="icons icon-t3-pinterest"></span></a></li>
-                                <li><a href="#"><span class="icons icon-t3-instagram"></span></a></li>
-                            </ul>
-                        </div>
+                        <f:render partial="Footer/Socialmedia" section="Default" />
                     </div>
                 </div>
             </div>

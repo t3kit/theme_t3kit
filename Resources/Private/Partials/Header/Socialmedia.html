@@ -1,0 +1,50 @@
+{namespace theme=KayStrobach\Themes\ViewHelpers}
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:section name="Default">
+		<!-- theme_t3kit: Partials/Header/Socialmedia.html [begin] -->
+		<div class="header-middle__social-icons">
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useFacebook')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.facebookLink')}"
+				   target="_blank" title="Facebook"
+				   class="header-middle__social-icon"><span class="icons icon-t3-facebook"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useTwitter')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.twitterLink')}"
+				   target="_blank" title="Twitter"
+				   class="header-middle__social-icon"><span class="icons icon-t3-twitter"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useLinkedIn')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.linkedInLink')}"
+				   target="_blank" title="LinkedIn"
+				   class="header-middle__social-icon"><span class="icons icon-t3-linkedin"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useVimeo')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.vimeoLink')}"
+				   target="_blank" title="LinkedIn"
+				   class="header-middle__social-icon"><span class="icons icon-t3-vimeo"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useGooglePlus')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.googlePlusLink')}"
+				   target="_blank" title="LinkedIn"
+				   class="header-middle__social-icon"><span class="icons icon-t3-googleplus"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.usePinterest')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.pinterestLink')}"
+				   target="_blank" title="LinkedIn"
+				   class="header-middle__social-icon"><span class="icons icon-t3-pinterest"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useInstagram')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.instagramLink')}"
+				   target="_blank" title="LinkedIn"
+				   class="header-middle__social-icon"><span class="icons icon-t3-instagram"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useYoutube')}">
+				<a href="{theme:constant(constant:'themes.configuration.socialmedia.youtubeLink')}"
+				   target="_blank" title="LinkedIn"
+				   class="header-middle__social-icon"><span class="icons icon-t3-youtube"></span></a>
+			</f:if>
+		</div>
+		<!-- theme_t3kit: Partials/Header/Socialmedia.html [end] -->
+	</f:section>
+</div>

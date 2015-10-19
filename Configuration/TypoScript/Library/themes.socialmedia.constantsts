@@ -1,0 +1,83 @@
+#############################################
+# Socialmedia constants
+#############################################
+
+# #customcategory=socialmedia=Theme: Socialmedia settings
+# customsubcategory=socialmedia_facebook=Facebook
+# customsubcategory=socialmedia_twitter=Twitter
+# customsubcategory=socialmedia_linkedin=LinkedIn
+# customsubcategory=socialmedia_vimeo=Vimeo
+# customsubcategory=socialmedia_google_plus=Google Plus
+# customsubcategory=socialmedia_pinterest=Pinterest
+# customsubcategory=socialmedia_instagram=Instagram
+# customsubcategory=socialmedia_youtube=YouTube
+
+
+# Facebook
+#############################################
+# cat=socialmedia,advanced/socialmedia_facebook/; type=options[0,1]; label= Facebook: Activate?!
+themes.configuration.socialmedia.useFacebook = 0
+
+# cat=socialmedia,advanced/socialmedia_facebook/; type=string; label= Facebook: Pagelink
+themes.configuration.socialmedia.facebookLink = https://www.facebook.com/typo3
+
+
+# Twitter
+# cat=socialmedia,advanced/socialmedia_twitter/; type=options[0,1]; label= Twitter: Activate?!
+themes.configuration.socialmedia.useTwitter = 0
+
+# cat=socialmedia,advanced/socialmedia_twitter/; type=string; label= Twitter: Pagelink
+themes.configuration.socialmedia.twitterLink = https://twitter.com/typo3
+
+
+# LinkedIn
+# cat=socialmedia,advanced/socialmedia_linkedin/; type=options[0,1]; label= LinkedIn: Activate?!
+themes.configuration.socialmedia.useLinkedIn = 0
+
+# cat=socialmedia,advanced/socialmedia_linkedin/; type=string; label= LinkedIn: Pagelink
+themes.configuration.socialmedia.linkedInLink = https://www.linkedin.com/company/typo3-association
+
+
+# Vimeo
+# cat=socialmedia,advanced/socialmedia_vimeo/; type=options[0,1]; label= Vimeo: Activate?!
+themes.configuration.socialmedia.useVimeo = 0
+
+# cat=socialmedia,advanced/socialmedia_vimeo/; type=string; label= Vimeo: Pagelink
+themes.configuration.socialmedia.vimeoLink = https://vimeo.com/135225809
+
+
+# Google plus
+#############################################
+# cat=socialmedia,advanced/socialmedia_google_plus/; type=options[0,1]; label= Google+: Activate?!
+themes.configuration.socialmedia.useGooglePlus = 0
+
+# cat=socialmedia,advanced/socialmedia_google_plus/; type=string; label= Google+: Pagelink
+themes.configuration.socialmedia.googlePlusLink = https://plus.google.com/communities/104410053692531620800
+
+
+# Pinterest
+# #############################################
+# cat=socialmedia,advanced/socialmedia_pinterest/; type=options[0,1]; label= Pinterest: Activate?!
+themes.configuration.socialmedia.usePinterest = 0
+
+# cat=socialmedia,advanced/socialmedia_pinterest/; type=string; label= Pinterest: Pagelink
+themes.configuration.socialmedia.pinterestLink = https://www.pinterest.com/VisitSwedenDE/malm%C3%B6/
+
+
+# Instagram
+# #############################################
+# cat=socialmedia,advanced/socialmedia_instagram/; type=options[0,1]; label= Instagram: Activate?!
+themes.configuration.socialmedia.useInstagram = 0
+
+# cat=socialmedia,advanced/socialmedia_instagram/; type=string; label= Instagram: Pagelink
+themes.configuration.socialmedia.instagramLink = https://instagram.com/explore/tags/typo3/
+
+
+# Youtube
+#############################################
+# cat=socialmedia,advanced/socialmedia_youtube/; type=options[0,1]; label= Youtube: Activate?!
+themes.configuration.socialmedia.useYoutube = 0
+
+# cat=socialmedia,advanced/socialmedia_youtube/; type=string; label= Youtube: Pagelink
+themes.configuration.socialmedia.youtubeLink = https://www.youtube.com/user/typo3/
+
