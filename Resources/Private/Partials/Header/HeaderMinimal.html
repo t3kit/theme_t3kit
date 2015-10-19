@@ -19,16 +19,8 @@
                     <f:link.email class="header-info__contact-email-link" email="{theme:constant(constant: 'themes.configuration.header.email')}" />
                 </div>
             </div>
-            <div class="header-info__social-icons">
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-facebook"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-twitter"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-linkedin"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-vimeo"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-googleplus"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-pinterest"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-instagram"></span> </a>
-                <a class="header-info__social-icon" href="#"> <span class="icons icon-t3-youtube"></span> </a>
-            </div>
+
+			<f:render partial="Header/SocialmediaMinimal" section="Default" />
 
             <f:cObject typoscriptObjectPath="lib.menu.language.minimal" />
 
