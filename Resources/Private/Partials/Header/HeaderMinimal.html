@@ -10,13 +10,13 @@
             <div class="header-info__contact">
                 <div class="header-info__contact-tel">
                     <span class="icons icon-t3-mobile"></span>
-                    <span class="header-info__contact-tel-title">Call us on</span>
+                    <span class="header-info__contact-tel-title"><f:translate key="callUs_label" /></span>
                     <a class="header-info__contact-tel-link" href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">{theme:constant(constant: 'themes.configuration.header.phone')}</a>
                 </div>
                 <div class="header-info__contact-email">
                     <span class="icons icon-t3-mail"></span>
-                    <span class="header-info__contact-email-title">Email us at</span>
-                    <a class="header-info__contact-email-link" href="mailto:{theme:constant(constant: 'themes.configuration.header.email')}">{theme:constant(constant: 'themes.configuration.header.email')}</a>
+                    <span class="header-info__contact-email-title"><f:translate key="emailUs_label" /></span>
+                    <f:link.email class="header-info__contact-email-link" email="{theme:constant(constant: 'themes.configuration.header.email')}" />
                 </div>
             </div>
             <div class="header-info__social-icons">
@@ -45,10 +45,10 @@
                 <div class="main-navigation-min-button-prev js__main-navigation-min-button-prev"></div>
             </div>
             <div class="main-navigation-min__search-btn-wrp">
-                <a class="main-navigation-min__search-btn js__main-navigation-min__search-btn" href="">Search<span></span> </a>
+                <a class="main-navigation-min__search-btn js__main-navigation-min__search-btn" href=""><f:translate key="search_label" /><span></span> </a>
             </div>
             <div class="main-navigation-min__search-box js__main-navigation-min__search-box">
-                <input placeholder="Search..." type="search">
+                <input placeholder="<f:translate key='search_placeholder' />" type="search">
             </div>
         </nav>
     </div>

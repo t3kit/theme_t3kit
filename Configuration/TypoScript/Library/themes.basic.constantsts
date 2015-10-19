@@ -2,25 +2,46 @@
 # Basic: Basic constants
 #############################################
 
-# #customcategory=theme=Theme: Basic settings
+# customcategory=theme=Theme: Basic settings
+# customsubcategory=layout= Layout
 
-# General
-#############################################
-
-# Advanced
-#############################################
-
-# Expert
-#############################################
-
-# cat=theme,expert//; type=options[Small=small,Medium=medium,Big=big,Multi-site=multi-site]; label=Felayout project type
+# cat=theme,advanced/layout/; type=options[Small=small,Medium=medium,Big=big,Multi-site=multi-site]; label=Felayout project type
 themes.configuration.feLayoutMode = small
 
-# cat=theme,expert//; type=string; label=Path to felayout
+# cat=theme,advanced/layout/; type=string; label=Path to felayout
 themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit/
 
-# cat=theme,expert//; type=options[Standard=header,Small=headerMin]; label=Header layout
+# cat=theme,advanced/layout/; type=options[Standard=header,Small=headerMin]; label=Header layout
 themes.configuration.headerLayout = header
 
 themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}{$themes.configuration.feLayoutMode}
 
+# customsubcategory=spamProtect= SpamProtect
+
+# Spam protect email addresses constants
+#############################################
+
+# cat=theme,advanced/spamProtect/a; type=string; label= E-Mail spam protection: @ replacement
+themes.configuration.spamProtectEmailAddresses.atSubst = @<span style="display:none;">remove-this.</span>
+
+# cat=theme,advanced/spamProtect/advanced/b; type=string; label= E-Mail spam protection: Last dot replacement
+themes.configuration.spamProtectEmailAddresses.lastDotSubst = .<span style="display:none;">remove-this.</span>
+
+
+# customsubcategory=javascript= JavaScript
+# customsubcategory=css= Stylesheets
+
+# Spam protect email addresses constants
+#############################################
+
+# cat=theme,advanced/javascript/; type=options[0,1]; label= Compress JavaScript files
+themes.configuration.javascript.compress = 1
+
+# cat=theme,advanced/javascript/; type=options[0,1]; label= Concatenate JavaScript files
+themes.configuration.javascript.concatenate = 1
+
+# cat=theme,advanced/css/; type=options[0,1]; label= Compress CSS files
+themes.configuration.css.compress = 1
+
+# cat=theme,advanced/css/; type=options[0,1]; label= Concatenate CSS files
+themes.configuration.css.concatenate = 1

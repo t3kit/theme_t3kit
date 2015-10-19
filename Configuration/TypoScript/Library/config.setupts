@@ -1,0 +1,29 @@
+
+# Dont use the default JavaScript
+removeDefaultJS = 1
+
+config {
+
+	# Set the baseurl
+	baseURL = {$themes.configuration.baseurl}
+
+	# Enable spam protection
+	spamProtectEmailAddresses = 2
+	spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
+	spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
+}
+
+
+# Set values from settings
+config.compressCss = {$themes.configuration.css.compress}
+config.compressJs = {$themes.configuration.javascript.compress}
+config.concatenateCss = {$themes.configuration.css.concatenate}
+config.concatenateJs = {$themes.configuration.javascript.concatenate}
+
+# In case of using development mode, disable compression and concatenation
+[globalVar = LIT:1 = {$themes.mode.isDevelopment}]
+	config.compressCss = 0
+	config.compressJs = 0
+	config.concatenateCss = 0
+	config.concatenateJs = 0
+[global]

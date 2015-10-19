@@ -7,6 +7,29 @@ plugin.tx_themes {
 			quickSearch_label = Search
 			topLink_label = Top
 			printLink_label = Print
+            #
+
+            callUs_label = Call us on
+            emailUs_label = Email us at
+            search_label = Search
+            search_placeholder = Search...
 		}
 	}
+}
+plugin.tx_themes {
+    _LOCAL_LANG {
+        sv {
+            languageMenu_label = Website-Sprache
+            breadcrumb_label = You are here
+            imprint_label = Imprint
+            quickSearch_label = Search
+            topLink_label = Top
+            printLink_label = Print
+
+            callUs_label = Telefon
+            emailUs_label = E-post
+            search_label = Sök
+            search_placeholder = Sök...
+        }
+    }
 }
