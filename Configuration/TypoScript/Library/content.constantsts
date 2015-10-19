@@ -1,0 +1,5 @@
+
+content {
+	# always use h2 as default headline
+	defaultHeaderType = 2
+}
