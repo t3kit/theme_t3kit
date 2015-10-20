@@ -20,5 +20,8 @@ themes.configuration.colors.footerLinkHoverColor = #8EDB58
 # cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 1 : Content id of the element to be displayed in footer area 1
 themes.configuration.content.footerArea.1.contentUid = 85
 
+# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2 : Content id of the element to be displayed in footer area 2
+themes.configuration.content.footerArea.2.contentUid = 89
+
 # cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 3 : Content id of the element to be displayed in footer area 3
-themes.configuration.content.footerArea.3.contentUid = 85
+themes.configuration.content.footerArea.3.contentUid = 87

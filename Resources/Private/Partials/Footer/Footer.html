@@ -1,87 +1,71 @@
 {namespace theme=KayStrobach\Themes\ViewHelpers}
 {namespace t3kit=T3kit\T3kitExtensionTools\ViewHelpers}
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 <f:section name="Default">
 <!-- theme_t3kit: Partials/Footer/Footer.html [begin] -->
 
 
 <footer class="footer" role="contentinfo">
-    <div class="footer__container container">
-        <div class="row">
-            <div class="col-md-6 footer__about">
-            	<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.contentUid')}">
-            		<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.contentUid')}" />
-            	</f:if>
-            </div>
-            <div class="col-md-6 footer__contact">
-                <h4>Contact us</h4>
-                <div class="row">
-                    <div class=" col-xs-4 col-md-4 ">
-                        <p>Company AB <br>Street 8 <br>zipcode city, <br>country</p>
-                    </div>
-                    <div class="col-xs-2 col-md-2 ">
-                        <div class="footer__map">
-                            <a class="footer__map-icon icons icon-t3-map" href="#"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <ul class="nav contact-links" >
-                            <li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" /></span> <a href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">tel:{theme:constant(constant: 'themes.configuration.header.phone')}</a></p></li>
-                            <li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" /></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.header.email')}" /></p></li>
-                        </ul>
-                        <f:render partial="Footer/Socialmedia" section="Default" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row ">
-            <div class="col-md-6 footer__quick-links">
-                <h4>Quick links</h4>
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="nav">
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="siteMap.html">Site Map</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="nav">
-                            <li><a href="isotope.html">Isotope</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="tabs.html">Tabs</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 footer__subscribe">
-            	<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}">
-            		<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}" />
-            	</f:if>
-            </div>
-        </div>
-    </div>
-    <div class="footer__bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 footer__bottom-copyright">
-                    <p>All rights reserved t3kit © 2015</p>
-                </div>
-                <div class="col-md-5 footer__bottom-nav">
-                    <ul class=" nav">
-                        <li><a href="legalRights.html">Legal Rights</a></li>
-                        <li><a href="termsOfUse.html">Terms of Use</a></li>
-                        <li><a href="cookies.html">Cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="footer__container container">
+		<div class="row">
+			<div class="col-md-6 footer__about">
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.contentUid')}" />
+				</f:if>
+			</div>
+			<div class="col-md-6 footer__contact">
+				<h4>Contact us</h4>
+				<div class="row">
+					<div class=" col-xs-4 col-md-4 ">
+						<p>Company AB <br>Street 8 <br>zipcode city, <br>country</p>
+					</div>
+					<div class="col-xs-2 col-md-2 ">
+						<div class="footer__map">
+							<a class="footer__map-icon icons icon-t3-map" href="#"></a>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<ul class="nav contact-links" >
+							<li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" /></span> <a href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">tel:{theme:constant(constant: 'themes.configuration.header.phone')}</a></p></li>
+							<li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" /></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.header.email')}" /></p></li>
+						</ul>
+						<f:render partial="Footer/Socialmedia" section="Default" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row ">
+			<div class="col-md-6 footer__quick-links">
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.contentUid')}" />
+				</f:if>
+			</div>
+			<div class="col-md-6 footer__subscribe">
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}" />
+				</f:if>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 footer__bottom-copyright">
+					<p>All rights reserved t3kit © 2015</p>
+				</div>
+				<div class="col-md-5 footer__bottom-nav">
+					<ul class=" nav">
+						<li><a href="legalRights.html">Legal Rights</a></li>
+						<li><a href="termsOfUse.html">Terms of Use</a></li>
+						<li><a href="cookies.html">Cookies</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 
 <!-- theme_t3kit: Partials/Footer/Footer.html [end] -->
