@@ -2,11 +2,14 @@
 # Dont use the default JavaScript
 removeDefaultJS = 1
 
+
+[globalVar = LIT:1 = {$themes.configuration.baseurl}]
+    # Set the baseurl
+    config.baseURL = {$themes.configuration.baseurl}
+[global]
+
+
 config {
-
-	# Set the baseurl
-	baseURL = {$themes.configuration.baseurl}
-
 	# Enable spam protection
 	spamProtectEmailAddresses = 2
 	spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
