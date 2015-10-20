@@ -1,0 +1,3 @@
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('pxa_newsletter_subscription')]
+    #plugin.tx_pxanewslettersubscription.persistence.storagePid = {$themes.configuration.container.newsletterSubscriptions}
+[global]
