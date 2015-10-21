@@ -6,10 +6,10 @@
 
 #Footer view
 # cat=footer,basic/footer_view/; type=color; label= Footer Background
-themes.configuration.colors.footerBackground = #323232
+themes.configuration.colors.footerBackground = #1D556F
 
 # cat=footer,basic/footer_view/; type=color; label= Footer Color
-themes.configuration.colors.footerColor = #ACACAC
+themes.configuration.colors.footerColor = #DDDDDD
 
 # cat=footer,basic/footer_view/; type=color; label= Footer Link Color
 themes.configuration.colors.footerLinkColor = #ACACAC
@@ -17,11 +17,24 @@ themes.configuration.colors.footerLinkColor = #ACACAC
 # cat=footer,basic/footer_view/; type=color; label= Footer Link Hover Color
 themes.configuration.colors.footerLinkHoverColor = #8EDB58
 
+
 # cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 1 : Content id of the element to be displayed in footer area 1
 themes.configuration.content.footerArea.1.contentUid = 85
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2 : Content id of the element to be displayed in footer area 2
-themes.configuration.content.footerArea.2.contentUid = 89
+# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2.1 : Content id of the Header to be displayed in footer area 2
+themes.configuration.content.footerArea.2.1.contentUid = 91
+
+# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2.2 : Content id of the element to be displayed in footer area 2.2
+themes.configuration.content.footerArea.2.2.contentUid = 89
+
+# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2.3 : Content id of the element to be displayed in footer area 2.3
+themes.configuration.content.footerArea.2.3.contentUid = 92
 
 # cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 3 : Content id of the element to be displayed in footer area 3
 themes.configuration.content.footerArea.3.contentUid = 87
+
+# cat=footer,advanced/footer_view/; type=string; label= Copyright
+themes.configuration.footer.copyright = All rights reserved
+
+# cat=footer,advanced/footer_view/; type=int+; label= Footer bottom menu
+themes.configuration.content.footerArea.4.contentUid = 90

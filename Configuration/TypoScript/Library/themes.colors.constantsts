@@ -7,7 +7,7 @@
 
 # Main colors
 # cat=colors,basic/main_colors/; type=color; label= Main Color
-themes.configuration.colors.mainColor = #66BD29
+themes.configuration.colors.mainColor = #288FB4
 
 # cat=colors,basic/main_colors/; type=color; label= Main Body Color
 themes.configuration.colors.mainBodyBg = #FFFFFF

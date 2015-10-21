@@ -30,7 +30,6 @@
 							<li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" /></span> <a href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">tel:{theme:constant(constant: 'themes.configuration.header.phone')}</a></p></li>
 							<li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" /></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.header.email')}" /></p></li>
 						</ul>
-						<f:render partial="Footer/Socialmedia" section="Default" />
 					</div>
 				</div>
 			</div>
@@ -39,8 +38,26 @@
 	<div class="container">
 		<div class="row ">
 			<div class="col-md-6 footer__quick-links">
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.contentUid')}">
-					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.contentUid')}" />
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.1.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.1.contentUid')}" />
+				</f:if>
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}">
+				<div class="row">
+					<div class="col-md-6">
+				</f:if>
+
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.2.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.2.contentUid')}" />
+				</f:if>
+
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}">
+					</div>
+				</f:if>
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}">
+					<div class="col-md-6">
+						<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}" />
+					</div>
+				</div>
 				</f:if>
 			</div>
 			<div class="col-md-6 footer__subscribe">
@@ -50,18 +67,17 @@
 			</div>
 		</div>
 	</div>
+	<f:render partial="Footer/Socialmedia" section="Default" />
 	<div class="footer__bottom">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 footer__bottom-copyright">
-					<p>All rights reserved t3kit © 2015</p>
+					<f:cObject typoscriptObjectPath="lib.footer.copyright" />
 				</div>
 				<div class="col-md-5 footer__bottom-nav">
-					<ul class=" nav">
-						<li><a href="legalRights.html">Legal Rights</a></li>
-						<li><a href="termsOfUse.html">Terms of Use</a></li>
-						<li><a href="cookies.html">Cookies</a></li>
-					</ul>
+					<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.4.contentUid')}">
+						<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.4.contentUid')}" />
+					</f:if>
 				</div>
 			</div>
 		</div>
