@@ -1,13 +1,3 @@
-# Breadcrumb with itemscope and Bootstrap classes
-#
-# Constants:
-# {$themes.configuration.menu.breadcrumb.prefix}
-# {$themes.configuration.menu.breadcrumb.divider}
-# {$themes.configuration.menu.breadcrumb.cssClasses}
-#
-# Usage:
-# <f:cObject typoscriptObjectPath="lib.menu.breadcrumb"/>
-#
 lib.menu.breadcrumb = COA
 lib.menu.breadcrumb {
 	10 = HMENU

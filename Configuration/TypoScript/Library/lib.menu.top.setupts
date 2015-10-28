@@ -1,7 +1,6 @@
 lib.menu.top = HMENU
 lib.menu.top.special = directory
-lib.menu.top.special.value = {$themes.configuration.menu.top.containerPid}
-lib.menu.top.excludeUidList = {$themes.configuration.menu.top.excludeUidList}
+lib.menu.top.special.value = {$themes.configuration.header.top.menu.containerPid}
 lib.menu.top.wrap    = <ul class="nav"> | </ul>
 lib.menu.top.1 = TMENU
 lib.menu.top.1 {

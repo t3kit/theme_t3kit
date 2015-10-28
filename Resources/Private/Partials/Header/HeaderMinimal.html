@@ -4,49 +4,78 @@
 <f:section name="Default">
 
 <!-- theme_t3kit: Partials/Header/HeaderMinimal.html [begin] -->
-<header class="header-wrp" role="banner">
-    <div class="header js__header">
-        <div class="header-info js__header-info">
-            <div class="header-info__contact">
-                <div class="header-info__contact-tel">
-                    <span class="icons icon-t3-mobile"></span>
-                    <span class="header-info__contact-tel-title"><f:translate key="callUs_label" /></span>
-                    <a class="header-info__contact-tel-link" href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">{theme:constant(constant: 'themes.configuration.header.phone')}</a>
-                </div>
-                <div class="header-info__contact-email">
-                    <span class="icons icon-t3-mail"></span>
-                    <span class="header-info__contact-email-title"><f:translate key="emailUs_label" /></span>
-                    <f:link.email class="header-info__contact-email-link" email="{theme:constant(constant: 'themes.configuration.header.email')}" />
-                </div>
-            </div>
 
-			<f:render partial="Header/SocialmediaMinimal" section="Default" />
 
-            <f:cObject typoscriptObjectPath="lib.menu.language.minimal" />
+<header class="header-wrp{f:if(condition: "{theme:constant(constant:'themes.configuration.header.showHeaderTop')}", then: ' _show-header-top')}" role="banner">
+	<div class="header js__header">
 
-            <f:cObject typoscriptObjectPath="lib.menu.top" />
+		<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTop')}">
+			<div class="header-top-wrp">
+				<div class="header-info js__header-info">
 
-        </div>
-        <nav class="main-navigation-min js__main-navigation-min" role="navigation">
-            <div class="main-navigation-min__logo">
-                <f:cObject typoscriptObjectPath="lib.header.logo.main.minimal" />
-            </div>
-            <div class="main-navigation-min__items-wrp js__main-navigation-min__items-wrp">
-                <f:cObject typoscriptObjectPath="lib.menu.mainMinimal" />
-                <div class="main-navigation-min-button-next js__main-navigation-min-button-next"></div>
-                <div class="main-navigation-min-button-prev js__main-navigation-min-button-prev"></div>
-            </div>
-            <div class="main-navigation-min__search-btn-wrp">
-                <a class="main-navigation-min__search-btn js__main-navigation-min__search-btn" href=""><f:translate key="search_label" /><span></span> </a>
-            </div>
-            <div class="main-navigation-min__search-box js__main-navigation-min__search-box">
-                <input placeholder="<f:translate key='search_placeholder' />" type="search">
-            </div>
-        </nav>
-    </div>
-    <div class="main-navigation-min__search-box-overlay js__main-navigation-min__search-box-overlay"></div>
-    <div class="header-info__language-menu-overlay js__header-info__language-menu-overlay"></div>
+					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopContacts')}">
+						<div class="header-info__contact">
+							<div class="header-info__contact-tel">
+								<span class="icons icon-t3-mobile"></span>
+								<span class="header-info__contact-tel-title"><f:translate key="callUs_label" /></span>
+								<a class="header-info__contact-tel-link" href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">{theme:constant(constant: 'themes.configuration.header.phone')}</a>
+							</div>
+							<div class="header-info__contact-email">
+								<span class="icons icon-t3-mail"></span>
+								<span class="header-info__contact-email-title"><f:translate key="emailUs_label" /></span>
+								<f:link.email class="header-info__contact-email-link" email="{theme:constant(constant: 'themes.configuration.header.email')}" />
+							</div>
+						</div>
+					</f:if>
+
+					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleSocIcons')}">
+						<f:render partial="Header/SocialmediaMinimal" section="Default" />
+					</f:if>
+
+					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopLangMenu')}">
+						<f:cObject typoscriptObjectPath="lib.menu.language.minimal" />
+					</f:if>
+
+
+					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopNav')}">
+						<f:cObject typoscriptObjectPath="lib.menu.top" />
+					</f:if>
+
+				</div>
+			</div>
+		</f:if>
+
+		<nav class="main-navigation-min js__main-navigation-min{f:if(condition: "{theme:constant(constant:'themes.configuration.header.showHeaderMiddleLogo')} == 0", then: ' _no-logo')}{f:if(condition: "{theme:constant(constant:'themes.configuration.header.showHeaderTopSearch')} == 0", then: ' _no-search')}" role="navigation">
+
+			<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleLogo')}">
+				<div class="main-navigation-min__logo">
+					<f:cObject typoscriptObjectPath="lib.header.logo.main" />
+				</div>
+			</f:if>
+
+			<div class="main-navigation-min__items-wrp js__main-navigation-min__items-wrp">
+				<ul class="main-navigation-min__items-list js__main-navigation-min__items-list">
+					<f:cObject typoscriptObjectPath="lib.menu.mainMinimal" />
+				</ul>
+				<div class="main-navigation-min-button-next js__main-navigation-min-button-next"></div>
+				<div class="main-navigation-min-button-prev js__main-navigation-min-button-prev"></div>
+			</div>
+
+			<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopSearch')}">
+				<div class="main-navigation-min__search-btn-wrp">
+					<a class="main-navigation-min__search-btn js__main-navigation-min__search-btn" href="">Search<span></span></a>
+				</div>
+				<div class="main-navigation-min__search-box js__main-navigation-min__search-box" >
+					<input placeholder="Search..." type="search">
+				</div>
+			</f:if>
+		</nav>
+
+	</div>
+	<div class="main-navigation-min__search-box-overlay js__main-navigation-min__search-box-overlay"></div>
+	<div class="header-info__language-menu-overlay js__header-info__language-menu-overlay"></div>
 </header>
+
 <!-- theme_t3kit: Partials/Header/HeaderMinimal.html [end] -->
 </f:section>
 </div>

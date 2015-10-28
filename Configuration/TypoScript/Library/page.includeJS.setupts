@@ -1,42 +1,34 @@
-# Settings for the development system
-
-page {
-    includeJSFooter {
-        jquery = {$themes.configuration.felayoutFullPath}/jquery.js
-        jquery {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
-        }
-        bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.js
-        bootstrap {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
-        }
-        components = {$themes.configuration.felayoutFullPath}/components.js
-        components {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
-        }
-        header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerLayout}.js
-        header {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
-        }
-        mainjs = {$themes.configuration.felayoutFullPath}/main.js
-        mainjs {
-            external = 0
-            disableCompression = 1
-            excludeFromConcatenation = 1
+    page {
+        includeJSFooter {
+            jquery = {$themes.configuration.felayoutFullPath}/jquery.js
+            jquery {
+                external = 0
+                disableCompression = {$themes.configuration.isDevelopment}
+                excludeFromConcatenation = {$themes.configuration.isDevelopment}
+            }
+            bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.js
+            bootstrap {
+                external = 0
+                disableCompression = {$themes.configuration.isDevelopment}
+                excludeFromConcatenation = {$themes.configuration.isDevelopment}
+            }
+            components = {$themes.configuration.felayoutFullPath}/components.js
+            components {
+                external = 0
+                disableCompression = {$themes.configuration.isDevelopment}
+                excludeFromConcatenation = {$themes.configuration.isDevelopment}
+            }
+            header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.js
+            header {
+                external = 0
+                disableCompression = {$themes.configuration.isDevelopment}
+                excludeFromConcatenation = {$themes.configuration.isDevelopment}
+            }
+            mainjs = {$themes.configuration.felayoutFullPath}/main.js
+            mainjs {
+                external = 0
+                disableCompression = {$themes.configuration.isDevelopment}
+                excludeFromConcatenation = {$themes.configuration.isDevelopment}
+            }
         }
     }
-}
-
-
-# Settings for the production system
-[globalVar = LIT:1 = {$themes.mode.isProduction}]
-
-[global]

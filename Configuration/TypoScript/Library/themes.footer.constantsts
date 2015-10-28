@@ -2,39 +2,43 @@
 # Footer: Footer constants
 #############################################
 
-# customsubcategory=footer_view=Footer View
+# customsubcategory=footer_content=Footer Content
+# customsubcategory=footer_color=Footer Colors
 
-#Footer view
-# cat=footer,basic/footer_view/; type=color; label= Footer Background
-themes.configuration.colors.footerBackground = #1D556F
+#Footer color
+#############################################
+# cat=footer,basic/footer_color/; type=color; label= Footer Background
+themes.configuration.footer.less.footerBackground =
 
-# cat=footer,basic/footer_view/; type=color; label= Footer Color
-themes.configuration.colors.footerColor = #DDDDDD
+# cat=footer,basic/footer_color/; type=color; label= Footer Color
+themes.configuration.footer.less.footerColor =
 
-# cat=footer,basic/footer_view/; type=color; label= Footer Link Color
-themes.configuration.colors.footerLinkColor = #ACACAC
+# cat=footer,basic/footer_color/; type=color; label= Footer Link Color
+themes.configuration.footer.less.footerLinkColor =
 
-# cat=footer,basic/footer_view/; type=color; label= Footer Link Hover Color
-themes.configuration.colors.footerLinkHoverColor = #8EDB58
+# cat=footer,basic/footer_color/; type=color; label= Footer Link Hover Color
+themes.configuration.footer.less.footer-linkHoverColor =
 
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 1 : Content id of the element to be displayed in footer area 1
+#Footer content
+#############################################
+# cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area 1 : Content id of the element to be displayed in footer area 1
 themes.configuration.content.footerArea.1.contentUid = 85
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2.1 : Content id of the Header to be displayed in footer area 2
+# cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area 2.1 : Content id of the Header to be displayed in footer area 2
 themes.configuration.content.footerArea.2.1.contentUid = 91
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2.2 : Content id of the element to be displayed in footer area 2.2
+# cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area 2.2 : Content id of the element to be displayed in footer area 2.2
 themes.configuration.content.footerArea.2.2.contentUid = 89
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 2.3 : Content id of the element to be displayed in footer area 2.3
+# cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area 2.3 : Content id of the element to be displayed in footer area 2.3
 themes.configuration.content.footerArea.2.3.contentUid = 92
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer Content Area 3 : Content id of the element to be displayed in footer area 3
+# cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area 3 : Content id of the element to be displayed in footer area 3
 themes.configuration.content.footerArea.3.contentUid = 87
 
-# cat=footer,advanced/footer_view/; type=string; label= Copyright
+# cat=footer,basic/footer_content/; type=string; label= Copyright
 themes.configuration.footer.copyright = All rights reserved
 
-# cat=footer,advanced/footer_view/; type=int+; label= Footer bottom menu
+# cat=footer,advanced/footer_content/; type=int+; label= Footer bottom menu
 themes.configuration.content.footerArea.4.contentUid = 90

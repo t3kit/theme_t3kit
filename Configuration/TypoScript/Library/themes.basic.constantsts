@@ -2,29 +2,35 @@
 # Basic: Basic constants
 #############################################
 
-# customcategory=theme=Theme: Basic settings
+# customsubcategory=header_type= Type of header
+# customsubcategory=development_mode= Development Mode
 # customsubcategory=layout= Layout
 
-# cat=theme,advanced/layout/; type=options[Small=small,Medium=medium,Big=big,Multi-site=multi-site]; label=Felayout project type
+
+# cat=theme,basic/header_type/; type=options[Header=header,Minimal Header=headerMin]; label= Header type
+themes.configuration.headerType = header
+
+# cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Development Mode
+themes.configuration.isDevelopment = Development Mode
+
+# cat=theme,expert/layout/; type=options[Small=small,Big=big]; label=Felayout project type
 themes.configuration.feLayoutMode = small
 
-# cat=theme,advanced/layout/; type=string; label=Path to felayout
+# cat=theme,expert/layout/; type=string; label=Path to felayout
 themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit/
 
-# cat=theme,advanced/layout/; type=options[Standard=header,Small=headerMin]; label=Header layout
-themes.configuration.headerLayout = header
-
 themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}{$themes.configuration.feLayoutMode}
+
 
 # customsubcategory=spamProtect= SpamProtect
 
 # Spam protect email addresses constants
 #############################################
 
-# cat=theme,advanced/spamProtect/a; type=string; label= E-Mail spam protection: @ replacement
+# cat=theme,expert/spamProtect/; type=string; label= E-Mail spam protection: @ replacement
 themes.configuration.spamProtectEmailAddresses.atSubst = @<span style="display:none;">remove-this.</span>
 
-# cat=theme,advanced/spamProtect/advanced/b; type=string; label= E-Mail spam protection: Last dot replacement
+# cat=theme,expert/spamProtect/; type=string; label= E-Mail spam protection: Last dot replacement
 themes.configuration.spamProtectEmailAddresses.lastDotSubst = .<span style="display:none;">remove-this.</span>
 
 
@@ -34,14 +40,14 @@ themes.configuration.spamProtectEmailAddresses.lastDotSubst = .<span style="disp
 # Spam protect email addresses constants
 #############################################
 
-# cat=theme,advanced/javascript/; type=options[0,1]; label= Compress JavaScript files
+# cat=theme,expert/javascript/; type=options[0,1]; label= Compress JavaScript files
 themes.configuration.javascript.compress = 1
 
-# cat=theme,advanced/javascript/; type=options[0,1]; label= Concatenate JavaScript files
+# cat=theme,expert/javascript/; type=options[0,1]; label= Concatenate JavaScript files
 themes.configuration.javascript.concatenate = 1
 
-# cat=theme,advanced/css/; type=options[0,1]; label= Compress CSS files
+# cat=theme,expert/css/; type=options[0,1]; label= Compress CSS files
 themes.configuration.css.compress = 1
 
-# cat=theme,advanced/css/; type=options[0,1]; label= Concatenate CSS files
+# cat=theme,expert/css/; type=options[0,1]; label= Concatenate CSS files
 themes.configuration.css.concatenate = 1

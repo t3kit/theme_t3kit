@@ -3,7 +3,7 @@ lib.menu.mainMinimal {
 	entryLevel = 0
 	includeNotInMenu = 0
 	excludeUidList = {$themes.configuration.menu.main.excludeUidList}
-	wrap = <ul class="main-navigation-min__items-list js__main-navigation-min__items-list"> | </ul>
+	# wrap = <ul class="main-navigation-min__items-list js__main-navigation-min__items-list"> | </ul>
 	1 = TMENU
 	1 {
 		expAll = 1

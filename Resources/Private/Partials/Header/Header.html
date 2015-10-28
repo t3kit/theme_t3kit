@@ -2,62 +2,104 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 <f:section name="Default">
+
 <!-- theme_t3kit: Partials/Header/Header.html [begin] -->
 
-
 <header class="header" role="banner">
+	<div class="header-top-wrp">
 
-<div class="header-top-wrp">
-        <div class="header-top">
-                <div class="header-top__contact">
-                    <div class="header-top__contact-tel">
-                        <span class="icons icon-t3-mobile"></span>
-                        <span class="header-top__contact-tel-title"><f:translate key="callUs_label" /></span>
-                        <a class="header-top__contact-tel-link" href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">tel:{theme:constant(constant: 'themes.configuration.header.phone')}</a>
-                    </div>
-                    <div class="header-top__contact-email">
-                        <span class="icons icon-t3-mail"></span>
-                        <span class="header-top__contact-email-title"><f:translate key="emailUs_label" /></span>
-                        <f:link.email class="header-top__contact-email-link" email="{theme:constant(constant: 'themes.configuration.header.email')}" />
-                    </div>
-                </div>
+		<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTop')}">
 
-                <f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+			<div class="header-top">
+				<div class="header-top__main-navigation-toggle-btn">
+					<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
+						<span>toggle menu</span>
+					</button>
+				</div>
 
-                <div class="main-navigation__search-btn-wrp _header-top-search-btn">
-                    <a class="main-navigation__search-btn js__main-navigation__search-btn" href=""><f:translate key="search_label" /><span></span></a>
-                </div>
-                <div class="main-navigation__search-box _header-top-search-btn js__main-navigation__search-box" ><input placeholder="<f:translate key='search_placeholder' />" type="search"></div>
-                <f:cObject typoscriptObjectPath="lib.menu.top" />
-        </div>
-</div>
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopContacts')}">
+					<div class="header-top__contact">
+						<div class="header-top__contact-tel">
+							<span class="icons icon-t3-mobile"></span>
+							<span class="header-top__contact-tel-title"><f:translate key="callUs_label" /></span>
+							<a class="header-top__contact-tel-link" href="tel:{theme:constant(constant: 'themes.configuration.header.phone')}">tel:{theme:constant(constant: 'themes.configuration.header.phone')}</a>
+						</div>
+						<div class="header-top__contact-email">
+							<span class="icons icon-t3-mail"></span>
+							<span class="header-top__contact-email-title"><f:translate key="emailUs_label" /></span>
+							<f:link.email class="header-top__contact-email-link" email="{theme:constant(constant: 'themes.configuration.header.email')}" />
+						</div>
+					</div>
+				</f:if>
 
-<div class="header-middle-wrp">
-    <div class="header-middle">
-        <div class="header-middle__logo">
-            <f:cObject typoscriptObjectPath="lib.header.logo.main" />
-        </div>
-        <f:render partial="Header/Socialmedia" section="Default" />
-    </div>
-</div>
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopLangMenu')}">
+					<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopSearch')}">
+					<div class="main-navigation__search-btn-wrp _header-top-search-btn">
+						<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
+					</div>
+					<div class="main-navigation__search-box _header-top-search-btn js__main-navigation__search-box" ><input placeholder="Search..." type="search"></div>
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopNav')}">
+					<f:cObject typoscriptObjectPath="lib.menu.top" />
+				</f:if>
+
+			</div>
+		</f:if>
+	</div>
+
+
+	<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddle')}">
+		<div class="header-middle-wrp">
+			<div class="header-middle">
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleLogo')}">
+					<div class="header-middle__logo">
+						<f:cObject typoscriptObjectPath="lib.header.logo.main" />
+					</div>
+				</f:if>
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleSocIcons')}">
+					<f:render partial="Header/Socialmedia" section="Default" />
+				</f:if>
+			</div>
+		</div>
+	</f:if>
 
 
 <!-- theme_t3kit: Main menu [begin] -->
 
-<nav class="main-navigation js__main-navigation" role="navigation">
-    <div class="main-navigation__items-wrp js__navigation__items-wrp">
-        <f:cObject typoscriptObjectPath="lib.menu.main" />
-    </div>
-</nav>
+	<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTop')}">
+		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
+			<span>toggle menu</span>
+		</button>
+	</f:if>
+
+	<nav class="main-navigation js__main-navigation" role="navigation">
+		<div class="main-navigation__items-wrp js__navigation__items-wrp">
+
+			<ul class="main-navigation__items-list js__main-navigation__items-list">
+
+				<f:cObject typoscriptObjectPath="lib.menu.main" />
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMainMenuSearch')}">
+					<div class="main-navigation__search-btn-wrp">
+						<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
+					</div>
+					<div class="main-navigation__search-box js__main-navigation__search-box" ><input placeholder="Search..." type="search"></div>
+				</f:if>
+
+			</ul>
+
+		</div>
+	</nav>
 
 <!-- theme_t3kit: Main menu [end] -->
 
-
-
-<div class="main-navigation__search-box-overlay js__main-navigation__search-box-overlay"></div>
-<div class="header-top__language-menu-overlay js__header-top__language-menu-overlay"></div>
-
-
+	<div class="main-navigation__search-box-overlay js__main-navigation__search-box-overlay"></div>
+	<div class="header-top__language-menu-overlay js__header-top__language-menu-overlay"></div>
 </header>
 
 

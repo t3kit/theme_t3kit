@@ -2,8 +2,8 @@ lib.menu.main = HMENU
 lib.menu.main {
 	entryLevel = 0
 	includeNotInMenu = 0
-	excludeUidList = {$themes.configuration.menu.main.excludeUidList}
-	wrap = <ul class="main-navigation__items-list js__main-navigation__items-list"> | </ul>
+	excludeUidList = {$themes.configuration.header.main.menu.excludeUidList}
+	# wrap = <ul class="main-navigation__items-list js__main-navigation__items-list"> | </ul>
 	1 = TMENU
 	1 {
 		expAll = 1

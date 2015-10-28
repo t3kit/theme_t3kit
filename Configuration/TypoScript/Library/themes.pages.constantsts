@@ -1,41 +1,41 @@
 
-# #customcategory=pages=Theme: Page settings
+# # #customcategory=pages=Theme: Page settings
 
-# cat=pages,advanced//; type=int+; label= Startsite page uid
+# # cat=pages,advanced//; type=int+; label= Startsite page uid
 themes.configuration.pages.startsite = 1
 
-# cat=pages,advanced//; type=int+; label= Page for the terms and conditions
-themes.configuration.pages.legal = 0
+# # cat=pages,advanced//; type=int+; label= Page for the terms and conditions
+# themes.configuration.pages.legal = 0
 
-# cat=pages,advanced//; type=int+; label= Privacy policy page
-themes.configuration.pages.privacy = 0
+# # cat=pages,advanced//; type=int+; label= Privacy policy page
+# themes.configuration.pages.privacy = 0
 
-# cat=pages,advanced//; type=int+; label= Imprint page
-themes.configuration.pages.imprint = 0
+# # cat=pages,advanced//; type=int+; label= Imprint page
+# themes.configuration.pages.imprint = 0
 
-# cat=pages,advanced//; type=int+; label= Contact page
-themes.configuration.pages.contact = 0
+# # cat=pages,advanced//; type=int+; label= Contact page
+# themes.configuration.pages.contact = 0
 
-# cat=pages,advanced//; type=int+; label= Page with the sitemap
-themes.configuration.pages.sitemap = 0
+# # cat=pages,advanced//; type=int+; label= Page with the sitemap
+# themes.configuration.pages.sitemap = 0
 
-# cat=pages,advanced//; type=int+; label= Search page
-themes.configuration.pages.search = 0
+# # cat=pages,advanced//; type=int+; label= Search page
+# themes.configuration.pages.search = 0
 
-# cat=pages,advanced//; type=int+; label= Login page
-themes.configuration.pages.login = 0
+# # cat=pages,advanced//; type=int+; label= Login page
+# themes.configuration.pages.login = 0
 
-# cat=pages,advanced//; type=int+; label= Logout page
-themes.configuration.pages.logout = 0
+# # cat=pages,advanced//; type=int+; label= Logout page
+# themes.configuration.pages.logout = 0
 
-# cat=pages,advanced//; type=int+; label= Intro / landing page of a website
-themes.configuration.pages.intro = 0
+# # cat=pages,advanced//; type=int+; label= Intro / landing page of a website
+# themes.configuration.pages.intro = 0
 
-# cat=pages,advanced//; type=int+; label= Cookie confirmation page
-themes.configuration.pages.cookie = 0
+# # cat=pages,advanced//; type=int+; label= Cookie confirmation page
+# themes.configuration.pages.cookie = 0
 
-# cat=pages,advanced//; type=int+; label= References
-themes.configuration.pages.references = 0
+# # cat=pages,advanced//; type=int+; label= References
+# themes.configuration.pages.references = 0
 
-# cat=pages,advanced//; type=int+; label= Registration page
-themes.configuration.pages.registration = 0
+# # cat=pages,advanced//; type=int+; label= Registration page
+# themes.configuration.pages.registration = 0

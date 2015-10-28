@@ -2,34 +2,136 @@
 # Header: Header constants
 #############################################
 
-# customsubcategory=header_view=Header View
 # customsubcategory=header_top=Header Top
 # customsubcategory=header_middle=Header Middle
+# customsubcategory=header_main_menu=Header Main Menu
 
-
-#Header view
-# cat=header,basic/header_view/; type=string; label= Header Top Height
-themes.configuration.colors.headerTopHeight = 50px
-
-# cat=header,basic/header_view/; type=color; label= Header Top Color
-themes.configuration.colors.headerTopColor = #999999
-
-# cat=header,basic/header_view/; type=color; label= Header Border Color
-themes.configuration.colors.headerBorderColor = #EEEEEE
-
-
-#Header Middle
-# cat=header,basic/header_middle/; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
-themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/images/logo.png
-
-# cat=header,basic/header_middle/; type=int+; label= Header-Logo: Width
-themes.configuration.header.logo.main.width = 209
 
 
 #Header Top
-# cat=header,basic/header_top/; type=string; label= Header phonenumber
+#############################################
+# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top
+themes.configuration.header.showHeaderTop = 1
+
+# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Contacts
+themes.configuration.header.showHeaderTopContacts = 1
+
+# cat=header,basic/header_top; type=string; label= Header phonenumber
 themes.configuration.header.phone = 555-555555
 
-# cat=header,basic/header_top/; type=string; label= Header E-Mailaddress
+# cat=header,basic/header_top; type=string; label= Header E-Mailaddress
 themes.configuration.header.email = info@info.se
+
+# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top LangMenu
+themes.configuration.header.showHeaderTopLangMenu = 1
+
+# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Search
+themes.configuration.header.showHeaderTopSearch = 0
+
+# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Search
+themes.configuration.header.showHeaderMainMenuSearch = 0
+
+# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Navigation
+themes.configuration.header.showHeaderTopNav = 1
+
+# cat=header,advanced/header_top; type=int+; label= Header Top: Container pid where the menu items are located
+themes.configuration.header.top.menu.containerPid = 6
+
+# cat=header,advanced/header_top; type=string; label= Header Top Height
+themes.configuration.header.less.headerTopHeight =
+
+# cat=header,advanced/header_top; type=color; label= Header Top Background Color
+themes.configuration.header.less.headerTopBgColor =
+
+# cat=header,advanced/header_top; type=color; label= Header Border Color
+themes.configuration.header.less.headerTopColor =
+
+
+
+
+#Header Middle
+#############################################
+# cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle
+themes.configuration.header.showHeaderMiddle = 1
+
+# cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle Logo
+themes.configuration.header.showHeaderMiddleLogo = 1
+
+
+# Logo
+# cat=header,basic/header_middle; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
+themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/images/t3kit.png
+
+# cat=header,basic/header_middle; type=string; label= Logo Top
+themes.configuration.header.less.logoTop = 20px
+
+# cat=header,basic/header_middle; type=string; label= Logo Left
+themes.configuration.header.less.logoLeft = 40px
+
+# cat=header,basic/header_middle; type=string; label= Logo Width
+themes.configuration.header.less.logoWidth = 120px
+
+
+# Social Icons
+# cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle SocIcons
+themes.configuration.header.showHeaderMiddleSocIcons = 1
+
+# cat=header,advanced/header_middle; type=color; label= Social Icons Background Color
+themes.configuration.header.less.socialIconsBgColor =
+
+# cat=header,advanced/header_middle; type=color; label= Social Icons Hover Color
+themes.configuration.header.less.socialIconsHoverColor =
+
+
+# cat=header,advanced/header_middle; type=string; label= Header Middle Height
+themes.configuration.header.less.headerMiddleHeight =
+
+# cat=header,advanced/header_middle; type=color; label= Header Middle Background Color
+themes.configuration.header.less.headerMiddleBgColor =
+
+# cat=header,advanced/header_middle; type=color; label= Header Middle Border Color
+themes.configuration.header.less.headerBorderColor =
+
+
+
+
+# Navigation
+#############################################
+
+# cat=menu,expert/header_main_menu; type=string; label= Header Menu: Exclude uid list (12,13,...)
+$themes.configuration.header.main.menu.excludeUidList =
+
+# cat=header,advanced/header_main_menu; type=string; label= Navigation Height
+themes.configuration.header.less.navHeight =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Link Color
+themes.configuration.header.less.navLinkColor =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Link Hover Color
+themes.configuration.header.less.navLinkHoverColor =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Link Active Color
+themes.configuration.header.less.navLinkActiveColor =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Link Active Hover Color
+themes.configuration.header.less.navLinkActiveHoverColor =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Link Hover Background
+themes.configuration.header.less.navLinkHoverBackground =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Link Arrow Color
+themes.configuration.header.less.navLinkArrowColor =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Background Color
+themes.configuration.header.less.navBackgroundColor =
+
+# cat=header,advanced/header_main_menu; type=color; label= Navigation Search Button Color
+themes.configuration.header.less.navSearchBtnColor =
+
+
+
+
+
+
+
 
