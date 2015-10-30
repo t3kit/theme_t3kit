@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     TopContentContentSidebar {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/TopContentContentSidebar.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/TopContentContentSidebar.svg
         name = TopContentContentSidebar
         title = TopContentContentSidebar
         config {

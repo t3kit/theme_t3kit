@@ -1,9 +1,9 @@
 # Name and description of the theme (required)
-title            : t3kit theme
-version          : 0.0.1
+title            : theme_t3kit
+version          : 0.0.2
 description      :  |
   A t3kit theme template -
-  This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings.
+  This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings. http://t3kit.github.io/theme_t3kit_customizer
 
 # Keywords (optional)
 keywords:

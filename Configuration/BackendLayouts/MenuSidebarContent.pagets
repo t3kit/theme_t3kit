@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     MenuSidebarContent {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/MenuSidebarContent.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/MenuSidebarContent.svg
         name = MenuSidebarContent
         title = MenuSidebarContent
         config {

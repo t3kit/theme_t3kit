@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="LeftIconTextButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D9D9D9;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#737373;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st4{fill:#EA8E55;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#EA8E55;}
+</style>
+<path class="st0" d="M0,0h100v100H0V0z"/>
+<polygon class="st1" points="100,24.3 88,12 87,78 20.3,78.2 12,88 24.9,100 100,100 "/>
+<path class="st2" d="M0,0v100h100V0H0z M98,98H2V2h96V98z"/>
+<g>
+	<rect x="13" y="13.1" class="st3" width="74" height="74"/>
+	<path class="st4" d="M86,14.1v72H14v-72H86 M88,12.1H12v76h76V12.1L88,12.1z"/>
+</g>
+<circle class="st5" cx="25" cy="27" r="7"/>
+<rect x="36" y="23" class="st2" width="46" height="8"/>
+<rect x="18" y="37" class="st2" width="64" height="4"/>
+<rect x="18" y="47" class="st2" width="64" height="4"/>
+<rect x="18" y="57" class="st2" width="48" height="4"/>
+<g>
+	<rect x="20" y="69" class="st3" width="33" height="8"/>
+	<path class="st4" d="M51,71v4H22v-4H51 M55,67H18v12h37V67L55,67z"/>
+</g>
+</svg>

@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     Empty {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/Empty.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/Empty.svg
         name = Empty
         title = Empty
         config {

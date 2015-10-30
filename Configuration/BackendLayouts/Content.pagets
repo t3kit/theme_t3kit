@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     Content {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/Content.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/Content.svg
         name = Content
         title = Content
         config {

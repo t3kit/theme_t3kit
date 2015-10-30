@@ -1,0 +1,17 @@
+page.meta {
+
+    X-UA-Compatible = ie=edge
+    X-UA-Compatible.httpEquivalent = 1
+    viewport = width=device-width, initial-scale=1.0, user-scalable=no
+
+    mobile-web-app-capable = yes
+    apple-mobile-web-app-capable = yes
+    apple-mobile-web-app-status-bar-style = black
+    format-detection = telephone=no
+
+}
+
+# In case of using development mode, set noindex, nofollow
+[globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
+    page.meta.robots = noindex
+[global]

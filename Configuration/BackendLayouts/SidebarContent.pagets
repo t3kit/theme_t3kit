@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     SidebarContent {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/SidebarContent.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/SidebarContent.svg
         name = SidebarContent
         title = SidebarContent
         config {

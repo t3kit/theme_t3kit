@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     StartPage {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/StartPage.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/StartPage.svg
         name = StartPage
         title = StartPage
         config {

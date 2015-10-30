@@ -3,7 +3,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
         imageTextLink {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.description
-            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/imageTextLink.gif
+            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/imageTextLink.svg
             tt_content_defValues {
                 CType = imageTextLink
             }

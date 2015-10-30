@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     ContentSidebar {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/ContentSidebar.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/ContentSidebar.svg
         name = ContentSidebar
         title = ContentSidebar
         config {

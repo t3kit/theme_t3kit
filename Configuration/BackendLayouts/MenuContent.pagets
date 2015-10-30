@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     MenuContent {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/MenuContent.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/MenuContent.svg
         name = MenuContent
         title = MenuContent
         config {

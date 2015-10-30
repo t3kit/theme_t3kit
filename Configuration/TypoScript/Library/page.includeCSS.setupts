@@ -3,23 +3,33 @@
         includeCSS {
             bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.less
             bootstrap {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                # excludeFromConcatenation =
+                # disableCompression =
             }
             components = {$themes.configuration.felayoutFullPath}/components.css
             components {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
             }
             header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.less
             header {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
             }
             maincss = {$themes.configuration.felayoutFullPath}/main.less
             maincss {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
+            customLess = fileadmin/custom/css/custom.less
+            customLess {
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
+            customCss = fileadmin/custom/css/custom.css
+            customCss {
+                #excludeFromConcatenation =
+                #disableCompression =
             }
         }
     }
@@ -30,45 +40,34 @@
         includeCSS {
             bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.css
             bootstrap {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
             }
             components = {$themes.configuration.felayoutFullPath}/components.css
             components {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
             }
             header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.css
             header {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
             }
             maincss = {$themes.configuration.felayoutFullPath}/main.css
             maincss {
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-                disableCompression = {$themes.configuration.isDevelopment}
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
+            customCss = fileadmin/custom/css/custom.css
+            customCss {
+                #excludeFromConcatenation =
+                #disableCompression =
             }
         }
     }
 [global]
 
 
-
-# [globalVar = LIT: = {$themes.configuration.feLayoutCssFileExtension}] && [globalVar = LIT:big = {$themes.configuration.feLayoutMode}]
-#     includeCSS {
-#         bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.css
-#         components = {$themes.configuration.felayoutFullPath}/components.css
-#         header = {$themes.configuration.felayoutFullPath}/{themes.configuration.headerType}.css
-#         maincss = {$themes.configuration.felayoutFullPath}/main.css
-#     }
+# [globalVar = LIT:multi-site = {$themes.configuration.feLayoutMode}]
+# --------
 # [global]
-
-
-
-
-# [globalVar = LIT: = {$themes.configuration.feLayoutCssFileExtension}] && [globalVar = LIT:multi-site = {$themes.configuration.feLayoutMode}]
-
-# [global]
-
-
-

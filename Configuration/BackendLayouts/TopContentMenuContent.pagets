@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     TopContentMenuContent {
-        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/TopContentMenuContent.png
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/TopContentMenuContent.svg
         name = TopContentMenuContent
         title = TopContentMenuContent
         config {

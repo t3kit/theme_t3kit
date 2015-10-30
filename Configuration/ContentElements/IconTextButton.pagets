@@ -3,7 +3,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
         iconTextButton {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:iconTextButton.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:iconTextButton.description
-            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/iconTextButton.gif
+            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/iconTextButton.svg
             tt_content_defValues {
                 CType = iconTextButton
             }

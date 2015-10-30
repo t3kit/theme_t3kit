@@ -1,34 +1,40 @@
-    page {
-        includeJSFooter {
-            jquery = {$themes.configuration.felayoutFullPath}/jquery.js
-            jquery {
-                external = 0
-                disableCompression = {$themes.configuration.isDevelopment}
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-            }
-            bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.js
-            bootstrap {
-                external = 0
-                disableCompression = {$themes.configuration.isDevelopment}
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-            }
-            components = {$themes.configuration.felayoutFullPath}/components.js
-            components {
-                external = 0
-                disableCompression = {$themes.configuration.isDevelopment}
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-            }
-            header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.js
-            header {
-                external = 0
-                disableCompression = {$themes.configuration.isDevelopment}
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-            }
-            mainjs = {$themes.configuration.felayoutFullPath}/main.js
-            mainjs {
-                external = 0
-                disableCompression = {$themes.configuration.isDevelopment}
-                excludeFromConcatenation = {$themes.configuration.isDevelopment}
-            }
+page {
+    includeJSFooter {
+        jquery = {$themes.configuration.felayoutFullPath}/jquery.js
+        jquery {
+            external = 0
+            # disableCompression =
+            # excludeFromConcatenation =
+        }
+        bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.js
+        bootstrap {
+            external = 0
+            # disableCompression =
+            # excludeFromConcatenation =
+        }
+        components = {$themes.configuration.felayoutFullPath}/components.js
+        components {
+            external = 0
+            # disableCompression =
+            # excludeFromConcatenation =
+        }
+        header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.js
+        header {
+            external = 0
+            # disableCompression =
+            # excludeFromConcatenation =
+        }
+        mainjs = {$themes.configuration.felayoutFullPath}/main.js
+        mainjs {
+            external = 0
+            # disableCompression =
+            # excludeFromConcatenation =
+        }
+        customJs = fileadmin/custom/js/custom.js
+        customJs {
+            external = 0
+            # disableCompression =
+            # excludeFromConcatenation =
         }
     }
+}
