@@ -1,46 +1,45 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-    <f:layout name="HeaderContentFooter" />
+	<f:layout name="HeaderContentFooter" />
 
-    <f:section name="content">
-    <!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [begin] -->
-    <f:if condition="{logos}">
-        <div class="logo-carousel swiper-container js__logo-carousel {layoutClass}">
-            <div class="swiper-wrapper logo-carousel__wrp">
-                <f:for each="{logos}" as="logo">
-                    <div class="swiper-slide logo-carousel__slide">
-                        <f:if condition="{logo.referenceProperties.link}">
-                            <f:then>
-                                <f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link">
-                                    <f:render section="renderLogo" arguments="{
-                                        logoUid: logo.uid,
-                                        maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
-                                        maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
-                                        }" />
-                                </f:link.typolink>
-                            </f:then>
-                            <f:else>
-                                <f:render section="renderLogo" arguments="{
-                                        logoUid: logo.uid,
-                                        maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
-                                        maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
-                                        }" />
-                            </f:else>
-                        </f:if>
-                    </div>
-                </f:for>
-            </div>
-            <div class="js__logo-carousel__btn-next logo-carousel__btn-next swiper-button-next"></div>
-            <div class="js__logo-carousel__btn-prev logo-carousel__btn-prev swiper-button-prev"></div>
-        </div>
-    </f:if>
-    <!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [end] -->
-    </f:section>
+	<f:section name="content">
+	<!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [begin] -->
+	<f:if condition="{logos}">
+		<div class="logo-carousel swiper-container js__logo-carousel {layoutClass}">
+			<div class="swiper-wrapper logo-carousel__wrp">
+				<f:for each="{logos}" as="logo">
+					<div class="swiper-slide logo-carousel__slide">
+						<f:if condition="{logo.referenceProperties.link}">
+							<f:then>
+								<f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link">
+									<f:render section="renderLogo" arguments="{
+										logoUid: logo.uid,
+										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
+										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
+										}" />
+								</f:link.typolink>
+							</f:then>
+							<f:else>
+								<f:render section="renderLogo" arguments="{
+										logoUid: logo.uid,
+										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
+										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
+										}" />
+							</f:else>
+						</f:if>
+					</div>
+				</f:for>
+			</div>
+			<div class="js__logo-carousel__btn-next logo-carousel__btn-next swiper-button-next"></div>
+			<div class="js__logo-carousel__btn-prev logo-carousel__btn-prev swiper-button-prev"></div>
+		</div>
+	</f:if>
+	<!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [end] -->
+	</f:section>
 </div>
 
 <f:section name="renderLogo">
-    <img  data-src="<f:uri.image src="{logoUid}" maxWidth="{maxWidth}" maxHeight="{maxHeight}" treatIdAsReference="1" />" class="swiper-lazy img-responsive logo-carousel__img">
-    <div class="swiper-lazy-preloader"></div>
+	<img  data-src="<f:uri.image src="{logoUid}" maxWidth="{maxWidth}" maxHeight="{maxHeight}" treatIdAsReference="1" />" class="swiper-lazy img-responsive logo-carousel__img">
+	<div class="swiper-lazy-preloader"></div>
 </f:section>
 

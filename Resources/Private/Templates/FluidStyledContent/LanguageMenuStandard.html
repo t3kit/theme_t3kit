@@ -1,21 +1,21 @@
 <f:if condition="{languages}">
-    <div class="header-top__language-menu">
-        <f:for each="{languages}" as="language">
-            <f:if condition="{language.active}">
-                <a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{language.flag}"></span> </a>
-            </f:if>
-        </f:for>
-        <div class="header-top__language-menu-box js__header-top__language-menu-box">
-            <f:for each="{languages}" as="language">
-               <f:link.page addQueryString="1"
-                             additionalParams="{L: language.L}"
-                             title="{language.label}"
-                             class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
-                             argumentsToBeExcludedFromQueryString="{0: 'id'}">
-                        <span class="flag-icon flag-icon-{language.flag}"></span> {language.label}
-                </f:link.page>
-            </f:for>
-            <a class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></a>
-        </div>
-    </div>
+	<div class="header-top__language-menu">
+		<f:for each="{languages}" as="language">
+			<f:if condition="{language.active}">
+				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{language.flag}"></span> </a>
+			</f:if>
+		</f:for>
+		<div class="header-top__language-menu-box js__header-top__language-menu-box">
+			<f:for each="{languages}" as="language">
+			   <f:link.page addQueryString="1"
+							 additionalParams="{L: language.L}"
+							 title="{language.label}"
+							 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
+							 argumentsToBeExcludedFromQueryString="{0: 'id'}">
+						<span class="flag-icon flag-icon-{language.flag}"></span> {language.label}
+				</f:link.page>
+			</f:for>
+			<a class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></a>
+		</div>
+	</div>
 </f:if>

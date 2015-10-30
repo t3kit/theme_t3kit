@@ -1,27 +1,26 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-    xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-    <f:layout name="ContentFooter" />
-    <f:debug>{_all}</f:debug>
+	<f:layout name="ContentFooter" />
+	<f:debug>{_all}</f:debug>
 
-    <f:section name="content">
-    <!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
-    <div class="icon-text-btn {layoutClass}">
-        <h3 class="icon-text-btn__header">
-            <f:if condition="{settings.iconClass}">
-                <span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
-            </f:if>
-            <f:if condition="{data.header}">
-                {data.header}
-            </f:if>
-        </h3>
-        <f:if condition="{data.bodytext}">
-            <p class="icon-text-btn__p">{data.bodytext}</p>
-        </f:if>
-        <f:if condition="{data.header_link}">
-            <f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="icon-text-btn__link btn btn-default">{data.subheader}</f:link.typolink>
-        </f:if>
-    </div>
-    <!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
-    </f:section>
+	<f:section name="content">
+	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
+	<div class="icon-text-btn {layoutClass}">
+		<h3 class="icon-text-btn__header">
+			<f:if condition="{settings.iconClass}">
+				<span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
+			</f:if>
+			<f:if condition="{data.header}">
+				{data.header}
+			</f:if>
+		</h3>
+		<f:if condition="{data.bodytext}">
+			<p class="icon-text-btn__p">{data.bodytext}</p>
+		</f:if>
+		<f:if condition="{data.header_link}">
+			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="icon-text-btn__link btn btn-default">{data.subheader}</f:link.typolink>
+		</f:if>
+	</div>
+	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
+	</f:section>
 </div>
