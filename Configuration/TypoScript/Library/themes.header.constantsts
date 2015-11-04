@@ -99,7 +99,7 @@ themes.configuration.header.less.headerBorderColor =
 #############################################
 
 # cat=menu,expert/header_main_menu; type=string; label= Header Menu: Exclude uid list (12,13,...)
-$themes.configuration.header.main.menu.excludeUidList =
+themes.configuration.header.main.menu.excludeUidList =
 
 # cat=header,advanced/header_main_menu; type=string; label= Navigation Height
 themes.configuration.header.less.navHeight =
