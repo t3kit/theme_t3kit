@@ -43,7 +43,7 @@ themes.configuration.header.less.headerTopHeight =
 # cat=header,advanced/header_top; type=color; label= Header Top Background Color
 themes.configuration.header.less.headerTopBgColor =
 
-# cat=header,advanced/header_top; type=color; label= Header Border Color
+# cat=header,advanced/header_top; type=color; label= Header Top Color
 themes.configuration.header.less.headerTopColor =
 
 
