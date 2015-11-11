@@ -6,6 +6,46 @@
             <trans-unit id="tab.structuredContentElements">
                 <source>Layout elements</source>
             </trans-unit>
+            <trans-unit id="container.title">
+                <source>Container for columns</source>
+            </trans-unit>
+            <trans-unit id="container.description">
+                <source>A container for column records</source>
+            </trans-unit>
+            <trans-unit id="container.records_formlabel">
+                <source>Column records here</source>
+            </trans-unit>
+            <trans-unit id="container.layout.0">
+                <source>No container</source>
+            </trans-unit>
+            <trans-unit id="container.layout.1">
+                <source>Container</source>
+            </trans-unit>
+            <trans-unit id="container.layout.2">
+                <source>Fluid container</source>
+            </trans-unit>
+
+            <trans-unit id="column.title">
+                <source>Columns for content</source>
+            </trans-unit>
+            <trans-unit id="column.description">
+                <source>A column for content records</source>
+            </trans-unit>
+            <trans-unit id="column.records_formlabel">
+                <source>Content records here</source>
+            </trans-unit>
+            <trans-unit id="column.flexform.colxs.label">
+                <source>Column with (x of 12) on "Extra small devices Phones (&lt;768px)"</source>
+            </trans-unit>
+            <trans-unit id="column.flexform.colsm.label">
+                <source>Column with (x of 12) on "Small devices Tablets (≥768px)"</source>
+            </trans-unit>
+            <trans-unit id="column.flexform.colmd.label">
+                <source>Column with (x of 12) on "Medium devices Desktops (≥992px)"</source>
+            </trans-unit>
+            <trans-unit id="column.flexform.collg.label">
+                <source>Column with (x of 12) on "Large devices Desktops (≥1200px)"</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

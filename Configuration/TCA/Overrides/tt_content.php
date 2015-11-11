@@ -4,6 +4,7 @@ defined('TYPO3_MODE') or die();
 call_user_func(function() {
 
     $contentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:';
+    $structuredContentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/StructuredContentElements.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
     $cmsLanguageFilePrefix = 'LLL:EXT:cms/locallang_ttc.xlf:';
 
@@ -132,6 +133,47 @@ call_user_func(function() {
             NULL
         ],
         'login',
+        'after'
+    );
+
+	// "container"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $structuredContentElementLanguageFilePrefix . 'container.title',
+            'container',
+            'content-elements-container'
+        ],
+        'tabs',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['container'] = 'content-elements-container';
+
+	// "columns"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $structuredContentElementLanguageFilePrefix . 'column.title',
+            'column',
+            'content-elements-column'
+        ],
+        'container',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['column'] = 'content-elements-column';
+
+    // The "divider" these structured content elements
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $structuredContentElementLanguageFilePrefix . 'tab.structuredContentElements',
+            '--div--',
+            NULL
+        ],
+        'quote',
         'after'
     );
 
@@ -303,6 +345,41 @@ call_user_func(function() {
         '
     ];
 
+    // "container"
+    $GLOBALS['TCA']['tt_content']['types']['container'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
+                records;' . $structuredContentElementLanguageFilePrefix . 'container.records_formlabel,
+                rowDescription,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "container"
+    $GLOBALS['TCA']['tt_content']['types']['column'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
+                records;' . $structuredContentElementLanguageFilePrefix . 'column.records_formlabel,
+                rowDescription,
+               	--linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
     //
     // Flexforms
     //
@@ -314,6 +391,9 @@ call_user_func(function() {
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
+
+	// "column"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,column'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_column.xml';
 
 });
 

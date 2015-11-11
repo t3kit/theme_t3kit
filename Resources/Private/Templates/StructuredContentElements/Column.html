@@ -1,0 +1,31 @@
+{namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:debug>{_all}</f:debug>
+
+<f:section name="content">
+<!-- theme_t3kit: Templates/ContentElements/Container.html [begin] -->
+	<f:if condition="{data.records}">
+		<div class="tabs">
+			<ul class="{layoutClass}" role="tablist">
+				<f:for each="{xtools:get.records(recordList : data.records)}" as="tab" iteration="tabsIteration">
+					<li class="{f:if(condition: tabsIteration.isFirst, then: 'active', else: '')}">
+						<a href="#tab-{data.uid}-{tab.uid}" data-toggle="tab" role="tab">{tab.header}</a>
+					</li>
+				</f:for>
+			</ul>
+			<div class="tab-content">
+				<f:for each="{xtools:get.records(recordList : data.records)}" as="tab" iteration="tabsIteration">
+					<div class="tab-pane fade {f:if(condition: tabsIteration.isFirst, then: 'active in', else: '')}" id="tab-{data.uid}-{tab.uid}">
+						<f:for each="{xtools:get.records(recordList : tab.records)}" as="content">
+							<xtools:render.content id="{content.uid}" />
+						</f:for>
+					</div>
+				</f:for>
+			</div>
+		</div>
+	</f:if>
+	<!-- theme_t3kit: Templates/ContentElements/Container.html [end] -->
+</f:section>
+

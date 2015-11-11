@@ -10,20 +10,25 @@ lib.fluidContent {
     templateRootPaths {
         1910 =  EXT:theme_t3kit/Resources/Private/Templates/ContentElements
         1911 =  EXT:theme_t3kit/Resources/Private/Templates/FluidStyledContent
+        1912 =  EXT:theme_t3kit/Resources/Private/Templates/StructuredContentElements
     }
     partialRootPaths {
         1910 =  EXT:theme_t3kit/Resources/Private/Partials/ContentElements
         1911 =  EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent
+        1912 =  EXT:theme_t3kit/Resources/Private/Partials/StructuredContentElements
     }
     layoutRootPaths {
         1910 =  EXT:theme_t3kit/Resources/Private/Layouts/ContentElements
         1911 =  EXT:theme_t3kit/Resources/Private/Layouts/FluidStyledContent
+        1912 =  EXT:theme_t3kit/Resources/Private/Layouts/StructuredContentElements
     }
 }
 # Overrides of fluid_styled_content
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent/" extensions="setupts">
 # Add our content elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements/" extensions="setupts">
+# Add our structured content elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/StructuredContentElements/" extensions="setupts">
 
 # Extensions
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.txt">

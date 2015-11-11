@@ -43,4 +43,14 @@ if (TYPO3_MODE === 'BE') {
 		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/tabs.svg']
 	);
+	$iconRegistry->registerIcon(
+		'content-elements-container',
+		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/container.svg']
+	);
+	$iconRegistry->registerIcon(
+		'content-elements-column',
+		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/column.svg']
+	);
 }

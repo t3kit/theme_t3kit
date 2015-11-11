@@ -3,6 +3,8 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent" extensions="pagets">
 # Add our content elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements" extensions="pagets">
+# Add our strutured content elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/StructuredContentElements" extensions="pagets">
 
 # Just delete the backendlayouts which arn't required
 #
