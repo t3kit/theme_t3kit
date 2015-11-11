@@ -3,7 +3,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
         tabs {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.description
-            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/tabs.svg
+            iconIdentifier = content-elements-tabs
             tt_content_defValues {
                 CType = tabs
             }

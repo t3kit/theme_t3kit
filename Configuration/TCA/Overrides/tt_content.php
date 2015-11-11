@@ -17,11 +17,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'accordion.title',
             'accordion',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/accordion.gif'
+            'content-elements-accordion'
         ],
         'login',
         'after'
     );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['accordion'] = 'content-elements-accordion';
 
     // "contentElementSlider"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -30,11 +31,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'slider.title',
             'contentElementSlider',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/slider.gif'
+            'content-elements-contentElementSlider'
         ],
         'accordion',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contentElementSlider'] = 'content-elements-contentElementSlider';
 
     // "bigIconTextButton"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -43,11 +45,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'bigIconTextButton.title',
             'bigIconTextButton',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/bigIconTextButton.gif'
+            'content-elements-bigIconTextButton'
         ],
         'contentElementSlider',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['bigIconTextButton'] = 'content-elements-bigIconTextButton';
 
     // "iconTextButton"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -56,11 +59,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'iconTextButton.title',
             'iconTextButton',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/iconTextButton.gif'
+            'content-elements-iconTextButton'
         ],
         'bigIconTextButton',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['iconTextButton'] = 'content-elements-iconTextButton';
 
     // "imageTextLink"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -69,11 +73,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'imageTextLink.title',
             'imageTextLink',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/imageTextLink.gif'
+            'content-elements-imageTextLink'
         ],
         'iconTextButton',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['imageTextLink'] = 'content-elements-imageTextLink';
 
     // "logoCarousel"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -82,11 +87,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'logoCarousel.title',
             'logoCarousel',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/logoCarousel.gif'
+            'content-elements-logoCarousel'
         ],
         'imageTextLink',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['logoCarousel'] = 'content-elements-logoCarousel';
 
     // "quote"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -95,11 +101,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'quote.title',
             'quote',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/quote.gif'
+            'content-elements-quote'
         ],
         'logoCarousel',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['quote'] = 'content-elements-quote';
 
     // "tabs"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -108,11 +115,12 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'tabs.title',
             'tabs',
-            'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/tabs.gif'
+            'content-elements-tabs'
         ],
         'quote',
         'after'
     );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tabs'] = 'content-elements-tabs';
 
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(

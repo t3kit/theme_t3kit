@@ -3,7 +3,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
         accordion {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.description
-            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/accordion.svg
+            iconIdentifier = content-elements-accordion
             tt_content_defValues {
                 CType = accordion
             }

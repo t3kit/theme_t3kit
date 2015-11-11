@@ -3,7 +3,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
         quote {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.description
-            icon = ../typo3conf/ext/theme_t3kit/Resources/Public/Icons/ContentElements/quote.svg
+            iconIdentifier = content-elements-quote
             tt_content_defValues {
                 CType = quote
             }
