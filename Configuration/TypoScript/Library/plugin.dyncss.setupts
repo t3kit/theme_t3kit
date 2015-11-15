@@ -1,287 +1,311 @@
-plugin.tx_dyncss.overrides {
-    # Primary color
-    [globalVar = LIT:1 = {$themes.configuration.main.less.mainColor}]
+[globalVar = LIT:1 = {$themes.configuration.main.less.mainColor}]
+    plugin.tx_dyncss.overrides {
         main-color = TEXT
         main-color.value = {$themes.configuration.main.less.mainColor}
-    [global]
-}
+    }
+[global]
+
+
 # Body
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.main.less.mainBodyBg}]
+[globalVar = LIT:1 = {$themes.configuration.main.less.mainBodyBg}]
+    plugin.tx_dyncss.overrides {
         main-body-bg = TEXT
         main-body-bg.value = {$themes.configuration.main.less.mainBodyBg}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.main.less.mainTextColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.main.less.mainTextColor}]
+    plugin.tx_dyncss.overrides {
         main-text-color = TEXT
         main-text-color.value = {$themes.configuration.main.less.mainTextColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.main.less.borderColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.main.less.borderColor}]
+    plugin.tx_dyncss.overrides {
         border-color = TEXT
         border-color.value = {$themes.configuration.main.less.borderColor}
-    [global]
-}
+    }
+[global]
+
 
     # Main links
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.main.less.mainLinkColor}]
+[globalVar = LIT:1 = {$themes.configuration.main.less.mainLinkColor}]
+    plugin.tx_dyncss.overrides {
         main-link-color = TEXT
         main-link-color.value = {$themes.configuration.main.less.mainLinkColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.main.less.mainLinkHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.main.less.mainLinkHoverColor}]
+    plugin.tx_dyncss.overrides {
         main-link-hover-color = TEXT
         main-link-hover-color.value = {$themes.configuration.main.less.mainLinkHoverColor}
-    [global]
-}
-
+    }
+[global]
 
 
     # HEADER
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.headerTopHeight}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.headerTopHeight}]
+    plugin.tx_dyncss.overrides {
         header-top-height = TEXT
         header-top-height.value = {$themes.configuration.header.less.headerTopHeight}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.headerTopBgColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.headerTopBgColor}]
+    plugin.tx_dyncss.overrides {
         header-top-bg-color = TEXT
         header-top-bg-color.value = {$themes.configuration.header.less.headerTopBgColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.headerTopColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.headerTopColor}]
+    plugin.tx_dyncss.overrides {
         header-top-color = TEXT
         header-top-color.value = {$themes.configuration.header.less.headerTopColor}
-    [global]
-}
+    }
+[global]
 
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.headerMiddleHeight}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.headerMiddleHeight}]
+    plugin.tx_dyncss.overrides {
         header-middle-height = TEXT
         header-middle-height.value = {$themes.configuration.header.less.headerMiddleHeight}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.headerMiddleBgColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.headerMiddleBgColor}]
+    plugin.tx_dyncss.overrides {
         header-middle-bg-color = TEXT
         header-middle-bg-color.value = {$themes.configuration.header.less.headerMiddleBgColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.headerBorderColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.headerBorderColor}]
+    plugin.tx_dyncss.overrides {
         header-border-color = TEXT
         header-border-color.value = {$themes.configuration.header.less.headerBorderColor}
-    [global]
-}
+    }
+[global]
+
 
     # Logo
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.logoTop}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.logoTop}]
+    plugin.tx_dyncss.overrides {
         logo-top = TEXT
         logo-top.value = {$themes.configuration.header.less.logoTop}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.logoLeft}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.logoLeft}]
+    plugin.tx_dyncss.overrides {
         logo-left = TEXT
         logo-left.value = {$themes.configuration.header.less.logoLeft}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.logoWidth}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.logoWidth}]
+    plugin.tx_dyncss.overrides {
         logo-width = TEXT
         logo-width.value = {$themes.configuration.header.less.logoWidth}
-    [global]
-}
-
-
-
-
+    }
+[global]
 
 
     # Navigation
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navHeight}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.navHeight}]
+    plugin.tx_dyncss.overrides {
         nav-height = TEXT
         nav-height.value = {$themes.configuration.header.less.navHeight}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navLinkColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.navLinkColor}]
+    plugin.tx_dyncss.overrides {
         nav-link-color = TEXT
         nav-link-color.value = {$themes.configuration.header.less.navLinkColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navLinkHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.navLinkHoverColor}]
+    plugin.tx_dyncss.overrides {
         nav-link-hover-color = TEXT
         nav-link-hover-color.value = {$themes.configuration.header.less.navLinkHoverColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navLinkActiveColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.navLinkActiveColor}]
+    plugin.tx_dyncss.overrides {
         nav-link-active-color = TEXT
         nav-link-active-color.value = {$themes.configuration.header.less.navLinkActiveColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navLinkActiveHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.navLinkActiveHoverColor}]
+    plugin.tx_dyncss.overrides {
         nav-link-active-hover-color = TEXT
         nav-link-active-hover-color.value = {$themes.configuration.header.less.navLinkActiveHoverColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navLinkHoverBackground}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.navLinkHoverBackground}]
+    plugin.tx_dyncss.overrides {
         nav-link-hover-background = TEXT
         nav-link-hover-background.value = {$themes.configuration.header.less.navLinkHoverBackground}
-    [global]
-}
+    }
+[global]
 
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navLinkArrowColor}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.navLinkArrowColor}]
+    plugin.tx_dyncss.overrides {
         nav-link-arrow-color = TEXT
         nav-link-arrow-color.value = {$themes.configuration.header.less.navLinkArrowColor}
-    [global]
-}
+    }
+[global]
 
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navBackgroundColor}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.navBackgroundColor}]
+    plugin.tx_dyncss.overrides {
         nav-background-color = TEXT
         nav-background-color.value = {$themes.configuration.header.less.navBackgroundColor}
-    [global]
-}
+    }
+[global]
 
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.navSearchBtnColor}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.navSearchBtnColor}]
+    plugin.tx_dyncss.overrides {
         nav-search-btn-color = TEXT
         nav-search-btn-color.value = {$themes.configuration.header.less.navSearchBtnColor}
-    [global]
-}
+    }
+[global]
 
 
     # Social icons
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.socialIconsBgColor}]
+[globalVar = LIT:1 = {$themes.configuration.header.less.socialIconsBgColor}]
+    plugin.tx_dyncss.overrides {
         social-icons-bg-color = TEXT
         social-icons-bg-color.value = {$themes.configuration.header.less.socialIconsBgColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.header.less.socialIconsHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.header.less.socialIconsHoverColor}]
+    plugin.tx_dyncss.overrides {
         social-icons-hover-color = TEXT
         social-icons-hover-color.value = {$themes.configuration.header.less.socialIconsHoverColor}
-    [global]
-}
+    }
+[global]
+
 
     # Breadcrumbs
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsBackground}]
+[globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsBackground}]
+    plugin.tx_dyncss.overrides {
         breadcrumbs-background = TEXT
         breadcrumbs-background.value = {$themes.configuration.menu.less.breadcrumbsBackground}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsLinkColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsLinkColor}]
+    plugin.tx_dyncss.overrides {
         breadcrumbs-link-color = TEXT
         breadcrumbs-link-color.value = {$themes.configuration.menu.less.breadcrumbsLinkColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsLinkActiveColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsLinkActiveColor}]
+    plugin.tx_dyncss.overrides {
         breadcrumbs-link-active-color = TEXT
         breadcrumbs-link-active-color.value = {$themes.configuration.menu.less.breadcrumbsLinkActiveColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsLinkHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.breadcrumbsLinkHoverColor}]
+    plugin.tx_dyncss.overrides {
         breadcrumbs-link-hover-color = TEXT
         breadcrumbs-link-hover-color.value = {$themes.configuration.menu.less.breadcrumbsLinkHoverColor}
-    [global]
-}
+    }
+[global]
 
 
     # Sub navigation
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationBackground}]
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationBackground}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-background = TEXT
         sub-navigation-background.value = {$themes.configuration.menu.less.subNavigationBackground}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationBorder}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationBorder}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-border = TEXT
         sub-navigation-border.value = {$themes.configuration.menu.less.subNavigationBorder}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationActiveBorder}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationActiveBorder}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-active-border = TEXT
         sub-navigation-active-border.value = {$themes.configuration.menu.less.subNavigationActiveBorder}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkColor}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-link-color = TEXT
         sub-navigation-link-color.value = {$themes.configuration.menu.less.subNavigationLinkColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkHoverColor}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-link-hover-color = TEXT
         sub-navigation-link-hover-color.value = {$themes.configuration.menu.less.subNavigationLinkHoverColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkHoverBg}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkHoverBg}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-link-hover-bg = TEXT
         sub-navigation-link-hover-bg.value = {$themes.configuration.menu.less.subNavigationLinkHoverBg}
-    [global]
-}
+    }
+[global]
 
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkActiveColor}]
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkActiveColor}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-link-active-color = TEXT
         sub-navigation-link-active-color.value = {$themes.configuration.menu.less.subNavigationLinkActiveColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkActiveBg}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.menu.less.subNavigationLinkActiveBg}]
+    plugin.tx_dyncss.overrides {
         sub-navigation-link-active-bg = TEXT
         sub-navigation-link-active-bg.value = {$themes.configuration.menu.less.subNavigationLinkActiveBg}
-    [global]
-}
-
-
+    }
+[global]
 
 
     # FOOTER
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.footer.less.footerBackground}]
+[globalVar = LIT:1 = {$themes.configuration.footer.less.footerBackground}]
+    plugin.tx_dyncss.overrides {
         footer-background = TEXT
         footer-background.value = {$themes.configuration.footer.less.footerBackground}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.footer.less.footerColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.footer.less.footerColor}]
+    plugin.tx_dyncss.overrides {
         footer-color = TEXT
         footer-color.value = {$themes.configuration.footer.less.footerColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.footer.less.footerLinkColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.footer.less.footerLinkColor}]
+    plugin.tx_dyncss.overrides {
         footer-link-color = TEXT
         footer-link-color.value = {$themes.configuration.footer.less.footerLinkColor}
-    [global]
-}
-plugin.tx_dyncss.overrides {
-    [globalVar = LIT:1 = {$themes.configuration.footer.less.footer-linkHoverColor}]
+    }
+[global]
+
+[globalVar = LIT:1 = {$themes.configuration.footer.less.footer-linkHoverColor}]
+    plugin.tx_dyncss.overrides {
         footer-link-hover-color = TEXT
         footer-link-hover-color.value = {$themes.configuration.footer.less.footer-linkHoverColor}
-    [global]
-}
+    }
+[global]
