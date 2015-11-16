@@ -6,14 +6,14 @@
 <!-- theme_t3kit: Partials/Header/HeaderMinimal.html [begin] -->
 
 
-<header class="header-wrp{f:if(condition: "{theme:constant(constant:'themes.configuration.header.showHeaderTop')}", then: ' _show-header-top')}" role="banner">
+<header class="header-wrp{f:if(condition: "{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}", then: ' _show-header-top')}" role="banner">
 	<div class="header js__header">
 
-		<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTop')}">
+		<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}">
 			<div class="header-top-wrp">
 				<div class="header-info js__header-info">
 
-					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopContacts')}">
+					<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContacts')}">
 						<div class="header-info__contact">
 							<div class="header-info__contact-tel">
 								<span class="icons icon-t3-mobile"></span>
@@ -28,16 +28,16 @@
 						</div>
 					</f:if>
 
-					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleSocIcons')}">
+					<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSocIcons')}">
 						<f:render partial="Header/SocialmediaMinimal" section="Default" />
 					</f:if>
 
-					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopLangMenu')}">
+					<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangMenu')}">
 						<f:cObject typoscriptObjectPath="lib.menu.language.minimal" />
 					</f:if>
 
 
-					<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopNav')}">
+					<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopNavigation')}">
 						<f:cObject typoscriptObjectPath="lib.menu.top" />
 					</f:if>
 
@@ -45,9 +45,9 @@
 			</div>
 		</f:if>
 
-		<nav class="main-navigation-min js__main-navigation-min{f:if(condition: "{theme:constant(constant:'themes.configuration.header.showHeaderMiddleLogo')} == 0", then: ' _no-logo')}{f:if(condition: "{theme:constant(constant:'themes.configuration.header.showHeaderTopSearch')} == 0", then: ' _no-search')}" role="navigation">
+		<nav class="main-navigation-min js__main-navigation-min{f:if(condition: "{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleLogo')} == 0", then: ' _no-logo')}{f:if(condition: "{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopSearch')} == 0", then: ' _no-search')}" role="navigation">
 
-			<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleLogo')}">
+			<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleLogo')}">
 				<div class="main-navigation-min__logo">
 					<f:cObject typoscriptObjectPath="lib.header.logo.main" />
 				</div>
@@ -61,7 +61,7 @@
 				<div class="main-navigation-min-button-prev js__main-navigation-min-button-prev"></div>
 			</div>
 
-			<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopSearch')}">
+			<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopSearch')}">
 				<div class="main-navigation-min__search-btn-wrp">
 					<a class="main-navigation-min__search-btn js__main-navigation-min__search-btn" href="">Search<span></span></a>
 				</div>

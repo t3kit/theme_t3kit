@@ -7,17 +7,7 @@
 
 #Footer color
 #############################################
-# cat=footer,basic/footer_color/; type=color; label= Footer Background
-themes.configuration.footer.less.footerBackground =
 
-# cat=footer,basic/footer_color/; type=color; label= Footer Color
-themes.configuration.footer.less.footerColor =
-
-# cat=footer,basic/footer_color/; type=color; label= Footer Link Color
-themes.configuration.footer.less.footerLinkColor =
-
-# cat=footer,basic/footer_color/; type=color; label= Footer Link Hover Color
-themes.configuration.footer.less.footer-linkHoverColor =
 
 
 #Footer content

@@ -8,7 +8,7 @@
 <header class="header" role="banner">
 	<div class="header-top-wrp">
 
-		<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTop')}">
+		<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}">
 
 			<div class="header-top">
 				<div class="header-top__main-navigation-toggle-btn">
@@ -17,7 +17,7 @@
 					</button>
 				</div>
 
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopContacts')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContacts')}">
 					<div class="header-top__contact">
 						<div class="header-top__contact-tel">
 							<span class="icons icon-t3-mobile"></span>
@@ -32,18 +32,18 @@
 					</div>
 				</f:if>
 
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopLangMenu')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangMenu')}">
 					<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
 				</f:if>
 
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopSearch')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopSearch')}">
 					<div class="main-navigation__search-btn-wrp _header-top-search-btn">
 						<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
 					</div>
 					<div class="main-navigation__search-box _header-top-search-btn js__main-navigation__search-box" ><input placeholder="Search..." type="search"></div>
 				</f:if>
 
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTopNav')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopNavigation')}">
 					<f:cObject typoscriptObjectPath="lib.menu.top" />
 				</f:if>
 
@@ -52,16 +52,16 @@
 	</div>
 
 
-	<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddle')}">
+	<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddle')}">
 		<div class="header-middle-wrp">
 			<div class="header-middle">
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleLogo')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleLogo')}">
 					<div class="header-middle__logo">
 						<f:cObject typoscriptObjectPath="lib.header.logo.main" />
 					</div>
 				</f:if>
 
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMiddleSocIcons')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSocIcons')}">
 					<f:render partial="Header/Socialmedia" section="Default" />
 				</f:if>
 			</div>
@@ -71,7 +71,7 @@
 
 <!-- theme_t3kit: Main menu [begin] -->
 
-	<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderTop')}">
+	<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}">
 		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
 			<span>toggle menu</span>
 		</button>
@@ -84,7 +84,7 @@
 
 				<f:cObject typoscriptObjectPath="lib.menu.main" />
 
-				<f:if condition="{theme:constant(constant:'themes.configuration.header.showHeaderMainMenuSearch')}">
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMainMenuSearch')}">
 					<div class="main-navigation__search-btn-wrp">
 						<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
 					</div>

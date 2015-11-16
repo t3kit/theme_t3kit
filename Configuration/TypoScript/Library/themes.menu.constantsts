@@ -17,29 +17,6 @@ themes.configuration.menu.sub.excludeUidList =
 # cat=menu,expert/menu_sub; type=options[0,1]; label= Menu sub: Include also items which are marked as 'include not in menu'
 themes.configuration.menu.sub.includeNotInMenu = 0
 
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Background
-themes.configuration.menu.less.subNavigationBackground =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Border
-themes.configuration.menu.less.subNavigationBorder =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Active Border
-themes.configuration.menu.less.subNavigationActiveBorder =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Link Color
-themes.configuration.menu.less.subNavigationLinkColor =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Link Hover Color
-themes.configuration.menu.less.subNavigationLinkHoverColor =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Link Hover Background
-themes.configuration.menu.less.subNavigationLinkHoverBg =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Link Active Color
-themes.configuration.menu.less.subNavigationLinkActiveColor =
-
-# cat=menu,advanced/menu_sub; type=color; label= Sub Navigation Link Active Background
-themes.configuration.menu.less.subNavigationLinkActiveBg =
 
 
 
@@ -52,14 +29,3 @@ themes.configuration.menu.breadcrumb.includeNotInMenu = 0
 # cat=menu,expert/menu_breadcrumb; type=string; label= Menu breadcrumb: Exclude uid list (12,13,...)
 themes.configuration.menu.breadcrumb.excludeUidList =
 
-# cat=menu,advanced/menu_breadcrumb; type=color; label= Breadcrumbs Background
-themes.configuration.menu.less.breadcrumbsBackground =
-
-# cat=menu,advanced/menu_breadcrumb; type=color; label= Breadcrumbs Link Color
-themes.configuration.menu.less.breadcrumbsLinkColor =
-
-# cat=menu,advanced/menu_breadcrumb; type=color; label= Breadcrumbs Link Active Color
-themes.configuration.menu.less.breadcrumbsLinkActiveColor =
-
-# cat=menu,advanced/menu_breadcrumb; type=color; label= Breadcrumbs Link Hover Color
-themes.configuration.menu.less.breadcrumbsLinkHoverColor =
