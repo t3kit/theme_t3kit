@@ -25,9 +25,9 @@ lib.content.top {
 	50 < styles.content.get
 	50.select.where = colPos=3
 }
-# Insert colPos 4 in extended content
-lib.content.extended = COA
-lib.content.extended {
+# Insert colPos 4 in elements content
+lib.content.elements = COA
+lib.content.elements {
 	50 < styles.content.get
 	50.select.where = colPos=4
 }

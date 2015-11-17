@@ -65,11 +65,8 @@
             <trans-unit id="area_sidebar">
                 <source>Sidebar</source>
             </trans-unit>
-            <trans-unit id="area_extended">
-                <source>Extended</source>
-            </trans-unit>
-            <trans-unit id="area_unused">
-                <source>Unused Elements</source>
+            <trans-unit id="area_elements">
+                <source>Page Elements</source>
             </trans-unit>
 
         </body>

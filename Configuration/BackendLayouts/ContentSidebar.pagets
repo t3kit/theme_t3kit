@@ -27,10 +27,10 @@ mod.web_layout.BackendLayouts {
                     2 {
                         columns {
                             1 {
-                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_unused
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_elements
                                 rowspan = 1
                                 colspan = 4
-                                colPos = -2
+                                colPos = 4
                             }
                         }
                     }
