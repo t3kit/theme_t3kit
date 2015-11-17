@@ -302,9 +302,9 @@
     }
 [global]
 
-[globalString = LIT:{$themes.configuration.less.var.footer-linkHoverColor} = /.*\S.*/]
+[globalString = LIT:{$themes.configuration.less.var.footerLinkHoverColor} = /.*\S.*/]
     plugin.tx_dyncss.overrides {
         footer-link-hover-color = TEXT
-        footer-link-hover-color.value = {$themes.configuration.less.var.footer-linkHoverColor}
+        footer-link-hover-color.value = {$themes.configuration.less.var.footerLinkHoverColor}
     }
 [global]

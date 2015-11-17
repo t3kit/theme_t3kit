@@ -53,4 +53,9 @@ if (TYPO3_MODE === 'BE') {
 		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/column.svg']
 	);
+	$iconRegistry->registerIcon(
+		'content-elements-columns',
+		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/columns.svg']
+	);
 }

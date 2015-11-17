@@ -150,7 +150,7 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['container'] = 'content-elements-container';
 
-	// "columns"
+	// "column"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
@@ -164,6 +164,22 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['column'] = 'content-elements-column';
 
+
+    // "columns"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $structuredContentElementLanguageFilePrefix . 'columns.title',
+            'columns',
+            'content-elements-columns'
+        ],
+        'column',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['columns'] = 'content-elements-columns';
+
+
     // The "divider" these structured content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -173,7 +189,7 @@ call_user_func(function() {
             '--div--',
             NULL
         ],
-        'quote',
+        'tabs',
         'after'
     );
 
@@ -362,6 +378,8 @@ call_user_func(function() {
         '
     ];
 
+
+
     // "container"
     $GLOBALS['TCA']['tt_content']['types']['column'] = [
         'showitem' => '
@@ -370,6 +388,23 @@ call_user_func(function() {
                 records;' . $structuredContentElementLanguageFilePrefix . 'column.records_formlabel,
                 rowDescription,
                	--linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "columns"
+    $GLOBALS['TCA']['tt_content']['types']['columns'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
+                records;' . $structuredContentElementLanguageFilePrefix . 'columns.records_formlabel,
+                rowDescription,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -396,4 +431,3 @@ call_user_func(function() {
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,column'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_column.xml';
 
 });
-

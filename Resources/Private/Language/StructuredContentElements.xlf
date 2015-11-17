@@ -25,6 +25,27 @@
                 <source>Fluid container</source>
             </trans-unit>
 
+
+            <trans-unit id="columns.title">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="columns.description">
+                <source>Columns for elements(1col - 2col - 3col - 4col)</source>
+            </trans-unit>
+            <trans-unit id="columns.records_formlabel">
+                <source>Elements. Every element will be in separate column.</source>
+            </trans-unit>
+            <trans-unit id="columns.layout.0">
+                <source>No container</source>
+            </trans-unit>
+            <trans-unit id="columns.layout.1">
+                <source>Container</source>
+            </trans-unit>
+            <trans-unit id="columns.layout.2">
+                <source>Fluid container</source>
+            </trans-unit>
+
+
             <trans-unit id="column.title">
                 <source>Columns for content</source>
             </trans-unit>
