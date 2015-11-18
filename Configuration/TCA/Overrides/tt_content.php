@@ -370,6 +370,7 @@ call_user_func(function() {
                 rowDescription,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
@@ -433,5 +434,8 @@ call_user_func(function() {
 
 	// "columns"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,columns'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_columns.xml';
+
+	// "container"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,container'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_container.xml';
 
 });
