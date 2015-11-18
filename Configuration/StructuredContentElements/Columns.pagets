@@ -12,6 +12,13 @@ mod.wizards.newContentElement.wizardItems.structuredContentElements {
     show := addToList(columns)
 }
 
+TCEFORM.tt_content.pi_flexform.columns.sDEF.wrpClass {
+    addItems {
+        0 =
+        _wrapper-example = wrapper example
+    }
+}
+
 
 mod.web_layout.tt_content.preview.columns = EXT:theme_t3kit/Resources/Private/Templates/StructuredContentElements/BE/Columns.html
 

@@ -14,7 +14,9 @@
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/StructuredContentElements.xlf:columns.flexform.wrpClass</label>
 							<config>
-								<type>input</type>
+								<type>select</type>
+								<items>
+								</items>
 							</config>
 						</TCEforms>
 					</wrpClass>

@@ -12,6 +12,13 @@ mod.wizards.newContentElement.wizardItems.structuredContentElements {
     show := addToList(container)
 }
 
+TCEFORM.tt_content.pi_flexform.container.sDEF.advWrpClass {
+    addItems {
+        0 =
+        _adv-wrapper-example = adv wrapper example
+    }
+}
+
 mod.web_layout.tt_content.preview.container = EXT:theme_t3kit/Resources/Private/Templates/StructuredContentElements/BE/Container.html
 
 # Use layout field to customize Layout select-box on container
