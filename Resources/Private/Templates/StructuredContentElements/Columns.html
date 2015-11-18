@@ -5,24 +5,28 @@
 
 	<f:section name="content">
 	<!-- theme_t3kit: Templates/StructuredContentElements/Columns.html [begin] -->
-	    <f:if condition="{data.records}">
-			<f:if condition="{layoutClass} = 0">
+		<f:if condition="{data.records}">
+			<f:if condition="{settings.wrpClass}">
+				<div class="{settings.wrpClass}">
 			</f:if>
-			<f:if condition="{layoutClass} >= 1">
-				<div class="{layoutClass}">
-			</f:if>
-				<div class="row">
-					<f:for each="{xtools:get.records(recordList : data.records)}" as="content" iteration="contentIteration">
-						<f:if condition="{contentIteration.total} <= 4">
-					        <div class="{f:if( condition: '{contentIteration.total} == 1', then: 'col-md-12')} {f:if( condition: '{contentIteration.total} == 2', then: 'col-md-6')} {f:if( condition: '{contentIteration.total} == 3', then: 'col-md-4')} {f:if( condition: '{contentIteration.total} == 4', then: 'col-md-3')}">
-								<xtools:render.content id="{content.uid}" />
-							</div>
-						</f:if>
-						<f:if condition="{contentIteration.total} > 4">
-						</f:if>
-					</f:for>
-				</div>
-			<f:if condition="{layoutClass} >= 1">
+				<f:if condition="{layoutClass}">
+					<div class="{layoutClass}">
+				</f:if>
+					<div class="row">
+						<f:for each="{xtools:get.records(recordList : data.records)}" as="content" iteration="contentIteration">
+							<f:if condition="{contentIteration.total} <= 4">
+								<div class="{f:if( condition: '{contentIteration.total} == 1', then: 'col-md-12')} {f:if( condition: '{contentIteration.total} == 2', then: 'col-md-6')} {f:if( condition: '{contentIteration.total} == 3', then: 'col-md-4')} {f:if( condition: '{contentIteration.total} == 4', then: 'col-md-3')}">
+									<xtools:render.content id="{content.uid}" />
+								</div>
+							</f:if>
+							<f:if condition="{contentIteration.total} > 4">
+							</f:if>
+						</f:for>
+					</div>
+				<f:if condition="{layoutClass}">
+					</div>
+				</f:if>
+			<f:if condition="{settings.wrpClass}">
 				</div>
 			</f:if>
 		</f:if>

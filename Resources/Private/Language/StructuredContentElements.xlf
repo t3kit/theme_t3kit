@@ -44,6 +44,12 @@
             <trans-unit id="columns.layout.2">
                 <source>Fluid container</source>
             </trans-unit>
+            <trans-unit id="columns.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="columns.flexform.wrpClass">
+                <source>Wrapper class</source>
+            </trans-unit>
 
 
             <trans-unit id="column.title">

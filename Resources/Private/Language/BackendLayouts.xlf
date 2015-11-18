@@ -66,7 +66,7 @@
                 <source>Sidebar</source>
             </trans-unit>
             <trans-unit id="area_elements">
-                <source>Page Elements</source>
+                <source>Page Elements (Hidden in main page. Use only for records (columns, accordion, tabs, news, etc )</source>
             </trans-unit>
 
         </body>
