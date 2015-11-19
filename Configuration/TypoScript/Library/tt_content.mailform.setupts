@@ -1,0 +1,166 @@
+plugin.tx_form {
+
+    settings {
+        registeredElements {
+            SUBMIT {
+                fixedHtmlAttributeValues {
+                    class = btn btn-default
+                }
+            }
+            RESET {
+                fixedHtmlAttributeValues {
+                    class = btn btn-default
+                }
+            }
+            BUTTON {
+                fixedHtmlAttributeValues {
+                    class = btn btn-default
+                }
+            }
+            SELECT {
+                fixedHtmlAttributeValues {
+                    class = form-control
+                }
+            }
+        }
+    }
+}
+
+plugin.tx_form._CSS_DEFAULT_STYLE >
+
+tt_content.mailform.20 {
+    form {
+        layout {
+            form (
+                <form class="form-horizontal">
+                    <containerWrap />
+                </form>
+            )
+            containerWrap (
+                <div>
+                    <elements />
+                </div>
+            )
+            elementWrap (
+                <div>
+                    <element />
+                </div>
+            )
+            label (
+                <label>
+                    <labelvalue />
+                    <mandatory />
+                </label>
+            )
+            error (
+                <p class="text-danger">
+                    <errorvalue />
+                </p>
+            )
+            checkbox (
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-5">
+                    <div class="checkbox">
+                        <div class="fix-label">
+                            <input />
+                            <label />
+                        </div>
+                    </div>
+                    <error />
+                </div>
+            </div>
+            )
+            radio (
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-5">
+                    <div class="radio">
+                        <div class="fix-label">
+                            <input />
+                            <label />
+                        </div>
+                    </div>
+                    <error />
+                </div>
+            </div>
+            )
+
+            textline (
+                <div class="form-group">
+                    <div class="col-sm-3 control-label">
+                        <label />
+                    </div>
+                    <div class="col-sm-5">
+                        <input class="form-control" />
+                        <error />
+                    </div>
+                </div>
+            )
+
+            password < .textline
+            fileupload (
+                <div class="form-group">
+                    <div class="col-sm-3 control-label">
+                        <label />
+                    </div>
+                    <div class="col-sm-5">
+                        <input/>
+                    </div>
+                </div>
+            )
+            textarea (
+                <div class="form-group">
+                    <div class="col-sm-3 control-label">
+                        <label />
+                    </div>
+                    <div class="col-sm-5">
+                        <textarea class="form-control" />
+                        <error />
+                    </div>
+                </div>
+            )
+            submit (
+                <div class="form-group mail-submit ">
+                    <div class="col-sm-offset-3 col-sm-5">
+                        <input />
+                    </div>
+                </div>
+            )
+            reset (
+                <div class="form-group mail-reset">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <input />
+                    </div>
+                </div>
+            )
+            button (
+                <div class="form-group mail-btn">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <input />
+                    </div>
+                </div>
+            )
+            select (
+                <div class="form-group">
+                    <div class="col-sm-3 control-label">
+                        <label />
+                    </div>
+                    <div class="col-sm-5">
+                        <select class="form-control">
+                            <elements />
+                        </select>
+                        <error />
+                    </div>
+                </div>
+            )
+            mandatory (
+                <span class="icons icon-t3-mandatory">
+                    <mandatoryvalue />
+                </span>
+            )
+            fieldset (
+                <fieldset><legend /><containerWrap /></fieldset>
+            )
+        }
+    }
+    stdWrap.wrap = |
+}
