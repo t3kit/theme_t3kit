@@ -1,5 +1,5 @@
 page {
-    includeJSFooter {
+    includeJSFooterlibs {
         jquery = {$themes.configuration.felayoutFullPath}/jquery.js
         jquery {
             external = 0
@@ -24,6 +24,10 @@ page {
             # disableCompression =
             # excludeFromConcatenation =
         }
+    }
+}
+page {
+    includeJSFooter {
         mainjs = {$themes.configuration.felayoutFullPath}/main.js
         mainjs {
             external = 0
