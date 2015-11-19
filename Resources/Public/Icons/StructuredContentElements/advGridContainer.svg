@@ -7,10 +7,10 @@
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#737373;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st4{fill:#EA8E55;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FF5335;}
-	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FF9886;}
-	.st7{fill:#FF5335;}
+	.st4{fill:#288FB4;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FFA99A;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FFDDD7;}
+	.st7{fill:#FFDDD7;}
 </style>
 <path class="st0" d="M0,0h100v100H0V0z"/>
 <polygon class="st1" points="100,24.3 88,12 87,78 20.3,78.2 12,88 24.9,100 100,100 "/>
