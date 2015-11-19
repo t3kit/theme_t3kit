@@ -30,3 +30,19 @@ plugin.tx_themes {
         }
     }
 }
+plugin.tx_themes {
+    _LOCAL_LANG {
+        de {
+            languageMenu_label = Website-Sprache
+            breadcrumb_label = Sie sind hier
+            imprint_label = Impressum
+            quickSearch_label = Suche
+            topLink_label = Nach oben
+            printLink_label = Drucken
+            callUs_label = Rufen Sie uns an
+            emailUs_label = Email an
+            search_label = Suche
+            search_placeholder = Suche...
+        }
+    }
+}
