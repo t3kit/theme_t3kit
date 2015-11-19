@@ -1,0 +1,76 @@
+plugin.tx_felogin_pi1 {
+    templateFile = EXT:theme_t3kit/Resources/Private/Extensions/Felogin/Templates/felogin.html
+}
+plugin.tx_felogin_pi1 {
+
+    welcomeHeader_stdWrap {
+        wrap = <h3 class="felogin-welcome-header">|</h3>
+    }
+    welcomeMessage_stdWrap {
+        wrap = <div class="alert alert-info">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+
+    successHeader_stdWrap {
+        wrap = <h3 class="felogin-success-header">|</h3>
+    }
+    successMessage_stdWrap {
+        wrap = <div class="alert alert-success">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    logoutHeader_stdWrap {
+        wrap = <h3 class="felogin-logout-header">|</h3>
+    }
+    logoutMessage_stdWrap {
+        wrap = <div class="alert alert-success">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+
+    errorHeader_stdWrap {
+        wrap = <h3 class="felogin-error-header" >|</h3>
+    }
+    errorMessage_stdWrap {
+        wrap = <div class="alert alert-danger">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+
+    forgotHeader_stdWrap {
+        wrap = <h3 class="felogin-forgot-header">|</h3>
+    }
+    forgotMessage_stdWrap {
+        wrap = <div class="alert alert-info">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    forgotErrorMessage_stdWrap {
+        wrap = <div class="alert alert-danger">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    forgotResetMessageEmailSentMessage_stdWrap {
+        wrap = <div class="alert alert-info">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    changePasswordNotValidMessage_stdWrap {
+        wrap = <div class="alert alert-warning">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    changePasswordTooShortMessage_stdWrap {
+        wrap = <div class="alert alert-warning">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    changePasswordNotEqualMessage_stdWrap {
+        wrap = <div class="alert alert-warning">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+
+    changePasswordHeader_stdWrap {
+        wrap = <h3 class="felogin-change-header">|</h3>
+    }
+    changePasswordMessage_stdWrap {
+        wrap = <div class="alert alert-info">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+    changePasswordDoneMessage_stdWrap {
+        wrap = <div class="alert alert-info">| <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    }
+
+    cookieWarning_stdWrap {
+        wrap = <div class="alert alert-warning">|</div>
+    }
+
+    # stdWrap for fe_users fields used in Messages
+    userfields {
+        username {
+            htmlSpecialChars = 1
+            wrap = <strong>|</strong>
+        }
+    }
+}
