@@ -27,3 +27,6 @@
 #backendlayouts.TopContentMenuContent >
 #backendlayouts.TopContentMenuContentSidebar >
 #backendlayouts.TopContentSidebarContent >
+
+# Extensions
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/PageTS/tsconfig.txt">
