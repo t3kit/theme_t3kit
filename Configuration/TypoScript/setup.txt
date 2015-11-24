@@ -2,7 +2,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:themes/Configuration/TypoScript/setup.txt">
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library/" extensions="setupts">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/Elements/TypoScript/" extensions="setupts">
+# <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/Elements/TypoScript/" extensions="setupts">
 
 
 # Add this extensions rootPaths to lib.fluidcontent (fluid_styled_content)
@@ -31,6 +31,6 @@ lib.fluidContent {
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/StructuredContentElements/" extensions="setupts">
 
 # Extensions
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.txt">
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/IndexedSearch/TypoScript/setup.txt">

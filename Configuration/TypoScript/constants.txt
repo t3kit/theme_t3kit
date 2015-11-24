@@ -2,3 +2,8 @@
 
 # Base configuration
 themes.configuration.siteName = t3kit
+
+
+
+# Extensions
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/constants.ts">
