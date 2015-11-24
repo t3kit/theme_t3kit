@@ -3,39 +3,38 @@
 <svg version="1.1" id="Carousel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D9D9D9;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#737373;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st4{fill:#EA8E55;}
-	.st5{fill:none;stroke:#737373;stroke-width:4;stroke-linecap:square;stroke-miterlimit:10;}
-	.st6{fill:#FFFFFF;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#A7A9AC;}
-	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#BCBEC0;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{fill:#FF5335;}
+	.st4{fill:none;stroke:#6D6E71;stroke-width:4;stroke-linecap:square;stroke-miterlimit:10;}
+	.st5{fill:#6D6E71;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#93C7D9;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#3E9ABC;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#7EBCD2;}
 </style>
 <path class="st0" d="M0,0h100v100H0V0z"/>
 <polygon class="st1" points="100,34.2 82,16 81,65 37,65 18,66 54,100 100,100 "/>
-<path class="st2" d="M0,0v100h100V0H0z M98,98H2V2h96V98z"/>
 <g>
-	<rect x="19.5" y="17.5" class="st3" width="61" height="47"/>
-	<path class="st4" d="M79,19v44H21V19H79 M82,16H18v50h64V16L82,16z"/>
+	<rect x="19.5" y="17.5" class="st2" width="61" height="47"/>
+	<path class="st3" d="M79,19v44H21V19H79 M82,16H18v50h64V16L82,16z"/>
 </g>
 <g>
-	<line class="st5" x1="15" y1="34" x2="8" y2="41"/>
-	<line class="st5" x1="15" y1="48" x2="8" y2="41"/>
+	<line class="st4" x1="15" y1="34" x2="8" y2="41"/>
+	<line class="st4" x1="15" y1="48" x2="8" y2="41"/>
 </g>
 <g>
-	<line class="st5" x1="86" y1="34" x2="93" y2="41"/>
-	<line class="st5" x1="86" y1="48" x2="93" y2="41"/>
+	<line class="st4" x1="86" y1="34" x2="93" y2="41"/>
+	<line class="st4" x1="86" y1="48" x2="93" y2="41"/>
 </g>
-<circle class="st6" cx="38" cy="75" r="4"/>
+<circle class="st5" cx="38" cy="75" r="4"/>
 <g>
-	<circle class="st6" cx="50" cy="75" r="4"/>
+	<circle class="st5" cx="50" cy="75" r="4"/>
 </g>
 <g>
-	<circle class="st6" cx="62" cy="75" r="4"/>
+	<circle class="st5" cx="62" cy="75" r="4"/>
 </g>
-<circle class="st7" cx="35" cy="29" r="5"/>
+<circle class="st6" cx="35" cy="29" r="5"/>
 <polygon class="st7" points="41.8,35.8 21,63 62.6,63 "/>
 <polygon class="st8" points="55.7,31 32.4,63 79,63 "/>
 </svg>
