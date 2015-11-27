@@ -1,0 +1,87 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+{namespace t3kit=T3kit\T3kitExtensionTools\ViewHelpers\Render}
+<!--
+  =====================
+    Partials/List/Thumbnail.html
+-->
+
+<f:for each="<t3kit:newsChunk input='{news}' size='{settings.thumbnail.columns}' />" as="thumbnailrow" iteration="tr">
+  <div class="row tr-{tr.cycle}">
+    <f:for each="{thumbnailrow}" as="newsItem">
+      <n:excludeDisplayedNews newsItem="{newsItem}" />
+      <f:if condition="{settings.thumbnail.columns} == 1">
+        <div class="col-md-12">
+      </f:if>
+      <f:if condition="{settings.thumbnail.columns} == 2">
+        <div class="col-sm-6 col-md-6">
+      </f:if>
+      <f:if condition="{settings.thumbnail.columns} == 3">
+        <div class="col-sm-6 col-md-4">
+      </f:if>
+      <f:if condition="{settings.thumbnail.columns} == 4">
+        <div class="col-sm-6 col-md-3">
+      </f:if>
+      <f:if condition="{settings.thumbnail.columns} > 4">
+        <div class="col-sm-6 col-md-3">
+      </f:if>
+
+      <div class="thumbnail">
+        
+        <!-- date -->
+        <span class="news-list-date">
+          <n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
+        </span>
+        
+        <!-- fal media preview element -->
+        <f:if condition="{newsItem.falMediaPreviews}">
+          <f:then>
+            <n:link newsItem="{newsItem}" settings="{settings}">
+              <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+                <f:if condition="{mediaElement.originalResource.type} == 2">
+                  <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.thumbnail.width}c-0" height="{settings.thumbnail.height}" />
+                </f:if>
+              </f:alias>
+            </n:link>
+          </f:then>
+          <f:else>
+            <f:if condition="{settings.displayDummyIfNoMedia}">
+              <n:link newsItem="{newsItem}" settings="{settings}">
+                <f:image src="{settings.list.media.dummyImage}" title="" alt="" width="{settings.thumbnail.width}" height="{settings.thumbnail.height}" class="img-responsive" />
+              </n:link>
+            </f:if>
+          </f:else>
+        </f:if>
+        
+        <!-- teaser -->
+        <div class="caption">
+          <h3>{newsItem.title}</h3>
+          <f:if condition="{newsItem.teaser}">
+            <f:then>
+              <f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+            </f:then>
+            <f:else>
+              <f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+            </f:else>
+          </f:if>
+
+          <n:link newsItem="{newsItem}" settings="{settings}" class="more btn btn-primary">
+            <f:translate key="more-link" />
+          </n:link>
+          
+          <!-- categories -->
+          <span class="glyphicon glyphicon-tags"></span>
+          <f:if condition="{newsItem.categories}">
+            <f:for each="{newsItem.categories}" as="category" iteration="iterator">
+              <div class="news-list-category" title="UID: {category.uid}">{category.title}</div>
+              <f:if condition="{iterator.isLast}">
+                <f:then></f:then>
+                <f:else>,</f:else>
+              </f:if>
+            </f:for>
+          </f:if>
+        </div>
+    </div>
+    </div>
+    </f:for>
+  </div>
+</f:for>

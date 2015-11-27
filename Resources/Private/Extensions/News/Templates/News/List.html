@@ -1,34 +1,92 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
 <f:layout name="General" />
 <!--
-	=====================
-		Templates/News/List.html
+  =====================
+    Templates/News/List.html
 -->
-
 <f:section name="content">
-	<f:if condition="{news}">
-		<f:then>
-			<div class="news-list-view">
-				<f:if condition="{settings.hidePagination}">
-					<f:then>
-						<f:for each="{news}" as="newsItem" iteration="iterator">
-							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-						</f:for>
-					</f:then>
-					<f:else>
-						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
-							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-							</f:for>
-						</n:widget.paginate>
-					</f:else>
-				</f:if>
-			</div>
-		</f:then>
-		<f:else>
-			<div class="no-news-found">
-				<f:translate key="list_nonewsfound" />
-			</div>
-		</f:else>
-	</f:if>
+  <f:if condition="{news}">
+    <f:then>
+      <f:if condition="{settings.templateLayout}">
+        <f:then>
+          <f:if condition="{settings.templateLayout} == 1">
+
+            <div class="news-list-view">
+              <f:if condition="{settings.hidePagination}">
+                <f:then>
+                  <f:for each="{news}" as="newsItem">
+                    <f:render partial="List/MediaObject" arguments="{newsItem: newsItem, settings:settings}" />
+                  </f:for>
+                </f:then>
+                <f:else>
+                  <n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+                    <f:for each="{paginatedNews}" as="newsItem">
+                      <f:render partial="List/MediaObject" arguments="{newsItem: newsItem, settings:settings}" />
+                    </f:for>
+                  </n:widget.paginate>
+                </f:else>
+              </f:if>
+            </div>
+
+          </f:if>
+          <f:if condition="{settings.templateLayout} == 2">
+
+            <div class="news-list-view">
+              <f:if condition="{settings.hidePagination}">
+                <f:then>
+                  <f:render partial="List/Thumbnail" arguments="{news: news, settings:settings}" />
+                </f:then>
+                <f:else>
+                  <f:render partial="List/Thumbnail" arguments="{news: news, settings:settings}" />
+                </f:else>
+              </f:if>
+            </div>
+
+
+          </f:if>
+          <f:if condition="{settings.templateLayout} == 3">
+
+            <div class="news-list-view">
+              <f:if condition="{settings.hidePagination}">
+                <f:then>
+                  <f:render partial="List/Timeline" arguments="{news: news, settings:settings}" />
+                </f:then>
+                <f:else>
+                  <f:render partial="List/Timeline" arguments="{news: news, settings:settings}" />
+                </f:else>
+              </f:if>
+            </div>
+
+
+          </f:if>
+        </f:then>
+        <f:else>
+
+          <div class="news-list-view">
+            <f:if condition="{settings.hidePagination}">
+              <f:then>
+                <f:for each="{news}" as="newsItem">
+                  <f:render partial="List/Item" arguments="{newsItem: newsItem, settings:settings}" />
+                </f:for>
+              </f:then>
+              <f:else>
+                <n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+                  <f:for each="{paginatedNews}" as="newsItem">
+                    <f:render partial="List/Item" arguments="{newsItem: newsItem, settings:settings}" />
+                  </f:for>
+                </n:widget.paginate>
+              </f:else>
+            </f:if>
+          </div>
+
+        </f:else>
+      </f:if>
+
+    </f:then>
+    <f:else>
+      <div class="no-news-found">
+        <f:translate key="list_nonewsfound" />
+      </div>
+    </f:else>
+  </f:if>
 </f:section>

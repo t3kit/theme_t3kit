@@ -1,0 +1,88 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+{namespace t3kit=T3kit\T3kitExtensionTools\ViewHelpers\Render}
+<!--
+  =====================
+    Partials/List/Timeline.html
+-->
+
+<ul class="timeline">
+  <f:for each="<t3kit:newsChunk input='{news}' size='{settings.thumbnail.columns}' />" as="thumbnailrow" iteration="tr">
+    <f:for each="{thumbnailrow}" as="newsItem">
+      <f:cycle values="{0: 'timeline-normal', 1: 'timeline-inverted'}" as="cycle">
+      <li class="{cycle}">
+        <div class="timeline-badge">
+          <a><i class="fa fa-circle" id=""></i></a>
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            
+            <!-- fal media preview element -->
+            <f:if condition="{newsItem.falMediaPreviews}">
+              <f:then>
+                <n:link newsItem="{newsItem}" settings="{settings}">
+                  <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+                    <f:if condition="{mediaElement.originalResource.type} == 2">
+                      <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.thumbnail.width}c-0" height="{settings.thumbnail.height}" />
+                    </f:if>
+                  </f:alias>
+                </n:link>
+              </f:then>
+              <f:else>
+                <f:if condition="{settings.displayDummyIfNoMedia}">
+                  <n:link newsItem="{newsItem}" settings="{settings}">
+                    <f:image src="{settings.list.media.dummyImage}" title="" alt="" width="{settings.thumbnail.width}" height="{settings.thumbnail.height}" class="img-responsive" />
+                  </n:link>
+                </f:if>
+              </f:else>
+            </f:if>
+            
+            <!-- teaser -->
+            <div class="caption">
+              <h3>{newsItem.title}</h3>
+            </div>
+          </div>
+          <div class="timeline-body">
+            
+            <f:if condition="{newsItem.teaser}">
+              <f:then>
+                <f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+              </f:then>
+              <f:else>
+                <f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+              </f:else>
+            </f:if>
+            
+            <n:link newsItem="{newsItem}" settings="{settings}" class="cd-read-more">
+              <f:translate key="more-link" />
+            </n:link>
+            
+          </div>
+          <div class="timeline-footer">
+            
+            <!-- date -->
+            <span class="cd-date">
+              <n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
+            </span>
+            
+            <!-- categories -->
+            <div class="footer">
+              <span class="glyphicon glyphicon-tags"></span>
+              <f:if condition="{newsItem.categories}">
+                <f:for each="{newsItem.categories}" as="category" iteration="iterator">
+                  <div class="news-list-category" title="UID: {category.uid}">{category.title}</div>
+                  <f:if condition="{iterator.isLast}">
+                    <f:then></f:then>
+                    <f:else>,</f:else>
+                  </f:if>
+                </f:for>
+              </f:if>
+            </div>
+            
+            <p class="text-right">Feb-21-2014</p>
+          </div>
+        </div>
+      </li>
+      </f:cycle>
+    </f:for>
+  </f:for>
+</ul>
