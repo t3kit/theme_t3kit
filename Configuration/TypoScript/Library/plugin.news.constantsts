@@ -1,0 +1,5 @@
+plugin.tx_news {
+  settings {
+    cssFile = EXT:theme_t3kit/Resources/Public/Extensions/News/Css/News.css
+  }
+}

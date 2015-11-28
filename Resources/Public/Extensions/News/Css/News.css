@@ -1,0 +1,368 @@
+/* Example Style for tx_news */
+
+.mediaelement-video {
+    height: 0;
+    margin: 20px 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    position: relative;
+}
+.mediaelement-video iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.mediaelement-image {
+    margin-bottom: 10px;
+}
+
+
+.media.article {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.news .clear {
+    clear: both;
+}
+.news .nav ul {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+.news .article {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+
+.facebook .list-group-item {
+    border: medium none;
+}
+.news .article h3 {
+    margin-bottom: 0;
+}
+.news .footer {
+    border-top: 1px solid #EEEEEE;
+    clear: both;
+    margin-top: 15px;
+    /*padding: 10px 0 0;*/
+    background: none;
+}
+.news .footer p {
+    color: #555555;
+}
+.news .footer span {
+    border-right: 1px solid #DDDDDD;
+    display: inline-block;
+    margin-right: 8px;
+    padding-right: 8px;
+}
+.news .footer span *:last-child {
+    border-right: 0 none;
+}
+.news .footer .news-category a {
+    text-transform: uppercase;
+}
+.news .no-news-found {
+    color: #DB0202;
+    font-style: italic;
+}
+.list-teaserbox {
+    background-color: #CCCCCC;
+    padding-bottom: 15px;
+}
+.news-single .footer {
+    border-bottom: 0 none;
+    border-top: 1px solid #EEEEEE;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 10px 0 0;
+    border: none;
+}
+.news-single .teaser-text {
+    font-weight: bold;
+}
+.news-text-wrap {
+    margin-bottom: 20px;
+}
+.news-img-caption {
+    color: #888888;
+}
+.news-img-wrap a {
+    margin-bottom: 10px;
+}
+
+/* -----------------------------------------------
+ * Thumbnails (inspired from t3bootstrap.de)
+ *   adapted by Dominik Senti (11.2015)
+ * --------------------------------------------- */
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #337ab7;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333333;
+}
+
+
+/* -----------------------------------------------
+ * Timeline (inspired from Bootstrap Unify)
+ *   adapted by Dominik Senti (11.2015)
+ * --------------------------------------------- */
+ .timeline {
+    list-style: none;
+    padding: 10px 0;
+    /*position: relative;*/
+    font-weight: 300;
+    display: inline-block;
+}
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 4px;
+    height: 100%;
+    background: #d7e4ed;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline > li {
+    margin-bottom: 20px;
+    position: relative;
+    width: 50%;
+    float: left;
+    clear: left;
+}
+.timeline > li:before, .timeline > li:after {
+    content:" ";
+    display: table;
+}
+.timeline > li:after {
+    clear: both;
+}
+.timeline > li:before, .timeline > li:after {
+    content:" ";
+    display: table;
+}
+.timeline > li:after {
+    clear: both;
+}
+.timeline > li.timeline-normal {
+    /*margin-top: 100px;*/
+    margin-bottom: 50px;
+}
+.timeline > li.timeline-normal:first-of-type {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.timeline > li > .timeline-panel {
+    width: calc(100% - 25px);
+    width: -moz-calc(100% - 25px);
+    width: -webkit-calc(100% - 25px);
+    float: left;
+    /*border: 1px solid #dcdcdc;*/
+    background: #e9f0f5;
+    position: relative;
+    border-radius: 0.25em;
+    padding: 1em;
+}
+.timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -14px;
+    display: inline-block;
+    /*border-top: 15px solid transparent;*/
+    /*border-left: 15px solid #dcdcdc;*/
+    /*border-right: 0 solid #dcdcdc;*/
+    /*border-bottom: 15px solid transparent;*/
+    content:" ";
+    border: 7px solid transparent;
+    border-right: 7px solid #e9f0f5;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-left-color: #e9f0f5;
+}
+.timeline > li > .timeline-panel:after {
+    position: absolute;
+    top: 26px;
+    right: -14px;
+    display: inline-block;
+    /*border-top: 14px solid transparent;*/
+    /*border-left: 14px solid #ffffff;*/
+    /*border-right: 0 solid #ffffff;*/
+    /*border-bottom: 14px solid transparent;*/
+    content:" ";
+}
+.timeline > li > .timeline-badge {
+    color: #d7e4ed;
+    width: 36px;
+    height: 36px;
+    line-height: 38px;
+    text-align: center;
+    position: absolute;
+    top: 16px;
+    right: -18px;
+    z-index: 100;
+    background: #f0ca45;
+    border-radius: 50%;
+}
+.timeline > li.timeline-inverted {
+    /*margin-top: 100px;*/
+    margin-bottom: 50px;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    /*border-left-width: 0;*/
+    /*border-right-width: 15px;*/
+    left: -14px;
+    right: auto;
+    top: 28px;
+    border: 7px solid transparent;
+    border-left: 7px solid #e9f0f5;
+    border-color: transparent;
+    border-right-color: #e9f0f5;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    /*border-left-width: 0;*/
+    /*border-right-width: 14px;*/
+    left: -14px;
+    right: auto;
+}
+.timeline-badge > a {
+    color: #288fb4 !important;
+}
+/*.timeline-badge a:hover {
+    color: #dcdcdc !important;
+}*/
+.timeline-heading {
+    margin-top: 0;
+    color: inherit;
+}
+.timeline-heading h4 {
+    font-weight: 400;
+    padding: 0 15px;
+    color: #4679bd;
+}
+.timeline-heading > a > img {
+    vertical-align: middle;
+    width: 100%;
+    border: 0;
+}
+
+.timeline-body > p, .timeline-body > ul {
+    padding: 10px 15px;
+}
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+.timeline-footer {
+    padding: 5px 15px;
+    background-color:#f4f4f4;
+    margin-top: 20px;
+}
+.timeline-footer p { margin-bottom: 0; }
+.timeline-footer > a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.timeline > li.timeline-inverted {
+    float: right;
+    clear: right;
+}
+.timeline > li:nth-child(2) {
+    margin-top: 100px;
+}
+.timeline > li.timeline-inverted > .timeline-badge {
+    left: -18px;
+}
+.no-float {
+    float: none !important;
+}
+@media (max-width: 767px) {
+    ul.timeline {
+        /*position: relative;*/
+        display: inline-block;
+    }
+    ul.timeline:before {
+        left: 32px;
+    }
+    ul.timeline > li, ul.timeline > li.timeline-normal, ul.timeline > li.timeline-normal:first-of-type {
+        margin-bottom: 0px;
+        position: relative;
+        width:100%;
+        float: left;
+        clear: left;
+    }
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 36px);
+        width: -moz-calc(100% - 36px);
+        width: -webkit-calc(100% - 36px);
+    }
+    ul.timeline > li > .timeline-badge, ul.timeline > li.timeline-inverted > .timeline-badge {
+        left: 6px;
+        margin-left: 0;
+        top: 16px;
+        width: 24px;
+        height: 24px;
+        line-height: 26px;
+    }
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+    ul.timeline > li > .timeline-panel:before, ul.timeline > li.timeline-inverted > .timeline-panel:before {
+        /*border-left-width: 0;*/
+        /*border-right-width: 15px;*/
+        left: -14px;
+        right: auto;
+        top: 22px;
+        border: 7px solid transparent;
+        border-left: 7px solid #e9f0f5;
+        border-color: transparent;
+        border-right-color: #e9f0f5;
+    }
+    ul.timeline > li > .timeline-panel:after, ul.timeline > li.timeline-inverted > .timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+    .timeline > li.timeline-inverted {
+        float: left;
+        clear: left;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .timeline > li.timeline-inverted > .timeline-badge {
+        left: 28px;
+    }
+}
