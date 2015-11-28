@@ -11,7 +11,12 @@
       <f:cycle values="{0: 'timeline-normal', 1: 'timeline-inverted'}" as="cycle">
       <li class="{cycle}">
         <div class="timeline-badge">
-          <a><i class="fa fa-circle" id=""></i></a>
+          <!--<a><i class="fa fa-circle" id=""></i></a>-->
+            <!-- date -->
+            <p>
+              <span><n:format.date format="%d">{newsItem.datetime}</n:format.date></span>
+              <small><n:format.date format="%b">{newsItem.datetime}</n:format.date> <n:format.date format="%y">{newsItem.datetime}</n:format.date></small>
+            </p>
         </div>
         <div class="timeline-panel">
           <div class="timeline-heading">
@@ -77,8 +82,6 @@
                 </f:for>
               </f:if>
             </div>
-            
-            <p class="text-right">Feb-21-2014</p>
           </div>
         </div>
       </li>
