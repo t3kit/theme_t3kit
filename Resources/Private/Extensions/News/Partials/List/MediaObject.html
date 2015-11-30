@@ -1,0 +1,48 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<div class="media article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+	<n:excludeDisplayedNews newsItem="{newsItem}" />
+	<f:if condition="{newsItem.falMediaPreviews}">
+		<f:then>
+			<n:link newsItem="{newsItem}" settings="{settings}" class="pull-left">
+				<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+					<f:if condition="{mediaElement.originalResource.type} == 2">
+						<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{settings.mediaObject.width}c-0" height="{settings.mediaObject.height}" />
+					</f:if>
+				</f:alias>
+			</n:link>
+		</f:then>
+		<f:else>
+			<f:if condition="{settings.displayDummyIfNoMedia}">
+				<span class="no-media-element">
+					<n:link newsItem="{newsItem}" settings="{settings}" class="pull-left">
+						<f:image src="{settings.list.media.dummyImage}" title="" alt="" width="{settings.mediaObject.width}" height="{settings.mediaObject.height}" class="img-responsive" />
+					</n:link>
+				</span>
+			</f:if>
+		</f:else>
+	</f:if>
+	<div class="media-body">
+		<span class="newsinfo pull-right text-muted hidden-xs"><small>
+			<f:if condition="{newsItem.firstCategory}">
+				{newsItem.firstCategory.title} |
+			</f:if>
+			<f:format.date format="d.m.Y">{newsItem.datetime}</f:format.date>
+		</small></span>
+		<h4 class="media-heading">
+			<n:link newsItem="{newsItem}" settings="{settings}">
+				{newsItem.title}
+			</n:link>
+		</h4>
+		<f:if condition="{newsItem.teaser}">
+			<f:then>
+				<f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+			</f:then>
+			<f:else>
+				<f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+			</f:else>
+		</f:if>
+		<n:link newsItem="{newsItem}" settings="{settings}" class="btn pull-right">
+			<f:translate key="more-link" />
+		</n:link>
+	</div>
+</div>

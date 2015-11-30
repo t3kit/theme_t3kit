@@ -33,7 +33,7 @@ lib.fluidContent {
 
 # Extensions
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts">
 [global]
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rtehtmlarea')]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">

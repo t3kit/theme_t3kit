@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit">
         <header/>
@@ -31,8 +31,6 @@
                 <source>Wrapper class</source>
             </trans-unit>
 
-
-
             <trans-unit id="columns.title">
                 <source>Columns</source>
             </trans-unit>
@@ -57,7 +55,6 @@
             <trans-unit id="columns.flexform.wrpClass">
                 <source>Wrapper class</source>
             </trans-unit>
-
 
             <trans-unit id="column.title">
                 <source>Advanced grid. Columns for content</source>
