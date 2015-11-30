@@ -1,4 +1,4 @@
-wlib.gridelements {
+lib.gridelements {
     Adv2ColumnGrid < .defaultGridSetup
     Adv2ColumnGrid {
         columns.0 {

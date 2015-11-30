@@ -1,4 +1,4 @@
-wlib.gridelements {
+lib.gridelements {
     4ColumnGrid < .defaultGridSetup
     4ColumnGrid {
         columns.0 {

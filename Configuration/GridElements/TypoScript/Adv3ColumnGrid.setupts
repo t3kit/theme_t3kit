@@ -1,7 +1,6 @@
 lib.gridelements {
     Adv3ColumnGrid < .defaultGridSetup
     Adv3ColumnGrid {
-        stdWrap.prepend =< lib.containerBackgroundImage
         columns.0 {
             prepend = COA
             prepend {
