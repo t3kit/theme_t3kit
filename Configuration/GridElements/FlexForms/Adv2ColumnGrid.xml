@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+        <langDisable>1</langDisable>
+    </meta>
+	<sheets>
+		<columns>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:grid</sheetTitle>
+				</TCEforms>
+				<el type="array">
+          <container type="array">
+              <TCEforms type="array">
+                  <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:container</label>
+                  <config type="array">
+                      <type>select</type>
+                      <items type="array">
+                          <numIndex index="0" type="array">
+                              <numIndex index="0">-</numIndex>
+                              <numIndex index="1"></numIndex>
+                          </numIndex>
+                          <numIndex index="1" type="array">
+                              <numIndex index="0">Container</numIndex>
+                              <numIndex index="1">container</numIndex>
+                          </numIndex>
+                          <numIndex index="2" type="array">
+                              <numIndex index="0">Container-fluid</numIndex>
+                              <numIndex index="1">container-fluid</numIndex>
+                          </numIndex>
+                      </items>
+                      <default></default>
+                  </config>
+              </TCEforms>
+          </container>
+					<columns_md type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col-md</label>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">6:6</numIndex>
+										<numIndex index="1">col-md-6#col-md-6</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">4:8</numIndex>
+										<numIndex index="1">col-md-4#col-md-8</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">8:4</numIndex>
+										<numIndex index="1">col-md-8#col-md-4</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3:9</numIndex>
+										<numIndex index="1">col-md-3#col-md-9</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">9:3</numIndex>
+										<numIndex index="1">col-md-9#col-md-3</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">12:12</numIndex>
+										<numIndex index="1">col-md-12#col-md-12</numIndex>
+									</numIndex>
+								</items>
+								<default>col-md-6#col-md-6</default>
+							</config>
+						</TCEforms>
+					</columns_md>
+					<columns_xs type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col-xs</label>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">-</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">6:6</numIndex>
+										<numIndex index="1">col-xs-6#col-xs-6</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">4:8</numIndex>
+										<numIndex index="1">col-xs-4#col-xs-8</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">8:4</numIndex>
+										<numIndex index="1">col-xs-8#col-xs-4</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">3:9</numIndex>
+										<numIndex index="1">col-xs-3#col-xs-9</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">9:3</numIndex>
+										<numIndex index="1">col-xs-9#col-xs-3</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">12:12</numIndex>
+										<numIndex index="1">col-xs-12#col-xs-12</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</columns_xs>
+					<columns_sm type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col-sm</label>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">-</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">6:6</numIndex>
+										<numIndex index="1">col-sm-6#col-sm-6</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">4:8</numIndex>
+										<numIndex index="1">col-sm-4#col-sm-8</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">8:4</numIndex>
+										<numIndex index="1">col-sm-8#col-sm-4</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">3:9</numIndex>
+										<numIndex index="1">col-sm-3#col-sm-9</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">9:3</numIndex>
+										<numIndex index="1">col-sm-9#col-sm-3</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">12:12</numIndex>
+										<numIndex index="1">col-sm-12#col-sm-12</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</columns_sm>
+					<columns_lg type="array">
+						<TCEforms type="array">
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col-lg</label>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">-</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">6:6</numIndex>
+										<numIndex index="1">col-lg-6#col-lg-6</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">4:8</numIndex>
+										<numIndex index="1">col-lg-4#col-lg-8</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">8:4</numIndex>
+										<numIndex index="1">col-lg-8#col-lg-4</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">3:9</numIndex>
+										<numIndex index="1">col-lg-3#col-lg-9</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">9:3</numIndex>
+										<numIndex index="1">col-lg-9#col-lg-3</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">12:12</numIndex>
+										<numIndex index="1">col-lg-12#col-lg-12</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</columns_lg>
+				</el>
+			</ROOT>
+		</columns>
+	</sheets>
+</T3DataStructure>

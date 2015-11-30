@@ -1,0 +1,19 @@
+
+
+
+
+
+<f:if condition="{layoutClass}">
+<div class="{layoutClass}">
+</f:if>
+	<div class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {data.uid}', else: '{data.uid}')}">
+		<div class="row">
+			<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+			<f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>
+			<f:format.raw>{data.tx_gridelements_view_column_2}</f:format.raw>
+			<f:format.raw>{data.tx_gridelements_view_column_3}</f:format.raw>
+		</div>
+	</div>
+<f:if condition="{layoutClass}">
+</div>
+</f:if>

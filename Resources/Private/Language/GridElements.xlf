@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-09-19T09:11:39Z" product-name="theme_t3kit">
+        <header/>
+        <body>
+            <trans-unit id="two_column_grid">
+                <source>Two columns grid</source>
+            </trans-unit>
+            <trans-unit id="two_column_grid_description">
+                <source>Preset row with two columns.</source>
+            </trans-unit>
+            <trans-unit id="three_column_grid">
+                <source>Three columns grid</source>
+            </trans-unit>
+            <trans-unit id="three_column_grid_description">
+                <source>Preset row with three columns.</source>
+            </trans-unit>
+            <trans-unit id="four_column_grid">
+                <source>Four columns grid</source>
+            </trans-unit>
+            <trans-unit id="four_column_grid_description">
+                <source>Preset row with four columns.</source>
+            </trans-unit>
+
+
+            <trans-unit id="adv_two_column_grid">
+                <source>Advanced two columns grid</source>
+            </trans-unit>
+            <trans-unit id="adv_two_column_grid_description">
+                <source>Advanced grid. Preset row with two columns. Column width can be adjusted.</source>
+            </trans-unit>
+            <trans-unit id="adv_three_column_grid">
+                <source>Advanced three columns grid</source>
+            </trans-unit>
+            <trans-unit id="adv_three_column_grid_description">
+                <source>Advanced grid. Preset row with three columns. Column width can be adjusted.</source>
+            </trans-unit>
+            <trans-unit id="adv_four_column_grid">
+                <source>Advanced four columns grid</source>
+            </trans-unit>
+            <trans-unit id="adv_four_column_grid_description">
+                <source>Advanced grid. Preset row with four columns. Column width can be adjusted.</source>
+            </trans-unit>
+
+
+
+
+            <trans-unit id="col1">
+                <source>Column 1</source>
+            </trans-unit>
+            <trans-unit id="col2">
+                <source>Column 2</source>
+            </trans-unit>
+            <trans-unit id="col3">
+                <source>Column 3</source>
+            </trans-unit>
+            <trans-unit id="col4">
+                <source>Column 4</source>
+            </trans-unit>
+
+
+
+            <trans-unit id="container">
+                <source>Container wrapper</source>
+            </trans-unit>
+            <trans-unit id="grid">
+                <source>Responsive grid settings. Column width on different devices. Based on Bootstrap grid.</source>
+            </trans-unit>
+            <trans-unit id="col-xs">
+                <source>Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+            </trans-unit>
+            <trans-unit id="col-sm">
+                <source>Tablets. "Small devices Tablets (≥768px)"</source>
+            </trans-unit>
+            <trans-unit id="col-md">
+                <source>Desktops. "Medium devices Desktops (≥992px)"</source>
+            </trans-unit>
+            <trans-unit id="col-lg">
+                <source>Large devices "Large devices Desktops (≥1200px)"</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

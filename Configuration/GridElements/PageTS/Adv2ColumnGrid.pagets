@@ -1,0 +1,41 @@
+tx_gridelements.setup.Adv2ColumnGrid {
+	title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:adv_two_column_grid
+	description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:adv_two_column_grid_description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/Adv2ColumnGrid.xml
+	icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/adv2-column-grid.svg
+	config {
+		colCount = 2
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+						colPos = 0
+					}
+					2 {
+						name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col2
+						colPos = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Use "Content Element Layout" field to customize gridelements wrapper classes.
+# Items in select box will appear in all grid elements on the site.
+TCEFORM.tt_content.layout {
+    types {
+        gridelements_pi1 {
+            # Remove default items.
+            removeItems = 2,3
+			# Create new items
+			altLabels {
+				1 = Example wrapper 1
+			}
+			addItems.4 = Example wraper 4
+        }
+    }
+}

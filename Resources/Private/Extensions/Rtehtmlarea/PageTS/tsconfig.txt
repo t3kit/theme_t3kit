@@ -18,10 +18,11 @@ RTE.default {
   showButtons := addToList(orderedlist, unorderedlist, outdent, indent, textindicator)
   showButtons := addToList(insertcharacter, link, findreplace, chMode, removeformat, undo, redo, about)
 
-  ## Uncomment to enable tables in RTE
-  ## showButtons := addToList(insertcharacter, link, table, findreplace, chMode, removeformat, undo, redo, about)
+  # Uncomment to enable tables in RTE
+  # showButtons := addToList(insertcharacter, link, table, findreplace, chMode, removeformat, undo, redo, about)
 
-  showButtons := addToList(toggleborders, tableproperties)
+  showButtons := addToList(toggleborders)
+  # showButtons := addToList(toggleborders, tableproperties)
   showButtons := addToList(rowproperties, rowinsertabove, rowinsertunder, rowdelete, rowsplit)
   showButtons := addToList(columninsertbefore, columninsertafter, columndelete, columnsplit)
   showButtons := addToList(cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge)

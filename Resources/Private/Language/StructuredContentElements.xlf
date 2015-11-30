@@ -4,7 +4,7 @@
         <header/>
         <body>
             <trans-unit id="tab.structuredContentElements">
-                <source>Layout elements</source>
+                <source>Structured Layout elements</source>
             </trans-unit>
             <trans-unit id="container.title">
                 <source>Advanced grid. Container for columns</source>

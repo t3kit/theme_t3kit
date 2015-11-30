@@ -5,3 +5,8 @@ A t3kit theme
 
 <!-- TODO: BLOG -->
 <!-- TODO: layout to conEls -->
+<!-- TODO: update db with grid -->
+<!-- TODO: issues update -->
+<!-- TODO: wrp classes to elements -->
+<!-- TODO: show/hidden classes to elements -->
+<!-- TODO: coments -->

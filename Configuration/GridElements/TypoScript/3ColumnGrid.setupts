@@ -1,0 +1,21 @@
+lib.gridelements {
+	3ColumnGrid < .defaultGridSetup
+	3ColumnGrid {
+		columns.0 {
+			renderObj >
+			renderObj = COA
+			renderObj {
+			  20 =< tt_content
+			}
+		}
+		columns.1 < .columns.0
+		columns.2 < .columns.0
+
+		cObject = FLUIDTEMPLATE
+		cObject {
+			file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
+		}
+	}
+}
+
+tt_content.gridelements_pi1.20.10.setup.3ColumnGrid < lib.gridelements.3ColumnGrid
