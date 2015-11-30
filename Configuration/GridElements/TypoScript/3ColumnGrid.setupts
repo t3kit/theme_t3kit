@@ -14,6 +14,17 @@ lib.gridelements {
 		cObject = FLUIDTEMPLATE
 		cObject {
 			file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
+			dataProcessing {
+
+				1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+				1910 {
+					classMappings {
+						0 =
+						1 = examlple-wrapper-1
+						4 = examlple-wrapper-4
+					}
+				}
+			}
 		}
 	}
 }
