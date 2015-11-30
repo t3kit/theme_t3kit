@@ -1,16 +1,16 @@
 lib.menu.main = HMENU
 lib.menu.main {
-	entryLevel = 0
-	includeNotInMenu = 0
-	excludeUidList = {$themes.configuration.header.main.menu.excludeUidList}
-	# wrap = <ul class="main-navigation__items-list js__main-navigation__items-list"> | </ul>
-	1 = TMENU
-	1 {
-		expAll = 1
-		NO = 1
-		NO {
-			wrapItemAndSub.insertData = 1
-			wrapItemAndSub = <li class="main-navigation__item js__main-navigation__item uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__item js__main-navigation__item uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__item js__main-navigation__item uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+    entryLevel = 0
+    includeNotInMenu = 0
+    excludeUidList = {$themes.configuration.header.main.menu.excludeUidList}
+    # wrap = <ul class="main-navigation__items-list js__main-navigation__items-list"> | </ul>
+    1 = TMENU
+    1 {
+        expAll = 1
+        NO = 1
+        NO {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation__item js__main-navigation__item uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__item js__main-navigation__item uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__item js__main-navigation__item uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
             ATagParams = class="main-navigation__item-link js__main-navigation__item-link"
         }
         ACT < .NO
@@ -52,4 +52,3 @@ lib.menu.main {
         }
     }
 }
-

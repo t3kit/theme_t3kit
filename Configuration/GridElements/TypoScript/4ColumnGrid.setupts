@@ -1,33 +1,33 @@
-lib.gridelements {
-	4ColumnGrid < .defaultGridSetup
-	4ColumnGrid {
-		columns.0 {
-			renderObj >
-			renderObj = COA
-			renderObj {
-			  20 =< tt_content
-			}
-		}
-		columns.1 < .columns.0
-		columns.2 < .columns.0
-		columns.3 < .columns.0
+wlib.gridelements {
+    4ColumnGrid < .defaultGridSetup
+    4ColumnGrid {
+        columns.0 {
+            renderObj >
+            renderObj = COA
+            renderObj {
+              20 =< tt_content
+            }
+        }
+        columns.1 < .columns.0
+        columns.2 < .columns.0
+        columns.3 < .columns.0
 
-		cObject = FLUIDTEMPLATE
-		cObject {
-			file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/4ColumnGrid.html
-			dataProcessing {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/4ColumnGrid.html
+            dataProcessing {
 
-				1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-				1910 {
-					classMappings {
-						0 =
-						1 = examlple-wrapper-1
-						4 = examlple-wrapper-4
-					}
-				}
-			}
-		}
-	}
+                1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+                1910 {
+                    classMappings {
+                        0 =
+                        1 = examlple-wrapper-1
+                        4 = examlple-wrapper-4
+                    }
+                }
+            }
+        }
+    }
 }
 
 tt_content.gridelements_pi1.20.10.setup.4ColumnGrid < lib.gridelements.4ColumnGrid

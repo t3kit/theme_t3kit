@@ -1,32 +1,32 @@
 lib.gridelements {
-	3ColumnGrid < .defaultGridSetup
-	3ColumnGrid {
-		columns.0 {
-			renderObj >
-			renderObj = COA
-			renderObj {
-			  20 =< tt_content
-			}
-		}
-		columns.1 < .columns.0
-		columns.2 < .columns.0
+    3ColumnGrid < .defaultGridSetup
+    3ColumnGrid {
+        columns.0 {
+            renderObj >
+            renderObj = COA
+            renderObj {
+              20 =< tt_content
+            }
+        }
+        columns.1 < .columns.0
+        columns.2 < .columns.0
 
-		cObject = FLUIDTEMPLATE
-		cObject {
-			file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
-			dataProcessing {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
+            dataProcessing {
 
-				1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-				1910 {
-					classMappings {
-						0 =
-						1 = examlple-wrapper-1
-						4 = examlple-wrapper-4
-					}
-				}
-			}
-		}
-	}
+                1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+                1910 {
+                    classMappings {
+                        0 =
+                        1 = examlple-wrapper-1
+                        4 = examlple-wrapper-4
+                    }
+                }
+            }
+        }
+    }
 }
 
 tt_content.gridelements_pi1.20.10.setup.3ColumnGrid < lib.gridelements.3ColumnGrid

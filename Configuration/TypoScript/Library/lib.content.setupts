@@ -1,33 +1,33 @@
 # Insert colPos 0 in main content
 lib.content.main = COA
 lib.content.main {
-	50 < styles.content.get
-	50.select.where = colPos=0
+    50 < styles.content.get
+    50.select.where = colPos=0
 }
 # Insert colPos 1 in menu content
 lib.content.menu = COA
 lib.content.menu {
-	stdWrap.prefixComment = 2|Output of lib.content.menu
-	stdWrap.outerWrap = |
-	20 =< lib.menu.sub
-	50 < styles.content.get
-	50.select.where = colPos=1
+    stdWrap.prefixComment = 2|Output of lib.content.menu
+    stdWrap.outerWrap = |
+    20 =< lib.menu.sub
+    50 < styles.content.get
+    50.select.where = colPos=1
 }
 # Insert colPos 2 in sidebar content
 lib.content.sidebar = COA
 lib.content.sidebar {
-	50 < styles.content.get
-	50.select.where = colPos=2
+    50 < styles.content.get
+    50.select.where = colPos=2
 }
 # Insert colPos 3 in top content
 lib.content.top = COA
 lib.content.top {
-	50 < styles.content.get
-	50.select.where = colPos=3
+    50 < styles.content.get
+    50.select.where = colPos=3
 }
 # Insert colPos 4 in elements content
 lib.content.elements = COA
 lib.content.elements {
-	50 < styles.content.get
-	50.select.where = colPos=4
+    50 < styles.content.get
+    50.select.where = colPos=4
 }

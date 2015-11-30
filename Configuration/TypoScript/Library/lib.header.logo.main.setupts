@@ -1,8 +1,8 @@
 lib.header.logo {
-	main = IMAGE
-	main.file = {$themes.configuration.header.logo.main.file}
-	main.titleText = {$themes.configuration.siteName}
-	main.altText = {$themes.configuration.siteName}
+    main = IMAGE
+    main.file = {$themes.configuration.header.logo.main.file}
+    main.titleText = {$themes.configuration.siteName}
+    main.altText = {$themes.configuration.siteName}
     main.params = class="header-middle__logo-img img-responsive"
     main.stdWrap {
         required = 1

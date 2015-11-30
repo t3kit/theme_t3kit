@@ -1,67 +1,67 @@
 lib.gridelements {
-	Adv3ColumnGrid < .defaultGridSetup
-	Adv3ColumnGrid {
-		stdWrap.prepend =< lib.containerBackgroundImage
-		columns.0 {
-			prepend = COA
-			prepend {
-				10 = TEXT
-				10 {
-					field = flexform_columns_md
-					required = 1
-					listNum = 0
-					listNum.splitChar = #
-					noTrimWrap = | |
-				}
-				20 < .10
-				20.field = flexform_columns_xs
-				30 < .10
-				30.field = flexform_columns_sm
-				40 < .10
-				40.field = flexform_columns_lg
-				stdWrap.noTrimWrap = |<div class="col1 |">|
-			}
-			renderObj >
-			renderObj = COA
-			renderObj {
-			  20 =< tt_content
-			}
-			wrap = |</div>
+    Adv3ColumnGrid < .defaultGridSetup
+    Adv3ColumnGrid {
+        stdWrap.prepend =< lib.containerBackgroundImage
+        columns.0 {
+            prepend = COA
+            prepend {
+                10 = TEXT
+                10 {
+                    field = flexform_columns_md
+                    required = 1
+                    listNum = 0
+                    listNum.splitChar = #
+                    noTrimWrap = | |
+                }
+                20 < .10
+                20.field = flexform_columns_xs
+                30 < .10
+                30.field = flexform_columns_sm
+                40 < .10
+                40.field = flexform_columns_lg
+                stdWrap.noTrimWrap = |<div class="col1 |">|
+            }
+            renderObj >
+            renderObj = COA
+            renderObj {
+              20 =< tt_content
+            }
+            wrap = |</div>
 
-		}
-		columns.1 < .columns.0
-		columns.1.prepend {
-			10.listNum = 1
-			20.listNum = 1
-			30.listNum = 1
-			40.listNum = 1
-			stdWrap.noTrimWrap = |<div class="col2 |">|
-		}
-		columns.2 < .columns.0
-		columns.2.prepend {
-			10.listNum = 2
-			20.listNum = 2
-			30.listNum = 2
-			40.listNum = 2
-			stdWrap.noTrimWrap = |<div class="col3 |">|
-		}
+        }
+        columns.1 < .columns.0
+        columns.1.prepend {
+            10.listNum = 1
+            20.listNum = 1
+            30.listNum = 1
+            40.listNum = 1
+            stdWrap.noTrimWrap = |<div class="col2 |">|
+        }
+        columns.2 < .columns.0
+        columns.2.prepend {
+            10.listNum = 2
+            20.listNum = 2
+            30.listNum = 2
+            40.listNum = 2
+            stdWrap.noTrimWrap = |<div class="col3 |">|
+        }
 
-		cObject = FLUIDTEMPLATE
-		cObject {
-			file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv3ColumnGrid.html
-			dataProcessing {
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv3ColumnGrid.html
+            dataProcessing {
 
-				1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-				1910 {
-					classMappings {
-						0 =
-						1 = examlple-wrapper-1
-						4 = examlple-wrapper-4
-					}
-				}
-			}
-		}
-	}
+                1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+                1910 {
+                    classMappings {
+                        0 =
+                        1 = examlple-wrapper-1
+                        4 = examlple-wrapper-4
+                    }
+                }
+            }
+        }
+    }
 }
 
 tt_content.gridelements_pi1.20.10.setup.Adv3ColumnGrid < lib.gridelements.Adv3ColumnGrid

@@ -5,11 +5,11 @@ lib.menu.sub.excludeUidList = {$themes.configuration.menu.sub.excludeUidList}
 lib.menu.sub.wrap = <div class="sub-navigation"><div class="sub-navigation__wrp"> | </div></div>
 lib.menu.sub.1 = TMENU
 lib.menu.sub.1 {
-	expAll = 0
-	NO = 1
-	NO {
-		# wrapItemAndSub.insertData = 1
-		# wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
+    expAll = 0
+    NO = 1
+    NO {
+    # wrapItemAndSub.insertData = 1
+    # wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
         ATagParams = class="sub-navigation__link"
     }
     CUR < .NO

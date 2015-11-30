@@ -10,10 +10,10 @@ removeDefaultJS = 1
 
 
 config {
-	# Enable spam protection
-	spamProtectEmailAddresses = 2
-	spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
-	spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
+# Enable spam protection
+    spamProtectEmailAddresses = 2
+    spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
+    spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
 }
 
 
@@ -25,8 +25,8 @@ config.concatenateJs = {$themes.configuration.javascript.concatenate}
 
 # In case of using development mode, disable compression and concatenation
 [globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
-	config.compressCss = 0
-	config.compressJs = 0
-	config.concatenateCss = 0
-	config.concatenateJs = 0
+    config.compressCss = 0
+    config.compressJs = 0
+    config.concatenateCss = 0
+    config.concatenateJs = 0
 [global]
