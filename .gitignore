@@ -7,7 +7,3 @@ npm-debug.log
 bower_components
 *.sublime-*
 .idea
-Resources/Private/Language/de.BackendLayouts.xlf
-Resources/Private/Language/de.locallang.xlf
-Resources/Private/Language/de.ContentElements.xlf
-Resources/Private/Language/de.StructuredContentElements.xlf
