@@ -1,0 +1,189 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<n:format.nothing>
+  <f:if condition="{newsItem.alternativeTitle}">
+    <f:then>
+      <n:titleTag>
+        <n:format.htmlentitiesDecode>{newsItem.alternativeTitle}</n:format.htmlentitiesDecode>
+      </n:titleTag>
+    </f:then>
+    <f:else>
+      <n:titleTag>
+        <n:format.htmlentitiesDecode>{newsItem.title}</n:format.htmlentitiesDecode>
+      </n:titleTag>
+    </f:else>
+  </f:if>
+  <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+</n:format.nothing>
+
+<div class="header">
+  <h3 class="pull-left">{newsItem.title}</h3>
+</div>
+<div class="footer">
+  <p>
+    <!-- date -->
+    <span class="news-list-date">
+      <n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
+    </span>
+    <f:if condition="{newsItem.categories}">
+      <!-- categories -->
+      <f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
+    </f:if>
+    <f:if condition="{newsItem.author}">
+      <!-- author -->
+      <span class="news-list-author">
+        {newsItem.author}
+      </span>
+    </f:if>
+  </p>
+</div>
+<f:if condition="{newsItem.teaser}">
+  <!-- teaser -->
+  <div class="teaser-text">
+    <f:format.html>{newsItem.teaser}</f:format.html>
+  </div>
+</f:if>
+<f:if condition="{newsItem.falMedia}">
+<f:then>
+  <div class="row" style="margin-bottom:20px;">
+    <div class="col-md-4">
+      <!-- image Layout -->
+      <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
+    </div>
+    <div class="col-md-8">
+      <!-- main text -->
+      <f:if condition="{newsItem.bodytext}">
+        <div class="news-text-wrap">
+          <f:format.html>{newsItem.bodytext}</f:format.html>
+        </div>
+      </f:if>
+    </div>
+  </div>
+</f:then>
+<f:else>
+  <div class="row" style="margin-bottom:20px;">
+    <div class="col-md-12">
+      <!-- main text -->
+      <f:if condition="{newsItem.bodytext}">
+        <div class="news-text-wrap">
+          <f:format.html>{newsItem.bodytext}</f:format.html>
+        </div>
+      </f:if>
+    </div>
+  </div>
+</f:else>
+</f:if>
+<f:if condition="{settings.backPid}">
+  <f:then>
+    <div class="row hidden-print">
+    <div class="col-md-6" style="margin-bottom:20px;">
+      <a onclick="goBack()" class="btn btn-primary hidden-print back"><f:translate key="back-link" /></a>
+    </div>
+
+    <!-- socialmedia -->
+    <f:if condition="{settings.detail.showSocialShareButtons}">
+      <div class="facebook col-md-6" style="margin-bottom:20px;">
+        <div class="like" style="margin-bottom:5px;">
+          <n:social.facebook.like width="409"></n:social.facebook.like>
+        </div>
+        <div class="share" style="margin-bottom:5px;">
+          <n:social.facebook.share>Share</n:social.facebook.share>
+        </div>
+        <div class="twitter">
+          <n:social.twitter>Twitter</n:social.twitter>
+        </div>
+      </div>
+    </f:if>
+    </div>
+  </f:then>
+  <f:else>
+    <f:if condition="{settings.detail.showSocialShareButtons}">
+      <div class="row">
+      <div class="facebook col-md-6 col-md-offset-6">
+        <div class="like">
+          <n:social.facebook.like></n:social.facebook.like>
+        </div>
+        <div class="share">
+          <n:social.facebook.share>Share</n:social.facebook.share>
+        </div>
+        <div class="twitter">
+          <n:social.twitter>Twitter</n:social.twitter>
+        </div>
+      </div>
+      </div>
+    </f:if>
+  </f:else>
+</f:if>
+
+<!-- Integration of the RxShariff-Extension from Heise:
+     If you want this instead of the Original Sharing Configuration, you have to
+      -install the rx_shariff-Extension
+      -deactivate the Html-Code ahead from this part
+      -activate the following three lines. -->
+
+<!-- <div xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper" class="col-md-8">
+        <rx:shariff services="facebook, twitter, whatsapp, mail, info" enableBackend="true" data="{mail-url: 'mailto:'}" />
+    </div> -->
+
+<!-- Related news records -->
+<div class="row hidden-print">
+  <div class="col-md-12">
+  <f:if condition="{newsItem.allRelatedSorted}">
+    <!-- Related news records -->
+      <ul class="list-group">
+        <li class="list-group-item"><strong><f:translate key="related-news" /></strong></li>
+        <f:for each="{newsItem.allRelatedSorted}" as="related">
+          <li class="list-group-item">
+            <span class="news-related-news-date"><n:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</n:format.date> &#10072; {related.firstCategory.title}</span><br/>
+            <n:link newsItem="{related}" settings="{settings}">
+              {related.title}
+            </n:link>
+          </li>
+        </f:for>
+      </ul>
+  </f:if>
+    </div>
+</div>
+
+<f:if condition="{newsItem.falRelatedFiles}">
+  <!-- FAL related files -->
+  <div class="news-related news-related-files hidden-print">
+
+    <ul class="list-group">
+      <li class="list-group-item"><strong><f:translate key="related-files" /></strong></li>
+      <f:for each="{newsItem.falRelatedFiles}" as="relatedFile">
+        <li class="list-group-item">
+          <span class="news-related-files-link">
+            <n:format.fileDownload file="{relatedFile.originalResource.publicUrl}" configuration="{settings.relatedFiles.download}">
+              <f:if condition="{relatedFile.originalResource.title}">
+                <f:then>
+                  {relatedFile.originalResource.title}
+                </f:then>
+                <f:else>
+                  {relatedFile.originalResource.name}
+                </f:else>
+              </f:if>
+            </n:format.fileDownload>
+          </span>
+          <span class="news-related-files-size">
+            <n:format.fileSize fileSize="{relatedFile.originalResource.size}" format="{settings.relatedFiles.fileSizeLabels}" />
+          </span>
+        </li>
+      </f:for>
+    </ul>
+  </div>
+</f:if>
+
+<f:if condition="{newsItem.relatedLinks}">
+  <!-- Related links -->
+  <div class="news-related news-related-links hidden-print">
+    <ul class="list-group">
+      <li class="list-group-item"><strong><f:translate key="related-links" /></strong></li>
+      <f:for each="{newsItem.relatedLinks}" as="relatedLink">
+        <li class="list-group-item">
+          <f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.page>
+          <f:if condition="{relatedLink.description}"><span> {relatedLink.description}</span></f:if>
+        </li>
+      </f:for>
+    </ul>
+  </div>
+</f:if>

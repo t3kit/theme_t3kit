@@ -1,0 +1,26 @@
+<div class="mediaelement mediaelement-image">
+	<f:if condition="{settings.lightbox.enable}">
+		<f:then>
+			<f:if condition="{settings.lightbox.slideshow}">
+				<f:then>				
+					<a data-original-title="{mediaElement.description}" data-rel="{settings.detail.media.image.lightbox}" class="gallery" title="{mediaElement.title}" href="{f:uri.image(src:'{mediaElement.uid}' treatIdAsReference:1 maxWidth:'800')}">
+						<f:image class="img-responsive" src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+					</a>
+				</f:then>
+				<f:else>
+					<a class="gallery" title="{mediaElement.caption}" href="{f:uri.image(src:'{mediaElement.uid}' treatIdAsReference:1 maxWidth:'800')}">
+						<f:image class="img-responsive" src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+					</a>
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<f:image class="img-responsive" src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+		</f:else>
+	</f:if>
+</div>
+<f:if condition="{mediaElement.originalResource.description}">
+	<p class="news-img-caption">
+		{mediaElement.originalResource.description}
+	</p>
+</f:if>
