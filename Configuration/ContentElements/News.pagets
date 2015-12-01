@@ -1,0 +1,10 @@
+# **********************************************************
+#  EXT:news
+# **********************************************************
+
+tx_news.templateLayouts {
+    1 = 1: Media Objects (list view)
+    2 = 2: Thumbnails (list view)
+    3 = 3: Timeline (list view)
+    4 = 4: Detail view
+}
