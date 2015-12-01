@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tab.structuredContentElements">
+        <source>Layout elements</source>
+        <target>Layout-Elemente</target>
+      </trans-unit>
+      <trans-unit id="container.title">
+        <source>Advanced grid. Container for columns</source>
+        <target>Erweiterte Raster. Container fÃ¼r Spalten</target>
+      </trans-unit>
+      <trans-unit id="container.description">
+        <source>A container for column records</source>
+        <target>Ein Container fÃ¼r Spalten-DatensÃ¤tze</target>
+      </trans-unit>
+      <trans-unit id="container.records_formlabel">
+        <source>Column records here</source>
+        <target>Spalten-DatensÃ¤tze hier</target>
+      </trans-unit>
+      <trans-unit id="container.layout.0">
+        <source>No container</source>
+        <target>Kein Container</target>
+      </trans-unit>
+      <trans-unit id="container.layout.1">
+        <source>Container</source>
+        <target>Container</target>
+      </trans-unit>
+      <trans-unit id="container.layout.2">
+        <source>Fluid container</source>
+        <target>Fluid container</target>
+      </trans-unit>
+      <trans-unit id="container.flexform.sheetGeneral">
+        <source>Additional settings</source>
+        <target>ZusÃ¤tzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="container.flexform.wrpClass">
+        <source>Wrapper class</source>
+        <target>Wrapper-Klasse</target>
+      </trans-unit>
+      <trans-unit id="columns.title">
+        <source>Columns</source>
+        <target>Spalten</target>
+      </trans-unit>
+      <trans-unit id="columns.description">
+        <source>Columns for elements(1col - 2col - 3col - 4col)</source>
+        <target>Spalten fÃ¼r die Elemente (1col - 2col - 3col - 4col)</target>
+      </trans-unit>
+      <trans-unit id="columns.records_formlabel">
+        <source>Elements. Every element will be in separate column.</source>
+        <target>Elemente. Jedes Element wird in einer separaten Spalte gerendert.</target>
+      </trans-unit>
+      <trans-unit id="columns.layout.0">
+        <source>No container</source>
+        <target>Kein Container</target>
+      </trans-unit>
+      <trans-unit id="columns.layout.1">
+        <source>Container</source>
+        <target>Container</target>
+      </trans-unit>
+      <trans-unit id="columns.layout.2">
+        <source>Fluid container</source>
+        <target>Fluid container</target>
+      </trans-unit>
+      <trans-unit id="columns.flexform.sheetGeneral">
+        <source>Additional settings</source>
+        <target>ZusÃ¤tzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="columns.flexform.wrpClass">
+        <source>Wrapper class</source>
+        <target>Wrapper-Klasse</target>
+      </trans-unit>
+      <trans-unit id="column.title">
+        <source>Advanced grid. Columns for content</source>
+        <target>Erweiterte Raster. Spalten fÃ¼r Inhalte</target>
+      </trans-unit>
+      <trans-unit id="column.description">
+        <source>A column for content records</source>
+        <target>Eine Spalte fÃ¼r Inhalts-DatensÃ¤tze</target>
+      </trans-unit>
+      <trans-unit id="column.records_formlabel">
+        <source>Content records here</source>
+        <target>Inhalts-DatensÃ¤tze hier</target>
+      </trans-unit>
+      <trans-unit id="column.flexform.colxs.label">
+        <source><![CDATA[Column with (x of 12) on "Extra small devices Phones (<768px)"]]></source>
+        <target><![CDATA[Spalte mit (x von 12) auf "Extra kleine GerÃ¤te - Phones (<768px)"]]></target>
+      </trans-unit>
+      <trans-unit id="column.flexform.colsm.label">
+        <source>Column with (x of 12) on "Small devices Tablets (≥768px)"</source>
+        <target>Spalte mit (x von 12) auf "Kleine GerÃ¤te - Tablets (≥768px)"</target>
+      </trans-unit>
+      <trans-unit id="column.flexform.colmd.label">
+        <source>Column with (x of 12) on "Medium devices Desktops (≥992px)"</source>
+        <target>Spalte mit (x von 12) auf "Mittlere GerÃ¤te - Desktops (≥992px)"</target>
+      </trans-unit>
+      <trans-unit id="column.flexform.collg.label">
+        <source>Column with (x of 12) on "Large devices Desktops (≥1200px)"</source>
+        <target>Spalte mit (x von 12) auf "Grosse GerÃ¤te - Desktops (≥1200px)"</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

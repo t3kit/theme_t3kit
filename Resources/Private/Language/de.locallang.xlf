@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2014-04-13T18:20:51Z" product-name="theme_t3kit" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="breadcrumb_label" xml:space="preserve">
+        <source>You are here</source>
+        <target>Sie sind hier</target>
+      </trans-unit>
+      <trans-unit id="languageMenu_label" xml:space="preserve">
+        <source>Language:</source>
+        <target>Sprache:</target>
+      </trans-unit>
+      <trans-unit id="imprint_label" xml:space="preserve">
+        <source>Imprint</source>
+        <target>Impressum</target>
+      </trans-unit>
+     
+      <!-- Behaviours labels -->
+      <trans-unit id="content.behaviour.container" xml:space="preserve">
+        <source>Container</source>
+        <target>Container</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.container_fluid" xml:space="preserve">
+        <source>Container (fluid)</source>
+        <target>Container (fluid)</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.fade_in" xml:space="preserve">
+        <source>Fade in</source>
+        <target>Einblenden</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.screenreader_only" xml:space="preserve">
+        <source>Screenreader only</source>
+        <target>nur Screenreader</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.screenreader_only_focusable" xml:space="preserve">
+        <source>Screenreader only (focusable)</source>
+        <target>nur Screenreader (fokussierbar)</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.print_hidden" xml:space="preserve">
+        <source>Hidden for printing</source>
+        <target>Für das Drucken ausgeblendet</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.print_visible_block" xml:space="preserve">
+        <source>Visible for printing (block)</source>
+        <target>Sichtbar für den Druck (block)</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.print_visible_inline" xml:space="preserve">
+        <source>Visible for printing (inline)</source>
+        <target>Sichtbar für den Druck (inline)</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.print_visible_inline_block" xml:space="preserve">
+        <source>Visible for printing (inline-block)</source>
+        <target>Sichtbar für den Druck (inline-block)</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.table_responsive" xml:space="preserve">
+        <source>Responsive table</source>
+        <target>Responsive Tabelle</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.pricing_table" xml:space="preserve">
+        <source>Pricing table</source>
+        <target>Preistabelle</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.navigation_pills" xml:space="preserve">
+        <source>Pills navigation</source>
+        <target>Pills Navigation</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.navigation_tabs" xml:space="preserve">
+        <source>Tabs navigation</source>
+        <target>Registerkarten-Navigation</target>
+      </trans-unit>
+      <trans-unit id="content.behaviour.accordion_first_open" xml:space="preserve">
+        <source>Open first accordion item</source>
+        <target>Erstes Accordion Element öffnen</target>
+      </trans-unit>
+      <trans-unit id="content.variants.panel_primary" xml:space="preserve">
+        <source>Primary Panel</source>
+        <target>Primär-Panel</target>
+      </trans-unit>
+      <trans-unit id="content.variants.panel_success" xml:space="preserve">
+        <source>Success Panel</source>
+        <target>Erfolg-Panel</target>
+      </trans-unit>
+      <trans-unit id="content.variants.panel_info" xml:space="preserve">
+        <source>Info Panel</source>
+        <target>Info-Panel</target>
+      </trans-unit>
+      <trans-unit id="content.variants.panel_warning" xml:space="preserve">
+        <source>Warning Panel</source>
+        <target>Warnung-Panel</target>
+      </trans-unit>
+      <trans-unit id="content.variants.panel_danger" xml:space="preserve">
+        <source>Danger Panel</source>
+        <target>Achtung-Panel</target>
+      </trans-unit>
+      <trans-unit id="content.buttons.default" xml:space="preserve">
+        <source>Default Button</source>
+        <target>Standard-Button</target>
+      </trans-unit>
+      <trans-unit id="content.buttons.primary" xml:space="preserve">
+        <source>Primary Button</source>
+        <target>Primär-Button</target>
+      </trans-unit>
+      <trans-unit id="content.buttons.success" xml:space="preserve">
+        <source>Success Button</source>
+        <target>Erfolg-Button</target>
+      </trans-unit>
+      <trans-unit id="content.buttons.info" xml:space="preserve">
+        <source>Info Button</source>
+        <target>Info-Button</target>
+      </trans-unit>
+      <trans-unit id="content.buttons.warning" xml:space="preserve">
+        <source>Warning Button</source>
+        <target>Warnung-Button</target>
+      </trans-unit>
+      <trans-unit id="content.buttons.danger" xml:space="preserve">
+        <source>Danger Button</source>
+        <target>Achtung-Button</target>
+      </trans-unit>
+      <trans-unit id="content.bullets" xml:space="preserve">
+        <source>Panel with List Group</source>
+        <target>Panel mit Listengruppe</target>
+      </trans-unit>
+      <trans-unit id="content.pricing_table_linktext" xml:space="preserve">
+        <source>Link text</source>
+        <target>Link-Text</target>
+      </trans-unit>
+      <trans-unit id="content.pricing_table_listheader" xml:space="preserve">
+        <source>List header</source>
+        <target>Listenkopf</target>
+      </trans-unit>
+      
+      <!-- ContentElements labels -->
+      <trans-unit id="contentElement.slider.linkText" xml:space="preserve">
+        <source>Read more</source>
+        <target>Mehr lesen</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

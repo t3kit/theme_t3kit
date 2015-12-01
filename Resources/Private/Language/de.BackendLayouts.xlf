@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="default" xml:space="preserve">
+        <source>Default</source>
+        <target>Standard</target>
+      </trans-unit>
+      <trans-unit id="content" xml:space="preserve">
+        <source>Content</source>
+        <target>Inhalt</target>
+      </trans-unit>
+      <trans-unit id="content_empty" xml:space="preserve">
+        <source>Content Empty</source>
+        <target>Inhalt leer</target>
+      </trans-unit>
+      <trans-unit id="content_menu" xml:space="preserve">
+        <source>Content Menu</source>
+        <target>Inhalt Menü</target>
+      </trans-unit>
+      <trans-unit id="content_menu_sidebar" xml:space="preserve">
+        <source>Content Menu Sidebar</source>
+        <target>Inhalt Menü Sidebar</target>
+      </trans-unit>
+      <trans-unit id="content_sidebar" xml:space="preserve">
+        <source>Content Sidebar</source>
+        <target>Inhalt Sidebar</target>
+      </trans-unit>
+      <trans-unit id="content_sidebar_menu" xml:space="preserve">
+        <source>Content Sidebar Menu</source>
+        <target>Inhalt Sidebar Menü</target>
+      </trans-unit>
+      <trans-unit id="content_special" xml:space="preserve">
+        <source>Content Special</source>
+        <target>Inhalt Spezial</target>
+      </trans-unit>
+      <trans-unit id="content_startsite" xml:space="preserve">
+        <source>Content Startsite</source>
+        <target>Inhalt Startseite</target>
+      </trans-unit>
+      <trans-unit id="menu_content" xml:space="preserve">
+        <source>Menu Content</source>
+        <target>Menü Inhalt</target>
+      </trans-unit>
+      <trans-unit id="menu_content_sidebar" xml:space="preserve">
+        <source>Menu Content Sidebar</source>
+        <target>Menü Inhalt Sidebar</target>
+      </trans-unit>
+      <trans-unit id="menu_sidebar_content" xml:space="preserve">
+        <source>Menu Sidebar Content</source>
+        <target>Menü Sidebar Inhalt</target>
+      </trans-unit>
+      <trans-unit id="sidebar_content" xml:space="preserve">
+        <source>Sidebar Content</source>
+        <target>Sidebar Inhalt</target>
+      </trans-unit>
+      <trans-unit id="sidebar_content_menu" xml:space="preserve">
+        <source>Sidebar Content Menu</source>
+        <target>Sidebar Inhalt Menü</target>
+      </trans-unit>
+      <trans-unit id="sidebar_menu_content" xml:space="preserve">
+        <source>Sidebar Menu Content</source>
+        <target>Sidebar Menü Inhalt</target>
+      </trans-unit>
+      <trans-unit id="area_top" xml:space="preserve">
+        <source>Top Content</source>
+        <target>Top Inhalt</target>
+      </trans-unit>
+      <trans-unit id="area_menu" xml:space="preserve">
+        <source>Menu</source>
+        <target>Menü</target>
+      </trans-unit>
+      <trans-unit id="area_content" xml:space="preserve">
+        <source>Content</source>
+        <target>Inhalt</target>
+      </trans-unit>
+      <trans-unit id="area_sidebar" xml:space="preserve">
+        <source>Sidebar</source>
+        <target>Sidebar</target>
+      </trans-unit>
+      <trans-unit id="area_elements" xml:space="preserve">
+        <source>Page Elements (Hidden in main page. Use only for records (columns, accordion, tabs, news, etc )</source>
+        <target>Seiten-Elemente (In Haupt-Seite versteckt. Nur fÃ¼r DatensÃ¤tze verwenden (Spalten, Accordion, Register, News, etc.)</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
