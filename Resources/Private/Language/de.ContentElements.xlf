@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tt_content.palette.imageSize">
+        <source>Size of images</source>
+        <target>Grösse der Bilder</target>
+      </trans-unit>
+      <trans-unit id="tt_content.palette.imageSize.imageWidth">
+        <source>Width</source>
+        <target>Breite</target>
+      </trans-unit>
+      <trans-unit id="tt_content.palette.imageSize.imageHeight">
+        <source>Height</source>
+        <target>Höhe</target>
+      </trans-unit>
+      <trans-unit id="tt_content.palette.imageSize.imageMaxWidth">
+        <source>Max width</source>
+        <target>Max Breite</target>
+      </trans-unit>
+      <trans-unit id="tt_content.palette.imageSize.imageMaxHeight">
+        <source>Max height</source>
+        <target>Max Höhe</target>
+      </trans-unit>
+      <trans-unit id="tt_content.tabs.settings">
+        <source>Additional settings</source>
+        <target>Zusätzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="tab.contentElements">
+        <source>Content elements</source>
+        <target>Inhaltselemente</target>
+      </trans-unit>
+      <trans-unit id="slider.title">
+        <source>Slider</source>
+        <target>Slider</target>
+      </trans-unit>
+      <trans-unit id="slider.description">
+        <source>Slider with images and optional texts and link</source>
+        <target>Slider mit Bildern und optional Texte und Link</target>
+      </trans-unit>
+      <trans-unit id="slider.tabs.slides">
+        <source>Slides</source>
+        <target>Slides</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.title">
+        <source>Icon,Text and Link</source>
+        <target>Icon,Text und Link</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.description">
+        <source>Big icon, header, text and link</source>
+        <target>Big icon, header, Text und Link</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.buttonText">
+        <source>Button text</source>
+        <target>Button Text</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.link">
+        <source>Link</source>
+        <target>Link</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.bodytext">
+        <source>Text</source>
+        <target>Text</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.flexform.sheetGeneral">
+        <source>Additional settings</source>
+        <target>Zusätzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="bigIconTextButton.flexform.iconClass">
+        <source>Icon</source>
+        <target>Icon</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.title">
+        <source>Icon,Text and Button</source>
+        <target>Icon,Text und Button</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.description">
+        <source>Icon,Text and Button</source>
+        <target>Icon,Text und Button</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.buttonText">
+        <source>Button text</source>
+        <target>Button Text</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.link">
+        <source>Link</source>
+        <target>Link</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.bodytext">
+        <source>Text</source>
+        <target>Text</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.flexform.sheetGeneral">
+        <source>Additional settings</source>
+        <target>Zusätzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="iconTextButton.flexform.iconClass">
+        <source>Icon</source>
+        <target>Icon</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.title">
+        <source>Image text and link</source>
+        <target>Image Text und Link</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.description">
+        <source>Image text and link</source>
+        <target>Image Text und Link</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.linkText">
+        <source>Link text</source>
+        <target>Link Text</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.link">
+        <source>Link</source>
+        <target>Link</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.tabs.media">
+        <source>Media</source>
+        <target>Media</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.bodytext">
+        <source>Text</source>
+        <target>Text</target>
+      </trans-unit>
+      <trans-unit id="imageTextLink.flexform.sheetGeneral">
+        <source>Additional settings</source>
+        <target>Zusätzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="accordion.title">
+        <source>Accordion</source>
+        <target>Accordion</target>
+      </trans-unit>
+      <trans-unit id="accordion.description">
+        <source>Accordion, added records will be used as "accordion", and the record inside "accordian" will be rendered as content.</source>
+        <target>Accordion, hinzugefügte Datensätze werden als "Accordion" verwendet, und der Datensatz im Inneren "Accordion" wird als Inhalt gerendert.</target>
+      </trans-unit>
+      <trans-unit id="accordion.records_formlabe">
+        <source>Records to use as "accordions", title is displayed as accordian expand/collapse link, and their child records will be rendered inside the accordion.</source>
+        <target>Datensätze als "Accordions" verwenden, der Titel wird als Accordion zeigen/verdecken-Link angezeigt, und die untergeordneten Datensätze werden im Inneren des "Accordion" gerendert.</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.sheetGeneral">
+        <source>Additional settings</source>
+        <target>Zusätzliche Einstellungen</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.accordionMode">
+        <source>Accordion mode</source>
+        <target>Accordion-Modus</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.accordionMode_firstChildOpenSingleSelect">
+        <source>First item is expanded at load, only one item can be expanded at the same time.</source>
+        <target>Erster Eintrag ist beim Laden erweitert, nur ein Element kann zur gleichen Zeit erweitert werden.</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.accordionMode_allClosedMultiSelect">
+        <source>All items are collapsed at load, multiple items can be expanded at the same time.</source>
+        <target>Alle Einträge sind beim Laden geschlossen, mehrere Einträge können zur gleichen Zeit erweitert werden.</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.accordionMode_allClosedSingleSelect">
+        <source>All items are collapsed at load, only one item can be expanded at the same time.</source>
+        <target>Alle Einträge sind beim Laden geschlossen, nur ein Element kann zur gleichen Zeit erweitert werden.</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.accordionMode_firstChildOpenMultiSelect">
+        <source>First item is expanded at load, multiple items can be expanded at the same time.</source>
+        <target>Erster Eintrag ist beim Laden erweitert, mehrere Einträge können zur gleichen Zeit erweitert werden.</target>
+      </trans-unit>
+      <trans-unit id="accordion.flexform.accordionMode_allOpen">
+        <source>All items are expanded at load.</source>
+        <target>Alle Einträge sind beim Laden erweitert.</target>
+      </trans-unit>
+      <trans-unit id="logoCarousel.title">
+        <source>Logo Carousel</source>
+        <target>Logo Karussell</target>
+      </trans-unit>
+      <trans-unit id="logoCarousel.description">
+        <source>Carousel with images (logos) and optional link</source>
+        <target>Karussell mit Bildern (Logos) und optional Link</target>
+      </trans-unit>
+      <trans-unit id="logoCarousel.tabs.logos">
+        <source>Logos</source>
+        <target>Logos</target>
+      </trans-unit>
+      <trans-unit id="quote.title">
+        <source>Quote</source>
+        <target>Zitat</target>
+      </trans-unit>
+      <trans-unit id="quote.description">
+        <source>Quote with optional footer and link</source>
+        <target>Zitat mit optionalem Footer und Link</target>
+      </trans-unit>
+      <trans-unit id="quote.linkText">
+        <source>Link text</source>
+        <target>Link Text</target>
+      </trans-unit>
+      <trans-unit id="quote.header">
+        <source>Name, Title</source>
+        <target>Name, Titel</target>
+      </trans-unit>
+      <trans-unit id="quote.link">
+        <source>Link</source>
+        <target>Link</target>
+      </trans-unit>
+      <trans-unit id="quote.bodytext">
+        <source>Quote</source>
+        <target>Zitat</target>
+      </trans-unit>
+      <trans-unit id="tabs.title">
+        <source>Tabs</source>
+        <target>Registerkarten</target>
+      </trans-unit>
+      <trans-unit id="tabs.description">
+        <source>Tabs with content</source>
+        <target>Registerkarten mit Inhalt</target>
+      </trans-unit>
+      <trans-unit id="tabs.layout.0">
+        <source>Tabs</source>
+        <target>Registerkarten</target>
+      </trans-unit>
+      <trans-unit id="tabs.layout.1">
+        <source>Pills</source>
+        <target>Pills</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
