@@ -1,0 +1,57 @@
+lib.gridelements {
+    Adv1ColumnGrid < .defaultGridSetup
+    Adv1ColumnGrid {
+        columns.0 {
+            prepend = COA
+            prepend {
+                10 = TEXT
+                10 {
+                    field = flexform_column_1_xs
+                    required = 1
+                    noTrimWrap = | col-xs-||
+                }
+                20 < .10
+                20.field = flexform_column_1_sm
+                20.noTrimWrap = | col-sm-||
+                30 < .10
+                30.field = flexform_column_1_md
+                30.noTrimWrap = | col-md-||
+                40 < .10
+                40.field = flexform_column_1_lg
+                40.noTrimWrap = | col-lg-||
+                50 < .10
+                50.field = flexform_column_1_layout
+                50.noTrimWrap = | |
+                stdWrap.noTrimWrap = |<div class="col1 |">|
+            }
+            renderObj >
+            renderObj = COA
+            renderObj {
+              20 =< tt_content
+            }
+            wrap = |</div>
+
+        }
+
+        cObject = FLUIDTEMPLATE
+        cObject {
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv4ColumnGrid.html
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = media
+                }
+                1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+                1910 {
+                    classMappings {
+                        0 =
+                        1 = examlple-wrapper-1
+                        4 = examlple-wrapper-4
+                    }
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.Adv1ColumnGrid < lib.gridelements.Adv1ColumnGrid

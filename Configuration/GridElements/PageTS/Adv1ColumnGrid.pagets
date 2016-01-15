@@ -1,0 +1,20 @@
+tx_gridelements.setup.Adv1ColumnGrid {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:adv_one_column_grid
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:adv_one_column_grid_description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/Adv1ColumnGrid.xml
+    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/adv1-column-grid.svg
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        colPos = 0
+                    }
+                }
+            }
+        }
+    }
+}

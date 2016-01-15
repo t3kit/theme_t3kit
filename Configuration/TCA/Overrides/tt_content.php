@@ -130,66 +130,9 @@ call_user_func(function() {
         [
             $contentElementLanguageFilePrefix . 'tab.contentElements',
             '--div--',
-            NULL
+            null
         ],
         'login',
-        'after'
-    );
-
-	// "container"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $structuredContentElementLanguageFilePrefix . 'container.title',
-            'container',
-            'content-elements-container'
-        ],
-        'tabs',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['container'] = 'content-elements-container';
-
-	// "column"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $structuredContentElementLanguageFilePrefix . 'column.title',
-            'column',
-            'content-elements-column'
-        ],
-        'container',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['column'] = 'content-elements-column';
-
-
-    // "columns"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $structuredContentElementLanguageFilePrefix . 'columns.title',
-            'columns',
-            'content-elements-columns'
-        ],
-        'column',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['columns'] = 'content-elements-columns';
-
-
-    // The "divider" these structured content elements
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $structuredContentElementLanguageFilePrefix . 'tab.structuredContentElements',
-            '--div--',
-            NULL
-        ],
-        'tabs',
         'after'
     );
 

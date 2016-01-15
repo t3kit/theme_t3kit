@@ -1,7 +1,14 @@
 <f:if condition="{layoutClass}">
 <div class="{layoutClass}">
 </f:if>
-	<div class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {data.uid}', else: '{data.uid}')}">
+	<f:if condition="{files.0}">
+		<f:then>
+			<div class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {data.uid} col-bg-img', else: '{data.uid} col-bg-img')}" style="background-image: url('{f:uri.image(image : '{files.0}')}')">
+		</f:then>
+		<f:else>
+			<div class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {data.uid}', else: '{data.uid}')}">
+		</f:else>
+	</f:if>
 		<div class="row">
 			<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
 			<f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>

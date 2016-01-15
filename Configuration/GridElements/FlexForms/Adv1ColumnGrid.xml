@@ -74,7 +74,7 @@
 													<numIndex index="1"></numIndex>
 												</numIndex>
 											</items>
-											<default>6</default>
+											<default>12</default>
 									</config>
 							</TCEforms>
 					</column_1_md>
@@ -108,81 +108,6 @@
 									</config>
 							</TCEforms>
 					</column_1_layout>
-					<column_2_xs type="array">
-							<TCEforms type="array">
-									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_xs</label>
-									<config type="array">
-											<type>select</type>
-											<items type="array">
-												<numIndex index="0" type="array">
-													<numIndex index="0">-</numIndex>
-													<numIndex index="1"></numIndex>
-												</numIndex>
-											</items>
-											<default></default>
-									</config>
-							</TCEforms>
-					</column_2_xs>
-					<column_2_sm type="array">
-							<TCEforms type="array">
-									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_sm</label>
-									<config type="array">
-											<type>select</type>
-											<items type="array">
-												<numIndex index="0" type="array">
-													<numIndex index="0">-</numIndex>
-													<numIndex index="1"></numIndex>
-												</numIndex>
-											</items>
-											<default></default>
-									</config>
-							</TCEforms>
-					</column_2_sm>
-					<column_2_md type="array">
-							<TCEforms type="array">
-									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_md</label>
-									<config type="array">
-											<type>select</type>
-											<items type="array">
-												<numIndex index="0" type="array">
-													<numIndex index="0">-</numIndex>
-													<numIndex index="1"></numIndex>
-												</numIndex>
-											</items>
-											<default>6</default>
-									</config>
-							</TCEforms>
-					</column_2_md>
-					<column_2_lg type="array">
-							<TCEforms type="array">
-									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_lg</label>
-									<config type="array">
-											<type>select</type>
-											<items type="array">
-												<numIndex index="0" type="array">
-													<numIndex index="0">-</numIndex>
-													<numIndex index="1"></numIndex>
-												</numIndex>
-											</items>
-											<default></default>
-									</config>
-							</TCEforms>
-					</column_2_lg>
-					<column_2_layout type="array">
-							<TCEforms type="array">
-									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_layout</label>
-									<config type="array">
-											<type>select</type>
-											<items type="array">
-												<numIndex index="0" type="array">
-													<numIndex index="0">-</numIndex>
-													<numIndex index="1"></numIndex>
-												</numIndex>
-											</items>
-											<default></default>
-									</config>
-							</TCEforms>
-					</column_2_layout>
 				</el>
 			</ROOT>
 		</columns>

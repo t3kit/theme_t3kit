@@ -22,7 +22,12 @@
                 <source>Preset row with four columns.</source>
             </trans-unit>
 
-
+            <trans-unit id="adv_one_column_grid">
+                <source>Advanced one column grid</source>
+            </trans-unit>
+            <trans-unit id="adv_one_column_grid_description">
+                <source>Advanced grid. Preset row with one column. Column width can be adjusted.</source>
+            </trans-unit>
             <trans-unit id="adv_two_column_grid">
                 <source>Advanced two columns grid</source>
             </trans-unit>
@@ -58,7 +63,66 @@
                 <source>Column 4</source>
             </trans-unit>
 
-
+ 						<trans-unit id="column_1_xs">
+                <source>Column 1 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_1_sm">
+                <source>Column 1 Tablets. "Small devices Tablets (≥768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_1_md">
+                <source>Column 1 Desktops. "Medium devices Desktops (≥992px)"</source>
+            </trans-unit>
+            <trans-unit id="column_1_lg">
+                <source>Column 1 Large devices "Large devices Desktops (≥1200px)"</source>
+            </trans-unit>
+ 						<trans-unit id="column_2_xs">
+                <source>Column 2 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_2_sm">
+                <source>Column 2 Tablets. "Small devices Tablets (≥768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_2_md">
+                <source>Column 2 Desktops. "Medium devices Desktops (≥992px)"</source>
+            </trans-unit>
+            <trans-unit id="column_2_lg">
+                <source>Column 2 Large devices "Large devices Desktops (≥1200px)"</source>
+            </trans-unit>
+ 						<trans-unit id="column_3_xs">
+                <source>Column 3 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_3_sm">
+                <source>Column 3 Tablets. "Small devices Tablets (≥768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_3_md">
+                <source>Column 3 Desktops. "Medium devices Desktops (≥992px)"</source>
+            </trans-unit>
+            <trans-unit id="column_3_lg">
+                <source>Column 3 Large devices "Large devices Desktops (≥1200px)"</source>
+            </trans-unit>
+ 						<trans-unit id="column_4_xs">
+                <source>Column 4 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_4_sm">
+                <source>Column 4 Tablets. "Small devices Tablets (≥768px)"</source>
+            </trans-unit>
+            <trans-unit id="column_4_md">
+                <source>Column 4 Desktops. "Medium devices Desktops (≥992px)"</source>
+            </trans-unit>
+            <trans-unit id="column_4_lg">
+                <source>Column 4 Large devices "Large devices Desktops (≥1200px)"</source>
+            </trans-unit>
+            <trans-unit id="column_1_layout">
+                <source>Column 1 Layout</source>
+            </trans-unit>
+						<trans-unit id="column_2_layout">
+                <source>Column 2 Layout</source>
+            </trans-unit>
+            <trans-unit id="column_3_layout">
+                <source>Column 3 Layout</source>
+            </trans-unit>
+            <trans-unit id="column_4_layout">
+                <source>Column 4 Layout</source>
+            </trans-unit>
 
             <trans-unit id="container">
                 <source>Container wrapper</source>
