@@ -17,7 +17,8 @@
 
 					<div class="swiper-slide img-slider__slide">
 						<div class="img-slider__slide-wrp">
-							<img data-src="<f:uri.image src="{image.uid}" width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}" height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}" treatIdAsReference="1" />" class="swiper-lazy img-responsive img-slider__img">
+							<img data-src="<f:uri.image src="{image.uid}" width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}" height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}" treatIdAsReference="1" />" data-srcset="<f:uri.image src="{image.uid}" width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}" height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}" treatIdAsReference="1" /> 1x, {f:uri.image(src: '{image.uid}', width: '{settings.560w.width}', height: '{settings.560w.height}', treatIdAsReference: '1')} 560w" class="swiper-lazy img-responsive img-slider__img">
+
 							<div class="swiper-lazy-preloader"></div>
 							<div class="img-slider__caption">
 								<f:if condition="{image.referenceProperties.alternative}">
@@ -50,3 +51,4 @@
 	<!-- theme_t3kit: Templates/ContentElements/Slider.html [end] -->
 	</f:section>
 </div>
+

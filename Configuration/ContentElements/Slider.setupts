@@ -26,6 +26,10 @@ tt_content {
         settings {
             defaultWidth = 1280
             defaultHeight = 405
+            560w {
+                width = 560c
+                height = 405c
+            }
         }
     }
 }
