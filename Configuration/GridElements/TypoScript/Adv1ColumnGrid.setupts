@@ -1,4 +1,7 @@
 lib.gridelements {
+    layoutRootPaths {
+        1913 =  EXT:fluid_styled_content/Resources/Private/Layouts/
+    }
     Adv1ColumnGrid < .defaultGridSetup
     Adv1ColumnGrid {
         columns.0 {
@@ -35,7 +38,14 @@ lib.gridelements {
 
         cObject = FLUIDTEMPLATE
         cObject {
-            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv4ColumnGrid.html
+            layoutRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Layouts
+                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
+            }
+            partialRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Partials
+            }
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv1ColumnGrid.html
             dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
                 10 {

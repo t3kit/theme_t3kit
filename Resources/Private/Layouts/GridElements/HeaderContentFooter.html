@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:comment><!-- ### Wrapper class start if set ### --></f:comment>
+<f:if condition="{layoutClass}">
+<div class="{layoutClass}">
+</f:if>
+
+<f:comment><!-- ### Background image if set else div with content id and class ### --></f:comment>
+<f:if condition="{files.0}">
+	<f:then>
+<div class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} c{data.uid} col-bg-img', else: 'c{data.uid} col-bg-img')}" style="background-image: url('{f:uri.image(image : '{files.0}')}')">
+	</f:then>
+	<f:else>
+<div class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} c{data.uid}', else: 'c{data.uid}')}">
+	</f:else>
+</f:if>
+
+	<f:render partial="Header" arguments="{_all}" />
+	<f:render section="content" />
+	<f:render partial="Footer" arguments="{_all}" />
+</div>
+
+<f:comment><!-- ### Wrapper class end if set ### --></f:comment>
+<f:if condition="{layoutClass}">
+</div>
+</f:if>
+
+
+</html>

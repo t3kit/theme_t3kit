@@ -19,6 +19,7 @@ lib.gridelements {
             50.field = flexform_column_3_layout
             stdWrap.noTrimWrap = |<div class="col3 |">|
         }
+        cObject.file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv3ColumnGrid.html
     }
 }
 
