@@ -1,0 +1,36 @@
+mod.web_layout.BackendLayouts {
+    GridContainer {
+        icon = EXT:theme_t3kit/Resources/Public/Icons/BackendLayouts/GridContainer.svg
+        name = GridContainer
+        title = GridContainer
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_content
+                                rowspan = 1
+                                colspan = 1
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_elements
+                                rowspan = 1
+                                colspan = 1
+                                colPos = 4
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
