@@ -304,61 +304,6 @@ call_user_func(function() {
         '
     ];
 
-    // "container"
-    $GLOBALS['TCA']['tt_content']['types']['container'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
-                records;' . $structuredContentElementLanguageFilePrefix . 'container.records_formlabel,
-                rowDescription,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
-
-
-
-    // "container"
-    $GLOBALS['TCA']['tt_content']['types']['column'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
-                records;' . $structuredContentElementLanguageFilePrefix . 'column.records_formlabel,
-                rowDescription,
-               	--linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
-
-    // "columns"
-    $GLOBALS['TCA']['tt_content']['types']['columns'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.html_formlabel,
-                records;' . $structuredContentElementLanguageFilePrefix . 'columns.records_formlabel,
-                rowDescription,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
 
     //
     // Flexforms
@@ -371,14 +316,5 @@ call_user_func(function() {
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
-
-	// "column"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,column'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_column.xml';
-
-	// "columns"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,columns'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_columns.xml';
-
-	// "container"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,container'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_container.xml';
 
 });

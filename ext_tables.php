@@ -43,19 +43,4 @@ if (TYPO3_MODE === 'BE') {
 		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/ContentElements/tabs.svg']
 	);
-	$iconRegistry->registerIcon(
-		'content-elements-container',
-		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/advGridContainer.svg']
-	);
-	$iconRegistry->registerIcon(
-		'content-elements-column',
-		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/advGridColumn.svg']
-	);
-	$iconRegistry->registerIcon(
-		'content-elements-columns',
-		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-		['source' => 'EXT:theme_t3kit/Resources/Public/Icons/StructuredContentElements/columns.svg']
-	);
 }
