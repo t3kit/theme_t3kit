@@ -1,7 +1,7 @@
 [globalVar = LIT:small = {$themes.configuration.feLayoutMode}]
     page {
         includeCSS {
-            bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.less
+            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.less
             bootstrap {
                 # excludeFromConcatenation =
                 # disableCompression =
@@ -11,17 +11,12 @@
                 # excludeFromConcatenation =
                 # disableCompression =
             }
-            components = {$themes.configuration.felayoutFullPath}/components.css
+            components = {$themes.configuration.feLayoutPath}/components.css
             components {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.less
-            header {
-                #excludeFromConcatenation =
-                #disableCompression =
-            }
-            maincss = {$themes.configuration.felayoutFullPath}/main.less
+            maincss = {$themes.configuration.feLayoutPath}/main.less
             maincss {
                 #excludeFromConcatenation =
                 #disableCompression =
@@ -43,7 +38,7 @@
 [globalVar = LIT:big = {$themes.configuration.feLayoutMode}]
     page {
         includeCSS {
-            bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.css
+            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.css
             bootstrap {
                 #excludeFromConcatenation =
                 #disableCompression =
@@ -53,17 +48,12 @@
                 # excludeFromConcatenation =
                 # disableCompression =
             }
-            components = {$themes.configuration.felayoutFullPath}/components.css
+            components = {$themes.configuration.feLayoutPath}/components.css
             components {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.css
-            header {
-                #excludeFromConcatenation =
-                #disableCompression =
-            }
-            maincss = {$themes.configuration.felayoutFullPath}/main.css
+            maincss = {$themes.configuration.feLayoutPath}/main.css
             maincss {
                 #excludeFromConcatenation =
                 #disableCompression =
@@ -76,8 +66,3 @@
         }
     }
 [global]
-
-
-# [globalVar = LIT:multi-site = {$themes.configuration.feLayoutMode}]
-# --------
-# [global]

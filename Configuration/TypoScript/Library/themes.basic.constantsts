@@ -7,9 +7,6 @@
 # customsubcategory=layout= Layout
 
 
-# cat=theme,basic/header_type/; type=options[Header=header,Minimal Header=headerMin]; label= Header type
-themes.configuration.headerType = header
-
 # cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Development Mode
 themes.configuration.isDevelopment = Development Mode
 
@@ -17,9 +14,9 @@ themes.configuration.isDevelopment = Development Mode
 themes.configuration.feLayoutMode = small
 
 # cat=theme,expert/layout/; type=string; label=Path to felayout
-themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit/
+themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit
 
-themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}{$themes.configuration.feLayoutMode}
+# themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}
 
 
 # customsubcategory=spamProtect= SpamProtect

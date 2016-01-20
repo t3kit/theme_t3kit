@@ -1,25 +1,19 @@
 page {
     includeJSFooterlibs {
-        jquery = {$themes.configuration.felayoutFullPath}/jquery.js
+        jquery = {$themes.configuration.feLayoutPath}/jquery.js
         jquery {
             external = 0
             # disableCompression =
             # excludeFromConcatenation =
         }
-        bootstrap = {$themes.configuration.felayoutFullPath}/bootstrap.js
+        bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.js
         bootstrap {
             external = 0
             # disableCompression =
             # excludeFromConcatenation =
         }
-        components = {$themes.configuration.felayoutFullPath}/components.js
+        components = {$themes.configuration.feLayoutPath}/components.js
         components {
-            external = 0
-            # disableCompression =
-            # excludeFromConcatenation =
-        }
-        header = {$themes.configuration.felayoutFullPath}/{$themes.configuration.headerType}.js
-        header {
             external = 0
             # disableCompression =
             # excludeFromConcatenation =
@@ -28,7 +22,7 @@ page {
 }
 page {
     includeJSFooter {
-        mainjs = {$themes.configuration.felayoutFullPath}/main.js
+        mainjs = {$themes.configuration.feLayoutPath}/main.js
         mainjs {
             external = 0
             # disableCompression =

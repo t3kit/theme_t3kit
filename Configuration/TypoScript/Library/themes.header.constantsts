@@ -39,8 +39,6 @@ themes.configuration.header.top.menu.containerPid = 6
 
 
 
-
-
 #Header Middle
 #############################################
 # cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle
@@ -50,17 +48,16 @@ themes.configuration.elem.status.showHeaderMiddle = 1
 themes.configuration.elem.status.showHeaderMiddleLogo = 1
 
 
+
 # Logo
 # cat=header,basic/header_middle; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
-themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/small/images/t3kit.png
+themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/images/t3kit.png
 
 
 
 # Social Icons
 # cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle SocIcons
 themes.configuration.elem.status.showHeaderMiddleSocIcons = 1
-
-
 
 
 
