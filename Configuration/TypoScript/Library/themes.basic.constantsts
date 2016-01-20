@@ -51,3 +51,16 @@ themes.configuration.css.compress = 1
 
 # cat=theme,expert/css/; type=options[0,1]; label= Concatenate CSS files
 themes.configuration.css.concatenate = 1
+
+# customsubcategory=features=Features
+
+#Features
+#############################################
+# cat=theme,advanced/features/; type=options[0,1]; label= Enable solr search
+themes.configuration.features.enableSolr = 0
+
+# cat=theme,advanced/features/; type=int+; label= Search target page id
+themes.configuration.features.searchTargetPage = 71
+
+# cat=theme,advanced/features/; type=int+; label= News default detail page id
+themes.configuration.features.newsDefaultDetailPid = 42

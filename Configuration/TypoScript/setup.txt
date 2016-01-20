@@ -3,7 +3,6 @@
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library/" extensions="setupts">
 
-
 # Add this extensions rootPaths to lib.fluidcontent (fluid_styled_content)
 lib.fluidContent {
     templateRootPaths {
@@ -33,9 +32,15 @@ lib.fluidContent {
 
 # Extensions
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts">
 [global]
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rtehtmlarea')]
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">
+[global]
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('solr')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts">
+    # Solr indexer
+    # Put index queue modifications here, wont work with INCLUDE_TYPOSCRIPT from scheduler task indexer
+    plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = {$themes.configuration.features.newsDefaultDetailPid}
 [global]
 #<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/IndexedSearch/TypoScript/setup.txt">
