@@ -2,7 +2,7 @@
 
 # Base configuration
 themes.configuration.siteName = t3kit
-
+themes.languages.default.isoCode = en_GB
 
 
 # Extensions
