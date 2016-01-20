@@ -2,47 +2,104 @@ lib.menu.sub = HMENU
 lib.menu.sub.entryLevel = 1
 lib.menu.sub.includeNotInMenu = {$themes.configuration.menu.sub.includeNotInMenu}
 lib.menu.sub.excludeUidList = {$themes.configuration.menu.sub.excludeUidList}
-lib.menu.sub.wrap = <div class="sub-navigation"><div class="sub-navigation__wrp"> | </div></div>
+lib.menu.sub.wrap = <div class="sub-navigation"><div class="sub-navigation__wrp"><ul class="sub-navigation__item-list _sub-list-level-2"> | </ul></div></div>
 lib.menu.sub.1 = TMENU
 lib.menu.sub.1 {
     expAll = 0
     NO = 1
     NO {
-    # wrapItemAndSub.insertData = 1
-    # wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
-        ATagParams = class="sub-navigation__link"
+    wrapItemAndSub.insertData = 1
+    wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-2"
     }
     CUR < .NO
     CUR {
-        # wrapItemAndSub = <li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
-        ATagParams = class="sub-navigation__link _curent"
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-2 _curent"
     }
     ACT < .CUR
     ACT {
-        # wrapItemAndSub = <li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
-        ATagParams = class="sub-navigation__link _active"
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-2 _active"
     }
 }
 lib.menu.sub.2 < 1
 lib.menu.sub.2 = TMENU
 lib.menu.sub.2 {
-    # wrap = <ul class="sub"> | </ul>
+    wrap = <ul class="sub-navigation__item-list _sub-list-level-3"> | </ul>
     NO = 1
+    expAll = 1
     NO {
-        # wrapItemAndSub.insertData = 1
-        # wrapItemAndSub = <li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-no uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>
-        ATagParams = class="sub-navigation__link _level-2"
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-3"
     }
 
     CUR < .NO
     CUR {
-        # wrapItemAndSub = <li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>|*|<li class="state-cur active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixSecondLevel}|</li>
-        ATagParams = class="sub-navigation__link _level-2 _curent"
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-3 _curent"
     }
     ACT < .CUR
     ACT {
-        # wrapItemAndSub = <li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} first">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} middle">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>|*|<li class="state-act active uid-{field:uid} point-{register:count_MENUOBJ} last">{$themes.configuration.menu.sub.prefixFirstLevel}|</li>
-        ATagParams = class="sub-navigation__link _level-2 _active"
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-3 _active"
+    }
+
+}
+lib.menu.sub.3 < 1
+lib.menu.sub.3 = TMENU
+lib.menu.sub.3 {
+    wrap = <ul class="sub-navigation__item-list _sub-list-level-4"> | </ul>
+    expAll = 1
+    NO = 1
+    NO {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-4"
+    }
+
+    CUR < .NO
+    CUR {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-4 _curent"
+    }
+    ACT < .CUR
+    ACT {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-4 _active"
+    }
+
+}
+lib.menu.sub.4 < 1
+lib.menu.sub.4 = TMENU
+lib.menu.sub.4 {
+    wrap = <ul class="sub-navigation__item-list _sub-list-level-5"> | </ul>
+    expAll = 1
+    NO = 1
+    NO {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-5"
+    }
+
+    CUR < .NO
+    CUR {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-5 _curent"
+    }
+    ACT < .CUR
+    ACT {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-5 _active"
     }
 
 }
