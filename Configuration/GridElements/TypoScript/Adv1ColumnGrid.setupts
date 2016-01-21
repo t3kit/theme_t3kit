@@ -51,14 +51,9 @@ lib.gridelements {
                 10 {
                     references.fieldName = media
                 }
-                1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-                1910 {
-                    classMappings {
-                        0 =
-                        1 = examlple-wrapper-1
-                        4 = examlple-wrapper-4
-                    }
-                }
+                # "inherit" from lib.fluidContent
+                365 < lib.fluidContent.dataProcessing.365
+                1910 < lib.fluidContent.dataProcessing.1910
             }
         }
     }

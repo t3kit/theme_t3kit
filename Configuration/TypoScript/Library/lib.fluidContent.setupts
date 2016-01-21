@@ -1,0 +1,35 @@
+# Add layoutClass and wrapperClass to fluid_styled_content lib.fluidContent
+lib.fluidContent {
+    dataProcessing {
+        # will add variable wrapperClass to FLUIDTEMPLATE
+        # used in "overridden" fluid_styled_content layouts: (appended in class)
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
+        365 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+        365 {
+            fieldName = wrapper
+            as = wrapperClass
+            classMappings {
+                0 =
+                #10 = example-wrap-1
+                #1000 = center-block
+            }
+        }
+        # will add variable layoutClass to FLUIDTEMPLATE
+        # can be overriden in the actual elements ts setup
+        # only affective if variable is used in the fluid template file.
+        # Example:fluid_styled_content element Table has layout classes added.
+        # theme_t3kit/Configuration/FluidStyledContent/Table.pagets (Layout list in form)
+        # theme_t3kit/Configuration/FluidStyledContent/Table.setupts ("class mappings")
+        # theme_t3kit/Resources/Private/Templates/FluidStyledContent/Table.html (adds {layoutClass} to table tag class attribute)
+        1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+        1910 {
+            classMappings {
+                0 =
+                #10 = example-layout-1
+                #1000 = example-generic-layout-1
+            }
+        }
+    }
+}

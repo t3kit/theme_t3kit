@@ -175,6 +175,13 @@
             <trans-unit id="tabs.layout.1">
                 <source>Pills</source>
             </trans-unit>
+
+            <trans-unit id="tt_content.wrapper">
+                <source>Wrapper</source>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -13,12 +13,6 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
-            30 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-            30 {
-                classMappings {
-                    0 =
-                }
-            }
         }
         settings {
             defaultMaxWidth = 320

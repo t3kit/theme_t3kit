@@ -1,7 +1,7 @@
-<f:if condition="{layoutClass}">
-<div class="{layoutClass}">
-</f:if>
+<f:layout name="HeaderContentFooter" />
 
+<f:section name="content">
+	<f:comment><!-- ### Content ### --></f:comment>
 	<div class="row">
 		<div class="col-md-4">
 			<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
@@ -13,7 +13,4 @@
 			<f:format.raw>{data.tx_gridelements_view_column_2}</f:format.raw>
 		</div>
 	</div>
-
-<f:if condition="{layoutClass}">
-</div>
-</f:if>
+</f:section>

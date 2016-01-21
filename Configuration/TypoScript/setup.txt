@@ -36,5 +36,6 @@ lib.fluidContent {
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts">
     # Solr indexer
     # Put index queue modifications here, wont work with INCLUDE_TYPOSCRIPT from scheduler task indexer
-    plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = {$themes.configuration.features.newsDefaultDetailPid}
+    plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = 42
+    # {$themes.configuration.features.newsDefaultDetailPid}
 [global]

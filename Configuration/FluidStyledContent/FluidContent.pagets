@@ -1,0 +1,31 @@
+# Add a wrapper by type, in this case table (all content based on lib.fluidContent)
+# Example to add a wrapper item for content type table
+
+#TCEFORM.tt_content.wrapper {
+#    types {
+#        table {
+#            # Based on that the default items still exists.
+#            addItems {
+#                1 = Example table wrapper 1
+#            }
+#        }
+#    }
+#}
+
+# Add a generic wrapper (all content based on lib.fluidContent)
+# Example to add a wrapper item for all content types
+#TCEFORM.tt_content.wrapper {
+#    # Based on that the default items still exists.
+#    addItems {
+#        1000 = Example generic wrapper 1
+#    }
+#}
+
+# Use layout field to customize Layout select-box on tt_content
+# First remove default items 1 to 3 and set label
+TCEFORM.tt_content.layout {
+    removeItems = 1,2,3
+    altLabels {
+        0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
+    }
+}

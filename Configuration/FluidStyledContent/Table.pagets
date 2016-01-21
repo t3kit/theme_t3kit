@@ -5,12 +5,12 @@ TCEFORM.tt_content.layout {
             # Based on that the default items still exists.
             altLabels {
                 0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
-                1 = Striped
-                2 = Striped Bordered
-                3 = Striped Bordered Condesed
             }
             addItems {
-                4 = Bordered Condesed Hover
+                101 = Striped
+                102 = Striped Bordered
+                103 = Striped Bordered Condesed
+                104 = Bordered Condesed Hover
             }
         }
     }

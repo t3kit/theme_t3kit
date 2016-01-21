@@ -4,7 +4,6 @@ defined('TYPO3_MODE') or die();
 call_user_func(function() {
 
     $contentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:';
-    $structuredContentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/StructuredContentElements.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
     $cmsLanguageFilePrefix = 'LLL:EXT:cms/locallang_ttc.xlf:';
 
@@ -165,7 +164,7 @@ call_user_func(function() {
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
             --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
@@ -185,7 +184,7 @@ call_user_func(function() {
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
@@ -204,7 +203,7 @@ call_user_func(function() {
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
@@ -221,7 +220,7 @@ call_user_func(function() {
                 records;' . $contentElementLanguageFilePrefix . 'accordion.records_formlabe,
                 rowDescription,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
@@ -242,7 +241,7 @@ call_user_func(function() {
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
@@ -259,7 +258,7 @@ call_user_func(function() {
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
             --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
@@ -278,7 +277,7 @@ call_user_func(function() {
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'quote.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
@@ -295,7 +294,7 @@ call_user_func(function() {
                 records;' . $contentElementLanguageFilePrefix . 'accordion.records_formlabe,
                 rowDescription,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                layout;' . $frontendLanguageFilePrefix . 'layout_formlabel,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
@@ -303,7 +302,6 @@ call_user_func(function() {
             --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
         '
     ];
-
 
     //
     // Flexforms
@@ -317,4 +315,22 @@ call_user_func(function() {
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
 
+    // Add additional fields for tt_content
+    $additionalColumns = [
+        'wrapper' => [
+            'exclude' => true,
+            'label' => $contentElementLanguageFilePrefix . 'tt_content.wrapper',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [$contentElementLanguageFilePrefix . 'label.default', 0]
+                ],
+                'default' => 0
+            ]
+        ],
+    ];
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'wrapper', '', 'after:layout');
 });

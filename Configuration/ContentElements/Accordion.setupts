@@ -10,13 +10,6 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
-
-            1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-            1910 {
-                classMappings {
-                    0 =
-                }
-            }
         }
     }
 }

@@ -13,17 +13,18 @@ lib.gridelements {
 
         cObject = FLUIDTEMPLATE
         cObject {
+            layoutRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Layouts
+                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
+            }
+            partialRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Partials
+            }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
             dataProcessing {
-
-                1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
-                1910 {
-                    classMappings {
-                        0 =
-                        1 = examlple-wrapper-1
-                        4 = examlple-wrapper-4
-                    }
-                }
+                # "inherit" from lib.fluidContent
+                365 < lib.fluidContent.dataProcessing.365
+                1910 < lib.fluidContent.dataProcessing.1910
             }
         }
     }

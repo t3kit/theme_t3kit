@@ -4,24 +4,26 @@ TCEFORM.tt_content.layout {
     types {
         gridelements_pi1 {
             # Remove default items.
-            removeItems = 2,3
-            # Create new items
-            altLabels {
-                1 = Example wrapper 1
-            }
-            addItems.4 = Example wrapper 4
+            removeItems = 1,2,3
+            # Example how to create new items.
+            # Must also be added to xColumnGrid.setupts to make an affect
+            # addItems.40 = Example wrapper
         }
     }
 }
 
+# Layout definitions for advanced columns
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition {
+    # Example how to add layout class to columns in advanced gridelements
+    # Note in this case the class is just taken from the item (className = Label)
     addItems {
-        bg-warning = Exampe Layout 1
-        bg-danger = Exampe Layout 2
+        bg-warning = Example Layout 1
+        bg-danger = Example Layout 2
         bg-info = Example Layout 3
     }
 }
 
+# Column definition for advanced columns
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition {
     addItems {
         1 = 1 of 12
@@ -39,6 +41,7 @@ TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition {
     }
 }
 
+# populate definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_md < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_xs < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_sm < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
