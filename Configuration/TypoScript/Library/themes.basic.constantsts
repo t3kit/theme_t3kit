@@ -6,6 +6,8 @@
 # customsubcategory=development_mode= Development Mode
 # customsubcategory=layout= Layout
 
+# cat=theme,expert/layout/; type=string; label= Base URL (if empty config.absRefPrefix=/ will be set)
+themes.configuration.baseurl =
 
 # cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Development Mode
 themes.configuration.isDevelopment = Development Mode
@@ -17,7 +19,6 @@ themes.configuration.feLayoutMode = small
 themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit
 
 # themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}
-
 
 # customsubcategory=spamProtect= SpamProtect
 
