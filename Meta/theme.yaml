@@ -11,12 +11,21 @@ keywords:
   - theme
   - responsive design
 
-# Constants categories which are used for constants in this theme
-constants:
-  availableCategories: [theme,colors,font,meta,pages,container,slider]
-
 # Screenshots for the preview gallery (optional, multiple possible)
 screenshots:
   -
     file           : EXT:theme_t3kit/Meta/Screenshots/screenshot.png
     caption        : t3kit theme
+
+
+# Whether a documentation page is available (optional)
+documentation:
+  -
+    uri            : http://t3kit.com
+    title          : t3kit.com
+
+# Whether a live demo is available (optional)
+demoLocation:
+  -
+    uri            : http://demo.t3kit.com
+    title          : demo.t3kit.com
