@@ -8,8 +8,11 @@
 	<header/>
 		<body>
 
-			<trans-unit id="rte.sp-text-color_label" xml:space="preserve">
-				<source>Special text color</source>
+			<trans-unit id="rte.example-class-wrapper_label" xml:space="preserve">
+				<source>Example class wrapper</source>
+			</trans-unit>
+			<trans-unit id="rte.white-text-color_label" xml:space="preserve">
+				<source>White text color</source>
 			</trans-unit>
 
 		</body>

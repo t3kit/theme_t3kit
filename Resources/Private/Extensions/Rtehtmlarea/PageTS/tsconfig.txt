@@ -1,7 +1,10 @@
 RTE.classes {
-    sp-text-color {
-        name = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.sp-text-color_label
-        value = color: #288FB4;
+    white-text-color {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.white-text-color_label
+    }
+    example-class-wrapper {
+        name = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.example-class-wrapper_label
+        # value = color: #288FB4;
     }
 }
 
@@ -29,12 +32,12 @@ RTE.default {
 
 
     # list allowed classes (must also be defined in the css-file)
-    proc.allowedClasses := addToList(sp-text-color)
+    proc.allowedClasses := addToList(example-class-wrapper, white-text-color )
 
     # A class name to be assigned to the blocks whenever the item is applied to selected text.
-    buttons.blockstyle.tags.div.allowedClasses := addToList(sp-text-color)
+    buttons.blockstyle.tags.div.allowedClasses := addToList(example-class-wrapper, white-text-color )
 
     ## for the textstyle
-    buttons.textstyle.tags.span.allowedClasses := addToList(sp-text-color)
+    buttons.textstyle.tags.span.allowedClasses := addToList(example-class-wrapper, white-text-color )
 
 }

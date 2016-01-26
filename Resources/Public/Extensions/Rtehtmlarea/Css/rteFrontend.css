@@ -43,6 +43,10 @@ div.indent { margin-left: 2em; }
 
 div.sp-text-color,
 p.sp-text-color,
-span.sp-text-color {
-  color: #288FB4;
+span.sp-text-color {}
+
+div.white-text-color ,
+p.white-text-color ,
+span.white-text-color  {
+  color: #fff !important;
 }
