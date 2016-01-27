@@ -10,6 +10,17 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
+            # "inherit" from lib.fluidContent
+            365 < lib.fluidContent.dataProcessing.365
+            1910 < lib.fluidContent.dataProcessing.1910
+
+            # extend class mapping only for this element
+            # 1910 {
+                # classMappings {
+                    # 0 = default-class
+                    # 11 = example-class
+                # }
+            # }
         }
     }
 }

@@ -23,3 +23,19 @@ TCEFORM.tt_content.pi_flexform.accordion.sDEF.accordionMode {
 }
 
 mod.web_layout.tt_content.preview.accordion = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Accordion.html
+
+
+# # Use layout field to customize Layout select-box on accordion
+# # extend layout select-box only for this element
+# TCEFORM.tt_content.layout {
+#     types {
+#         accordion {
+#             addItems {
+#                 --div-- = Accordion layouts:
+#                 # add value with index 0, to set it as a default, only for this element
+#                 0 = Default layout for this element
+#                 11 = Example layout only for accordion
+#             }
+#         }
+#     }
+# }

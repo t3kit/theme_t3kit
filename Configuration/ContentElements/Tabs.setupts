@@ -10,6 +10,18 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
+
+            # "inherit" from lib.fluidContent
+            365 < lib.fluidContent.dataProcessing.365
+            1910 < lib.fluidContent.dataProcessing.1910
+
+            # extend layout class mapping only for this element
+            1910 {
+                classMappings {
+                    0 = nav nav-tabs
+                    11 = nav nav-pills
+                }
+            }
         }
     }
 }

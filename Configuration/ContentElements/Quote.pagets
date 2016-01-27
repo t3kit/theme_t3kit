@@ -18,15 +18,17 @@ TCEFORM.tt_content.pi_flexform.quote.sDEF.iconClass {
     }
 }
 
-# Use layout field to customize Layout select-box on contentElementSlider
-TCEFORM.tt_content.layout {
-    types {
-        quote {
-            # Based on that the default items still exists.
-            removeItems = 1,2,3
-            altLabels {
-                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
-            }
-        }
-    }
-}
+# # Use layout field to customize Layout select-box on quote
+# # extend layout select-box only for this element
+# TCEFORM.tt_content.layout {
+#     types {
+#         quote {
+#             addItems {
+#                 --div-- = Quote layouts:
+#                 # add value with index 0, to set it as a default, only for this element
+#                 0 = Default layout for this element
+#                 11 = Example layout only for quote
+#             }
+#         }
+#     }
+# }

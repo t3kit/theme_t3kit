@@ -11,9 +11,8 @@ lib.fluidContent {
             fieldName = wrapper
             as = wrapperClass
             classMappings {
-                0 =
-                #10 = example-wrap-1
-                #1000 = center-block
+                # 0 =
+                100 = center-block
             }
         }
         # will add variable layoutClass to FLUIDTEMPLATE
@@ -26,9 +25,8 @@ lib.fluidContent {
         1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
         1910 {
             classMappings {
-                0 =
-                #10 = example-layout-1
-                #1000 = example-generic-layout-1
+                # 0 =
+                100 = example-layout-1
             }
         }
     }

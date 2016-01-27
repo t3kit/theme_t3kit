@@ -5,10 +5,10 @@ tt_content {
             1910 {
                 classMappings {
                     0 = table
-                    101 = table table-striped
-                    102 = table table-striped table-bordered
-                    103 = table table-striped table-bordered table-condensed
-                    104 = table table-bordered table-condensed table-hover
+                    11 = table table-striped
+                    12 = table table-striped table-bordered
+                    13 = table table-striped table-bordered table-condensed
+                    14 = table table-bordered table-condensed table-hover
                 }
             }
         }

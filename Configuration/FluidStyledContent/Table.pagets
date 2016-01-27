@@ -1,16 +1,17 @@
 # Added custom Table.html which adds classes in template depending on layout
+# Use layout field to customize Layout select-box on tables
+# extend layout select-box only for this element
 TCEFORM.tt_content.layout {
     types {
         table {
-            # Based on that the default items still exists.
-            altLabels {
-                0 = LLL:EXT:lang/locallang_general.xlf:LGL.default_value
-            }
             addItems {
-                101 = Striped
-                102 = Striped Bordered
-                103 = Striped Bordered Condesed
-                104 = Bordered Condesed Hover
+                --div-- = Table layouts:
+                # add value with index 0, to set it as a default, only for this element
+                0 = Table
+                11 = Striped
+                12 = Striped Bordered
+                13 = Striped Bordered Condesed
+                14 = Bordered Condesed Hover
             }
         }
     }

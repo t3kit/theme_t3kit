@@ -15,14 +15,15 @@ mod.wizards.newContentElement.wizardItems.contentElements {
 mod.web_layout.tt_content.preview.tabs = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Tabs.html
 
 # Use layout field to customize Layout select-box on tabs
+# extend layout select-box only for this element
 TCEFORM.tt_content.layout {
     types {
         tabs {
-            # Based on that the default items still exists.
-            removeItems = 2,3
-            altLabels {
+            addItems {
+                --div-- = Tabs layouts:
+                # add value with index 0, to set it as a default, only for this element
                 0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.0
-                1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.1
+                11 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.1
             }
         }
     }
