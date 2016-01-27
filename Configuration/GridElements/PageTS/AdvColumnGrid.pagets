@@ -35,11 +35,32 @@ TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition {
     # Example how to add layout class to columns in advanced gridelements
     # Note in this case the class is just taken from the item (className = Label)
     addItems {
-        bg-warning = Example Layout 1
-        bg-danger = Example Layout 2
-        bg-info = Example Layout 3
+        bg-warning = Example column layout 1
+        bg-danger = Example column layout 2
+        bg-info = Example column layout 3
+        one-column-align-center = Column align center (only for one-column advGrid)
     }
 }
+
+# Layout definitions for advanced columns
+TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.offset_definition {
+    # Example how to add layout class to columns in advanced gridelements
+    # Note in this case the class is just taken from the item (className = Label)
+    addItems {
+        col-md-offset-1 = Column offset 1 of 12 (col-md)
+        col-md-offset-2 = Column offset 2 of 12 (col-md)
+        col-md-offset-3 = Column offset 3 of 12 (col-md)
+        col-md-offset-4 = Column offset 4 of 12 (col-md)
+        col-md-offset-5 = Column offset 5 of 12 (col-md)
+        col-md-offset-6 = Column offset 6 of 12 (col-md)
+        col-md-offset-7 = Column offset 7 of 12 (col-md)
+        col-md-offset-8 = Column offset 8 of 12 (col-md)
+        col-md-offset-9 = Column offset 9 of 12 (col-md)
+        col-md-offset-10 = Column offset 10 of 12 (col-md)
+        col-md-offset-11 = Column offset 11 of 12 (col-md)
+    }
+}
+
 
 # Column definition for advanced columns
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition {
@@ -65,21 +86,27 @@ TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_xs < TCEFORM.tt
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_sm < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_lg < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_layout < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition
+TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_1_offset < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.offset_definition
 
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_2_md < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_2_xs < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_2_sm < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_2_lg < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_2_layout < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition
+TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_2_offset < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.offset_definition
+
 
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_3_md < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_3_xs < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_3_sm < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_3_lg < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_3_layout < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition
+TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_3_offset < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.offset_definition
+
 
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_4_md < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_4_xs < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_4_sm < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_4_lg < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.grid_definition
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_4_layout < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition
+TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.column_4_offset < TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.offset_definition

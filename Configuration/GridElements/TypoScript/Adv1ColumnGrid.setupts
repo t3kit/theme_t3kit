@@ -25,6 +25,9 @@ lib.gridelements {
                 50 < .10
                 50.field = flexform_column_1_layout
                 50.noTrimWrap = | |
+                60 < .10
+                60.field = flexform_column_1_offset
+                60.noTrimWrap = | |
                 stdWrap.noTrimWrap = |<div class="col1 |">|
             }
             renderObj >

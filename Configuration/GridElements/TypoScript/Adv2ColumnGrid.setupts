@@ -8,6 +8,7 @@ lib.gridelements {
             30.field = flexform_column_2_md
             40.field = flexform_column_2_lg
             50.field = flexform_column_2_layout
+            60.field = flexform_column_2_offset
             stdWrap.noTrimWrap = |<div class="col2|">|
         }
         cObject.file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv2ColumnGrid.html

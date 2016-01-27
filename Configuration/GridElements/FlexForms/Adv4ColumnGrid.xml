@@ -108,6 +108,21 @@
 									</config>
 							</TCEforms>
 					</column_1_layout>
+          <column_1_offset type="array">
+              <TCEforms type="array">
+                  <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_1_offset</label>
+                  <config type="array">
+                      <type>select</type>
+                      <items type="array">
+                        <numIndex index="0" type="array">
+                          <numIndex index="0">-</numIndex>
+                          <numIndex index="1"></numIndex>
+                        </numIndex>
+                      </items>
+                      <default></default>
+                  </config>
+              </TCEforms>
+          </column_1_offset>
 					<column_2_xs type="array">
 							<TCEforms type="array">
 									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_xs</label>
@@ -183,6 +198,21 @@
 									</config>
 							</TCEforms>
 					</column_2_layout>
+          <column_2_offset type="array">
+              <TCEforms type="array">
+                  <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_offset</label>
+                  <config type="array">
+                      <type>select</type>
+                      <items type="array">
+                        <numIndex index="0" type="array">
+                          <numIndex index="0">-</numIndex>
+                          <numIndex index="1"></numIndex>
+                        </numIndex>
+                      </items>
+                      <default></default>
+                  </config>
+              </TCEforms>
+          </column_2_offset>
 					<column_3_xs type="array">
 							<TCEforms type="array">
 									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_3_xs</label>
@@ -258,6 +288,21 @@
 									</config>
 							</TCEforms>
 					</column_3_layout>
+          <column_3_offset type="array">
+              <TCEforms type="array">
+                  <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_3_offset</label>
+                  <config type="array">
+                      <type>select</type>
+                      <items type="array">
+                        <numIndex index="0" type="array">
+                          <numIndex index="0">-</numIndex>
+                          <numIndex index="1"></numIndex>
+                        </numIndex>
+                      </items>
+                      <default></default>
+                  </config>
+              </TCEforms>
+          </column_3_offset>
 					<column_4_xs type="array">
 							<TCEforms type="array">
 									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_4_xs</label>
@@ -333,6 +378,21 @@
 									</config>
 							</TCEforms>
 					</column_4_layout>
+          <column_4_offset type="array">
+              <TCEforms type="array">
+                  <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_4_offset</label>
+                  <config type="array">
+                      <type>select</type>
+                      <items type="array">
+                        <numIndex index="0" type="array">
+                          <numIndex index="0">-</numIndex>
+                          <numIndex index="1"></numIndex>
+                        </numIndex>
+                      </items>
+                      <default></default>
+                  </config>
+              </TCEforms>
+          </column_4_offset>
 				</el>
 			</ROOT>
 		</columns>

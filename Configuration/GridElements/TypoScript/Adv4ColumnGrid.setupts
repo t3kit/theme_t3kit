@@ -8,6 +8,7 @@ lib.gridelements {
             30.field = flexform_column_2_md
             40.field = flexform_column_2_lg
             50.field = flexform_column_2_layout
+            60.field = flexform_column_2_offset
             stdWrap.noTrimWrap = |<div class="col2 |">|
         }
         columns.2 < .columns.0
@@ -17,6 +18,7 @@ lib.gridelements {
             30.field = flexform_column_3_md
             40.field = flexform_column_3_lg
             50.field = flexform_column_3_layout
+            60.field = flexform_column_3_offset
             stdWrap.noTrimWrap = |<div class="col3 |">|
         }
         columns.3 < .columns.0
@@ -26,6 +28,7 @@ lib.gridelements {
             30.field = flexform_column_4_md
             40.field = flexform_column_4_lg
             50.field = flexform_column_4_layout
+            60.field = flexform_column_4_offset
             stdWrap.noTrimWrap = |<div class="col4 |">|
         }
         cObject.file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv4ColumnGrid.html

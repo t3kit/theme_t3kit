@@ -123,6 +123,18 @@
             <trans-unit id="column_4_layout">
                 <source>Column 4 Layout</source>
             </trans-unit>
+            <trans-unit id="column_1_offset">
+                <source>Column 1 Offset</source>
+            </trans-unit>
+            <trans-unit id="column_2_offset">
+                <source>Column 2 Offset</source>
+            </trans-unit>
+            <trans-unit id="column_3_offset">
+                <source>Column 3 Offset</source>
+            </trans-unit>
+            <trans-unit id="column_4_offset">
+                <source>Column 4 Offset</source>
+            </trans-unit>
 
             <trans-unit id="container">
                 <source>Container wrapper</source>
