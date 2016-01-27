@@ -23,7 +23,25 @@ lib.gridelements {
             dataProcessing {
                 # "inherit" from lib.fluidContent
                 365 < lib.fluidContent.dataProcessing.365
+
+                # extend "wrapper" class mapping only for GridElements
+                365 {
+                    classMappings {
+                        11 = gridelements-example-wrapper-1
+                        12 = gridelements-example-wrapper-2
+                    }
+                }
+
+
                 1910 < lib.fluidContent.dataProcessing.1910
+
+                # extend "layout" class mapping only for GridElements
+                1910 {
+                    classMappings {
+                        11 = gridelements-example-layout-1
+                        12 = gridelements-example-layout-2
+                    }
+                }
             }
         }
     }

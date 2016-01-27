@@ -3,14 +3,32 @@
 TCEFORM.tt_content.layout {
     types {
         gridelements_pi1 {
-            # Remove default items.
-            removeItems = 1,2,3
-            # Example how to create new items.
             # Must also be added to xColumnGrid.setupts to make an affect
-            # addItems.40 = Example wrapper
+            addItems {
+                --div-- = Gridelements layouts:
+                # add value with index 0, to set it as a default, only for this element
+                11 = Gridelements example layout 1
+                12 = Gridelements example layout 2
+            }
         }
     }
 }
+
+# Add a wrapper to Gridelements
+# Items in "wrapper" select box will appear in all grid elements on the site.
+TCEFORM.tt_content.wrapper {
+   types {
+       gridelements_pi1 {
+           # Based on that the default items still exists.
+           addItems {
+                --div-- = Gridelements wrappers:
+                11 = Example Gridelements wrapper 1
+                12 = Example Gridelements wrapper 2
+           }
+       }
+   }
+}
+
 
 # Layout definitions for advanced columns
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition {

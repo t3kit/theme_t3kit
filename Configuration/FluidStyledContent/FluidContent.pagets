@@ -6,7 +6,7 @@
 #        table {
 #            # Based on that the default items still exists.
 #            addItems {
-#                10 = Example table wrapper 1
+#                100 = Example table wrapper
 #            }
 #        }
 #    }
@@ -18,7 +18,7 @@
 TCEFORM.tt_content.wrapper {
    # Based on that the default items still exists.
    addItems {
-       100 = Example generic wrapper 1
+       100 = Example generic wrapper
    }
 }
 
