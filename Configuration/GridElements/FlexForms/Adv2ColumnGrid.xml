@@ -74,7 +74,7 @@
 													<numIndex index="1"></numIndex>
 												</numIndex>
 											</items>
-											<default>6</default>
+											<default>col-md-6</default>
 									</config>
 							</TCEforms>
 					</column_1_md>
@@ -173,7 +173,7 @@
 													<numIndex index="1"></numIndex>
 												</numIndex>
 											</items>
-											<default>6</default>
+											<default>col-md-6</default>
 									</config>
 							</TCEforms>
 					</column_2_md>
