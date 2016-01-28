@@ -1,0 +1,4 @@
+plugin.tx_solr.templateFiles.searchMenuMain = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiSearch/searchMenuMain.html
+
+lib.menu.main.search = USER
+lib.menu.main.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchMenuMain->main
