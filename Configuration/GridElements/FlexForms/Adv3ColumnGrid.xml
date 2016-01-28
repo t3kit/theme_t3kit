@@ -123,6 +123,15 @@
                   </config>
               </TCEforms>
           </column_1_offset>
+          <column_1_class>
+            <TCEforms>
+              <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_1_class</label>
+              <config>
+                <type>input</type>
+                <size>15</size>
+              </config>
+            </TCEforms>
+          </column_1_class>
 					<column_2_xs type="array">
 							<TCEforms type="array">
 									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_xs</label>
@@ -213,6 +222,15 @@
                   </config>
               </TCEforms>
           </column_2_offset>
+          <column_2_class>
+            <TCEforms>
+              <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_2_class</label>
+              <config>
+                <type>input</type>
+                <size>15</size>
+              </config>
+            </TCEforms>
+          </column_2_class>
 					<column_3_xs type="array">
 							<TCEforms type="array">
 									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_3_xs</label>
@@ -303,6 +321,15 @@
                   </config>
               </TCEforms>
           </column_3_offset>
+          <column_3_class>
+            <TCEforms>
+              <label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_3_class</label>
+              <config>
+                <type>input</type>
+                <size>15</size>
+              </config>
+            </TCEforms>
+          </column_3_class>
 				</el>
 			</ROOT>
 		</columns>

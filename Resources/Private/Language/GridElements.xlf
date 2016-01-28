@@ -136,6 +136,21 @@
                 <source>Column 4 Offset</source>
             </trans-unit>
 
+
+            <trans-unit id="column_1_class">
+              <source>Column 1 Class</source>
+            </trans-unit>
+            <trans-unit id="column_2_class">
+              <source>Column 2 Class</source>
+            </trans-unit>
+            <trans-unit id="column_3_class">
+              <source>Column 3 Class</source>
+            </trans-unit>
+            <trans-unit id="column_4_class">
+              <source>Column 4 Class</source>
+            </trans-unit>
+
+
             <trans-unit id="container">
                 <source>Container wrapper</source>
             </trans-unit>

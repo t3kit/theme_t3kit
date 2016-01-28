@@ -123,6 +123,15 @@
 									</config>
 							</TCEforms>
 					</column_1_offset>
+					<column_1_class>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_1_class</label>
+							<config>
+								<type>input</type>
+								<size>15</size>
+							</config>
+						</TCEforms>
+					</column_1_class>
 				</el>
 			</ROOT>
 		</columns>
