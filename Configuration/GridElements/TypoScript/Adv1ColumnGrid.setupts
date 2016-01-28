@@ -11,17 +11,17 @@ lib.gridelements {
                 10 {
                     field = flexform_column_1_xs
                     required = 1
-                    noTrimWrap = | col-xs-||
+                    noTrimWrap = | |
                 }
                 20 < .10
                 20.field = flexform_column_1_sm
-                20.noTrimWrap = | col-sm-||
+                20.noTrimWrap = | |
                 30 < .10
                 30.field = flexform_column_1_md
-                30.noTrimWrap = | col-md-||
+                30.noTrimWrap = | |
                 40 < .10
                 40.field = flexform_column_1_lg
-                40.noTrimWrap = | col-lg-||
+                40.noTrimWrap = | |
                 50 < .10
                 50.field = flexform_column_1_layout
                 50.noTrimWrap = | |
