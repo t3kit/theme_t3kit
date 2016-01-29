@@ -29,3 +29,8 @@ themes.configuration.menu.breadcrumb.includeNotInMenu = 0
 # cat=menu,expert/menu_breadcrumb; type=string; label= Menu breadcrumb: Exclude uid list (12,13,...)
 themes.configuration.menu.breadcrumb.excludeUidList =
 
+# cat=menu,expert/menu_breadcrumb; type=string; label= Show breadcrumbs
+themes.configuration.menu.breadcrumb.showBreadcrumbs = 1
+
+# cat=menu,expert/menu_breadcrumb; type=string; label= Hide breadcrumbs in mobile
+themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile = 1
