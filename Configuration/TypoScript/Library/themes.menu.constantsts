@@ -17,6 +17,9 @@ themes.configuration.menu.sub.excludeUidList =
 # cat=menu,expert/menu_sub; type=options[0,1]; label= Menu sub: Include also items which are marked as 'include not in menu'
 themes.configuration.menu.sub.includeNotInMenu = 0
 
+# cat=menu,expert/menu_sub; type=options[0,1]; label= Left column with sub-navigation under content on mobile
+themes.configuration.menu.sub.underContentInMobile = 1
+
 
 
 

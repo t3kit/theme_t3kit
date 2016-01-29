@@ -13,7 +13,7 @@ mod.web_layout.BackendLayouts {
                             1 {
                                 name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_top
                                 rowspan = 1
-                                colspan = 1
+                                colspan = 5
                                 colPos = 3
                             }
                         }
