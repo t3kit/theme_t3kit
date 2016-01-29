@@ -38,8 +38,30 @@ plugin.tx_solr.solr.path = /solr/{$themes.configuration.siteName}_{$themes.langu
 #plugin.tx_solr.search.frequentSearches.select.ADD_WHERE =
 
 ## Test to add more filters
-#plugin.tx_solr.search.faceting.facets.keywords.field = keywords
-#plugin.tx_solr.search.faceting.facets.keywords.label = keywords
+plugin.tx_solr.search.faceting.facets.category.field = category_stringM
+plugin.tx_solr.search.faceting.facets.category.label = {LLL:EXT:lang/locallang_common.xlf:category}
+plugin.tx_solr.search.faceting.facets.category.label.insertData = 1
+
+plugin.tx_solr.search.faceting.facets.type {
+    renderingInstruction = CASE
+    renderingInstruction {
+        key.field = optionValue
+        # pages
+        pages = TEXT
+        pages.value = {LLL:EXT:lang/locallang_common.xlf:pages}
+        pages.insertData = 1
+        # tx_news
+        tx_news_domain_model_news = TEXT
+        tx_news_domain_model_news.value = {LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news}
+        tx_news_domain_model_news.insertData = 1
+    }
+}
+
+plugin.tx_solr.index.queue.pages.fields.category_stringM = SOLR_RELATION
+plugin.tx_solr.index.queue.pages.fields.category_stringM {
+    localField = categories
+    multiValue = 1
+}
 
 plugin.tx_solr {
     # Change solr templates to our custom
