@@ -2,7 +2,7 @@ lib.menu.main = HMENU
 lib.menu.main {
     entryLevel = 0
     includeNotInMenu = 0
-    excludeUidList = {$themes.configuration.header.main.menu.excludeUidList}
+    excludeUidList = {$themes.configuration.menu.main.excludeUidList}
     # wrap = <ul class="main-navigation__items-list js__main-navigation__items-list"> | </ul>
     1 = TMENU
     1 {
@@ -22,14 +22,14 @@ lib.menu.main {
         IFSUB < .NO
         IFSUB {
             wrapItemAndSub.insertData = 1
-            wrapItemAndSub = <li class="main-navigation__item js__main-navigation__item _sub uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__item js__main-navigation__item _sub uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__item js__main-navigation__item _sub uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            wrapItemAndSub = <li class="main-navigation__item js__main-navigation__item {$themes.configuration.menu.main.dropdown} uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__item js__main-navigation__item {$themes.configuration.menu.main.dropdown} uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__item js__main-navigation__item {$themes.configuration.menu.main.dropdown} uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
             ATagParams = class="main-navigation__item-link js__main-navigation__item-link"
             after = <a href="#" class="main-navigation__open-sub-menu-link js__main-navigation__open-sub-menu-link">Open</a>
         }
         ACTIFSUB < .ACT
         ACTIFSUB {
             wrapItemAndSub.insertData = 1
-            wrapItemAndSub = <li class="main-navigation__item js__main-navigation__item _sub _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__item js__main-navigation__item _sub _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__item js__main-navigation__item _sub _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            wrapItemAndSub = <li class="main-navigation__item js__main-navigation__item {$themes.configuration.menu.main.dropdown} _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__item js__main-navigation__item {$themes.configuration.menu.main.dropdown} _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__item js__main-navigation__item {$themes.configuration.menu.main.dropdown} _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
             ATagParams = class="main-navigation__item-link js__main-navigation__item-link"
             after = <a href="#" class="main-navigation__open-sub-menu-link js__main-navigation__open-sub-menu-link">Open</a>
         }

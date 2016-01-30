@@ -54,7 +54,7 @@ themes.configuration.css.concatenate = 1
 
 #Features
 #############################################
-# cat=theme,advanced/features/; type=options[0,1]; label= Enable solr search
+# cat=theme,expert/features/; type=options[0,1]; label= Enable solr search
 themes.configuration.features.enableSolr = 0
 
 # cat=theme,advanced/features/; type=int+; label= Search target page id
@@ -62,3 +62,13 @@ themes.configuration.features.searchTargetPage = 71
 
 # cat=theme,advanced/features/; type=int+; label= News default detail page id
 themes.configuration.features.newsDefaultDetailPid = 42
+
+
+
+# customsubcategory=contacts= Contacts
+
+# cat=theme,basic/contacts; type=string; label= Phone Number
+themes.configuration.contacts.phone = 555-555555
+
+# cat=theme,basic/contacts; type=string; label= E-Mail address
+themes.configuration.contacts.email = info@info.se

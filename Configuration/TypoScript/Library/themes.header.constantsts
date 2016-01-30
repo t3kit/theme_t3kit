@@ -4,34 +4,27 @@
 
 # customsubcategory=header_top=Header Top
 # customsubcategory=header_middle=Header Middle
-# customsubcategory=header_main_menu=Header Main Menu
 
 
 
 #Header Top
 #############################################
-# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top
 themes.configuration.elem.status.showHeaderTop = 1
 
-# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Contacts
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Contacts
 themes.configuration.elem.status.showHeaderTopContacts = 1
 
-# cat=header,basic/header_top; type=string; label= Header phonenumber
-themes.configuration.header.phone = 555-555555
-
-# cat=header,basic/header_top; type=string; label= Header E-Mailaddress
-themes.configuration.header.email = info@info.se
-
-# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top LangMenu
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangMenu
 themes.configuration.elem.status.showHeaderTopLangMenu = 1
 
-# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Search
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Search
 themes.configuration.elem.status.showHeaderTopSearch = 0
 
-# cat=header,basic/header_top; type=options[0,1]; label= Show Header Main Menu Search
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Main Menu Search
 themes.configuration.elem.status.showHeaderMainMenuSearch = 0
 
-# cat=header,basic/header_top; type=options[0,1]; label= Show Header Top Navigation
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Navigation
 themes.configuration.elem.status.showHeaderTopNavigation = 1
 
 # cat=header,advanced/header_top; type=int+; label= Header Top: Container pid where the menu items are located
@@ -41,10 +34,10 @@ themes.configuration.header.top.menu.containerPid = 6
 
 #Header Middle
 #############################################
-# cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle
+# cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle
 themes.configuration.elem.status.showHeaderMiddle = 1
 
-# cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle Logo
+# cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle Logo
 themes.configuration.elem.status.showHeaderMiddleLogo = 1
 
 
@@ -56,13 +49,5 @@ themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/fe
 
 
 # Social Icons
-# cat=header,basic/header_middle; type=options[0,1]; label= Show Header Middle SocIcons
+# cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle SocIcons
 themes.configuration.elem.status.showHeaderMiddleSocIcons = 1
-
-
-
-# Navigation
-#############################################
-
-# cat=menu,expert/header_main_menu; type=string; label= Header Menu: Exclude uid list (12,13,...)
-themes.configuration.header.main.menu.excludeUidList =

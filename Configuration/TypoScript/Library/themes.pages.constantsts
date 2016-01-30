@@ -1,17 +1,4 @@
+# customsubcategory=pages= Pages
 
-# # #customcategory=pages=Theme: Page settings
-
-# cat=pages,advanced//; type=int+; label= Startsite page uid
+# cat=pages,expert/pages; type=int+; label= Startsite page uid
 themes.configuration.pages.startsite = 1
-
-# # cat=pages,advanced//; type=int+; label= Page with the sitemap
-# themes.configuration.pages.sitemap = 0
-
-# # cat=pages,advanced//; type=int+; label= Search page
-# themes.configuration.pages.search = 0
-
-# # cat=pages,advanced//; type=int+; label= Login page
-# themes.configuration.pages.login = 0
-
-# # cat=pages,advanced//; type=int+; label= Logout page
-# themes.configuration.pages.logout = 0

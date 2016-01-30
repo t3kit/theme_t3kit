@@ -3,21 +3,33 @@
 #############################################
 
 # #customcategory=menu=Theme: Menu
+# customsubcategory=main_menu= Main Menu
 # customsubcategory=menu_sub= Sub Menu
 # customsubcategory=menu_breadcrumb= Breadcrumbs
 
 
 
 
-# Menu sub
+# Main Navigation
 #############################################
-# cat=menu,expert/menu_sub; type=string; label= Menu sub: Exclude uid list (12,13,...)
+
+# cat=menu,advanced/main_menu; type=string; label= Main Menu: Exclude uid list (12,13,...)
+themes.configuration.menu.main.excludeUidList =
+
+# cat=menu,advanced/main_menu; type=options[Main Menu Dropdown=_sub, Disable Main Menu Dropdown=no-dropdown]; label= Enable/Disable Main Menu Dropdown
+themes.configuration.menu.main.dropdown = _sub
+
+
+
+# Sub Menu
+#############################################
+# cat=menu,advanced/menu_sub; type=string; label= Menu sub: Exclude uid list (12,13,...)
 themes.configuration.menu.sub.excludeUidList =
 
-# cat=menu,expert/menu_sub; type=options[0,1]; label= Menu sub: Include also items which are marked as 'include not in menu'
+# cat=menu,advanced/menu_sub; type=options[0,1]; label= Menu sub: Include also items which are marked as 'include not in menu'
 themes.configuration.menu.sub.includeNotInMenu = 0
 
-# cat=menu,expert/menu_sub; type=options[0,1]; label= Left column with sub-navigation under content on mobile
+# cat=menu,advanced/menu_sub; type=options[0,1]; label= Left column with sub-navigation under content on mobile
 themes.configuration.menu.sub.underContentInMobile = 1
 
 
@@ -26,14 +38,14 @@ themes.configuration.menu.sub.underContentInMobile = 1
 
 # Menu breadcrumb
 #############################################
-# cat=menu,expert/menu_breadcrumb; type=options[0,1]; label= Menu breadcrumb: Include also items which are marked as 'include not in menu'
+# cat=menu,advanced/menu_breadcrumb; type=options[0,1]; label= Menu breadcrumb: Include also items which are marked as 'include not in menu'
 themes.configuration.menu.breadcrumb.includeNotInMenu = 0
 
-# cat=menu,expert/menu_breadcrumb; type=string; label= Menu breadcrumb: Exclude uid list (12,13,...)
+# cat=menu,advanced/menu_breadcrumb; type=string; label= Menu breadcrumb: Exclude uid list (12,13,...)
 themes.configuration.menu.breadcrumb.excludeUidList =
 
-# cat=menu,expert/menu_breadcrumb; type=string; label= Show breadcrumbs
+# cat=menu,advanced/menu_breadcrumb; type=string; label= Show breadcrumbs
 themes.configuration.menu.breadcrumb.showBreadcrumbs = 1
 
-# cat=menu,expert/menu_breadcrumb; type=string; label= Hide breadcrumbs in mobile
+# cat=menu,advanced/menu_breadcrumb; type=string; label= Hide breadcrumbs in mobile
 themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile = 1
