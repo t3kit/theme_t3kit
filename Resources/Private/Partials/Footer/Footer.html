@@ -7,23 +7,29 @@
 
 
 <footer class="footer" role="contentinfo">
+
+	<!-- theme_t3kit: Footer Row 1 (About Us/Map/Contacts) [begin] -->
 	<div class="footer__container container">
 		<div class="row">
 			<div class="col-md-6 footer__about">
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.contentUid')}">
-					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.contentUid')}" />
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.1.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.1.contentUid')}" />
 				</f:if>
 			</div>
 			<div class="col-md-6 footer__contact">
-				<h4>Contact us</h4>
+				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.2.contentUid')}">
+					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.2.contentUid')}" />
+				</f:if>
 				<div class="row">
 					<div class=" col-xs-4 col-md-4 ">
-						<p>Company AB <br>Street 8 <br>zipcode city, <br>country</p>
+						<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.3.contentUid')}">
+							<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.3.contentUid')}" />
+						</f:if>
 					</div>
 					<div class="col-xs-2 col-md-2 ">
-						<div class="footer__map">
-							<a class="footer__map-icon icons icon-t3-map" href="#"></a>
-						</div>
+						<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.1.4.contentUid')}">
+							<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.1.4.contentUid')}" />
+						</f:if>
 					</div>
 					<div class="col-xs-12 col-md-6">
 						<ul class="nav contact-links" >
@@ -35,39 +41,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<div class="row ">
-			<div class="col-md-6 footer__quick-links">
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.1.contentUid')}">
-					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.1.contentUid')}" />
-				</f:if>
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}">
-				<div class="row">
-					<div class="col-md-6">
-				</f:if>
+	<!-- theme_t3kit: Footer Row 1 (About Us/Map/Contacts) [end] -->
 
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.2.contentUid')}">
-					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.2.contentUid')}" />
-				</f:if>
+	<!-- theme_t3kit: Footer Row 2 (Quick Links/Subscribe to newsletter) [begin] -->
+	<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.contentUid')}">
+		<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.contentUid')}" />
+	</f:if>
+	<!-- theme_t3kit: Footer Row 2 (Quick Links/Subscribe to newsletter) [end] -->
 
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}">
-					</div>
-				</f:if>
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}">
-					<div class="col-md-6">
-						<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.2.3.contentUid')}" />
-					</div>
-				</div>
-				</f:if>
-			</div>
-			<div class="col-md-6 footer__subscribe">
-				<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}">
-					<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}" />
-				</f:if>
-			</div>
-		</div>
-	</div>
 	<f:render partial="Footer/Socialmedia" section="Default" />
+
+	<!-- theme_t3kit: Footer Row 3 (Copyright/Footer Bottom Menu) [begin] -->
 	<div class="footer__bottom">
 		<div class="container">
 			<div class="row">
@@ -75,13 +59,15 @@
 					<f:cObject typoscriptObjectPath="lib.footer.copyright" />
 				</div>
 				<div class="col-md-5 footer__bottom-nav">
-					<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.4.contentUid')}">
-						<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.4.contentUid')}" />
+					<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}">
+						<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.3.contentUid')}" />
 					</f:if>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- theme_t3kit: Footer Row 3 (Copyright/Footer Bottom Menu) [end] -->
+
 </footer>
 
 <!-- theme_t3kit: Partials/Footer/Footer.html [end] -->
