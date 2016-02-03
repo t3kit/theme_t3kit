@@ -57,6 +57,9 @@ themes.configuration.css.concatenate = 1
 # cat=theme,expert/features/; type=options[0,1]; label= Enable solr search
 themes.configuration.features.enableSolr = 0
 
+# cat=theme,expert/features/; type=string; label= Base solr core name (no spaces): Will be combined with language ISO code in solr path
+themes.configuration.features.solrBaseCoreName = t3kit
+
 # cat=theme,advanced/features/; type=int+; label= Search target page id
 themes.configuration.features.searchTargetPage = 71
 

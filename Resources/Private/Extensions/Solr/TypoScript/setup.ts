@@ -14,7 +14,7 @@ plugin.tx_solr.search.results.resultsHighlighting = 1
 plugin.tx_solr.search.results.resultsHighlighting.wrap = <mark>|</mark>
 plugin.tx_solr.search.sorting = 1
 plugin.tx_solr.search.targetPage = {$themes.configuration.features.searchTargetPage}
-plugin.tx_solr.solr.path = /solr/{$themes.configuration.siteName}_{$themes.languages.default.isoCode}/
+plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.default.isoCode}/
 
 ## TEST
 #plugin.tx_solr.general.dateFormat.date =
@@ -82,7 +82,7 @@ plugin.tx_solr {
 
 # Change solr core if language other than default
 [globalVar = GP:L > 0]
-    plugin.tx_solr.solr.path = /solr/{$themes.configuration.siteName}_{$themes.languages.current.isoCode}/
+    plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCode}/
 [global]
 
 
