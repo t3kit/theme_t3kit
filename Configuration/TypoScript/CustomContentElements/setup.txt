@@ -1,0 +1,14 @@
+# Add our Optional Custom Fluid Styled Content
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TypoScript" extensions="setupts">
+
+lib.fluidContent {
+    templateRootPaths {
+        1912 =  fileadmin/templates/theme_t3kit/custom_content_elements/Resources/Private/Templates/CustomContentElements
+    }
+    partialRootPaths {
+        1912 =  fileadmin/templates/theme_t3kit/custom_content_elements/Resources/Private/Partials/CustomContentElements
+    }
+    layoutRootPaths {
+        1912 =  fileadmin/templates/theme_t3kit/custom_content_elements/Resources/Private/Layouts/CustomContentElements
+    }
+}

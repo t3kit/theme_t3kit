@@ -1,0 +1,2 @@
+# Add our Optional Custom Fluid Styled Content
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TypoScript" extensions="constantsts">
