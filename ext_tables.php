@@ -58,8 +58,14 @@ if (TYPO3_MODE === 'BE') {
         'Configuration/TypoScript/CustomContentElements/',
         'EXT:theme_t3kit :: Enable Custom Content Elemets'
     );
-}
+    // Add context sensitive help (csh) for the haiku table
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
+        'tt_content',
+        'EXT:theme_t3kit/Resources/Private/Language/locallang_csh_tt_content.xml'
+    );
+    // Include ext_tables from 'custom_content_elements'
+    if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php')) {
+        require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php');
+    }
 
-if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php')) {
-    require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php');
 }

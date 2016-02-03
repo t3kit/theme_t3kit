@@ -33,3 +33,21 @@ TCEFORM.tt_content.layout {
         100 = Example generic layout for all content
     }
 }
+
+# Add a generic 'margin-top' wrapper (all content based on lib.fluidContent)
+# Example to add a wrapper item for all content types
+TCEFORM.tt_content.wrapper_margin_top {
+   # Based on that the default items still exists.
+   addItems {
+       100 = Example margin top wrapper
+   }
+}
+
+# Add a generic 'margin-bottom' wrapper (all content based on lib.fluidContent)
+# Example to add a wrapper item for all content types
+TCEFORM.tt_content.wrapper_margin_bottom {
+   # Based on that the default items still exists.
+   addItems {
+       100 = Example margin bottom wrapper
+   }
+}

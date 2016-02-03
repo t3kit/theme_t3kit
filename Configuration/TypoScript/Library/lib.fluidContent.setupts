@@ -15,6 +15,34 @@ lib.fluidContent {
                 100 = example-generic-wrapper
             }
         }
+        # will add variable wrapperClass to FLUIDTEMPLATE to set a "margin-top" class
+        # used in "overridden" fluid_styled_content layouts: (appended in class)
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
+        375 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+        375 {
+            fieldName = wrapper_margin_top
+            as = wrapperMarginTopClass
+            classMappings {
+                # 0 =
+                100 = example-margin-top-class
+            }
+        }
+        # will add variable wrapperClass to FLUIDTEMPLATE to set a "margin-bottom" class
+        # used in "overridden" fluid_styled_content layouts: (appended in class)
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
+        385 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+        385 {
+            fieldName = wrapper_margin_bottom
+            as = wrapperMarginBottomClass
+            classMappings {
+                # 0 =
+                100 = example-margin-bottom-class
+            }
+        }
         # will add variable layoutClass to FLUIDTEMPLATE
         # can be overriden in the actual elements ts setup
         # only affective if variable is used in the fluid template file.

@@ -7,6 +7,11 @@ call_user_func(function() {
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
     $cmsLanguageFilePrefix = 'LLL:EXT:cms/locallang_ttc.xlf:';
 
+    // Include tt_content overrides from "custom_content_elenent"
+    if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php')) {
+        require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php');
+    }
+
     //
     // CTypes
     //
@@ -329,8 +334,32 @@ call_user_func(function() {
                 'default' => 0
             ]
         ],
+        'wrapper_margin_top' => [
+            'exclude' => true,
+            'label' => $contentElementLanguageFilePrefix . 'tt_content.wrapper_margin_top',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [$contentElementLanguageFilePrefix . 'label.default', 0]
+                ],
+                'default' => 0
+            ]
+        ],
+        'wrapper_margin_bottom' => [
+            'exclude' => true,
+            'label' => $contentElementLanguageFilePrefix . 'tt_content.wrapper_margin_bottom',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [$contentElementLanguageFilePrefix . 'label.default', 0]
+                ],
+                'default' => 0
+            ]
+        ],
     ];
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'wrapper', '', 'after:layout');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'wrapper, wrapper_margin_top, wrapper_margin_bottom', '', 'after:layout');
 });

@@ -177,7 +177,16 @@
             </trans-unit>
 
             <trans-unit id="tt_content.wrapper">
-                <source>Wrapper</source>
+                <source>Appearance</source>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper.description">
+                <source>Select appearance of content element (if available)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper_margin_top">
+                <source>Margin top</source>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper_margin_bottom">
+                <source>Margin bottom</source>
             </trans-unit>
             <trans-unit id="label.default">
                 <source>Default</source>
