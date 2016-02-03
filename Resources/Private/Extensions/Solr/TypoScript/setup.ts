@@ -73,10 +73,26 @@ plugin.tx_solr {
     }
     cssFiles {
         # Disable solr default css
-        #results = EXT:solr/Resources/Css/PiResults/results.css
+        # results = EXT:solr/Resources/Css/PiResults/results.css
         results >
-        ui      = EXT:solr/Resources/Css/JQueryUi/jquery-ui.custom.css
-        #ui >
+        # ui      = EXT:solr/Resources/Css/JQueryUi/jquery-ui.custom.css
+        ui >
+    }
+
+    javascriptFiles {
+        # Disable solr default js
+        library >
+        ui >
+        ui.autocomplete >
+        suggest >
+        ui.datepicker >
+        ui.datepicker.de >
+        ui.datepicker.fr >
+        ui.datepicker.nl >
+        ui.slider >
+        faceting.limitExpansion >
+        faceting.dateRangeHelper >
+        faceting.numericRangeHelper >
     }
 }
 
@@ -95,4 +111,3 @@ plugin.tx_solr {
     lib.searchbox < plugin.tx_solr_PiSearch_Search
 
 [global]
-

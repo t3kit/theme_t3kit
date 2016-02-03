@@ -10,13 +10,13 @@
 <!-- ###SOLR_SEARCH### begin -->
 <div id="tx-solr-search-functions">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <!-- ###SOLR_SEARCH_FORM### begin -->
             <div class="tx-solr-search-form">
                 ###FORM.SUGGEST_URL###
                 <form id="tx-solr-search-form-pi-results" action="###FORM.ACTION###" method="get" accept-charset="###FORM.ACCEPT-CHARSET###" class="form-inline">
                     <div class="form-group">
-                        <input type="text" class="tx-solr-q form-control" name="q" value="###FORM.Q###" />
+                        <input type="text" class="tx-solr-q form-control" name="q" value="###FORM.Q###" data-search="searchSuggest" />
                         <input type="hidden" name="id" value="###FORM.ACTION_ID###" />
                         <input type="hidden" name="###FORM.ACTION_LANGUAGE_PARAMETER###" value="###FORM.ACTION_LANGUAGE###" />
                         <input type="submit" class="tx-solr-submit form-control" value="###LLL:submit###" />
@@ -105,7 +105,7 @@
             </div>
             <!-- ###SOLR_SEARCH_NO_RESULTS### end -->
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <!-- ###SOLR_SEARCH_SORTING### begin -->
             <h4>###LLL:sorting_sortBy###</h4>
