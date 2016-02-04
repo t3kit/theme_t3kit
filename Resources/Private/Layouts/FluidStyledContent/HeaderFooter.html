@@ -1,5 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<div id="c{data.uid}" class="{f:if(condition: '{wrapperClass}', then: ' {wrapperClass}', else: '')}{f:if(condition: '{wrapperMarginTopClass}', then: ' {wrapperMarginTopClass}', else: '')}{f:if(condition: '{wrapperMarginBottomClass}', then: ' {wrapperMarginBottomClass}', else: '')}">
+<div id="c{data.uid}" <f:render partial="WrapperClasses" arguments="{_all}" />>
 	<f:render partial="Header" arguments="{_all}" />
 	<f:render partial="Footer" arguments="{_all}" />
 </div>
