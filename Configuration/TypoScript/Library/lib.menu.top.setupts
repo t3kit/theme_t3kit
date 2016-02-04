@@ -8,6 +8,11 @@ lib.menu.top.1 {
     NO = 1
     NO.wrapItemAndSub.insertData = 1
     NO.wrapItemAndSub = <li class="uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+    # Add icon class if set on page
+    NO.stdWrap.wrap.field = tx_themes_icon
+    NO.stdWrap.wrap.required = 1
+    NO.stdWrap.wrap.dataWrap = <span class="icons icon-|"></span>
+    NO.stdWrap.innerWrap.noTrimWrap = |&nbsp;||
     ACT < .NO
     ACT.wrapItemAndSub.insertData = 1
     ACT.wrapItemAndSub = <li class="_active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="_active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="_active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
