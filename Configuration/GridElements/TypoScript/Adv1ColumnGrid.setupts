@@ -59,6 +59,8 @@ lib.gridelements {
                 }
                 # "inherit" from lib.fluidContent
                 365 < lib.fluidContent.dataProcessing.365
+                375 < lib.fluidContent.dataProcessing.375
+                385 < lib.fluidContent.dataProcessing.385
 
                 # extend "wrapper" class mapping only for GridElements
                 365 {
