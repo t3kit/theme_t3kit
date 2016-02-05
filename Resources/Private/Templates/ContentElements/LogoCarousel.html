@@ -5,7 +5,7 @@
 	<f:section name="content">
 	<!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [begin] -->
 	<f:if condition="{logos}">
-		<div class="logo-carousel swiper-container js__logo-carousel {layoutClass}">
+		<div class="logo-carousel swiper-container js__logo-carousel">
 			<div class="swiper-wrapper logo-carousel__wrp">
 				<f:for each="{logos}" as="logo">
 					<div class="swiper-slide logo-carousel__slide">
@@ -42,4 +42,3 @@
 	<img  data-src="<f:uri.image src="{logoUid}" maxWidth="{maxWidth}" maxHeight="{maxHeight}" treatIdAsReference="1" />" class="swiper-lazy img-responsive logo-carousel__img">
 	<div class="swiper-lazy-preloader"></div>
 </f:section>
-
