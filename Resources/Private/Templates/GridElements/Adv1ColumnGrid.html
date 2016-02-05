@@ -2,13 +2,31 @@
 
 <f:section name="content">
 	<f:comment><!-- ### Content ### --></f:comment>
-	<f:comment><!-- ### if container is set add row start tag ### --></f:comment>
+
+	<f:comment><!-- ### if container||columns is set add row start tag ### --></f:comment>
 	<f:if condition="{data.flexform_container}">
-	<div class="row">
+		<f:then>
+			<div class="row">
+		</f:then>
+		<f:else>
+			<f:if condition="{data.flexform_column_1_sm}{data.flexform_column_1_md}{data.flexform_column_1_lg}">
+				<div class="row">
+			</f:if>
+		</f:else>
 	</f:if>
+
 		<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
-	<f:comment><!-- ### if container is set add row end tag ### --></f:comment>
+
+	<f:comment><!-- ### if container||columns is set add row end tag ### --></f:comment>
 	<f:if condition="{data.flexform_container}">
-	</div>
+		<f:then>
+			</div>
+		</f:then>
+		<f:else>
+			<f:if condition="{data.flexform_column_1_sm}{data.flexform_column_1_md}{data.flexform_column_1_lg}">
+				</div>
+			</f:if>
+		</f:else>
 	</f:if>
+
 </f:section>

@@ -1,17 +1,17 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:comment><!-- ### Wrapper class start if set ### --></f:comment>
-<f:if condition="{wrapperClass}">
-<div class="{wrapperClass}">
+<f:comment><!-- ### Wrapper class||Margin Top||Margin Bottom start if set ### --></f:comment>
+<f:if condition="{wrapperClass}{wrapperMarginTopClass}{wrapperMarginBottomClass}">
+<div class="{wrapperClass} {wrapperMarginTopClass} {wrapperMarginBottomClass}">
 </f:if>
 
 <f:comment><!-- ### Background image if set else div with content id and class ### --></f:comment>
 <f:if condition="{files.0}">
 	<f:then>
-<div id="c{data.uid}" class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {layoutClass} {wrapperClass} {wrapperMarginTopClass} {wrapperMarginBottomClass} col-bg-img', else: '{layoutClass} {wrapperClass} {wrapperMarginTopClass} {wrapperMarginBottomClass} col-bg-img')}" style="background-image: url('{f:uri.image(image : '{files.0}')}')">
+		<div id="c{data.uid}" class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {layoutClass} col-bg-img', else: '{layoutClass} col-bg-img')}" style="background-image: url('{f:uri.image(image : '{files.0}')}')">
 	</f:then>
 	<f:else>
-<div id="c{data.uid}" class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {layoutClass} {wrapperClass} {wrapperMarginTopClass} {wrapperMarginBottomClass}', else: '{layoutClass} {wrapperClass} {wrapperMarginTopClass} {wrapperMarginBottomClass}')}">
+		<div id="c{data.uid}" class="{f:if( condition: data.flexform_container, then: '{data.flexform_container} {layoutClass}', else: '{layoutClass}')}">
 	</f:else>
 </f:if>
 	<f:render partial="Header" arguments="{_all}" />
@@ -19,8 +19,8 @@
 	<f:render partial="Footer" arguments="{_all}" />
 </div>
 
-<f:comment><!-- ### Wrapper class end if set ### --></f:comment>
-<f:if condition="{wrapperClass}">
+<f:comment><!-- ### Wrapper class||Margin Top||Margin Bottom end if set ### --></f:comment>
+<f:if condition="{wrapperClass}{wrapperMarginTopClass}{wrapperMarginBottomClass}">
 </div>
 </f:if>
 
