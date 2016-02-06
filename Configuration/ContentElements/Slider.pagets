@@ -9,7 +9,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             }
         }
     }
-    show := addToList(slider)
+    show := addToList(contentElementSlider)
 }
 
 # # Use layout field to customize Layout select-box on contentElementSlider

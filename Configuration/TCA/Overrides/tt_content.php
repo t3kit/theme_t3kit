@@ -198,7 +198,7 @@ call_user_func(function() {
         '
     ];
 
-    // "contentElementSlider"
+    // "iconTextButton"
     $GLOBALS['TCA']['tt_content']['types']['iconTextButton'] = [
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
