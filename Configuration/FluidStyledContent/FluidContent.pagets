@@ -39,7 +39,16 @@ TCEFORM.tt_content.layout {
 TCEFORM.tt_content.wrapper_margin_top {
    # Based on that the default items still exists.
    addItems {
-       100 = Example margin top wrapper
+       101 = 5
+       102 = 10
+       103 = 15
+       104 = 20
+       105 = 25
+       106 = 30
+       107 = 40
+       108 = 50
+       109 = 60
+       110 = 70
    }
 }
 
@@ -48,6 +57,15 @@ TCEFORM.tt_content.wrapper_margin_top {
 TCEFORM.tt_content.wrapper_margin_bottom {
    # Based on that the default items still exists.
    addItems {
-       100 = Example margin bottom wrapper
+       101 = 5
+       102 = 10
+       103 = 15
+       104 = 20
+       105 = 25
+       106 = 30
+       107 = 40
+       108 = 50
+       109 = 60
+       110 = 70
    }
 }

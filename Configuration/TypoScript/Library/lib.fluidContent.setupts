@@ -26,7 +26,16 @@ lib.fluidContent {
             as = wrapperMarginTopClass
             classMappings {
                 # 0 =
-                100 = example-margin-top-class
+                101 = margin-top-5
+                102 = margin-top-10
+                103 = margin-top-15
+                104 = margin-top-20
+                105 = margin-top-25
+                106 = margin-top-30
+                107 = margin-top-40
+                108 = margin-top-50
+                109 = margin-top-60
+                110 = margin-top-70
             }
         }
         # will add variable wrapperClass to FLUIDTEMPLATE to set a "margin-bottom" class
@@ -40,7 +49,16 @@ lib.fluidContent {
             as = wrapperMarginBottomClass
             classMappings {
                 # 0 =
-                100 = example-margin-bottom-class
+                101 = margin-bottom-5
+                102 = margin-bottom-10
+                103 = margin-bottom-15
+                104 = margin-bottom-20
+                105 = margin-bottom-25
+                106 = margin-bottom-30
+                107 = margin-bottom-40
+                108 = margin-bottom-50
+                109 = margin-bottom-60
+                110 = margin-bottom-70
             }
         }
         # will add variable layoutClass to FLUIDTEMPLATE
