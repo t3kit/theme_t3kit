@@ -1,6 +1,6 @@
 {namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
 
-<f:layout name="HeaderContentFooter" />
+<f:layout name="CustomLayoutClass" />
 
 <f:debug>{_all}</f:debug>
 
@@ -8,7 +8,7 @@
 <!-- theme_t3kit: Templates/ContentElements/Tabs.html [begin] -->
 	<f:if condition="{data.records}">
 		<div class="tabs">
-			<ul class="nav nav-tabs" role="tablist">
+			<ul class="{layoutClass}" role="tablist">
 				<f:for each="{xtools:get.records(recordList : data.records)}" as="tab" iteration="tabsIteration">
 					<li class="{f:if(condition: tabsIteration.isFirst, then: 'active', else: '')}">
 						<a href="#tab-{data.uid}-{tab.uid}" data-toggle="tab" role="tab">{tab.header}</a>
