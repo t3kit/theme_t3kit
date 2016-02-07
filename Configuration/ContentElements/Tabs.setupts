@@ -18,6 +18,7 @@ tt_content {
             # extend layout class mapping only for this element
             1910 {
                 classMappings {
+                    # Override the standard default
                     0 = nav nav-tabs
                     11 = nav nav-pills
                 }

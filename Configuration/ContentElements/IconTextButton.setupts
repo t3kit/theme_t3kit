@@ -17,6 +17,7 @@ tt_content {
             # extend class mapping only for this element
             # 1910 {
                 # classMappings {
+                    # # Override the standard default
                     # 0 = default-class
                     # 11 = example-class
                 # }

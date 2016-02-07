@@ -31,3 +31,10 @@
 
 # Extensions
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/PageTS/tsconfig.txt">
+
+
+# ==================================================
+# Custom Content Elements (fileadmin/templates/...)
+# ==================================================
+# Add our Optional Custom Conent Elements tsconfig files
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/PageTS" extensions="pagets">
