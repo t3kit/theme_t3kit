@@ -38,3 +38,11 @@
 # ==================================================
 # Add our Optional Custom Conent Elements tsconfig files
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/PageTS" extensions="pagets">
+
+
+
+# ==================================================
+# Hide "Button Group" element.
+# Added by Themes extension
+# ==================================================
+mod.wizards.newContentElement.wizardItems.forms.elements.buttonContent >
