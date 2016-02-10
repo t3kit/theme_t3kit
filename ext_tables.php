@@ -58,19 +58,19 @@ if (TYPO3_MODE === 'BE') {
     /***************
      * Custom content elements
      */
+    # PageTS custom content elements
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        $_EXTKEY,
+        'Configuration/PageTS/custom_content_elements.txt',
+        'EXT:theme_t3kit :: Enable Custom Content Elemets (fileadmin/templates/...)'
+    );
+    # Static files for custom content elements
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $_EXTKEY,
+        'Configuration/TypoScript/CustomContentElements/',
+        'EXT:theme_t3kit :: Enable Custom Content Elemets (fileadmin/templates/...)'
+    );
 
-    // # PageTS custom content elements
-    // \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    //     $_EXTKEY,
-    //     'Configuration/PageTS/',
-    //     'EXT:theme_t3kit :: Enable Custom Content Elemets'
-    // );
-    // # Static files for custom content elements
-    // \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    //     $_EXTKEY,
-    //     'Configuration/TypoScript/CustomContentElements/',
-    //     'EXT:theme_t3kit :: Enable Custom Content Elemets'
-    // );
     // Include ext_tables from 'custom_content_elements'
     if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php')) {
         require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php');

@@ -8,10 +8,3 @@ themes.languages.default.isoCode = en_GB
 # Extensions
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/constants.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/constants.ts">
-
-
-# ==================================================
-# Custom Content Elements (fileadmin/templates/...)
-# ==================================================
-# Add our Optional Custom Fluid Styled Content
-<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TypoScript" extensions="constantsts">

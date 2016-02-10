@@ -37,24 +37,3 @@ lib.fluidContent {
     plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = 42
     # {$themes.configuration.features.newsDefaultDetailPid}
 [global]
-
-
-
-# ==================================================
-# Custom Content Elements (fileadmin/templates/...)
-# ==================================================
-# Add our Optional Custom Fluid Styled Content
-<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TypoScript" extensions="setupts">
-
-# Add "fileadmin" rootPaths to lib.fluidcontent (fluid_styled_content) for Custom Content Elements
-lib.fluidContent {
-    templateRootPaths {
-        1912 =  fileadmin/templates/theme_t3kit/custom_content_elements/Resources/Private/Templates/CustomContentElements
-    }
-    partialRootPaths {
-        1912 =  fileadmin/templates/theme_t3kit/custom_content_elements/Resources/Private/Partials/CustomContentElements
-    }
-    layoutRootPaths {
-        1912 =  fileadmin/templates/theme_t3kit/custom_content_elements/Resources/Private/Layouts/CustomContentElements
-    }
-}
