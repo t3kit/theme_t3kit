@@ -1,6 +1,5 @@
 # Add a wrapper by type, in this case table (all content based on lib.fluidContent)
 # Example to add a wrapper item for content type table
-
 #TCEFORM.tt_content.wrapper {
 #    types {
 #        table {
@@ -13,19 +12,21 @@
 #}
 
 
-# Add a generic wrapper (all content based on lib.fluidContent)
+# Use wrapper field to customize Wrapper select-box on tt_content
+# Add a generic wrapper title (all content based on lib.fluidContent)
 # Example to add a wrapper item for all content types
 TCEFORM.tt_content.wrapper {
    # Based on that the default items still exists.
    addItems {
+       # add more wrappers. Interval from 100 to 999
        100 = Example generic wrapper
    }
 }
 
 
 # Use layout field to customize Layout select-box on tt_content
-# First remove default items 1 to 3 and set label
-# For all content elements based on lib.fluidContent
+# Add a generic layout title (all content based on lib.fluidContent)
+# Example to add a layout item for all content types
 TCEFORM.tt_content.layout {
     removeItems = 1,2,3
     addItems {
@@ -35,7 +36,6 @@ TCEFORM.tt_content.layout {
 }
 
 # Add a generic 'margin-top' wrapper (all content based on lib.fluidContent)
-# Example to add a wrapper item for all content types
 TCEFORM.tt_content.wrapper_margin_top {
    # Based on that the default items still exists.
    addItems {
@@ -53,7 +53,6 @@ TCEFORM.tt_content.wrapper_margin_top {
 }
 
 # Add a generic 'margin-bottom' wrapper (all content based on lib.fluidContent)
-# Example to add a wrapper item for all content types
 TCEFORM.tt_content.wrapper_margin_bottom {
    # Based on that the default items still exists.
    addItems {

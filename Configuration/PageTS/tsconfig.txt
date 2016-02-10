@@ -38,3 +38,7 @@
 # Added by Themes extension
 # ==================================================
 mod.wizards.newContentElement.wizardItems.forms.elements.buttonContent >
+
+
+# Include  PageTS files from fileadmin/templates/Configuration/PageTS
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/PageTS" extensions="pagets">

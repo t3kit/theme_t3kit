@@ -37,3 +37,7 @@ lib.fluidContent {
     plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = 42
     # {$themes.configuration.features.newsDefaultDetailPid}
 [global]
+
+
+# Include setupTS files from fileadmin/templates/Configuration/TypoScript
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/TypoScript/" extensions="setupts">
