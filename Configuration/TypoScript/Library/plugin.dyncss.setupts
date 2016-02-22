@@ -1,310 +1,310 @@
-[globalString = LIT:{$themes.configuration.less.var.mainColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        main-color = TEXT
-        main-color.value = {$themes.configuration.less.var.mainColor}
+plugin.tx_dyncss.overrides {
+    main-color = TEXT
+    main-color {
+        value = {$themes.configuration.less.var.mainColor}
+        if.isTrue = {$themes.configuration.less.var.mainColor}
     }
-[global]
-
-# Body
-[globalString = LIT:{$themes.configuration.less.var.mainBodyBg} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        main-body-bg = TEXT
-        main-body-bg.value = {$themes.configuration.less.var.mainBodyBg}
-    }
-[global]
-
-[globalString = LIT:{$themes.configuration.less.var.mainTextColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        main-text-color = TEXT
-        main-text-color.value = {$themes.configuration.less.var.mainTextColor}
-    }
-[global]
-
-[globalString = LIT:{$themes.configuration.less.var.borderColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        border-color = TEXT
-        border-color.value = {$themes.configuration.less.var.borderColor}
-    }
-[global]
 
 
-# Main links
-[globalString = LIT:{$themes.configuration.less.var.mainLinkColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        main-link-color = TEXT
-        main-link-color.value = {$themes.configuration.less.var.mainLinkColor}
+    # Body
+    main-body-bg = TEXT
+    main-body-bg {
+        value = {$themes.configuration.less.var.mainBodyBg}
+        if.isTrue = {$themes.configuration.less.var.mainBodyBg}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.mainLinkHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        main-link-hover-color = TEXT
-        main-link-hover-color.value = {$themes.configuration.less.var.mainLinkHoverColor}
+
+    main-text-color = TEXT
+    main-text-color {
+        value = {$themes.configuration.less.var.mainTextColor}
+        if.isTrue = {$themes.configuration.less.var.mainTextColor}
     }
-[global]
+
+    border-color = TEXT
+    border-color {
+        value = {$themes.configuration.less.var.borderColor}
+        if.isTrue = {$themes.configuration.less.var.borderColor}
+    }
+
+
+    # Main links
+    main-link-color = TEXT
+    main-link-color {
+        value = {$themes.configuration.less.var.mainLinkColor}
+        if.isTrue = {$themes.configuration.less.var.mainLinkColor}
+    }
+
+
+    main-link-hover-color = TEXT
+    main-link-hover-color {
+        value = {$themes.configuration.less.var.mainLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.mainLinkHoverColor}
+    }
 
 
     # HEADER
-[globalString = LIT:{$themes.configuration.less.var.headerTopHeight} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        header-top-height = TEXT
-        header-top-height.value = {$themes.configuration.less.var.headerTopHeight}
+    header-top-height = TEXT
+    header-top-height {
+        value = {$themes.configuration.less.var.headerTopHeight}
+        if.isTrue = {$themes.configuration.less.var.headerTopHeight}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.headerTopBgColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        header-top-bg-color = TEXT
-        header-top-bg-color.value = {$themes.configuration.less.var.headerTopBgColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.headerTopColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        header-top-color = TEXT
-        header-top-color.value = {$themes.configuration.less.var.headerTopColor}
+    header-top-bg-color = TEXT
+    header-top-bg-color {
+        value = {$themes.configuration.less.var.headerTopBgColor}
+        if.isTrue = {$themes.configuration.less.var.headerTopBgColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.headerMiddleHeight} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        header-middle-height = TEXT
-        header-middle-height.value = {$themes.configuration.less.var.headerMiddleHeight}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.headerMiddleBgColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        header-middle-bg-color = TEXT
-        header-middle-bg-color.value = {$themes.configuration.less.var.headerMiddleBgColor}
+    header-top-color = TEXT
+    header-top-color {
+        value = {$themes.configuration.less.var.headerTopColor}
+        if.isTrue = {$themes.configuration.less.var.headerTopColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.headerBorderColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        header-border-color = TEXT
-        header-border-color.value = {$themes.configuration.less.var.headerBorderColor}
+
+    header-middle-height = TEXT
+    header-middle-height {
+        value = {$themes.configuration.less.var.headerMiddleHeight}
+        if.isTrue = {$themes.configuration.less.var.headerMiddleHeight}
     }
-[global]
+
+
+    header-middle-bg-color = TEXT
+    header-middle-bg-color {
+        value = {$themes.configuration.less.var.headerMiddleBgColor}
+        if.isTrue = {$themes.configuration.less.var.headerMiddleBgColor}
+    }
+
+
+    header-border-color = TEXT
+    header-border-color {
+        value = {$themes.configuration.less.var.headerBorderColor}
+        if.isTrue = {$themes.configuration.less.var.headerBorderColor}
+    }
 
 
     # Logo
-[globalString = LIT:{$themes.configuration.less.var.logoTop} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        logo-top = TEXT
-        logo-top.value = {$themes.configuration.less.var.logoTop}
+    logo-top = TEXT
+    logo-top {
+        value = {$themes.configuration.less.var.logoTop}
+        if.isTrue = {$themes.configuration.less.var.logoTop}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.logoLeft} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        logo-left = TEXT
-        logo-left.value = {$themes.configuration.less.var.logoLeft}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.logoWidth} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        logo-width = TEXT
-        logo-width.value = {$themes.configuration.less.var.logoWidth}
+    logo-left = TEXT
+    logo-left {
+        value = {$themes.configuration.less.var.logoLeft}
+        if.isTrue = {$themes.configuration.less.var.logoLeft}
     }
-[global]
+
+
+    logo-width = TEXT
+    logo-width {
+        value = {$themes.configuration.less.var.logoWidth}
+        if.isTrue = {$themes.configuration.less.var.logoWidth}
+    }
 
 
     # Navigation
-[globalString = LIT:{$themes.configuration.less.var.navHeight} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-height = TEXT
-        nav-height.value = {$themes.configuration.less.var.navHeight}
+    nav-height = TEXT
+    nav-height {
+        value = {$themes.configuration.less.var.navHeight}
+        if.isTrue = {$themes.configuration.less.var.navHeight}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navLinkColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-link-color = TEXT
-        nav-link-color.value = {$themes.configuration.less.var.navLinkColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navLinkHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-link-hover-color = TEXT
-        nav-link-hover-color.value = {$themes.configuration.less.var.navLinkHoverColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navLinkActiveColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-link-active-color = TEXT
-        nav-link-active-color.value = {$themes.configuration.less.var.navLinkActiveColor}
-    }
-[global]
+    nav-link-color = TEXT
+    nav-link-color {
+        value = {$themes.configuration.less.var.navLinkColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkColor}
 
-[globalString = LIT:{$themes.configuration.less.var.navLinkActiveHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-link-active-hover-color = TEXT
-        nav-link-active-hover-color.value = {$themes.configuration.less.var.navLinkActiveHoverColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navLinkHoverBackground} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-link-hover-background = TEXT
-        nav-link-hover-background.value = {$themes.configuration.less.var.navLinkHoverBackground}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navLinkArrowColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-link-arrow-color = TEXT
-        nav-link-arrow-color.value = {$themes.configuration.less.var.navLinkArrowColor}
+    nav-link-hover-color = TEXT
+    nav-link-hover-color {
+        value = {$themes.configuration.less.var.navLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkHoverColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navBackgroundColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-background-color = TEXT
-        nav-background-color.value = {$themes.configuration.less.var.navBackgroundColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.navSearchBtnColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        nav-search-btn-color = TEXT
-        nav-search-btn-color.value = {$themes.configuration.less.var.navSearchBtnColor}
+    nav-link-active-color = TEXT
+    nav-link-active-color {
+        value = {$themes.configuration.less.var.navLinkActiveColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkActiveColor}
     }
-[global]
+
+
+    nav-link-active-hover-color = TEXT
+    nav-link-active-hover-color {
+        value = {$themes.configuration.less.var.navLinkActiveHoverColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkActiveHoverColor}
+    }
+
+
+    nav-link-hover-background = TEXT
+    nav-link-hover-background {
+        value = {$themes.configuration.less.var.navLinkHoverBackground}
+        if.isTrue = {$themes.configuration.less.var.navLinkHoverBackground}
+    }
+
+
+    nav-link-arrow-color = TEXT
+    nav-link-arrow-color {
+        value = {$themes.configuration.less.var.navLinkArrowColor}
+        if.isTrue = {$themes.configuration.less.var.navLinkArrowColor}
+    }
+
+
+    nav-background-color = TEXT
+    nav-background-color {
+        value = {$themes.configuration.less.var.navBackgroundColor}
+        if.isTrue = {$themes.configuration.less.var.navBackgroundColor}
+    }
+
+
+    nav-search-btn-color = TEXT
+    nav-search-btn-color {
+        value = {$themes.configuration.less.var.navSearchBtnColor}
+        if.isTrue = {$themes.configuration.less.var.navSearchBtnColor}
+    }
 
 
     # Social icons
-[globalString = LIT:{$themes.configuration.less.var.socialIconsBgColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        social-icons-bg-color = TEXT
-        social-icons-bg-color.value = {$themes.configuration.less.var.socialIconsBgColor}
+    social-icons-bg-color = TEXT
+    social-icons-bg-color {
+        value = {$themes.configuration.less.var.socialIconsBgColor}
+        if.isTrue = {$themes.configuration.less.var.socialIconsBgColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.socialIconsHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        social-icons-hover-color = TEXT
-        social-icons-hover-color.value = {$themes.configuration.less.var.socialIconsHoverColor}
+
+    social-icons-hover-color = TEXT
+    social-icons-hover-color {
+        value = {$themes.configuration.less.var.socialIconsHoverColor}
+        if.isTrue = {$themes.configuration.less.var.socialIconsHoverColor}
     }
-[global]
+
 
 
     # Breadcrumbs
-[globalString = LIT:{$themes.configuration.less.var.breadcrumbsBackground} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        breadcrumbs-background = TEXT
-        breadcrumbs-background.value = {$themes.configuration.less.var.breadcrumbsBackground}
+    breadcrumbs-background = TEXT
+    breadcrumbs-background {
+        value = {$themes.configuration.less.var.breadcrumbsBackground}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsBackground}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.breadcrumbsLinkColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        breadcrumbs-link-color = TEXT
-        breadcrumbs-link-color.value = {$themes.configuration.less.var.breadcrumbsLinkColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.breadcrumbsLinkActiveColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        breadcrumbs-link-active-color = TEXT
-        breadcrumbs-link-active-color.value = {$themes.configuration.less.var.breadcrumbsLinkActiveColor}
+    breadcrumbs-link-color = TEXT
+    breadcrumbs-link-color {
+        value = {$themes.configuration.less.var.breadcrumbsLinkColor}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsLinkColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.breadcrumbsLinkHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        breadcrumbs-link-hover-color = TEXT
-        breadcrumbs-link-hover-color.value = {$themes.configuration.less.var.breadcrumbsLinkHoverColor}
+
+    breadcrumbs-link-active-color = TEXT
+    breadcrumbs-link-active-color {
+        value = {$themes.configuration.less.var.breadcrumbsLinkActiveColor}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsLinkActiveColor}
     }
-[global]
+
+
+    breadcrumbs-link-hover-color = TEXT
+    breadcrumbs-link-hover-color {
+        value = {$themes.configuration.less.var.breadcrumbsLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.breadcrumbsLinkHoverColor}
+    }
 
 
     # Sub navigation
-[globalString = LIT:{$themes.configuration.less.var.subNavigationBackground} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-background = TEXT
-        sub-navigation-background.value = {$themes.configuration.less.var.subNavigationBackground}
+    sub-navigation-background = TEXT
+    sub-navigation-background {
+        value = {$themes.configuration.less.var.subNavigationBackground}
+        if.isTrue = {$themes.configuration.less.var.subNavigationBackground}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationBorder} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-border = TEXT
-        sub-navigation-border.value = {$themes.configuration.less.var.subNavigationBorder}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationActiveBorder} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-active-border = TEXT
-        sub-navigation-active-border.value = {$themes.configuration.less.var.subNavigationActiveBorder}
+    sub-navigation-border = TEXT
+    sub-navigation-border {
+        value = {$themes.configuration.less.var.subNavigationBorder}
+        if.isTrue = {$themes.configuration.less.var.subNavigationBorder}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationLinkColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-link-color = TEXT
-        sub-navigation-link-color.value = {$themes.configuration.less.var.subNavigationLinkColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationLinkHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-link-hover-color = TEXT
-        sub-navigation-link-hover-color.value = {$themes.configuration.less.var.subNavigationLinkHoverColor}
+    sub-navigation-active-border = TEXT
+    sub-navigation-active-border {
+        value = {$themes.configuration.less.var.subNavigationActiveBorder}
+        if.isTrue = {$themes.configuration.less.var.subNavigationActiveBorder}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationLinkHoverBg} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-link-hover-bg = TEXT
-        sub-navigation-link-hover-bg.value = {$themes.configuration.less.var.subNavigationLinkHoverBg}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationLinkActiveColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-link-active-color = TEXT
-        sub-navigation-link-active-color.value = {$themes.configuration.less.var.subNavigationLinkActiveColor}
+    sub-navigation-link-color = TEXT
+    sub-navigation-link-color {
+        value = {$themes.configuration.less.var.subNavigationLinkColor}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.subNavigationLinkActiveBg} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        sub-navigation-link-active-bg = TEXT
-        sub-navigation-link-active-bg.value = {$themes.configuration.less.var.subNavigationLinkActiveBg}
+
+    sub-navigation-link-hover-color = TEXT
+    sub-navigation-link-hover-color {
+        value = {$themes.configuration.less.var.subNavigationLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkHoverColor}
     }
-[global]
+
+
+
+    sub-navigation-link-hover-bg = TEXT
+    sub-navigation-link-hover-bg {
+        value = {$themes.configuration.less.var.subNavigationLinkHoverBg}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkHoverBg}
+    }
+
+
+
+    sub-navigation-link-active-color = TEXT
+    sub-navigation-link-active-color {
+        value = {$themes.configuration.less.var.subNavigationLinkActiveColor}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkActiveColor}
+    }
+
+
+
+    sub-navigation-link-active-bg = TEXT
+    sub-navigation-link-active-bg {
+        value = {$themes.configuration.less.var.subNavigationLinkActiveBg}
+        if.isTrue = {$themes.configuration.less.var.subNavigationLinkActiveBg}
+    }
+
 
 
     # FOOTER
-[globalString = LIT:{$themes.configuration.less.var.footerBackground} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        footer-background = TEXT
-        footer-background.value = {$themes.configuration.less.var.footerBackground}
+    footer-background = TEXT
+    footer-background {
+        value = {$themes.configuration.less.var.footerBackground}
+        if.isTrue = {$themes.configuration.less.var.footerBackground}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.footerColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        footer-color = TEXT
-        footer-color.value = {$themes.configuration.less.var.footerColor}
-    }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.footerLinkColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        footer-link-color = TEXT
-        footer-link-color.value = {$themes.configuration.less.var.footerLinkColor}
+    footer-color = TEXT
+    footer-color {
+        value = {$themes.configuration.less.var.footerColor}
+        if.isTrue = {$themes.configuration.less.var.footerColor}
     }
-[global]
 
-[globalString = LIT:{$themes.configuration.less.var.footerLinkHoverColor} = /.*\S.*/]
-    plugin.tx_dyncss.overrides {
-        footer-link-hover-color = TEXT
-        footer-link-hover-color.value = {$themes.configuration.less.var.footerLinkHoverColor}
+
+    footer-link-color = TEXT
+    footer-link-color {
+        value = {$themes.configuration.less.var.footerLinkColor}
+        if.isTrue = {$themes.configuration.less.var.footerLinkColor}
     }
-[global]
+
+
+    footer-link-hover-color = TEXT
+    footer-link-hover-color {
+        value = {$themes.configuration.less.var.footerLinkHoverColor}
+        if.isTrue = {$themes.configuration.less.var.footerLinkHoverColor}
+    }
+
+}
