@@ -12,8 +12,8 @@ themes.configuration.baseurl =
 # cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Development Mode
 themes.configuration.isDevelopment = Development Mode
 
-# cat=theme,expert/layout/; type=options[Small=small,Big=big]; label=Felayout project type
-themes.configuration.feLayoutMode = small
+# cat=theme,expert/layout/; type=options[Less=less,Css=css]; label=Felayout type
+themes.configuration.feLayoutMode = less
 
 # cat=theme,expert/layout/; type=string; label=Path to felayout
 themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit

@@ -1,4 +1,4 @@
-[globalVar = LIT:small = {$themes.configuration.feLayoutMode}]
+[globalVar = LIT:less = {$themes.configuration.feLayoutMode}]
     page {
         includeCSS {
             bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.less
@@ -35,7 +35,7 @@
     }
 [global]
 
-[globalVar = LIT:big = {$themes.configuration.feLayoutMode}]
+[globalVar = LIT:css = {$themes.configuration.feLayoutMode}]
     page {
         includeCSS {
             bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.css
