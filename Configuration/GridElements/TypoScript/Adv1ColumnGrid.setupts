@@ -40,6 +40,32 @@ lib.gridelements {
             }
             wrap = |</div>
 
+            # Content wrapper
+            innerWrap.cObject = COA
+            innerWrap.cObject {
+                10 = TEXT
+                10.value = <div
+                20 = COA
+                20 {
+                    10 = TEXT
+                    10 {
+                        field = flexform_column_1_content_wrapper
+                        required = 1
+                        noTrimWrap = | ||
+                    }
+
+                    stdWrap {
+                        trim = 1
+                        noTrimWrap = | class="|"|
+                        required = 1
+                    }
+                }
+
+                30 = TEXT
+                30.value = >|</div>
+                if.isTrue.field = flexform_column_1_content_wrapper
+            }
+
         }
 
         cObject = FLUIDTEMPLATE

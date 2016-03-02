@@ -123,6 +123,21 @@
 									</config>
 							</TCEforms>
 					</column_1_offset>
+					<column_1_content_wrapper>
+						<TCEforms type="array">
+									<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_1_content_wrapper</label>
+									<config type="array">
+											<type>select</type>
+											<items type="array">
+												<numIndex index="0" type="array">
+													<numIndex index="0">-</numIndex>
+													<numIndex index="1"></numIndex>
+												</numIndex>
+											</items>
+											<default></default>
+									</config>
+						</TCEforms>
+					</column_1_content_wrapper>
 					<column_1_class>
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_1_class</label>

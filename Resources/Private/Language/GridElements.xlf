@@ -150,6 +150,19 @@
               <source>Column 4 Class</source>
             </trans-unit>
 
+            <trans-unit id="column_1_content_wrapper">
+              <source>Column 1 Content Wrapper</source>
+            </trans-unit>
+            <trans-unit id="column_2_content_wrapper">
+              <source>Column 2 Content Wrapper</source>
+            </trans-unit>
+            <trans-unit id="column_3_content_wrapper">
+              <source>Column 3 Content Wrapper</source>
+            </trans-unit>
+            <trans-unit id="column_4_content_wrapper">
+              <source>Column 4 Content Wrapper</source>
+            </trans-unit>
+
 
             <trans-unit id="container">
                 <source>Container wrapper</source>
@@ -169,6 +182,7 @@
             <trans-unit id="col-lg">
                 <source>Large devices "Large devices Desktops (≥1200px)"</source>
             </trans-unit>
+
         </body>
     </file>
 </xliff>
