@@ -2,23 +2,18 @@
 
 	<f:layout name="ContentFooter" />
 
-	<f:debug>{image}</f:debug>
-	<f:debug>{image.properties}</f:debug>
-	<f:debug>{image.referenceProperties}</f:debug>
-	<f:debug>{_all}</f:debug>
-
 	<f:section name="content">
 	<!-- theme_t3kit: Templates/ContentElements/Slider.html [begin] -->
 
 	<f:if condition="{slides}">
+		<!-- <div class="img-slider js__img-slider"> -->
+
 		<div class="img-slider swiper-container js__img-slider">
 			<div class="swiper-wrapper img-slider__wrp">
+			<!-- <div class=" img-slider__wrp"> -->
 				<f:for each="{slides}" as="image">
-
 					<div class="swiper-slide img-slider__slide">
-						<div class="img-slider__slide-wrp">
-							<img data-src="<f:uri.image src="{image.uid}" width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}" height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}" treatIdAsReference="1" />" data-srcset="<f:uri.image src="{image.uid}" width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}" height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}" treatIdAsReference="1" /> 1x, {f:uri.image(src: '{image.uid}', width: '{settings.560w.width}', height: '{settings.560w.height}', treatIdAsReference: '1')} 560w" class="swiper-lazy img-responsive img-slider__img">
-
+						<div data-background="{f:uri.image(src: '{image.uid}', treatIdAsReference:"1", width:'{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}')}" class="swiper-lazy img-slider__slide-bg">
 							<div class="swiper-lazy-preloader"></div>
 							<div class="img-slider__caption">
 								<f:if condition="{image.referenceProperties.alternative}">
