@@ -1,0 +1,46 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:layout name="ContentFooter" />
+<f:section name="content">
+<!-- theme_t3kit: Templates/ContentElements/FullWidthImage.html [begin] -->
+<f:if condition="{images}">
+	<f:for each="{images}" as="image" iteration="imageIteration">
+		<f:if condition="{imageIteration.isFirst}">
+			<div class="full-width-image">
+				<div class="full-width-image__wrp">
+					<img
+					src="<f:uri.image src="{image.uid}"
+						width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"
+						treatIdAsReference="1" />"
+					srcset="
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="320c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 320w,
+
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="640c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 640w ,
+
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="768c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 768w ,
+
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1080c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1080w ,
+
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1280c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1280w ,
+
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1440c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1440w ,
+
+						<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1920c"
+						height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1920w"
+					class="img-responsive full-width-image__img"
+					alt="{image.alternative}" >
+				</div>
+			</div>
+		</f:if>
+	</f:for>
+</f:if>
+<!-- theme_t3kit: Templates/ContentElements/FullWidthImage.html [end] -->
+</f:section>
+</div>

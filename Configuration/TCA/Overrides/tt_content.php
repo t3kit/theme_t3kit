@@ -127,6 +127,20 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tabs'] = 'content-elements-tabs';
 
+    // "fullWidthImage"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'fullWidthImage.title',
+            'fullWidthImage',
+            'content-elements-fullWidthImage'
+        ],
+        'tabs',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['fullWidthImage'] = 'content-elements-fullWidthImage';
+
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -300,6 +314,22 @@ call_user_func(function() {
                 rowDescription,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+    // "fullWidthImage"
+    $GLOBALS['TCA']['tt_content']['types']['fullWidthImage'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,

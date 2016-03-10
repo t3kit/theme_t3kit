@@ -176,6 +176,28 @@
                 <source>Pills</source>
             </trans-unit>
 
+            <trans-unit id="fullWidthImage.title">
+                <source>Full Width Image</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.description">
+                <source>Full Width Image element</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.linkText">
+                <source>Link text</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.tabs.media">
+                <source>Media</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+
             <trans-unit id="tt_content.wrapper">
                 <source>Appearance</source>
             </trans-unit>

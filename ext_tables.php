@@ -48,6 +48,11 @@ if (TYPO3_MODE === 'BE') {
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => $contentElementIconFilePrefix . 'tabs.svg']
     );
+    $iconRegistry->registerIcon(
+        'content-elements-fullWidthImage',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'imageTextLink.svg']
+    );
 
     // Add context sensitive help (csh) for the haiku table
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
