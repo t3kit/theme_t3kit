@@ -162,5 +162,91 @@ tt_content.mailform.20 {
             )
         }
     }
+
+    confirmation {
+        layout {
+            confirmation (
+				<div class="form-horizontal">
+					<containerWrap />
+				</div>
+            )
+            containerWrap (
+				<div>
+					<elements />
+				</div>
+            )
+            elementWrap (
+				<div>
+					<element />
+				</div>
+            )
+            fieldset (
+				<containerWrap />
+            )
+            checkbox (
+				<label />
+				<inputvalue />
+            )
+            radio (
+				<label />
+				<inputvalue />
+            )
+            radiogroup (
+				<div class="form-group">
+					<div class="col-sm-3">
+						<strong><legend /></strong>
+					</div>
+					<div class="col-sm-5">
+						<elements />
+					</div>
+				</div>
+            )
+            checkboxgroup < .radiogroup
+            label (
+				<labelvalue />
+            )
+            legend (
+				<legendvalue />
+            )
+            textline (
+				<div class="form-group">
+					<div class="col-sm-3">
+						<strong>
+							<label />
+						</strong>
+					</div>
+					<div class="col-sm-5">
+						<inputvalue />
+					</div>
+				</div>
+            )
+            fileupload < .textline
+            textarea (
+				<div class="form-group">
+					<div class="col-sm-3">
+						<strong>
+							<label />
+						</strong>
+					</div>
+					<div class="col-sm-5">
+						<inputvalue />
+					</div>
+				</div>
+            )
+            select (
+				<div class="form-group">
+					<div class="col-sm-3">
+						<strong>
+							<label />
+						</strong>
+					</div>
+					<div class="col-sm-5">
+						<elements />
+					</div>
+				</div>
+            )
+        }
+    }
+
     stdWrap.wrap = |
 }
