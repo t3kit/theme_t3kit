@@ -101,9 +101,6 @@
 
 <!--###TEMPLATE_LOGOUT###-->
 
-###STATUS_HEADER###
-###STATUS_MESSAGE###
-
 <form class="form-horizontal" action="###ACTION_URI###" target="_top" method="post">
 	<fieldset>
 	<legend>###LEGEND###</legend>
@@ -115,7 +112,7 @@
     </div>
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-5">
-			<input class="btn btn-default" type="submit" name="submit" value="###LOGOUT_LABEL###" />
+			<input class="dfd btn btn-default" type="submit" name="submit" value="###LOGOUT_LABEL###" />
 		 </div>
 	 </div>
 
@@ -168,19 +165,25 @@
 
 
 <!-- ###CHANGEPASSWORD_FORM### -->
-<form action="###ACTION_URI###" method="post">
+<form class="form-horizontal" action="###ACTION_URI###" method="post">
 	<fieldset>
 		<legend>###LEGEND###</legend>
-		<div>
-			<label for="tx_felogin_pi1-newpassword1">###NEWPASSWORD1_LABEL###</label>
-			<input type="password" name="###NEWPASSWORD1###" id="tx_felogin_pi1-newpassword1" />
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="tx_felogin_pi1-newpassword1">###NEWPASSWORD1_LABEL###</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="password" name="###NEWPASSWORD1###" id="tx_felogin_pi1-newpassword1" />
+			</div>
 		</div>
-		<div>
-			<label for="tx_felogin_pi1-newpassword2">###NEWPASSWORD2_LABEL###</label>
-			<input type="password" name="###NEWPASSWORD2###" id="tx_felogin_pi1-newpassword2" />
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="tx_felogin_pi1-newpassword2">###NEWPASSWORD2_LABEL###</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="password" name="###NEWPASSWORD2###" id="tx_felogin_pi1-newpassword2" />
+			</div>
 		</div>
-		<div>
-			<input type="submit" name="tx_felogin_pi1[changepasswordsubmit]" value="###SEND_PASSWORD###" />
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-5">
+				<input class="btn btn-default"  type="submit" name="tx_felogin_pi1[changepasswordsubmit]" value="###SEND_PASSWORD###" />
+			</div>
 		 </div>
 	</fieldset>
 
