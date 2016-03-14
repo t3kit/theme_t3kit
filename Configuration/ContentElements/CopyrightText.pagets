@@ -1,0 +1,28 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        copyrightText {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:copyrightText.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:copyrightText.description
+            iconIdentifier = content-elements-copyrightText
+            tt_content_defValues {
+                CType = copyrightText
+            }
+        }
+    }
+    show := addToList(copyrightText)
+}
+
+# # Use layout field to customize Layout select-box on copyrightText
+# # extend layout select-box only for this element
+# TCEFORM.tt_content.layout {
+#     types {
+#         copyrightText {
+#             addItems {
+#                 --div-- = CopyrightText layouts:
+#                 # add value with index 0, to set it as a default, only for this element
+#                 0 = Default layout for this element
+#                 11 = Example layout only for copyrightText
+#             }
+#         }
+#     }
+# }

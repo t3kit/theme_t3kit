@@ -141,6 +141,54 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['fullWidthImage'] = 'content-elements-fullWidthImage';
 
+    // "socialIcons"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'socialIcons.title',
+            'socialIcons',
+            'content-elements-socialIcons'
+        ],
+        'fullWidthImage',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['socialIcons'] = 'content-elements-socialIcons';
+
+    // "copyrightText"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'copyrightText.title',
+            'copyrightText',
+            'content-elements-copyrightText'
+        ],
+        'socialIcons',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['copyrightText'] = 'content-elements-copyrightText';
+
+    // "contacts"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'contacts.title',
+            'contacts',
+            'content-elements-contacts'
+        ],
+        'copyrightText',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contacts'] = 'content-elements-contacts';
+
+
+
+
+
+
+
     // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -337,6 +385,53 @@ call_user_func(function() {
             --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
         '
     ];
+
+
+    // "socialIcons"
+    $GLOBALS['TCA']['tt_content']['types']['socialIcons'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "copyrightText"
+    $GLOBALS['TCA']['tt_content']['types']['copyrightText'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "contacts"
+    $GLOBALS['TCA']['tt_content']['types']['contacts'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
 
     //
     // Flexforms

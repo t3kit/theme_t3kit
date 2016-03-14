@@ -198,6 +198,29 @@
                 <source>Additional settings</source>
             </trans-unit>
 
+
+            <trans-unit id="socialIcons.title">
+                <source>Social Icons</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.description">
+                <source>Social Icons element</source>
+            </trans-unit>
+
+            <trans-unit id="copyrightText.title">
+                <source>Copyright</source>
+            </trans-unit>
+            <trans-unit id="copyrightText.description">
+                <source>Copyright text element</source>
+            </trans-unit>
+
+            <trans-unit id="contacts.title">
+                <source>Contacts</source>
+            </trans-unit>
+            <trans-unit id="contacts.description">
+                <source>Contact info element</source>
+            </trans-unit>
+
+
             <trans-unit id="tt_content.wrapper">
                 <source>Appearance</source>
             </trans-unit>

@@ -93,6 +93,7 @@ lib.gridelements {
                     classMappings {
                         11 = gridelements-example-wrapper-1
                         12 = gridelements-example-wrapper-2
+                        13 = footer__bottom
                     }
                 }
 

@@ -24,6 +24,7 @@ TCEFORM.tt_content.wrapper {
                 --div-- = Gridelements wrappers:
                 11 = Example Gridelements wrapper 1
                 12 = Example Gridelements wrapper 2
+                13 = Footer bottom row wrapper
            }
        }
    }

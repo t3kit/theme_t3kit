@@ -54,6 +54,23 @@ if (TYPO3_MODE === 'BE') {
         ['source' => $contentElementIconFilePrefix . 'imageTextLink.svg']
     );
 
+
+    $iconRegistry->registerIcon(
+        'content-elements-socialIcons',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'element.svg']
+    );
+    $iconRegistry->registerIcon(
+        'content-elements-copyrightText',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'element.svg']
+    );
+    $iconRegistry->registerIcon(
+        'content-elements-contacts',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'element.svg']
+    );
+
     // Add context sensitive help (csh) for the haiku table
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
         'tt_content',
