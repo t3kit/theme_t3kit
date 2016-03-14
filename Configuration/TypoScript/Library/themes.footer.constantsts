@@ -14,7 +14,7 @@
 #############################################
 
 # cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area: Content id to be displayed in footer area
-themes.configuration.content.footerArea.contentUid = 191
+themes.configuration.content.footerArea.contentUid = 168
 
 # cat=footer,advanced/footer_content/; type=string; label= Copyright
 themes.configuration.footer.copyright = All rights reserved
