@@ -3,47 +3,39 @@
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="Default">
 		<!-- theme_t3kit: Partials/Footer/Socialmedia.html [begin] -->
-		<div class="footer__social">
-			<div class="container">
-				<div class="row ">
-					<div class="col-md-12">
-						<div class="footer__social-icons">
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useFacebook')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.facebookLink')}"
-								   target="_blank" title="Facebook"><span class="icons icon-t3-facebook"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useTwitter')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.twitterLink')}"
-								   target="_blank" title="Twitter"><span class="icons icon-t3-twitter"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useLinkedIn')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.linkedInLink')}"
-								   target="_blank" title="LinkedIn"><span class="icons icon-t3-linkedin"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useVimeo')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.vimeoLink')}"
-								   target="_blank" title="Vimeo"><span class="icons icon-t3-vimeo"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useGooglePlus')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.googlePlusLink')}"
-								   target="_blank" title="Googleplus"><span class="icons icon-t3-googleplus"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.usePinterest')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.pinterestLink')}"
-								   target="_blank" title="Pinterest"><span class="icons icon-t3-pinterest"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useInstagram')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.instagramLink')}"
-								   target="_blank" title="Instagram"><span class="icons icon-t3-instagram"></span></a>
-							</f:if>
-							<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useYoutube')}">
-								<a class="footer__social-icon" href="{theme:constant(constant:'themes.configuration.socialmedia.youtubeLink')}"
-								   target="_blank" title="Youtube"><span class="icons icon-t3-youtube"></span></a>
-							</f:if>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="social-icons">
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useFacebook')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.facebookLink')}"
+				   target="_blank" title="Facebook"><span class="icons icon-t3-facebook"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useTwitter')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.twitterLink')}"
+				   target="_blank" title="Twitter"><span class="icons icon-t3-twitter"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useLinkedIn')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.linkedInLink')}"
+				   target="_blank" title="LinkedIn"><span class="icons icon-t3-linkedin"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useVimeo')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.vimeoLink')}"
+				   target="_blank" title="Vimeo"><span class="icons icon-t3-vimeo"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useGooglePlus')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.googlePlusLink')}"
+				   target="_blank" title="Googleplus"><span class="icons icon-t3-googleplus"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.usePinterest')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.pinterestLink')}"
+				   target="_blank" title="Pinterest"><span class="icons icon-t3-pinterest"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useInstagram')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.instagramLink')}"
+				   target="_blank" title="Instagram"><span class="icons icon-t3-instagram"></span></a>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useYoutube')}">
+				<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.youtubeLink')}"
+				   target="_blank" title="Youtube"><span class="icons icon-t3-youtube"></span></a>
+			</f:if>
 		</div>
 
 		<!-- theme_t3kit: Partials/Footer/Socialmedia.html [end] -->

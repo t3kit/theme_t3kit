@@ -65,7 +65,9 @@
 				</f:if>
 
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSocIcons')}">
-					<f:render partial="Header/Socialmedia" section="Default" />
+					<div class="header-middle__social-icon">
+						<f:render partial="ContentElements/Socialmedia" section="Default" />
+					</div>
 				</f:if>
 			</div>
 		</div>
