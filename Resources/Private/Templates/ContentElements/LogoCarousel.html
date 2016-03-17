@@ -14,6 +14,7 @@
 								<f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link">
 									<f:render section="renderLogo" arguments="{
 										logoUid: logo.uid,
+										alt: logo.alternative,
 										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
 										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
 										}" />
@@ -22,6 +23,7 @@
 							<f:else>
 								<f:render section="renderLogo" arguments="{
 										logoUid: logo.uid,
+										alt: logo.alternative,
 										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
 										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
 										}" />
@@ -39,6 +41,6 @@
 </div>
 
 <f:section name="renderLogo">
-	<img  data-src="<f:uri.image src="{logoUid}" maxWidth="{maxWidth}" maxHeight="{maxHeight}" treatIdAsReference="1" />" class="swiper-lazy img-responsive logo-carousel__img">
+	<img  data-src="<f:uri.image src="{logoUid}" maxWidth="{maxWidth}" maxHeight="{maxHeight}" treatIdAsReference="1" />" class="swiper-lazy img-responsive logo-carousel__img" alt="{alt}" >>
 	<div class="swiper-lazy-preloader"></div>
 </f:section>
