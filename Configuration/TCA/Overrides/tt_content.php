@@ -302,10 +302,9 @@ call_user_func(function() {
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $cmsLanguageFilePrefix . 'header_formlabel,
-                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
-                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.linkText,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,

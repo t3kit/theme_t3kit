@@ -87,6 +87,9 @@
             <trans-unit id="imageTextLink.description">
                 <source>Image text and link</source>
             </trans-unit>
+            <trans-unit id="imageTextLink.bodyText">
+                <source>Text</source>
+            </trans-unit>
             <trans-unit id="imageTextLink.linkText">
                 <source>Link text</source>
             </trans-unit>
