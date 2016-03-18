@@ -19,7 +19,7 @@ themes.configuration.elem.status.showHeaderTopContacts = 1
 themes.configuration.elem.status.showHeaderTopLangMenu = 1
 
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Search
-themes.configuration.elem.status.showHeaderTopSearch = 1
+themes.configuration.elem.status.showHeaderTopSearch = 0
 
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Main Menu Search
 themes.configuration.elem.status.showHeaderMainMenuSearch = 0
@@ -50,4 +50,8 @@ themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/fe
 
 # Social Icons
 # cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle SocIcons
-themes.configuration.elem.status.showHeaderMiddleSocIcons = 1
+themes.configuration.elem.status.showHeaderMiddleSocIcons = 0
+
+# Header middle search box
+# cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle Search
+themes.configuration.elem.status.showHeaderMiddleSearch = 1

@@ -65,6 +65,18 @@ themes.configuration.less.var.headerTopColor =
 #Header Middle
 #############################################
 
+# Header middle search
+
+# cat=header,advanced/header_middle; type=string; label= Header Middle Search Height
+themes.configuration.less.var.headerMiddleSearchHeight =
+
+# cat=colors,advanced/header_middle; type=color; label= Header Middle Search Btn Background
+themes.configuration.less.var.headerMiddleSearchBtnBg =
+
+# cat=colors,advanced/header_middle; type=color; label= Header Middle Search Btn Hover
+themes.configuration.less.var.headerMiddleSearchBtnHover =
+
+
 # Logo
 # cat=header,basic/header_middle; type=string; label= Logo Top
 themes.configuration.less.var.logoTop = 20px

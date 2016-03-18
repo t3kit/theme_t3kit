@@ -84,6 +84,24 @@ plugin.tx_dyncss.overrides {
         if.isTrue = {$themes.configuration.less.var.headerBorderColor}
     }
 
+    # Header middle search
+    header-middle-search-height = TEXT
+    header-middle-search-height {
+        value = {$themes.configuration.less.var.headerMiddleSearchHeight}
+        if.isTrue = {$themes.configuration.less.var.headerMiddleSearchHeight}
+    }
+
+    header-middle-search-btn-bg = TEXT
+    header-middle-search-btn-bg {
+            value = {$themes.configuration.less.var.headerMiddleSearchBtnBg}
+            if.isTrue = {$themes.configuration.less.var.headerMiddleSearchBtnBg}
+    }
+    header-middle-search-btn-hover = TEXT
+    header-middle-search-btn-hover {
+            value = {$themes.configuration.less.var.headerMiddleSearchBtnHover}
+            if.isTrue = {$themes.configuration.less.var.headerMiddleSearchBtnHover}
+    }
+
 
     # Logo
     logo-top = TEXT

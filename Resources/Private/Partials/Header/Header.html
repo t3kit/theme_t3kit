@@ -38,12 +38,6 @@
 
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopSearch')}">
 					<f:cObject typoscriptObjectPath="lib.header.top.search" />
-					<f:comment>
-					<div class="main-navigation__search-btn-wrp _header-top-search-btn">
-						<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">Search<span></span></a>
-					</div>
-					<div class="main-navigation__search-box _header-top-search-btn js__main-navigation__search-box" ><input placeholder="Search..." type="search"></div>
-					</f:comment>
 				</f:if>
 
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopNavigation')}">
@@ -68,6 +62,10 @@
 					<div class="header-middle__social-icon">
 						<f:render partial="ContentElements/Socialmedia" section="Default" />
 					</div>
+				</f:if>
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSearch')}">
+
+					<f:cObject typoscriptObjectPath="lib.header.middle.search" />
 				</f:if>
 			</div>
 		</div>
