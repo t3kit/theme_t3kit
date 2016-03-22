@@ -12,16 +12,16 @@ mod.wizards.newContentElement.wizardItems.contentElements {
     show := addToList(fullWidthImage)
 }
 
-# # Use layout field to customize Layout select-box on imageTextLink
+# # Use layout field to customize Layout select-box on fullWidthImage
 # # extend layout select-box only for this element
 # TCEFORM.tt_content.layout {
 #     types {
-#         imageTextLink {
+#         fullWidthImage {
 #             addItems {
 #                 --div-- = ImageTextLink layouts:
 #                 # add value with index 0, to set it as a default, only for this element
 #                 0 = Default layout for this element
-#                 11 = Example layout only for imageTextLink
+#                 11 = Example layout only for fullWidthImage
 #             }
 #         }
 #     }

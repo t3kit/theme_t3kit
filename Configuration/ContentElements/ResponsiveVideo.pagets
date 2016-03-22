@@ -1,0 +1,28 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        responsiveVideo {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.description
+            iconIdentifier = content-elements-responsiveVideo
+            tt_content_defValues {
+                CType = responsiveVideo
+            }
+        }
+    }
+    show := addToList(responsiveVideo)
+}
+
+# # Use layout field to customize Layout select-box on responsiveVideo
+# # extend layout select-box only for this element
+# TCEFORM.tt_content.layout {
+#     types {
+#         responsiveVideo {
+#             addItems {
+#                 --div-- = ImageTextLink layouts:
+#                 # add value with index 0, to set it as a default, only for this element
+#                 0 = Default layout for this element
+#                 11 = Example layout only for responsiveVideo
+#             }
+#         }
+#     }
+# }

@@ -1,0 +1,22 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:layout name="ContentFooter" />
+<f:section name="content">
+<!-- theme_t3kit: Templates/ContentElements/ResponsiveVideo.html [begin] -->
+<f:if condition="{media}">
+	<f:for each="{media}" as="video" iteration="videoIteration">
+		<f:if condition="{video.type} == 4">
+			<div class="embed-responsive embed-responsive-16by9">
+				<f:media
+					class="embed-responsive-item"
+					file="{video}"
+					alt="{video.alternative}"
+					title="{video.title}"
+				/>
+			</div>
+		</f:if>
+	</f:for>
+</f:if>
+<!-- theme_t3kit: Templates/ContentElements/ResponsiveVideo.html [end] -->
+</f:section>
+</div>

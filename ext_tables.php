@@ -53,6 +53,11 @@ if (TYPO3_MODE === 'BE') {
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => $contentElementIconFilePrefix . 'fullWidthImage.svg']
     );
+    $iconRegistry->registerIcon(
+        'content-elements-responsiveVideo',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'responsiveVideo.svg']
+    );
 
 
     $iconRegistry->registerIcon(

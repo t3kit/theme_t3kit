@@ -141,6 +141,20 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['fullWidthImage'] = 'content-elements-fullWidthImage';
 
+    // "responsiveVideo"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'responsiveVideo.title',
+            'responsiveVideo',
+            'content-elements-responsiveVideo'
+        ],
+        'fullWidthImage',
+        'after'
+    );
+	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['responsiveVideo'] = 'content-elements-responsiveVideo';
+
     // "socialIcons"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -150,7 +164,7 @@ call_user_func(function() {
             'socialIcons',
             'content-elements-socialIcons'
         ],
-        'fullWidthImage',
+        'responsiveVideo',
         'after'
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['socialIcons'] = 'content-elements-socialIcons';
@@ -373,10 +387,26 @@ call_user_func(function() {
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
-            --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
+            --div--;' . $contentElementLanguageFilePrefix . 'fullWidthImage.tabs.image,image,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    // "responsiveVideo"
+    $GLOBALS['TCA']['tt_content']['types']['responsiveVideo'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --div--;' . $contentElementLanguageFilePrefix . 'responsiveVideo.tabs.video,media,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
                 hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
