@@ -16,3 +16,16 @@ TCEFORM.tt_content.layout {
         }
     }
 }
+
+
+# Add a wrapper
+TCEFORM.tt_content.wrapper {
+   types {
+       table {
+           addItems {
+               --div-- = Table wrappers:
+               10 = Responsive table
+           }
+       }
+   }
+}

@@ -11,6 +11,14 @@ tt_content {
                     14 = table table-bordered table-condensed table-hover
                 }
             }
+            365 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+            365 {
+                fieldName = wrapper
+                as = wrapperClass
+                classMappings {
+                    10 = table-responsive
+                }
+            }
         }
     }
 }
