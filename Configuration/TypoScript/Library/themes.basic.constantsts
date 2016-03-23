@@ -6,8 +6,11 @@
 # customsubcategory=development_mode= Development Mode
 # customsubcategory=layout= Layout
 
-# cat=theme,expert/layout/; type=string; label= Base URL (if empty config.absRefPrefix=/ will be set)
+# cat=theme,expert//; type=string; label= Base URL (if empty config.absRefPrefix=/ will be set)
 themes.configuration.baseurl =
+
+# cat=theme,expert//; type=string; label= The domain for the site. (ex. www.mysite.com, without http://)
+themes.configuration.siteDomain = t3kit.testserver.pixelant.nu
 
 # cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Development Mode
 themes.configuration.isDevelopment = Development Mode
