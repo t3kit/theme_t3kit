@@ -1,0 +1,32 @@
+{namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
+
+<f:layout name="HeaderContentFooter" />
+
+<f:debug>{_all}</f:debug>
+
+<f:section name="content">
+
+    <!-- theme_t3kit: Templates/ContentElements/Tabs2.html [begin] -->
+    <f:if condition="{data.tx_gridelements_view_children}">
+	<div class="tabs">
+	    <ul class="{data.flexform_tabsMode}" role="tablist">
+		<f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tabsIteration">
+		    <li class="{f:if(condition: tabsIteration.isFirst, then: 'active', else: '')}">
+			<a href="#tab-{data.uid}-{tab.uid}" data-toggle="tab" role="tab">{tab.header}</a>
+		    </li>
+		</f:for>
+	    </ul>
+	    <div class="tab-content">
+		<f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tabsIteration">
+		    <div class="tab-pane fade {f:if(condition: tabsIteration.isFirst, then: 'active in', else: '')}" id="tab-{data.uid}-{tab.uid}">
+			<f:format.raw>
+			    <xtools:get.element data="{data}" key="tx_gridelements_view_child_{tab.uid}"></xtools:get.element>
+			</f:format.raw>
+		    </div>
+		</f:for>
+	    </div>
+	</div>
+    </f:if>
+    <!-- theme_t3kit: Templates/ContentElements/Tabs2.html [end] -->
+
+</f:section>

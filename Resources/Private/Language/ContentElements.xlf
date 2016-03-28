@@ -183,6 +183,14 @@
                 <source>Pills</source>
             </trans-unit>
 
+	    <trans-unit id="tabs2.title">
+                <source>Tabs 2</source>
+            </trans-unit>
+	    <trans-unit id="tabs2.flexform.class">
+                <source>Tabs mode</source>
+            </trans-unit>
+
+
             <trans-unit id="fullWidthImage.title">
                 <source>Full Width Image</source>
             </trans-unit>

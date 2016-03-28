@@ -1,0 +1,23 @@
+tx_gridelements.setup.tabs2 {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs2.title
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/ContentElements/FlexForms/Tabs2.xml
+    icon = EXT:theme_t3kit/Resources/Public/Icons/ContentElements/tabs.svg
+
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        colPos = 1
+                    }
+                }
+            }
+        }
+    }
+}
+
+mod.web_layout.tt_content.preview.tabs2 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Tabs2.html

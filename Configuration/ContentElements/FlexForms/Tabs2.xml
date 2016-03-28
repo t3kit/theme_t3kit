@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+	<langDisable>1</langDisable>
+    </meta>
+    <sheets>
+	<columns>
+	    <ROOT>
+		<TCEforms>
+		    <sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs2.title</sheetTitle>
+		</TCEforms>
+		<el>
+		    <tabsMode>
+			<TCEforms>
+			    <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs2.flexform.class</label>
+			    <config>
+				<type>select</type>
+				<items>
+				    <numIndex index="0">
+					<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.0</numIndex>
+					<numIndex index="1">nav nav-tabs</numIndex>
+				    </numIndex>
+				    <numIndex index="1">
+					<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.1</numIndex>
+					<numIndex index="1">nav nav-pills</numIndex>
+				    </numIndex>
+				</items>
+			    </config>
+			</TCEforms>
+		    </tabsMode>
+		</el>
+	    </ROOT>
+	</columns>
+    </sheets>
+</T3DataStructure>
+
