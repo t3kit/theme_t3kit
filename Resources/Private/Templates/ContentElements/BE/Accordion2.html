@@ -1,0 +1,27 @@
+{namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
+
+<f:debug>{_all}</f:debug>
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:if condition="{records}">
+	<div class="panel panel-default">
+	    <f:for each="{xtools:get.records(recordList : records)}" as="accordion">
+		<div class="panel-heading"><xtools:be.iconAndTitleLinkForRecord record="{accordion}" /></div>
+		<f:if condition="{accordion.records}">
+		    <div class="panel-body">
+			<ul class="list-inline">
+
+			    <f:for each="{xtools:get.records(recordList : accordion.records)}" as="content">
+				<li><xtools:be.iconAndTitleLinkForRecord record="{content}" /></li>
+			    </f:for>
+
+			</ul>
+		    </div>
+		</f:if>
+		</li>
+	    </f:for>
+	</div>
+    </f:if>
+</div>

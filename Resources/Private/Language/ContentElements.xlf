@@ -137,6 +137,10 @@
                 <source>All items are expanded at load.</source>
             </trans-unit>
 
+	    <trans-unit id="accordion2.title">
+                <source>Accordion 2</source>
+            </trans-unit>
+
             <trans-unit id="logoCarousel.title">
                 <source>Logo Carousel</source>
             </trans-unit>

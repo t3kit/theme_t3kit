@@ -1,0 +1,24 @@
+
+tx_gridelements.setup.accordion2 {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion2.title
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/ContentElements/FlexForms/Accordrion2.xml
+    icon = EXT:theme_t3kit/Resources/Public/Icons/ContentElements/accordion.svg
+
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        colPos = 0
+                    }
+                }
+            }
+        }
+    }
+}
+
+mod.web_layout.tt_content.preview.accordion2 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Accordion2.html
