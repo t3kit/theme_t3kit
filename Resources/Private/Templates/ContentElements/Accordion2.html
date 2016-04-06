@@ -2,12 +2,14 @@
 
 <f:layout name="HeaderContentFooter" />
 
+ <f:debug>{_all}</f:debug>
+
 <f:section name="content">
     <!-- theme_t3kit: Templates/ContentElements/Accordion2.html [begin] -->
-    <f:if condition="{data.tx_gridelements_view_children}">
+    <f:if condition="{data.tx_gridelements_t3kit_values}">
 	<div class="panel-group" id="accordion-{data.uid}" role="tablist" aria-multiselectable="{f:if(condition: '{data.flexform_accordionMode} >= 2', then: 'TRUE', else: 'FALSE')}">
 
-	    <f:for each="{data.tx_gridelements_view_children}" as="item" iteration="accordionIteration">
+	    <f:for each="{data.tx_gridelements_t3kit_values}" as="item" iteration="accordionIteration">
 
 		<div class="panel panel-default">
 		    <div class="panel-heading" role="tab" id="heading-{data.uid}-{item.uid}">
@@ -53,8 +55,9 @@
     <div id="collapse-{data.uid}-{accordion.uid}" class="panel-collapse collapse {f:if(condition: isExpanded, then: 'in', else: '')}" role="tabpanel">
 	<div class="panel-body">
 	    <f:format.raw>
-		<xtools:get.element data="{data}" key="tx_gridelements_view_child_{accordion.uid}"></xtools:get.element>
+		<xtools:get.element data="{data}" key="tx_gridelements_view_column_{accordion.column}"></xtools:get.element>
 	    </f:format.raw>
 	</div>
     </div>
 </f:section>
+

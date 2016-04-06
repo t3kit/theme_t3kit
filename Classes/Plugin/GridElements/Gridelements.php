@@ -27,8 +27,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\MathUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
-use \TYPO3\CMS\Extbase\Utility\DebuggerUtility as du;
-
 /**
  * Plugin 'Grid Element' for the 'gridelements' extension.
  *
@@ -93,7 +91,7 @@ class Gridelements extends ContentObjectRenderer
 	// this columns are saved at DB,but we haven't properly TS configuration
 	// so we will 'build it on fly'
 	$t3kitValue = $layoutSetup->getLayoutSetup($layout)['config']['t3kitValue'];
-	if ($t3kitValue == 1){
+	if ($t3kitValue == 1 && $this->cObj->data['tx_gridelements_children'] > 0){
 	    $valName = $layoutSetup->getLayoutSetup($layout)['config']['rowsFieldName'];
 	    $spVal = $this->cObj->data['pi_flexform']['data']['columns']['lDEF'][$valName]['vDEF'];
 	    $csvColumns = "";
@@ -138,7 +136,7 @@ class Gridelements extends ContentObjectRenderer
 
 	// taras@pixelant.se
 	// here we will add special function for parsing data for out element
-	if ($t3kitValue == 1){
+	if ($t3kitValue == 1 && $this->cObj->data['tx_gridelements_children'] > 0){
 	    $this->parseDataForT3kitElement();
 	}
 
@@ -238,8 +236,6 @@ class Gridelements extends ContentObjectRenderer
                 };
 
                 usort($this->cObj->data['tx_gridelements_view_children'], $compareFunction);
-
-//		du::var_dump($this->cObj->data, "here");
 
                 $this->getDatabaseConnection()->sql_free_result($res);
             }

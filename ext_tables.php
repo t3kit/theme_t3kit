@@ -13,11 +13,6 @@ if (TYPO3_MODE === 'BE') {
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         ['source' => $contentElementIconFilePrefix . 'accordion.svg']
     );
-//    $iconRegistry->registerIcon(
-//        'content-elements-accordion4',
-//        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-//        ['source' => $contentElementIconFilePrefix . 'accordion.svg']
-//    );
     $iconRegistry->registerIcon(
         'content-elements-contentElementSlider',
         \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
@@ -108,7 +103,7 @@ if (TYPO3_MODE === 'BE') {
         require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php');
     }
 
-
+/*==================================================================================================================*/
     // don't remove this !!!
     //$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][] =
     //'EXT:gridelements/Classes/Hooks/DrawItem.php:GridElementsTeam\\Gridelements\\Hooks\\DrawItem';
@@ -122,4 +117,5 @@ if (TYPO3_MODE === 'BE') {
     } else {
 	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][$hookKey] = 'EXT:theme_t3kit/Classes/Hooks/DrawItem.php:T3kit\\themeT3kit\\Hooks\\DrawItem';
     }
+/*==================================================================================================================*/
 }

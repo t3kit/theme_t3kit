@@ -29,23 +29,6 @@ call_user_func(function() {
     );
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['accordion'] = 'content-elements-accordion';
 
-    //
-    // CTypes
-    //
-    // "accordion4"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'accordion4.title',
-            'accordion4',
-            'content-elements-accordion4'
-        ],
-        'login',
-        'after'
-    );
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['accordion4'] = 'content-elements-accordion4';
-
     // "contentElementSlider"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -328,24 +311,6 @@ call_user_func(function() {
         '
     ];
 
-    // "accordion4"
-//    $GLOBALS['TCA']['tt_content']['types']['accordion4'] = [
-//        'showitem' => '
-//                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-//                --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
-//                records;' . $contentElementLanguageFilePrefix . 'accordion.records_formlabe,
-//                rowDescription,
-//            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-//                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-//                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-//                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-//            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-//                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-//                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-//            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-//        '
-//    ];
-
     // "imageTextLink"
     $GLOBALS['TCA']['tt_content']['types']['imageTextLink'] = [
         'showitem' => '
@@ -496,7 +461,6 @@ call_user_func(function() {
         '
     ];
 
-
     //
     // Flexforms
     //
@@ -508,9 +472,6 @@ call_user_func(function() {
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
-
-    // "accordion4"
-//    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion4'] = 'FILE:EXT:theme_t3kit/Configuration/ContentElements/FlexForms/Accordion4.xml';
 
     // Add additional fields for tt_content
     $additionalColumns = [
@@ -558,93 +519,3 @@ call_user_func(function() {
 
 // gridelements TCA overrides
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', '--div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements, tx_gridelements_container, tx_gridelements_columns');
-
-//$tempColumns = array(
-//    'tx_gridelements_backend_layout' => array(
-//        'exclude' => 1,
-//        'label' => 'LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xml:tt_content.tx_gridelements_backend_layout',
-//        'config' => array(
-//            'type' => 'select',
-//            'renderType' => 'selectSingle',
-//            'itemsProcFunc' => 'GridElementsTeam\Gridelements\Backend\TtContent->layoutItemsProcFunc',
-//            'size' => 1,
-//            'selicon_cols' => 9,
-//            'maxitems' => 1,
-//            'default' => '',
-//            'showIconTable' => true
-//        )
-//    ),
-//    'tx_gridelements_children' => array(
-//        'exclude' => 1,
-//        'label' => 'LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xml:tt_content.tx_gridelements_children',
-//        'config' => array(
-//            'type' => 'inline',
-//            'appearance' => array(
-//                'levelLinksPosition' => 'top',
-//                'showPossibleLocalizationRecords' => true,
-//                'showRemovedLocalizationRecords' => true,
-//                'showAllLocalizationLink' => true,
-//                'showSynchronizationLink' => true,
-//                'enabledControls' => array(
-//                    'info' => true,
-//                    'new' => false,
-//                    'dragdrop' => false,
-//                    'sort' => false,
-//                    'hide' => true,
-//                    'delete' => true,
-//                    'localize' => true,
-//                )
-//            ),
-//            'inline' => array(
-//                'inlineNewButtonStyle' => 'display: inline-block;',
-//            ),
-//            'behaviour' => array(
-//                'localizationMode' => 'select',
-//                'localizeChildrenAtParentLocalization' => true,
-//            ),
-//            'foreign_table' => 'tt_content',
-//            'foreign_field' => 'tx_gridelements_container',
-//            'foreign_record_defaults' => array(
-//                'colPos' => -1,
-//            ),
-//            'foreign_sortby' => 'sorting',
-//            'size' => 5,
-//            'autoSizeMax' => 20,
-//        )
-//    ),
-//    'tx_gridelements_container' => array(
-//        'exclude' => 1,
-//        'label' => 'LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xml:tt_content.tx_gridelements_container',
-//        'config' => array(
-//            'type' => 'select',
-//            'renderType' => 'selectSingle',
-//            'items' => array(
-//                array(
-//                    '',
-//                    0
-//                ),
-//            ),
-//            'foreign_table' => 'tt_content',
-//            'foreign_table_where' => 'AND (tt_content.sys_language_uid = ###REC_FIELD_sys_language_uid### OR tt_content.sys_language_uid = -1) AND tt_content.pid=###CURRENT_PID### AND tt_content.CType=\'gridelements_pi1\' AND (tt_content.uid != ###THIS_UID###) AND (tt_content.tx_gridelements_container != ###THIS_UID### OR tt_content.tx_gridelements_container=0) ORDER BY tt_content.header, tt_content.uid',
-//            'dontRemapTablesOnCopy' => 'tt_content',
-//            'itemsProcFunc' => 'GridElementsTeam\Gridelements\Backend\TtContent->containerItemsProcFunc',
-//            'size' => 1,
-//            'minitems' => 0,
-//            'maxitems' => 1,
-//        )
-//    ),
-//    'tx_gridelements_columns' => array(
-//        'exclude' => 1,
-//        'label' => 'LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xml:tt_content.tx_gridelements_columns',
-//        'config' => array(
-//            'type' => 'select',
-//            'renderType' => 'selectSingle',
-//            'itemsProcFunc' => 'GridElementsTeam\Gridelements\Backend\TtContent->columnsItemsProcFunc',
-//            'size' => 1,
-//            'maxitems' => 1,
-//        )
-//    ),
-//);
-
-
-//\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);

@@ -41,6 +41,48 @@
 			    </config>
 			</TCEforms>
 		    </accordionMode>
+		    <tabCount>
+			<TCEforms>
+			    <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:flexform.countOfTabs</label>
+			    <config>
+				<type>select</type>
+				<items>
+				    <numIndex index="0">
+					<numIndex index="0">1</numIndex>
+					<numIndex index="1">1</numIndex>
+				    </numIndex>
+				    <numIndex index="1">
+					<numIndex index="0">2</numIndex>
+					<numIndex index="1">2</numIndex>
+				    </numIndex>
+				    <numIndex index="2">
+					<numIndex index="0">3</numIndex>
+					<numIndex index="1">3</numIndex>
+				    </numIndex>
+				    <numIndex index="3">
+					<numIndex index="0">4</numIndex>
+					<numIndex index="1">4</numIndex>
+				    </numIndex>
+				    <numIndex index="4">
+					<numIndex index="0">5</numIndex>
+					<numIndex index="1">5</numIndex>
+				    </numIndex>
+				    <numIndex index="5">
+					<numIndex index="0">6</numIndex>
+					<numIndex index="1">6</numIndex>
+				    </numIndex>
+				    <numIndex index="6">
+					<numIndex index="0">7</numIndex>
+					<numIndex index="1">7</numIndex>
+				    </numIndex>
+				    <numIndex index="7">
+					<numIndex index="0">8</numIndex>
+					<numIndex index="1">8</numIndex>
+				    </numIndex>
+				</items>
+			    </config>
+			</TCEforms>
+		    </tabCount>
 		</el>
 	    </ROOT>
 	</columns>

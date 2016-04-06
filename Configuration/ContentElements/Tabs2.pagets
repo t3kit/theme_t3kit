@@ -5,6 +5,10 @@ tx_gridelements.setup.tabs2 {
     icon = EXT:theme_t3kit/Resources/Public/Icons/ContentElements/tabs.svg
 
     config {
+	t3kitValue = 1
+	rowsFieldName = tabCount
+	rowsDefaultConfig.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tab
+
         colCount = 1
         rowCount = 1
         rows {
@@ -19,5 +23,3 @@ tx_gridelements.setup.tabs2 {
         }
     }
 }
-
-mod.web_layout.tt_content.preview.tabs2 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Tabs2.html

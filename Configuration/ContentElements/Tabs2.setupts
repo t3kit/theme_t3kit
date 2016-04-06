@@ -9,7 +9,6 @@ lib.gridelements {
             }
         }
 
-
         cObject = FLUIDTEMPLATE
         cObject {
             layoutRootPaths {

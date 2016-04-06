@@ -9,7 +9,6 @@ lib.gridelements {
             }
         }
 
-
         cObject = FLUIDTEMPLATE
         cObject {
             layoutRootPaths {
@@ -21,6 +20,7 @@ lib.gridelements {
             }
             file = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/Accordion2.html
             dataProcessing {
+
                 # "inherit" from lib.fluidContent
                 365 < lib.fluidContent.dataProcessing.365
                 375 < lib.fluidContent.dataProcessing.375
@@ -44,6 +44,8 @@ lib.gridelements {
                         12 = gridelements-example-layout-2
                     }
                 }
+
+
             }
         }
     }
