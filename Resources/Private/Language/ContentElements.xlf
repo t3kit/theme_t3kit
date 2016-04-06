@@ -140,6 +140,12 @@
 	    <trans-unit id="accordion2.title">
                 <source>Accordion 2</source>
             </trans-unit>
+	    <trans-unit id="accordion3.title">
+                <source>Accordion 3</source>
+            </trans-unit>
+	    <trans-unit id="accordion4.title">
+                <source>Accordion 4</source>
+            </trans-unit>
 
             <trans-unit id="logoCarousel.title">
                 <source>Logo Carousel</source>
@@ -250,6 +256,32 @@
             </trans-unit>
             <trans-unit id="label.default">
                 <source>Default</source>
+            </trans-unit>
+
+	    <!--tabs for accordion and tabs elements-->
+	    <trans-unit id="tab1">
+                <source>Tab 1</source>
+            </trans-unit>
+	    <trans-unit id="tab2">
+                <source>Tab 2</source>
+            </trans-unit>
+	    <trans-unit id="tab3">
+                <source>Tab 3</source>
+            </trans-unit>
+	    <trans-unit id="tab4">
+                <source>Tab 4</source>
+            </trans-unit>
+	    <trans-unit id="tab5">
+                <source>Tab 5</source>
+            </trans-unit>
+	    <trans-unit id="tab6">
+                <source>Tab 6</source>
+            </trans-unit>
+	    <trans-unit id="tab7">
+                <source>Tab 7</source>
+            </trans-unit>
+	    <trans-unit id="tab8">
+                <source>Tab 8</source>
             </trans-unit>
         </body>
     </file>

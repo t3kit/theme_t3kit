@@ -44,3 +44,56 @@ lib.fluidContent {
 
 # Include setupTS files from fileadmin/templates/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/TypoScript/" extensions="setupts">
+
+
+################################################################################
+################################################################################
+### TS for grid accordeon3 and tabs3
+################################################################################
+################################################################################
+/*
+lib.tt_content.shortcut.pages = COA
+lib.tt_content.shortcut.pages {
+	10 = USER
+	10 {
+		#userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->user_getTreeList
+		userFunc = T3kit\themeT3kit\Plugin\GridElements->user_getTreeList
+    }
+	20 = CONTENT
+	20 {
+		table = tt_content
+		select {
+			pidInList.data = register:pidInList
+			where = colPos >= 0
+			languageField = sys_language_uid
+			orderBy = colPos,sorting
+			orderBy.dataWrap = FIND_IN_SET(pid,'{register:pidInList}'),|
+		}
+	}
+}
+*/
+#lib.tt_content.shortcut.pages.10.userFunc = T3kit\themeT3kit\Plugin\GridElements\Gridelements->user_getTreeList
+
+/*
+plugin.tx_gridelements_pi1 >
+tt_content.gridelements_pi1 >
+tt_content.gridelements_pi1 = COA
+tt_content.gridelements_pi1 {
+	#10 =< lib.stdheader
+	20 = COA
+	20 {
+		10 = USER
+		10 {
+			#userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->main
+			userFunc = T3kit\themeT3kit\Plugin\GridElements->main
+			setup {
+				default < lib.gridelements.defaultGridSetup
+			}
+		}
+	}
+}
+
+tt_content.gridelements_view < tt_content.gridelements_pi1
+*/
+tt_content.gridelements_pi1.20.10.userFunc = T3kit\themeT3kit\Plugin\GridElements\Gridelements->main
+tt_content.gridelements_view < tt_content.gridelements_pi1

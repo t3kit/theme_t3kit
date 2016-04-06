@@ -1,6 +1,6 @@
 lib.gridelements {
-    accordion2 < .defaultGridSetup
-    accordion2 {
+    accordion3 < .defaultGridSetup
+    accordion3 {
         columns.0 {
             renderObj >
             renderObj = COA
@@ -19,8 +19,9 @@ lib.gridelements {
             partialRootPaths {
                 20 = EXT:fluid_styled_content/Resources/Private/Partials
             }
-            file = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/Accordion2.html
+            file = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/Accordion3.html
             dataProcessing {
+
                 # "inherit" from lib.fluidContent
                 365 < lib.fluidContent.dataProcessing.365
                 375 < lib.fluidContent.dataProcessing.375
@@ -44,9 +45,11 @@ lib.gridelements {
                         12 = gridelements-example-layout-2
                     }
                 }
+
+
             }
         }
     }
 }
 
-tt_content.gridelements_pi1.20.10.setup.accordion2 < lib.gridelements.accordion2
+tt_content.gridelements_pi1.20.10.setup.accordion3 < lib.gridelements.accordion3

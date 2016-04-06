@@ -1,0 +1,28 @@
+
+tx_gridelements.setup.accordion3 {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion3.title
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/ContentElements/FlexForms/Accordrion3.xml
+    icon = EXT:theme_t3kit/Resources/Public/Icons/ContentElements/accordion.svg
+
+    config {
+        colCount = 1
+        rowCount = 1
+	t3kitValue = 1
+	rowsFieldName = rowCount
+	rowsDefaultConfig.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tab
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        colPos = 0
+                    }
+                }
+            }
+        }
+    }
+}
+#tx_gridelements.overruleRecords = accordion3
+
+#mod.web_layout.tt_content.preview.accordion2 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/BE/Accordion2.html

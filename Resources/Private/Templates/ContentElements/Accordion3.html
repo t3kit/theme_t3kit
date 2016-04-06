@@ -1,0 +1,63 @@
+{namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
+
+<f:layout name="HeaderContentFooter" />
+
+ <f:debug>{_all}</f:debug>
+
+<f:section name="content">
+    <!-- theme_t3kit: Templates/ContentElements/Accordion2.html [begin] -->
+    <f:if condition="{data.tx_gridelements_view_children}">
+	<div class="panel-group" id="accordion-{data.uid}" role="tablist" aria-multiselectable="{f:if(condition: '{data.flexform_accordionMode} >= 2', then: 'TRUE', else: 'FALSE')}">
+
+	    <f:for each="{data.tx_gridelements_t3kit_values}" as="item" iteration="accordionIteration">
+
+		<div class="panel panel-default">
+		    <div class="panel-heading" role="tab" id="heading-{data.uid}-{item.uid}">
+			<h4 class="panel-title">
+			    <a data-toggle="collapse" {f:if(condition: '{data.flexform_accordionMode} <= 1', then: 'data-parent="#accordion-{data.uid}"', else: '')} href="#collapse-{data.uid}-{item.uid}">{item.header}</a>
+			</h4>
+		    </div>
+
+		    <f:switch expression="{data.flexform_accordionMode}">
+			<f:case value="1">
+			    <f:comment><!-- 1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.flexform.accordionMode_allClosedSingleSelect --></f:comment>
+			    <f:render section="renderTabpanel" arguments="{data:data, accordion: item, isExpanded: 0}" />
+			</f:case>
+			<f:case value="2">
+			    <f:comment><!-- 2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.flexform.accordionMode_allClosedMultiSelect --></f:comment>
+			    <f:render section="renderTabpanel" arguments="{data:data, accordion: item, isExpanded: 0}" />
+			</f:case>
+			<f:case value="3">
+			    <f:comment><!-- 3 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.flexform.accordionMode_allOpen --></f:comment>
+			    <f:render section="renderTabpanel" arguments="{data:data, accordion: item, isExpanded: 1}" />
+			</f:case>
+			<f:case default="TRUE">
+			    <f:comment><!-- DEFAULT = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.flexform.accordionMode_firstChildOpen --></f:comment>
+			    <f:if condition="{accordionIteration.isFirst}">
+				<f:then>
+				    <f:render section="renderTabpanel" arguments="{data:data, accordion: item, isExpanded: 1}" />
+				</f:then>
+				<f:else>
+				    <f:render section="renderTabpanel" arguments="{data:data, accordion: item, isExpanded: 0}" />
+				</f:else>
+			    </f:if>
+			</f:case>
+		    </f:switch>
+		</div>
+
+	    </f:for>
+	</div>
+    </f:if>
+    <!-- theme_t3kit: Templates/ContentElements/Accordion2.html [end] -->
+</f:section>
+
+<f:section name="renderTabpanel">
+    <div id="collapse-{data.uid}-{accordion.uid}" class="panel-collapse collapse {f:if(condition: isExpanded, then: 'in', else: '')}" role="tabpanel">
+	<div class="panel-body">
+	    <f:format.raw>
+		<xtools:get.element data="{data}" key="tx_gridelements_view_column_{accordion.column}"></xtools:get.element>
+	    </f:format.raw>
+	</div>
+    </div>
+</f:section>
+
