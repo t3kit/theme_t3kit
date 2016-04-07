@@ -62,7 +62,6 @@ themes.configuration.less.var.headerTopBgColor =
 themes.configuration.less.var.headerTopColor =
 
 
-
 #Header Middle
 #############################################
 
@@ -110,8 +109,14 @@ themes.configuration.less.var.headerBorderColor =
 
 # Navigation
 #############################################
-# cat=menu,advanced/header_main_menu; type=string; label= Navigation Height
+
+# customsubcategory=main_menu=Main Menu
+
+# cat=menu,advanced/main_menu; type=string; label= Navigation Height
 themes.configuration.less.var.navHeight =
+
+# cat=menu,advanced/main_menu; type=options[left,right]; label= Mobile Navigation Toggle Btn
+themes.configuration.less.var.mobileNavToggleBtn = left
 
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Color
 themes.configuration.less.var.navLinkColor =
@@ -136,10 +141,6 @@ themes.configuration.less.var.navBackgroundColor =
 
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Search Button Color
 themes.configuration.less.var.navSearchBtnColor =
-
-
-
-
 
 
 
