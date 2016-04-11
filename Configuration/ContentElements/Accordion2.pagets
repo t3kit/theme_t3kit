@@ -1,4 +1,3 @@
-
 tx_gridelements.setup.accordion2 {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion2.title
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.description
@@ -7,6 +6,7 @@ tx_gridelements.setup.accordion2 {
 
     config {
 	t3kitValue = 1
+	t3kitBEView = t3kit-accordeon2
 	rowsFieldName = tabCount
 	rowsDefaultConfig.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tab
 

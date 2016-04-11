@@ -6,6 +6,7 @@ tx_gridelements.setup.tabs2 {
 
     config {
 	t3kitValue = 1
+	t3kitBEView = t3kit-tabs2
 	rowsFieldName = tabCount
 	rowsDefaultConfig.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tab
 

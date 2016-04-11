@@ -1,5 +1,4 @@
 <?php
-//namespace GridElementsTeam\Gridelements\Plugin;
 namespace T3kit\themeT3kit\Plugin\GridElements;
 
 /***************************************************************
@@ -47,6 +46,11 @@ class Gridelements extends ContentObjectRenderer
      * @var PageRenderer
      */
     protected $pageRenderer;
+
+    /**
+     * @var LanguageService
+     */
+    protected $languageService;
 
     public $prefixId = 'Gridelements'; // Same as class name
     public $scriptRelPath = 'Classes/Plugin/Gridelements.php'; // Path to this script relative to the extension dir.
@@ -137,7 +141,7 @@ class Gridelements extends ContentObjectRenderer
 	// taras@pixelant.se
 	// here we will add special function for parsing data for out element
 	if ($t3kitValue == 1 && $this->cObj->data['tx_gridelements_children'] > 0){
-	    $this->parseDataForT3kitElement();
+	    $this->parseDataForT3kitElement($layoutSetup);
 	}
 
         $content = !empty($typoScriptSetup) ? $this->cObj->stdWrap($content, $typoScriptSetup) : $content;
@@ -148,15 +152,33 @@ class Gridelements extends ContentObjectRenderer
     /**
      * create new element 'tx_gridelements_t3kit_values' at data array,
      * srecial for new t3kit elements
+     *
+     * @param \GridElementsTeam\Gridelements\Backend\LayoutSetup $layoutSetup
      */
-    private function parseDataForT3kitElement (){
+    private function parseDataForT3kitElement ($layoutSetup){
 	$sortedColumns = $this->cObj->data['tx_gridelements_view_raw_columns'];
 	ksort($sortedColumns);
 	$newArray = array();
+
+	// get label from TS
+	$labelTS = $layoutSetup->getLayoutSetup($this->cObj->data['tx_gridelements_backend_layout'])['config']['rowsDefaultConfig.']['label'];
+	// get labels from flexform
+	$flexFormData = $this->cObj->data['pi_flexform']['data']['columns']['lDEF'];
+
 	foreach ($sortedColumns as $col => $data){
+	    $header = "";
+	    if (isset($flexFormData['tabHeader_'.($col + 1)]['vDEF']) &&
+		    !empty($flexFormData['tabHeader_'.($col + 1)]['vDEF'])){
+
+		$header = $flexFormData['tabHeader_'.($col + 1)]['vDEF'];
+
+	    } elseif ( !empty ($labelTS)){
+		$header = $GLOBALS['LANG']->sL($labelTS . ($col + 1) );
+	    }
+
 	    $newArray[] = array ("column" => $col,
 		"uid" => $data[0]['uid'],
-		"header" => $data[0]['header']
+		"header" => $header
 		);
 	}
 	$this->cObj->data['tx_gridelements_t3kit_values'] = $newArray;

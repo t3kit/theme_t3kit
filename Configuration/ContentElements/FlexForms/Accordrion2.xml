@@ -41,8 +41,10 @@
 			    </config>
 			</TCEforms>
 		    </accordionMode>
+
 		    <tabCount>
 			<TCEforms>
+			    <onChange>reload</onChange>
 			    <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:flexform.countOfTabs</label>
 			    <config>
 				<type>select</type>
@@ -83,6 +85,78 @@
 			    </config>
 			</TCEforms>
 		    </tabCount>
+
+		    <tabHeader_1>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab1</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_1>
+
+		    <tabHeader_2>
+			<displayCond>FIELD:tabCount:IN:2,3,4,5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab2</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_2>
+
+		    <tabHeader_3>
+			<displayCond>FIELD:tabCount:IN:3,4,5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab3</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_3>
+
+		    <tabHeader_4>
+			<displayCond>FIELD:tabCount:IN:4,5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab4</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_4>
+
+		    <tabHeader_5>
+			<displayCond>FIELD:tabCount:IN:5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab5</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_5>
+
+		    <tabHeader_6>
+			<displayCond>FIELD:tabCount:IN:6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab6</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_6>
+
+		    <tabHeader_7>
+			<displayCond>FIELD:tabCount:IN:7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab7</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_7>
+
+		    <tabHeader_8>
+			<displayCond>FIELD:tabCount:IN:8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab8</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_8>
+
 		</el>
 	    </ROOT>
 	</columns>
