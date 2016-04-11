@@ -137,6 +137,13 @@
                 <source>All items are expanded at load.</source>
             </trans-unit>
 
+	    <trans-unit id="accordion2.title">
+                <source>Accordion 2</source>
+            </trans-unit>
+	    <trans-unit id="flexform.countOfTabs">
+                <source>Count of tabs</source>
+            </trans-unit>
+
             <trans-unit id="logoCarousel.title">
                 <source>Logo Carousel</source>
             </trans-unit>
@@ -178,6 +185,14 @@
             <trans-unit id="tabs.layout.1">
                 <source>Pills</source>
             </trans-unit>
+
+	    <trans-unit id="tabs2.title">
+                <source>Tabs 2</source>
+            </trans-unit>
+	    <trans-unit id="tabs2.flexform.class">
+                <source>Tabs mode</source>
+            </trans-unit>
+
 
             <trans-unit id="fullWidthImage.title">
                 <source>Full Width Image</source>
@@ -239,6 +254,62 @@
             <trans-unit id="label.default">
                 <source>Default</source>
             </trans-unit>
+
+	    <!--tabs for accordion and tabs elements-->
+	    <trans-unit id="tab">
+                <source>Tab</source>
+            </trans-unit>
+	    <trans-unit id="tab1">
+                <source>Tab 1</source>
+            </trans-unit>
+	    <trans-unit id="tab2">
+                <source>Tab 2</source>
+            </trans-unit>
+	    <trans-unit id="tab3">
+                <source>Tab 3</source>
+            </trans-unit>
+	    <trans-unit id="tab4">
+                <source>Tab 4</source>
+            </trans-unit>
+	    <trans-unit id="tab5">
+                <source>Tab 5</source>
+            </trans-unit>
+	    <trans-unit id="tab6">
+                <source>Tab 6</source>
+            </trans-unit>
+	    <trans-unit id="tab7">
+                <source>Tab 7</source>
+            </trans-unit>
+	    <trans-unit id="tab8">
+                <source>Tab 8</source>
+            </trans-unit>
+
+	    <!--header for tabs elements-->
+	    <trans-unit id="hedaer.tab1">
+                <source>Enter header for: Tab 1</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab2">
+                <source>Enter header for: Tab 2</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab3">
+                <source>Enter header for: Tab 3</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab4">
+                <source>Enter header for: Tab 4</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab5">
+                <source>Enter header for: Tab 5</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab6">
+                <source>Enter header for: Tab 6</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab7">
+                <source>Enter header for: Tab 7</source>
+            </trans-unit>
+	    <trans-unit id="hedaer.tab8">
+                <source>Enter header for: Tab 8</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

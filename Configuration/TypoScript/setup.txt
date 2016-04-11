@@ -44,3 +44,12 @@ lib.fluidContent {
 
 # Include setupTS files from fileadmin/templates/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/TypoScript/" extensions="setupts">
+
+
+################################################################################
+################################################################################
+### TS for grid accordeon3 and tabs3
+################################################################################
+################################################################################
+tt_content.gridelements_pi1.20.10.userFunc = T3kit\themeT3kit\Plugin\GridElements\Gridelements->main
+tt_content.gridelements_view < tt_content.gridelements_pi1

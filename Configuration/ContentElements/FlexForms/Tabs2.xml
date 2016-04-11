@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+	<langDisable>1</langDisable>
+    </meta>
+    <sheets>
+	<columns>
+	    <ROOT>
+		<TCEforms>
+		    <sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs2.title</sheetTitle>
+		</TCEforms>
+		<el>
+		    <tabsMode>
+			<TCEforms>
+			    <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs2.flexform.class</label>
+			    <config>
+				<type>select</type>
+				<items>
+				    <numIndex index="0">
+					<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.0</numIndex>
+					<numIndex index="1">nav nav-tabs</numIndex>
+				    </numIndex>
+				    <numIndex index="1">
+					<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tabs.layout.1</numIndex>
+					<numIndex index="1">nav nav-pills</numIndex>
+				    </numIndex>
+				</items>
+			    </config>
+			</TCEforms>
+		    </tabsMode>
+
+		    <tabCount>
+			<TCEforms>
+			    <onChange>reload</onChange>
+			    <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:flexform.countOfTabs</label>
+			    <config>
+				<type>select</type>
+				<items>
+				    <numIndex index="0">
+					<numIndex index="0">1</numIndex>
+					<numIndex index="1">1</numIndex>
+				    </numIndex>
+				    <numIndex index="1">
+					<numIndex index="0">2</numIndex>
+					<numIndex index="1">2</numIndex>
+				    </numIndex>
+				    <numIndex index="2">
+					<numIndex index="0">3</numIndex>
+					<numIndex index="1">3</numIndex>
+				    </numIndex>
+				    <numIndex index="3">
+					<numIndex index="0">4</numIndex>
+					<numIndex index="1">4</numIndex>
+				    </numIndex>
+				    <numIndex index="4">
+					<numIndex index="0">5</numIndex>
+					<numIndex index="1">5</numIndex>
+				    </numIndex>
+				    <numIndex index="5">
+					<numIndex index="0">6</numIndex>
+					<numIndex index="1">6</numIndex>
+				    </numIndex>
+				    <numIndex index="6">
+					<numIndex index="0">7</numIndex>
+					<numIndex index="1">7</numIndex>
+				    </numIndex>
+				    <numIndex index="7">
+					<numIndex index="0">8</numIndex>
+					<numIndex index="1">8</numIndex>
+				    </numIndex>
+				</items>
+			    </config>
+			</TCEforms>
+		    </tabCount>
+
+		    <tabHeader_1>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab1</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_1>
+
+		    <tabHeader_2>
+			<displayCond>FIELD:tabCount:IN:2,3,4,5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab2</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_2>
+
+		    <tabHeader_3>
+			<displayCond>FIELD:tabCount:IN:3,4,5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab3</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_3>
+
+		    <tabHeader_4>
+			<displayCond>FIELD:tabCount:IN:4,5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab4</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_4>
+
+		    <tabHeader_5>
+			<displayCond>FIELD:tabCount:IN:5,6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab5</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_5>
+
+		    <tabHeader_6>
+			<displayCond>FIELD:tabCount:IN:6,7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab6</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_6>
+
+		    <tabHeader_7>
+			<displayCond>FIELD:tabCount:IN:7,8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab7</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_7>
+
+		    <tabHeader_8>
+			<displayCond>FIELD:tabCount:IN:8</displayCond>
+			<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:hedaer.tab8</label>
+			<config>
+			    <type>input</type>
+			    <size>30</size>
+			</config>
+		    </tabHeader_8>
+
+		</el>
+	    </ROOT>
+	</columns>
+    </sheets>
+</T3DataStructure>
+
