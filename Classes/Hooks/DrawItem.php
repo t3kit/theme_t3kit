@@ -81,7 +81,6 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
         $parserRows = null;
 
         if (isset($layout['config']) && isset($layout['config']['rows.'])) {
-	    // taras@pixelant.se
 	    // we need to check spesial value, that was added at TS 't3kitValue'
 	    if (isset($layout['config']['t3kitValue']) && $layout['config']['t3kitValue'] == 1){
 		// if this value was set, then we need to build new grid
@@ -184,11 +183,22 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 	    }
 	}
 
+	// set same header container for all types of grid elements
+	$grid = '<div class="t3-grid-container t3-grid-element-container' .
+		($layoutSetup['frame'] ? ' t3-grid-container-framed t3-grid-container-' . $layoutSetup['frame'] : '') .
+		($layoutSetup['top_level_layout'] ? ' t3-grid-tl-container' : '') . '">';
+
+	if ($layoutSetup['frame'] || $this->helper->getBackendUser()->uc['showGridInformation'] === 1) {
+	    $grid .= '<h4 class="t3-grid-container-title-' . (int) $layoutSetup['frame'] . '">' .
+		BackendUtility::wrapInHelp('tx_gridelements_backend_layouts', 'title', $this->languageService->sL($layoutSetup['title']), array(
+		    'title' => $this->languageService->sL($layoutSetup['title']),
+		    'description' => $this->languageService->sL($layoutSetup['description'])
+		)) . '</h4>';
+	}
+
 	switch ($t3kitView) {
 	    case "t3kit-accordeon2":
-		$grid = '<div class="t3-grid-container t3-grid-element-container t3kit-accordeon2-grid-container">';
-
-		$grid .= '<div class="panel-group" id="t3kit-accordeon2-'.$row['uid'].'" role="tablist" aria-multiselectable="TRUE">';
+		$grid .= '<div class="panel-group" id="t3kit-accordeon2-'.$row['uid'].'" role="tablist" aria-multiselectable="true">';
 
 		for ($i = 0; $i < $colCount; $i++){
 		    $grid .= '<div class="panel panel-default">';
@@ -196,7 +206,8 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		    // build header for accordion
 		    $grid .= '<div class="panel-heading" role="tab" id="t3kit-accordeon2-heading-'.$row['uid'].'-'.$i.'">';
 		    $grid .= '<h4 class="panel-title">';
-		    $grid .= '<a role="button" data-toggle="collapse" data-parent="#t3kit-accordeon2-'.$row['uid'].'"'
+//		    $grid .= '<a role="button" data-toggle="collapse" data-parent="#t3kit-accordeon2-'.$row['uid'].'"'
+		    $grid .= '<a role="button" data-toggle="collapse" '
 			    . ' href="#t3kit-accordeon2-collapse-'.$row['uid'].'-'.$i.'" aria-expanded="FALSE"'
 			    . ' aria-controls="t3kit-accordeon2-collapse-'.$row['uid'].'-'.$i.'">';
 
@@ -212,18 +223,30 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		    // build body for accordeons
 		    $grid .= '<div  id="t3kit-accordeon2-collapse-'.$row['uid'].'-'.$i.'" class="panel-collapse collapse" role="tabpanel">';
 		    $grid .= '<div class="panel-body">';
+
+		    // add default table for our custom element
+		    $grid .= '<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" class="t3-page-columns t3-grid-table"><tr>';
+
+		    $expanded = $this->helper->getBackendUser()->uc['moduleData']['page']['gridelementsCollapsedColumns'][$row['uid'] . '_' . $i] ? 'collapsed' : 'expanded';
+		    $grid .= '<td valign="top"' . 'data-colpos="' . $i . '" '
+			    . 'data-columnkey="' . $specificIds['uid'] . '_' . $i . '" '
+			    . 'class="t3-grid-cell t3js-page-column t3-page-column t3-page-column-' . $i . ' t3-allow-all" '
+			    . 'data-state="' . $expanded . '">';
+
 		    $grid .= $gridContent[$i];
+
+		    $grid .= '</td></tr></table>';
+		    // end of default table
+
 		    $grid .= '</div></div>';
 
 		    $grid .= '</div>';
 		}
 
-		$grid .= '</div></div>';
+		$grid .= '</div>';
 		break;
 
 	    case "t3kit-tabs2":
-		$grid = '<div class="t3-grid-container t3-grid-element-container t3kit-tabs2-grid-container">';
-
 		$grid .= '<div class="tabs">';
 
 		// start: build head of tabs
@@ -235,7 +258,6 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		    } else {
 			$grid .= '<li class="t3kit-tabs2-grid_li-item">';
 		    }
-
 		    $grid .= '<a href="#t3kit-tabs2-'.$row['uid'].'-'.$i.'" data-toggle="tab" role="tab">';
 
 		    // set headers from flexform
@@ -259,23 +281,29 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		    } else {
 			$grid .= '<div role="tabpanel" class="tab-pane fade" id="t3kit-tabs2-'.$row['uid'].'-'.$i.'">';
 		    }
+		    // add default table for our custom element
+		    $grid .= '<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" class="t3-page-columns t3-grid-table"><tr>';
+
+		    $expanded = $this->helper->getBackendUser()->uc['moduleData']['page']['gridelementsCollapsedColumns'][$row['uid'] . '_' . $i] ? 'collapsed' : 'expanded';
+		    $grid .= '<td valign="top"' . 'data-colpos="' . $i . '" '
+			    . 'data-columnkey="' . $specificIds['uid'] . '_' . $i . '" '
+			    . 'class="t3-grid-cell t3js-page-column t3-page-column t3-page-column-' . $i . ' t3-allow-all" '
+			    . 'data-state="' . $expanded . '">';
+
 		    $grid .= $gridContent[$i];
+
+		    $grid .= '</td></tr></table>';
+		    // end of default table
+
 		    $grid .= '</div>';
 		}
 		$grid .= '</div>';
 		// end: build body of tabs
 
-		$grid .= '</div></div>';
+		$grid .= '</div>';
 		break;
 	    default:
 		// default grid rendefing of view
-		$grid = '<div class="t3-grid-container t3-grid-element-container' . ($layoutSetup['frame'] ? ' t3-grid-container-framed t3-grid-container-' . $layoutSetup['frame'] : '') . ($layoutSetup['top_level_layout'] ? ' t3-grid-tl-container' : '') . '">';
-		if ($layoutSetup['frame'] || $this->helper->getBackendUser()->uc['showGridInformation'] === 1) {
-		    $grid .= '<h4 class="t3-grid-container-title-' . (int) $layoutSetup['frame'] . '">' . BackendUtility::wrapInHelp('tx_gridelements_backend_layouts', 'title', $this->languageService->sL($layoutSetup['title']), array(
-				'title' => $this->languageService->sL($layoutSetup['title']),
-				'description' => $this->languageService->sL($layoutSetup['description'])
-			    )) . '</h4>';
-		}
 		$grid .= '<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" class="t3-page-columns t3-grid-table">';
 		// add colgroups
 		$colCount = 0;
@@ -353,15 +381,11 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		    }
 		    $grid .= '</tr>';
 		}
-		$grid .= '</table></div>';
+		$grid .= '</table>';
 		break;
 	}
-
+	
+	$grid .= '</div>';
 	return $grid;
     }
-
-    private function parseGridHeader (){
-
-    }
-
 }

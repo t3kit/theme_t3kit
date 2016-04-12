@@ -90,7 +90,6 @@ class Gridelements extends ContentObjectRenderer
         $availableColumns = $layoutSetup->getLayoutColumns($layout);
         $csvColumns = str_replace('-2,-1,', '', $availableColumns['CSV']);
 
-	// taras@pixelant.se
 	// change variable $csvColumns to get all columns for our element
 	// this columns are saved at DB,but we haven't properly TS configuration
 	// so we will 'build it on fly'
@@ -138,7 +137,6 @@ class Gridelements extends ContentObjectRenderer
         // before returning the content
         unset($typoScriptSetup['columns.']);
 
-	// taras@pixelant.se
 	// here we will add special function for parsing data for out element
 	if ($t3kitValue == 1 && $this->cObj->data['tx_gridelements_children'] > 0){
 	    $this->parseDataForT3kitElement($layoutSetup);
