@@ -63,6 +63,12 @@ plugin.tx_dyncss.overrides {
         if.isTrue = {$themes.configuration.less.var.headerTopColor}
     }
 
+    header-top-mobile-menu = TEXT
+    header-top-mobile-menu {
+        value = {$themes.configuration.less.var.headerTopMobileMenu}
+        if.isTrue = {$themes.configuration.less.var.headerTopMobileMenu}
+    }
+
 
     header-middle-height = TEXT
     header-middle-height {

@@ -61,6 +61,8 @@ themes.configuration.less.var.headerTopBgColor =
 # cat=colors,advanced/header_top_colors; type=color; label= Header Top Color
 themes.configuration.less.var.headerTopColor =
 
+# cat=header,advanced/header_top; type=options[left,right]; label= Header Top Mobile Menu
+themes.configuration.less.var.headerTopMobileMenu = left
 
 
 #Header Middle
