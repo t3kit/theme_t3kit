@@ -1,6 +1,6 @@
 # Name and description of the theme (required)
-title            : theme_t3kit
-version          : 0.0.2
+title            : Base Theme fot t3kit project
+version          : 1.0.0
 description      :  |
   A t3kit theme template -
   This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings. http://t3kit.github.io/theme_t3kit_customizer
@@ -15,8 +15,7 @@ keywords:
 screenshots:
   -
     file           : EXT:theme_t3kit/Meta/Screenshots/screenshot.png
-    caption        : t3kit theme
-
+    caption        : Theme t3kit
 
 # Whether a documentation page is available (optional)
 documentation:

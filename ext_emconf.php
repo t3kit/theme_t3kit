@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Theme t3kit',
-	'description' => 'Theme t3kit',
+	'description' => 'Base TYPO3 Theme fot t3kit project',
 	'category' => 'templates',
 	'shy' => 0,
 	'version' => '1.0.0',
