@@ -3,7 +3,7 @@ namespace T3kit\themeT3kit\Hooks;
 
 /***************************************************************
  *  Copyright notice
- *  (c) 2013 Jo Hasenau <info@cybercraft.de>
+ *  (c) 2016 Taras Drowalyuk <taras@pixelant.se>
  *  All rights reserved
  *  This script is part of the TYPO3 project. The TYPO3 project is
  *  free software; you can redistribute it and/or modify
@@ -20,33 +20,17 @@ namespace T3kit\themeT3kit\Hooks;
  ***************************************************************/
 
 use GridElementsTeam\Gridelements\Backend\LayoutSetup;
-use GridElementsTeam\Gridelements\Helper\Helper;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Backend\View\PageLayoutView;
-use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
-use TYPO3\CMS\Core\Database\DatabaseConnection;
-use TYPO3\CMS\Core\Database\QueryGenerator;
-use TYPO3\CMS\Core\Database\ReferenceIndex;
-use TYPO3\CMS\Core\Imaging\Icon;
-use TYPO3\CMS\Core\Imaging\IconFactory;
-use TYPO3\CMS\Core\Messaging\FlashMessage;
-use TYPO3\CMS\Core\Messaging\FlashMessageService;
-use TYPO3\CMS\Core\SingletonInterface;
-use TYPO3\CMS\Core\Type\Bitmask\Permission;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Versioning\VersionState;
-use TYPO3\CMS\Lang\LanguageService;
-
-//use TYPO3\CMS\Extbase\Utility\DebuggerUtility as du;
 
 /**
  * Class/Function which manipulates the rendering of item example content and replaces it with a grid of child elements.
  *
- * @author Jo Hasenau <info@cybercraft.de>
- * @package TYPO3
- * @subpackage tx_gridelements
+ * @author Taras Drowalyuk <taras@pixelant.se>
+ *
  */
-class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implements PageLayoutViewDrawItemHookInterface, SingletonInterface
+class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem
 {
     /**
      * renders the HTML output for elements of the CType gridelements_pi1
@@ -206,7 +190,6 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		    // build header for accordion
 		    $grid .= '<div class="panel-heading" role="tab" id="t3kit-accordeon2-heading-'.$row['uid'].'-'.$i.'">';
 		    $grid .= '<h4 class="panel-title">';
-//		    $grid .= '<a role="button" data-toggle="collapse" data-parent="#t3kit-accordeon2-'.$row['uid'].'"'
 		    $grid .= '<a role="button" data-toggle="collapse" '
 			    . ' href="#t3kit-accordeon2-collapse-'.$row['uid'].'-'.$i.'" aria-expanded="FALSE"'
 			    . ' aria-controls="t3kit-accordeon2-collapse-'.$row['uid'].'-'.$i.'">';
@@ -303,88 +286,11 @@ class DrawItem extends \GridElementsTeam\Gridelements\Hooks\DrawItem //implement
 		$grid .= '</div>';
 		break;
 	    default:
-		// default grid rendefing of view
-		$grid .= '<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%" class="t3-page-columns t3-grid-table">';
-		// add colgroups
-		$colCount = 0;
-		$rowCount = 0;
-		if (isset($layoutSetup['config'])) {
-		    if (isset($layoutSetup['config']['colCount'])) {
-			$colCount = (int) $layoutSetup['config']['colCount'];
-		    }
-		    if (isset($layoutSetup['config']['rowCount'])) {
-			$rowCount = (int) $layoutSetup['config']['rowCount'];
-		    }
-		}
-		$grid .= '<colgroup>';
-		for ($i = 0; $i < $colCount; $i++) {
-		    $grid .= '<col style="width:' . (100 / $colCount) . '%"></col>';
-		}
-		$grid .= '</colgroup>';
-		// cycle through rows
-		for ($layoutRow = 1; $layoutRow <= $rowCount; $layoutRow++) {
-		    $rowConfig = $layoutSetup['config']['rows.'][$layoutRow . '.'];
-		    if (!isset($rowConfig)) {
-			continue;
-		    }
-		    $grid .= '<tr>';
-		    for ($col = 1; $col <= $colCount; $col++) {
-			$columnConfig = $rowConfig['columns.'][$col . '.'];
-			if (!isset($columnConfig)) {
-			    continue;
-			}
-			// which column should be displayed inside this cell
-			$columnKey = isset($columnConfig['colPos']) && $columnConfig['colPos'] !== '' ? (int) $columnConfig['colPos'] : 32768;
-			// allowed CTypes
-			$allowedContentTypes = array();
-			if (!empty($columnConfig['allowed'])) {
-			    $allowedContentTypes = array_flip(GeneralUtility::trimExplode(',', $columnConfig['allowed']));
-			    if (!isset($allowedContentTypes['*'])) {
-				foreach ($allowedContentTypes as $key => &$ctype) {
-				    $ctype = 't3-allow-' . $key;
-				}
-			    } else {
-				unset($allowedContentTypes);
-			    }
-			}
-			if (!empty($columnConfig['allowedGridTypes'])) {
-			    $allowedGridTypes = array_flip(GeneralUtility::trimExplode(',', $columnConfig['allowedGridTypes']));
-			    if (!isset($allowedGridTypes['*']) && !empty($allowedGridTypes)) {
-				foreach ($allowedGridTypes as $gridType => &$gridTypeClass) {
-				    $gridTypeClass = 't3-allow-gridtype t3-allow-gridtype-' . $gridType;
-				}
-				$allowedContentTypes['gridelements_pi1'] = 't3-allow-gridelements_pi1';
-			    } else {
-				if (!empty($allowedContentTypes)) {
-				    $allowedContentTypes['gridelements_pi1'] = 't3-allow-gridelements_pi1';
-				}
-				unset($allowedGridTypes);
-			    }
-			}
-			// render the grid cell
-			$colSpan = (int) $columnConfig['colspan'];
-			$rowSpan = (int) $columnConfig['rowspan'];
-			$expanded = $this->helper->getBackendUser()->uc['moduleData']['page']['gridelementsCollapsedColumns'][$row['uid'] . '_' . $columnKey] ? 'collapsed' : 'expanded';
-			$grid .= '<td valign="top"' . (isset($columnConfig['colspan']) ? ' colspan="' . $colSpan . '"' : '') .
-				(isset($columnConfig['rowspan']) ? ' rowspan="' . $rowSpan . '"' : '') .
-				'data-colpos="' . $columnKey . '" data-columnkey="' . $specificIds['uid'] . '_' . $columnKey . '"
-					class="t3-grid-cell t3js-page-column t3-page-column t3-page-column-' . $columnKey .
-				(!isset($columnConfig['colPos']) || $columnConfig['colPos'] === '' ? ' t3-grid-cell-unassigned' : '') .
-				(isset($columnConfig['colspan']) && $columnConfig['colPos'] !== '' ? ' t3-grid-cell-width' . $colSpan : '') .
-				(isset($columnConfig['rowspan']) && $columnConfig['colPos'] !== '' ? ' t3-grid-cell-height' . $rowSpan : '') . ' ' .
-				($layoutSetup['horizontal'] ? ' t3-grid-cell-horizontal' : '') . (!empty($allowedContentTypes) ? ' ' .
-				join(' ', $allowedContentTypes) : ' t3-allow-all') . (!empty($allowedGridTypes) ? ' ' .
-				join(' ', $allowedGridTypes) : '') . ' ' . $expanded . '" data-state="' . $expanded . '">';
-
-			$grid .= ($this->helper->getBackendUser()->uc['hideColumnHeaders'] ? '' : $head[$columnKey]) . $gridContent[$columnKey];
-			$grid .= '</td>';
-		    }
-		    $grid .= '</tr>';
-		}
-		$grid .= '</table>';
+		return parent::renderGridLayoutTable($layoutSetup, $row, $head, $gridContent);
 		break;
+
 	}
-	
+
 	$grid .= '</div>';
 	return $grid;
     }
