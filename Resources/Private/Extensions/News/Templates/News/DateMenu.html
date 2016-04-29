@@ -6,27 +6,27 @@
 -->
 
 <f:section name="content">
-	<div class="news-menu-view">
-		<ul>
-			<f:for each="{data.single}" key="year" as="months">
-				<li>
-					{year}
-					<ul>
+	<div class="news-menu-view news-menu-view__accordion">
+		<ul class="list-group news-menu-view__year">
+			<f:for each="{data.single}" key="year" iteration="iterator" as="months">
+					<li class="list-group-item collapsed" data-toggle="collapse" data-target="#news-menu-view__collapse-{year}">
+						<a data-toggle="collapse" data-target="#news-menu-view__collapse-{year}">{year} <span class="news-menu-view__button"></span> </a>
+					</li>
+					<ul id="news-menu-view__collapse-{year}" class="collapse list-group-item__month {f:if(condition: iterator.isLast, then: ' last', else: '')}">
 						<f:for each="{months}" key="month" as="count">
 							<f:if condition="{0:year, 1:month} == {0:overwriteDemand.year, 1:overwriteDemand.month}">
 								<f:then>
-									<li class="item itemactive">
+									<li class="list-group-item item itemactive">
 								</f:then>
 								<f:else>
-									<li class="item">
+									<li class="list-group-item item">
 								</f:else>
 							</f:if>
-								<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /> {year}</f:link.action>
-								({count} <f:translate key="{f:if(condition: '{count} == 1', then: 'entry', else: 'entries')}" />)
+								<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}">
+								<f:translate key="month.{month}" /> {year}</f:link.action>
 							</li>
 						</f:for>
 					</ul>
-				</li>
 			</f:for>
 		</ul>
 	</div>

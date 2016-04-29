@@ -8,24 +8,49 @@
 <f:section name="content">
 	<f:if condition="{categories}">
 		<f:then>
-
-
-			<f:render section="categoryTree" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
+			<ul class="news-category__wrap list-group">
+				<f:render section="categoryTreeFirst" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
+			</ul>
 		</f:then>
 		<f:else>
 			<f:translate key="list_nocategoriesfound" />
 		</f:else>
 	</f:if>
 </f:section>
+<f:section name="categoryTreeFirst">
+		<f:for each="{categories}" as="category">
+					<f:if condition="{category.item.uid} == {overwriteDemand.categories}">
+						<f:then>
+							<li data-toggle="collapse" data-target="#collapse-{category.item.uid}" class="list-group-item topCategory collapsed">
+								<a>{category.item.title}<span class="news-menu-view__button"></span></a>
+								<f:comment>
+								<f:link.page additionalAttributes="{data-toggle: 'collapse', data-target: '#-collapse-{category.item.uid}'}" title="{category.item.title}" pageUid="{settings.listPid}"
+								additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
+								</f:link.page>
+							</f:comment>
+							</li>
+						</f:then>
+						<f:else>
+							<li data-toggle="collapse" data-target="#collapse-{category.item.uid}" class="list-group-item topCategory collapsed">
+								<a>{category.item.title}<span class="news-menu-view__button"></span></a>
+							</li>
+						</f:else>
+					</f:if>
+				<f:if condition="{category.children}">
+					<ul id="collapse-{category.item.uid}" class="collapse list-group news-category__child-category">
+						<f:render section="categoryTree" arguments="{categories:category.children,overwriteDemand:overwriteDemand}"/>
+					</ul>
+				</f:if>
+		</f:for>
+</f:section>
 
 <f:section name="categoryTree">
-	<div class="news-catecories" >
-	<ul>
-		<f:for each="{categories}" as="category">
-			<li>
+	<ul class="list-group">
+		<f:for each="{categories}" iteration="iterator" as="category">
+			<li class="list-group-item item" >
 				<f:if condition="{category.item.uid} == {overwriteDemand.categories}">
 					<f:then>
-						<f:link.page title="{category.item.title}" class="active" pageUid="{settings.listPid}"
+						<f:link.page title="{category.item.title}" pageUid="{settings.listPid}"
 							additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
 						</f:link.page>
 					</f:then>
@@ -35,12 +60,11 @@
 						</f:link.page>
 					</f:else>
 				</f:if>
+			</li>
 
 				<f:if condition="{category.children}">
-					<f:render section="categoryTree" arguments="{categories: category.children,overwriteDemand:overwriteDemand}" />
+					<f:render section="categoryTree" arguments="{categories: category.children,overwriteDemand:overwriteDemand, parent: category.parent.uid}" />
 				</f:if>
-			</li>
 		</f:for>
 	</ul>
-	</div>
 </f:section>

@@ -1,0 +1,11 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<f:groupedFor each="{news}" as="newsItemGrouped" groupBy="yearOfDatetime" groupKey="currentYear">
+	<div class="timeline">
+	<h2 class="news-list-view__timelineHeader text-center">{currentYear}</h2>
+		<f:for each="{newsItemGrouped}" as="newsItem" iteration="iterator">
+			<f:cycle values="{0: 'odd', 1: 'even'}" as="cycle">
+				<f:render partial="List/{settings.templateLayout}" arguments="{newsItem: newsItem,settings:settings,iterator:iterator, val : cycle, startYear: news.0.yearOfDatetime}" />
+			</f:cycle>
+		</f:for>
+	</div>
+</f:groupedFor>
