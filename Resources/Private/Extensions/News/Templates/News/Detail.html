@@ -1,12 +1,10 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
 
 <f:layout name="Detail.html" />
-
 <!--
 =====================
 News/Detail.html
 -->
-
 <f:section name="content">
 	<f:if condition="{newsItem}">
 		<f:then>
@@ -29,6 +27,11 @@ News/Detail.html
 				<div class="news-single__topmedia">
 					<f:if condition="{newsItem.falMedia.0.originalResource.type} == '2'">
 						<f:image src="{newsItem.falMedia.0.uid}" treatIdAsReference="1"></f:image>
+						<f:if condition="{newsItem.falMedia.0.description}">
+							<p class="news-img-caption">
+								{newsItem.falMedia.0.description}
+							</p>
+						</f:if>
 					</f:if>
 					<f:if condition="{newsItem.falMedia.0.originalResource.type} == '4'">
 						<f:media file="{newsItem.falMedia.0}" additionalConfig="{loop: '0', autoplay: '0'}" />
@@ -157,51 +160,72 @@ News/Detail.html
 					</div>
 				</f:if>
 				<!-- grouping videos and images add specific columns depending on amount of items-->
-
-				<f:if condition="{newsItem.falMedia}">
-					<f:groupedFor each="{newsItem.falMedia}"  as="groupMedia" groupBy="originalResource.type" groupKey="fileType">
-						<div class="row">
-								<f:if condition="{fileType} == '2'">
-									<div class="col-md-12">
-										<h3	><f:translate extensionName="Theme_t3kit" key="news-single-image-header"/></h3>
-									</div>
-								</f:if>
-								<f:if condition="{fileType} == '4'">
-									<div class="col-md-12">
-										<h3	><f:translate extensionName="Theme_t3kit" key="news-single-video-header"/></h3>
-									</div>
-								</f:if>
-							<f:for each="{groupMedia}" as="mediaType" iteration="iterator">
-								<f:if condition="{mediaType.originalResource.type} == '2'">
-									<f:if condition="{groupMedia -> f:count()} == 1">
+				<div class="news-single-media">
+					<f:if condition="{newsItem.falMedia}">
+						<f:groupedFor each="{newsItem.falMedia}"  as="groupMedia" groupBy="originalResource.type" groupKey="fileType">
+							<div class="row">
+									<f:if condition="{fileType} == '2'">
 										<div class="col-md-12">
+											<h3	><f:translate extensionName="Theme_t3kit" key="news-single-image-header"/></h3>
+										</div>
 									</f:if>
-									<f:if condition="{groupMedia -> f:count()} == 2">
-										<div class="col-md-6">
-									</f:if>
-									<f:if condition="{groupMedia -> f:count()} > 2">
-										<div class="col-md-4">
-									</f:if>
-									<f:render partial="Detail/FalMediaImage" arguments="{mediaElement: mediaType, settings:settings}"/>
-									</div>
-								</f:if>
-								<f:if condition="{mediaType.originalResource.type} == '4'">
-									<f:if condition="{groupMedia -> f:count()} == 1">
+									<f:if condition="{fileType} == '4'">
 										<div class="col-md-12">
+											<h3	><f:translate extensionName="Theme_t3kit" key="news-single-video-header"/></h3>
+										</div>
 									</f:if>
-									<f:if condition="{groupMedia -> f:count()} == 2">
-										<div class="col-md-6">
+								<f:for each="{groupMedia}" as="mediaType" iteration="iterator">
+									<f:if condition="{mediaType.originalResource.type} == '2'">
+										<f:if condition="{groupMedia -> f:count()} == 1">
+											<div class="col-md-12">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} == 2">
+											<div class="col-md-6">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} > 2">
+											<div class="col-md-4">
+										</f:if>
+										<div class="mediaelement mediaelement-image">
+											<f:if condition="{mediaType.link}">
+												<f:then>
+													<f:link.page pageUid="{mediaType.link}" target="{n:targetLink(link:mediaType.link)}">
+														<f:image src="{mediaType.uid}" treatIdAsReference="1" title="{mediaType.title}" alt="{mediaType.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+													</f:link.page>
+												</f:then>
+												<f:else>
+													<f:if condition="{settings.detail.media.image.lightbox.enabled}">
+														<f:then>
+															<a href="{f:uri.image(src:'{mediaType.uid}', treatIdAsReference:1, width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaType.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
+																<f:image src="{mediaType.uid}" treatIdAsReference="1" title="{mediaType.title}" alt="{mediaType.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+															</a>
+														</f:then>
+														<f:else>
+															<f:image src="{mediaType.uid}" treatIdAsReference="1" title="{mediaType.title}" alt="{mediaType.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+														</f:else>
+													</f:if>
+												</f:else>
+											</f:if>
+										</div>
+										</div>
 									</f:if>
-									<f:if condition="{groupMedia -> f:count()} > 2">
-										<div class="col-md-4">
+									<f:if condition="{mediaType.originalResource.type} == '4'">
+										<f:if condition="{groupMedia -> f:count()} == 1">
+											<div class="col-md-12">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} == 2">
+											<div class="col-md-6">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} > 2">
+											<div class="col-md-4">
+										</f:if>
+										<f:media file="{mediaType}" additionalConfig="{loop: '0', autoplay: '0'}" />
+										</div>
 									</f:if>
-									<f:media file="{mediaType}" additionalConfig="{loop: '0', autoplay: '0'}" />
-									</div>
-								</f:if>
-							</f:for>
-						</div>
-					</f:groupedFor>
-				</f:if>
+								</f:for>
+							</div>
+						</f:groupedFor>
+					</f:if>
+				</div>
 			</div>
 		</f:then>
 		<f:else>
