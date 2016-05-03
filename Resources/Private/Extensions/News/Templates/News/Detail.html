@@ -96,9 +96,9 @@ News/Detail.html
 				<f:if condition="{newsItem.allRelatedSorted}">
 					<!-- Related news records -->
 					<div class="news-related-single news-related-news-single">
-						<h3>
+						<h4>
 							<f:translate key="related-news" />
-						</h3>
+						</h4>
 						<ul>
 							<f:for each="{newsItem.allRelatedSorted}" as="related">
 								<li>
@@ -114,9 +114,9 @@ News/Detail.html
 				<f:if condition="{newsItem.falRelatedFiles}">
 					<!-- FAL related files -->
 					<div class="news-related-single news-related-single-files">
-						<h3>
+						<h4>
 							<f:translate key="related-files" />
-						</h3>
+						</h4>
 						<ul>
 							<f:for each="{newsItem.falRelatedFiles}" as="relatedFile">
 								<li>
@@ -144,9 +144,9 @@ News/Detail.html
 				<f:if condition="{newsItem.relatedLinks}">
 					<!-- Related links -->
 					<div class="news-related-single news-related-links">
-						<h3>
+						<h4>
 							<f:translate key="related-links" />
-						</h3>
+						</h4>
 						<ul>
 							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
 								<li>
@@ -166,12 +166,12 @@ News/Detail.html
 							<div class="row">
 									<f:if condition="{fileType} == '2'">
 										<div class="col-md-12">
-											<h3	><f:translate extensionName="Theme_t3kit" key="news-single-image-header"/></h3>
+											<h4	><f:translate extensionName="Theme_t3kit" key="news-single-image-header"/></h4>
 										</div>
 									</f:if>
 									<f:if condition="{fileType} == '4'">
 										<div class="col-md-12">
-											<h3	><f:translate extensionName="Theme_t3kit" key="news-single-video-header"/></h3>
+											<h4	><f:translate extensionName="Theme_t3kit" key="news-single-video-header"/></h4>
 										</div>
 									</f:if>
 								<f:for each="{groupMedia}" as="mediaType" iteration="iterator">
