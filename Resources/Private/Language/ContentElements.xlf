@@ -80,6 +80,9 @@
             <trans-unit id="iconTextButton.flexform.iconClass">
                 <source>Icon</source>
             </trans-unit>
+            <trans-unit id="iconTextButton.flexform.iconClass_none">
+                <source>None</source>
+            </trans-unit>
 
             <trans-unit id="imageTextLink.title">
                 <source>Image text and link</source>
