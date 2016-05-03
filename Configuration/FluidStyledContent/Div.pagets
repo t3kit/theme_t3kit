@@ -1,0 +1,19 @@
+mod.wizards.newContentElement.wizardItems.special.elements{
+
+        div {
+            iconIdentifier = content-special-div
+            title = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:special_divider_title
+            description = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:special_divider_description
+            tt_content_defValues {
+                CType = div
+            }
+        }
+    }
+    special.show := addToList(div)
+}
+
+TCEFORM.tt_content.pi_flexform.div.sDEF.iconClass {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:div.flexform.iconClass_none
+    }
+}
