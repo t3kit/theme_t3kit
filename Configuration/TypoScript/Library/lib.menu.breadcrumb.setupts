@@ -13,9 +13,9 @@ lib.menu.breadcrumb {
                 stdWrap.htmlSpecialChars = 1
                 doNotLinkIt = |*| 0 |*| 1
                 linkWrap = <li class="breadcrumbs__list-item"><span class="icons icon-t3-home"></span>|</li> |*| <li class="breadcrumbs__list-item">|</li> |*| <li class="breadcrumbs__list-item _active">|</li>
-                ATagParams = itemprop="url" class="breadcrumbs__list-link" title="{field:subtitle//field:title}"
+                ATagParams = class="breadcrumbs__list-link" title="{field:subtitle//field:title}"
                 ATagParams.insertData = 1
-                stdWrap.wrap = <span itemprop="title">|</span>
+                stdWrap.wrap = <span>|</span>
             }
             wrap = <div class="breadcrumbs"><div class="breadcrumbs__wrp container"><ol class="breadcrumbs__list">|</ol></div></div>
         }
