@@ -85,7 +85,7 @@
                 <source>Image text and link</source>
             </trans-unit>
             <trans-unit id="imageTextLink.description">
-                <source>Image text and link</source>
+                <source>Image or media, text and link. Will use image image before media. Will only render one image or one media.</source>
             </trans-unit>
             <trans-unit id="imageTextLink.bodyText">
                 <source>Text</source>

@@ -319,6 +319,7 @@ call_user_func(function() {
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
             --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
