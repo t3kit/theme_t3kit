@@ -35,6 +35,15 @@ TCEFORM.tt_content.layout {
     }
 }
 
+# Add a generic 'aligning' (all content based on lib.fluidContent)
+TCEFORM.tt_content.aligning {
+   # Based on that the default items still exists.
+   addItems {
+       101 = Text align center
+       102 = Block center
+   }
+}
+
 # Add a generic 'margin-top' wrapper (all content based on lib.fluidContent)
 TCEFORM.tt_content.wrapper_margin_top {
    # Based on that the default items still exists.

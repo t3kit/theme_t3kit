@@ -489,6 +489,18 @@ call_user_func(function() {
                 'default' => 0
             ]
         ],
+        'aligning' => [
+            'exclude' => true,
+            'label' => $contentElementLanguageFilePrefix . 'tt_content.aligning',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [$contentElementLanguageFilePrefix . 'label.default', 0]
+                ],
+                'default' => 0
+            ]
+        ],
         'wrapper_margin_top' => [
             'exclude' => true,
             'label' => $contentElementLanguageFilePrefix . 'tt_content.wrapper_margin_top',
@@ -516,7 +528,7 @@ call_user_func(function() {
     ];
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $additionalColumns);
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'wrapper, wrapper_margin_top, wrapper_margin_bottom', '', 'after:layout');
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', 'wrapper, aligning, wrapper_margin_top, wrapper_margin_bottom', '', 'after:layout');
 });
 
 // gridelements TCA overrides

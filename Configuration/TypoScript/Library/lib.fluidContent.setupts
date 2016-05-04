@@ -17,6 +17,23 @@ lib.fluidContent {
                 100 = example-generic-wrapper
             }
         }
+        # will add variable alignClass to FLUIDTEMPLATE
+        # used in "overridden" fluid_styled_content layouts: (appended in class) {alignClass}
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
+        395 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+        395 {
+            fieldName = aligning
+            as = alignClass
+            classMappings {
+                # 0 =
+                101 = text-center
+                102 = center-block
+            }
+        }
 
         # will add variable {wrapperMarginTopClass} to FLUIDTEMPLATE to set a "margin-top" class
         # used in "overridden" fluid_styled_content layouts: (appended in class)
@@ -24,7 +41,7 @@ lib.fluidContent {
         # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
         # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
         # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomContentFooter.html
-    # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
+        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
         375 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
         375 {
             fieldName = wrapper_margin_top

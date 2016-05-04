@@ -233,6 +233,9 @@
             <trans-unit id="tt_content.wrapper.description">
                 <source>Select appearance of content element (if available)</source>
             </trans-unit>
+            <trans-unit id="tt_content.aligning">
+                <source>Aligning</source>
+            </trans-unit>
             <trans-unit id="tt_content.wrapper_margin_top">
                 <source>Margin top</source>
             </trans-unit>

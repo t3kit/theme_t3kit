@@ -6,7 +6,7 @@
 </f:if>
 
 <f:comment><!-- ### element body ### --></f:comment>
-<div id="c{data.uid}" class="{layoutClass}">
+<div id="c{data.uid}" class="{layoutClass} {alignClass}">
 	<f:render partial="Header" arguments="{_all}" />
 	<f:render section="content" />
 	<f:render partial="Footer" arguments="{_all}" />
