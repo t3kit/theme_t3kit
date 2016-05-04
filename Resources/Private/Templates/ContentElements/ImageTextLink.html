@@ -43,7 +43,7 @@
 	<f:section name="imageType">
 		<f:if condition="{mediaItem.link}">
 			<f:then>
-				<f:link.typolink parameter="{mediaItem.link}">
+				<f:link.typolink title="{mediaItem.title}" class="img-text-link__img-link" parameter="{mediaItem.link}">
 					<f:render section="media" arguments="{_all}" />
 				</f:link.typolink>
 			</f:then>
