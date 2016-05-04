@@ -319,6 +319,7 @@ call_user_func(function() {
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
             --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
@@ -471,6 +472,9 @@ call_user_func(function() {
 
     // "iconTextButton"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,iconTextButton'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_iconTextButton.xml';
+
+    // "imageTextLink"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,imageTextLink'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_imageTextLink.xml';
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';

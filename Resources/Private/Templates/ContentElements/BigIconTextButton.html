@@ -15,7 +15,7 @@
 			<p class="big-icon-text-btn__p">{data.bodytext}</p>
 		</f:if>
 		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" class="big-icon-text-btn__link btn btn-default">{data.subheader}</f:link.typolink>
+			<f:link.typolink parameter="{data.header_link}" class="big-icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
 		</f:if>
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/bigIconTextButton.html [end] -->

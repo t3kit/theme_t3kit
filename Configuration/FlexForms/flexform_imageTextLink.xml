@@ -1,0 +1,25 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:iconTextButton.flexform.sheetGeneral</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <linkAsBtn>
+                      <TCEforms>
+                        <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.linkAsBtn</label>
+                        <config>
+                          <type>check</type>
+                        </config>
+                      </TCEforms>
+                    </linkAsBtn>
+                  </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

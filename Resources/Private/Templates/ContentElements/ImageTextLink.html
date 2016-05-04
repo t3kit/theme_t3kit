@@ -34,7 +34,7 @@
 			<p class="img-text-link__p">{data.bodytext}</p>
 		</f:if>
 		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link">{data.subheader}</f:link.typolink>
+			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</f:link.typolink>
 		</f:if>
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [end] -->

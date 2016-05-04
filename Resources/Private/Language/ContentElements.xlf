@@ -245,6 +245,14 @@
             <trans-unit id="label.default">
                 <source>Default</source>
             </trans-unit>
+
+
+            <trans-unit id="elem.flexform.linkAsBtn">
+                <source>Show link as a button</source>
+            </trans-unit>
+            <trans-unit id="elem.flexform.btnAsLink">
+                <source>Show button as a link</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
