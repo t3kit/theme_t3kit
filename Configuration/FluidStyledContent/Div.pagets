@@ -1,0 +1,5 @@
+TCEFORM.tt_content.pi_flexform.div.sDEF.iconClass {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:div.flexform.iconClass_none
+    }
+}

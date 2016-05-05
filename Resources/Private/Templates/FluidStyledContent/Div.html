@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="ContentFooter" />
+
+<f:section name="content">
+	<f:if condition="{settings.iconClass}">
+		<f:then>
+			<div class="divider">
+				<div class="divider__wrp">
+					<span class="divider__icon icons icon-{settings.iconClass}"></span>
+				</div>
+			</div>
+		</f:then>
+		<f:else>
+			<hr class="ce-div" />
+		</f:else>
+	</f:if>
+</f:section>
+</html>

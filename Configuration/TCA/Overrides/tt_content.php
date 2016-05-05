@@ -293,6 +293,27 @@ call_user_func(function() {
         '
     ];
 
+    // "divider"
+    $GLOBALS['TCA']['tt_content']['types']['div'] = [
+        'showitem' => '
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+                header;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header.ALT.div_formlabel,
+                tx_themes_icon,rowDescription,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+                layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel,wrapper,wrapper_margin_top,
+                wrapper_margin_bottom,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.appearanceLinks;appearanceLinks,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access,
+                hidden;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:field.default.hidden,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access,
+                --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.extended,
+                --div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category,categories,
+                tx_themes_variants,tx_themes_behaviour,tx_themes_responsive,
+                --div--;LLL:EXT:gridelements/Resources/Private/Language/locallang_db.xlf:gridElements,
+                tx_gridelements_container,tx_gridelements_columns
+        '
+    ];
+
     // "accordion"
     $GLOBALS['TCA']['tt_content']['types']['accordion'] = [
         'showitem' => '
@@ -475,6 +496,9 @@ call_user_func(function() {
 
     // "imageTextLink"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,imageTextLink'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_imageTextLink.xml';
+
+    // "divider"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,div'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_div.xml';
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
