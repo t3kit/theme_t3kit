@@ -14,7 +14,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
 
 TCEFORM.tt_content.pi_flexform.iconTextButton.sDEF.iconClass {
     addItems {
-        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:iconTextButton.flexform.iconClass_none
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:icon.flexform.iconClass_none
     }
 }
 

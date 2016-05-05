@@ -253,6 +253,10 @@
             <trans-unit id="elem.flexform.btnAsLink">
                 <source>Show button as a link</source>
             </trans-unit>
+
+            <trans-unit id="icon.flexform.iconClass_none">
+                <source>None</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
