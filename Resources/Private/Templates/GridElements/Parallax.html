@@ -1,0 +1,8 @@
+<f:layout name="HeaderContentFooter" />
+
+<f:section name="content">
+
+		<div class="parallax {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs')}" data-stellar-background-ratio="0.5" style="background-image: url('{f:uri.image(image : '{files.0}')}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: '{data.pi_flexform.data.columns.lDEF.height.vDEF}', else: 'auto')}; background-color: {data.pi_flexform.data.columns.lDEF.bgColor.vDEF};" >
+			<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+		</div>
+</f:section>

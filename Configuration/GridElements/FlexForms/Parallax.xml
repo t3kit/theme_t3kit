@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+		<meta type="array">
+				<langDisable>1</langDisable>
+		</meta>
+	<sheets>
+		<columns>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax.flexform.title</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<height>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax.flexform.height</label>
+							<config>
+								<type>input</type>
+								<size>15</size>
+								<default>auto</default>
+							</config>
+						</TCEforms>
+					</height>
+					<bgColor>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax.flexform.bgcolor</label>
+							<config>
+								<type>input</type>
+								<size>15</size>
+								<default>#1D556F</default>
+							</config>
+						</TCEforms>
+					</bgColor>
+					<hideInMobile>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax.flexform.hide</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</hideInMobile>
+				</el>
+			</ROOT>
+		</columns>
+			</sheets>
+</T3DataStructure>

@@ -183,6 +183,27 @@
                 <source>Large devices "Large devices Desktops (≥1200px)"</source>
             </trans-unit>
 
+
+            <trans-unit id="parallax">
+                <source>Parallax</source>
+            </trans-unit>
+            <trans-unit id="parallax_description">
+                <source>Background image with Parallax effect</source>
+            </trans-unit>
+
+            <trans-unit id="parallax.flexform.title">
+                <source>Parallax settings</source>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.height">
+              <source>Height of parallax element. [auto] by default. Good when you want to have other elements inside of parallax</source>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.bgcolor">
+                <source>Background color (for mobile)</source>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.hide">
+              <source>Hide in mobile</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

@@ -1,0 +1,20 @@
+tx_gridelements.setup.Parallax {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax_description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/parallax.xml
+    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/parallax.svg
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        colPos = 0
+                    }
+                }
+            }
+        }
+    }
+}
