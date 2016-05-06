@@ -20,6 +20,8 @@ TCEFORM.tt_content.wrapper {
    addItems {
        # add more wrappers. Interval from 100 to 999
        100 = Example generic wrapper
+       101 = Inverse color of text, links, buttons
+       102 = Gray background
    }
 }
 
