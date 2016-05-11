@@ -224,7 +224,12 @@
             <trans-unit id="collapsibleGroup_description">
                 <source>A group for collapsible elements</source>
             </trans-unit>
-
+            <trans-unit id="collapsibleContent">
+                <source>Collapsible Content</source>
+            </trans-unit>
+            <trans-unit id="collapsibleContainers">
+                <source>Collapsibles</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -9,7 +9,7 @@ tx_gridelements.setup.CollapsibleGroup {
             1 {
                 columns {
                     1 {
-                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:collapsibleContainers
                         colPos = 0
                         allowed = gridelements_pi1
                         allowedGridTypes = Collapsible

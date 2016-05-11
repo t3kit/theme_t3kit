@@ -10,7 +10,7 @@ tx_gridelements.setup.Collapsible {
             1 {
                 columns {
                     1 {
-                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:col1
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:collapsibleContent
                         colPos = 0
                     }
                 }
