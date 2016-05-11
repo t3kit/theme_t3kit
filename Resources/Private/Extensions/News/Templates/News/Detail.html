@@ -1,12 +1,10 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
 
 <f:layout name="Detail.html" />
-
 <!--
-	=====================
-		News/Detail.html
+=====================
+News/Detail.html
 -->
-
 <f:section name="content">
 	<f:if condition="{newsItem}">
 		<f:then>
@@ -25,41 +23,50 @@
 				</f:if>
 				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
 			</n:format.nothing>
+			<f:if condition="{newsItem.falMedia.0}">
+				<div class="news-single__topmedia">
+					<f:if condition="{newsItem.falMedia.0.originalResource.type} == '2'">
+						<f:image src="{newsItem.falMedia.0.uid}" treatIdAsReference="1"></f:image>
+						<f:if condition="{newsItem.falMedia.0.description}">
+							<p class="news-img-caption">
+								{newsItem.falMedia.0.description}
+							</p>
+						</f:if>
+					</f:if>
+					<f:if condition="{newsItem.falMedia.0.originalResource.type} == '4'">
+						<f:media file="{newsItem.falMedia.0}" additionalConfig="{loop: '0', autoplay: '0'}" />
+					</f:if>
+				</div>
+			</f:if>
+			<div class="news-article">
+				<f:if condition="{newsItem.author}">
+					<!-- author -->
+					<div class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+						<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
+					</div>
+				</f:if>
+				<div class="news-list-date">
+					<f:translate extensionName="Theme_t3kit" key="news.date.text"/>
+
+					<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+						<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+						<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+					</time>
+				</div>
+				<f:if condition="{newsItem.tags}">
+					<!-- Tags -->
+					<ul class="single-news-tags" itemprop="keywords">
+						<f:for each="{newsItem.tags}" as="tag">
+							<li>
+								{tag.title}
+							</li>
+						</f:for>
+					</span>
+				</f:if>
+			</div>
 			<div class="news-article-header">
 				<h3 itemprop="headline">{newsItem.title}</h3>
 			</div>
-			<div class="news-article-footer">
-				<p>
-					<!-- date -->
-					<span class="news-list-date">
-						<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-							<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
-						</time>
-					</span>
-
-					<f:if condition="{newsItem.categories}">
-						<f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
-					</f:if>
-
-					<f:if condition="{newsItem.tags}">
-						<!-- Tags -->
-						<span class="news-list-tags" itemprop="keywords">
-						<f:for each="{newsItem.tags}" as="tag">
-							{tag.title}
-						</f:for>
-						</span>
-					</f:if>
-
-					<f:if condition="{newsItem.author}">
-						<!-- author -->
-						<span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
-							<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
-						</span>
-					</f:if>
-				</p>
-			</div>
-
 			<f:if condition="{newsItem.teaser}">
 				<!-- teaser -->
 				<div class="teaser-text" itemprop="description">
@@ -71,10 +78,6 @@
 				<!-- content elements -->
 				<f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
 			</f:if>
-
-			<f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
-			<f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
-
 			<!-- main text -->
 			<div class="news-text-wrap" itemprop="articleBody">
 				<f:format.html>{newsItem.bodytext}</f:format.html>
@@ -88,33 +91,11 @@
 					</f:link.page>
 				</div>
 			</f:if>
-
-			<f:if condition="{settings.detail.showSocialShareButtons}">
-				<div class="facebook">
-					<div class="like">
-						<n:social.facebook.like />
-					</div>
-					<div class="share">
-						<n:social.facebook.share />
-					</div>
-					<div class="twitter">
-						<n:social.twitter>Twitter</n:social.twitter>
-					</div>
-				</div>
-			</f:if>
-
-			<f:if condition="{settings.detail.disqusShortname}">
-				<n:social.disqus newsItem="{newsItem}"
-								 shortName="{settings.detail.disqusShortname}"
-								 link="{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}')}" />
-			</f:if>
-
 			<!-- related things -->
 			<div class="news-related-wrap">
-
 				<f:if condition="{newsItem.allRelatedSorted}">
 					<!-- Related news records -->
-					<div class="news-related news-related-news">
+					<div class="news-related-single news-related-news-single">
 						<h4>
 							<f:translate key="related-news" />
 						</h4>
@@ -126,45 +107,13 @@
 										{related.title}
 									</n:link>
 								</li>
-
 							</f:for>
 						</ul>
 					</div>
 				</f:if>
-
-				<f:if condition="{newsItem.relatedFiles}">
-					<!-- Related files -->
-					<div class="news-related news-related-files">
-						<h4>
-							<f:translate key="related-files" />
-						</h4>
-						<ul>
-							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
-								<li>
-									<span class="news-related-files-link">
-										<n:format.fileDownload file="uploads/tx_news/{relatedFile.file}" configuration="{settings.relatedFiles.download}">
-											<f:if condition="{relatedFile.title}">
-												<f:then>
-													{relatedFile.title}
-												</f:then>
-												<f:else>
-													{relatedFile.file}
-												</f:else>
-											</f:if>
-										</n:format.fileDownload>
-									</span>
-									<span class="news-related-files-size">
-										<n:format.fileSize file="uploads/tx_news/{relatedFile.file}" format="{settings.relatedFiles.fileSizeLabels}" />
-									</span>
-								</li>
-							</f:for>
-						</ul>
-					</div>
-				</f:if>
-
 				<f:if condition="{newsItem.falRelatedFiles}">
 					<!-- FAL related files -->
-					<div class="news-related news-related-files">
+					<div class="news-related-single news-related-single-files">
 						<h4>
 							<f:translate key="related-files" />
 						</h4>
@@ -192,10 +141,9 @@
 						</ul>
 					</div>
 				</f:if>
-
 				<f:if condition="{newsItem.relatedLinks}">
 					<!-- Related links -->
-					<div class="news-related news-related-links">
+					<div class="news-related-single news-related-links">
 						<h4>
 							<f:translate key="related-links" />
 						</h4>
@@ -203,16 +151,84 @@
 							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
 								<li>
 									<f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.page>
-									<f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
+									<f:if condition="{relatedLink.description}">
+										<span>{relatedLink.description}</span>
+									</f:if>
 								</li>
 							</f:for>
 						</ul>
 					</div>
 				</f:if>
+				<!-- grouping videos and images add specific columns depending on amount of items-->
+				<div class="news-single-media">
+					<f:if condition="{newsItem.falMedia}">
+						<f:groupedFor each="{newsItem.falMedia}"  as="groupMedia" groupBy="originalResource.type" groupKey="fileType">
+							<div class="row">
+									<f:if condition="{fileType} == '2'">
+										<div class="col-md-12">
+											<h4	><f:translate extensionName="Theme_t3kit" key="news-single-image-header"/></h4>
+										</div>
+									</f:if>
+									<f:if condition="{fileType} == '4'">
+										<div class="col-md-12">
+											<h4	><f:translate extensionName="Theme_t3kit" key="news-single-video-header"/></h4>
+										</div>
+									</f:if>
+								<f:for each="{groupMedia}" as="mediaType" iteration="iterator">
+									<f:if condition="{mediaType.originalResource.type} == '2'">
+										<f:if condition="{groupMedia -> f:count()} == 1">
+											<div class="col-md-12">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} == 2">
+											<div class="col-md-6">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} > 2">
+											<div class="col-md-4">
+										</f:if>
+										<div class="mediaelement mediaelement-image">
+											<f:if condition="{mediaType.link}">
+												<f:then>
+													<f:link.page pageUid="{mediaType.link}" target="{n:targetLink(link:mediaType.link)}">
+														<f:image src="{mediaType.uid}" treatIdAsReference="1" title="{mediaType.title}" alt="{mediaType.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+													</f:link.page>
+												</f:then>
+												<f:else>
+													<f:if condition="{settings.detail.media.image.lightbox.enabled}">
+														<f:then>
+															<a href="{f:uri.image(src:'{mediaType.uid}', treatIdAsReference:1, width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaType.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
+																<f:image src="{mediaType.uid}" treatIdAsReference="1" title="{mediaType.title}" alt="{mediaType.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+															</a>
+														</f:then>
+														<f:else>
+															<f:image src="{mediaType.uid}" treatIdAsReference="1" title="{mediaType.title}" alt="{mediaType.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+														</f:else>
+													</f:if>
+												</f:else>
+											</f:if>
+										</div>
+										</div>
+									</f:if>
+									<f:if condition="{mediaType.originalResource.type} == '4'">
+										<f:if condition="{groupMedia -> f:count()} == 1">
+											<div class="col-md-12">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} == 2">
+											<div class="col-md-6">
+										</f:if>
+										<f:if condition="{groupMedia -> f:count()} > 2">
+											<div class="col-md-4">
+										</f:if>
+										<f:media file="{mediaType}" additionalConfig="{loop: '0', autoplay: '0'}" />
+										</div>
+									</f:if>
+								</f:for>
+							</div>
+						</f:groupedFor>
+					</f:if>
+				</div>
 			</div>
 		</f:then>
 		<f:else>
-
 		</f:else>
 	</f:if>
 </f:section>

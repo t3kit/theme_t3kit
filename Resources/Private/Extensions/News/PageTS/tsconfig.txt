@@ -1,0 +1,5 @@
+tx_news.templateLayouts {
+        Timeline = News with timeline
+        Cards  = News as Cards
+        ListView = News as List
+}

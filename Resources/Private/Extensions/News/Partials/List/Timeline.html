@@ -1,0 +1,146 @@
+{namespace n=GeorgRinger\News\ViewHelpers}<!--
+=====================
+Partials/List/Item.html
+-->
+	<div class="news-list-view__wrapper">
+		<f:if condition="{iterator.isFirst}">
+			<f:then>
+				<div class="news-list-date {val} {f:if(condition: '{startYear} == {newsItem.yearOfDatetime}', then: 'open', else: ' ')}">
+			</f:then>
+			<f:else>
+				<div class="news-list-date {val}">
+			</f:else>
+		</f:if>
+		<div>
+			<span class="news-list-view__timelineDay"><f:format.date format="%d">{newsItem.datetime}</f:format.date></span>
+			<span class="news-list-view__timelineMonth"><f:format.date format="%b">{newsItem.datetime}</f:format.date></span>
+		</div>
+	</div>
+	<article class="news-list-view__timeline  articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+		<n:excludeDisplayedNews newsItem="{newsItem}"/>
+			<f:if condition="{iterator.isFirst}">
+				<f:then>
+					<div class="news-list-view__timelineItem {val} {f:if(condition: '{startYear} == {newsItem.yearOfDatetime}', then: 'nocollapse', else: 'collapsed')} {f:if(condition: iterator.isLast, then: ' last', else: '')}">
+				</f:then>
+				<f:else>
+					<div class="news-list-view__timelineItem {val} collapsed {f:if(condition: iterator.isLast, then: ' last', else: '')}">
+				</f:else>
+			</f:if>
+				<f:if condition="{newsItem.falMedia}">
+					<!-- fal media preview element -->
+					<f:then>
+						<div class="news-img-wrap">
+							<f:if condition="{newsItem.falMediaPreviews}">
+								<f:then>
+									<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+										<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+											<f:if condition="{mediaElement.originalResource.type} == 2">
+												<div class="news-list-view__timelineImage"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 4">
+												<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 5">
+												<div class="news-list-view__timelineImage"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											</f:if>
+										</f:alias>
+									</n:link>
+								</f:then>
+								<f:else>
+									<f:if condition="{settings.displayDummyIfNoMedia}">
+										<span class="no-media-element">
+											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+												<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.timeline.maxWidth}" maxHeight="{settings.list.media.timeline.maxHeight}"/>
+											</n:link>
+										</span>
+									</f:if>
+								</f:else>
+							</f:if>
+						</div>
+					</f:then>
+					<f:else>
+						<f:if condition="{newsItem.media}">
+							<!-- media preview element -->
+							<f:then>
+								<div class="news-img-wrap">
+									<f:if condition="{newsItem.mediaPreviews}">
+										<f:then>
+											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+												<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+													<f:if condition="{mediaElement.type} == 0">
+														<div class="news-list-view__timelineImage"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+													</f:if>
+													<f:if condition="{mediaElement.type} == 1">
+														<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+													</f:if>
+													<f:if condition="{mediaElement.type} == 2">
+														<f:render partial="Detail/MediaHtml" arguments="{mediaElement: mediaElement}"/>
+													</f:if>
+												</f:alias>
+											</n:link>
+										</f:then>
+										<f:else>
+											<f:if condition="{settings.displayDummyIfNoMedia}">
+												<span class="no-media-element">
+													<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+														<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.timeline.maxWidth}" maxHeight="200"/>
+													</n:link>
+												</span>
+											</f:if>
+										</f:else>
+									</f:if>
+
+								</div>
+							</f:then>
+							<f:else>
+								<f:if condition="{settings.displayDummyIfNoMedia}">
+									<f:then>
+										<div class="news-img-wrap">
+											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+												<span class="no-media-element">
+													<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.timeline.maxWidth}" maxHeight="{settings.list.media.timeline.maxHeight}"/>
+												</span>
+											</n:link>
+										</div>
+									</f:then>
+								</f:if>
+							</f:else>
+						</f:if>
+
+					</f:else>
+				</f:if>
+				<div class="news-article-timeline__text">
+					<div class="news-article-header">
+						<h1 itemprop="headline">{newsItem.title}</h1>
+					</div>
+					<!-- teaser -->
+					<div class="teaser-text">
+						<f:if condition="{newsItem.teaser}">
+							<f:then>
+								<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+							</f:then>
+							<f:else>
+								<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+							</f:else>
+						</f:if>
+						<div class="news-list-view__link">
+							<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+								<f:translate key="more-link"/>
+							</n:link>
+						</div>
+					</div>
+				</div>
+				<!-- author -->
+				<f:if condition="{newsItem.author}">
+					<div class="news-list-view__author">
+						<span class="news-list-author">
+							<f:translate key="author" arguments="{0:newsItem.author}"/>
+						</span>
+						<f:if condition="{newsItem.falMediaPreviews.0.originalResource.type} == 4">
+							<span class="news-list-playIcon"></span>
+						</f:if>
+					</div>
+				</f:if>
+			</div>
+		</article>
+	</div>

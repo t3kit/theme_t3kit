@@ -17,10 +17,16 @@
 				<source>Imprint</source>
 			</trans-unit>
 
-
-
-
-
+			<!-- news custom label -->
+			<trans-unit id="news.date.text" xml:space="preserve">
+				<source>Published: </source>
+			</trans-unit>
+			<trans-unit id="news-single-image-header" xml:space="preserve">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="news-single-video-header" xml:space="preserve">
+				<source>Video</source>
+			</trans-unit>
 			<!-- Behaviours labels -->
 			<trans-unit id="content.behaviour.container" xml:space="preserve">
 				<source>Container</source>
