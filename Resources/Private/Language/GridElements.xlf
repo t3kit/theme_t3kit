@@ -204,6 +204,27 @@
               <source>Hide in mobile</source>
             </trans-unit>
 
+            <trans-unit id="collapsible">
+                <source>Collapsible</source>
+            </trans-unit>
+            <trans-unit id="collapsible_description">
+                <source>A collapsible container for content elements</source>
+            </trans-unit>
+
+            <trans-unit id="collapsible.flexform.title">
+                <source>Collapsible settings</source>
+            </trans-unit>
+            <trans-unit id="collapsible.flexform.expanded">
+              <source>Expanded by default</source>
+            </trans-unit>
+
+						<trans-unit id="collapsibleGroup">
+                <source>Group of collapsibles</source>
+            </trans-unit>
+            <trans-unit id="collapsibleGroup_description">
+                <source>A group for collapsible elements</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

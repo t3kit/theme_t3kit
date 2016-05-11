@@ -1,0 +1,56 @@
+lib.gridelements {
+    CollapsibleGroup < .defaultGridSetup
+    CollapsibleGroup {
+        columns.0 {
+            renderObj >
+            renderObj = COA
+            renderObj {
+              20 =< tt_content
+            }
+        }
+
+        cObject = FLUIDTEMPLATE
+        cObject {
+            layoutRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Layouts
+                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
+            }
+            partialRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Partials
+            }
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/CollapsibleGroup.html
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = media
+                }
+                # "inherit" from lib.fluidContent
+                365 < lib.fluidContent.dataProcessing.365
+                375 < lib.fluidContent.dataProcessing.375
+                385 < lib.fluidContent.dataProcessing.385
+                395 < lib.fluidContent.dataProcessing.395
+
+                # extend "wrapper" class mapping only for GridElements
+                365 {
+                    classMappings {
+                        11 = gridelements-example-wrapper-1
+                        12 = gridelements-example-wrapper-2
+                    }
+                }
+
+
+                1910 < lib.fluidContent.dataProcessing.1910
+
+                # extend "layout" class mapping only for GridElements
+                1910 {
+                    classMappings {
+                        11 = gridelements-example-layout-1
+                        12 = gridelements-example-layout-2
+                    }
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.CollapsibleGroup < lib.gridelements.CollapsibleGroup
