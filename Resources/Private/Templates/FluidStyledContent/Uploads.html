@@ -28,7 +28,14 @@
 						<f:if condition="{file.name}">
 							<a href="{file.publicUrl}">
 								<span class="ce-uploads-fileName">
-									{file.name}
+									<f:if condition="{file.properties.title}">
+										<f:then>
+											{file.properties.title}
+										</f:then>
+										<f:else>
+											{file.name}
+										</f:else>
+									</f:if>
 								</span>
 							</a>
 						</f:if>
