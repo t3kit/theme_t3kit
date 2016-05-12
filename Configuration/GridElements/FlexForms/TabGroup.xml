@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+		<meta type="array">
+				<langDisable>1</langDisable>
+		</meta>
+	<sheets>
+		<columns>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabGroup.flexform.title</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<tabstyle>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabGroup.flexform.tabstyle</label>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+										<numIndex index="0" type="array">
+												<numIndex index="0">Tabs</numIndex>
+												<numIndex index="1">0</numIndex>
+										</numIndex>
+										<numIndex index="1" type="array">
+												<numIndex index="0">Pills</numIndex>
+												<numIndex index="1">1</numIndex>
+										</numIndex>
+								</items>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</tabstyle>
+				</el>
+			</ROOT>
+		</columns>
+	</sheets>
+</T3DataStructure>

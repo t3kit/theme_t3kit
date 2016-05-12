@@ -1,0 +1,19 @@
+tx_gridelements.setup.Tab {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tab
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tab_description
+    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/tab.svg
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabContent
+                        colPos = 0
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+tx_gridelements.setup.TabGroup {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabGroup
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabGroup_description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/TabGroup.xml
+    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/tabGroup.svg
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabContainer
+                        colPos = 0
+                        allowed = gridelements_pi1
+                        allowedGridTypes = Tab
+                    }
+                }
+            }
+        }
+    }
+}

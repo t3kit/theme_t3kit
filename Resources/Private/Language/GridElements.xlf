@@ -230,6 +230,33 @@
             <trans-unit id="collapsibleContainers">
                 <source>Collapsibles</source>
             </trans-unit>
+
+            <trans-unit id="tab">
+                <source>Tab</source>
+            </trans-unit>
+            <trans-unit id="tab_description">
+                <source>A tab with content elements</source>
+            </trans-unit>
+            <trans-unit id="tabContent">
+                <source>Tab Content</source>
+            </trans-unit>
+
+						<trans-unit id="tabGroup">
+                <source>Group of tabs</source>
+            </trans-unit>
+            <trans-unit id="tabGroup_description">
+                <source>A container for tab content elements</source>
+            </trans-unit>
+            <trans-unit id="tabContainer">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="tabGroup.flexform.title">
+                <source>Tab group settings</source>
+            </trans-unit>
+            <trans-unit id="tabGroup.flexform.tabstyle">
+              <source>Style of tabs</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

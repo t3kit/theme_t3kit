@@ -1,0 +1,115 @@
+lib.gridelements {
+    Tab < .defaultGridSetup
+    Tab {
+        columns.0 {
+
+            prepend = COA
+            prepend {
+                # increase "tab" counter
+                10 = LOAD_REGISTER
+                10 {
+                    tabNumber.cObject = TEXT
+                    tabNumber.cObject.data = register:tabNumber
+                    tabNumber.cObject.wrap = |+1
+                    tabNumber.prioriCalc = intval
+                }
+
+                # class
+                30 = TEXT
+                30 {
+                    value = class="
+                }
+                35 = TEXT
+                35 {
+                    value = tab-pane
+                }
+                40 = TEXT
+                40 {
+                    value.noTrimWrap = | fade|
+                }
+                45 = TEXT
+                45 {
+                    value.noTrimWrap = | in active|
+                    if {
+                        value = 1
+                        equals.data = register:tabNumber
+                    }
+                }
+                46 = TEXT
+                46 {
+                    value.noTrimWrap = | number-{register:tabNumber}|
+                    value.insertData = 1
+                }
+                47 = TEXT
+                47 {
+                    value.noTrimWrap = | pid-{register:parentUid}|
+                    value.insertData = 1
+                }
+                50 = TEXT
+                50 {
+                    value = "
+                }
+                # id
+                60 = TEXT
+                60 {
+                    field = uid
+                    wrap = id="tab-|"
+                }
+
+                stdWrap.noTrimWrap = |<div role="tabpanel" |>|
+
+            }
+            renderObj >
+            renderObj = COA
+            renderObj {
+
+                20 =< tt_content
+            }
+            wrap = |</div>
+        }
+
+        cObject = FLUIDTEMPLATE
+        cObject {
+            layoutRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Layouts
+                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
+            }
+            partialRootPaths {
+                20 = EXT:fluid_styled_content/Resources/Private/Partials
+            }
+            file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Tab.html
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = media
+                }
+                # "inherit" from lib.fluidContent
+                365 < lib.fluidContent.dataProcessing.365
+                375 < lib.fluidContent.dataProcessing.375
+                385 < lib.fluidContent.dataProcessing.385
+                395 < lib.fluidContent.dataProcessing.395
+
+                # extend "wrapper" class mapping only for GridElements
+                365 {
+                    classMappings {
+                        11 = gridelements-example-wrapper-1
+                        12 = gridelements-example-wrapper-2
+                    }
+                }
+
+
+                1910 < lib.fluidContent.dataProcessing.1910
+
+                # extend "layout" class mapping only for GridElements
+                1910 {
+                    classMappings {
+                        11 = gridelements-example-layout-1
+                        12 = gridelements-example-layout-2
+                    }
+                }
+            }
+        }
+    }
+}
+
+tt_content.gridelements_pi1.20.10.setup.Tab < lib.gridelements.Tab
