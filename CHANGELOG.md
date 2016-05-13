@@ -1,3 +1,14 @@
+#### v1.3.0 `May 13, 2016`
+- **[UPDATE]** felayout_t3kit 1.1.1 ([e727128](https://github.com/t3kit/theme_t3kit/commit/e727128))
+- **[FEATURE]** Adding title overrides the filename (#28) ([af810af](https://github.com/t3kit/theme_t3kit/commit/af810af))
+- **[FIX]** fix parallax + bg video parallax ([8df7055](https://github.com/t3kit/theme_t3kit/commit/8df7055))
+- **[FIX]** 'news-catecories' should be 'news-categories' (bug3) ([917f25e](https://github.com/t3kit/theme_t3kit/commit/917f25e))
+- **[FEATURE]** new way to add tab/pill content elements based on gridelements ([0556446](https://github.com/t3kit/theme_t3kit/commit/0556446))
+- **[FIX]** solr - template bug - 'remove all filters' is inside span.icon. = gets wrong font (bug19) ([904ed3c](https://github.com/t3kit/theme_t3kit/commit/904ed3c))
+- **[FIX]** changed name of 'containers' in collapsible ([e0db2ba](https://github.com/t3kit/theme_t3kit/commit/e0db2ba))
+- **[FEATURE]** new way to add collapsible content elements (accordion) based on gridelements ([5951a84](https://github.com/t3kit/theme_t3kit/commit/5951a84))
+- **[FIX]** Could not load flexform for Parallax ([b95a5bb](https://github.com/t3kit/theme_t3kit/commit/b95a5bb))
+
 #### v1.2.0 `May 10, 2016`
 - **[DOC]** add Contributing info to README file ([87d7119](https://github.com/t3kit/theme_t3kit/commit/87d7119))
 - **[UPDATE]** felayout_t3kit 1.1.0 ([07a2792](https://github.com/t3kit/theme_t3kit/commit/07a2792))
