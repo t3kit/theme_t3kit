@@ -20,16 +20,6 @@
 							</config>
 						</TCEforms>
 					</height>
-					<bgColor>
-						<TCEforms>
-							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax.flexform.bgcolor</label>
-							<config>
-								<type>input</type>
-								<size>15</size>
-								<default>#1D556F</default>
-							</config>
-						</TCEforms>
-					</bgColor>
 					<hideInMobile>
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax.flexform.hide</label>
