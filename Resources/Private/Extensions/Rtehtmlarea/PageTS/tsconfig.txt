@@ -40,4 +40,9 @@ RTE.default {
     ## for the textstyle
     buttons.textstyle.tags.span.allowedClasses := addToList(example-class-wrapper, white-text-color )
 
+    # Enabling paste toggle button to allow paste with/without styling
+    showButtons := addToList(pastetoggle)
+    
+    # Setting paste toggle to enabled to have standard pasting without styling
+    buttons.pastetoggle.setActiveOnRteOpen = 1
 }
