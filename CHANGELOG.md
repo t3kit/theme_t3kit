@@ -1,3 +1,6 @@
+#### v1.3.1 `May 26, 2016`
+- **[FIX]** video parallax template ([e246d62](https://github.com/t3kit/theme_t3kit/commit/e246d62))
+
 #### v1.3.0 `May 13, 2016`
 - **[UPDATE]** felayout_t3kit 1.1.1 ([e727128](https://github.com/t3kit/theme_t3kit/commit/e727128))
 - **[FEATURE]** Adding title overrides the filename (#28) ([af810af](https://github.com/t3kit/theme_t3kit/commit/af810af))
