@@ -1,3 +1,9 @@
+#### v1.4.0 `June 2, 2016`
+- **[UPDATE]** felayout_t3kit 1.2.0 ([3944b7d](https://github.com/t3kit/theme_t3kit/commit/3944b7d))
+- **[FEATURE]** Adding paste toggle button with setting to plain text to let template design handle looks (#29) ([656a5f3](https://github.com/t3kit/theme_t3kit/commit/656a5f3))
+- **[FIX]** fixed light box class name for news detail view (#31) ([62c3252](https://github.com/t3kit/theme_t3kit/commit/62c3252))
+- **[FEATURE]** add HeaderTemplates constant ([dc76e02](https://github.com/t3kit/theme_t3kit/commit/dc76e02))
+
 #### v1.3.1 `May 26, 2016`
 - **[FIX]** video parallax template ([e246d62](https://github.com/t3kit/theme_t3kit/commit/e246d62))
 
