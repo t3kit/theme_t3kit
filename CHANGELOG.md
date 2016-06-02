@@ -1,3 +1,6 @@
+#### v1.4.1 `June 2, 2016`
+- **[FIX]** update extension version ([c17de37](https://github.com/t3kit/theme_t3kit/commit/c17de37))
+
 #### v1.4.0 `June 2, 2016`
 - **[UPDATE]** felayout_t3kit 1.2.0 ([3944b7d](https://github.com/t3kit/theme_t3kit/commit/3944b7d))
 - **[FEATURE]** Adding paste toggle button with setting to plain text to let template design handle looks (#29) ([656a5f3](https://github.com/t3kit/theme_t3kit/commit/656a5f3))
