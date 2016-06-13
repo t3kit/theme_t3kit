@@ -114,6 +114,12 @@
             <trans-unit id="contentElement.slider.linkText" xml:space="preserve">
                 <source>Read more</source>
             </trans-unit>
+      <trans-unit id="content.behaviour.browsehappy.message" xml:space="preserve">
+				<source>You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser.</source>
+			</trans-unit>
+			<trans-unit id="content.behaviour.browsehappy.link" xml:space="preserve">
+				<source>Please upgrade your browser to improve your experience.</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
