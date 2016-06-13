@@ -46,3 +46,17 @@ plugin.tx_themes {
         }
     }
 }
+plugin.tx_solr {
+     _LOCAL_LANG {
+         default {
+             searchPlaceholder = Search...
+         }
+     }
+ }
+ plugin.tx_solr {
+     _LOCAL_LANG {
+         sv {
+             searchPlaceholder = Sök...
+         }
+     }
+ }
