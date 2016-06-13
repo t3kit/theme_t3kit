@@ -43,6 +43,20 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contentElementSlider'] = 'content-elements-contentElementSlider';
 
+    // "contentElementBootstrapSlider"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'bootstrap.slider.title',
+            'contentElementBootstrapSlider',
+            'content-elements-contentElementSlider'
+        ],
+        'contentElementSlider',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contentElementBootstrapSlider'] = 'content-elements-contentElementSlider';
+
     // "bigIconTextButton"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -177,6 +191,24 @@ call_user_func(function() {
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
         '
+    ];
+
+    // "contentElementBootstrapSlider"
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider'] = [
+        'showitem' => '
+            --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+            header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+            --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+        --div--;' . $contentElementLanguageFilePrefix . 'bootstrap.slider.tabs.slides,image,
+        --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+            --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+            --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+        --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+            hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+            --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+        --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+    '
     ];
 
     // "bigIconTextButton"
@@ -319,6 +351,9 @@ call_user_func(function() {
 
     // "accordion"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
+
+    // "contentElementBootstrapSlider"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_bootstrapSlider.xml';
 
     // Add additional fields for tt_content
     $additionalColumns = [

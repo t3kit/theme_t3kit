@@ -36,7 +36,24 @@
             <trans-unit id="slider.tabs.slides">
                 <source>Slides</source>
             </trans-unit>
-
+            <trans-unit id="bootstrap.slider.title">
+                <source>Bootstrap Slider</source>
+            </trans-unit>
+            <trans-unit id="bootstrap.slider.description">
+                <source>Basic slider included from Bootstrap package. Add sliding interval and turn on/off quickselect. </source>
+            </trans-unit>
+            <trans-unit id="bootstrap.tabs.slides">
+                <source>Slides</source>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.interval">
+                <source>Interval in seconds</source>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.quickselect">
+                <source>Quickselect</source>
+            </trans-unit>
             <trans-unit id="bigIconTextButton.title">
                 <source>Icon,Text and Link</source>
             </trans-unit>
