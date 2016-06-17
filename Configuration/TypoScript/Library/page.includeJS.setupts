@@ -20,6 +20,8 @@ page {
         }
     }
 }
+
+# custom.js is disabled by default, but it could be enabled if it needed
 page {
     includeJSFooter {
         mainjs = {$themes.configuration.feLayoutPath}/main.js
@@ -28,11 +30,12 @@ page {
             # disableCompression =
             # excludeFromConcatenation =
         }
-        customJs = fileadmin/custom/js/custom.js
-        customJs {
-            external = 0
+        # customJs = fileadmin/custom/js/custom.js
+        # customJs {
+        #     external = 0
             # disableCompression =
             # excludeFromConcatenation =
-        }
+        # }
+
     }
 }
