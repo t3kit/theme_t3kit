@@ -65,8 +65,8 @@
             <trans-unit id="area_sidebar">
                 <source>Sidebar</source>
             </trans-unit>
-            <trans-unit id="area_elements">
-                <source>Page Elements (Hidden on Front-end)</source>
+            <trans-unit id="area_sub_navigation">
+                <source>Sub Navigation</source>
             </trans-unit>
 
         </body>
