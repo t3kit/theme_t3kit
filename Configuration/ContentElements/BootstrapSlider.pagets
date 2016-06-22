@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        contentElementBootstrapSlider {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrap.slider.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrap.slider.description
+            iconIdentifier = content-elements-contentElementSlider
+            tt_content_defValues {
+                CType = contentElementBootstrapSlider
+            }
+        }
+    }
+    show := addToList(contentElementBootstrapSlider)
+}
