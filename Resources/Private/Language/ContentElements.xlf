@@ -36,6 +36,9 @@
             <trans-unit id="slider.tabs.slides">
                 <source>Slides</source>
             </trans-unit>
+            <trans-unit id="bootstrap.slider.tabs.slides">
+                <source>Slides</source>
+            </trans-unit>
             <trans-unit id="bootstrap.slider.title">
                 <source>Bootstrap Slider</source>
             </trans-unit>
