@@ -1,3 +1,19 @@
+
+#### v1.5.0 `June 22, 2016`
+- **[UPDATE]** felayout_t3kit 1.3.0 ([455ccca](https://github.com/t3kit/theme_t3kit/commit/455ccca))
+- **[FEATURE]** adds new content element 'bootstrapSlider (#37) ([079ce4f](https://github.com/t3kit/theme_t3kit/commit/079ce4f))
+- **[FEATURE]** add option for parallax to hide it in mobile (< 992px) ([8d77fae](https://github.com/t3kit/theme_t3kit/commit/8d77fae))
+- **[UPDATE]** felayout_t3kit 1.2.1 ([3d679a6](https://github.com/t3kit/theme_t3kit/commit/3d679a6))
+- **[REFACTOR]** warning message for outdated browsers ([28dcb5a](https://github.com/t3kit/theme_t3kit/commit/28dcb5a))
+- **[FIX]** Happy browser hardcoded (outdated browser) (Podio bug24) (#33) ([3646ad7](https://github.com/t3kit/theme_t3kit/commit/3646ad7))
+- **[FIX]** Add language variable for placeholder text in searchbox (#32) ([89be694](https://github.com/t3kit/theme_t3kit/commit/89be694))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[FEATURE]** modify BE layouts, subnav column - mark as Not assigned, remove Page Elements column ([6bcbce9](https://github.com/t3kit/theme_t3kit/commit/6bcbce9))
+- **[!!!]** **[FIX]** disable custom.js in t3kit ([ad664f0](https://github.com/t3kit/theme_t3kit/commit/ad664f0))
+- **[!!!]** **[FIX]** Changed majority of templates containing top-content, to make it possible to use the full width ([1552698](https://github.com/t3kit/theme_t3kit/commit/1552698))
+
+***
 #### v1.4.1 `June 2, 2016`
 - **[FIX]** update extension version ([c17de37](https://github.com/t3kit/theme_t3kit/commit/c17de37))
 
