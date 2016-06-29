@@ -1,7 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
-     xmlns:t3kit="http://typo3.org/ns/T3kit/T3kitExtensionTools/ViewHelpers/News">
+     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
 
 
     <f:layout name="Detail.html" />
@@ -17,14 +16,14 @@
                 <n:format.nothing>
                     <f:if condition="{newsItem.alternativeTitle}">
                         <f:then>
-                            <t3kit:titleTag>
+                            <n:titleTag>
                                 <n:format.htmlentitiesDecode>{newsItem.alternativeTitle}</n:format.htmlentitiesDecode>
-                            </t3kit:titleTag>
+                            </n:titleTag>
                         </f:then>
                         <f:else>
-                            <t3kit:titleTag>
+                            <n:titleTag>
                                 <n:format.htmlentitiesDecode>{newsItem.title}</n:format.htmlentitiesDecode>
-                            </t3kit:titleTag>
+                            </n:titleTag>
                         </f:else>
                     </f:if>
                     <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />

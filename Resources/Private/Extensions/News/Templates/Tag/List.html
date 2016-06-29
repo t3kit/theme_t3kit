@@ -1,7 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
-     xmlns:t3kit="http://typo3.org/ns/T3kit/T3kitExtensionTools/ViewHelpers/News">
+     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
 
     <f:layout name="General" />
 
@@ -21,9 +20,9 @@
                                     Set title tag for active tag
                                 </f:comment>
                                 <n:format.nothing>
-                                    <t3kit:titleTag appendTitle="1">
-                                        <n:format.htmlentitiesDecode>- {tag.title}</n:format.htmlentitiesDecode>
-                                    </t3kit:titleTag>
+                                    <n:titleTag>
+                                        <n:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - {tag.title}</n:format.htmlentitiesDecode>
+                                    </n:titleTag>
                                 </n:format.nothing>
                                 <f:link.page title="{tag.title}" class="active" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
                                     {tag.title}
