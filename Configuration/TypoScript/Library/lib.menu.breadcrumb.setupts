@@ -21,3 +21,130 @@ lib.menu.breadcrumb {
         }
     }
 }
+[globalVar = GP:tx_news_pi1|news > 0] || [globalVar = GP:tx_news_pi1|overwriteDemand|categories > 0] || [globalVar = GP:tx_news_pi1|overwriteDemand|tags > 0]
+    lib.menu.breadcrumb {
+        10 {
+            1 {
+                NO {
+                    doNotLinkIt = 0
+                    linkWrap = <li class="breadcrumbs__list-item"><span class="icons icon-t3-home"></span>|</li> |*| <li class="breadcrumbs__list-item">|</li>
+                }
+                # append with news title
+                stdWrap {
+                    append = COA
+                    append {
+                        20 = RECORDS
+                        20 {
+                            dontCheckPid = 1
+                            source.intval = 1
+                            stdWrap {
+                                wrap = <li class="breadcrumbs__list-item _active">|</li>
+                                required = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[globalVar = GP:tx_news_pi1|news > 0]
+    lib.menu.breadcrumb {
+        10 {
+            1 {
+                stdWrap {
+                    append {
+                        20 {
+                            stdWrap.if.isTrue.data = GP:tx_news_pi1|news
+                            tables = tx_news_domain_model_news
+                            source.data = GP:tx_news_pi1|news
+                            conf {
+                                tx_news_domain_model_news = TEXT
+                                tx_news_domain_model_news {
+                                    field = title
+                                    htmlSpecialChars = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[globalVar = GP:tx_news_pi1|overwriteDemand|categories > 0]
+    lib.menu.breadcrumb {
+        10 {
+            1 {
+                stdWrap {
+                    append {
+                        20 {
+                            stdWrap.if.isTrue.data = GP:tx_news_pi1|overwriteDemand|categories
+                            tables = sys_category
+                            source.data = GP:tx_news_pi1|overwriteDemand|categories
+                            conf {
+                                sys_category = TEXT
+                                sys_category {
+                                    field = title
+                                    htmlSpecialChars = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[globalVar = GP:tx_news_pi1|overwriteDemand|tags > 0]
+    lib.menu.breadcrumb {
+        10 {
+            1 {
+                stdWrap {
+                    append {
+                        20 {
+                            stdWrap.if.isTrue.data = GP:tx_news_pi1|overwriteDemand|tags
+                            tables = tx_news_domain_model_tag
+                            source.data = GP:tx_news_pi1|overwriteDemand|tags
+                            conf {
+                                tx_news_domain_model_tag = TEXT
+                                tx_news_domain_model_tag {
+                                    field = title
+                                    htmlSpecialChars = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+[globalVar = GP:tx_news_pi1|overwriteDemand|year > 0] && [globalVar = GP:tx_news_pi1|overwriteDemand|month > 0]
+    lib.menu.breadcrumb {
+        10 {
+            1 {
+                NO {
+                    doNotLinkIt = 0
+                    linkWrap = <li class="breadcrumbs__list-item"><span class="icons icon-t3-home"></span>|</li> |*| <li class="breadcrumbs__list-item">|</li>
+                }
+                # append with news title
+                stdWrap {
+                    append = COA
+                    append {
+                        20 = TEXT
+                        20 {
+                            dataWrap {
+                                data = GP:tx_news_pi1|overwriteDemand|month
+                                wrap = {LLL:EXT:news/Resources/Private/Language/locallang.xlf:month.|}
+                            }
+                        }
+                        30 = TEXT
+                        30 {
+                            data = GP:tx_news_pi1|overwriteDemand|year
+                            noTrimWrap = | ||
+                        }
+
+                        wrap = <li class="breadcrumbs__list-item _active">|</li>
+                    }
+                }
+            }
+        }
+    }
+[global]
