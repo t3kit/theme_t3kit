@@ -1,46 +1,59 @@
-{namespace n=GeorgRinger\News\ViewHelpers}
-<f:layout name="General" />
-<!--
-	=====================
-		Templates/Category/List.html
--->
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+     xmlns:t3kit="http://typo3.org/ns/T3kit/T3kitExtensionTools/ViewHelpers/News">
 
-<f:section name="content">
-	<f:if condition="{categories}">
-		<f:then>
+    <f:layout name="General" />
+    <!--
+        =====================
+            Templates/Category/List.html
+    -->
 
+    <f:section name="content">
+        <f:if condition="{categories}">
+            <f:then>
+                <f:render section="categoryTree" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
+            </f:then>
+            <f:else>
+                <f:translate key="list_nocategoriesfound" />
+            </f:else>
+        </f:if>
+    </f:section>
 
-			<f:render section="categoryTree" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
-		</f:then>
-		<f:else>
-			<f:translate key="list_nocategoriesfound" />
-		</f:else>
-	</f:if>
-</f:section>
+    <f:section name="categoryTree">
+        <div class="news-categories" >
+            <ul>
+                <f:for each="{categories}" as="category">
+                    <li>
+                        <f:if condition="{category.item.uid} == {overwriteDemand.categories}">
+                            <f:then>
+                                <f:comment>
+                                    Set title tag for active category
+                                </f:comment>
+                                <n:format.nothing>
+                                    <t3kit:titleTag appendTitle="1">
+                                        <n:format.htmlentitiesDecode>- {category.item.title}</n:format.htmlentitiesDecode>
+                                    </t3kit:titleTag>
+                                </n:format.nothing>
 
-<f:section name="categoryTree">
-	<div class="news-categories" >
-	<ul>
-		<f:for each="{categories}" as="category">
-			<li>
-				<f:if condition="{category.item.uid} == {overwriteDemand.categories}">
-					<f:then>
-						<f:link.page title="{category.item.title}" class="active" pageUid="{settings.listPid}"
-							additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
-						</f:link.page>
-					</f:then>
-					<f:else>
-						<f:link.page title="{category.item.title}" pageUid="{settings.listPid}"
-							additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
-						</f:link.page>
-					</f:else>
-				</f:if>
+                                <f:link.page title="{category.item.title}" class="active" pageUid="{settings.listPid}"
+                                             additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
+                                </f:link.page>
+                            </f:then>
+                            <f:else>
+                                <f:link.page title="{category.item.title}" pageUid="{settings.listPid}"
+                                             additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
+                                </f:link.page>
+                            </f:else>
+                        </f:if>
 
-				<f:if condition="{category.children}">
-					<f:render section="categoryTree" arguments="{categories: category.children,overwriteDemand:overwriteDemand}" />
-				</f:if>
-			</li>
-		</f:for>
-	</ul>
-	</div>
-</f:section>
+                        <f:if condition="{category.children}">
+                            <f:render section="categoryTree" arguments="{categories: category.children,overwriteDemand:overwriteDemand}" />
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+    </f:section>
+</div>
+
