@@ -19,6 +19,8 @@ themes.configuration.menu.main.excludeUidList =
 # cat=menu,advanced/main_menu; type=options[Main Menu Dropdown=_sub, Disable Main Menu Dropdown=no-dropdown]; label= Enable/Disable Main Menu Dropdown
 themes.configuration.menu.main.dropdown = _sub
 
+# cat=menu,advanced/main_menu; type=options[0,1]; label= Enable/Disable Main Menu Dropdown Columns (only works if Main Menu Dropdown is enabled)
+themes.configuration.menu.main.dropdownColumns = 0
 
 
 # Sub Menu
