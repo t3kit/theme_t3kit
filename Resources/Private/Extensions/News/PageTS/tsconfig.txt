@@ -1,0 +1,3 @@
+tx_news.templateLayouts {
+        Carousel-swipe = News as carousel
+}
