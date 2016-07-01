@@ -1,0 +1,95 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+<div class="news-list-view {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
+	<div class="swiper-container news-carousel__container js__news-carousel">
+	<!-- Additional required wrapper -->
+		<div class="swiper-wrapper news-carousel__wrapper">
+			<f:for each="{news}" as="newsItem" iteration="iterator">
+
+			<div class="swiper-slide news-carousel__slide">
+				<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+					<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+					<f:if condition="{newsItem.falMedia}">
+						<!-- fal media preview element -->
+						<div class="news-carousel__img-wrap">
+							<f:if condition="{newsItem.falMediaPreviews}">
+								<f:then>
+									<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+										<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+											<f:if condition="{mediaElement.originalResource.type} == 2">
+												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 4">
+												<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}"/>
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 5">
+												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											</f:if>
+										</f:alias>
+									</n:link>
+								</f:then>
+								<f:else>
+									<f:if condition="{settings.displayDummyIfNoMedia}">
+										<div class="no-media-element">
+											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+											</n:link>
+										</div>
+									</f:if>
+								</f:else>
+							</f:if>
+
+							<div class="news-carousel__item-info">
+								<f:if condition="{newsItem.firstCategory}">
+										<!-- first category -->
+										<span class="news-list-category">{newsItem.firstCategory.title}</span>
+								</f:if>
+								<!-- date -->
+								<span class="news-list-date">
+									<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+										<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+										<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+									</time>
+								</span>
+							</div>
+
+						</div>
+					</f:if>
+
+
+
+					<!-- header -->
+					<div class="news-article-header">
+						<h3>
+							<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+								<span itemprop="headline">{newsItem.title}</span>
+							</n:link>
+						</h3>
+					</div>
+
+
+					<!-- teaser -->
+					<div class="teaser-text">
+						<f:if condition="{newsItem.teaser}">
+							<f:then>
+								<span itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.newsCarousel.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+							</f:then>
+							<f:else>
+								<span itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.newsCarousel.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+							</f:else>
+						</f:if>
+					</div>
+
+
+				</div>
+
+			</div>
+
+			</f:for>
+		</div>
+		<div class="js__news-carousel__pagination news-carousel__pagination swiper-pagination"></div>
+	</div>
+	<div class="js__news-carousel__btn-prev news-carousel__btn-prev swiper-button-prev"></div>
+	<div class="js__news-carousel__btn-next news-carousel__btn-next swiper-button-next"></div>
+
+</div>
