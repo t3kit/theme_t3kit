@@ -188,6 +188,12 @@ plugin.tx_dyncss.overrides {
         if.isTrue = {$themes.configuration.less.var.navBackgroundColor}
     }
 
+    nav-column-background-color = TEXT
+    nav-column-background-color {
+        value = {$themes.configuration.less.var.navColumnBackgroundColor}
+        if.isTrue = {$themes.configuration.less.var.navColumnBackgroundColor}
+
+    }
 
     nav-search-btn-color = TEXT
     nav-search-btn-color {
