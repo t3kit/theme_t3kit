@@ -64,10 +64,12 @@
 	</div>
 
 	<!--###PERMALOGIN_VALID###-->
-		<div>
-			<label for="permalogin">###PERMALOGIN###</label>
-			<input name="permalogin" value="0" type="hidden" ###PERMALOGIN_HIDDENFIELD_ATTRIBUTES### id="permaloginHiddenField" />
-			<input name="permalogin" value="1" type="checkbox" ###PERMALOGIN_CHECKBOX_ATTRIBUTES### id="permalogin"  onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;" />
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="permalogin">###PERMALOGIN###</label>
+			<div class="col-sm-9">
+				<input name="permalogin" value="0" type="hidden" ###PERMALOGIN_HIDDENFIELD_ATTRIBUTES### id="permaloginHiddenField" />
+				<input name="permalogin" value="1" type="checkbox" ###PERMALOGIN_CHECKBOX_ATTRIBUTES### id="permalogin"  onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;" />
+			</div>
 		</div>
 	<!--###PERMALOGIN_VALID###-->
 
