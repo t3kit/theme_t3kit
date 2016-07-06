@@ -1,0 +1,98 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<div class="news-list-view news-simple-list {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
+	<f:if condition="{settings.hidePagination}">
+		<f:then>
+			<f:for each="{news}" as="newsItem" iteration="iterator">
+				<f:render section="simpleList" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+			</f:for>
+		</f:then>
+		<f:else>
+			<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+				<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+					<f:render section="simpleList" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+				</f:for>
+			</n:widget.paginate>
+		</f:else>
+	</f:if>
+</div>
+
+
+<f:section name="simpleList">
+	<article class="news-simple-list__item clearfix articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+		<n:excludeDisplayedNews newsItem="{newsItem}"/>
+
+		<f:if condition="{newsItem.falMedia}">
+			<!-- fal media preview element -->
+			<div class="news-simple-list__img-wrap">
+				<f:if condition="{newsItem.falMediaPreviews}">
+					<f:then>
+						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+							<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+								<f:if condition="{mediaElement.originalResource.type} == 2">
+									<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+								</f:if>
+								<f:if condition="{mediaElement.originalResource.type} == 4">
+									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+								</f:if>
+								<f:if condition="{mediaElement.originalResource.type} == 5">
+									<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+								</f:if>
+							</f:alias>
+						</n:link>
+					</f:then>
+					<f:else>
+						<f:if condition="{settings.displayDummyIfNoMedia}">
+							<div class="no-media-element">
+								<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+							</div>
+						</f:if>
+					</f:else>
+				</f:if>
+			</div>
+		</f:if>
+
+		<div class="news-simple-list__text js__news-simple-list__dotdotdot">
+
+			<!-- date -->
+			<span class="news-list-date news-simple-list__date-wrp">
+				<span class="news-simple-list__date-text">
+					<f:translate extensionName="Theme_t3kit" key="news.date.text"/>
+				</span>
+				<span class="news-simple-list__date">
+					<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+						<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+						<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+					</time>
+				</span>
+			</span>
+
+			<!-- header -->
+			<f:if condition="{newsItem.title}">
+				<div class="news-article-header news-simple-list__header">
+					<h3>{newsItem.title}</h3>
+				</div>
+			</f:if>
+
+
+			<!-- teaser -->
+			<div class="teaser-text news-simple-list__teaser">
+				<f:if condition="{newsItem.teaser}">
+					<f:then>
+						<span itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.simpleList.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+					</f:then>
+					<f:else>
+						<span itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.simpleList.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+
+		<div class="news-simple-list__more-link">
+			<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+				<f:translate key="more-link"/>
+			</n:link>
+		</div>
+
+	</article>
+</f:section>
