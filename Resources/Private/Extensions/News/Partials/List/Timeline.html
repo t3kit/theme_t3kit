@@ -1,0 +1,129 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<div class="news-list-view news-timeline {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
+	<f:if condition="{settings.hidePagination}">
+		<f:then>
+			<f:render section="newsItemGrouped" arguments="{news:  paginatedNews,settings:settings}" />
+		</f:then>
+		<f:else>
+			<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+				<f:render section="newsItemGrouped" arguments="{news:  paginatedNews,settings:settings}" />
+			</n:widget.paginate>
+		</f:else>
+	</f:if>
+</div>
+
+
+<f:section name="newsItemGrouped">
+	<f:groupedFor each="{news}" as="newsItemGrouped" groupBy="yearOfDatetime" groupKey="currentYear">
+		<div class="news-timeline-wrp">
+		<h2 class="news-timeline__header">{currentYear}</h2>
+			<f:for each="{newsItemGrouped}" as="newsItem" iteration="iterator">
+				<f:cycle values="{0: 'odd', 1: 'even'}" as="cycle">
+					<f:render section="newsTimeline" arguments="{newsItem: newsItem,settings:settings,iterator:iterator, val : cycle, startYear: news.0.yearOfDatetime}" />
+				</f:cycle>
+			</f:for>
+		</div>
+	</f:groupedFor>
+</f:section>
+
+<f:section name="newsTimeline">
+
+	<div class="news-timeline__item-wrp js__news-timeline__item-wrp">
+		<f:if condition="{iterator.isFirst}">
+			<f:then>
+				<div class="news-list-date news-timeline__date js__news-timeline__date {val} {f:if(condition: '{startYear} == {newsItem.yearOfDatetime}', then: 'open', else: ' ')}">
+			</f:then>
+			<f:else>
+				<div class="news-list-date news-timeline__date js__news-timeline__date {val}">
+			</f:else>
+		</f:if>
+		<div>
+			<span class="news-timeline__date-day"><f:format.date format="%d">{newsItem.datetime}</f:format.date></span>
+			<span class="news-timeline__date-month"><f:format.date format="%b">{newsItem.datetime}</f:format.date></span>
+		</div>
+		</div>
+		<article class="news-timeline__item-article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+			<n:excludeDisplayedNews newsItem="{newsItem}"/>
+				<f:if condition="{iterator.isFirst}">
+					<f:then>
+						<div class="news-timeline__item js__news-timeline__item {val} {f:if(condition: '{startYear} == {newsItem.yearOfDatetime}', then: 'nocollapse', else: 'collapsed')} {f:if(condition: iterator.isLast, then: ' last', else: '')}">
+					</f:then>
+					<f:else>
+						<div class="news-timeline__item js__news-timeline__item {val} collapsed {f:if(condition: iterator.isLast, then: ' last', else: '')}">
+					</f:else>
+				</f:if>
+					<f:if condition="{newsItem.falMedia}">
+						<!-- fal media preview element -->
+						<div class="news-timeline__img-wrap">
+							<f:if condition="{newsItem.falMediaPreviews}">
+								<f:then>
+									<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+										<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+											<f:if condition="{mediaElement.originalResource.type} == 2">
+												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 4">
+												<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+											</f:if>
+											<f:if condition="{mediaElement.originalResource.type} == 5">
+												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											</f:if>
+										</f:alias>
+									</n:link>
+								</f:then>
+								<f:else>
+									<f:if condition="{settings.displayDummyIfNoMedia}">
+										<div class="no-media-element">
+											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+											</n:link>
+										</div>
+									</f:if>
+								</f:else>
+							</f:if>
+						</div>
+					</f:if>
+
+					<div class="news-timeline__item-text">
+
+						<!-- header -->
+						<f:if condition="{newsItem.title}">
+							<div class="news-article-header news-timeline__item-header">
+								<h3>{newsItem.title}</h3>
+							</div>
+						</f:if>
+
+						<!-- teaser -->
+						<div class="teaser-text news-timeline__item-teaser">
+							<f:if condition="{newsItem.teaser}">
+								<f:then>
+									<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.timeline.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+								</f:then>
+								<f:else>
+									<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.timeline.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+								</f:else>
+							</f:if>
+
+							<div class="news-timeline__item-more-link">
+								<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+									<f:translate key="more-link"/>
+								</n:link>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- author -->
+					<f:if condition="{newsItem.author}">
+						<div class="news-timeline__item-author">
+							<span class="news-list-author">
+								<f:translate key="author" arguments="{0:newsItem.author}"/>
+							</span>
+						</div>
+					</f:if>
+
+				</div>
+			</article>
+	</div>
+</f:section>
