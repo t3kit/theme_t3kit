@@ -1,4 +1,20 @@
 
+#### v1.6.0 `July 8, 2016`
+- **[UPDATE]** felayout_t3kit 1.4.0 ([445d44b](https://github.com/t3kit/theme_t3kit/commit/445d44b))
+- **[FIX]** fixed confirmation page for mail form, disable compatibility mode for TYPO3 6.2 of form (Podio bug_16) (#40) ([15f5d60](https://github.com/t3kit/theme_t3kit/commit/15f5d60))
+- **[FEATURE]** add new News list template - NewsTimeline ([279fd6b](https://github.com/t3kit/theme_t3kit/commit/279fd6b))
+- **[FEATURE]** add new list templates for news EXT, (cards, simple list) ([756bb83](https://github.com/t3kit/theme_t3kit/commit/756bb83))
+- **[REFACTOR]** rename news-carousel element ([31826b6](https://github.com/t3kit/theme_t3kit/commit/31826b6))
+- **[DOC]** add license file (Podio feature_24) ([1668b31](https://github.com/t3kit/theme_t3kit/commit/1668b31))
+- **[FEATURE]** add t3kit info into site layout (Podio feature_29) ([4a372be](https://github.com/t3kit/theme_t3kit/commit/4a372be))
+- **[FIX]** added bs classes for permalogin ([2d71a01](https://github.com/t3kit/theme_t3kit/commit/2d71a01))
+- **[FIX]** News title with seo_basic (#39) ([7ffe0d9](https://github.com/t3kit/theme_t3kit/commit/7ffe0d9))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[FEATURE]** add news-carousel template for NEWS extension ([11a851d](https://github.com/t3kit/theme_t3kit/commit/11a851d))
+
+***
+
 #### v1.5.0 `June 22, 2016`
 - **[UPDATE]** felayout_t3kit 1.3.0 ([455ccca](https://github.com/t3kit/theme_t3kit/commit/455ccca))
 - **[FEATURE]** adds new content element 'bootstrapSlider (#37) ([079ce4f](https://github.com/t3kit/theme_t3kit/commit/079ce4f))
