@@ -1,0 +1,115 @@
+{namespace form=TYPO3\CMS\Form\ViewHelpers}
+
+<f:if condition="{model.showElement}">
+    <div class="form-group csc-form-{model.elementCounter} csc-form-element csc-form-element-{model.elementTypeLowerCase}">
+        <div class="col-sm-3">
+            <strong><label>{model.additionalArguments.label}</label></strong>
+        </div>
+        <div class="col-sm-5">
+            <f:for each="{form:aggregateSelectOptions(model:model)}" as="option">
+                <f:if condition="{option.options}">
+                    <f:then>
+                        <f:for each="{option.options}" as="optgroupOption" iteration="iteration">
+                            <f:if condition="{optgroupOption.selected}">
+                                <f:if condition="{model.showElement}">
+                                    <f:if condition="{iteration.isFirst}">
+                                        <f:then></f:then>
+                                        <f:else>, </f:else>
+                                    </f:if>
+                                    <div class="csc-form-element csc-form-element-{model.elementTypeLowerCase}">
+                                        {optgroupOption.label}
+                                    </div>
+                                </f:if>
+                                <f:if condition="{model.additionalArguments.multiple}">
+                                    <f:then>
+                                        <f:form.hidden
+                                                class="{model.additionalArguments.class}"
+                                                dir="{model.additionalArguments.dir}"
+                                                id="{model.additionalArguments.id}"
+                                                lang="{model.additionalArguments.lang}"
+                                                style="{model.additionalArguments.style}"
+                                                title="{model.additionalArguments.title}"
+                                                accesskey="{model.additionalArguments.accesskey}"
+                                                tabindex="{model.additionalArguments.tabindex}"
+                                                onclick="{model.additionalArguments.onclick}"
+
+                                                name="{model.additionalArguments.prefix}[{model.additionalArguments.name}][]"
+                                                value="{optgroupOption.value}"
+
+                                                additionalAttributes="{model.htmlAttributes}"
+                                        />
+                                    </f:then>
+                                    <f:else>
+                                        <f:form.hidden
+                                                class="{model.additionalArguments.class}"
+                                                dir="{model.additionalArguments.dir}"
+                                                id="{model.additionalArguments.id}"
+                                                lang="{model.additionalArguments.lang}"
+                                                style="{model.additionalArguments.style}"
+                                                title="{model.additionalArguments.title}"
+                                                accesskey="{model.additionalArguments.accesskey}"
+                                                tabindex="{model.additionalArguments.tabindex}"
+                                                onclick="{model.additionalArguments.onclick}"
+
+                                                name="{model.additionalArguments.prefix}[{model.additionalArguments.name}]"
+                                                value="{optgroupOption.value}"
+
+                                                additionalAttributes="{model.htmlAttributes}"
+                                        />
+                                    </f:else>
+                                </f:if>
+                            </f:if>
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{option.selected}">
+                            <f:if condition="{model.showElement}">
+                                <div class="csc-form-element csc-form-element-{model.elementTypeLowerCase}">
+                                    {option.label}
+                                </div>
+                            </f:if>
+                            <f:if condition="{model.additionalArguments.multiple}">
+                                <f:then>
+                                    <f:form.hidden
+                                            class="{model.additionalArguments.class}"
+                                            dir="{model.additionalArguments.dir}"
+                                            id="{model.additionalArguments.id}"
+                                            lang="{model.additionalArguments.lang}"
+                                            style="{model.additionalArguments.style}"
+                                            title="{model.additionalArguments.title}"
+                                            accesskey="{model.additionalArguments.accesskey}"
+                                            tabindex="{model.additionalArguments.tabindex}"
+                                            onclick="{model.additionalArguments.onclick}"
+
+                                            name="{model.additionalArguments.prefix}[{model.additionalArguments.name}][]"
+                                            value="{option.value}"
+
+                                            additionalAttributes="{model.htmlAttributes}"
+                                    />
+                                </f:then>
+                                <f:else>
+                                    <f:form.hidden
+                                            class="{model.additionalArguments.class}"
+                                            dir="{model.additionalArguments.dir}"
+                                            id="{model.additionalArguments.id}"
+                                            lang="{model.additionalArguments.lang}"
+                                            style="{model.additionalArguments.style}"
+                                            title="{model.additionalArguments.title}"
+                                            accesskey="{model.additionalArguments.accesskey}"
+                                            tabindex="{model.additionalArguments.tabindex}"
+                                            onclick="{model.additionalArguments.onclick}"
+
+                                            name="{model.additionalArguments.prefix}[{model.additionalArguments.name}]"
+                                            value="{option.value}"
+
+                                            additionalAttributes="{model.htmlAttributes}"
+                                    />
+                                </f:else>
+                            </f:if>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</f:if>
