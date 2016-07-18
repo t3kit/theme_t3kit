@@ -1,4 +1,13 @@
 
+#### v1.7.0 `July 18, 2016`
+- **[UPDATE]** felayout_t3kit 1.5.0 ([7eed7fd](https://github.com/t3kit/theme_t3kit/commit/7eed7fd))
+- **[FEATURE]** Added possibility to add target _blank to the file list item (#42) ([8bc40de](https://github.com/t3kit/theme_t3kit/commit/8bc40de))
+- **[UPDATE]** correct and update dependencies in ext_emconf ([2e8cd5e](https://github.com/t3kit/theme_t3kit/commit/2e8cd5e))
+- **[DOC]** add CONTRIBUTING.md file ([ca1e5f9](https://github.com/t3kit/theme_t3kit/commit/ca1e5f9))
+- **[DOC]** update README file ([44dd04f](https://github.com/t3kit/theme_t3kit/commit/44dd04f))
+
+***
+
 #### v1.6.0 `July 8, 2016`
 - **[UPDATE]** felayout_t3kit 1.4.0 ([445d44b](https://github.com/t3kit/theme_t3kit/commit/445d44b))
 - **[FIX]** fixed confirmation page for mail form, disable compatibility mode for TYPO3 6.2 of form (Podio bug_16) (#40) ([15f5d60](https://github.com/t3kit/theme_t3kit/commit/15f5d60))
