@@ -76,5 +76,41 @@ page.headerData.187.value (
         } else{
             document.documentElement.className += (' ' + (ie + ' ' + 'IE'));
         };
+
+        var isIOS = false;
+        function detectIOS() {
+            var iDevices = [
+                'iPad Simulator',
+                'iPhone Simulator',
+                'iPod Simulator',
+                'iPad',
+                'iPhone',
+                'iPod'
+            ];
+
+            if (!!navigator.platform) {
+                while(iDevices.length) {
+                    if (navigator.platform === iDevices.pop()) {
+                        isIOS = true;
+                        // In case if should be in DOM
+                        // for now can be omitted - no styles by default attached to this class name ' iOS'
+                        document.documentElement.className += " iOS";
+                    }
+                }
+            }
+        }
+        detectIOS();
+
+        var isAndroid = false;
+        var android = uA.indexOf('Android ');
+        function detectAndroid() {
+            if (android > 0) {
+                isAndroid = true;
+                // In case if should be in DOM
+                // for now can be omitted - no styles by default attached to this class name ' android'
+                document.documentElement.className += " android";
+            }
+        }
+        detectAndroid();
     </script>
 )
