@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit" target-language="no">
+        <header></header>
+        <body>
+            <trans-unit id="tt_content.palette.imageSize">
+                <source>Size of images</source>
+                <target>Bildestørrelser</target>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageWidth">
+                <source>Width</source>
+                <target>Bredde</target>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageHeight">
+                <source>Height</source>
+                <target>Høyde</target>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageMaxWidth">
+                <source>Max width</source>
+                <target>Maks bredde</target>
+            </trans-unit>
+            <trans-unit id="tt_content.palette.imageSize.imageMaxHeight">
+                <source>Max height</source>
+                <target>Maks høyde</target>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.settings">
+                <source>Additional settings</source>
+                <target>Flere innstillinger</target>
+            </trans-unit>
+            <trans-unit id="tab.contentElements">
+                <source>Content elements</source>
+                <target>Innholdselementer</target>
+            </trans-unit>
+            <trans-unit id="slider.title">
+                <source>Slider</source>
+                <target>Karusell</target>
+            </trans-unit>
+            <trans-unit id="slider.description">
+                <source>Slider with images and optional texts and link</source>
+                <target>Karusell med bilder og valgfrie tekster og lenker</target>
+            </trans-unit>
+            <trans-unit id="slider.tabs.slides">
+                <source>Slides</source>
+                <target>Karusellelementer</target>
+            </trans-unit>
+            <trans-unit id="bootstrap.slider.tabs.slides">
+                <source>Slides</source>
+                <target>Karusellelementer</target>
+            </trans-unit>
+            <trans-unit id="bootstrap.slider.title">
+                <source>Bootstrap Slider</source>
+                <target>Bootstrap-karusell</target>
+            </trans-unit>
+            <trans-unit id="bootstrap.slider.description">
+                <source>Basic slider included from Bootstrap package. Add sliding interval and turn on/off quickselect. </source>
+                <target>Den grunnleggende karusellen fra Bootstrap-pakken. Legg til intervall og slå på/av hurtigvalg.</target>
+            </trans-unit>
+            <trans-unit id="bootstrap.tabs.slides">
+                <source>Slides</source>
+                <target>Karusellelementer</target>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.sheetGeneral">
+                <source>Additional settings</source>
+                <target>Flere innstillinger</target>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.interval">
+                <source>Interval in seconds</source>
+                <target>Intervall i sekunder</target>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.quickselect">
+                <source>Quickselect</source>
+                <target>Hurtigvalg</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.title">
+                <source>Icon,Text and Link</source>
+                <target>Ikon, tekst og lenke</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.description">
+                <source>Big icon, header, text and link</source>
+                <target>Stort ikon, overskrift, tekst og lenke</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.buttonText">
+                <source>Button text</source>
+                <target>Knapp-tekst</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.link">
+                <source>Link</source>
+                <target>Lenke</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.bodytext">
+                <source>Text</source>
+                <target>Tekst</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.sheetGeneral">
+                <source>Additional settings</source>
+                <target>Flere innstillinger</target>
+            </trans-unit>
+            <trans-unit id="bigIconTextButton.flexform.iconClass">
+                <source>Icon</source>
+                <target>Ikon</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.title">
+                <source>Icon,Text and Button</source>
+                <target>Ikon, tekst og knapp</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.description">
+                <source>Icon,Text and Button</source>
+                <target>Ikon, tekst og knapp</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.buttonText">
+                <source>Button text</source>
+                <target>Knapp-tekst</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.link">
+                <source>Link</source>
+                <target>Lenke</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.bodytext">
+                <source>Text</source>
+                <target>Tekst</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.sheetGeneral">
+                <source>Additional settings</source>
+                <target>Flere innstillinger</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.iconClass">
+                <source>Icon</source>
+                <target>Ikon</target>
+            </trans-unit>
+            <trans-unit id="iconTextButton.flexform.iconClass_none">
+                <source>None</source>
+                <target>Ingen</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.title">
+                <source>Image text and link</source>
+                <target>Bilde tekst og lenke</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.description">
+                <source>Image or media, text and link. Will use image image before media. Will only render one image or one media.</source>
+                <target>Bilde eller media, tekst og lenke. Vil ta i bruk bilde før media. Vil bare gjengi ett bilde eller ett medieelement.</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.bodyText">
+                <source>Text</source>
+                <target>Tekst</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.linkText">
+                <source>Link text</source>
+                <target>Lenketekst</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.link">
+                <source>Link</source>
+                <target>Lenke</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.tabs.media">
+                <source>Media</source>
+                <target>Media</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.bodytext">
+                <source>Text</source>
+                <target>Tekst</target>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.sheetGeneral">
+                <source>Additional settings</source>
+                <target>Flere innstillinger</target>
+            </trans-unit>
+            <trans-unit id="accordion.title">
+                <source>Accordion</source>
+                <target>Trekkspill</target>
+            </trans-unit>
+            <trans-unit id="accordion.description">
+                <source>Accordion, added records will be used as "accordion", and the record inside "accordian" will be rendered as content.</source>
+                <target>Trekkspill, elementene du legger inn vil bli brukt som "trekkspill", og elementer inne i "trekkspill" vil bli gjengitt som innhold.</target>
+            </trans-unit>
+            <trans-unit id="accordion.records_formlabe">
+                <source>Records to use as "accordions", title is displayed as accordian expand/collapse link, and their child records will be rendered inside the accordion.</source>
+                <target>Elementer som skal brukes som "trekkspill". Tittelen vises som trekkspillets utvid/slå sammen-lenke og underelementene vises som innhold.</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.sheetGeneral">
+                <source>Additional settings</source>
+                <target>Flere innstillinger</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode">
+                <source>Accordion mode</source>
+                <target>Trekkspill-modus</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenSingleSelect">
+                <source>First item is expanded at load, only one item can be expanded at the same time.</source>
+                <target>Første punkt vises utvidet ved innlasting. Bare ett element kan være utvidet samtidig.</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allClosedMultiSelect">
+                <source>All items are collapsed at load, multiple items can be expanded at the same time.</source>
+                <target>Alle elementer er kollapset ved innlasting. Flere elementer kan være utvidet samtidig.</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allClosedSingleSelect">
+                <source>All items are collapsed at load, only one item can be expanded at the same time.</source>
+                <target>Alle elementer er kollapset ved innlasting. Bare ett element være utvidet samtidig.</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenMultiSelect">
+                <source>First item is expanded at load, multiple items can be expanded at the same time.</source>
+                <target>Første punkt er utvidet ved innlasting. Flere elementer være utvidet samtidig.</target>
+            </trans-unit>
+            <trans-unit id="accordion.flexform.accordionMode_allOpen">
+                <source>All items are expanded at load.</source>
+                <target>Alle elementer er utvidet ved innlasting.</target>
+            </trans-unit>
+            <trans-unit id="logoCarousel.title">
+                <source>Logo Carousel</source>
+                <target>Logokarusell</target>
+            </trans-unit>
+            <trans-unit id="logoCarousel.description">
+                <source>Carousel with images (logos) and optional link</source>
+                <target>Karusell med bilder (logoer) og valgfri lenke</target>
+            </trans-unit>
+            <trans-unit id="logoCarousel.tabs.logos">
+                <source>Logos</source>
+                <target>Logoer</target>
+            </trans-unit>
+            <trans-unit id="quote.title">
+                <source>Quote</source>
+                <target>Sitat</target>
+            </trans-unit>
+            <trans-unit id="quote.description">
+                <source>Quote with optional footer and link</source>
+                <target>Sitat med valgfri bunntekst og link</target>
+            </trans-unit>
+            <trans-unit id="quote.linkText">
+                <source>Link text</source>
+                <target>Lenketekst</target>
+            </trans-unit>
+            <trans-unit id="quote.header">
+                <source>Name, Title</source>
+                <target>Navn, Tittel</target>
+            </trans-unit>
+            <trans-unit id="quote.link">
+                <source>Link</source>
+                <target>Lenke</target>
+            </trans-unit>
+            <trans-unit id="quote.bodytext">
+                <source>Quote</source>
+                <target>Sitat</target>
+            </trans-unit>
+            <trans-unit id="tabs.title">
+                <source>Tabs</source>
+                <target>Faner</target>
+            </trans-unit>
+            <trans-unit id="tabs.description">
+                <source>Tabs with content</source>
+                <target>Faner med innhold</target>
+            </trans-unit>
+            <trans-unit id="tabs.layout.0">
+                <source>Tabs</source>
+                <target>Faner</target>
+            </trans-unit>
+            <trans-unit id="tabs.layout.1">
+                <source>Pills</source>
+                <target>Piller</target>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.title">
+                <source>Full Width Image</source>
+                <target>Bilde i full bredde</target>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.description">
+                <source>Full Width Image element</source>
+                <target>Bilde i full bredde-element</target>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.tabs.image">
+                <source>Image</source>
+                <target>Bilde</target>
+            </trans-unit>
+            <trans-unit id="responsiveVideo.title">
+                <source>Responsive Video</source>
+                <target>Responsiv video</target>
+            </trans-unit>
+            <trans-unit id="responsiveVideo.description">
+                <source>Responsive Video Element</source>
+                <target>Responsiv video-element</target>
+            </trans-unit>
+            <trans-unit id="responsiveVideo.tabs.video">
+                <source>Video</source>
+                <target>Video</target>
+            </trans-unit>
+            <trans-unit id="socialIcons.title">
+                <source>Social Icons</source>
+                <target>Sosiale ikoner</target>
+            </trans-unit>
+            <trans-unit id="socialIcons.description">
+                <source>Social Icons element</source>
+                <target>Sosiale ikoner-element</target>
+            </trans-unit>
+            <trans-unit id="copyrightText.title">
+                <source>Copyright</source>
+                <target>Opphavsrett</target>
+            </trans-unit>
+            <trans-unit id="copyrightText.description">
+                <source>Copyright text element</source>
+                <target>Opphavsrettstekst-element</target>
+            </trans-unit>
+            <trans-unit id="contacts.title">
+                <source>Contacts</source>
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="contacts.description">
+                <source>Contact info element</source>
+                <target>Kontaktinformasjon-element</target>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper">
+                <source>Appearance</source>
+                <target>Utseende</target>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper.description">
+                <source>Select appearance of content element (if available)</source>
+                <target>Velg utseende for innholdselement (hvis tilgjengelig)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.aligning">
+                <source>Aligning</source>
+                <target>Justering</target>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper_margin_top">
+                <source>Margin top</source>
+                <target>Toppmarg</target>
+            </trans-unit>
+            <trans-unit id="tt_content.wrapper_margin_bottom">
+                <source>Margin bottom</source>
+                <target>Bunnmarg</target>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default</source>
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="elem.flexform.linkAsBtn">
+                <source>Show link as a button</source>
+                <target>Vis lenken som en knapp</target>
+            </trans-unit>
+            <trans-unit id="elem.flexform.btnAsLink">
+                <source>Show button as a link</source>
+                <target>Vis knappen som en lenke</target>
+            </trans-unit>
+            <trans-unit id="icon.flexform.iconClass_none">
+                <source>None</source>
+                <target>Ingen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
