@@ -139,6 +139,9 @@ themes.configuration.less.var.navLinkArrowColor =
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Background Color
 themes.configuration.less.var.navBackgroundColor =
 
+# cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Column Background Color
+themes.configuration.less.var.navColumnBackgroundColor =
+
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Search Button Color
 themes.configuration.less.var.navSearchBtnColor =
 
