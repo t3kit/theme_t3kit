@@ -2,12 +2,13 @@
 
 <f:layout name="HeaderContentFooter" />
 
-<f:debug>{_all}</f:debug>
+
 
 <f:section name="content">
 <!-- theme_t3kit: Templates/ContentElements/Accordion.html [begin] -->
+    <f:debug>{_all}</f:debug>
 	<f:if condition="{data.records}">
-		<div class="panel-group" id="accordion-{data.uid}" role="tablist" aria-multiselectable="{f:if(condition: '{settings.accordionMode} >= 2', then: 'TRUE', else: 'FALSE')}">
+		<div class="panel-group rrr" id="accordion-{data.uid}" role="tablist" aria-multiselectable="{f:if(condition: '{settings.accordionMode} >= 2', then: 'TRUE', else: 'FALSE')}">
 			<f:for each="{xtools:get.records(recordList : data.records)}" as="accordion" iteration="accordionIteration">
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="heading-{data.uid}-{accordion.uid}">

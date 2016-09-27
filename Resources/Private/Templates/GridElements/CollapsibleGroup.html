@@ -1,6 +1,5 @@
 <f:layout name="HeaderContentFooter" />
 
-<f:debug>{data}</f:debug>
 
 <f:section name="content">
 	<div class="panel-group" id="group-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" role="tablist" aria-multiselectable="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.multiselectable.vDEF}', then: 'true', else: 'false')}">
