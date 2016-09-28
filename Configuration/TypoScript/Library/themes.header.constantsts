@@ -47,6 +47,8 @@ themes.configuration.elem.status.showHeaderMiddleLogo = 1
 # cat=header,basic/logo; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
 themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/images/t3kit.png
 
+# cat=header,basic/logo/; type=string; label= Header-Title
+themes.configuration.header.main.titleText = Home
 
 
 # Social Icons
