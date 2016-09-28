@@ -1,7 +1,7 @@
 lib.header.logo {
     main = IMAGE
     main.file = {$themes.configuration.header.logo.main.file}
-    main.titleText = {$themes.configuration.siteName}
+    main.titleText = {$themes.configuration.header.main.titleText}
     main.altText = {$themes.configuration.siteName}
     main.params = class="header-middle__logo-img img-responsive"
     main.stdWrap {
@@ -9,7 +9,7 @@ lib.header.logo {
         typolink {
             parameter = {$themes.configuration.pages.startsite}
             parameter.insertData = 1
-            title = {$themes.configuration.siteName}
+            title = {$themes.configuration.header.main.titleText}
             ATagParams = class="header-middle__logo-link"
         }
     }
