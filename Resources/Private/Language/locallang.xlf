@@ -7,6 +7,9 @@
 		product-name="theme_t3kit">
 		<header/>
 		<body>
+			<trans-unit id="logoTitle" xml:space="preserve">
+				<source>Header</source>
+			</trans-unit>
 			<trans-unit id="breadcrumb_label" xml:space="preserve">
 				<source>You are here</source>
 			</trans-unit>
