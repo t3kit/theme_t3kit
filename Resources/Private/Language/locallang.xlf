@@ -8,7 +8,7 @@
 		<header/>
 		<body>
 			<trans-unit id="logoTitle" xml:space="preserve">
-				<source>Header</source>
+				<source>Home</source>
 			</trans-unit>
 			<trans-unit id="breadcrumb_label" xml:space="preserve">
 				<source>You are here</source>
