@@ -10,6 +10,34 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <linkBackground>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.linkBackground</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim</eval>
+                                <size>60</size>
+                                <default></default>
+                                <wizards type="array">
+                                    <_PADDING type="integer">2</_PADDING>
+                                    <link type="array">
+                                        <type>popup</type>
+                                        <title>Link</title>
+                                        <icon>link_popup.gif</icon>
+                                        <module type="array">
+                                            <name>wizard_element_browser</name>
+                                            <urlParameters type="array">
+                                                <mode>wizard</mode>
+                                                <act>file</act>
+                                            </urlParameters>
+                                        </module>
+                                        <JSopenParams>height=500,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    </link>
+                                </wizards>                
+                            </config>
+                        </TCEforms>
+                    </linkBackground>
+                    
                     <btnAsLink>
                       <TCEforms>
                         <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.btnAsLink</label>

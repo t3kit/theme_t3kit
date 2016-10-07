@@ -266,7 +266,9 @@
                 <source>Default</source>
             </trans-unit>
 
-
+            <trans-unit id="elem.flexform.linkBackground">
+                <source>Whole element link</source>
+            </trans-unit>
             <trans-unit id="elem.flexform.linkAsBtn">
                 <source>Show link as a button</source>
             </trans-unit>
