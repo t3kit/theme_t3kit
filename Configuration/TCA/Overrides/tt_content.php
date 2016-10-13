@@ -257,6 +257,7 @@ call_user_func(function() {
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
@@ -537,6 +538,9 @@ call_user_func(function() {
 
     // "contentElementBootstrapSlider"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_bootstrapSlider.xml';
+
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_slider.xml';
 
     // Add additional fields for tt_content
     $additionalColumns = [

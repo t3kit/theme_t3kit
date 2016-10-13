@@ -36,6 +36,34 @@
             <trans-unit id="slider.tabs.slides">
                 <source>Slides</source>
             </trans-unit>
+            <trans-unit id="slider.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay">
+                <source>Slider autoplay</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_None">
+                <source>No autoplay [default]</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_One">
+                <source>1 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Two">
+                <source>2 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Three">
+                <source>3 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Five">
+                <source>5 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Seven">
+                <source>7 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Ten">
+                <source>10 sec</source>
+            </trans-unit>
+            
             <trans-unit id="bootstrap.slider.tabs.slides">
                 <source>Slides</source>
             </trans-unit>

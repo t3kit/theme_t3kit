@@ -11,6 +11,17 @@ mod.wizards.newContentElement.wizardItems.contentElements {
     }
     show := addToList(contentElementSlider)
 }
+TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.autoplay {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_None
+        1000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_One
+        2000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Two
+        3000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Three
+        5000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Five
+        7000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Seven
+        10000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Ten
+    }
+}
 
 # # Use layout field to customize Layout select-box on contentElementSlider
 # # extend layout select-box only for this element
