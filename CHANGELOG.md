@@ -1,4 +1,25 @@
 
+#### v1.8.0 `October 18, 2016`
+- **[UPDATE]** felayout_t3kit 1.6.0 ([f8e9cc3](https://github.com/t3kit/theme_t3kit/commit/f8e9cc3))
+- **[FIX]** Localized search's placeholder in header (#65) ([bccccc6](https://github.com/t3kit/theme_t3kit/commit/bccccc6))
+- **[FEATURE]** Whole area link, fix #47 (#63) ([f03feca](https://github.com/t3kit/theme_t3kit/commit/f03feca))
+- **[FIX]** add extensionName attribute to Contacts el for translations (#58) ([05429fb](https://github.com/t3kit/theme_t3kit/commit/05429fb))
+- **[FIX]** Disabled Password Recovery Link (Login form) breaks page (Podio bug_41) (#62) ([c2ddaf4](https://github.com/t3kit/theme_t3kit/commit/c2ddaf4))
+- **[FIX]** wrong class for pagination in solr (Podio bug_45) (#59) ([2f3feb0](https://github.com/t3kit/theme_t3kit/commit/2f3feb0))
+- **[FIX]** Image title of header image is t3kit (Podio bug_44) (#60) ([c1ea82a](https://github.com/t3kit/theme_t3kit/commit/c1ea82a))
+- **[UPDATE]** felayout_t3kit ([0f2cfe8](https://github.com/t3kit/theme_t3kit/commit/0f2cfe8))
+- **[FEATURE]** navbar dropdown with columns ([48dbf5a](https://github.com/t3kit/theme_t3kit/commit/48dbf5a))
+- **[FIX]** add collapsed class to closed tabs (Podio bug_43) (#53) ([b0ddef3](https://github.com/t3kit/theme_t3kit/commit/b0ddef3))
+- **[FIX]** newsCarousel arrow position (Podio bug_40) ([c963ca8](https://github.com/t3kit/theme_t3kit/commit/c963ca8))
+- **[FEATURE]** Add translation for telephone label ([3563f7b](https://github.com/t3kit/theme_t3kit/commit/3563f7b))
+- **[FIX]** News Carousel height of date in Firefox. (Podio bug_38) (#45) ([9c73819](https://github.com/t3kit/theme_t3kit/commit/9c73819))
+- **[FEATURE]** Added translation to Norwegian Bokmål (#46) ([10089f2](https://github.com/t3kit/theme_t3kit/commit/10089f2))
+- **[UPDATE]** felayout_t3kit ([a2b7a7f](https://github.com/t3kit/theme_t3kit/commit/a2b7a7f))
+- **[FEATURE]** add Android/iOS detection ([3706cce](https://github.com/t3kit/theme_t3kit/commit/3706cce))
+- **[FIX]** php dependency version, close #43 ([3e61740](https://github.com/t3kit/theme_t3kit/commit/3e61740))
+
+***
+
 #### v1.7.0 `July 18, 2016`
 - **[UPDATE]** felayout_t3kit 1.5.0 ([7eed7fd](https://github.com/t3kit/theme_t3kit/commit/7eed7fd))
 - **[FEATURE]** Added possibility to add target _blank to the file list item (#42) ([8bc40de](https://github.com/t3kit/theme_t3kit/commit/8bc40de))
