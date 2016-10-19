@@ -45,3 +45,9 @@ mod.wizards.newContentElement.wizardItems.forms.elements.buttonContent >
 
 # Include  PageTS files from fileadmin/templates/Configuration/PageTS
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/PageTS" extensions="pagets">
+
+TCEMAIN.permissions {
+	groupid = 3
+	user = show,editcontent,new,edit,delete
+	group = show,editcontent,new,edit,delete
+}
