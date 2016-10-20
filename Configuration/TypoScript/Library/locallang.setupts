@@ -1,7 +1,7 @@
 plugin.tx_themes {
     _LOCAL_LANG {
         default {
-            languageMenu_label = Website-Sprache
+            languageMenu_label = Website language
             breadcrumb_label = You are here
             imprint_label = Imprint
             quickSearch_label = Search
@@ -12,15 +12,11 @@ plugin.tx_themes {
             search_label = Search
             search_placeholder = Search...
         }
-    }
-}
-plugin.tx_themes {
-    _LOCAL_LANG {
         sv {
-            languageMenu_label = Website-Sprache
-            breadcrumb_label = You are here
+            languageMenu_label = Webbsidaspråk
+            breadcrumb_label = Du är här
             imprint_label = Imprint
-            quickSearch_label = Search
+            quickSearch_label = Sök
             topLink_label = Top
             printLink_label = Print
             callUs_label = Telefon
@@ -28,10 +24,6 @@ plugin.tx_themes {
             search_label = Sök
             search_placeholder = Sök...
         }
-    }
-}
-plugin.tx_themes {
-    _LOCAL_LANG {
         de {
             languageMenu_label = Website-Sprache
             breadcrumb_label = Sie sind hier
@@ -44,19 +36,33 @@ plugin.tx_themes {
             search_label = Suche
             search_placeholder = Suche...
         }
+        da {
+            languageMenu_label = Website-sprog
+            breadcrumb_label = Du er her
+            imprint_label = Imprint
+            quickSearch_label = Søg
+            topLink_label = Top
+            printLink_label = Print
+            callUs_label = Ring os på
+            emailUs_label = E-mail til
+            search_label = Søg
+            search_placeholder = Søg...
+        }
     }
 }
 plugin.tx_solr {
-     _LOCAL_LANG {
-         default {
-             searchPlaceholder = Search...
-         }
-     }
- }
- plugin.tx_solr {
-     _LOCAL_LANG {
-         sv {
-             searchPlaceholder = Sök...
-         }
-     }
- }
+    _LOCAL_LANG {
+        default {
+            searchPlaceholder = Search...
+        }
+        sv {
+            searchPlaceholder = Sök...
+        }
+        de {
+            searchPlaceholder = Suche...
+        }
+        da {
+            searchPlaceholder = Søg...
+        }
+    }
+}
