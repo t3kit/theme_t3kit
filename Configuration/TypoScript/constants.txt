@@ -3,6 +3,7 @@
 # Base configuration
 themes.configuration.siteName = t3kit
 themes.languages.default.isoCode = en_GB
+themes.configuration.headerComment = This website based on t3kit project by Pixelant - www.t3kit.com
 
 
 # Extensions
