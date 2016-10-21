@@ -39,12 +39,12 @@ plugin.tx_themes {
         da {
             languageMenu_label = Website-sprog
             breadcrumb_label = Du er her
-            imprint_label = Imprint
+            imprint_label = Om netstedet
             quickSearch_label = Søg
             topLink_label = Top
             printLink_label = Print
             callUs_label = Ring os på
-            emailUs_label = E-mail til
+            emailUs_label = E-post til
             search_label = Søg
             search_placeholder = Søg...
         }
