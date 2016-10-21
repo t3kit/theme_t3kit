@@ -1,6 +1,10 @@
 {
     "repositories": [
         {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
             "type": "git",
             "url": "https://github.com/t3kit/t3kit_extension_tools"
         }
@@ -23,8 +27,7 @@
         "typo3-ter/dyncss": ">=0.7.0 <=0.7.99",
         "typo3-ter/dyncss-less": ">=0.7.0 <=0.7.99",
         "typo3-themes/themes": ">=7.0.0 <=7.2.99",
-        "t3kit/t3kit-extension-tools": "*",
-        "typo3-ter/fluid-styled-content": "*",
+        "t3kit/t3kit-extension-tools": "^1.0",
         "typo3-ter/gridelements": ">=7.0.0 <=7.2.99"
     }
 }
