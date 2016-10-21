@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-09-19T09:11:39Z" product-name="theme_t3kit" target-language="da">
+        <header></header>
+        <body>
+            <trans-unit id="two_column_grid">
+                <source>Two columns grid</source>
+                <target>To kolonner</target>
+            </trans-unit>
+            <trans-unit id="two_column_grid_description">
+                <source>Preset row with two columns.</source>
+                <target>Fordefineret række med to kolonner.</target>
+            </trans-unit>
+            <trans-unit id="three_column_grid">
+                <source>Three columns grid</source>
+                <target>Tre kolonner</target>
+            </trans-unit>
+            <trans-unit id="three_column_grid_description">
+                <source>Preset row with three columns.</source>
+                <target>Fordefineret række med tre kolonner.</target>
+            </trans-unit>
+            <trans-unit id="four_column_grid">
+                <source>Four columns grid</source>
+                <target>Fire kolonner</target>
+            </trans-unit>
+            <trans-unit id="four_column_grid_description">
+                <source>Preset row with four columns.</source>
+                <target>Fordefineret række med fire kolonner.</target>
+            </trans-unit>
+            <trans-unit id="adv_one_column_grid">
+                <source>Advanced one column grid</source>
+                <target>En kolonne (avanceret)</target>
+            </trans-unit>
+            <trans-unit id="adv_one_column_grid_description">
+                <source>Advanced grid. Preset row with one column. Column width can be adjusted.</source>
+                <target>Avancerede kolonner. Fordefineret række med én kolonne. Kolonnebredden kan ændres.</target>
+            </trans-unit>
+            <trans-unit id="adv_two_column_grid">
+                <source>Advanced two columns grid</source>
+                <target>To kolonner (avanceret)</target>
+            </trans-unit>
+            <trans-unit id="adv_two_column_grid_description">
+                <source>Advanced grid. Preset row with two columns. Column width can be adjusted.</source>
+                <target>Avancerede kolonner. Fordefineret række med to kolonner. Kolonnebredden kan ændres.</target>
+            </trans-unit>
+            <trans-unit id="adv_three_column_grid">
+                <source>Advanced three columns grid</source>
+                <target>Tre kolonner (avanceret)</target>
+            </trans-unit>
+            <trans-unit id="adv_three_column_grid_description">
+                <source>Advanced grid. Preset row with three columns. Column width can be adjusted.</source>
+                <target>Avancerede kolonner. Fordefineret række med tre kolonner. Kolonnebredden kan ændres.</target>
+            </trans-unit>
+            <trans-unit id="adv_four_column_grid">
+                <source>Advanced four columns grid</source>
+                <target>Fire kolonner (avanceret)</target>
+            </trans-unit>
+            <trans-unit id="adv_four_column_grid_description">
+                <source>Advanced grid. Preset row with four columns. Column width can be adjusted.</source>
+                <target>Avancerede kolonner. Fordefineret række med fire kolonner. Kolonnebredden kan ændres.</target>
+            </trans-unit>
+            <trans-unit id="col1">
+                <source>Column 1</source>
+                <target>Kolonne 1</target>
+            </trans-unit>
+            <trans-unit id="col2">
+                <source>Column 2</source>
+                <target>Kolonne 2</target>
+            </trans-unit>
+            <trans-unit id="col3">
+                <source>Column 3</source>
+                <target>Kolonne 3</target>
+            </trans-unit>
+            <trans-unit id="col4">
+                <source>Column 4</source>
+                <target>Kolonne 4</target>
+            </trans-unit>
+            <trans-unit id="column_1_xs">
+                <source>Column 1 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+                <target>Kolonne 1 mobile enheder. "Ekstra små enheder, telefoner (&lt;768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_1_sm">
+                <source>Column 1 Tablets. "Small devices Tablets (≥768px)"</source>
+                <target>Kolonne 1 tablet. "Små enheder, tablets (≥768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_1_md">
+                <source>Column 1 Desktops. "Medium devices Desktops (≥992px)"</source>
+                <target>Kolonne 1 bærbar computer. "Mellemstore enheder, stationære (≥992px)"</target>
+            </trans-unit>
+            <trans-unit id="column_1_lg">
+                <source>Column 1 Large devices "Large devices Desktops (≥1200px)"</source>
+                <target>Kolonne 1 store enheder "Store enheder, stationære (≥1200px)"</target>
+            </trans-unit>
+            <trans-unit id="column_2_xs">
+                <source>Column 2 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+                <target>Kolonne 2 mobile enheder. "Ekstra små enheder, telefoner (&lt;768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_2_sm">
+                <source>Column 2 Tablets. "Small devices Tablets (≥768px)"</source>
+                <target>Kolonne 2 tablet. "Små enheder, tablets (≥768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_2_md">
+                <source>Column 2 Desktops. "Medium devices Desktops (≥992px)"</source>
+                <target>Kolonne 2 bærbar computer. "Mellemstore enheder, stationære (≥992px)"</target>
+            </trans-unit>
+            <trans-unit id="column_2_lg">
+                <source>Column 2 Large devices "Large devices Desktops (≥1200px)"</source>
+                <target>Kolonne 2 store enheder "Store enheder, stationære (≥1200px)"</target>
+            </trans-unit>
+            <trans-unit id="column_3_xs">
+                <source>Column 3 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+                <target>Kolonne 3 mobile enheder. "Ekstra små enheder, telefoner (&lt;768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_3_sm">
+                <source>Column 3 Tablets. "Small devices Tablets (≥768px)"</source>
+                <target>Kolonne 3 tablet. "Små enheder, tablets (≥768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_3_md">
+                <source>Column 3 Desktops. "Medium devices Desktops (≥992px)"</source>
+                <target>Kolonne 3 bærbar computer. "Mellemstore enheder, stationære (≥992px)"</target>
+            </trans-unit>
+            <trans-unit id="column_3_lg">
+                <source>Column 3 Large devices "Large devices Desktops (≥1200px)"</source>
+                <target>Kolonne 3 store enheder "Store enheder, stationære (≥1200px)"</target>
+            </trans-unit>
+            <trans-unit id="column_4_xs">
+                <source>Column 4 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+                <target>Kolonne 4 mobile enheder. "Ekstra små enheder, telefoner (&lt;768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_4_sm">
+                <source>Column 4 Tablets. "Small devices Tablets (≥768px)"</source>
+                <target>Kolonne 4 tablet. "Små enheder, tablets (≥768px)"</target>
+            </trans-unit>
+            <trans-unit id="column_4_md">
+                <source>Column 4 Desktops. "Medium devices Desktops (≥992px)"</source>
+                <target>Kolonne 4 bærbar computer. "Mellemstore enheder, stationære (≥992px)"</target>
+            </trans-unit>
+            <trans-unit id="column_4_lg">
+                <source>Column 4 Large devices "Large devices Desktops (≥1200px)"</source>
+                <target>Kolonne 4 store enheder "Store enheder, stationære (≥1200px)"</target>
+            </trans-unit>
+            <trans-unit id="column_1_layout">
+                <source>Column 1 Layout</source>
+                <target>Kolonne 1 udseende</target>
+            </trans-unit>
+            <trans-unit id="column_2_layout">
+                <source>Column 2 Layout</source>
+                <target>Kolonne 2 udseende</target>
+            </trans-unit>
+            <trans-unit id="column_3_layout">
+                <source>Column 3 Layout</source>
+                <target>Kolonne 3 udseende</target>
+            </trans-unit>
+            <trans-unit id="column_4_layout">
+                <source>Column 4 Layout</source>
+                <target>Kolonne 4 udseende</target>
+            </trans-unit>
+            <trans-unit id="column_1_offset">
+                <source>Column 1 Offset</source>
+                <target>Kolonne 1 afstand</target>
+            </trans-unit>
+            <trans-unit id="column_2_offset">
+                <source>Column 2 Offset</source>
+                <target>Kolonne 2 afstand</target>
+            </trans-unit>
+            <trans-unit id="column_3_offset">
+                <source>Column 3 Offset</source>
+                <target>Kolonne 3 afstand</target>
+            </trans-unit>
+            <trans-unit id="column_4_offset">
+                <source>Column 4 Offset</source>
+                <target>Kolonne 4 afstand</target>
+            </trans-unit>
+            <trans-unit id="column_1_class">
+                <source>Column 1 Class</source>
+                <target>Kolonne 1 css-klasse</target>
+            </trans-unit>
+            <trans-unit id="column_2_class">
+                <source>Column 2 Class</source>
+                <target>Kolonne 2 css-klasse</target>
+            </trans-unit>
+            <trans-unit id="column_3_class">
+                <source>Column 3 Class</source>
+                <target>Kolonne 3 css-klasse</target>
+            </trans-unit>
+            <trans-unit id="column_4_class">
+                <source>Column 4 Class</source>
+                <target>Kolonne 4 css-klasse</target>
+            </trans-unit>
+            <trans-unit id="column_1_content_wrapper">
+                <source>Column 1 Content Wrapper</source>
+                <target>Kolonne 1 indholdsomslag</target>
+            </trans-unit>
+            <trans-unit id="column_2_content_wrapper">
+                <source>Column 2 Content Wrapper</source>
+                <target>Kolonne 2 indholdsomslag</target>
+            </trans-unit>
+            <trans-unit id="column_3_content_wrapper">
+                <source>Column 3 Content Wrapper</source>
+                <target>Kolonne 3 indholdsomslag</target>
+            </trans-unit>
+            <trans-unit id="column_4_content_wrapper">
+                <source>Column 4 Content Wrapper</source>
+                <target>Kolonne 4 indholdsomslag</target>
+            </trans-unit>
+            <trans-unit id="container">
+                <source>Container wrapper</source>
+                <target>Beholderomslag</target>
+            </trans-unit>
+            <trans-unit id="grid">
+                <source>Responsive grid settings. Column width on different devices. Based on Bootstrap grid.</source>
+                <target>Responsive indstillinger for kolonner. Kolonnebredde på forskællige enheder. Baseret på Bootstrap-gitter.</target>
+            </trans-unit>
+            <trans-unit id="col-xs">
+                <source>Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+                <target>Mobile enheder. "Ekstra små enheder, telefoner (&lt;768px)"</target>
+            </trans-unit>
+            <trans-unit id="col-sm">
+                <source>Tablets. "Small devices Tablets (≥768px)"</source>
+                <target>Tablet. "Små enheder, tablets (≥768px)"</target>
+            </trans-unit>
+            <trans-unit id="col-md">
+                <source>Desktops. "Medium devices Desktops (≥992px)"</source>
+                <target>Bærbar computer. "Mellemstore enheder, stationære (≥992px)"</target>
+            </trans-unit>
+            <trans-unit id="col-lg">
+                <source>Large devices "Large devices Desktops (≥1200px)"</source>
+                <target>Store enheder "Store enheder, stationære (≥1200px)"</target>
+            </trans-unit>
+            <trans-unit id="parallax">
+                <source>Parallax</source>
+                <target>Parallakse</target>
+            </trans-unit>
+            <trans-unit id="parallax_description">
+                <source>Background image with Parallax effect</source>
+                <target>Baggrundsbillede med parallakse-effekt</target>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.title">
+                <source>Parallax settings</source>
+                <target>Parallakse-indstillinger</target>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.height">
+                <source>Height of parallax element. [auto] by default. Good when you want to have other elements inside of parallax</source>
+                <target>Højde på parallakse-element. [Auto] er standard. Godt når du ønsker at have andre elementer inde i parallaksen.</target>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.bgcolor">
+                <source>Background color (for mobile)</source>
+                <target>Baggrundsfarve (for mobil)</target>
+            </trans-unit>
+            <trans-unit id="parallax.flexform.hide">
+                <source>Hide in mobile</source>
+                <target>Skjul for mobil</target>
+            </trans-unit>
+            <trans-unit id="collapsible">
+                <source>Collapsible</source>
+                <target>Kan minimeres</target>
+            </trans-unit>
+            <trans-unit id="collapsible_description">
+                <source>A collapsible container for content elements</source>
+                <target>En beholder for indholdselementer som kan minimeres</target>
+            </trans-unit>
+            <trans-unit id="collapsible.flexform.title">
+                <source>Collapsible settings</source>
+                <target>Indstillinger for minimering</target>
+            </trans-unit>
+            <trans-unit id="collapsible.flexform.expanded">
+                <source>Expanded by default</source>
+                <target>Udfoldet som standard</target>
+            </trans-unit>
+            <trans-unit id="collapsibleGroup">
+                <source>Group of collapsibles</source>
+                <target>Gruppe med minimerbare</target>
+            </trans-unit>
+            <trans-unit id="collapsibleGroup_description">
+                <source>A group for collapsible elements</source>
+                <target>En gruppe for elementer som kan minimeres</target>
+            </trans-unit>
+            <trans-unit id="collapsibleContent">
+                <source>Collapsible Content</source>
+                <target>Minimerbart indhold</target>
+            </trans-unit>
+            <trans-unit id="collapsibleContainers">
+                <source>Collapsibles</source>
+                <target>Minimerbare</target>
+            </trans-unit>
+            <trans-unit id="tab">
+                <source>Tab</source>
+                <target>Fane</target>
+            </trans-unit>
+            <trans-unit id="tab_description">
+                <source>A tab with content elements</source>
+                <target>En fane med indholdselementer</target>
+            </trans-unit>
+            <trans-unit id="tabContent">
+                <source>Tab Content</source>
+                <target>Faneindhold</target>
+            </trans-unit>
+            <trans-unit id="tabGroup">
+                <source>Group of tabs</source>
+                <target>Fanegruppe</target>
+            </trans-unit>
+            <trans-unit id="tabGroup_description">
+                <source>A container for tab content elements</source>
+                <target>En beholder for faneindholdselementer</target>
+            </trans-unit>
+            <trans-unit id="tabContainer">
+                <source>Tabs</source>
+                <target>Faner</target>
+            </trans-unit>
+            <trans-unit id="tabGroup.flexform.title">
+                <source>Tab group settings</source>
+                <target>Fanegruppeindstillinger</target>
+            </trans-unit>
+            <trans-unit id="tabGroup.flexform.tabstyle">
+                <source>Style of tabs</source>
+                <target>Fanestil</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
