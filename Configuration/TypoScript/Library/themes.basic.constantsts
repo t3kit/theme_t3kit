@@ -78,3 +78,6 @@ themes.configuration.contacts.phone = 555-555555
 
 # cat=theme,basic/contacts; type=string; label= E-Mail address
 themes.configuration.contacts.email = info@info.se
+
+# cat=theme,basic/customPath; type=string; label= Custom Path
+themes.configuration.customPath = fileadmin/custom
