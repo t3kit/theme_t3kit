@@ -52,3 +52,23 @@ p.white-text-color ,
 span.white-text-color  {
   color: #aaa !important;
 }
+
+span.text-xs-left {}
+span.text-xs-right {}
+span.text-xs-center {}
+span.text-xs-justify {}
+
+span.text-sm-left {}
+span.text-sm-right {}
+span.text-sm-center {}
+span.text-sm-justify {}
+
+span.text-md-left {}
+span.text-md-right {}
+span.text-md-center {}
+span.text-md-justify {}
+
+span.text-lg-left {}
+span.text-lg-right {}
+span.text-lg-center {}
+span.text-lg-justify {}

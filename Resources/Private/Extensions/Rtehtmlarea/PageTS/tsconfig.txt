@@ -6,6 +6,57 @@ RTE.classes {
         name = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.example-class-wrapper_label
         # value = color: #288FB4;
     }
+    text-xs-left {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-xs-left_label
+    }
+    text-xs-right {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-xs-right_label
+    }
+    text-xs-center {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-xs-center_label
+    }
+    text-xs-justify {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-xs-justify_label
+    }
+
+    text-sm-left {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-sm-left_label
+    }
+    text-sm-right {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-sm-right_label
+    }
+    text-sm-center {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-sm-center_label
+    }
+    text-sm-justify {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-sm-justify_label
+    }
+
+    text-md-left {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-md-left_label
+    }
+    text-md-right {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-md-right_label
+    }
+    text-md-center {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-md-center_label
+    }
+    text-md-justify {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-md-justify_label
+    }
+
+    text-lg-left {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-lg-left_label
+    }
+    text-lg-right {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-lg-right_label
+    }
+    text-lg-center {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-lg-center_label
+    }
+    text-lg-justify {
+        name =  LLL:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.text-lg-justify_label
+    }
 }
 
 
@@ -30,19 +81,26 @@ RTE.default {
     showButtons := addToList(columninsertbefore, columninsertafter, columndelete, columnsplit)
     showButtons := addToList(cellproperties, cellinsertbefore, cellinsertafter, celldelete, cellsplit, cellmerge)
 
-
     # list allowed classes (must also be defined in the css-file)
     proc.allowedClasses := addToList(example-class-wrapper, white-text-color )
+    proc.allowedClasses := addToList(text-xs-left, text-xs-right, text-xs-center, text-xs-justify)
+    proc.allowedClasses := addToList(text-sm-left, text-sm-right, text-sm-center, text-sm-justify)
+    proc.allowedClasses := addToList(text-md-left, text-md-right, text-md-center, text-md-justify)
+    proc.allowedClasses := addToList(text-lg-left, text-lg-right, text-lg-center, text-lg-justify)
 
     # A class name to be assigned to the blocks whenever the item is applied to selected text.
     buttons.blockstyle.tags.div.allowedClasses := addToList(example-class-wrapper, white-text-color )
 
     ## for the textstyle
     buttons.textstyle.tags.span.allowedClasses := addToList(example-class-wrapper, white-text-color )
+	buttons.textstyle.tags.span.allowedClasses := addToList(text-xs-left, text-xs-right, text-xs-center, text-xs-justify)
+	buttons.textstyle.tags.span.allowedClasses := addToList(text-sm-left, text-sm-right, text-sm-center, text-sm-justify)
+	buttons.textstyle.tags.span.allowedClasses := addToList(text-md-left, text-md-right, text-md-center, text-md-justify)
+	buttons.textstyle.tags.span.allowedClasses := addToList(text-lg-left, text-lg-right, text-lg-center, text-lg-justify)
 
     # Enabling paste toggle button to allow paste with/without styling
     showButtons := addToList(pastetoggle)
-    
+
     # Setting paste toggle to enabled to have standard pasting without styling
     buttons.pastetoggle.setActiveOnRteOpen = 1
 }
