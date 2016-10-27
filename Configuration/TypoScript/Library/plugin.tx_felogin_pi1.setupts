@@ -73,4 +73,7 @@ plugin.tx_felogin_pi1 {
             wrap = <strong>|</strong>
         }
     }
+
+    redirectPageLogin = {$plugin.tx_felogin_pi1.redirectPageLogin}
+    redirectPageLogout = {$plugin.tx_felogin_pi1.redirectPageLogout}
 }
