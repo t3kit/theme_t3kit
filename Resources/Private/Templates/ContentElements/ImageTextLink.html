@@ -6,8 +6,10 @@
 
 	<f:section name="content">
 
+
+
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
-	<div class="img-text-link{f:if(condition: settings.wholeAreaLink, then: ' _whole-area-link', else: '')}">
+	<div class="img-text-link{f:if(condition: settings.wholeAreaLink, then: ' _whole-area-link', else: '')} {f:if(condition: '{settings.hoverEffect} == 0', then: '', else: '_hover-{settings.hoverEffect}')}">
 		<f:if condition="{image}">
 			<f:then>
 				<f:for each="{image}" as="mediaItem" iteration="imageIteration">
@@ -31,7 +33,7 @@
 			<h3 class="img-text-link__header">{data.header}</h3>
 		</f:if>
 		<f:if condition="{data.bodytext}">
-			<p class="img-text-link__p">{data.bodytext}</p>
+			<p class="img-text-link__p {f:if(condition: '{settings.hoverEffect} !== 0', then: 'js__img-text-link', else: '')}">{data.bodytext}</p>
 		</f:if>
 		<f:if condition="{data.header_link}">
 			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</f:link.typolink>
