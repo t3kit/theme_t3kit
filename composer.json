@@ -18,7 +18,6 @@
         "typo3-ter/dyncss-less": ">=0.7.0 <=0.7.99",
         "typo3-themes/themes": ">=7.0.0 <=7.2.99",
         "t3kit/t3kit-extension-tools": "dev-typo3_8.x_compatibility",
-        "typo3-ter/fluid-styled-content": "*",
         "typo3-ter/gridelements": ">=7.0.0 <=7.2.99"
     }
 }
