@@ -257,6 +257,40 @@
               <source>Style of tabs</source>
             </trans-unit>
 
+            <trans-unit id="sliderContainer">
+                <source>Slider container</source>
+            </trans-unit>
+            <trans-unit id="slider_container">
+                <source>Slider container</source>
+            </trans-unit>
+            <trans-unit id="slider_container_description">
+                <source>Slider container for content elements</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.title">
+                <source>Slider container settings</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.button">
+                <source>Show/hide next and prew button</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.pagination">
+                <source>Show/hide pagination</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.loop">
+                <source>Loop (continuous loop mode)</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.effect">
+                <source>Slider effect (only for one slide per view)</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.autoplay">
+                <source>Slider autoplay (in sec).</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.slidesPerView">
+                <source>Number of slides per view (slides visible at the same time on slider's container).</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.speed">
+                <source>Duration of transition between slides (in sec)</source>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
