@@ -281,11 +281,44 @@
             <trans-unit id="slider_container.flexform.effect">
                 <source>Slider effect (only for one slide per view)</source>
             </trans-unit>
+            <trans-unit id="slider_container.flexform.effect.slider">
+                <source>slider</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.effect.flip">
+                <source>"flip" effect (only for one slide per view)</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.effect.fade">
+                <source>"fade" effect (only for one slide per view)</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.effect.cube">
+                <source>"cube" effect (only for one slide per view)</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.effect.coverflow">
+                <source>"coverflow" effect (only for one slide per view)</source>
+            </trans-unit>
             <trans-unit id="slider_container.flexform.autoplay">
                 <source>Slider autoplay (in sec).</source>
             </trans-unit>
+            <trans-unit id="slider_container.flexform.autoplay.no_autoplay">
+                <source>no autoplay</source>
+            </trans-unit>
             <trans-unit id="slider_container.flexform.slidesPerView">
                 <source>Number of slides per view (slides visible at the same time on slider's container).</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.slidesPerView.one_slide">
+                <source>1 slide</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.slidesPerView.two_slides">
+                <source>2 slides</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.slidesPerView.three_slides">
+                <source>3 slides</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.slidesPerView.four_slides">
+                <source>4 slides</source>
+            </trans-unit>
+            <trans-unit id="slider_container.flexform.slidesPerView.five_slides">
+                <source>5 slides</source>
             </trans-unit>
             <trans-unit id="slider_container.flexform.speed">
                 <source>Duration of transition between slides (in sec)</source>
