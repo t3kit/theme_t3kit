@@ -15,7 +15,7 @@
 							<f:if condition="{newsItem.falMediaPreviews}">
 								<f:then>
 									<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-										<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+										<f:alias map="{mediaElement: '{newsItem.falMediaPreviews.0}'}">
 											<f:if condition="{mediaElement.originalResource.type} == 2">
 												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
 											</f:if>
