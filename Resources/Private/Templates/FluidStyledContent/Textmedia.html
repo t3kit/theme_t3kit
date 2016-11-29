@@ -13,7 +13,9 @@
 
 	<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
 		<f:if condition="{gallery.position.vertical} != 'below'">
-			<f:render partial="MediaGallery" arguments="{_all}" />
+            <f:if condition="{gallery.position.verticallyAligned} != 'right'">
+                <f:render partial="MediaGallery" arguments="{_all}" />
+            </f:if>
 		</f:if>
 
 		<div class="ce-bodytext">
@@ -26,7 +28,10 @@
 		<f:if condition="{gallery.position.vertical} == 'below'">
 			<f:render partial="MediaGallery" arguments="{_all}" />
 		</f:if>
-	</div>
+        <f:if condition="{gallery.position.verticallyAligned} == 'right'">
+            <f:render partial="MediaGallery" arguments="{_all}" />
+        </f:if>
+    </div>
 
 	<f:render partial="Footer" arguments="{_all}" />
 </div>
