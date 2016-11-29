@@ -79,3 +79,16 @@ TCEFORM.tt_content.wrapper_margin_bottom {
        110 = 70
    }
 }
+
+
+# Add a generic 'Position and Alignment' wrapper (all content based on lib.fluidContent)
+TCEFORM.tt_content.imageorient {
+    addItems {
+        101 = Beside Text (Vertical aligned), Right
+        # TEMPORARY
+        101.icon = content-beside-text-img-right
+
+        102 = Beside Text (Vertical aligned), Left
+        102.icon = content-beside-text-img-left
+    }
+}
