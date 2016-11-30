@@ -33,11 +33,11 @@
                                         </module>
                                         <JSopenParams>height=500,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
                                     </link>
-                                </wizards>                
+                                </wizards>
                             </config>
                         </TCEforms>
                     </wholeAreaLink>
-                    
+
                     <linkAsBtn>
                       <TCEforms>
                         <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.linkAsBtn</label>
@@ -46,6 +46,18 @@
                         </config>
                       </TCEforms>
                     </linkAsBtn>
+
+                    <hoverEffect> 
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </hoverEffect>
                   </el>
             </ROOT>
         </sDEF>
