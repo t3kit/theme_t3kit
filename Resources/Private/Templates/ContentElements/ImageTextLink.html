@@ -2,12 +2,13 @@
 
 	<f:layout name="ContentFooter" />
 	<f:debug>{_all}</f:debug>
-	<f:debug>{data}</f:debug>
 
 	<f:section name="content">
 
+
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
 	<div class="img-text-link{f:if(condition: settings.wholeAreaLink, then: '', else: ' _whole-area-link')}">
+
 		<f:if condition="{image}">
 			<f:then>
 				<f:for each="{image}" as="mediaItem" iteration="imageIteration">
@@ -36,6 +37,12 @@
 		<f:if condition="{data.header_link}">
 			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</f:link.typolink>
 		</f:if>
+		<f:if condition="{settings.wholeAreaLink} == ''">
+		    <f:if condition="{settings.hoverEffect} > 0">
+		       <span class="img-text-link__sham-link">{data.subheader}</span>
+			</f:if>
+		</f:if>
+
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [end] -->
 	</f:section>
