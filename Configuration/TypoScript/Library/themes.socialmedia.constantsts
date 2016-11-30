@@ -51,7 +51,7 @@ themes.configuration.socialmedia.vimeoLink = https://vimeo.com/135225809
 # cat=socialmedia,advanced/socialmedia_google_plus/; type=options[Show=1,Hide=0]; label= Google+: Activate?!
 themes.configuration.socialmedia.useGooglePlus = Show
 
-# cat=socialmedia,advanced/socialmedia_google_plus/; type=strng; label= Google+: Pagelink
+# cat=socialmedia,advanced/socialmedia_google_plus/; type=string; label= Google+: Pagelink
 themes.configuration.socialmedia.googlePlusLink = https://plus.google.com/communities/104410053692531620800
 
 
