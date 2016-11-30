@@ -8,7 +8,7 @@
 	<f:if condition="{slides}">
 		<!-- <div class="img-slider js__img-slider"> -->
 
-		<div class="img-slider swiper-container js__img-slider">
+		<div class="img-slider swiper-container js__img-slider" data-autoplay="{f:if(condition: '{settings.autoplay} > 0', then: settings.autoplay)}">
 			<div class="swiper-wrapper img-slider__wrp">
 			<!-- <div class=" img-slider__wrp"> -->
 				<f:for each="{slides}" as="image">
