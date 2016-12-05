@@ -90,6 +90,17 @@ if (TYPO3_MODE === 'BE') {
 		)
 	);
 
+    $iconRegistry->registerIcon(
+        'content-center-vertical-text-img-left',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'content-center-vertical-text-img-left.svg']
+    );
+    $iconRegistry->registerIcon(
+        'content-center-vertical-text-img-right',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'content-center-vertical-text-img-right.svg']
+    );
+
     // Add context sensitive help (csh) for the haiku table
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
         'tt_content',
