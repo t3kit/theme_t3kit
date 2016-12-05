@@ -8,6 +8,7 @@
 
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
 	<div class="img-text-link{f:if(condition: settings.wholeAreaLink, then: '', else: ' _whole-area-link')}">
+		<!-- <f:debug>{settings.wholeAreaLink}</f:debug> -->
 
 		<f:if condition="{image}">
 			<f:then>
@@ -37,7 +38,7 @@
 		<f:if condition="{data.header_link}">
 			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</f:link.typolink>
 		</f:if>
-		<f:if condition="{settings.wholeAreaLink} == ''">
+		<f:if condition="{settings.wholeAreaLink} == 0"> 
 		    <f:if condition="{settings.hoverEffect} > 0">
 		       <span class="img-text-link__sham-link">{data.subheader}</span>
 			</f:if>
