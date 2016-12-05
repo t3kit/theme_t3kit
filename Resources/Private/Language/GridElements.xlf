@@ -269,6 +269,9 @@
             <trans-unit id="slider_container.flexform.title">
                 <source>Slider container settings</source>
             </trans-unit>
+            <trans-unit id="slider_container.flexform.grid_container">
+                <source>Use Bootstrap grid container (only for StartPage/GridContainer Backend Layouts)</source>
+            </trans-unit>
             <trans-unit id="slider_container.flexform.button">
                 <source>Show/hide next and prew button</source>
             </trans-unit>
