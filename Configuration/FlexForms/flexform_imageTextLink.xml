@@ -10,14 +10,14 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
-                    <wholeAreaLink>
-                      <TCEforms>
-                        <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.wholeAreaLink</label>
+                    <disableWholeAreaLink>
+                      <TCEforms> 
+                        <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.disableWholeAreaLink</label>
                         <config>
                           <type>check</type>
                         </config>
                       </TCEforms>
-                    </wholeAreaLink>
+                  </disableWholeAreaLink>
 
                     <linkAsBtn>
                       <TCEforms>

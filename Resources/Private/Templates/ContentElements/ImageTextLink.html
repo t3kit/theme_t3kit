@@ -7,9 +7,9 @@
 
 
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
-	<div class="img-text-link {f:if(condition: settings.wholeAreaLink, then: '_whole-area-link-disabled', else: '_whole-area-link')}">
+	<div class="img-text-link {f:if(condition: settings.disableWholeAreaLink, then: '', else: '_whole-area-link')}">
 
-	    <f:if condition="{image}">
+		<f:if condition="{image}">
 			<f:then>
 				<f:for each="{image}" as="mediaItem" iteration="imageIteration">
 					<f:if condition="{imageIteration.isFirst}">
@@ -37,14 +37,12 @@
 		<f:if condition="{data.header_link}">
 			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</f:link.typolink>
 		</f:if>
-		<f:if condition="{settings.wholeAreaLink} == 0">
-		    <span class="img-text-link__sham-link">{data.subheader}</span> 
+		<f:if condition="{settings.disableWholeAreaLink} == 0">
+			<span class="img-text-link__sham-link">{data.subheader}</span>
 		</f:if>
-
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [end] -->
 	</f:section>
-
 	<f:section name="imageType">
 		<f:if condition="{mediaItem.link}">
 			<f:then>
