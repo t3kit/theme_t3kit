@@ -303,7 +303,7 @@
                 <source>no autoplay</source>
             </trans-unit>
             <trans-unit id="slider_container.flexform.slidesPerView">
-                <source>Number of slides per view (slides visible at the same time on slider's container).</source>
+                <source>Number of slides per carousel view.</source>
             </trans-unit>
             <trans-unit id="slider_container.flexform.slidesPerView.one_slide">
                 <source>1 slide</source>
