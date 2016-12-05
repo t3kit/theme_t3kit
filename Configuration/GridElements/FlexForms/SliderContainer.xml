@@ -10,15 +10,6 @@
 					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.title</sheetTitle>
 				</TCEforms>
 				<el type="array">
-					<grid_container>
-						<TCEforms>
-							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.grid_container</label>
-							<config>
-								<type>check</type>
-								<default>0</default>
-							</config>
-						</TCEforms>
-					</grid_container>
 					<button>
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.button</label>
@@ -166,6 +157,15 @@
 							</config>
 						</TCEforms>
 					</effect>
+					<grid_container>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.grid_container</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</grid_container>
 				</el>
 			</ROOT>
 		</columns>
