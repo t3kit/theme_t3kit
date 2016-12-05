@@ -294,14 +294,11 @@
                 <source>Default</source>
             </trans-unit>
 
-            <trans-unit id="elem.flexform.wholeAreaLink">
-                <source>Whole area link</source>
+            <trans-unit id="elem.flexform.disableWholeAreaLink">
+                <source>Show button instead of whole area link</source>
             </trans-unit>
             <trans-unit id="elem.flexform.linkAsBtn">
-                <source>Show link as a button</source>
-            </trans-unit>
-            <trans-unit id="elem.flexform.btnAsLink">
-                <source>Show button as a link</source>
+                <source>Show link as button(work only if "button instead of whole area link" is enabled)</source>
             </trans-unit>
 
             <trans-unit id="icon.flexform.iconClass_none">
