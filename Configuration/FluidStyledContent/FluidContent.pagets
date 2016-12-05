@@ -85,10 +85,9 @@ TCEFORM.tt_content.wrapper_margin_bottom {
 TCEFORM.tt_content.imageorient {
     addItems {
         101 = Beside Text (Vertical aligned), Right
-        # TEMPORARY
-        101.icon = content-beside-text-img-right
+        101.icon = content-center-vertical-text-img-right
 
         102 = Beside Text (Vertical aligned), Left
-        102.icon = content-beside-text-img-left
+        102.icon = content-center-vertical-text-img-left
     }
 }
