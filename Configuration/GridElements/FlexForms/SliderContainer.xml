@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+		<meta type="array">
+				<langDisable>1</langDisable>
+		</meta>
+	<sheets>
+		<columns>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.title</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<button>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.button</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</button>
+					<paggination>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.pagination</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</paggination>
+					<loop>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.loop</label>
+							<config>
+								<type>check</type>
+								<default></default>
+							</config>
+						</TCEforms>
+					</loop>
+					<autoplay>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.autoplay</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+											<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.autoplay.no_autoplay</numIndex>
+											<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 sec</numIndex>
+										<numIndex index="1">1000</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 sec</numIndex>
+										<numIndex index="1">2000</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 sec</numIndex>
+										<numIndex index="1">3000</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">5 sec</numIndex>
+										<numIndex index="1">5000</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">7 sec</numIndex>
+										<numIndex index="1">7000</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">10 sec</numIndex>
+										<numIndex index="1">10000</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</autoplay>
+					<slidesPerView>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.slidesPerView</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.slidesPerView.three_slides</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.slidesPerView.one_slide</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.slidesPerView.two_slides</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.slidesPerView.four_slides</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.slidesPerView.five_slides</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</slidesPerView>
+					<speed>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.speed</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">0.3 sec</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">0.5 sec</numIndex>
+										<numIndex index="1">500</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">1 sec</numIndex>
+										<numIndex index="1">1000</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</speed>
+					<effect>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.effect</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.effect.slider</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.effect.flip</numIndex>
+										<numIndex index="1">flip</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.effect.fade</numIndex>
+										<numIndex index="1">fade</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.effect.cube</numIndex>
+										<numIndex index="1">cube</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.effect.coverflow</numIndex>
+										<numIndex index="1">coverflow</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</effect>
+					<grid_container>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.grid_container</label>
+							<config>
+								<type>check</type>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</grid_container>
+				</el>
+			</ROOT>
+		</columns>
+			</sheets>
+</T3DataStructure>
