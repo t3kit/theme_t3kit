@@ -29,5 +29,8 @@
         "typo3-themes/themes": ">=7.0.2 <=7.2.99",
         "t3kit/t3kit-extension-tools": ">=1.0.0 <=1.0.99",
         "typo3-ter/gridelements": ">=7.0.5 <=7.2.99"
-    }
+    },
+    "require-dev": {
+        "t3kit/t3kit-extension-tools": "dev-master"
+  },
 }
