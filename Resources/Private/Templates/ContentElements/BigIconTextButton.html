@@ -2,9 +2,10 @@
 
 	<f:layout name="ContentFooter" />
 
+
 	<f:section name="content">
 	<!-- theme_t3kit: Templates/ContentElements/bigIconTextButton.html [begin] -->
-	<div class="big-icon-text-btn{f:if(condition: settings.wholeAreaLink, then: ' _whole-area-link', else: '')}">
+	<div class="big-icon-text-btn{f:if(condition: settings.disableWholeAreaLink, then: '', else: ' _whole-area-link')}">
 		<f:if condition="{settings.iconClass}">
 			<span class="big-icon-text-btn__icon icons icon-{settings.iconClass}"></span>
 		</f:if>
@@ -15,11 +16,20 @@
 			<p class="big-icon-text-btn__p">{data.bodytext}</p>
 		</f:if>
 		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" class="big-icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
+			<f:if condition="{data.subheader}">
+				<f:then>
+					<f:link.typolink parameter="{data.header_link}" class="big-icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
+				</f:then>
+				<f:else>
+					<f:link.typolink parameter="{data.header_link}" class="big-icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.header}</f:link.typolink>
+				</f:else>
+			</f:if>
 		</f:if>
-		<f:if condition="{settings.wholeAreaLink}">
-			<f:link.typolink parameter="{settings.wholeAreaLink}" class="big-icon-text-btn__whole-area-link"></f:link.typolink>
-		</f:if>
+		<f:if condition="{settings.disableWholeAreaLink} == 0">
+			<f:if condition="{data.subheader}">
+				<span class="big-icon-text-btn__sham-link btn btn-default">{data.subheader}</span>
+			</f:if>
+ 		</f:if>
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/bigIconTextButton.html [end] -->
 	</f:section>
