@@ -83,7 +83,25 @@
 </f:section>
 
 <f:section name="videoType">
-	<f:render section="media" arguments="{_all}" />
+	<f:if condition="{gallery.position.vertical} == 'intext'">
+		<f:then>
+			<f:render section="media" arguments="{_all}" />
+		</f:then>
+		<f:else>
+			<div class="embed-responsive-block" style="{f:if(condition: column.dimensions.width, then: 'max-width:{column.dimensions.width}px')}">
+			<div class="embed-responsive embed-responsive-16by9">
+				<f:media
+					file="{column.media}"
+					alt="{column.media.alternative}"
+					title="{column.media.title}"
+					data="{caption: '{column.media.description}'}"
+					class="embed-responsive-item"
+				/>
+			</div>
+			</div>
+		</f:else>
+	</f:if>
+
 </f:section>
 
 <f:section name="media">
