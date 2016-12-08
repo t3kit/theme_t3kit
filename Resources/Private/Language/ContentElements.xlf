@@ -299,11 +299,11 @@
             </trans-unit>
 
             <trans-unit id="elem.flexform.linkAsBtn">
-                <source>Show link as button(work only if "button instead of whole area link" is enabled)</source>
+                <source>Show link as button</source>
             </trans-unit>
 
             <trans-unit id="elem.flexform.btnAsLink">
-                <source>Show button as link(work only if "button instead of whole area link" is enabled)</source>
+                <source>Show button as link</source>
             </trans-unit>
 
             <trans-unit id="icon.flexform.iconClass_none">
