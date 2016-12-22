@@ -7,38 +7,49 @@
 	<f:section name="content">
 
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
-	<div class="img-text-link{f:if(condition: settings.wholeAreaLink, then: ' _whole-area-link', else: '')}">
-		<f:if condition="{image}">
-			<f:then>
-				<f:for each="{image}" as="mediaItem" iteration="imageIteration">
-					<f:if condition="{imageIteration.isFirst}">
-						<f:render section="imageType" arguments="{_all}" />
-					</f:if>
-				</f:for>
-			</f:then>
-
-			<f:else>
-				<f:if condition="{media}">
-					<f:for each="{media}" as="mediaItem" iteration="mediaIteration">
-						<f:if condition="{mediaIteration.isFirst}">
-							<f:render section="media" arguments="{_all}" />
+	<div class="img-text-link__wrp">
+		<div class="img-text-link {f:if(condition: settings.disableWholeAreaLink, then: '', else: '_whole-area-link')}">
+			<f:if condition="{image}">
+				<f:then>
+					<f:for each="{image}" as="mediaItem" iteration="imageIteration">
+						<f:if condition="{imageIteration.isFirst}">
+							<f:render section="imageType" arguments="{_all}" />
 						</f:if>
 					</f:for>
+				</f:then>
+
+				<f:else>
+					<f:if condition="{media}">
+						<f:for each="{media}" as="mediaItem" iteration="mediaIteration">
+							<f:if condition="{mediaIteration.isFirst}">
+								<f:render section="media" arguments="{_all}" />
+							</f:if>
+						</f:for>
+					</f:if>
+				</f:else>
+			</f:if>
+			<f:if condition="{data.header}">
+				<h3 class="img-text-link__header">{data.header}</h3>
+			</f:if>
+			<f:if condition="{data.bodytext}">
+				<p class="img-text-link__p">{data.bodytext}</p>
+			</f:if>
+			<f:if condition="{data.header_link}">
+				<f:if condition="{data.subheader}">
+					<f:then>
+						<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}"> {data.subheader}</f:link.typolink>
+					</f:then>
+					<f:else>
+				 		<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}"> {data.header}</f:link.typolink>
+					</f:else>
 				</f:if>
-			</f:else>
-		</f:if>
-		<f:if condition="{data.header}">
-			<h3 class="img-text-link__header">{data.header}</h3>
-		</f:if>
-		<f:if condition="{data.bodytext}">
-			<p class="img-text-link__p">{data.bodytext}</p>
-		</f:if>
-		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="img-text-link__link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</f:link.typolink>
-		</f:if>
-		<f:if condition="{settings.wholeAreaLink}">
-			<f:link.typolink parameter="{settings.wholeAreaLink}" class="img-text-link__whole-area-link"></f:link.typolink>
-		</f:if>
+			</f:if>
+			<f:if condition="{settings.disableWholeAreaLink} == 0">
+				<f:if condition="{data.subheader}">
+					<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</span>
+				</f:if>
+	 		</f:if>
+		</div>
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [end] -->
 	</f:section>

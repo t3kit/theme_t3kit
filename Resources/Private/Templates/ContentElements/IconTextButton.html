@@ -5,25 +5,36 @@
 
 	<f:section name="content">
 	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
-	<div class="icon-text-btn{f:if(condition: settings.wholeAreaLink, then: ' _whole-area-link', else: '')}">
-		<h3 class="icon-text-btn__header">
-			<f:if condition="{settings.iconClass}">
-				<span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
+	<div class="icon-text-btn__wrp">
+		<div class="icon-text-btn{f:if(condition: settings.disableWholeAreaLink, then: '', else: ' _whole-area-link')}">
+			<h3 class="icon-text-btn__header">
+				<f:if condition="{settings.iconClass}">
+					<span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
+				</f:if>
+				<f:if condition="{data.header}">
+					{data.header}
+				</f:if>
+			</h3>
+			<f:if condition="{data.bodytext}">
+				<p class="icon-text-btn__p">{data.bodytext}</p>
 			</f:if>
-			<f:if condition="{data.header}">
-				{data.header}
+			<f:if condition="{data.header_link}">
+				<f:if condition="{data.subheader}">
+					<f:then>
+						<f:link.typolink parameter="{data.header_link}" class="icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
+					</f:then>
+					<f:else>
+						<f:link.typolink parameter="{data.header_link}" class="icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.header}</f:link.typolink>
+					</f:else>
+				</f:if>
 			</f:if>
-		</h3>
-		<f:if condition="{data.bodytext}">
-			<p class="icon-text-btn__p">{data.bodytext}</p>
-		</f:if>
-		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="icon-text-btn__link  {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
-		</f:if>
-		<f:if condition="{settings.wholeAreaLink}">
-			<f:link.typolink parameter="{settings.wholeAreaLink}" class="icon-text-btn__whole-area-link"></f:link.typolink>
-		</f:if>
-		
+			<f:if condition="{settings.disableWholeAreaLink} == 0">
+				<f:if condition="{data.subheader}">
+					<span class="icon-text-btn__sham-link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</span>
+				</f:if>
+	 		</f:if>
+
+		</div>
 	</div>
 	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
 	</f:section>
