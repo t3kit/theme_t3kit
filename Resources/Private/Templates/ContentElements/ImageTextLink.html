@@ -8,7 +8,7 @@
 
 	<!-- theme_t3kit: Templates/ContentElements/ImageTextLink.html [begin] -->
 	<div class="img-text-link__wrp">
-		<div class="img-text-link {f:if(condition: settings.disableWholeAreaLink, then: '', else: '_whole-area-link')}">
+		<div class="img-text-link {f:if(condition: settings.disableWholeAreaLink, then: '', else: '_whole-area-link')} {f:if(condition: '{settings.hoverEffect} == 0', then: '', else: '_hover-{settings.hoverEffect}')}">
 			<f:if condition="{image}">
 				<f:then>
 					<f:for each="{image}" as="mediaItem" iteration="imageIteration">
@@ -45,8 +45,10 @@
 				</f:if>
 			</f:if>
 			<f:if condition="{settings.disableWholeAreaLink} == 0">
-				<f:if condition="{data.subheader}">
-					<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</span>
+				<f:if condition="{settings.hoverEffect} == 0">
+					<f:if condition="{data.subheader}">
+						<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</span>
+					</f:if>
 				</f:if>
 	 		</f:if>
 		</div>
