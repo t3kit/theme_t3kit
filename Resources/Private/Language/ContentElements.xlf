@@ -295,15 +295,15 @@
             </trans-unit>
 
             <trans-unit id="elem.flexform.disableWholeAreaLink">
-                <source>Show button instead of whole area link</source>
+                <source>Disable whole area link</source>
             </trans-unit>
 
             <trans-unit id="elem.flexform.linkAsBtn">
-                <source>Show link as button</source>
+                <source>Show link as a button</source>
             </trans-unit>
 
             <trans-unit id="elem.flexform.btnAsLink">
-                <source>Show button as link</source>
+                <source>Show button as a link</source>
             </trans-unit>
 
             <trans-unit id="icon.flexform.iconClass_none">
