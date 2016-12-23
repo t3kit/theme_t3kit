@@ -32,7 +32,7 @@
 				<h3 class="img-text-link__header">{data.header}</h3>
 			</f:if>
 			<f:if condition="{data.bodytext}">
-				<p class="img-text-link__p">{data.bodytext}</p>
+				<p class="img-text-link__p {f:if(condition: '{settings.hoverEffect}', then: 'js__img-text-link')}">{data.bodytext}</p>
 			</f:if>
 			<f:if condition="{data.header_link}">
 				<f:if condition="{data.subheader}">
