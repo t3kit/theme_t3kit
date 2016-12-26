@@ -27,6 +27,18 @@
                         </config>
                       </TCEforms>
                     </linkAsBtn>
+
+                    <hoverEffect>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </hoverEffect>
                   </el>
             </ROOT>
         </sDEF>
