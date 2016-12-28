@@ -103,4 +103,5 @@ if (TYPO3_MODE === 'BE') {
         require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php');
     }
 
+    $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass'][] = 'EXT:theme_t3kit/Classes/Hooks/DataHandler.php:T3kit\\themeT3kit\\Hooks\\DataHandler';
 }
