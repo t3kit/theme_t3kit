@@ -81,3 +81,8 @@ themes.configuration.contacts.email = info@info.se
 
 # cat=theme,basic/customPath; type=string; label= Custom Path
 themes.configuration.customPath = fileadmin/custom
+
+# customsubcategory=maps= Google map configuration
+
+# cat=theme,basic/maps; type=string; label= Google map api key
+themes.configuration.maps.map = //maps.googleapis.com/maps/api/js?key=AIzaSyARuWux_ERbn3FIzy6Wm36WwY8IU8Ih9yg

@@ -1,0 +1,6 @@
+plugin.tx_gomapsext {
+    settings {
+        # cat=plugin.tx_gomapsext//a; type=text+; label = URL to Google Maps API: Default is current version
+        googleMapsLibrary = {$themes.configuration.maps.map}
+    }
+}
