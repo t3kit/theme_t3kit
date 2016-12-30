@@ -64,6 +64,19 @@
                 <source>10 sec</source>
             </trans-unit>
 
+            <trans-unit id="slider.flexform.captionAlign">
+                <source>Caption alignment</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.leftAlign">
+                <source>Left align</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.centerAlign">
+                <source>Center align</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.rightAlign">
+                <source>Right align</source>
+            </trans-unit>
+
             <trans-unit id="bootstrap.slider.tabs.slides">
                 <source>Slides</source>
             </trans-unit>
