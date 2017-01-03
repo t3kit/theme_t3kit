@@ -1,3 +1,77 @@
+
+#### v1.8.0 `October 18, 2016`
+- **[UPDATE]** felayout_t3kit 1.6.0 ([f8e9cc3](https://github.com/t3kit/theme_t3kit/commit/f8e9cc3))
+- **[FIX]** Localized search's placeholder in header (#65) ([bccccc6](https://github.com/t3kit/theme_t3kit/commit/bccccc6))
+- **[FEATURE]** Whole area link, fix #47 (#63) ([f03feca](https://github.com/t3kit/theme_t3kit/commit/f03feca))
+- **[FIX]** add extensionName attribute to Contacts el for translations (#58) ([05429fb](https://github.com/t3kit/theme_t3kit/commit/05429fb))
+- **[FIX]** Disabled Password Recovery Link (Login form) breaks page (Podio bug_41) (#62) ([c2ddaf4](https://github.com/t3kit/theme_t3kit/commit/c2ddaf4))
+- **[FIX]** wrong class for pagination in solr (Podio bug_45) (#59) ([2f3feb0](https://github.com/t3kit/theme_t3kit/commit/2f3feb0))
+- **[FIX]** Image title of header image is t3kit (Podio bug_44) (#60) ([c1ea82a](https://github.com/t3kit/theme_t3kit/commit/c1ea82a))
+- **[UPDATE]** felayout_t3kit ([0f2cfe8](https://github.com/t3kit/theme_t3kit/commit/0f2cfe8))
+- **[FEATURE]** navbar dropdown with columns ([48dbf5a](https://github.com/t3kit/theme_t3kit/commit/48dbf5a))
+- **[FIX]** add collapsed class to closed tabs (Podio bug_43) (#53) ([b0ddef3](https://github.com/t3kit/theme_t3kit/commit/b0ddef3))
+- **[FIX]** newsCarousel arrow position (Podio bug_40) ([c963ca8](https://github.com/t3kit/theme_t3kit/commit/c963ca8))
+- **[FEATURE]** Add translation for telephone label ([3563f7b](https://github.com/t3kit/theme_t3kit/commit/3563f7b))
+- **[FIX]** News Carousel height of date in Firefox. (Podio bug_38) (#45) ([9c73819](https://github.com/t3kit/theme_t3kit/commit/9c73819))
+- **[FEATURE]** Added translation to Norwegian Bokmål (#46) ([10089f2](https://github.com/t3kit/theme_t3kit/commit/10089f2))
+- **[UPDATE]** felayout_t3kit ([a2b7a7f](https://github.com/t3kit/theme_t3kit/commit/a2b7a7f))
+- **[FEATURE]** add Android/iOS detection ([3706cce](https://github.com/t3kit/theme_t3kit/commit/3706cce))
+- **[FIX]** php dependency version, close #43 ([3e61740](https://github.com/t3kit/theme_t3kit/commit/3e61740))
+
+***
+
+#### v1.7.0 `July 18, 2016`
+- **[UPDATE]** felayout_t3kit 1.5.0 ([7eed7fd](https://github.com/t3kit/theme_t3kit/commit/7eed7fd))
+- **[FEATURE]** Added possibility to add target _blank to the file list item (#42) ([8bc40de](https://github.com/t3kit/theme_t3kit/commit/8bc40de))
+- **[UPDATE]** correct and update dependencies in ext_emconf ([2e8cd5e](https://github.com/t3kit/theme_t3kit/commit/2e8cd5e))
+- **[DOC]** add CONTRIBUTING.md file ([ca1e5f9](https://github.com/t3kit/theme_t3kit/commit/ca1e5f9))
+- **[DOC]** update README file ([44dd04f](https://github.com/t3kit/theme_t3kit/commit/44dd04f))
+
+***
+
+#### v1.6.0 `July 8, 2016`
+- **[UPDATE]** felayout_t3kit 1.4.0 ([445d44b](https://github.com/t3kit/theme_t3kit/commit/445d44b))
+- **[FIX]** fixed confirmation page for mail form, disable compatibility mode for TYPO3 6.2 of form (Podio bug_16) (#40) ([15f5d60](https://github.com/t3kit/theme_t3kit/commit/15f5d60))
+- **[FEATURE]** add new News list template - NewsTimeline ([279fd6b](https://github.com/t3kit/theme_t3kit/commit/279fd6b))
+- **[FEATURE]** add new list templates for news EXT, (cards, simple list) ([756bb83](https://github.com/t3kit/theme_t3kit/commit/756bb83))
+- **[REFACTOR]** rename news-carousel element ([31826b6](https://github.com/t3kit/theme_t3kit/commit/31826b6))
+- **[DOC]** add license file (Podio feature_24) ([1668b31](https://github.com/t3kit/theme_t3kit/commit/1668b31))
+- **[FEATURE]** add t3kit info into site layout (Podio feature_29) ([4a372be](https://github.com/t3kit/theme_t3kit/commit/4a372be))
+- **[FIX]** added bs classes for permalogin ([2d71a01](https://github.com/t3kit/theme_t3kit/commit/2d71a01))
+- **[FIX]** News title with seo_basic (#39) ([7ffe0d9](https://github.com/t3kit/theme_t3kit/commit/7ffe0d9))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[FEATURE]** add news-carousel template for NEWS extension ([11a851d](https://github.com/t3kit/theme_t3kit/commit/11a851d))
+
+***
+
+#### v1.5.0 `June 22, 2016`
+- **[UPDATE]** felayout_t3kit 1.3.0 ([455ccca](https://github.com/t3kit/theme_t3kit/commit/455ccca))
+- **[FEATURE]** adds new content element 'bootstrapSlider (#37) ([079ce4f](https://github.com/t3kit/theme_t3kit/commit/079ce4f))
+- **[FEATURE]** add option for parallax to hide it in mobile (< 992px) ([8d77fae](https://github.com/t3kit/theme_t3kit/commit/8d77fae))
+- **[UPDATE]** felayout_t3kit 1.2.1 ([3d679a6](https://github.com/t3kit/theme_t3kit/commit/3d679a6))
+- **[REFACTOR]** warning message for outdated browsers ([28dcb5a](https://github.com/t3kit/theme_t3kit/commit/28dcb5a))
+- **[FIX]** Happy browser hardcoded (outdated browser) (Podio bug24) (#33) ([3646ad7](https://github.com/t3kit/theme_t3kit/commit/3646ad7))
+- **[FIX]** Add language variable for placeholder text in searchbox (#32) ([89be694](https://github.com/t3kit/theme_t3kit/commit/89be694))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[FEATURE]** modify BE layouts, subnav column - mark as Not assigned, remove Page Elements column ([6bcbce9](https://github.com/t3kit/theme_t3kit/commit/6bcbce9))
+- **[!!!]** **[FIX]** disable custom.js in t3kit ([ad664f0](https://github.com/t3kit/theme_t3kit/commit/ad664f0))
+- **[!!!]** **[FIX]** Changed majority of templates containing top-content, to make it possible to use the full width ([1552698](https://github.com/t3kit/theme_t3kit/commit/1552698))
+
+***
+#### v1.4.1 `June 2, 2016`
+- **[FIX]** update extension version ([c17de37](https://github.com/t3kit/theme_t3kit/commit/c17de37))
+
+#### v1.4.0 `June 2, 2016`
+- **[UPDATE]** felayout_t3kit 1.2.0 ([3944b7d](https://github.com/t3kit/theme_t3kit/commit/3944b7d))
+- **[FEATURE]** Adding paste toggle button with setting to plain text to let template design handle looks (#29) ([656a5f3](https://github.com/t3kit/theme_t3kit/commit/656a5f3))
+- **[FIX]** fixed light box class name for news detail view (#31) ([62c3252](https://github.com/t3kit/theme_t3kit/commit/62c3252))
+- **[FEATURE]** add HeaderTemplates constant ([dc76e02](https://github.com/t3kit/theme_t3kit/commit/dc76e02))
+
+#### v1.3.1 `May 26, 2016`
+- **[FIX]** video parallax template ([e246d62](https://github.com/t3kit/theme_t3kit/commit/e246d62))
+
 #### v1.3.0 `May 13, 2016`
 - **[UPDATE]** felayout_t3kit 1.1.1 ([e727128](https://github.com/t3kit/theme_t3kit/commit/e727128))
 - **[FEATURE]** Adding title overrides the filename (#28) ([af810af](https://github.com/t3kit/theme_t3kit/commit/af810af))

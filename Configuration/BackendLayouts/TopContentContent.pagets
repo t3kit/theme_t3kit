@@ -6,7 +6,7 @@ mod.web_layout.BackendLayouts {
         config {
             backend_layout {
                 colCount = 1
-                rowCount = 3
+                rowCount = 2
                 rows {
                     1 {
                         columns {
@@ -25,16 +25,6 @@ mod.web_layout.BackendLayouts {
                                 rowspan = 1
                                 colspan = 1
                                 colPos = 0
-                            }
-                        }
-                    }
-                    3 {
-                        columns {
-                            1 {
-                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_elements
-                                rowspan = 1
-                                colspan = 1
-                                colPos = 4
                             }
                         }
                     }

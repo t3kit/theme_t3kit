@@ -1,14 +1,21 @@
 <f:layout name="HeaderContentFooter" />
 
 <f:section name="content">
-<f:if condition="{files.0}">
-	<f:if condition="{files.0.type} == 4">
-		<div class="parallax parallax-video {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs')}" data-jarallax-video="{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style="background-image: url('{f:uri.image(image : '{files.1}')}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: '{data.pi_flexform.data.columns.lDEF.height.vDEF}', else: 'auto')};" >
+	<f:if condition="{files.0}">
+		<f:if condition="{files.0.type} == 4">
+			<f:if condition="{files.1}">
+				<f:then>
+					<div class="parallax parallax-video {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" data-jarallax-video="{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style="background-image: url('{f:uri.image(image : '{files.1}')}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: '{data.pi_flexform.data.columns.lDEF.height.vDEF}', else: 'auto')};" >
+				</f:then>
+				<f:else>
+					<div class="parallax parallax-video {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" data-jarallax-video="{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style=" height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: '{data.pi_flexform.data.columns.lDEF.height.vDEF}', else: 'auto')};" >
+				</f:else>
+			</f:if>
+		</f:if>
+		<f:if condition="{files.0.type} == 2">
+			<div class="parallax parallax-img {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" style="background-image: url('{f:uri.image(image : '{files.0}')}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: '{data.pi_flexform.data.columns.lDEF.height.vDEF}', else: 'auto')};" >
+		</f:if>
 	</f:if>
-	<f:if condition="{files.0.type} == 2">
-		<div class="parallax parallax-img {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs')}" style="background-image: url('{f:uri.image(image : '{files.0}')}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: '{data.pi_flexform.data.columns.lDEF.height.vDEF}', else: 'auto')};" >
-	</f:if>
-</f:if>
 	<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
 </div>
 </f:section>

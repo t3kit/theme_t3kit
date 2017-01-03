@@ -1,0 +1,109 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<div class="news-list-view news-cards {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
+	<f:if condition="{settings.hidePagination}">
+		<f:then>
+			<div class="row">
+				<f:for each="{news}" as="newsItem" iteration="iterator">
+					<f:render section="cards" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+				</f:for>
+			</div>
+		</f:then>
+		<f:else>
+			<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+				<div class="row">
+					<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+						<f:render section="cards" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+					</f:for>
+				</div>
+			</n:widget.paginate>
+		</f:else>
+	</f:if>
+</div>
+
+
+<f:section name="cards">
+	<div class="col-md-6 col-sm-6 col-lg-4">
+		<article class="news-cards__item articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+			<n:excludeDisplayedNews newsItem="{newsItem}"/>
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+				<f:if condition="{newsItem.falMedia}">
+					<div class="news-cards__img-wrap">
+						<f:if condition="{newsItem.falMediaPreviews}">
+							<f:then>
+									<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+										<f:if condition="{mediaElement.originalResource.type} == 2">
+											<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+										</f:if>
+										<f:if condition="{mediaElement.originalResource.type} == 4">
+											<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+										</f:if>
+										<f:if condition="{mediaElement.originalResource.type} == 5">
+											<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+										</f:if>
+									</f:alias>
+							</f:then>
+							<f:else>
+								<f:if condition="{settings.displayDummyIfNoMedia}">
+									<div class="no-media-element">
+										<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+									</div>
+								</f:if>
+							</f:else>
+						</f:if>
+					</div>
+				</f:if>
+				<div class="news-cards__text js__news-cards__dotdotdot">
+
+					<!-- date -->
+					<span class="news-list-date news-cards__date-wrp">
+						<span class="news-cards__date-text">
+							<f:translate extensionName="Theme_t3kit" key="news.date.text"/>
+						</span>
+						<span class="news-cards__date">
+							<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+								<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+								<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+							</time>
+						</span>
+					</span>
+
+					<!-- header -->
+					<f:if condition="{newsItem.title}">
+						<div class="news-article-header news-cards__header">
+							<h3>{newsItem.title}</h3>
+						</div>
+					</f:if>
+
+					<!-- teaser -->
+					<div class="teaser-text news-cards__teaser">
+						<f:if condition="{newsItem.teaser}">
+							<f:then>
+								<span itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.card.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+							</f:then>
+							<f:else>
+								<span itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.card.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+							</f:else>
+						</f:if>
+					</div>
+
+				</div>
+			</n:link>
+			<div class="news-cards__more-link">
+				<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+					<f:translate key="more-link"/>
+				</n:link>
+			</div>
+
+			<!-- author -->
+			<f:if condition="{newsItem.author}">
+				<div class="news-cards__author">
+					<span class="news-list-author">
+						<f:translate key="author" arguments="{0:newsItem.author}"/>
+					</span>
+				</div>
+			</f:if>
+
+		</article>
+	</div>
+</f:section>

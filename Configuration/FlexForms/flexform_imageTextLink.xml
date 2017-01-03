@@ -10,6 +10,15 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <disableWholeAreaLink>
+                        <TCEforms>
+                         <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.disableWholeAreaLink</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </disableWholeAreaLink>
+
                     <linkAsBtn>
                       <TCEforms>
                         <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.linkAsBtn</label>
@@ -18,6 +27,18 @@
                         </config>
                       </TCEforms>
                     </linkAsBtn>
+
+                    <hoverEffect>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </hoverEffect>
                   </el>
             </ROOT>
         </sDEF>

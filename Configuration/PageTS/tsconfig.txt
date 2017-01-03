@@ -29,9 +29,12 @@
 #backendlayouts.TopContentMenuContentSidebar >
 #backendlayouts.TopContentSidebarContent >
 
-# Extensions
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/PageTS/tsconfig.txt">
 
+#  Extensions:
+#  RTE
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/PageTS/tsconfig.txt">
+# News
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/PageTS/tsconfig.txt">
 
 # ==================================================
 # Hide "Button Group" element.
@@ -42,3 +45,9 @@ mod.wizards.newContentElement.wizardItems.forms.elements.buttonContent >
 
 # Include  PageTS files from fileadmin/templates/Configuration/PageTS
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/PageTS" extensions="pagets">
+
+TCEMAIN.permissions {
+	groupid = 3
+	user = show,editcontent,new,edit,delete
+	group = show,editcontent,new,edit,delete
+}

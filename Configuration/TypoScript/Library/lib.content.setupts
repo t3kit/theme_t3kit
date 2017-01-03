@@ -10,8 +10,6 @@ lib.content.menu {
     stdWrap.prefixComment = 2|Output of lib.content.menu
     stdWrap.outerWrap = |
     20 =< lib.menu.sub
-    50 < styles.content.get
-    50.select.where = colPos=1
 }
 # Insert colPos 2 in sidebar content
 lib.content.sidebar = COA
@@ -24,10 +22,4 @@ lib.content.top = COA
 lib.content.top {
     50 < styles.content.get
     50.select.where = colPos=3
-}
-# Insert colPos 4 in elements content
-lib.content.elements = COA
-lib.content.elements {
-    50 < styles.content.get
-    50.select.where = colPos=4
 }

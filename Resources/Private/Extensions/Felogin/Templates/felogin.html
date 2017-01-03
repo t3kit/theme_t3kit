@@ -49,47 +49,49 @@
 <!-- ###LOGIN_FORM### -->
 <form class="form-horizontal" action="###ACTION_URI###" target="_top" method="post" onsubmit="###ON_SUBMIT###">
 	<fieldset>
-	<legend>###LEGEND###</legend>
-	<div class="form-group">
-		<label class="col-sm-3 control-label" for="user">###USERNAME_LABEL###</label>
-		<div class="col-sm-9">
-			<input class="form-control" type="text" id="user" name="user" value="" />
+		<legend>###LEGEND###</legend>
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="user">###USERNAME_LABEL###</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="text" id="user" name="user" value="" />
+			</div>
 		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-3 control-label" for="pass">###PASSWORD_LABEL###</label>
-		<div class="col-sm-9">
-			<input class="form-control" type="password" id="pass" name="pass" value="" data-rsa-encryption="" />
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="pass">###PASSWORD_LABEL###</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="password" id="pass" name="pass" value="" data-rsa-encryption="" />
+			</div>
 		</div>
-	</div>
 
-	<!--###PERMALOGIN_VALID###-->
-		<div>
-			<label for="permalogin">###PERMALOGIN###</label>
-			<input name="permalogin" value="0" type="hidden" ###PERMALOGIN_HIDDENFIELD_ATTRIBUTES### id="permaloginHiddenField" />
-			<input name="permalogin" value="1" type="checkbox" ###PERMALOGIN_CHECKBOX_ATTRIBUTES### id="permalogin"  onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;" />
+		<!--###PERMALOGIN_VALID###-->
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="permalogin">###PERMALOGIN###</label>
+			<div class="col-sm-9">
+				<input name="permalogin" value="0" type="hidden" ###PERMALOGIN_HIDDENFIELD_ATTRIBUTES### id="permaloginHiddenField" />
+				<input name="permalogin" value="1" type="checkbox" ###PERMALOGIN_CHECKBOX_ATTRIBUTES### id="permalogin"  onclick="document.getElementById('permaloginHiddenField').disabled = this.checked;" />
+			</div>
 		</div>
-	<!--###PERMALOGIN_VALID###-->
+		<!--###PERMALOGIN_VALID###-->
 
-	<div class="form-group">
-		<div class="col-sm-offset-3 col-sm-5">
-			<input class="btn btn-default" type="submit" name="submit" value="###LOGIN_LABEL###" />
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-5">
+				<input class="btn btn-default" type="submit" name="submit" value="###LOGIN_LABEL###" />
+			</div>
+			<!--###FORGOTP_VALID###-->
+			<div class="col-sm-4">
+				<p class="btn btn-link forgot-pass-link"><!--###FORGOT_PASSWORD_LINK###-->###FORGOT_PASSWORD###<!--###FORGOT_PASSWORD_LINK###--></p>
+			</div>
+			<!--###FORGOTP_VALID###-->
 		</div>
-		<!--###FORGOTP_VALID###-->
-		<div class="col-sm-4">
-		<p class="btn btn-link forgot-pass-link"><!--###FORGOT_PASSWORD_LINK###-->###FORGOT_PASSWORD###<!--###FORGOT_PASSWORD_LINK###--></p>
-		<!--###FORGOTP_VALID###-->
+
+
+		<div class="felogin-hidden">
+			<input type="hidden" name="logintype" value="login" />
+			<input type="hidden" name="pid" value="###STORAGE_PID###" />
+			<input type="hidden" name="redirect_url" value="###REDIRECT_URL###" />
+			<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+			###EXTRA_HIDDEN###
 		</div>
-	</div>
-
-
-	<div class="felogin-hidden">
-		<input type="hidden" name="logintype" value="login" />
-		<input type="hidden" name="pid" value="###STORAGE_PID###" />
-		<input type="hidden" name="redirect_url" value="###REDIRECT_URL###" />
-		<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
-		###EXTRA_HIDDEN###
-	</div>
 	</fieldset>
 </form>
 
@@ -100,30 +102,27 @@
 <!--###TEMPLATE_LOGIN###-->
 
 <!--###TEMPLATE_LOGOUT###-->
-###STATUS_HEADER###
-
-###STATUS_MESSAGE###
 
 <form class="form-horizontal" action="###ACTION_URI###" target="_top" method="post">
 	<fieldset>
-	<legend>###LEGEND###</legend>
-	<div class="form-group">
-		<label class="col-sm-3 control-label">###USERNAME_LABEL###</label>
-		<div class="col-sm-9">
-			<p class="form-control-static">###USERNAME###</p>
-	    </div>
-    </div>
-	<div class="form-group">
-		<div class="col-sm-offset-3 col-sm-5">
-			<input class="dfd btn btn-default" type="submit" name="submit" value="###LOGOUT_LABEL###" />
-		 </div>
-	 </div>
+		<legend>###LEGEND###</legend>
+		<div class="form-group">
+			<label class="col-sm-3 control-label">###USERNAME_LABEL###</label>
+			<div class="col-sm-9">
+				<p class="form-control-static">###USERNAME###</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-5">
+				<input class="dfd btn btn-default" type="submit" name="submit" value="###LOGOUT_LABEL###" />
+			</div>
+		</div>
 
-	<div class="felogin-hidden">
-		<input type="hidden" name="logintype" value="logout" />
-		<input type="hidden" name="pid" value="###STORAGE_PID###" />
-		<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
-	</div>
+		<div class="felogin-hidden">
+			<input type="hidden" name="logintype" value="logout" />
+			<input type="hidden" name="pid" value="###STORAGE_PID###" />
+			<input type="hidden" name="###PREFIXID###[noredirect]" value="###NOREDIRECT###" />
+		</div>
 	</fieldset>
 </form>
 
@@ -137,25 +136,25 @@
 
 <!-- ###FORGOT_FORM### -->
 <form class="form-horizontal" action="###ACTION_URI###" method="post">
-    <div class="felogin-hidden">
+	<div class="felogin-hidden">
 		<input type="hidden" name="tx_felogin_pi1[forgot_hash]" value="###FORGOTHASH###" />
 	</div>
 	<fieldset>
-	<legend>###LEGEND###</legend>
-	<div class="form-group">
-		<label class="col-sm-3 control-label" for="tx_felogin_pi1-forgot-email">###DATA_LABEL###</label>
-		<div class="col-sm-9">
-			<input class="form-control" type="text" name="###FORGOT_EMAIL###" id="tx_felogin_pi1-forgot-email" />
+		<legend>###LEGEND###</legend>
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="tx_felogin_pi1-forgot-email">###DATA_LABEL###</label>
+			<div class="col-sm-9">
+				<input class="form-control" type="text" name="###FORGOT_EMAIL###" id="tx_felogin_pi1-forgot-email" />
+			</div>
 		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-3 col-sm-5">
-			<input class="btn btn-default" type="submit" name="submit" value="###SEND_PASSWORD###" />
-		 </div>
-		<div class="col-sm-4">
-			<p class="btn btn-link return-to-login">###BACKLINK_LOGIN###&nbsp;</p>
-		 </div>
-	 </div>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-5">
+				<input class="btn btn-default" type="submit" name="submit" value="###SEND_PASSWORD###" />
+			</div>
+			<div class="col-sm-4">
+				<p class="btn btn-link return-to-login">###BACKLINK_LOGIN###&nbsp;</p>
+			</div>
+		</div>
 	</fieldset>
 </form>
 <!-- ###FORGOT_FORM### -->
@@ -187,7 +186,7 @@
 			<div class="col-sm-offset-3 col-sm-5">
 				<input class="btn btn-default"  type="submit" name="tx_felogin_pi1[changepasswordsubmit]" value="###SEND_PASSWORD###" />
 			</div>
-		 </div>
+		</div>
 	</fieldset>
 
 </form>

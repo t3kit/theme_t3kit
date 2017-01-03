@@ -1,0 +1,43 @@
+<f:if condition="{model.showElement}">
+    <div class="form-group csc-form-{model.elementCounter} csc-form-element csc-form-element-{model.elementTypeLowerCase}">
+        <div class="col-sm-3 control-label">
+            <label for="{model.additionalArguments.id}">
+                {model.additionalArguments.label}
+                <f:if condition="{model.mandatoryValidationMessages}">
+                    <span class="icons icon-t3-mandatory"><f:for each="{model.mandatoryValidationMessages}" as="mandatoryValidationMessage" iteration="iterator">{mandatoryValidationMessage}<f:if condition="{iterator.isLast}"><f:else> - </f:else></f:if></f:for></span>
+                </f:if>
+            </label>
+        </div>
+
+        <div class="col-sm-5">
+            <f:form.textfield
+                    class="form-control {model.additionalArguments.class}"
+                    dir="{model.additionalArguments.dir}"
+                    id="{model.additionalArguments.id}"
+                    lang="{model.additionalArguments.lang}"
+                    style="{model.additionalArguments.style}"
+                    title="{model.additionalArguments.title}"
+                    accesskey="{model.additionalArguments.accesskey}"
+                    tabindex="{model.additionalArguments.tabindex}"
+                    onclick="{model.additionalArguments.onclick}"
+
+                    value="{model.additionalArguments.value}"
+                    name="{model.additionalArguments.prefix}[{model.additionalArguments.name}]"
+
+                    autofocus="{model.additionalArguments.autofocus}"
+                    maxlength="{model.additionalArguments.maxlength}"
+                    size="{model.additionalArguments.size}"
+                    placeholder="{model.additionalArguments.placeholder}"
+                    pattern="{model.additionalArguments.pattern}"
+                    required="{model.additionalArguments.required}"
+                    type="{model.additionalArguments.type}"
+
+                    errorClass="{model.additionalArguments.errorClass}"
+                    additionalAttributes="{model.htmlAttributes}"/>
+
+            <f:if condition="{model.validationErrorMessages}">
+                <p class="text-danger"><f:for each="{model.validationErrorMessages}" as="errorValidationMessage" iteration="iterator">{errorValidationMessage}<f:if condition="{iterator.isLast}"><f:else> - </f:else></f:if></f:for></p>
+            </f:if>
+        </div>
+    </div>
+</f:if>

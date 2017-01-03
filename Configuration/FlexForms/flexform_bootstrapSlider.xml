@@ -1,0 +1,37 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.sheetGeneral</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<interval>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.interval</label>
+							<config>
+								<type>input</type>
+								<rows>1</rows>
+								<default>5</default>
+							</config>
+						</TCEforms>
+					</interval>
+
+					<!-- Show or hide the small circles on bottom of slider to navigate to each slide. -->
+					<quickselect>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.quickselect</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</quickselect>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

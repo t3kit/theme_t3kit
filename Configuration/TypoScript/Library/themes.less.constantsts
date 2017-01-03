@@ -82,7 +82,7 @@ themes.configuration.less.var.headerMiddleSearchBtnHover =
 themes.configuration.less.var.logoTop = 30px
 
 # cat=header,basic/logo; type=string; label= Logo Left
-themes.configuration.less.var.logoLeft = 40px
+themes.configuration.less.var.logoLeft = 10px
 
 # cat=header,basic/logo; type=string; label= Logo Width
 themes.configuration.less.var.logoWidth = 120px

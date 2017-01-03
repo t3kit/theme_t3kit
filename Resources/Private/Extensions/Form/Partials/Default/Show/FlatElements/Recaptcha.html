@@ -1,0 +1,23 @@
+{namespace pxa=Pixelant\PxaFormEnhancement\ViewHelpers}
+<f:if condition="{model.showElement}">
+    <div class="form-group csc-form-{model.elementCounter} csc-form-element csc-form-element-{model.elementTypeLowerCase}">
+        <div class="col-sm-3 control-label">
+            <label for="{model.additionalArguments.id}">
+                {model.additionalArguments.label}
+                <f:if condition="{model.mandatoryValidationMessages}">
+                    <span class="icons icon-t3-mandatory"><f:for each="{model.mandatoryValidationMessages}" as="mandatoryValidationMessage" iteration="iterator">{mandatoryValidationMessage}<f:if condition="{iterator.isLast}"><f:else> - </f:else></f:if></f:for></span>
+                </f:if>
+            </label>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="{model.additionalArguments.class}" id="{model.additionalArguments.id}"></div>
+
+            <f:if condition="{model.validationErrorMessages}">
+                <p class="text-danger"><f:for each="{model.validationErrorMessages}" as="errorValidationMessage" iteration="iterator">{errorValidationMessage}<f:if condition="{iterator.isLast}"><f:else> - </f:else></f:if></f:for></p>
+            </f:if>
+        </div>
+    </div>
+
+    <pxa:initRecaptcha recaptcha="{model}"/>
+</f:if>

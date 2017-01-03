@@ -36,7 +36,55 @@
             <trans-unit id="slider.tabs.slides">
                 <source>Slides</source>
             </trans-unit>
+            <trans-unit id="slider.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay">
+                <source>Slider autoplay</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_None">
+                <source>No autoplay [default]</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_One">
+                <source>1 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Two">
+                <source>2 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Three">
+                <source>3 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Five">
+                <source>5 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Seven">
+                <source>7 sec</source>
+            </trans-unit>
+            <trans-unit id="slider.flexform.autoplay_Ten">
+                <source>10 sec</source>
+            </trans-unit>
 
+            <trans-unit id="bootstrap.slider.tabs.slides">
+                <source>Slides</source>
+            </trans-unit>
+            <trans-unit id="bootstrap.slider.title">
+                <source>Bootstrap Slider</source>
+            </trans-unit>
+            <trans-unit id="bootstrap.slider.description">
+                <source>Basic slider included from Bootstrap package. Add sliding interval and turn on/off quickselect. </source>
+            </trans-unit>
+            <trans-unit id="bootstrap.tabs.slides">
+                <source>Slides</source>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.interval">
+                <source>Interval in seconds</source>
+            </trans-unit>
+            <trans-unit id="bootstrapSlider.flexform.quickselect">
+                <source>Quickselect</source>
+            </trans-unit>
             <trans-unit id="bigIconTextButton.title">
                 <source>Icon,Text and Link</source>
             </trans-unit>
@@ -88,7 +136,7 @@
                 <source>Image text and link</source>
             </trans-unit>
             <trans-unit id="imageTextLink.description">
-                <source>Image or media, text and link. Will use image image before media. Will only render one image or one media.</source>
+                <source>Image or media, text and link. Will use image before media. Will only render one image or one media.</source>
             </trans-unit>
             <trans-unit id="imageTextLink.bodyText">
                 <source>Text</source>
@@ -107,6 +155,40 @@
             </trans-unit>
             <trans-unit id="imageTextLink.flexform.sheetGeneral">
                 <source>Additional settings</source>
+            </trans-unit>
+
+            <trans-unit id="imageTextLink.flexform.hoverEffect">
+                <source>Hover effects</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_disable">
+                <source>Disable</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-1">
+                <source>Hover effect 1</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-2">
+                <source>Hover effect 2</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-3">
+                <source>Hover effect 3</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-4">
+                <source>Hover effect 4</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-5">
+                <source>Hover effect 5</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-6">
+                <source>Hover effect 6</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-7">
+                <source>Hover effect 7</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-8">
+                <source>Hover effect 8</source>
+            </trans-unit>
+            <trans-unit id="imageTextLink.flexform.hoverEffect_hover-9">
+                <source>Hover effect 9</source>
             </trans-unit>
 
             <trans-unit id="accordion.title">
@@ -246,10 +328,14 @@
                 <source>Default</source>
             </trans-unit>
 
+            <trans-unit id="elem.flexform.disableWholeAreaLink">
+                <source>Disable whole area link</source>
+            </trans-unit>
 
             <trans-unit id="elem.flexform.linkAsBtn">
                 <source>Show link as a button</source>
             </trans-unit>
+
             <trans-unit id="elem.flexform.btnAsLink">
                 <source>Show button as a link</source>
             </trans-unit>
