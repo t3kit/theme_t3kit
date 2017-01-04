@@ -23,6 +23,15 @@ TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.autoplay {
     }
 }
 
+TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.captionAlign {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.leftAlign
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.centerAlign
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.rightAlign
+    }
+}
+
+
 # # Use layout field to customize Layout select-box on contentElementSlider
 # # extend layout select-box only for this element
 # TCEFORM.tt_content.layout {

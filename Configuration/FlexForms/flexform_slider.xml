@@ -16,11 +16,22 @@
                     <config>
                       <type>select</type>
                         <items>
-                            
+
                         </items>
                     </config>
                   </TCEforms>
                 </autoplay>
+                <captionAlign>
+                    <TCEforms>
+                      <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.captionAlign</label>
+                      <config>
+                        <type>select</type>
+                          <items>
+
+                          </items>
+                      </config>
+                    </TCEforms>
+                </captionAlign>
                 </el>
             </ROOT>
         </sDEF>
