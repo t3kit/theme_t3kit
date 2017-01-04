@@ -1,7 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:comment><!-- ### Wrapper class||Margin Top||Margin Bottom start if set ### --></f:comment>
-<f:if condition="{wrapperClass}{wrapperMarginTopClass}{wrapperMarginBottomClass}">
+<f:alias map="{wrapperClassWithMargins: '{wrapperClass}{wrapperMarginTopClass}{wrapperMarginBottomClass}'}">
+<f:if condition="{wrapperClassWithMargins}">
 	<div class="{wrapperClass} {wrapperMarginTopClass} {wrapperMarginBottomClass}">
 </f:if>
 
@@ -37,8 +38,9 @@
 </div>
 
 <f:comment><!-- ### Wrapper class||Margin Top||Margin Bottom end if set ### --></f:comment>
-<f:if condition="{wrapperClass}{wrapperMarginTopClass}{wrapperMarginBottomClass}">
+<f:if condition="{wrapperClassWithMargins}">
 	</div>
 </f:if>
+</f:alias>
 
 </html>
