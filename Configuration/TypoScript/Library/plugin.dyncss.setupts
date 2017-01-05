@@ -107,6 +107,17 @@ plugin.tx_dyncss.overrides {
             if.isTrue = {$themes.configuration.less.var.headerMiddleSearchBtnHover}
     }
 
+    header-middle-search-placeholder-color = TEXT
+    header-middle-search-placeholder-color {
+            value = {$themes.configuration.less.var.HeaderSearchFieldPlaceholderColor}
+            if.isTrue = {$themes.configuration.less.var.HeaderSearchFieldPlaceholderColor}
+    }
+    header-middle-search-text-color = TEXT
+    header-middle-search-text-color {
+            value = {$themes.configuration.less.var.HeaderSearchFieldTextColor}
+            if.isTrue = {$themes.configuration.less.var.HeaderSearchFieldTextColor}
+    }
+
 
     # Logo
     logo-top = TEXT

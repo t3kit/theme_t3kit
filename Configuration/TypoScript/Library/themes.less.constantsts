@@ -76,6 +76,12 @@ themes.configuration.less.var.headerMiddleSearchBtnBg =
 # cat=colors,advanced/header_middle_colors; type=color; label= Header Middle Search Btn Hover
 themes.configuration.less.var.headerMiddleSearchBtnHover =
 
+# cat=colors,advanced/header_middle_colors; type=color; label= Header Search Field Placeholder Color
+themes.configuration.less.var.HeaderSearchFieldPlaceholderColor =
+
+# cat=colors,advanced/header_middle_colors; type=color; label= Header Search Field Text Color
+themes.configuration.less.var.HeaderSearchFieldTextColor =
+
 
 # Logo
 # cat=header,basic/logo; type=string; label= Logo Top
