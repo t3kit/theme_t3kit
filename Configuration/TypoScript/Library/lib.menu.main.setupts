@@ -130,3 +130,49 @@ lib.menu.main {
     }
 }
 [global]
+
+
+# Add third navigation level if dropdown and third level is enabled
+[globalVar = LIT:_sub = {$themes.configuration.menu.main.dropdown}] && [globalVar = LIT:1 = {$themes.configuration.menu.main.showThirdNavLevel}]
+lib.menu.main {
+    2 {
+        expAll = 1
+        wrap = <ul class="main-navigation__sub-item-list second-navigation-level"> | </ul>
+        NO = 1
+        NO {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation__sub-item uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__sub-item uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__sub-item uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation__sub-item-link"
+        }
+        ACT < .NO
+        ACT {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation__sub-item _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__sub-item _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__sub-item _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation__sub-item-link"
+        }
+        IFSUB < .NO
+        IFSUB {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation__sub-item {$themes.configuration.menu.main.dropdown} uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__sub-item {$themes.configuration.menu.main.dropdown} uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__sub-item {$themes.configuration.menu.main.dropdown} uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation__sub-item-link"
+            after = <a href="#" class="main-navigation__open-sub-menu-link js__main-navigation__open-third-menu-link">Open</a>
+        }
+        ACTIFSUB < .ACT
+        ACTIFSUB {
+            wrapItemAndSub.insertData = 1
+            wrapItemAndSub = <li class="main-navigation__sub-item {$themes.configuration.menu.main.dropdown} _active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="main-navigation__sub-item {$themes.configuration.menu.main.dropdown} _active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="main-navigation__sub-item {$themes.configuration.menu.main.dropdown} _active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
+            ATagParams = class="main-navigation__sub-item-link"
+            after = <a href="#" class="main-navigation__open-sub-menu-link js__main-navigation__open-third-menu-link">Open</a>
+        }
+    }
+
+    3 < .2
+    3 {
+        expAll = 0
+        wrap = <ul class="main-navigation__sub-item-list third-navigation-level"> | </ul>
+
+        IFSUB >
+        ACTIFSUB >
+    }
+}
+[global]
