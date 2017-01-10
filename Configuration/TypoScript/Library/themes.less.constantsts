@@ -79,13 +79,13 @@ themes.configuration.less.var.headerMiddleSearchBtnHover =
 
 # Logo
 # cat=header,basic/logo; type=string; label= Logo Top
-themes.configuration.less.var.logoTop = 30px
+themes.configuration.less.var.logoTop =
 
 # cat=header,basic/logo; type=string; label= Logo Left
-themes.configuration.less.var.logoLeft = 40px
+themes.configuration.less.var.logoLeft =
 
 # cat=header,basic/logo; type=string; label= Logo Width
-themes.configuration.less.var.logoWidth = 120px
+themes.configuration.less.var.logoWidth =
 
 
 # Social Icons
