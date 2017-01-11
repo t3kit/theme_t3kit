@@ -1,0 +1,20 @@
+tx_gridelements.setup.SimpleAccordion {
+	title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion
+	description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion_description
+	flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/SimpleAccordion.xml
+	icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/simpleAccordion.svg
+	config {
+		colCount = 1
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simpleAccordion
+						colPos = 0
+					}
+				}
+			}
+		}
+	}
+}
