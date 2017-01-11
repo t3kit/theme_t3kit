@@ -257,6 +257,34 @@
               <source>Style of tabs</source>
             </trans-unit>
 
+            <trans-unit id="accordion_container">
+                <source>Accordion Container</source>
+            </trans-unit>
+            <trans-unit id="accordion_container_description">
+                <source>Container with collapsible child elements, which can either be single elements or containers as well</source>
+            </trans-unit>
+            <trans-unit id="accordion_container_content">
+                <source>Accordion content</source>
+            </trans-unit>
+            <trans-unit id="accordion_container.flexform.sheetGeneral">
+                <source>Additional settings</source>
+            </trans-unit>
+            <trans-unit id="accordion_container.flexform.multiselect">
+                <source>Multiple items can be expanded at the same time</source>
+            </trans-unit>
+            <trans-unit id="accordion_container.flexform.accordionMode">
+                <source>Accordion mode</source>
+            </trans-unit>
+            <trans-unit id="accordion_container.flexform.accordionMode_firstChildOpen">
+                <source>First item is expanded at load.</source>
+            </trans-unit>
+            <trans-unit id="accordion_container.flexform.accordionMode_allClosed">
+                <source>All items are collapsed at load.</source>
+            </trans-unit>
+            <trans-unit id="accordion_container.flexform.accordionMode_allOpen">
+                <source>All items are expanded at load.</source>
+            </trans-unit>
+
             <trans-unit id="sliderContainer">
                 <source>Slider container</source>
             </trans-unit>

@@ -1,0 +1,20 @@
+tx_gridelements.setup.AccordionContainer {
+	title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:accordion_container
+	description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:accordion_container_description
+	flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/AccordionContainer.xml
+	icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/accordionContainer.svg
+	config {
+		colCount = 1
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:accordionContainer
+						colPos = 0
+					}
+				}
+			}
+		}
+	}
+}
