@@ -47,6 +47,7 @@ themes.configuration.less.var.mainLinkHoverColor =
 # customsubcategory=header_top_colors= Header Top Colors
 # customsubcategory=header_middle_colors= Header Middle Colors
 # customsubcategory=header_main_menu_colors= Main Menu Colors
+# customsubcategory=header_search_field_color= Header Search Field Color
 
 
 
@@ -75,6 +76,9 @@ themes.configuration.less.var.headerMiddleSearchBtnBg =
 
 # cat=colors,advanced/header_middle_colors; type=color; label= Header Middle Search Btn Hover
 themes.configuration.less.var.headerMiddleSearchBtnHover =
+
+# cat=colors,advanced/header_search_field_color; type=color; label= Header Search Field Text Color
+themes.configuration.less.var.HeaderSearchFieldTextColor =
 
 
 # Logo
