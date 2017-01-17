@@ -46,3 +46,13 @@ TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.captionAlign {
 #         }
 #     }
 # }
+
+
+# # This is for adding options in the selectbox in each slide.
+# TCEFORM.sys_file_reference.tx_themet3kit_slide_appearance {
+#      addItems {
+#          --div-- = Slider slide appearances:
+#          10 = Light text and right aligned text area
+#          20 = Dark text and centered aligned text area
+#     }
+# }
