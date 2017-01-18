@@ -2,7 +2,7 @@ tx_gridelements.setup.Adv3ColumnGrid {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:adv_three_column_grid
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:adv_three_column_grid_description
     flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/Adv3ColumnGrid.xml
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/adv3-column-grid.svg
+    iconIdentifier = grid-elements-adv4ColumnGrid
     config {
         colCount = 3
         rowCount = 1

@@ -1,7 +1,7 @@
 tx_gridelements.setup.Tab {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tab
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tab_description
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/tab.svg
+    iconIdentifier = grid-elements-tab
     config {
         colCount = 1
         rowCount = 1
