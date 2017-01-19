@@ -5,6 +5,7 @@ themes.configuration.siteName = t3kit
 themes.languages.default.isoCode = en_GB
 themes.configuration.headerComment = This website is based on t3kit project by Pixelant - www.t3kit.com
 
+styles.content.textmedia.maxW = 900
 
 # Extensions
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/constants.ts">
