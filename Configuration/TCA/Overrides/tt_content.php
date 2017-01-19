@@ -5,7 +5,6 @@ call_user_func(function() {
 
     $contentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
-    $cmsLanguageFilePrefix = 'LLL:EXT:cms/locallang_ttc.xlf:';
 
     // Include tt_content overrides from "custom_content_elenent"
     if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php')) {
@@ -291,10 +290,10 @@ call_user_func(function() {
     $GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = [
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
@@ -310,10 +309,10 @@ call_user_func(function() {
     $GLOBALS['TCA']['tt_content']['types']['iconTextButton'] = [
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.buttonText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
@@ -368,10 +367,10 @@ call_user_func(function() {
     $GLOBALS['TCA']['tt_content']['types']['imageTextLink'] = [
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
             --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
@@ -410,7 +409,7 @@ call_user_func(function() {
                 header;' . $contentElementLanguageFilePrefix . 'quote.header,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'quote.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'quote.linkText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
