@@ -11,7 +11,7 @@
 		<f:render partial="Header" arguments="{_all}" />
 	</f:if>
 
-	<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+	<div class="ce-textpic {f:if(condition:'{column.media.type==4}', then: 'video-gallery')} ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
 		<f:if condition="{gallery.position.vertical} != 'below'">
 			<f:render partial="MediaGallery" arguments="{_all}" />
 		</f:if>
