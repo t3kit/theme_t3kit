@@ -18,6 +18,16 @@ plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreNam
 
 # Add teaser to search query
 plugin.tx_solr.search.query.queryFields := addToList(abstract^39.0)
+plugin.tx_solr.index.queue {
+    news.fields.content.cObject {
+        5 = TEXT
+        5 {
+            field = teaser
+            noTrimWrap = || |
+            stdWrap.wrap = | [...]
+        }
+    }
+}
 
 ## TEST
 #plugin.tx_solr.general.dateFormat.date =
