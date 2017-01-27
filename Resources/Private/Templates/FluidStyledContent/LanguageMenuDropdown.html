@@ -1,0 +1,33 @@
+<f:if condition="{languages}">
+	<div class="header-top__language-navigation js__header-top__language-navigation language-menu dropdown">
+		<a class="language-navigation__item-link _sub language-navigation__toggle-btn js__language-navigation__toggle-btn" >
+			<f:for each="{languages}" as="language">
+				<f:if condition="{language.active}">
+					<f:then>
+						<span class="flag-icon flag-icon-{language.flag} active"></span> {language.label}
+					</f:then>
+				</f:if>
+			</f:for>
+		</a>
+
+		<div class="language-navigation__items js__language-navigation__items">
+			<ul class="language-navigation__items-wrp js__language-navigation__items-wrp">
+				<f:for each="{languages}" as="language">
+					<f:if condition="{language.active}">
+						<f:else>
+							<li>
+								<f:link.page addQueryString="1"
+								             additionalParams="{L: language.L}"
+								             title="{language.label}"
+								             class="language-navigation__item-link"
+								             argumentsToBeExcludedFromQueryString="{0: 'id'}">
+									<span class="flag-icon flag-icon-{language.flag}"></span> {language.label}
+								</f:link.page>
+							</li>
+						</f:else>
+					</f:if>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</f:if>

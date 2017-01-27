@@ -5,6 +5,7 @@
 # customsubcategory=header_top=Header Top
 # customsubcategory=header_middle=Header Middle
 # customsubcategory=logo=Logo
+# customsubcategory=header_top_menu=Top Language Menu
 
 
 
@@ -15,9 +16,6 @@ themes.configuration.elem.status.showHeaderTop = 1
 
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Contacts
 themes.configuration.elem.status.showHeaderTopContacts = 1
-
-# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangMenu
-themes.configuration.elem.status.showHeaderTopLangMenu = 0
 
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Search
 themes.configuration.elem.status.showHeaderTopSearch = 0
@@ -30,6 +28,18 @@ themes.configuration.elem.status.showHeaderTopNavigation = 1
 
 # cat=header,advanced/header_top; type=int+; label= Header Top: Container pid where the menu items are located
 themes.configuration.header.top.menu.containerPid = 6
+
+
+#Top Language Menu
+#############################################
+# cat=header,advanced/header_top_menu; type=boolean; label= Enable Header Top LangMenu
+themes.configuration.elem.status.showHeaderTopLangMenu = 0
+
+# cat=header,advanced/header_top_menu; type=options[Default=,Fixed=Fixed,Dropdown=Dropdown]; label= Menu Type
+themes.configuration.header.top.menu.language.style =
+
+# cat=header,advanced/header_top_menu; type=boolean; label= Show Page Overlay (Default menu)
+themes.configuration.header.top.menu.language.enableOverlay = 0
 
 
 
