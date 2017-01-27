@@ -359,6 +359,31 @@
             <trans-unit id="icon.flexform.iconClass_none">
                 <source>None</source>
             </trans-unit>
+
+            <trans-unit id="socialIcons.flexform.facebookLink">
+                <source>Facebook: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.googlePlusLink">
+                <source>Google+: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.instagramLink">
+                <source>Instagram: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.linkedInLink">
+                <source>LinkedIn: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.pinterestLink">
+                <source>Pinterest: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.twitterLink">
+                <source>Twitter: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.vimeoLink">
+                <source>Vimeo: Pagelink</source>
+            </trans-unit>
+            <trans-unit id="socialIcons.flexform.youtubeLink">
+                <source>Youtube: Pagelink</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
