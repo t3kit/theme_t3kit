@@ -134,6 +134,11 @@
 				<source>Please upgrade your browser to improve your experience.</source>
 			</trans-unit>
 
+			<!-- BE User custom field -->
+			<trans-unit id="be_users.default_save_button" xml:space="preserve">
+				<source>Default save button: </source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

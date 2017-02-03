@@ -15,3 +15,10 @@ CREATE TABLE sys_file_reference (
   tx_themet3kit_slide_btn_txt varchar(255) DEFAULT '' NOT NULL,
   tx_themet3kit_slide_appearance int(11) unsigned DEFAULT '0' NOT NULL
 );
+
+#
+# Table structure for table 'be_users'
+#
+CREATE TABLE be_users (
+    default_save_button varchar(255) DEFAULT ''
+);
