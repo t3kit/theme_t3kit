@@ -1,0 +1,30 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        frameAnimated {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.description
+            iconIdentifier = content-elements-frameAnimated
+            tt_content_defValues {
+                CType = frameAnimated
+            }
+        }
+    }
+    show := addToList(frameAnimated)
+}
+
+TCEFORM.tt_content.pi_flexform.frameAnimated.sDEF.contentPosition {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.contentPosition_left
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.contentPosition_center
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.contentPosition_right
+    }
+}
+
+TCEFORM.tt_content.pi_flexform.frameAnimated.sDEF.animationStyle {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.animationStyle_disable
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.animationStyle_1
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.animationStyle_2
+        3 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.animationStyle_3
+    }
+}

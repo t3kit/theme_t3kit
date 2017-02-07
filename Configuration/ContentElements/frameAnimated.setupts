@@ -1,0 +1,35 @@
+tt_content {
+    frameAnimated =< lib.fluidContent
+    frameAnimated {
+        templateName = FrameAnimated
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = media
+                as = media
+            }
+            15 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            15 {
+                references.fieldName = image
+                as = image
+            }
+            20 = T3kit\T3kitExtensionTools\DataProcessing\FlexFormProcessor
+            20 {
+                fieldName = pi_flexform
+                as = settings
+            }
+            # "inherit" from lib.fluidContent
+            365 < lib.fluidContent.dataProcessing.365
+            1910 < lib.fluidContent.dataProcessing.1910
+
+            # extend class mapping only for this element
+            # 1910 {
+                # classMappings {
+                    # # Override the standard default
+                    # 0 = default-class
+                    # 11 = example-class
+                # }
+            # }
+        }
+    }
+}
