@@ -1,0 +1,28 @@
+mod.guide.tours.ThemesModule {
+	title = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.title
+	description = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.description
+	moduleName = web_ThemesMod1
+	iconIdentifier = module-guide-tour-themes-module
+    steps {
+        10 {
+            selector = #typo3-docheader
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.description
+            placement = bottom
+            showArrow = false
+        }
+        20 {
+            selector = #categoriesFilterSearchField
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.10.title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.10.content
+            placement = top
+        }
+        30 {
+            selector = .editToggle:first
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.20.title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Language/BootstrapTourThemeModule.xlf:tx_guide_tour.20.content
+            placement = top
+        }
+    }
+}
+
