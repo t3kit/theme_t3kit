@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-09-23T15:21:54Z" product-name="guide">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_guide_tour.title">
+				<source>Theme Module</source>
+			</trans-unit>
+			<trans-unit id="tx_guide_tour.description">
+				<source>Theme Description</source>
+			</trans-unit>
+
+			<trans-unit id="tx_guide_tour.10.title">
+				<source>Theme constant filter</source>
+			</trans-unit>
+			<trans-unit id="tx_guide_tour.10.content">
+				<source><![CDATA[Search]]></source>
+			</trans-unit>
+
+			<trans-unit id="tx_guide_tour.20.title">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="tx_guide_tour.20.content">
+				<source><![CDATA[Change colors]]></source>
+			</trans-unit>
+
+
+		</body>
+	</file>
+</xliff>
