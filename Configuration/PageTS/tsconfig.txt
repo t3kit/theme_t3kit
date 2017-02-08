@@ -5,8 +5,6 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements" extensions="pagets">
 # Add our Grid elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/GridElements/PageTS" extensions="pagets">
-# Add tour guide
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/PageTS/Library/Tours" extensions="pagets">
 
 # Just delete the backendlayouts which arn't required
 #
