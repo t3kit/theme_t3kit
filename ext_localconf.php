@@ -7,3 +7,7 @@ if (!defined('TYPO3_MODE')) {
 	setup.default.rteCleanPasteBehaviour=pasteStructure
 ');
 
+if (TYPO3_MODE === 'BE') {
+	// Add page typoscript tours
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/Guides/tsconfig.txt">');
+}
