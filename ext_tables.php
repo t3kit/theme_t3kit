@@ -76,6 +76,14 @@ if (TYPO3_MODE === 'BE') {
         ['source' => $contentElementIconFilePrefix . 'contacts.svg']
     );
 
+	$iconRegistry->registerIcon(
+		'guide-tour-themes-module',
+		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+		array(
+			'source' => '/typo3conf/ext/themes/ext_icon.svg'
+		)
+	);
+
     // Add context sensitive help (csh) for the haiku table
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
         'tt_content',

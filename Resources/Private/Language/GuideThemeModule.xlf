@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-08T19:21:54Z" product-name="theme_t3kit">
+		<header/>
+		<body>
+			<trans-unit id="guide_thememodule_title">
+				<source>Theme Module</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_description">
+				<source>Theme Description</source>
+			</trans-unit>
+
+			<trans-unit id="guide_thememodule_10_title">
+				<source>Theme constant filter</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_10_content">
+				<source><![CDATA[Search]]></source>
+			</trans-unit>
+
+			<trans-unit id="guide_thememodule_20_title">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_20_content">
+				<source><![CDATA[Change colors]]></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
