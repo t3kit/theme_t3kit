@@ -211,19 +211,19 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contacts'] = 'content-elements-contacts';
 
-    // "frameAnimated"
+    // "Hero Image"
    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
        'tt_content',
        'CType',
        [
-           $contentElementLanguageFilePrefix . 'frameAnimated.title',
-           'frameAnimated',
-           'content-elements-frameAnimated'
+           $contentElementLanguageFilePrefix . 'heroImage.title',
+           'heroImage',
+           'content-elements-heroImage'
        ],
        'copyrightText',
        'after'
    );
-   $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['frameAnimated'] = 'content-elements-frameAnimated';
+   $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['heroImage'] = 'content-elements-heroImage';
 
 
 
@@ -541,13 +541,13 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
         '
     ];
 
-    // "frameAnimated"
-    $GLOBALS['TCA']['tt_content']['types']['frameAnimated'] = [
+    // "Hero Image"
+    $GLOBALS['TCA']['tt_content']['types']['heroImage'] = [
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $cmsLanguageFilePrefix . 'header_formlabel,
-                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'frameAnimated.subheader,
-                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'frameAnimated.linkText,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'heroImage.subheader,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'heroImage.linkText,
                 --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
                 --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
@@ -562,7 +562,7 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
         '
     ];
 
-    $GLOBALS['TCA']['tt_content']['types']['frameAnimated']['columnsOverrides']['bodytext']['config']['type'] = 'input';
+    $GLOBALS['TCA']['tt_content']['types']['heroImage']['columnsOverrides']['bodytext']['config']['type'] = 'input';
 
 
     //
@@ -589,8 +589,8 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
     // "contentElementSlider"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_slider.xml';
 
-    // "frameAnimated"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,frameAnimated'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_frameAnimated.xml';
+    // "Hero Image"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,heroImage'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_heroImage.xml';
 
     // Add additional fields for tt_content
     $additionalColumns = [

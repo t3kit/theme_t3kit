@@ -238,49 +238,49 @@
                 <source>All items are expanded at load.</source>
             </trans-unit>
 
-            <trans-unit id="frameAnimated.title">
-                <source>Animated Frame</source>
+            <trans-unit id="heroImage.title">
+                <source>Hero Image</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.description">
-                <source>Animated Frame Description</source>
+            <trans-unit id="heroImage.description">
+                <source>Image, header, subheader, text and link. Will render only if image added</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.subheader">
+            <trans-unit id="heroImage.subheader">
                 <source>Sub Header</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.linkText">
+            <trans-unit id="heroImage.linkText">
                 <source>Link Text</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.elementText">
+            <trans-unit id="heroImage.flexform.elementText">
                 <source>Text</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.elementHeight">
+            <trans-unit id="heroImage.flexform.elementHeight">
                 <source>Set height of element</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.contentPosition">
+            <trans-unit id="heroImage.flexform.contentPosition">
                 <source>Set Content position</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.animationStyle">
+            <trans-unit id="heroImage.flexform.animationStyle">
                 <source>Set Animation Style</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.contentPosition_left">
+            <trans-unit id="heroImage.flexform.contentPosition_left">
                 <source>Left align</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.contentPosition_center">
+            <trans-unit id="heroImage.flexform.contentPosition_center">
                 <source>Center align</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.contentPosition_right">
+            <trans-unit id="heroImage.flexform.contentPosition_right">
                 <source>Right align</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.animationStyle_disable">
+            <trans-unit id="heroImage.flexform.animationStyle_disable">
                 <source>Disable</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.animationStyle_1">
+            <trans-unit id="heroImage.flexform.animationStyle_1">
                 <source>Animation style 1</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.animationStyle_2">
+            <trans-unit id="heroImage.flexform.animationStyle_2">
                 <source>Animation style 2</source>
             </trans-unit>
-            <trans-unit id="frameAnimated.flexform.animationStyle_3">
+            <trans-unit id="heroImage.flexform.animationStyle_3">
                 <source>Animation style 3</source>
             </trans-unit>
 

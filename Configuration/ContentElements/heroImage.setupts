@@ -1,7 +1,7 @@
 tt_content {
-    frameAnimated =< lib.fluidContent
-    frameAnimated {
-        templateName = FrameAnimated
+    heroImage =< lib.fluidContent
+    heroImage {
+        templateName = HeroImage
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -18,18 +18,9 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
-            # "inherit" from lib.fluidContent
-            365 < lib.fluidContent.dataProcessing.365
-            1910 < lib.fluidContent.dataProcessing.1910
-
-            # extend class mapping only for this element
-            # 1910 {
-                # classMappings {
-                    # # Override the standard default
-                    # 0 = default-class
-                    # 11 = example-class
-                # }
-            # }
+        }
+        settings {
+            maxWidth = 1920
         }
     }
 }

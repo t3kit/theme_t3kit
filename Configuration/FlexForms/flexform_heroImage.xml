@@ -14,7 +14,7 @@
 
                     <elementText>
                         <TCEforms>
-                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.elementText</label>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.elementText</label>
                             <config>
                                 <type>text</type>
                             </config>
@@ -23,7 +23,7 @@
 
                     <elementHeight>
                         <TCEforms>
-                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.elementHeight</label>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.elementHeight</label>
                             <config>
                                 <type>input</type>
                                 <rows>1</rows>
@@ -43,7 +43,7 @@
 
                     <contentPosition>
                         <TCEforms>
-                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.contentPosition</label>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition</label>
                             <config>
                                 <type>select</type>
                                 <items>
@@ -55,7 +55,7 @@
 
                     <animationStyle>
                         <TCEforms>
-                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:frameAnimated.flexform.animationStyle</label>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle</label>
                             <config>
                                 <type>select</type>
                                 <items>
