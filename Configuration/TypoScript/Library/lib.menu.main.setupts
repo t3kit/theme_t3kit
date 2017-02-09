@@ -66,7 +66,7 @@ lib.menu.main {
     }
     2 {
         expAll = 1
-        wrap = <div class="main-navigation__sub-item-list"><div class="container"><div class="row"><div class="col-md-3"> <ul class="main-navigation__sub-item-column-list "> | </ul>
+        wrap = <div class="main-navigation__sub-item-list"><div class="container"><div class="row"><div class="col-md-3"><ul class="main-navigation__sub-item-column-list ">|</ul></div></div></div></div>
         SPC = 1
         SPC {
             doNotShowLink = 1
