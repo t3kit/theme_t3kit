@@ -1,5 +1,5 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
-<div class="news-list-view {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
+<div class="news-list-view news-carousel {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
 	<div class="swiper-container news-carousel__container js__news-carousel">
 	<!-- Additional required wrapper -->
 		<div class="swiper-wrapper news-carousel__wrapper">
@@ -72,10 +72,10 @@
 					<div class="teaser-text">
 						<f:if condition="{newsItem.teaser}">
 							<f:then>
-								<span itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.newsCarousel.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+								<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.newsCarousel.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
 							</f:then>
 							<f:else>
-								<span itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.newsCarousel.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</span>
+								<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.newsCarousel.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
 							</f:else>
 						</f:if>
 					</div>

@@ -1,6 +1,6 @@
 # Name and description of the theme (required)
 title            : Base Theme fot t3kit project
-version          : 1.7.0
+version          : 1.9.0
 description      :  |
   A t3kit theme template -
   This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings. http://t3kit.github.io/theme_t3kit_customizer

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+		<meta type="array">
+				<langDisable>1</langDisable>
+		</meta>
+	<sheets>
+		<columns>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion.flexform.title</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<multiselect>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion.flexform.multiselect</label>
+							<config>
+								<type>check</type>
+								<default></default>
+							</config>
+						</TCEforms>
+					</multiselect>
+					<accordionMode>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion.flexform.accordionMode</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion.flexform.accordionMode_firstChildOpen</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion.flexform.accordionMode_allOpen</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:simple_accordion.flexform.accordionMode_allClosed</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</accordionMode>
+				</el>
+			</ROOT>
+		</columns>
+			</sheets>
+</T3DataStructure>

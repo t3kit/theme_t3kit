@@ -257,6 +257,7 @@ call_user_func(function() {
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
@@ -268,6 +269,16 @@ call_user_func(function() {
             --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
         '
     ];
+
+// Override foreign_types for contentElementSlider so we can add a custom palette
+// columnsOverrides doens't seem to be correct if irre children are collapsed when tt_content record is opened
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['appearance']['collapseAll'] = 0;
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'] = '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;sliderPalette, --palette--;;imageoverlayPalette, --palette--;;filePalette';
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['2']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['3']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['4']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['5']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
 
     // "contentElementBootstrapSlider"
     $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider'] = [
@@ -537,6 +548,9 @@ call_user_func(function() {
 
     // "contentElementBootstrapSlider"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_bootstrapSlider.xml';
+
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_slider.xml';
 
     // Add additional fields for tt_content
     $additionalColumns = [

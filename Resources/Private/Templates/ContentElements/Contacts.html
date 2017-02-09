@@ -6,8 +6,8 @@
 <!-- theme_t3kit: Templates/ContentElements/Contacts.html [begin] -->
 
 	<ul class="nav contact-links" >
-		<li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" /></span> <a href="tel:{theme:constant(constant: 'themes.configuration.contacts.phone')}">tel:{theme:constant(constant: 'themes.configuration.contacts.phone')}</a></p></li>
-		<li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" /></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.contacts.email')}" /></p></li>
+		<li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" extensionName="themes"/></span> <a href="tel:{theme:constant(constant: 'themes.configuration.contacts.phone')}"><f:translate key="callUsTel_label" />{theme:constant(constant: 'themes.configuration.contacts.phone')}</a></p></li>
+		<li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" extensionName="themes"/></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.contacts.email')}" /></p></li>
 	</ul>
 
 <!-- theme_t3kit: Templates/ContentElements/Contacts.html [end] -->

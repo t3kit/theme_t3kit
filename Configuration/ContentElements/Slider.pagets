@@ -11,6 +11,26 @@ mod.wizards.newContentElement.wizardItems.contentElements {
     }
     show := addToList(contentElementSlider)
 }
+TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.autoplay {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_None
+        1000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_One
+        2000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Two
+        3000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Three
+        5000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Five
+        7000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Seven
+        10000 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay_Ten
+    }
+}
+
+TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.captionAlign {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.leftAlign
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.centerAlign
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.rightAlign
+    }
+}
+
 
 # # Use layout field to customize Layout select-box on contentElementSlider
 # # extend layout select-box only for this element
@@ -24,5 +44,15 @@ mod.wizards.newContentElement.wizardItems.contentElements {
 #                 11 = Example layout only for Slider
 #             }
 #         }
+#     }
+# }
+
+
+# # This is for adding options in the selectbox in each slide.
+# TCEFORM.sys_file_reference.tx_themet3kit_slide_appearance {
+#      addItems {
+#          --div-- = Slider slide appearances:
+#          10 = Light text and right aligned text area
+#          20 = Dark text and centered aligned text area
 #     }
 # }

@@ -43,8 +43,7 @@
 	</f:section>
 
 	<f:section name="Image">
-		<f:image src="{image.uid}" treatIdAsReference="1"/>
-
+		<f:image src="{image.uid}" height="{data.imageheight}c" width="{data.imagewidth}c" treatIdAsReference="1"/>
 		<f:if condition="{image.referenceProperties.title}">
 			<f:then>
 				<div class="carousel-caption">
