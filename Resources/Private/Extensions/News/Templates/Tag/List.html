@@ -21,7 +21,7 @@
                                 </f:comment>
                                 <n:format.nothing>
                                     <n:titleTag>
-                                        <n:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - {tag.title}</n:format.htmlentitiesDecode>
+                                        <f:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - {tag.title}</f:format.htmlentitiesDecode>
                                     </n:titleTag>
                                 </n:format.nothing>
                                 <f:link.page title="{tag.title}" class="active" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
