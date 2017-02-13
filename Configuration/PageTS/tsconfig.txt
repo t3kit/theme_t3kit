@@ -51,3 +51,12 @@ TCEMAIN.permissions {
 	user = show,editcontent,new,edit,delete
 	group = show,editcontent,new,edit,delete
 }
+
+# hide unneeded button content element from Themes ext
+TCEFORM.tt_content.CType.removeItems = themes_buttoncontent_pi1
+
+# hide unused fields in an appearance tab (added in Themes ext)
+TCEFORM.tt_content.tx_themes_variants.disabled = 1
+TCEFORM.tt_content.tx_themes_responsive.disabled = 1
+TCEFORM.tt_content.tx_themes_icon.disabled = 1
+TCEFORM.tt_content.tx_themes_behaviour.disabled = 1
