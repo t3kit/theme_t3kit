@@ -1,0 +1,11 @@
+mod.guide.tours.FunctionModule {
+    steps {
+        70 {
+            next {
+                tour = ThemesModule
+                step = 0
+            }
+        }
+
+    }
+}

@@ -1,2 +1,0 @@
-# Add our guides tour
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/Guides/PageTS" extensions="pagets">

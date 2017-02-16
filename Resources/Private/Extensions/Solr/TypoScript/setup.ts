@@ -124,3 +124,12 @@ plugin.tx_solr {
     lib.searchbox < plugin.tx_solr_PiSearch_Search
 
 [global]
+
+## Docker configuration
+[applicationContext = Development/Docker, Production/Docker]
+    plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.default.isoCodeShort}/
+[global]
+
+[globalVar = GP:L > 0] && [applicationContext = Development/Docker, Production/Docker]
+    plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCodeShort}/
+[global]

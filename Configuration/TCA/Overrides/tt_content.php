@@ -501,6 +501,7 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -591,6 +592,9 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
 
     // "Hero Image"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,heroImage'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_heroImage.xml';
+
+    // "contentElementSocialIcons"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,socialIcons'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_socialIcons.xml';
 
     // Add additional fields for tt_content
     $additionalColumns = [

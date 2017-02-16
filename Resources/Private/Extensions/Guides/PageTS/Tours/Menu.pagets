@@ -1,0 +1,17 @@
+mod.guide.tours.Menu {
+    steps {
+        40 {
+            selector = #web_ThemesMod1
+            title = Theme Module
+            content = This is the Theme module.
+            placement = right
+            shown {
+                renameNextButton = Go to Theme module
+            }
+            next {
+                tour = ThemesModule
+                step = 0
+            }
+        }
+    }
+}
