@@ -211,6 +211,20 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contacts'] = 'content-elements-contacts';
 
+    // "Hero Image"
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+       'tt_content',
+       'CType',
+       [
+           $contentElementLanguageFilePrefix . 'heroImage.title',
+           'heroImage',
+           'content-elements-heroImage'
+       ],
+       'copyrightText',
+       'after'
+   );
+   $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['heroImage'] = 'content-elements-heroImage';
+
 
 
 
@@ -528,6 +542,29 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
         '
     ];
 
+    // "Hero Image"
+    $GLOBALS['TCA']['tt_content']['types']['heroImage'] = [
+        'showitem' => '
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'heroImage.subheader,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'heroImage.linkText,
+                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+    $GLOBALS['TCA']['tt_content']['types']['heroImage']['columnsOverrides']['bodytext']['config']['type'] = 'input';
+
 
     //
     // Flexforms
@@ -552,6 +589,9 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
 
     // "contentElementSlider"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_slider.xml';
+
+    // "Hero Image"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,heroImage'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_heroImage.xml';
 
     // "contentElementSocialIcons"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,socialIcons'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_socialIcons.xml';

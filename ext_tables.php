@@ -59,6 +59,12 @@ if (TYPO3_MODE === 'BE') {
         ['source' => $contentElementIconFilePrefix . 'responsiveVideo.svg']
     );
 
+    $iconRegistry->registerIcon(
+        'content-elements-heroImage',
+        \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        ['source' => $contentElementIconFilePrefix . 'fullWidthImage.svg']
+    );
+
 
     $iconRegistry->registerIcon(
         'content-elements-socialIcons',
