@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-08T19:21:54Z" product-name="theme_t3kit">
+		<header/>
+		<body>
+			<trans-unit id="guide_thememodule_title">
+				<source>Theme Module</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_description">
+				<source>Theme Description</source>
+			</trans-unit>
+
+			<trans-unit id="guide_thememodule_20_title">
+				<source>Choose another Theme</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_20_content">
+				<source><![CDATA[Selectbox to switch another Theme]]></source>
+			</trans-unit>
+
+			<trans-unit id="guide_thememodule_30_title">
+				<source>Theme constant filter</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_30_content">
+				<source><![CDATA[Constant Search]]></source>
+			</trans-unit>
+
+			<trans-unit id="guide_thememodule_40_title">
+				<source>Types of constants</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_40_content">
+				<source><![CDATA[Display different types of constants. From simple ones to special development constants]]></source>
+			</trans-unit>
+
+			<trans-unit id="guide_thememodule_50_title">
+				<source>Constants</source>
+			</trans-unit>
+			<trans-unit id="guide_thememodule_50_content">
+				<source><![CDATA[Change colors and other configuration constants]]></source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,39 @@
+mod.guide.tours.ThemesModule {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_title
+    description = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_description
+    moduleName = web_ThemesMod1
+    iconIdentifier = guide-tour-themes-module
+    steps {
+        10 {
+            selector = #typo3-docheader
+            title = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_description
+            placement = right
+            showArrow = false
+        }
+        20 {
+            selector = .docheader-funcmenu
+            title = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_20_title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_20_content
+            placement = bottom
+        }
+        30 {
+            selector = #categoriesFilterSearchField
+            title = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_30_title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_30_content
+            placement = top
+        }
+        40 {
+            selector = #categoriesFilterShowBasic
+            title = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_40_title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_40_content
+            placement = top
+        }
+        50 {
+            selector = .editToggle:first
+            title = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_50_title
+            content = LLL:EXT:theme_t3kit/Resources/Private/Extensions/Guides/Language/GuideThemeModule.xlf:guide_thememodule_50_content
+            placement = top
+        }
+    }
+}
