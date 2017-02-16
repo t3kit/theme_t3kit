@@ -2,6 +2,11 @@
 defined('TYPO3_MODE') or die();
 
 call_user_func(function() {
+    if (!isset($GLOBALS['TCA']['tt_content']['palettes']['frames'])) {
+        $GLOBALS['TCA']['tt_content']['palettes']['frames'] = [
+            'showitem' => 'layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel'
+        ];
+    }
 
     $contentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
