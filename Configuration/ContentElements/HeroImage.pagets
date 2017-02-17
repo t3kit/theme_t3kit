@@ -12,6 +12,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
     show := addToList(heroImage)
 }
 
+
 TCEFORM.tt_content.pi_flexform.heroImage.sDEF.contentPosition {
     addItems {
         0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_left
