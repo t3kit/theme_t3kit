@@ -1,4 +1,22 @@
 
+#### v1.10.0 `February 20, 2017`
+- **[UPDATE]** felayout_t3kit, add styles for new content element Hero Image ([f474a88](https://github.com/t3kit/theme_t3kit/commit/f474a88))
+- **[TASK]** remuve media from heroImage element ([4d5333b](https://github.com/t3kit/theme_t3kit/commit/4d5333b))
+- **[FEATURE]** add new content element Hero Image (#132) ([1867f5a](https://github.com/t3kit/theme_t3kit/commit/1867f5a))
+- **[TASK]** improve guide ThemeModule, add more step, change pageTS folder ([0936b61](https://github.com/t3kit/theme_t3kit/commit/0936b61))
+- **[FIX]** solr docker configuration (Podio bug_36) (#129) ([e648c8e](https://github.com/t3kit/theme_t3kit/commit/e648c8e))
+- **[TASK]** cleanup news templates (News ext v5.3.2) ([1e2cc3b](https://github.com/t3kit/theme_t3kit/commit/1e2cc3b))
+- **[FIX]** use fluid htmlentitiesDecode in News (#133) ([04919f5](https://github.com/t3kit/theme_t3kit/commit/04919f5))
+- **[UPDATE]** php dependency to allow PHP 7.1 ([c3c1628](https://github.com/t3kit/theme_t3kit/commit/c3c1628))
+- **[TASK]** hide unneeded config from Themes ext ([6dcced2](https://github.com/t3kit/theme_t3kit/commit/6dcced2))
+- **[UPDATE]** required dependencies config ([70ab20a](https://github.com/t3kit/theme_t3kit/commit/70ab20a))
+- **[FEATURE]** Social Icons Urls editable on different languages (Podio feature_40) (#119) ([0cb8275](https://github.com/t3kit/theme_t3kit/commit/0cb8275))
+- **[BUGFIX]** added missing closing tags for dropdown menu (#125) ([d345c53](https://github.com/t3kit/theme_t3kit/commit/d345c53))
+- **[FEATURE]** Create and fix TypoScript for use guide ext (#130) ([5d1690c](https://github.com/t3kit/theme_t3kit/commit/5d1690c))
+- **[FEATURE]** add news teaser to solr search (#117) ([18af03a](https://github.com/t3kit/theme_t3kit/commit/18af03a))
+
+***
+
 #### v1.9.0 `January 24, 2017`
 - **[UPDATE]** felayout_t3kit 1.7.0 ([f7f6f6b](https://github.com/t3kit/theme_t3kit/commit/f7f6f6b))
 - **[UPDATE]** felayout_t3kit, add 6-7 levels for submenu and fix news pagination and tags ([fc44101](https://github.com/t3kit/theme_t3kit/commit/fc44101))
