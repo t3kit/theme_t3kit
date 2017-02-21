@@ -1,4 +1,9 @@
 
+#### v1.10.1 `February 21, 2017`
+- **[BUGFIX]** set correct dependency range for t3kit_extension_tools ([d2b9125](https://github.com/t3kit/theme_t3kit/commit/d2b9125))
+
+***
+
 #### v1.10.0 `February 20, 2017`
 - **[UPDATE]** felayout_t3kit, add styles for new content element Hero Image ([f474a88](https://github.com/t3kit/theme_t3kit/commit/f474a88))
 - **[TASK]** remuve media from heroImage element ([4d5333b](https://github.com/t3kit/theme_t3kit/commit/4d5333b))
