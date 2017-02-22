@@ -1,0 +1,11 @@
+# Replace space character in telephone number of href to have valid HTML.
+lib.contacts.phone = TEXT
+lib.contacts.phone {
+  value = {$themes.configuration.contacts.phone}
+  stdWrap.replacement {
+    10 {
+      search.char = 32
+      replace = -
+    }
+  }
+}
