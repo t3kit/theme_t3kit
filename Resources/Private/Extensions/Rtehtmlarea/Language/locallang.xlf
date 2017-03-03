@@ -14,7 +14,54 @@
 			<trans-unit id="rte.white-text-color_label" xml:space="preserve">
 				<source>White text color</source>
 			</trans-unit>
-
+			<trans-unit id="rte.text-xs-left_label" xml:space="preserve">
+				<source>Mobile align left</source>
+			</trans-unit>
+			<trans-unit id="rte.text-xs-right_label" xml:space="preserve">
+				<source>Mobile align right</source>
+			</trans-unit>
+			<trans-unit id="rte.text-xs-center_label" xml:space="preserve">
+				<source>Mobile align center</source>
+			</trans-unit>
+			<trans-unit id="rte.text-xs-justify_label" xml:space="preserve">
+				<source>Mobile align justify</source>
+			</trans-unit>
+			<trans-unit id="rte.text-sm-left_label" xml:space="preserve">
+				<source>Tablet align left</source>
+			</trans-unit>
+			<trans-unit id="rte.text-sm-right_label" xml:space="preserve">
+				<source>Tablet align right</source>
+			</trans-unit>
+			<trans-unit id="rte.text-sm-center_label" xml:space="preserve">
+				<source>Tablet align center</source>
+			</trans-unit>
+			<trans-unit id="rte.text-sm-justify_label" xml:space="preserve">
+				<source>Tablet align justify</source>
+			</trans-unit>
+			<trans-unit id="rte.text-md-left_label" xml:space="preserve">
+				<source>Desktop align left</source>
+			</trans-unit>
+			<trans-unit id="rte.text-md-right_label" xml:space="preserve">
+				<source>Desktop align right</source>
+			</trans-unit>
+			<trans-unit id="rte.text-md-center_label" xml:space="preserve">
+				<source>Desktop align center</source>
+			</trans-unit>
+			<trans-unit id="rte.text-md-justify_label" xml:space="preserve">
+				<source>Desktop align justify</source>
+			</trans-unit>
+			<trans-unit id="rte.text-lg-left_label" xml:space="preserve">
+				<source>Large devices align left</source>
+			</trans-unit>
+			<trans-unit id="rte.text-lg-right_label" xml:space="preserve">
+				<source>Large devices align right</source>
+			</trans-unit>
+			<trans-unit id="rte.text-lg-center_label" xml:space="preserve">
+				<source>Large devices align center</source>
+			</trans-unit>
+			<trans-unit id="rte.text-lg-justify_label" xml:space="preserve">
+				<source>Large devices align justify</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

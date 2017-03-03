@@ -11,6 +11,11 @@
                 # excludeFromConcatenation =
                 # disableCompression =
             }
+            responsiveAlign = EXT:theme_t3kit/Resources/Public/Extensions/Rtehtmlarea/Css/responsive-align.less
+            responsiveAlign {
+                # excludeFromConcatenation =
+                # disableCompression =
+            }
             components = {$themes.configuration.feLayoutPath}/components.css
             components {
                 #excludeFromConcatenation =
