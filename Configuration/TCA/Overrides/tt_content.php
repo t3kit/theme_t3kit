@@ -226,7 +226,9 @@ call_user_func(function() {
    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['heroImage'] = 'content-elements-heroImage';
 
 
-
+    // Fix subheader and header_link exclude
+    $GLOBALS['TCA']['tt_content']['columns']['subheader']['exclude'] = 0;
+    $GLOBALS['TCA']['tt_content']['columns']['header_link']['exclude'] = 0;
 
 
 
