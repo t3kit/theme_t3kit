@@ -18,6 +18,11 @@ TCEFORM.tt_content.pi_flexform.heroImage.sDEF.contentPosition {
         0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_left
         1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_center
         2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_right
+
+        3 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_leftBottom
+        4 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_centerBottom
+        5 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_rightBottom
+
     }
 }
 

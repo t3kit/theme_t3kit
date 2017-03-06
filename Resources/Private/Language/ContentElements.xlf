@@ -263,13 +263,22 @@
                 <source>Set Animation Style</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.contentPosition_left">
-                <source>Left align</source>
+                <source>Top - Left align</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.contentPosition_center">
-                <source>Center align</source>
+                <source>Top - Center align</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.contentPosition_right">
-                <source>Right align</source>
+                <source>Top - Right align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.contentPosition_leftBottom">
+                <source>Bottom - Left align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.contentPosition_centerBottom">
+                <source>Bottom - Center align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.contentPosition_rightBottom">
+                <source>Bottom - Right align</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle_disable">
                 <source>Disable</source>
