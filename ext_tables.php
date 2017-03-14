@@ -117,4 +117,8 @@ if (TYPO3_MODE === 'BE') {
         require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php');
     }
 
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Backend\Template\Components\Buttons\SplitButton::class] = [
+        'className' => \T3kit\themeT3kit\Xclass\DefaultSplitButton::class
+    ];
+
 }
