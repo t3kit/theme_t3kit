@@ -430,6 +430,36 @@
             <trans-unit id="socialIcons.flexform.youtubeLink">
                 <source>Youtube: Pagelink</source>
             </trans-unit>
+
+
+
+            <trans-unit id="button.title">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="button.description">
+                <source>A button with twbs style</source>
+            </trans-unit>
+            <trans-unit id="button.header_label">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="button.buttonSize">
+                <source>Button Size</source>
+            </trans-unit>
+            <trans-unit id="button.buttonSize_default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="button.buttonSize_large">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="button.buttonSize_small">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="button.buttonSize_extraSmall">
+                <source>Extra small</source>
+            </trans-unit>
+            <trans-unit id="button.blockLevel">
+                <source>Block level button</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

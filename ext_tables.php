@@ -19,6 +19,8 @@ $boot = function ($_EXTKEY) {
             'content-elements-socialIcons' => 'socialIcons.svg',
             'content-elements-copyrightText' => 'copyrightText.svg',
             'content-elements-contacts' => 'contacts.svg',
+            'content-elements-button' => 'customElement.svg',
+            'content-elements-heroImage' => 'slider.svg',
             'content-center-vertical-text-img-left' => 'content-center-vertical-text-img-left.svg',
             'content-center-vertical-text-img-right' => 'content-center-vertical-text-img-right.svg',
         ];

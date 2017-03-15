@@ -224,15 +224,26 @@ call_user_func(function() {
            'heroImage',
            'content-elements-heroImage'
        ],
-       'copyrightText',
+       'contacts',
        'after'
    );
    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['heroImage'] = 'content-elements-heroImage';
 
 
 
-
-
+    // "button"
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'button.title',
+            'button',
+            'content-elements-button'
+        ],
+        'heroImage',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['button'] = 'content-elements-button';
 
 
     // The "divider" these content elements
@@ -570,6 +581,26 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
     $GLOBALS['TCA']['tt_content']['types']['heroImage']['columnsOverrides']['bodytext']['config']['type'] = 'input';
 
 
+    // "button"
+    $GLOBALS['TCA']['tt_content']['types']['button'] = [
+        'showitem' => '
+            --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+
+            header;' . $contentElementLanguageFilePrefix . 'button.header_label,
+
+            --linebreak--, header_link;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_link_formlabel,
+            --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
+            --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
+            hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
+            --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
+        '
+    ];
+
+
     //
     // Flexforms
     //
@@ -599,6 +630,10 @@ $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides
 
     // "contentElementSocialIcons"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,socialIcons'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_socialIcons.xml';
+
+    // "button"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,button'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_button.xml';
+
 
     // Add additional fields for tt_content
     $additionalColumns = [
