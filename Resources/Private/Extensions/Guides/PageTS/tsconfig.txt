@@ -1,1 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Resources/Private/Extensions/Guides/PageTS/Tours" extensions="pagets">
