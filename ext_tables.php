@@ -3,8 +3,11 @@ defined('TYPO3_MODE') or die();
 
 $boot = function ($_EXTKEY) {
     if (TYPO3_MODE === 'BE') {
-        $contentElementIconFilePrefix = 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/ContentElements/';
 
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+        // Content Elements Icons
+        $contentElementIconFilePrefix = 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/ContentElements/';
         $contentElementIcons = [
             'content-elements-accordion' => 'accordion.svg',
             'content-elements-contentElementSlider' => 'slider.svg',
@@ -20,14 +23,10 @@ $boot = function ($_EXTKEY) {
             'content-elements-copyrightText' => 'copyrightText.svg',
             'content-elements-contacts' => 'contacts.svg',
             'content-elements-button' => 'customElement.svg',
-            'content-elements-heroImage' => 'slider.svg',
+            'content-elements-heroImage' => 'fullWidthImage.svg',
             'content-center-vertical-text-img-left' => 'content-center-vertical-text-img-left.svg',
             'content-center-vertical-text-img-right' => 'content-center-vertical-text-img-right.svg',
         ];
-
-        /** @var \TYPO3\CMS\Core\Imaging\IconRegistry $iconRegistry */
-        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-
         foreach ($contentElementIcons as $identifier => $contentElementIcon) {
             $iconRegistry->registerIcon(
                 $identifier,
@@ -36,18 +35,9 @@ $boot = function ($_EXTKEY) {
             );
         }
 
-	$iconRegistry->registerIcon(
-		'guide-tour-themes-module',
-		\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-		array(
-			'source' => '/typo3conf/ext/themes/ext_icon.svg'
-		)
-	);
-
 
         // Grid element icons
         $gridElementsPath = 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/GridElements/';
-
         $gridElementsIcons = [
             'grid-elements-2ColumnGrid' => '2-column-grid.svg',
             'grid-elements-3ColumnGrid' => '3-column-grid.svg',
@@ -62,7 +52,6 @@ $boot = function ($_EXTKEY) {
             'grid-elements-tabGroup' => 'tabGroup.svg',
             'grid-elements-tab' => 'tab.svg'
         ];
-
         foreach ($gridElementsIcons as $identifier => $gridElementsIcon) {
             $iconRegistry->registerIcon(
                 $identifier,
@@ -71,34 +60,23 @@ $boot = function ($_EXTKEY) {
             );
         }
 
+        $iconRegistry->registerIcon(
+            'guide-tour-themes-module',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            array(
+                'source' => '/typo3conf/ext/themes/ext_icon.svg'
+            )
+        );
+
         // Add context sensitive help (csh) for the haiku table
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
             'tt_content',
             'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh_tt_content.xml'
         );
 
-        /***************
-         * Custom content elements
-         */
-        # PageTS custom content elements
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-            $_EXTKEY,
-            'Configuration/PageTS/custom_content_elements.txt',
-            'EXT:theme_t3kit :: Enable Custom Content Elemets (fileadmin/templates/...)'
-        );
-        # Static files for custom content elements
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-            $_EXTKEY,
-            'Configuration/TypoScript/CustomContentElements/',
-            'EXT:theme_t3kit :: Enable Custom Content Elemets (fileadmin/templates/...)'
-        );
-
-        // Include ext_tables from 'custom_content_elements'
-        if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php')) {
-            require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/Backend/ext_tables.php');
-        }
-
     }
 };
+
 $boot($_EXTKEY);
+
 unset($boot);
