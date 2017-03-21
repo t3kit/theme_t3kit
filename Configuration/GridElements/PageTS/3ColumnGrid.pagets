@@ -1,7 +1,7 @@
 tx_gridelements.setup.3ColumnGrid {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:three_column_grid
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:three_column_grid_description
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/3-column-grid.svg
+    iconIdentifier = grid-elements-3ColumnGrid
     config {
         colCount = 3
         rowCount = 1

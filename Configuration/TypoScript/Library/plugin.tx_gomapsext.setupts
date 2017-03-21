@@ -1,0 +1,5 @@
+plugin.tx_gomapsext {
+    settings {
+        googleMapsLibrary = {$themes.configuration.maps.map}
+    }
+}

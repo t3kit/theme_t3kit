@@ -1,53 +1,54 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
 
-    <f:layout name="General" />
-    <!--
-        =====================
-            Templates/News/DateMenu.html
-    -->
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/DateMenu.html
+-->
 
-    <f:section name="content">
-        <div class="news-menu-view">
-            <ul>
-                <f:for each="{data.single}" key="year" as="months">
-                    <li>
-                        {year}
-                        <ul>
-                            <f:for each="{months}" key="month" as="count">
-                                <f:if condition="{0:year, 1:month} == {0:overwriteDemand.year, 1:overwriteDemand.month}">
-                                    <f:then>
-                                        <f:comment>
-                                            Set title tag for date menu active item
-                                        </f:comment>
-                                        <n:format.nothing>
-                                            <n:titleTag>
-                                                <n:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - <f:translate key="month.{month}" /> {year}</n:format.htmlentitiesDecode>
-                                            </n:titleTag>
-                                        </n:format.nothing>
+<f:section name="content">
+	<div class="news-menu-view">
+		<ul>
+			<f:for each="{data.single}" key="year" as="months">
+				<li>
+					{year}
+					<ul>
+						<f:for each="{months}" key="month" as="count">
+							<f:if condition="{0:year, 1:month} == {0:overwriteDemand.year, 1:overwriteDemand.month}">
+								<f:then>
+									<f:comment>
+										Set title tag for date menu active item
+									</f:comment>
+									<n:format.nothing>
+										<n:titleTag>
+											<f:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - <f:translate key="month.{month}" /> {year}</f:format.htmlentitiesDecode>
+										</n:titleTag>
+									</n:format.nothing>
 
-                                        <li class="item itemactive">
-                                            <f:render section="datemenuLink" arguments="{listPid: listPid, year: year, month: month, count: count, entry: entry, entries: entries}"/>
-                                        </li>
-                                    </f:then>
-                                    <f:else>
-                                        <li class="item">
-                                            <f:render section="datemenuLink" arguments="{listPid: listPid, year: year, month: month, count: count, entry: entry, entries: entries}"/>
-                                        </li>
-                                    </f:else>
-                                </f:if>
-                            </f:for>
-                        </ul>
-                    </li>
-                </f:for>
-            </ul>
-        </div>
-    </f:section>
+									<li class="item itemactive">
+										<f:render section="datemenuLink" arguments="{listPid: listPid, year: year, month: month, count: count, entry: entry, entries: entries}"/>
+									</li>
+								</f:then>
+								<f:else>
+									<li class="item">
+										<f:render section="datemenuLink" arguments="{listPid: listPid, year: year, month: month, count: count, entry: entry, entries: entries}"/>
+									</li>
+								</f:else>
+							</f:if>
+						</f:for>
+					</ul>
+				</li>
+			</f:for>
+		</ul>
+	</div>
+</f:section>
 
-    <f:section name="datemenuLink">
-        <f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /> {year}</f:link.action>
-        ({count} <f:translate key="{f:if(condition: '{count} == 1', then: 'entry', else: 'entries')}" />)
-    </f:section>
-</div>
+<f:section name="datemenuLink">
+	<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /> {year}</f:link.action>
+	({count} <f:translate key="{f:if(condition: '{count} == 1', then: 'entry', else: 'entries')}" />)
+</f:section>
+
+</html>
 

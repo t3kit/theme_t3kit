@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff version="1.0">
+    <file product-name="theme_t3kit" original="messages" date="2014-04-13T18:20:51Z" datatype="plaintext" source-language="en" target-language="no">
+        <body>
+            <trans-unit id="breadcrumb_label" xml:space="preserve">
+                <source>You are here</source>
+                <target>Du er her</target>
+            </trans-unit>
+            <trans-unit id="languageMenu_label" xml:space="preserve">
+                <source>Language:</source>
+                <target>Språk:</target>
+            </trans-unit>
+            <trans-unit id="imprint_label" xml:space="preserve">
+                <source>Imprint</source>
+                <target>Om nettstedet</target>
+            </trans-unit>
+            <trans-unit id="news.date.text" xml:space="preserve">
+                <source>Published: </source>
+                <target>Publisert:</target>
+            </trans-unit>
+            <trans-unit id="news-single-image-header" xml:space="preserve">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="news-single-video-header" xml:space="preserve">
+                <source>Video</source>
+                <target>Video</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.container" xml:space="preserve">
+                <source>Container</source>
+                <target>Beholder</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.container_fluid" xml:space="preserve">
+                <source>Container (fluid)</source>
+                <target>Beholder (flytende)</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.fade_in" xml:space="preserve">
+                <source>Fade in</source>
+                <target>Fade inn</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.screenreader_only" xml:space="preserve">
+                <source>Screenreader only</source>
+                <target>Kun skjermleser</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.screenreader_only_focusable" xml:space="preserve">
+                <source>Screenreader only (focusable)</source>
+                <target>Kun skjermleser (fokuserbart)</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.print_hidden" xml:space="preserve">
+                <source>Hidden for printing</source>
+                <target>Skjult for utskrift</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.print_visible_block" xml:space="preserve">
+                <source>Visible for printing (block)</source>
+                <target>Synlig for utskrift (blokk)</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.print_visible_inline" xml:space="preserve">
+                <source>Visible for printing (inline)</source>
+                <target>Synlig for utskrift (inline)</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.print_visible_inline_block" xml:space="preserve">
+                <source>Visible for printing (inline-block)</source>
+                <target>Synlig for utskrift (inline-block)</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.table_responsive" xml:space="preserve">
+                <source>Responsive table</source>
+                <target>Responsiv tabell</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.pricing_table" xml:space="preserve">
+                <source>Pricing table</source>
+                <target>Pristabell</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.navigation_pills" xml:space="preserve">
+                <source>Pills navigation</source>
+                <target>Pillenavigasjon</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.navigation_tabs" xml:space="preserve">
+                <source>Tabs navigation</source>
+                <target>Fanenavigasjon</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.accordion_first_open" xml:space="preserve">
+                <source>Open first accordion item</source>
+                <target>Åpne første trekkspillelement</target>
+            </trans-unit>
+            <trans-unit id="content.variants.panel_primary" xml:space="preserve">
+                <source>Primary Panel</source>
+                <target>Panel (primær)</target>
+            </trans-unit>
+            <trans-unit id="content.variants.panel_success" xml:space="preserve">
+                <source>Success Panel</source>
+                <target>Panel (suksess)</target>
+            </trans-unit>
+            <trans-unit id="content.variants.panel_info" xml:space="preserve">
+                <source>Info Panel</source>
+                <target>Panel (info)</target>
+            </trans-unit>
+            <trans-unit id="content.variants.panel_warning" xml:space="preserve">
+                <source>Warning Panel</source>
+                <target>Panel (advarsel)</target>
+            </trans-unit>
+            <trans-unit id="content.variants.panel_danger" xml:space="preserve">
+                <source>Danger Panel</source>
+                <target>Panel (fare)</target>
+            </trans-unit>
+            <trans-unit id="content.buttons.default" xml:space="preserve">
+                <source>Default Button</source>
+                <target>Knapp (standard)</target>
+            </trans-unit>
+            <trans-unit id="content.buttons.primary" xml:space="preserve">
+                <source>Primary Button</source>
+                <target>Knapp (primær)</target>
+            </trans-unit>
+            <trans-unit id="content.buttons.success" xml:space="preserve">
+                <source>Success Button</source>
+                <target>Knapp (suksess)</target>
+            </trans-unit>
+            <trans-unit id="content.buttons.info" xml:space="preserve">
+                <source>Info Button</source>
+                <target>Knapp (info)</target>
+            </trans-unit>
+            <trans-unit id="content.buttons.warning" xml:space="preserve">
+                <source>Warning Button</source>
+                <target>Knapp (advarsel)</target>
+            </trans-unit>
+            <trans-unit id="content.buttons.danger" xml:space="preserve">
+                <source>Danger Button</source>
+                <target>Knapp (fare)</target>
+            </trans-unit>
+            <trans-unit id="content.bullets" xml:space="preserve">
+                <source>Panel with List Group</source>
+                <target>Panel med listegruppe</target>
+            </trans-unit>
+            <trans-unit id="content.pricing_table_linktext" xml:space="preserve">
+                <source>Link text</source>
+                <target>Linktekst</target>
+            </trans-unit>
+            <trans-unit id="content.pricing_table_listheader" xml:space="preserve">
+                <source>List header</source>
+                <target>Listeoverskrift</target>
+            </trans-unit>
+            <trans-unit id="contentElement.slider.linkText" xml:space="preserve">
+                <source>Read more</source>
+                <target>Les mer</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.browsehappy.message" xml:space="preserve">
+                <source>You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. </source>
+                <target>Du bruker en &lt;strong&gt;utdatert&lt;/ strong&gt; nettleser.</target>
+            </trans-unit>
+            <trans-unit id="content.behaviour.browsehappy.link" xml:space="preserve">
+                <source>Please upgrade your browser to improve your experience.</source>
+                <target>Oppgrader nettleseren din for å forbedre opplevelsen.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

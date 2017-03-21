@@ -1,0 +1,31 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        heroImage {
+            title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.title
+            description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.description
+            iconIdentifier = content-elements-heroImage
+            tt_content_defValues {
+                CType = heroImage
+            }
+        }
+    }
+    show := addToList(heroImage)
+}
+
+
+TCEFORM.tt_content.pi_flexform.heroImage.sDEF.contentPosition {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_left
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_center
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition_right
+    }
+}
+
+TCEFORM.tt_content.pi_flexform.heroImage.sDEF.animationStyle {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_disable
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_1
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_2
+        3 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_3
+    }
+}

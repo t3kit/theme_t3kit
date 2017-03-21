@@ -21,12 +21,12 @@
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            customLess = fileadmin/custom/css/custom.less
+            customLess = {$themes.configuration.customPath}/css/custom.less
             customLess {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            customCss = fileadmin/custom/css/custom.css
+            customCss = {$themes.configuration.customPath}/css/custom.css
             customCss {
                 #excludeFromConcatenation =
                 #disableCompression =
@@ -58,7 +58,7 @@
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            customCss = fileadmin/custom/css/custom.css
+            customCss = {$themes.configuration.customPath}/css/custom.css
             customCss {
                 #excludeFromConcatenation =
                 #disableCompression =
