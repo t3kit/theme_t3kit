@@ -1,0 +1,98 @@
+lib.responsiveBackgroundImage = TEXT
+lib.responsiveBackgroundImage {
+    current = 1
+    wrap = responsiveBg|
+
+    append = LOAD_REGISTER
+    append {
+        t3kit_responsiveBackgroundImage = TEXT
+        t3kit_responsiveBackgroundImage {
+            prepend = TEXT
+            prepend {
+                data = register:t3kit_responsiveBackgroundImage
+                wrap = |,
+                required = 1
+            }
+
+            current = 1
+            trim = 1
+        }
+    }
+
+}
+
+page.cssInline {
+    # Debug related output
+    #1451 = TEXT
+    #1451 {
+    #    data = register:t3kit_responsiveBackgroundImage
+    #    wrap = /*|*/
+    #}
+
+    1450 = FILES
+    1450 {
+
+        references.data = register:t3kit_responsiveBackgroundImage
+
+        renderObj = COA
+        renderObj {
+            5 = LOAD_REGISTER
+            5 {
+                mediaImageIndex = TEXT
+                mediaImageIndex {
+                    cObject = TEXT
+                    cObject {
+                        data = register:sectionIteration
+                        intval = 1
+                        outerWrap = |+1
+                    }
+
+                    prioriCalc = 1
+                }
+            }
+
+            10 = TEXT
+            10 {
+                prepend = TEXT
+                prepend {
+                    data = file:current:uid
+                    noTrimWrap = |.responsiveBg| { background-image: url(/|
+                }
+
+                cObject = IMG_RESOURCE
+                cObject {
+                    file {
+                        import.data = file:current:publicUrl
+                        width = 1200
+                    }
+                }
+
+                append = TEXT
+                append {
+                    value = ); }
+                }
+            }
+
+            20 = TEXT
+            20.cObject < .10
+            20 {
+                cObject.cObject.file.width = 970
+                noTrimWrap = | @media screen and (max-width: 970px) { | } |
+            }
+
+            30 = TEXT
+            30.cObject < .10
+            30 {
+                cObject.cObject.file.width = 750
+                noTrimWrap = | @media screen and (max-width: 970px) { | } |
+            }
+
+            40 = TEXT
+            40.cObject < .10
+            40 {
+                cObject.cObject.file.width = 480
+                noTrimWrap = | @media screen and (max-width: 970px) { | } |
+            }
+        }
+    }
+}
