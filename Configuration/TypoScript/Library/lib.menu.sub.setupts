@@ -146,3 +146,77 @@ lib.menu.sub.4 {
         ATagParams = class="sub-navigation__link _sub-level-5 _curent _sub"
     }
 }
+lib.menu.sub.5 < 1
+lib.menu.sub.5 = TMENU
+lib.menu.sub.5 {
+    wrap = <ul class="sub-navigation__item-list _sub-list-level-6"> | </ul>
+    expAll = 1
+    NO = 1
+    NO {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-6"
+    }
+    CUR < .NO
+    CUR {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-6 _curent"
+    }
+    ACT < .CUR
+    ACT {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-6 _active"
+    }
+    IFSUB < .ACT
+    IFSUB{
+        ATagParams = class="sub-navigation__link _sub-level-6 _sub"
+    }
+    ACTIFSUB < .IFSUB
+    ACTIFSUB{
+        ATagParams = class="sub-navigation__link _sub-level-6 _active _sub"
+
+    }
+    CURIFSUB < .ACTIFSUB
+    CURIFSUB {
+        ATagParams = class="sub-navigation__link _sub-level-6 _curent _sub"
+    }
+}
+lib.menu.sub.6 < 1
+lib.menu.sub.6 = TMENU
+lib.menu.sub.6 {
+    wrap = <ul class="sub-navigation__item-list _sub-list-level-7"> | </ul>
+    expAll = 1
+    NO = 1
+    NO {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-7"
+    }
+    CUR < .NO
+    CUR {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-7 _curent"
+    }
+    ACT < .CUR
+    ACT {
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        ATagParams = class="sub-navigation__link _sub-level-7 _active"
+    }
+    IFSUB < .ACT
+    IFSUB{
+        ATagParams = class="sub-navigation__link _sub-level-7 _sub"
+    }
+    ACTIFSUB < .IFSUB
+    ACTIFSUB{
+        ATagParams = class="sub-navigation__link _sub-level-7 _active _sub"
+
+    }
+    CURIFSUB < .ACTIFSUB
+    CURIFSUB {
+        ATagParams = class="sub-navigation__link _sub-level-7 _curent _sub"
+    }
+}

@@ -1,4 +1,14 @@
 {
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/t3kit/t3kit_extension_tools"
+        }
+    ],
     "name": "t3kit/theme-t3kit",
     "description": "Theme t3kit",
     "type": "typo3-cms-extension",
@@ -12,13 +22,10 @@
             "T3kit\\themeT3kit\\": "Classes/"
         }
     },
+    "minimum-stability": "dev",
     "require": {
-        "typo3/cms": ">=6.2.0 <=7.7.99",
-        "typo3-ter/dyncss": ">=0.7.0 <=0.7.99",
-        "typo3-ter/dyncss-less": ">=0.7.0 <=0.7.99",
-        "typo3-themes/themes": ">=7.0.0 <=7.2.99",
-        "t3kit/t3kit-extension-tools": "*",
-        "typo3-ter/fluid-styled-content": "*",
-        "typo3-ter/gridelements": ">=7.0.0 <=7.2.99"
+        "typo3/cms": "^8.5"
+    },
+    "require-dev": {
     }
 }

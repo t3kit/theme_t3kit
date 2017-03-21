@@ -3,8 +3,6 @@ tx_seo_xmlsitemaps.10.sysLanguageHrefLangMappings {
     0 = en
     1 = sv
     2 = de
-    3 = ro
-    4 = uk
 }
 #
 # Limit allowed doktypes to only Standard pages

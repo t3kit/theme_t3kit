@@ -78,3 +78,11 @@ themes.configuration.contacts.phone = 555-555555
 
 # cat=theme,basic/contacts; type=string; label= E-Mail address
 themes.configuration.contacts.email = info@info.se
+
+# cat=theme,basic/customPath; type=string; label= Custom Path
+themes.configuration.customPath = fileadmin/custom
+
+
+# customsubcategory=maps= Google map configuration
+# cat=theme,advanced/maps; type=string; label= Google map api key
+themes.configuration.maps.map = //maps.google.com/maps/api/js

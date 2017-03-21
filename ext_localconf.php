@@ -7,3 +7,5 @@ if (!defined('TYPO3_MODE')) {
 	setup.default.rteCleanPasteBehaviour=pasteStructure
 ');
 
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['imageTextLink']
+	= \T3kit\themeT3kit\Hooks\ImageTextLinkPreviewRenderer::class;

@@ -1,0 +1,68 @@
+{namespace theme=KayStrobach\Themes\ViewHelpers}
+<f:layout name="{f:if(condition: data.tx_gridelements_container, then: 'Empty', else: 'HeaderContentFooter')}" />
+<f:section name="content">
+
+				<div class="panel-group" id="group-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" role="tablist">
+					<f:for each="{data.tx_gridelements_view_children}" as="panel" iteration="panelnumber">
+						<div class="panel panel-default {layoutClass} {alignClass}">
+							<div class="panel-heading" role="tab" id="heading-{panel.uid}">
+			                    <f:if condition="{data.pi_flexform.data.columns.lDEF.accordionMode.vDEF} < 2">
+			                        <f:then>
+			                            <f:if condition="{data.pi_flexform.data.columns.lDEF.accordionMode.vDEF} == 0">
+			                                <f:then>
+												<h4 class="panel-title">
+			                					<a aria-controls="collapse-{panel.uid}" data-toggle="collapse" class="{f:if(condition: '{panelnumber.index} == 0', then: ' ', else: 'collabsed')} {f:if(condition: panel.header, then:'' , else: 'empty')}" {f:if(condition: data.pi_flexform.data.columns.lDEF.multiselect.vDEF, then: '', else: 'data-parent="#group-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}"')} href="#collapse-{panel.uid}" aria-expanded="{f:if(condition: '{panelnumber.index} == 0', then: 'true', else: 'false')}" role="button">
+			                						<f:if condition="{panel.header}"><f:then>{panel.header}</f:then><f:else> </f:else></f:if>
+			                                    </a>
+												</h4>
+			                                </f:then>
+			                                <f:else>
+												<h4 class="panel-title">
+			                                    <a aria-controls="collapse-{panel.uid}" data-toggle="collapse" class="{f:if(condition: panel.header, then:'' , else: 'empty')}" href="#collapse-{panel.uid}" aria-expanded="false" role="button">
+			                                        <f:if condition="{panel.header}"><f:then>{panel.header}</f:then><f:else> </f:else></f:if>
+			                                    </a>
+												</h4>
+			                                </f:else>
+			                            </f:if>
+			                        </f:then>
+			                        <f:else>
+									<h4 class="panel-title">
+			                            <a aria-controls="collapse-{panel.uid}"  data-toggle="collapse" class="collabsed {f:if(condition: panel.header, then:' ' , else: 'empty')}" {f:if(condition: data.pi_flexform.data.columns.lDEF.multiselect.vDEF, then: '', else: 'data-parent="#group-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}"')} href="#collapse-{panel.uid}" aria-expanded="true" role="button">
+			                                <f:if condition="{panel.header}"><f:then>{panel.header}</f:then><f:else> </f:else></f:if>
+			                            </a>
+									</h4>
+			                        </f:else>
+			                    </f:if>
+							</div>
+			                <f:if condition="{data.pi_flexform.data.columns.lDEF.accordionMode.vDEF} == 0">
+			                    <f:then>
+			                    <div id="collapse-{panel.uid}" class="panel-collapse collapse {f:if(condition: '{panelnumber.index} == 0', then: 'in', else: '')}" role="tabpanel" aria-expanded="{f:if(condition: '{panelnumber.index} == 0', then: 'true', else: 'false')}" aria-labelledby="heading-{panel.uid}">
+			                        <div class="panel-body">
+			                            <f:format.raw>{theme:arrayIndex(object: data, index: 'tx_gridelements_view_child_{panel.uid}')}</f:format.raw>
+			                        </div>
+			                    </div>
+			                    </f:then>
+			                    <f:else>
+			                    <f:if condition="{data.pi_flexform.data.columns.lDEF.accordionMode.vDEF} == 1">
+			                        <f:then>
+			                            <div id="collapse-{panel.uid}" class="panel-collapse collapse in" role="tabpanel" aria-expanded="true" aria-labelledby="heading-{panel.uid}">
+			                                <div class="panel-body">
+			                                    <f:format.raw>{theme:arrayIndex(object: data, index: 'tx_gridelements_view_child_{panel.uid}')}</f:format.raw>
+			                                </div>
+			                            </div>
+			                        </f:then>
+			                        <f:else>
+			                            <div id="collapse-{panel.uid}" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="heading-{panel.uid}">
+			                                <div class="panel-body">
+			                                    <f:format.raw>{theme:arrayIndex(object: data, index: 'tx_gridelements_view_child_{panel.uid}')}</f:format.raw>
+			                                </div>
+			                            </div>
+			                        </f:else>
+			                    </f:if>
+			                    </f:else>
+			                </f:if>
+			            </div>
+			        </f:for>
+			    </div>
+
+</f:section>

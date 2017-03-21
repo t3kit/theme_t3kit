@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit" target-language="no">
+        <header></header>
+        <body>
+            <trans-unit id="wrapper.description">
+                <source>Select appearance of content element (if available)</source>
+                <target>Velg utseende for innholdselement (hvis tilgjengelig)</target>
+            </trans-unit>
+            <trans-unit id="wrapper_margin_top.description">
+                <source>Select a predefined "Margin Top" for the content element (if available)</source>
+                <target>Velg en forhåndsdefinert "toppmarg" for innholdselementet (hvis tilgjengelig)</target>
+            </trans-unit>
+            <trans-unit id="wrapper_margin_bottom.description">
+                <source>Select a predefined "Margin Bottom" for the content element (if available)</source>
+                <target>Velg en forhåndsdefinert "bunnmarg" for innholdselementet (hvis tilgjengelig)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

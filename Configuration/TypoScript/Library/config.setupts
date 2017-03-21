@@ -14,9 +14,7 @@ config {
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
     spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
-    headerComment (
-        This website based on t3kit project by Pixelant - www.t3kit.com
-    )
+    headerComment = {$themes.configuration.headerComment}
 }
 
 

@@ -2,32 +2,578 @@
 defined('TYPO3_MODE') or die();
 
 call_user_func(function() {
+    if (!isset($GLOBALS['TCA']['tt_content']['palettes']['frames'])) {
+        $GLOBALS['TCA']['tt_content']['palettes']['frames'] = [
+            'showitem' => 'layout;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:layout_formlabel'
+        ];
+    }
 
     $contentElementLanguageFilePrefix = 'LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
-    $cmsLanguageFilePrefix = 'LLL:EXT:cms/locallang_ttc.xlf:';
+    $frontendLanguageDatabaseFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/Database.xlf:';
+    $coreLanguageFilePrefix = 'LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:';
 
-    // Include tt_content overrides from "custom_content_elenent"
-    if (is_file(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php')) {
-        require_once(PATH_site . 'fileadmin/templates/theme_t3kit/custom_content_elements/Configuration/TCA/Overrides/tt_content.php');
-    }
+    // Content elements Flexform Path
+    $flexformPath = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/';
 
-    //
-    // CTypes
-    //
-    // "accordion"
+
+    // Example how to add comments
+    // ======================= contentName [begin] ==========================================
+    // contentName CType
+    // contentName backend fields
+    // contentName flexform
+    // ======================= contentName [end] ==========================================
+
+
+    // Example how to configure the backend fields for our new content element
+    // 'showitem' => '
+    //     --div--;' .  $coreLanguageFilePrefix .'general,
+    //         --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+    //         header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+    //         --linebreak--,bodytext;' . $frontendLanguageFilePrefix . 'bodytext_formlabel,
+    //         --linebreak--,subheader;' . $frontendLanguageFilePrefix . 'subheader_formlabel,
+    //         --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+    //         --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+    //     --div--;' . $frontendLanguageFilePrefix . 'tabs.media,assets,
+    //     --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
+    //         --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+    //         --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
+    //         --palette--;' . $frontendLanguageDatabaseFilePrefix . 'tt_content.palette.mediaAdjustments;mediaAdjustments,
+    //         --palette--;' . $frontendLanguageDatabaseFilePrefix . 'tt_content.palette.gallerySettings;gallerySettings,
+    //         --palette--;' . $frontendLanguageFilePrefix . 'palette.imagelinks;imagelinks,
+
+    //     --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+    //         --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+    //         --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+    //     --div--;' .  $coreLanguageFilePrefix .'language,
+    //         --palette--;;language,
+    //     --div--;' .  $coreLanguageFilePrefix .'access,
+    //         --palette--;;hidden,
+    //         --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+    //     --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+    //     --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+    //     --div--;' .  $coreLanguageFilePrefix .'extended,
+    // '
+
+
+    // Content elements tab
+    // The "divider" these content elements
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
         [
-            $contentElementLanguageFilePrefix . 'accordion.title',
-            'accordion',
-            'content-elements-accordion'
+            $contentElementLanguageFilePrefix . 'tab.contentElements',
+            '--div--',
+            null
         ],
-        'login',
+        'form',
         'after'
     );
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['accordion'] = 'content-elements-accordion';
+
+
+    // Content elements
+
+    // ======================= Hero Image [begin] ==========================================
+    //  Hero Image CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'heroImage.title',
+            'heroImage',
+            'content-elements-heroImage'
+        ],
+        'form',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['heroImage'] = 'content-elements-heroImage';
+
+    // Hero Image backend fields
+    $GLOBALS['TCA']['tt_content']['types']['heroImage'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'heroImage.subheader,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'heroImage.linkText,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+    $GLOBALS['TCA']['tt_content']['types']['heroImage']['columnsOverrides']['bodytext']['config']['type'] = 'input';
+
+    // Hero Image flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,heroImage'] = $flexformPath . 'flexform_heroImage.xml';
+    // ======================= Hero Image [end] ==========================================
+
+
+
+    // ======================= bigIconTextButton [begin] ==========================================
+    // bigIconTextButton CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'bigIconTextButton.title',
+            'bigIconTextButton',
+            'content-elements-bigIconTextButton'
+        ],
+        'heroImage',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['bigIconTextButton'] = 'content-elements-bigIconTextButton';
+
+    // bigIconTextButton backend fields
+    $GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+    // bigIconTextButton flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,bigIconTextButton'] = $flexformPath . 'flexform_bigIconTextButton.xml';
+    // ======================= bigIconTextButton [end] ==========================================
+
+
+
+    // ======================= iconTextButton [begin] ==========================================
+    // iconTextButton CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'iconTextButton.title',
+            'iconTextButton',
+            'content-elements-iconTextButton'
+        ],
+        'bigIconTextButton',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['iconTextButton'] = 'content-elements-iconTextButton';
+
+    // iconTextButton backend fields
+    $GLOBALS['TCA']['tt_content']['types']['iconTextButton'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.buttonText,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // iconTextButton flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,iconTextButton'] = $flexformPath . 'flexform_iconTextButton.xml';
+    // ======================= iconTextButton [end] ==========================================
+
+
+
+    // ======================= imageTextLink [begin] ==========================================
+    // imageTextLink CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'imageTextLink.title',
+            'imageTextLink',
+            'content-elements-imageTextLink'
+        ],
+        'iconTextButton',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['imageTextLink'] = 'content-elements-imageTextLink';
+
+    // imageTextLink backend fields
+    $GLOBALS['TCA']['tt_content']['types']['imageTextLink'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.media,assets,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // imageTextLink flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,imageTextLink'] = $flexformPath . 'flexform_imageTextLink.xml';
+    // ======================= imageTextLink [end] ==========================================
+
+
+    // TODO change button.header_label
+    // ======================= button [begin] ==========================================
+    // button CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'button.title',
+            'button',
+            'content-elements-button'
+        ],
+        'imageTextLink',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['button'] = 'content-elements-button';
+
+    // button backend fields
+    $GLOBALS['TCA']['tt_content']['types']['button'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $contentElementLanguageFilePrefix . 'button.header_label,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // button flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,button'] = $flexformPath . 'flexform_button.xml';
+    // ======================= button [end] ==========================================
+
+
+
+    // ======================= quote [begin] ==========================================
+    // quote CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'quote.title',
+            'quote',
+            'content-elements-quote'
+        ],
+        'button',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['quote'] = 'content-elements-quote';
+
+    // quote backend fields
+    $GLOBALS['TCA']['tt_content']['types']['quote'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $contentElementLanguageFilePrefix . 'quote.header,
+                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'quote.bodytext,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'quote.linkText,
+                --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // quote flexform
+    // ======================= quote [end] ==========================================
+
+
+
+    // ======================= BootstrapSlider [begin] ==========================================
+    // TODO change name (contentElementBootstrapSlider & content-elements-contentElementSlider)
+    // BootstrapSlider CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'bootstrap.slider.title',
+            'contentElementBootstrapSlider',
+            'content-elements-contentElementSlider'
+        ],
+        'quote',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contentElementBootstrapSlider'] = 'content-elements-contentElementSlider';
+
+    // BootstrapSlider backend fields
+    // TODO (bootstrap.slider.tabs.slides,image)
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $contentElementLanguageFilePrefix . 'bootstrap.slider.tabs.slides,image,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // BootstrapSlider flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = $flexformPath . 'flexform_bootstrapSlider.xml';
+    // ======================= BootstrapSlider [end] ==========================================
+
+
+
+    // ======================= logoCarousel [begin] ==========================================
+    // logoCarousel CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'logoCarousel.title',
+            'logoCarousel',
+            'content-elements-logoCarousel'
+        ],
+        'contentElementBootstrapSlider',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['logoCarousel'] = 'content-elements-logoCarousel';
+
+    // logoCarousel backend fields
+    $GLOBALS['TCA']['tt_content']['types']['logoCarousel'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+
+            --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // logoCarousel flexform
+    // ======================= logoCarousel [end] ==========================================
+
+
+
+    // ======================= socialIcons [begin] ==========================================
+    // socialIcons CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'socialIcons.title',
+            'socialIcons',
+            'content-elements-socialIcons'
+        ],
+        'logoCarousel',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['socialIcons'] = 'content-elements-socialIcons';
+
+    // socialIcons backend fields
+    $GLOBALS['TCA']['tt_content']['types']['socialIcons'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // socialIcons flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,socialIcons'] = $flexformPath . 'flexform_socialIcons.xml';
+    // ======================= socialIcons [end] ==========================================
+
+
+
+    // ======================= copyrightText [begin] ==========================================
+    // copyrightText CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'copyrightText.title',
+            'copyrightText',
+            'content-elements-copyrightText'
+        ],
+        'socialIcons',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['copyrightText'] = 'content-elements-copyrightText';
+
+    // copyrightText backend fields
+    $GLOBALS['TCA']['tt_content']['types']['copyrightText'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // copyrightText flexform
+    // ======================= copyrightText [end] ==========================================
+
+
+
+    // ======================= contacts [begin] ==========================================
+    // contacts CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'contacts.title',
+            'contacts',
+            'content-elements-contacts'
+        ],
+        'copyrightText',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contacts'] = 'content-elements-contacts';
+
+    // contacts backend fields
+    $GLOBALS['TCA']['tt_content']['types']['contacts'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
+            --div--;' .  $coreLanguageFilePrefix .'notes,rowDescription,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // contacts flexform
+    // ======================= contacts [end] ==========================================
+
+
+
+
+
 
     // "contentElementSlider"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -43,89 +589,12 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contentElementSlider'] = 'content-elements-contentElementSlider';
 
-    // "contentElementBootstrapSlider"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'bootstrap.slider.title',
-            'contentElementBootstrapSlider',
-            'content-elements-contentElementSlider'
-        ],
-        'contentElementSlider',
-        'after'
-    );
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contentElementBootstrapSlider'] = 'content-elements-contentElementSlider';
 
-    // "bigIconTextButton"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'bigIconTextButton.title',
-            'bigIconTextButton',
-            'content-elements-bigIconTextButton'
-        ],
-        'contentElementSlider',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['bigIconTextButton'] = 'content-elements-bigIconTextButton';
 
-    // "iconTextButton"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'iconTextButton.title',
-            'iconTextButton',
-            'content-elements-iconTextButton'
-        ],
-        'bigIconTextButton',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['iconTextButton'] = 'content-elements-iconTextButton';
 
-    // "imageTextLink"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'imageTextLink.title',
-            'imageTextLink',
-            'content-elements-imageTextLink'
-        ],
-        'iconTextButton',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['imageTextLink'] = 'content-elements-imageTextLink';
 
-    // "logoCarousel"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'logoCarousel.title',
-            'logoCarousel',
-            'content-elements-logoCarousel'
-        ],
-        'imageTextLink',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['logoCarousel'] = 'content-elements-logoCarousel';
-
-    // "quote"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'quote.title',
-            'quote',
-            'content-elements-quote'
-        ],
-        'logoCarousel',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['quote'] = 'content-elements-quote';
+    // TODO check all image and media fields and enable crop fn
+    // TODO imageSize;imageMaxSize
 
     // "tabs"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
@@ -141,6 +610,7 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tabs'] = 'content-elements-tabs';
 
+    // TODO rename !!!
     // "fullWidthImage"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -155,6 +625,7 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['fullWidthImage'] = 'content-elements-fullWidthImage';
 
+    // TODO check if needed
     // "responsiveVideo"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
@@ -169,85 +640,7 @@ call_user_func(function() {
     );
 	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['responsiveVideo'] = 'content-elements-responsiveVideo';
 
-    // "socialIcons"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'socialIcons.title',
-            'socialIcons',
-            'content-elements-socialIcons'
-        ],
-        'responsiveVideo',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['socialIcons'] = 'content-elements-socialIcons';
 
-    // "copyrightText"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'copyrightText.title',
-            'copyrightText',
-            'content-elements-copyrightText'
-        ],
-        'socialIcons',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['copyrightText'] = 'content-elements-copyrightText';
-
-    // "contacts"
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'contacts.title',
-            'contacts',
-            'content-elements-contacts'
-        ],
-        'copyrightText',
-        'after'
-    );
-	$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contacts'] = 'content-elements-contacts';
-
-
-
-
-
-
-
-    // The "divider" these content elements
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $contentElementLanguageFilePrefix . 'tab.contentElements',
-            '--div--',
-            null
-        ],
-        'login',
-        'after'
-    );
-
-    //
-    // Palettes
-    //
-    // "imageSize"
-    $GLOBALS['TCA']['tt_content']['palettes']['imageSize'] = [
-        'showitem' => '
-            imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageWidth,
-            imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageHeight,
-        '
-    ];
-
-    // "imageMaxSize"
-    $GLOBALS['TCA']['tt_content']['palettes']['imageMaxSize'] = [
-        'showitem' => '
-            imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageMaxWidth,
-            imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageMaxHeight,
-        '
-    ];
 
     //
     // Types
@@ -257,6 +650,7 @@ call_user_func(function() {
         'showitem' => '
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'slider.tabs.slides,image,
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
@@ -269,61 +663,17 @@ call_user_func(function() {
         '
     ];
 
-    // "contentElementBootstrapSlider"
-    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider'] = [
-        'showitem' => '
-            --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-            header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
-            --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-        --div--;' . $contentElementLanguageFilePrefix . 'bootstrap.slider.tabs.slides,image,
-        --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-            --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
-            --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-        --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-            hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-            --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-        --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-    '
-    ];
+// Override foreign_types for contentElementSlider so we can add a custom palette
+// columnsOverrides doens't seem to be correct if irre children are collapsed when tt_content record is opened
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['appearance']['collapseAll'] = 0;
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'] = '--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;sliderPalette, --palette--;;imageoverlayPalette, --palette--;;filePalette';
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['2']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['3']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['4']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+$GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['5']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
 
-    // "bigIconTextButton"
-    $GLOBALS['TCA']['tt_content']['types']['bigIconTextButton'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
-                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
-                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
 
-    // "iconTextButton"
-    $GLOBALS['TCA']['tt_content']['types']['iconTextButton'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
-                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'iconTextButton.bodytext,
-                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'iconTextButton.buttonText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
 
     // "divider"
     $GLOBALS['TCA']['tt_content']['types']['div'] = [
@@ -346,80 +696,8 @@ call_user_func(function() {
         '
     ];
 
-    // "accordion"
-    $GLOBALS['TCA']['tt_content']['types']['accordion'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
-                records;' . $contentElementLanguageFilePrefix . 'accordion.records_formlabe,
-                rowDescription,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
 
-    // "imageTextLink"
-    $GLOBALS['TCA']['tt_content']['types']['imageTextLink'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $cmsLanguageFilePrefix . 'header_formlabel,
-                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
-                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
-            --div--;' . $contentElementLanguageFilePrefix . 'imageTextLink.tabs.media,media,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
 
-    // "logoCarousel"
-    $GLOBALS['TCA']['tt_content']['types']['logoCarousel'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.headers;headers,
-            --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
-
-    // "quote"
-    $GLOBALS['TCA']['tt_content']['types']['quote'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $contentElementLanguageFilePrefix . 'quote.header,
-                --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'quote.bodytext,
-                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'quote.linkText,
-                --linebreak--,header_link;' . $cmsLanguageFilePrefix . 'header_link_formlabel,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
 
     // "tabs"
     $GLOBALS['TCA']['tt_content']['types']['tabs'] = [
@@ -471,72 +749,40 @@ call_user_func(function() {
     ];
 
 
-    // "socialIcons"
-    $GLOBALS['TCA']['tt_content']['types']['socialIcons'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
-
-    // "copyrightText"
-    $GLOBALS['TCA']['tt_content']['types']['copyrightText'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
-
-    // "contacts"
-    $GLOBALS['TCA']['tt_content']['types']['contacts'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
-                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.frames;frames,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.access,
-                hidden;' . $frontendLanguageFilePrefix . 'field.default.hidden,
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
-            --div--;' . $frontendLanguageFilePrefix . 'tabs.extended
-        '
-    ];
-
 
     //
     // Flexforms
     //
-    // "contentElementSlider"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,bigIconTextButton'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_bigIconTextButton.xml';
-
-    // "iconTextButton"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,iconTextButton'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_iconTextButton.xml';
-
-    // "imageTextLink"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,imageTextLink'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_imageTextLink.xml';
 
     // "divider"
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,div'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_div.xml';
 
-    // "accordion"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,accordion'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_accordion.xml';
 
-    // "contentElementBootstrapSlider"
-    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_bootstrapSlider.xml';
+    // "contentElementSlider"
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementSlider'] = 'FILE:EXT:theme_t3kit/Configuration/FlexForms/flexform_slider.xml';
+
+
+
+
+    //
+    // Palettes
+    //
+    // "imageSize"
+    $GLOBALS['TCA']['tt_content']['palettes']['imageSize'] = [
+        'showitem' => '
+            imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageWidth,
+            imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageHeight,
+        '
+    ];
+    // "imageMaxSize"
+    $GLOBALS['TCA']['tt_content']['palettes']['imageMaxSize'] = [
+        'showitem' => '
+            imagewidth;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageMaxWidth,
+            imageheight;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize.imageMaxHeight,
+        '
+    ];
+
+
 
     // Add additional fields for tt_content
     $additionalColumns = [

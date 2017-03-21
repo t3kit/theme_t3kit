@@ -1,0 +1,14 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:layout name="ContentFooter" />
+
+<f:section name="content">
+	<!-- theme_t3kit: Templates/CustomContentElements/Button.html [begin] -->
+	<f:if condition="{data.header_link}">
+		<f:link.typolink parameter="{data.header_link}" class="{layoutClass}{f:if(condition: settings.buttonSize, then: ' {settings.buttonSize}')}{f:if(condition: settings.blockLevel, then: ' btn-block')}">{data.header}</f:link.typolink>
+	</f:if>
+	<!-- theme_t3kit: Templates/CustomContentElements/Button.html [end] -->
+</f:section>
+
+</div>
+

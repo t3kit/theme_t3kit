@@ -47,6 +47,7 @@ themes.configuration.less.var.mainLinkHoverColor =
 # customsubcategory=header_top_colors= Header Top Colors
 # customsubcategory=header_middle_colors= Header Middle Colors
 # customsubcategory=header_main_menu_colors= Main Menu Colors
+# customsubcategory=header_search_field_color= Header Search Field Color
 
 
 
@@ -76,16 +77,19 @@ themes.configuration.less.var.headerMiddleSearchBtnBg =
 # cat=colors,advanced/header_middle_colors; type=color; label= Header Middle Search Btn Hover
 themes.configuration.less.var.headerMiddleSearchBtnHover =
 
+# cat=colors,advanced/header_search_field_color; type=color; label= Header Search Field Text Color
+themes.configuration.less.var.HeaderSearchFieldTextColor =
+
 
 # Logo
 # cat=header,basic/logo; type=string; label= Logo Top
-themes.configuration.less.var.logoTop = 30px
+themes.configuration.less.var.logoTop =
 
 # cat=header,basic/logo; type=string; label= Logo Left
-themes.configuration.less.var.logoLeft = 40px
+themes.configuration.less.var.logoLeft =
 
 # cat=header,basic/logo; type=string; label= Logo Width
-themes.configuration.less.var.logoWidth = 120px
+themes.configuration.less.var.logoWidth =
 
 
 # Social Icons

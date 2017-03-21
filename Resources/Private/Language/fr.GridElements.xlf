@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2016-12-16T10:44:20Z" product-name="theme_t3kit">
+		<header/>
+		<body>
+			<trans-unit id="two_column_grid">
+				<source>Two columns grid</source>
+				<target>Grille 2 colonnes</target>
+			</trans-unit>
+			<trans-unit id="two_column_grid_description">
+				<source>Preset row with two columns.</source>
+				<target>Sépare la zone de contenu en 2 zones 50/50</target>
+			</trans-unit>
+			<trans-unit id="three_column_grid">
+				<source>Three columns grid</source>
+				<target>Grille 3 colonnes</target>
+			</trans-unit>
+			<trans-unit id="three_column_grid_description">
+				<source>Preset row with three columns.</source>
+				<target>Sépare la zone de contenu en 3 zones 33/33/33</target>
+			</trans-unit>
+			<trans-unit id="four_column_grid">
+				<source>Four columns grid</source>
+				<target>Grille 4 colonnes</target>
+			</trans-unit>
+			<trans-unit id="four_column_grid_description">
+				<source>Preset row with four columns.</source>
+				<target>Sépare la zone de contenu en 4 zones 25/25/25/25</target>
+			</trans-unit>
+			<trans-unit id="adv_one_column_grid">
+				<source>Advanced one column grid</source>
+				<target>Grille avancée 1 colonne</target>
+			</trans-unit>
+			<trans-unit id="adv_one_column_grid_description">
+				<source>Advanced grid. Preset row with one column. Column width can be adjusted.</source>
+				<target>Zone de contenu avancée, 1 colonne ajustable</target>
+			</trans-unit>
+			<trans-unit id="adv_two_column_grid">
+				<source>Advanced two columns grid</source>
+				<target>Grille avancée 2 colonnes</target>
+			</trans-unit>
+			<trans-unit id="adv_two_column_grid_description">
+				<source>Advanced grid. Preset row with two columns. Column width can be adjusted.</source>
+				<target>Zone de contenu avancée, 2 colonnes ajustables</target>
+			</trans-unit>
+			<trans-unit id="adv_three_column_grid">
+				<source>Advanced three columns grid</source>
+				<target>Grille avancée 3 colonnes</target>
+			</trans-unit>
+			<trans-unit id="adv_three_column_grid_description">
+				<source>Advanced grid. Preset row with three columns. Column width can be adjusted.</source>
+				<target>Zone de contenu avancée, 3 colonnes ajustables</target>
+			</trans-unit>
+			<trans-unit id="adv_four_column_grid">
+				<source>Advanced four columns grid</source>
+				<target>Grille avancée 3 colonnes</target>
+			</trans-unit>
+			<trans-unit id="adv_four_column_grid_description">
+				<source>Advanced grid. Preset row with four columns. Column width can be adjusted.</source>
+				<target>Zone de contenu avancée, 4 colonnes ajustables</target>
+			</trans-unit>
+			<trans-unit id="col1">
+				<source>Column 1</source>
+				<target>Colonne 1</target>
+			</trans-unit>
+			<trans-unit id="col2">
+				<source>Column 2</source>
+				<target>Colonne 2</target>
+			</trans-unit>
+			<trans-unit id="col3">
+				<source>Column 3</source>
+				<target>Colonne 3</target>
+			</trans-unit>
+			<trans-unit id="col4">
+				<source>Column 4</source>
+				<target>Colonne 4</target>
+			</trans-unit>
+			<trans-unit id="column_1_xs">
+				<source>Column 1 Mobile devices. &quot;Extra small devices Phones (&lt;768px)&quot;</source>
+				<target>Colonne 1, &quot;périphériques mobiles petit format (&lt;768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_1_sm">
+				<source>Column 1 Tablets. &quot;Small devices Tablets (≥768px)&quot;</source>
+				<target>Colonne 1, &quot;tablettes petit format (≥768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_1_md">
+				<source>Column 1 Desktops. &quot;Medium devices Desktops (≥992px)&quot;</source>
+				<target>Colonne 1, &quot;ordinateur de bureau, format moyen (≥992px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_1_lg">
+				<source>Column 1 Large devices &quot;Large devices Desktops (≥1200px)&quot;</source>
+				<target>Colonne 1, &quot;ordinateur de bureau, format large (≥1200px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_2_xs">
+				<source>Column 2 Mobile devices. &quot;Extra small devices Phones (&lt;768px)&quot;</source>
+				<target>Colonne 2, &quot;périphériques mobiles petit format (&lt;768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_2_sm">
+				<source>Column 2 Tablets. &quot;Small devices Tablets (≥768px)&quot;</source>
+				<target>Colonne 2, &quot;tablettes petit format (≥768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_2_md">
+				<source>Column 2 Desktops. &quot;Medium devices Desktops (≥992px)&quot;</source>
+				<target>Colonne 2, &quot;ordinateur de bureau, format moyen (≥992px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_2_lg">
+				<source>Column 2 Large devices &quot;Large devices Desktops (≥1200px)&quot;</source>
+				<target>Colonne 2, &quot;ordinateur de bureau, format large (≥1200px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_3_xs">
+				<source>Column 3 Mobile devices. &quot;Extra small devices Phones (&lt;768px)&quot;</source>
+				<target>Colonne 3, &quot;périphériques mobiles petit format (&lt;768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_3_sm">
+				<source>Column 3 Tablets. &quot;Small devices Tablets (≥768px)&quot;</source>
+				<target>Colonne 3, &quot;tablettes petit format (≥768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_3_md">
+				<source>Column 3 Desktops. &quot;Medium devices Desktops (≥992px)&quot;</source>
+				<target>Colonne 3, &quot;ordinateur de bureau, format moyen (≥992px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_3_lg">
+				<source>Column 3 Large devices &quot;Large devices Desktops (≥1200px)&quot;</source>
+				<target>Colonne 3, &quot;ordinateur de bureau, format large (≥1200px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_4_xs">
+				<source>Column 4 Mobile devices. &quot;Extra small devices Phones (&lt;768px)&quot;</source>
+				<target>Colonne 4, &quot;périphériques mobiles petit format (&lt;768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_4_sm">
+				<source>Column 4 Tablets. &quot;Small devices Tablets (≥768px)&quot;</source>
+				<target>Colonne 4, &quot;tablettes petit format (≥768px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_4_md">
+				<source>Column 4 Desktops. &quot;Medium devices Desktops (≥992px)&quot;</source>
+				<target>Colonne 4, &quot;ordinateur de bureau, format moyen (≥992px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_4_lg">
+				<source>Column 4 Large devices &quot;Large devices Desktops (≥1200px)&quot;</source>
+				<target>Colonne 4, &quot;ordinateur de bureau, format large (≥1200px)&quot;</target>
+			</trans-unit>
+			<trans-unit id="column_1_layout">
+				<source>Column 1 LayoutStyles de rendus de la Colonne 1</source>
+				<target>Rendus de la Colonne 1</target>
+			</trans-unit>
+			<trans-unit id="column_2_layout">
+				<source>Column 2 Layout</source>
+				<target>Rendus de la Colonne 2</target>
+			</trans-unit>
+			<trans-unit id="column_3_layout">
+				<source>Column 3 Layout</source>
+				<target>Rendus de la Colonne 3</target>
+			</trans-unit>
+			<trans-unit id="column_4_layout">
+				<source>Column 4 Layout</source>
+				<target>Rendus de la Colonne 4</target>
+			</trans-unit>
+			<trans-unit id="column_1_offset">
+				<source>Column 1 Offset</source>
+				<target>Décalage de la Colonne 1</target>
+			</trans-unit>
+			<trans-unit id="column_2_offset">
+				<source>Column 2 Offset</source>
+				<target>Décalage de la Colonne 2</target>
+			</trans-unit>
+			<trans-unit id="column_3_offset">
+				<source>Column 3 Offset</source>
+				<target>Décalage de la Colonne 3</target>
+			</trans-unit>
+			<trans-unit id="column_4_offset">
+				<source>Column 4 Offset</source>
+				<target>Décalage de la Colonne 4</target>
+			</trans-unit>
+			<trans-unit id="column_1_class">
+				<source>Column 1 Class</source>
+				<target>Classe CSS personnalisée pour la colonne 1</target>
+			</trans-unit>
+			<trans-unit id="column_2_class">
+				<source>Column 2 Class</source>
+				<target>Classe CSS personnalisée pour la colonne 2</target>
+			</trans-unit>
+			<trans-unit id="column_3_class">
+				<source>Column 3 Class</source>
+				<target>Classe CSS personnalisée pour la colonne 3</target>
+			</trans-unit>
+			<trans-unit id="column_4_class">
+				<source>Column 4 Class</source>
+				<target>Classe CSS personnalisée pour la colonne 4</target>
+			</trans-unit>
+			<trans-unit id="column_1_content_wrapper">
+				<source>Column 1 Content Wrapper</source>
+				<target>Wrapper pour la Colonne 1</target>
+			</trans-unit>
+			<trans-unit id="column_2_content_wrapper">
+				<source>Column 2 Content Wrapper</source>
+				<target>Wrapper pour la Colonne 2</target>
+			</trans-unit>
+			<trans-unit id="column_3_content_wrapper">
+				<source>Column 3 Content Wrapper</source>
+				<target>Wrapper pour la Colonne 3</target>
+			</trans-unit>
+			<trans-unit id="column_4_content_wrapper">
+				<source>Column 4 Content Wrapper</source>
+				<target>Wrapper pour la Colonne 4</target>
+			</trans-unit>
+			<trans-unit id="container">
+				<source>Container wrapper</source>
+				<target>Wrapper global</target>
+			</trans-unit>
+			<trans-unit id="grid">
+				<source>Responsive grid settings. Column width on different devices. Based on Bootstrap grid.</source>
+				<target>Paramètres &quot;responsive design&quot;.  Largeur de colonne dynamique selon les périphériques.  Basés sur la grille Bootsrap.</target>
+			</trans-unit>
+			<trans-unit id="col-xs">
+				<source>Mobile devices. &quot;Extra small devices Phones (&lt;768px)&quot;</source>
+				<target>Périphériques mobiles petit format (&lt;768px)</target>
+			</trans-unit>
+			<trans-unit id="col-sm">
+				<source>Tablets. &quot;Small devices Tablets (≥768px)&quot;</source>
+				<target>Tablettes petit format (≥768px)</target>
+			</trans-unit>
+			<trans-unit id="col-md">
+				<source>Desktops. &quot;Medium devices Desktops (≥992px)&quot;</source>
+				<target>Ordinateur de bureau, format moyen (≥992px)</target>
+			</trans-unit>
+			<trans-unit id="col-lg">
+				<source>Large devices &quot;Large devices Desktops (≥1200px)&quot;</source>
+				<target>Ordinateur de bureau, format large (≥1200px)</target>
+			</trans-unit>
+			<trans-unit id="parallax">
+				<source>Parallax</source>
+				<target>Effet de parallaxe</target>
+			</trans-unit>
+			<trans-unit id="parallax_description">
+				<source>Background image with Parallax effect</source>
+				<target>Image de fond avec effet de parallaxe</target>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.title">
+				<source>Parallax settings</source>
+				<target>Paramètres de l'effet de Parallaxe</target>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.height">
+				<source>Height of parallax element. [auto] by default. Good when you want to have other elements inside of parallax</source>
+				<target>Hauteur de la zone avec effet de parallaxe. (Automatique par défaut). A utiliser quand vous voulez ajouter d'autres éléments dans le contenu parallaxe.</target>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.bgcolor">
+				<source>Background color (for mobile)</source>
+				<target>Couleur de fond (pour mobiles)</target>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.hide">
+				<source>Hide in mobile</source>
+				<target>Cacher sur les mobiles</target>
+			</trans-unit>
+			<trans-unit id="collapsible">
+				<source>Collapsible</source>
+				<target>Contenu accordéon (pliant)</target>
+			</trans-unit>
+			<trans-unit id="collapsible_description">
+				<source>A collapsible container for content elements</source>
+				<target>Conteneur pliant pour des éléments de contenus</target>
+			</trans-unit>
+			<trans-unit id="collapsible.flexform.title">
+				<source>Collapsible settings</source>
+				<target>Paramètres du contenu accordéon</target>
+			</trans-unit>
+			<trans-unit id="collapsible.flexform.expanded">
+				<source>Expanded by default</source>
+				<target>Ouvert par défaut</target>
+			</trans-unit>
+			<trans-unit id="collapsibleGroup">
+				<source>Group of collapsibles</source>
+				<target>Groupe de contenus accordéons (pliants)</target>
+			</trans-unit>
+			<trans-unit id="collapsibleGroup_description">
+				<source>A group for collapsible elements</source>
+				<target>Groupes de conteneurs pliants pour des éléments de contenus</target>
+			</trans-unit>
+			<trans-unit id="collapsibleContent">
+				<source>Collapsible Content</source>
+				<target>Contenu pliant</target>
+			</trans-unit>
+			<trans-unit id="collapsibleContainers">
+				<source>Collapsibles</source>
+				<target>Accordéons (pliants)</target>
+			</trans-unit>
+			<trans-unit id="tab">
+				<source>Tab</source>
+				<target>Onglet</target>
+			</trans-unit>
+			<trans-unit id="tab_description">
+				<source>A tab with content elements</source>
+				<target>Un onglet qui contient des éléments de contenus</target>
+			</trans-unit>
+			<trans-unit id="tabContent">
+				<source>Tab Content</source>
+				<target>Contenu d'onglet</target>
+			</trans-unit>
+			<trans-unit id="tabGroup">
+				<source>Group of tabs</source>
+				<target>Groupe de contenus d'onglets</target>
+			</trans-unit>
+			<trans-unit id="tabGroup_description">
+				<source>A container for tab content elements</source>
+				<target>Conteneur d'onglet pour des éléments de contenus</target>
+			</trans-unit>
+			<trans-unit id="tabContainer">
+				<source>Tabs</source>
+				<target>Onglets</target>
+			</trans-unit>
+			<trans-unit id="tabGroup.flexform.title">
+				<source>Tab group settings</source>
+				<target>Paramètres du groupe d'onglets</target>
+			</trans-unit>
+			<trans-unit id="tabGroup.flexform.tabstyle">
+				<source>Style of tabs</source>
+				<target>Style d'onglets</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
