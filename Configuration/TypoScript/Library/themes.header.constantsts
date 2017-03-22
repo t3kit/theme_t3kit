@@ -28,6 +28,12 @@ themes.configuration.elem.status.showHeaderMainMenuSearch = 0
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Navigation
 themes.configuration.elem.status.showHeaderTopNavigation = 1
 
+# cat=header,advanced/header_top; type=options[No=0,Yes=1]; label= Header Top Navigation Visible in mobile menu
+themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu = 0
+
+# cat=header,advanced/header_top; type=options[No=0,Yes=1]; label= Header Top Navigation mobile menu as one item
+themes.configuration.elem.status.headerTopNavigationAsOneItemInMobileMenu = 1
+
 # cat=header,advanced/header_top; type=int+; label= Header Top: Container pid where the menu items are located
 themes.configuration.header.top.menu.containerPid = 6
 
