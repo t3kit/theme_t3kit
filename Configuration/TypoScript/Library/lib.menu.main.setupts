@@ -1,9 +1,10 @@
-lib.menu.main = HMENU
-lib.menu.main {
+lib.menu.main = COA
+lib.menu.main.100 = HMENU
+lib.menu.main.100 {
     entryLevel = 0
     includeNotInMenu = 0
     excludeUidList = {$themes.configuration.menu.main.excludeUidList}
-    # wrap = <ul class="main-navigation__items-list js__main-navigation__items-list"> | </ul>
+    #wrap = <ul class="main-navigation__items-list js__main-navigation__items-list">|</ul>
     1 = TMENU
     1 {
         expAll = 1
@@ -55,7 +56,7 @@ lib.menu.main {
 
 [globalVar = LIT:_sub = {$themes.configuration.menu.main.dropdown}] && [globalVar = LIT:1 = {$themes.configuration.menu.main.dropdownColumns}]
 
-lib.menu.main {
+lib.menu.main.100 {
     1 {
         IFSUB {
             after = <div class="tablet-arrow"><a href="#" class="main-navigation__open-sub-menu-link js__main-navigation__open-sub-menu-link">Open</a></div>
