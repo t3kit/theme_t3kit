@@ -271,6 +271,15 @@
             <trans-unit id="heroImage.flexform.contentPosition_right">
                 <source>Top - Right align</source>
             </trans-unit>
+            <trans-unit id="heroImage.flexform.contentPosition_leftCenter">
+                <source>Center - Left align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.contentPosition_centerCenter">
+                <source>Center - Center align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.contentPosition_rightCenter">
+                <source>Center - Right align</source>
+            </trans-unit>
             <trans-unit id="heroImage.flexform.contentPosition_leftBottom">
                 <source>Bottom - Left align</source>
             </trans-unit>
