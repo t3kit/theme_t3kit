@@ -1,0 +1,47 @@
+// =================================
+// === News Letter Subscription=============
+// =================================
+.footer__subscribe .alert{
+    width: 66%;
+    clear: both;
+}
+
+.footer__subscribe .form-control {
+    margin: 5px auto;
+}
+.footer__subscribe .form-control,
+.footer__subscribe .btn {
+    height: 40px;
+}
+.footer__subscribe .btn {
+    background-color: @main-color;
+    border: none;
+    // color: #fff;
+    padding: 0 30px;
+
+    color: tint(@main-color, 90%);
+
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        border: none;
+        color: tint(@main-color, 90%);
+        background-color: @main-color;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+        border: none;
+        color: tint(@main-color, 70%);
+        background-color: @main-color;
+    }
+}
+.footer__subscribe .input-group {
+    width: 100%;
+}
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------

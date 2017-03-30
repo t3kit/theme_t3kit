@@ -1,0 +1,459 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: Slider Container #title in menu
+position: 9 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+
+
+    <h3>SliderContainer+bigIconTextButton</h3>
+    <h4>button, pagination, loop: true slidesPreView:5, speed:1000, autoplay:3000</h4>
+    {{ renderContent 'sliderContainer'
+        button = true
+        pagination = true
+        loop = true
+        slidesPerView = 5
+        speed = 1000
+        autoplay = 3000
+        elements='
+            <div class="big-icon-text-btn">
+                <span class="big-icon-text-btn__icon icons icon-pie-chart"></span>
+                <h3 class="big-icon-text-btn__header">Content element</h3>
+                <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <a class="big-icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="big-icon-text-btn">
+                <span class="big-icon-text-btn__icon icons icon-home"></span>
+                <h3 class="big-icon-text-btn__header">Content element</h3>
+                <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <a class="big-icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="big-icon-text-btn">
+                <span class="big-icon-text-btn__icon icons icon-map-marker"></span>
+                <h3 class="big-icon-text-btn__header">Content element</h3>
+                <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <a class="big-icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="big-icon-text-btn">
+                <span class="big-icon-text-btn__icon icons icon-screen"></span>
+                <h3 class="big-icon-text-btn__header">Content element</h3>
+                <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <a class="big-icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="big-icon-text-btn">
+                <span class="big-icon-text-btn__icon icons icon-rocket"></span>
+                <h3 class="big-icon-text-btn__header">Content element</h3>
+                <p class="big-icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <a class="big-icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+        '
+    }}
+
+
+
+    <h3>SliderContainer+imageTextLink</h3>
+    <h4>button, paggination, loop: true; slidespreview:2</h4>
+    {{ renderContent 'sliderContainer'
+        button = true
+        pagination=true
+        loop = true
+        slidesPerView = 2
+        elements='
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+            <div class="img-text-link">
+                <img class="img-text-link__img img-responsive" src="images/foto1.jpg" alt="foto">
+                <h3 class="img-text-link__header">Content element 2</h3>
+                <p class="img-text-link__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="img-text-link__link " title="Read more" href="#">Read more</a>
+            </div>
+        '
+    }}
+
+
+
+    <h3>SliderContainer+quote</h3>
+    <h4>button, loop: true; paggination:false</h4>
+    {{ renderContent 'sliderContainer'
+        button = true
+        loop = true
+        pagination=false
+        elements='
+            <blockquote class="quote">
+                <div class="quote__body">
+                    <p class="quote__body-p">Thank you for the support, efficient and fast. You are true professionals. Top service. It’s nice to come back.</p>
+                    <span class="quote__body-icon icons icon-t3-quoteMark"></span>
+                </div>
+                <footer class="quote__footer">
+                    <span class="quote__footer-name">Doe John,</span>
+                    <cite class="quote__footer-title" title="VP of Marketing">VP of Marketing, <a class="quote__footer-link" href="">Trader Royal</a></cite>
+                </footer>
+            </blockquote>
+
+            <blockquote class="quote">
+                <div class="quote__body">
+                    <p class="quote__body-p">Top service. It’s nice to come back. Thank you for the support, efficient and fast. You are true professionals.</p>
+                    <span class="quote__body-icon icons icon-t3-quoteMark"></span>
+                </div>
+                <footer class="quote__footer">
+                    <span class="quote__footer-name">John Doe,</span>
+                    <cite class="quote__footer-title" title="VP of Marketing">VP of Marketing, <a class="quote__footer-link" href="">Royal Trader</a></cite>
+                </footer>
+            </blockquote>
+        '
+    }}
+
+
+
+    <h3>SliderContainer+iconTextLink</h3>
+    <h4>button, pagination, loop: true; speed:300</h4>
+    {{ renderContent 'sliderContainer'
+        button = true
+        pagination = true
+        loop = true
+        speed = 300
+        elements='
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-pie-chart"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-map-marker"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-screen"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-home"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-rocket"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-file-add"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-home"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+
+            <div class="icon-text-btn">
+                <h3 class="icon-text-btn__header"><span class="icon-text-btn__icon icons icon-envelope"></span>Content element</h3>
+                <p class="icon-text-btn__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitfhghfhor. Ut in nulla enim. Phasellus class aptent taciti sociosqu.</p>
+                <a class="icon-text-btn__link btn btn-default " title="Read more" href="#">Read more</a>
+            </div>
+        '
+    }}
+
+
+
+    <h3>SliderContainer+TextAndMedia</h3>
+    <h4>button, paggination: true; slidesPreView:2</h4>
+    {{ renderContent 'sliderContainer'
+        button = true
+        pagination = true
+        slidesPerView = 2
+        elements='
+            <div id="c35">
+                <h2>Nam iaculis nisi quis posuere gravida - Above, center</h2>
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="" target="thePicture">
+                                                <img title="Pellentesque tristique" alt="img" src="images/foto1.jpg" width="600" height="400">
+                                            </a>
+                                            <figcaption>
+                                                Pellentesque tristique erat ac metus tristique efficitur
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce-bodytext">
+                        <p>Duis sagittis, lorem in porttitor vestibulum, quam tellus venenatis velit, vitae aliquam mauris nunc vel justo. Donec vel consequat tortor. Etiam hendrerit id massa sit amet lobortis. Maecenas in risus quam. Pellentesque id libero vitae nibh feugiat porttitor eget id purus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c35">
+                <h2>Nam iaculis nisi quis posuere gravida - Above, center</h2>
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="" target="thePicture">
+                                                <img title="Pellentesque tristique" alt="img" src="images/foto1.jpg" width="600" height="400">
+                                            </a>
+                                            <figcaption>
+                                                Pellentesque tristique erat ac metus tristique efficitur
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce-bodytext">
+                        <p>Duis sagittis, lorem in porttitor vestibulum, quam tellus venenatis velit, vitae aliquam mauris nunc vel justo. Donec vel consequat tortor. Etiam hendrerit id massa sit amet lobortis. Maecenas in risus quam. Pellentesque id libero vitae nibh feugiat porttitor eget id purus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c35">
+                <h2>Nam iaculis nisi quis posuere gravida - Above, center</h2>
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="" target="thePicture">
+                                                <img title="Pellentesque tristique" alt="img" src="images/foto1.jpg" width="600" height="400">
+                                            </a>
+                                            <figcaption>
+                                                Pellentesque tristique erat ac metus tristique efficitur
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce-bodytext">
+                        <p>Duis sagittis, lorem in porttitor vestibulum, quam tellus venenatis velit, vitae aliquam mauris nunc vel justo. Donec vel consequat tortor. Etiam hendrerit id massa sit amet lobortis. Maecenas in risus quam. Pellentesque id libero vitae nibh feugiat porttitor eget id purus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c35">
+                <h2>Nam iaculis nisi quis posuere gravida - Above, center</h2>
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="" target="thePicture">
+                                                <img title="Pellentesque tristique" alt="img" src="images/foto1.jpg" width="600" height="400">
+                                            </a>
+                                            <figcaption>
+                                                Pellentesque tristique erat ac metus tristique efficitur
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce-bodytext">
+                        <p>Duis sagittis, lorem in porttitor vestibulum, quam tellus venenatis velit, vitae aliquam mauris nunc vel justo. Donec vel consequat tortor. Etiam hendrerit id massa sit amet lobortis. Maecenas in risus quam. Pellentesque id libero vitae nibh feugiat porttitor eget id purus.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="c35">
+                <h2>Nam iaculis nisi quis posuere gravida - Above, center</h2>
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="" target="thePicture">
+                                                <img title="Pellentesque tristique" alt="img" src="images/foto1.jpg" width="600" height="400">
+                                            </a>
+                                            <figcaption>
+                                                Pellentesque tristique erat ac metus tristique efficitur
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ce-bodytext">
+                        <p>Duis sagittis, lorem in porttitor vestibulum, quam tellus venenatis velit, vitae aliquam mauris nunc vel justo. Donec vel consequat tortor. Etiam hendrerit id massa sit amet lobortis. Maecenas in risus quam. Pellentesque id libero vitae nibh feugiat porttitor eget id purus.</p>
+                    </div>
+                </div>
+            </div>
+        '
+    }}
+
+
+
+    <h3>SliderContainer+images(lightbox)</h3>
+    <h4>button, paggination, loop: true; slidesPreView:4</h4>
+    {{ renderContent 'sliderContainer'
+        button = true
+        pagination = true
+        loop = true
+        slidesPerView = 4
+        elements='
+            <div id="c33">
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="images/foto1.jpg" title="" class="lightbox">
+                                                <img data-caption="This is Öresundsbron, the bridge between Sweden and Denmark." title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="192" height="128">
+                                            </a>
+                                            <figcaption>
+                                                This is Öresundsbron, the bridge between Sweden and Denmark.
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="c33">
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="images/foto1.jpg" title="" class="lightbox">
+                                                <img data-caption="This is Öresundsbron, the bridge between Sweden and Denmark." title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="192" height="128">
+                                            </a>
+                                            <figcaption>
+                                                This is Öresundsbron, the bridge between Sweden and Denmark.
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="c33">
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="images/foto1.jpg" title="" class="lightbox">
+                                                <img data-caption="This is Öresundsbron, the bridge between Sweden and Denmark." title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="192" height="128">
+                                            </a>
+                                            <figcaption>
+                                                This is Öresundsbron, the bridge between Sweden and Denmark.
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="c33">
+                <div class="ce-textpic ce-center ce-above">
+                    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                                <div class="ce-row">
+                                    <div class="ce-column">
+                                        <figure>
+                                            <a href="images/foto1.jpg" title="" class="lightbox">
+                                                <img data-caption="This is Öresundsbron, the bridge between Sweden and Denmark." title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="192" height="128">
+                                            </a>
+                                            <figcaption>
+                                                This is Öresundsbron, the bridge between Sweden and Denmark.
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        '
+    }}
+
+
+
+</div>
+</div>
+</div>

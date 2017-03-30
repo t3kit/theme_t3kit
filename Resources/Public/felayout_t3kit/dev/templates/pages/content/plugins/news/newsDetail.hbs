@@ -1,0 +1,123 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: News Details  #title in menu
+position: 2 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            {{> newsArchive}}
+            {{> newsTags}}
+            {{> newsCategories}}
+
+            {{> subNavigation}}
+
+        </div>
+        <div class="col-md-9">
+
+            <div id="c79">
+                <div class="news news-single">
+                    <div class="article" itemscope="itemscope" itemtype="http://schema.org/Article">
+                        <div class="news-article-header">
+                            <h3 itemprop="headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        </div>
+                        <div class="news-article-footer">
+                            <p>
+                                <!-- date -->
+                                <span class="news-list-date">
+                                    <time datetime="2015-10-06"> 10/06/2015
+                                        <meta itemprop="datePublished" content="2015-10-06"> </time>
+                                </span>
+                                <!-- categories -->
+                                <span class="news-list-category"> Technology </span>
+                                <!-- Tags -->
+                                <span class="news-list-tags" itemprop="keywords"> Tag Ipsum </span>
+                                <!-- author -->
+                                <span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"> created by
+                                    <span itemprop="name">John Doe</span>
+                                </span>
+                            </p>
+                        </div>
+                        <!-- teaser -->
+                        <div class="teaser-text" itemprop="description">
+                            <p>Ut ullamcorper tincidunt ligula eu mollis. Proin tristique scelerisque lobortis. Cras faucibus erat dictum metus aliquet maximus. Nullam ac nisl eu eros luctus lacinia sed consequat leo.</p>
+                        </div>
+                        <!-- fal media files -->
+                        <div class="news-img-wrap">
+                            <div class="outer">
+                                <div class="mediaelement mediaelement-image">
+                                    <a href="images/foto1.jpg" title="Foto 1 title" class="lightbox" rel="lightbox[myImageSet]">
+                                        <img title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="282" height="188"> </a>
+                                </div>
+                                <p class="news-img-caption"> This is Öresundsbron, the bridge between Sweden and Denmark. </p>
+                            </div>
+                        </div>
+                        <!-- main text -->
+                        <div class="news-text-wrap" itemprop="articleBody">
+                            <p>Nam id dignissim libero. Donec tempus enim sit amet interdum elementum. In suscipit faucibus pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque in euismod magna, feugiat dapibus
+                                ante. Nulla efficitur tempor molestie. In vel ex orci. Nullam velit ex, tempus eu velit non, condimentum vulputate massa. Phasellus eu tortor venenatis, volutpat turpis eget, gravida tellus. Ut iaculis, metus vitae tempor dignissim,
+                                orci augue dapibus sapien, sed aliquet arcu ligula in lacus. </p>
+                            <p> Suspendisse tempus maximus hendrerit. Praesent finibus, dolor ut sagittis lobortis, lacus orci interdum ex, at congue justo ante eget arcu. Duis congue vestibulum lectus, et ornare lorem bibendum vel. Nunc tristique porttitor sodales.
+                                Phasellus nibh dui, tincidunt eget massa id, suscipit venenatis ex. Curabitur vel erat eros. Quisque dapibus urna vel mauris convallis aliquam. Duis faucibus ex dictum, ullamcorper eros at, auctor mauris. Pellentesque tristique
+                                nulla sed leo mattis, ut aliquet neque blandit. Praesent blandit elementum velit, non ultrices lectus dictum non. Nunc porttitor tempus lacus et lacinia. </p>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce consectetur nulla ut dolor tincidunt, at auctor nisi faucibus. Etiam sit amet mauris nec urna tristique tempus ut sit amet lacus. Suspendisse
+                                potenti. Pellentesque condimentum sed sem eu tempus. Cras at ipsum porta, semper lectus id, sodales massa. Nam dictum magna sed metus ullamcorper, vitae bibendum urna efficitur. Ut egestas ante ante, at efficitur nisi mollis sed.
+                                Sed dui sapien, pulvinar in nunc id, facilisis venenatis tort</p>
+                        </div>
+                        <!-- related things -->
+                        <div class="news-related-wrap">
+                            <!-- Related news records -->
+                            <div class="news-related news-related-news">
+                                <h4>Related news </h4>
+                                <ul>
+                                    <li>
+                                        <span class="news-related-news-date">09/15/2015</span>
+                                        <a title="Nullam sagittis condimentum est quis malesuada." href="/content/plugins/news/article/nullam-sagittis-condimentum-est-quis-malesuada-2/"> Nullam sagittis condimentum est quis malesuada. </a>
+                                    </li>
+                                    <li>
+                                        <span class="news-related-news-date">09/15/2015</span>
+                                        <a title="Nullam sagittis condimentum est quis malesuada." href="/content/plugins/news/article/nullam-sagittis-condimentum-est-quis-malesuada-1/"> Nullam sagittis condimentum est quis malesuada. </a>
+                                    </li>
+                                    <li>
+                                        <span class="news-related-news-date">09/15/2015</span>
+                                        <a title="Nullam sagittis condimentum est quis malesuada." href="/content/plugins/news/article/nullam-sagittis-condimentum-est-quis-malesuada/"> Nullam sagittis condimentum est quis malesuada. </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- FAL related files -->
+                            <div class="news-related news-related-files">
+                                <h4> Related files </h4>
+                                <ul>
+                                    <li>
+                                        <span class="news-related-files-link">
+                                            <a href="/fileadmin/example_content/images/temp-carousel-1.jpg" class="download-link basic-class jpg"> temp-carousel-1.jpg </a>
+                                        </span>
+                                        <span class="news-related-files-size"> 58 KB </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Related links -->
+                            <div class="news-related news-related-links">
+                                <h4> Related links </h4>
+                                <ul>
+                                    <li>
+                                        <a href="http://t3kit.com">t3kit.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

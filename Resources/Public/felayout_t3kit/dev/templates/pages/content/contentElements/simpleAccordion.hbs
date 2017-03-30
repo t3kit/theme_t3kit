@@ -1,0 +1,20 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: Simple Accordion #title in menu
+position: 10 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            {{>simpleAccordion}}
+
+        </div>
+    </div>
+</div>

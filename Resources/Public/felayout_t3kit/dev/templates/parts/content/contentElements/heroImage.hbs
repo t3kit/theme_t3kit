@@ -1,0 +1,38 @@
+{{!-- Hero Image settings:
+		Dosen't render if "image" option disable;
+		image = "" (path to backgroud image);
+		header = "" (set element heading);
+		subHeader = "" (set element sub heading);
+		text = "" (set text content to element);
+		linkAsBtn = true/false (by deafalt false);
+		link = "" (set href to the element);
+		linkName = "" (set button or link name);
+		captionAligment = "" (change content aligment inside element,
+							can be: _left-align, _center-align, , _right-align);
+		animationStyle = "" (can be: _caption-animated-1, _caption-animated-2, _caption-animated-3);
+--}}
+
+
+
+{{#if this.image}}
+	<div class="hero-image js__hero-image" style="background-image:url('{{image}}'); min-height:{{height}};">
+		<div class="hero-image__caption-wrp {{#if this.captionAligment}}{{captionAligment}}{{/if}}">
+			<div class="hero-image__caption {{#if this.animationStyle}}{{animationStyle}}{{/if}}">
+				{{#if this.header}}
+					<h2 class="hero-image__caption-header">{{header}}</h2>
+				{{/if}}
+				{{#if this.subHeader}}
+					<h3 class="hero-image__caption-subheader">{{subHeader}}</h3>
+				{{/if}}
+				{{#if this.text}}
+					<p class="hero-image__caption-p">{{text}}</p>
+				{{/if}}
+				{{#if this.link}}
+					<div class="hero-image__caption-link ">
+						<a href="{{his.link}}" title="{{linkText}}" class="{{#if this.linkAsBtn}}btn btn-default {{/if}}">{{linkText}}</a>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+{{/if}}

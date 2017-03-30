@@ -1,0 +1,26 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: Quote #title in menu
+position: 6 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {{> subNavigation}}
+        </div>
+        <div class="col-md-9">
+            {{ renderContent 'quote'
+                    text="Top service. It’s nice to come back. Thank you for the support, efficient and fast. You are true professionals"
+                    name="John Doe"
+                    title="VP of Marketing"
+                    linkText="Royal Trader"
+            }}
+        </div>
+    </div>
+</div>

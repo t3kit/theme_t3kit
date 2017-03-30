@@ -1,0 +1,26 @@
+{{!-- SliderContainer settings:
+        pagination=true/false (by deafalt false);
+        loop=true/false (by deafalt false);
+        slidesperview = 1/2/3/4/5 (by deafalt 3);
+        speed=300/500/1000 (by deafalt 500);
+        autoplay=1000/2000/3000/5000/7000/10000 (by deafalt "false");
+        effect=slider/coverflow/flip/fade/cube (by deafalt slider);
+--}}
+
+
+<div class="slider-container slider-container-{{#if this.effect}}effect{{else}}default{{/if}}">
+    <div class="swiper-container slider-container__container js__slider-container__container" data-autoplay="{{#if this.autoplay}}{{this.autoplay}}{{else}}{{/if}}" data-loop="{{#if this.loop}}{{this.loop}}{{else}}{{/if}}" data-effect="{{#if this.effect}}{{this.effect}}{{else}}slider{{/if}}" data-slidesperview="{{#if this.slidesPerView}}{{this.slidesPerView}}{{else}}3{{/if}}" data-speed="{{#if this.speed}}{{this.speed}}{{else}}500{{/if}}">
+        <div class="swiper-wrapper slider-container__wrapper js__slider-container__wrapper">
+            {{#if this.elements}}
+                {{{elements}}}
+            {{/if}}
+        </div>
+    </div>
+    {{#if this.pagination}}
+        <div class=" swiper-pagination slider-container__pagination js__slider-container__pagination"></div>
+    {{/if}}
+    {{#if this.button}}
+        <div class="swiper-button-next slider-container__button-next js__slider-container__btn-next"></div>
+        <div class=" swiper-button-prev slider-container__button-prev js__slider-container__btn-prev"></div>
+    {{/if}}
+</div>

@@ -1,0 +1,124 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: News #title in menu
+position: 1 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+
+            {{> newsArchive}}
+            {{> newsTags}}
+            {{> newsCategories}}
+
+            {{> subNavigation}}
+
+        </div>
+
+        <div class="col-md-9">
+
+            <div id="c80">
+                <div class="news">
+                    <div class="news-list-view">
+                        <div class="page-navigation">
+                            <p> Page 1 of 2. </p>
+                            <ul class="f3-widget-paginator">
+                                <li class="current">1</li>
+                                <li> <a href="content/plugins/news/list/page/2/">2</a> </li>
+                                <li class="last next"> <a href="content/plugins/news/list/page/2/">Next</a> </li>
+                            </ul>
+                        </div>
+                        <div class="news-clear"></div>
+                        <div class="article articletype-0" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <!-- header -->
+                            <div class="news-article-header">
+                                <h3>
+                                    <a title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="content/plugins/news/article/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/">
+                                        <span itemprop="headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="news-img-wrap">
+                                <a title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="content/plugins/news/article/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/">
+                                    <img title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="100" height="67"> </a>
+                            </div>
+                            <!-- teaser -->
+                            <div class="teaser-text">
+                                <span itemprop="description">
+                                    <p>Ut ullamcorper tincidunt ligula eu mollis. Proin tristique scelerisque lobortis. Cras faucibus erat dictum metus aliquet maximus. Nullam ac nisl eu...</p>
+                                </span> <a class="more" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="content/plugins/news/article/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit/">Read more</a> </div>
+                            <!-- footer information -->
+                            <div class="news-article-footer">
+                                <p>
+                                    <!-- date -->
+                                    <span class="news-list-date">
+                                        <time datetime="2015-10-06"> 10/06/2015
+                                            <meta itemprop="datePublished" content="2015-10-06"> </time>
+                                    </span>
+                                    <!-- first category -->
+                                    <span class="news-list-category">Technology</span>
+                                    <!-- Tags -->
+                                    <span class="news-list-tags" itemprop="keywords"> Tag Ipsum </span>
+                                    <!-- author -->
+                                    <span class="news-list-author"> created by John Doe </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="article articletype-0" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <!-- header -->
+                            <div class="news-article-header">
+                                <h3>
+                                    <a title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. (copy 1)" href="content/plugins/news/article/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-copy-1/">
+                                        <span itemprop="headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. (copy 1)</span>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="news-img-wrap">
+                                <a title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. (copy 1)" href="content/plugins/news/article/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-copy-1/">
+                                    <img title="Foto 1 title" alt="Foto 1 alternative text" src="images/foto1.jpg" width="100" height="67"> </a>
+                            </div>
+                            <!-- teaser -->
+                            <div class="teaser-text">
+                                <span itemprop="description">
+                                    <p>Ut ullamcorper tincidunt ligula eu mollis. Proin tristique scelerisque lobortis. Cras faucibus erat dictum metus aliquet maximus. Nullam ac nisl eu...</p>
+                                </span> <a class="more" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. (copy 1)" href="content/plugins/news/article/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-copy-1/">Read more</a> </div>
+                            <!-- footer information -->
+                            <div class="news-article-footer">
+                                <p>
+                                    <!-- date -->
+                                    <span class="news-list-date">
+                                        <time datetime="2015-10-06"> 10/06/2015
+                                            <meta itemprop="datePublished" content="2015-10-06"> </time>
+                                    </span>
+                                    <!-- first category -->
+                                    <span class="news-list-category">Technology</span>
+                                    <!-- Tags -->
+                                    <span class="news-list-tags" itemprop="keywords"> Tag Ipsum </span>
+                                    <!-- author -->
+                                    <span class="news-list-author"> created by John Doe </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="page-navigation">
+                            <p> Page 1 of 2. </p>
+                            <ul class="f3-widget-paginator">
+                                <li class="current">1</li>
+                                <li> <a href="content/plugins/news/list/page/2/">2</a> </li>
+                                <li class="last next"> <a href="content/plugins/news/list/page/2/">Next</a> </li>
+                            </ul>
+                        </div>
+                        <div class="news-clear"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

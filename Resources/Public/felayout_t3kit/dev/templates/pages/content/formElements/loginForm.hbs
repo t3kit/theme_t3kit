@@ -1,0 +1,137 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: Login Form #title in menu
+position: 1 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {{> subNavigation}}
+        </div>
+        <div class="col-md-9">
+            <h2>Login form</h2>
+            <div class="tx-felogin-pi1">
+                <h3 class="felogin-welcome-header">User login</h3>
+                <div class="alert alert-info">Enter your username and password here in order to log in on the website:
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                </div>
+                <!-- ###LOGIN_FORM### -->
+                <form class="form-horizontal" action="" target="_top" onsubmit="; return true;">
+                    <fieldset>
+                        <legend>Login</legend>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="user">Username:</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="user" name="user" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="pass">Password:</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="password" id="pass" name="pass" value="" data-rsa-encryption="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-5">
+                                <input class="btn btn-default" type="button" name="submit" value="Login">
+                            </div>
+                            <!--###FORGOTP_VALID###-->
+                            <div class="col-sm-4">
+                                <p class="btn btn-link forgot-pass-link"><a href="" rel="nofollow">Forgot your password?</a></p>
+                                <!--###FORGOTP_VALID###-->
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- ###LOGIN_FORM### -->
+            </div>
+
+            <div class="tx-felogin-pi1">
+                <h3 class="felogin-forgot-header">Forgot your password?</h3>
+                <div class="alert alert-info">Please enter your username or email address. Instructions for resetting the password will be immediately emailed to you.
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                </div>
+                <!-- ###FORGOT_FORM### -->
+                <form class="form-horizontal" action="" >
+                    <div class="felogin-hidden">
+                        <input type="hidden" name="tx_felogin_pi1[forgot_hash]" value="bb3a244e6e0d7a93c9c7c0c502a63933">
+                    </div>
+                    <fieldset>
+                        <legend>Reset Password</legend>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="tx_felogin_pi1-forgot-email">Username or email address:</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" name="tx_felogin_pi1[forgot_email]" id="tx_felogin_pi1-forgot-email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-5">
+                                <input class="btn btn-default" type="button" name="submit" value="Reset Password">
+                            </div>
+                            <div class="col-sm-4">
+                                <p class="btn btn-link return-to-login"><a href="" rel="nofollow">Return to login form</a>&nbsp;</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- ###FORGOT_FORM### -->
+            </div>
+
+            <div class="tx-felogin-pi1">
+                <form class="form-horizontal" action="" target="_top">
+                    <fieldset>
+                        <legend>Logout</legend>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Username:</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">1111</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-5">
+                                <input class="btn btn-default" type="button" name="submit" value="Logout">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+
+            <div class="tx-felogin-pi1">
+                <h3 class="felogin-change-header">Change your password</h3>
+                <div class="alert alert-info">Please enter your new password twice. Password needs a minimum length of 6 chars.<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>
+
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Change your password</legend>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="tx_felogin_pi1-newpassword1">Enter new password</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="password" name="tx_felogin_pi1[password1]" id="tx_felogin_pi1-newpassword1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="tx_felogin_pi1-newpassword2">Repeat new password</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="password" name="tx_felogin_pi1[password2]" id="tx_felogin_pi1-newpassword2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-5">
+                                <input class="btn btn-default" type="submit" name="tx_felogin_pi1[changepasswordsubmit]" value="Change your password">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>

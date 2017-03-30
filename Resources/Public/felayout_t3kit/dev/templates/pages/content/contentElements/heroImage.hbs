@@ -1,0 +1,108 @@
+---
+#layout: default.hbs #by default it is default.hbs, but you can specify another one
+title: Hero Image #title in menu
+position: 8 #position in menu
+hideInMenu: false #if true, will be hidden in menu
+hideInBreadcrumbs: false #if true, will be hidden in breadcrumbs
+externalLink: false #just add link (http://link.com) instead of "false" to use this page like a link to external page.
+---
+
+{{> breadcrumbs}}
+
+<div class="container">
+	<h3>Hero Image (outside of container)</h3>
+	<br>
+	<br>
+</div>
+
+{{ renderContent 'heroImage'
+	image="images/parallax_image.jpg"
+	height="320px"
+	header="Vel mollis massa varius sed"
+	subHeader="Mauris tristique mollis orci"
+	text="Aliquam nibh nibh, egestas quis elit quis, efficitur suscipit nisl. Vestibulum mattis eu tortor vitae sollicitudin. Proin sed imperdiet tortor, sed elementum dolor. Mauris pellentesque ac augue fringilla suscipit. Nam eu nibh a sapien auctor ullamcorper ac eu sapien. Donec hendrerit pretium sem vitae mollis. Maecenas cursus vitae mi eu suscipit."
+	link="#"
+	linkText="Read more"
+	linkAsBtn=false
+	captionAligment="_left-align"
+	animationStyle="_caption-animated-1"
+}}
+
+<div class="container">
+	<br>
+	<br>
+	<h3>Hero Image (outside of container with Slider Container)</h3>
+</div>
+
+{{ renderContent 'sliderContainer'
+	button = true
+	pagination = true
+	loop = true
+	slidesPerView = 1
+	speed = 1000
+	autoplay = 3000
+	effect="fade"
+	elements='
+		<div class="hero-image js__hero-image" style="background-image:url(images/parallax_image.jpg); min-height:320px;">
+			<div class="hero-image__caption-wrp _center-align">
+				<div class="hero-image__caption _caption-animated-1">
+					<h2 class="hero-image__caption-header">Vel mollis massa varius sed</h2>
+					<h3 class="hero-image__caption-subheader">Mauris tristique mollis orci</h3>
+					<p class="hero-image__caption-p">Aliquam nibh nibh, egestas quis elit quis, efficitur suscipit nisl. Vestibulum mattis eu tortor vitae sollicitudin. Proin sed imperdiet tortor, sed elementum dolor. Mauris pellentesque ac augue fringilla suscipit. Nam eu nibh a sapien auctor ullamcorper ac eu sapien. Donec hendrerit pretium sem vitae mollis. Maecenas cursus vitae mi eu suscipit.</p>
+					<div class="hero-image__caption-link ">
+						<a href="" title="Read more" class="">Read more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	'
+}}
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+	<h3>Hero Image (inside of container)</h3>
+	<br>
+	<br>
+	{{ renderContent 'heroImage'
+		image="images/parallax_image.jpg"
+		height="320px"
+		header="Vel mollis massa varius sed"
+		subHeader="Mauris tristique mollis orci"
+		text="Aliquam nibh nibh, egestas quis elit quis, efficitur suscipit nisl. Vestibulum mattis eu tortor vitae sollicitudin. Proin sed imperdiet tortor, sed elementum dolor. Mauris pellentesque ac augue fringilla suscipit. Nam eu nibh a sapien auctor ullamcorper ac eu sapien. Donec hendrerit pretium sem vitae mollis. Maecenas cursus vitae mi eu suscipit."
+		link="#"
+		linkText="Read more"
+		linkAsBtn=true
+		captionAligment="_right-align"
+		animationStyle="_caption-animated-3"
+	}}
+	<br>
+	<br>
+	<h3>Hero Image (inside of container with Slider Container)</h3>
+	{{ renderContent 'sliderContainer'
+		button = true
+		pagination = true
+		loop = true
+		slidesPerView = 1
+		speed = 500
+		autoplay = 3000
+		effect="coverflow"
+		elements='
+			<div class="hero-image js__hero-image" style="background-image:url(images/parallax_image.jpg); min-height:320px;">
+				<div class="hero-image__caption-wrp _center-align">
+					<div class="hero-image__caption _caption-animated-2">
+						<h2 class="hero-image__caption-header">Vel mollis massa varius sed</h2>
+						<h3 class="hero-image__caption-subheader">Mauris tristique mollis orci</h3>
+						<p class="hero-image__caption-p">Aliquam nibh nibh, egestas quis elit quis, efficitur suscipit nisl. Vestibulum mattis eu tortor vitae sollicitudin. Proin sed imperdiet tortor, sed elementum dolor. Mauris pellentesque ac augue fringilla suscipit. Nam eu nibh a sapien auctor ullamcorper ac eu sapien. Donec hendrerit pretium sem vitae mollis. Maecenas cursus vitae mi eu suscipit.</p>
+						<div class="hero-image__caption-link ">
+							<a href="" title="Read more" class="">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		'
+	}}
+</div>
+</div>
+</div>

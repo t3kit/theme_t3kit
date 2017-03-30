@@ -1,0 +1,163 @@
+# ==================================
+# Default, command "grunt". Local development.
+# Start static server with livereload on localhost:9004
+# ==================================
+default:
+    #Dev
+    # - 'dev' #task helper
+    #Postcss autoprefixer
+    # - 'postcss'
+    #Localhost
+    # - 'localhost' #task helper
+    #Watch
+    - 'focus:default'
+
+
+default:
+    - 'dev1' #task helper
+    #Postcss autoprefixer
+    - 'postcss'
+    - 'browserSync'
+    - 'watch'
+
+# ==================================
+# Local development.
+# Start static server with livereload on localhost:9004
+# Provide all Front-End service files plus CSS styling for CMS needs, and copy it to CSS folder
+# ==================================
++css:
+    #Dev
+    - 'dev' #task helper
+    #Postcss autoprefixer
+    - 'postcss'
+    #Css
+    - 'clean:cssFolder'
+    - 'concurrent:cssProcess'
+    #Localhost
+    - 'localhost' #task helper
+    #Watch
+    - 'focus:css'
+
+
+# ==================================
+# Local development.
+# Start static server with livereload on localhost:9004
+# Provide all Front-End service files plus LESS styling for CMS needs, and copy it to LESS folder
+# in case that name "less" for this task will have conflict with real less compiler we renamed it to "lss"
+# ==================================
++less:
+    #Dev
+    - 'dev' #task helper
+    #Less
+    - 'clean:lessFolder'
+    - 'concurrent:lessProcess'
+    #Localhost
+    - 'localhost' #task helper
+    #Watch
+    - 'focus:less'
+
+
+# ==================================
+# Push static site
+# ==================================
+pushSite:
+    #Dev
+    - 'dev'
+    #Postcss autoprefixer
+    - 'postcss'
+    #Site
+    - 'clean:siteFolder'
+    - 'concurrent:siteProcess'
+    #---------------
+    - 'pushSiteBranch' #task helper
+    #---------------
+
+
+# ==================================
+# Provide all Front-End service files plus CSS styling for CMS needs, copy it to separate branch "css" and push it to remote git server.
+# ==================================
+pushCss:
+    - 'checkMaster' #task helper
+    #Dev
+    - 'dev' #task helper
+    #Postcss autoprefixer
+    - 'postcss'
+    #Css
+    - 'clean:cssFolder'
+    - 'concurrent:cssProcess'
+    #---------------
+    - 'pushCssBranch' #task helper
+    #---------------
+
+# ==================================
+# Provide all Front-End service files plus LESS styling for CMS needs, copy it to separate branch "less" and push it to remote git server.
+# ==================================
+pushLess:
+    - 'checkMaster' #task helper
+    #Dev
+    - 'dev' #task helper
+    #Less
+    - 'clean:lessFolder'
+    - 'concurrent:lessProcess'
+    #---------------
+    - 'pushLessBranch' #task helper
+    #---------------
+
+# ==================================
+# Code linters and validators
+# ==================================
+check:
+    #Dev
+    - 'dev'
+    #JS
+    - 'jshint:gruntConfigFiles'
+    - 'jscs:gruntConfigFiles'
+    - 'jshint:mainJs'
+    - 'jscs:mainJs'
+    #CSS
+    # - 'csslint'
+    #HTML
+    - 'htmlhint'
+
+
+# ==================================
+# Task helpers  ====================
+# ==================================
+dev:
+    #Dev
+    - 'clean:tempFolder'
+    - 'concurrent:devProcess'
+dev1:
+    #Dev
+    - 'clean:tempFolder'
+    - 'concurrent:devProcess'
+
+localhost:
+    #Localhost
+    - 'connect:localhost'
+    - 'notify:server'
+
+pushSiteBranch:
+    # Push to remote server with creating new branch [site]
+    - 'buildcontrol:site'
+    - 'notify:site'
+
+pushCssBranch:
+    # Push to remote server with creating new branch [css]
+    - 'buildcontrol:css'
+    - 'notify:css'
+
+pushLessBranch:
+    # Push to remote server with creating new branch [less]
+    - 'buildcontrol:less'
+    - 'notify:less'
+
+# check is local master branch synced with remote master
+checkMaster:
+    # check Is Master
+    - 'shell:isMaster'
+    # check is Updated
+    - 'shell:isUpdated'
+
+# ==================================
+# ==================================
