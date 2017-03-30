@@ -1,0 +1,8 @@
+/* TEAM */
+Team: t3kit
+Site: https://github.com/t3kit
+Location: Sweden, Ukraine, ...
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: TYPO3, t3kit, jQuery, Bootstrap
