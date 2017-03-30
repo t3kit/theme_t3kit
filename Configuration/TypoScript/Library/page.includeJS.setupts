@@ -1,41 +1,65 @@
-page {
-    includeJSFooterlibs {
-        jquery = {$themes.configuration.feLayoutPath}/jquery.js
-        jquery {
-            external = 0
-            # disableCompression =
-            # excludeFromConcatenation =
+[globalVar = LIT:less = {$themes.configuration.feLayoutMode}]
+    page {
+        includeJSFooterlibs {
+            jquery = {$themes.configuration.feLayoutPath}/jquery.js
+            jquery {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
+            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.js
+            bootstrap {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
+            components = {$themes.configuration.feLayoutPath}/components.js
+            components {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
         }
-        bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.js
-        bootstrap {
-            external = 0
-            # disableCompression =
-            # excludeFromConcatenation =
-        }
-        components = {$themes.configuration.feLayoutPath}/components.js
-        components {
-            external = 0
-            # disableCompression =
-            # excludeFromConcatenation =
+        includeJSFooter {
+            mainjs = {$themes.configuration.feLayoutPath}/main.js
+            mainjs {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
         }
     }
-}
+[global]
 
-# custom.js is disabled by default, but it could be enabled if it needed
-page {
-    includeJSFooter {
-        mainjs = {$themes.configuration.feLayoutPath}/main.js
-        mainjs {
-            external = 0
-            # disableCompression =
-            # excludeFromConcatenation =
+[globalVar = LIT:less = {$themes.configuration.feLayoutMode}]
+    page {
+        includeJSFooterlibs {
+            jquery = {$themes.configuration.feLayoutPath}/jquery.js
+            jquery {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
+            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.js
+            bootstrap {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
+            components = {$themes.configuration.feLayoutPath}/components.js
+            components {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
         }
-        # customJs = fileadmin/custom/js/custom.js
-        # customJs {
-        #     external = 0
-            # disableCompression =
-            # excludeFromConcatenation =
-        # }
-
+        includeJSFooter {
+            mainjs = {$themes.configuration.feLayoutPath}/main.js
+            mainjs {
+                external = 0
+                # disableCompression =
+                # excludeFromConcatenation =
+            }
+        }
     }
-}
+[global]
