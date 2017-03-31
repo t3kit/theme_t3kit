@@ -1,15 +1,13 @@
-(function($) {
-    'use strict';
+/* global jQuery */
 
-    // document load event
-    $(document).ready(function() {
+(function ($) {
+  'use strict'
 
-        var $paragraph = $('.js__img-text-link');
-
-        $paragraph.dotdotdot({
-            height: 60
-        });
-
-    });
-
-})(jQuery);
+  // document load event
+  $(document).ready(function () {
+    var $paragraph = $('.js__img-text-link')
+    $paragraph.dotdotdot({
+      height: 60
+    })
+  })
+})(jQuery)

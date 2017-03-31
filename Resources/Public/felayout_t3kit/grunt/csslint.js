@@ -1,11 +1,11 @@
 module.exports = {
+  options: {
+    csslintrc: '.csslintrc'
+  },
+  lint: {
     options: {
-        csslintrc: '.csslintrc'
+      import: false
     },
-    lint: {
-        options: {
-            import: false
-        },
-        src: ['<%= temp %>/main.css']
-    }
-};
+    src: ['<%= temp %>/main.css']
+  }
+}

@@ -4,7 +4,7 @@ module.exports = {
       '{,grunt/}*.js'
     ]
   },
-  app: {
+  main: {
     src: [
       'dev/js/main/**/*.js'
     ]
