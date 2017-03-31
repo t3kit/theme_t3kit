@@ -1,6 +1,6 @@
 {
   "name": "felayout_t3kit",
-  "version": "2",
+  "version": "2.0.0",
   "description": "Front-End layout for theme_t3kit project",
   "license": "MIT",
   "repository": "t3kit/theme_t3kit",
@@ -23,8 +23,16 @@
     "grunt-notify": "0.4.5",
     "grunt-postcss": "0.8.0",
     "grunt-shell": "2.1.0",
+    "grunt-standard": "3.0.3",
     "load-grunt-config": "0.19.2",
     "standard": "9.0.2",
     "time-grunt": "1.4.0"
+  },
+  "standard.options": {
+    "ignore": [
+      "css/",
+      "less/",
+      "temp/"
+    ]
   }
 }
