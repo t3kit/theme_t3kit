@@ -17,6 +17,7 @@ config {
     headerComment (
         This website based on t3kit project by Pixelant - www.t3kit.com
     )
+    sendCacheHeaders = 1
 }
 
 
