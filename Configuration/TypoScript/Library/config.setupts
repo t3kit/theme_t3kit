@@ -15,6 +15,7 @@ config {
     spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
     spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
     headerComment = {$themes.configuration.headerComment}
+    sendCacheHeaders = 1
 }
 
 
