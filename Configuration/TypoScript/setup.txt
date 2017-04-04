@@ -42,5 +42,9 @@ lib.fluidContent {
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/seo_basics/TypoScript/setup.ts">
 [global]
 
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('min')]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Min/TypoScript/setup.ts">
+[global]
+
 # Include setupTS files from fileadmin/templates/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/TypoScript/" extensions="setupts">
