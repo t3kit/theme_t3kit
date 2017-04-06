@@ -134,6 +134,27 @@
 				<source>Please upgrade your browser to improve your experience.</source>
 			</trans-unit>
 
+			<trans-unit id="iconFontSelector.exception.title">
+				<source>TCA Configuration error</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.populateItemsFromIcoMoonJson">
+				<source>isIcoMoon is set, but the file was not found.</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.missingConfigCssFile">
+				<source>cssFile is not set</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.missingFilename">
+				<source>cssFile is empty</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.fileExists">
+				<source>The specified file doesn't exist</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.isAllowedAbsPath">
+				<source>The specified file is not within the PATH_site OR within the lockRootPath</source>
+			</trans-unit>
+			<trans-unit id="iconFontSelector.exception.iconFileMissing">
+				<source>Missing font file included from the css</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
