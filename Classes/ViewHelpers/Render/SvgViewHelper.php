@@ -38,14 +38,17 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
      */
     protected $escapeOutput = false;
 
-
+    /**
+     * Initialize arguments
+     *
+     * @return void
+     */
     public function initializeArguments()
     {
         parent::initializeArguments();
         $this->registerArgument('class', 'string', 'Specifies an alternate class for the svg', false);
         $this->registerArgument('width', 'float', 'Specifies a width for the svg', false);
         $this->registerArgument('height', 'float', 'Specifies a height for the svg', false);
-
     }
 
     /**
@@ -55,27 +58,24 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
      */
     public function render($source)
     {
-        $sourceAbs = PATH_site.$source;
+        $sourceAbs = PATH_site . $source;
 
-        /*
-        *   Todo: add absoulte path for source
-        *
-        $source = 'typo3conf/ext/theme_t3kit/Resources/Private/Templates/Theme/Content.html';
-
-        if (\TYPO3\CMS\Core\Utility\GeneralUtility::isAllowedAbsPath($source)) {
-          return 'unable to open file';
-        }
-
-        $sourceAbs = \TYPO3\CMS\Core\Utility\GeneralUtility::getFileAbsFileName($source);
-        *
-        */
         if (!file_exists($sourceAbs)) {
-            return 'no SVG file on /'.$source;
+            return '<!-- unable to open file: ' . $source . ' (missing) -->';
         }
+
+        $finfo = \mime_content_type($sourceAbs);
+
+        if ($finfo !== 'image/svg+xml') {
+            return '<!-- unable to open file: ' . $source . ' (' . $finfo . ') -->';
+        }
+
         return $this->getInlineSvg($sourceAbs);
     }
 
     /**
+     * Get xml from SVG
+     *
      * @param string $source
      *
      * @return string
