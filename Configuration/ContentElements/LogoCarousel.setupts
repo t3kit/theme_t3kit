@@ -8,7 +8,7 @@ tt_content {
                 references.fieldName = image
                 as = logos
             }
-            20 = T3kit\T3kitExtensionTools\DataProcessing\FlexFormProcessor
+            20 = T3kit\themeT3kit\DataProcessing\FlexFormProcessor
             20 {
                 fieldName = pi_flexform
                 as = settings
