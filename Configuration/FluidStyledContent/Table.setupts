@@ -1,7 +1,7 @@
 tt_content {
     table {
         dataProcessing {
-            1910 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+            1910 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
             1910 {
                 classMappings {
                     0 = table
@@ -11,7 +11,7 @@ tt_content {
                     14 = table table-bordered table-condensed table-hover
                 }
             }
-            365 = T3kit\T3kitExtensionTools\DataProcessing\LayoutClassProcessor
+            365 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
             365 {
                 fieldName = wrapper
                 as = wrapperClass
