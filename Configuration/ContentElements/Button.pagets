@@ -4,9 +4,6 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:button.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:button.description
             iconIdentifier = content-elements-button
-            tt_content_defValues {
-                CType = button
-            }
         }
     }
     show := addToList(button)
