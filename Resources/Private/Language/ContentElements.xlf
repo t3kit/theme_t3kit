@@ -3,6 +3,27 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit">
         <header/>
         <body>
+
+			<trans-unit id="tt_content.appearance">
+                <source>Appearance</source>
+            </trans-unit>
+            <trans-unit id="tt_content.aligning">
+                <source>Aligning</source>
+            </trans-unit>
+            <trans-unit id="tt_content.margin_top">
+                <source>Margin top</source>
+            </trans-unit>
+            <trans-unit id="tt_content.margin_bottom">
+                <source>Margin bottom</source>
+            </trans-unit>
+            <trans-unit id="label.default">
+                <source>Default</source>
+            </trans-unit>
+
+
+
+
+
             <trans-unit id="tt_content.palette.imageSize">
                 <source>Size of images</source>
             </trans-unit>
@@ -101,11 +122,13 @@
             <trans-unit id="bootstrapSlider.flexform.quickselect">
                 <source>Quickselect</source>
             </trans-unit>
+
+
             <trans-unit id="bigIconTextButton.title">
-                <source>Icon,Text and Link</source>
+                <source>Big icon,Text and Button</source>
             </trans-unit>
             <trans-unit id="bigIconTextButton.description">
-                <source>Big icon, header, text and link</source>
+                <source>Big icon, header, text and button</source>
             </trans-unit>
             <trans-unit id="bigIconTextButton.buttonText">
                 <source>Button text</source>
@@ -127,7 +150,7 @@
                 <source>Icon,Text and Button</source>
             </trans-unit>
             <trans-unit id="iconTextButton.description">
-                <source>Icon,Text and Button</source>
+                <source>Icon, header, text and button</source>
             </trans-unit>
             <trans-unit id="iconTextButton.buttonText">
                 <source>Button text</source>
@@ -371,24 +394,7 @@
             </trans-unit>
 
 
-            <trans-unit id="tt_content.wrapper">
-                <source>Appearance</source>
-            </trans-unit>
-            <trans-unit id="tt_content.wrapper.description">
-                <source>Select appearance of content element (if available)</source>
-            </trans-unit>
-            <trans-unit id="tt_content.aligning">
-                <source>Aligning</source>
-            </trans-unit>
-            <trans-unit id="tt_content.wrapper_margin_top">
-                <source>Margin top</source>
-            </trans-unit>
-            <trans-unit id="tt_content.wrapper_margin_bottom">
-                <source>Margin bottom</source>
-            </trans-unit>
-            <trans-unit id="label.default">
-                <source>Default</source>
-            </trans-unit>
+
 
             <trans-unit id="elem.flexform.disableWholeAreaLink">
                 <source>Disable whole area link</source>
