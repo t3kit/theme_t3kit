@@ -32,8 +32,8 @@
                             <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:iconTextButton.flexform.iconClass</label>
                             <config>
                                 <type>user</type>
-                                <userFunc>T3kit\T3kitExtensionTools\UserFunction\IconFontSelector->renderField</userFunc>
-                                <cssFile>EXT:theme_t3kit/Resources/Public/felayout_t3kit/fonts/style.css</cssFile>
+                                <userFunc>T3kit\themeT3kit\UserFunction\IconFontSelector->renderField</userFunc>
+                                <cssFile>EXT:theme_t3kit/Resources/Public/felayout_t3kit/dev/fonts/style.css</cssFile>
                                 <isIcoMoon>1</isIcoMoon>
                             </config>
                         </TCEforms>
