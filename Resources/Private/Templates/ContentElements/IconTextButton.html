@@ -1,10 +1,9 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:layout name="ContentFooter" />
-	<f:debug>{_all}</f:debug>
+<f:layout name="Default" />
 
-	<f:section name="content">
-	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
+<f:section name="Main">
+<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
 	<div class="icon-text-btn__wrp">
 		<div class="icon-text-btn{f:if(condition: settings.disableWholeAreaLink, then: '', else: ' _whole-area-link')}">
 			<h3 class="icon-text-btn__header">
@@ -33,9 +32,9 @@
 					<span class="icon-text-btn__sham-link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</span>
 				</f:if>
 	 		</f:if>
-
 		</div>
 	</div>
-	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
-	</f:section>
-</div>
+<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
+</f:section>
+
+</html>

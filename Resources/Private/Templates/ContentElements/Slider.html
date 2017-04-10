@@ -1,18 +1,13 @@
 {namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:layout name="ContentFooter" />
+<f:layout name="Default" />
 
-	<f:section name="content">
-	<!-- theme_t3kit: Templates/ContentElements/Slider.html [begin] -->
-
+<f:section name="Main">
+<!-- theme_t3kit: Templates/ContentElements/Slider.html [begin] -->
 	<f:if condition="{slides}">
-
-		<!-- <div class="img-slider js__img-slider"> -->
-
 		<div class="img-slider swiper-container js__img-slider" data-autoplay="{f:if(condition: '{settings.autoplay} > 0', then: settings.autoplay)}">
 			<div class="swiper-wrapper img-slider__wrp">
-			<!-- <div class=" img-slider__wrp"> -->
 				<f:for each="{slides}" as="image">
 					<div class="swiper-slide img-slider__slide {xtools:get.arrayKeyValue(array: settings.appearance, key: image.referenceProperties.tx_themet3kit_slide_appearance)}">
 						<div data-background="{f:uri.image(src: '{image.uid}', treatIdAsReference:"1", width:'{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}')}" class="swiper-lazy img-slider__slide-bg">
@@ -52,7 +47,7 @@
 			</f:if>
 		</div>
 	</f:if>
-	<!-- theme_t3kit: Templates/ContentElements/Slider.html [end] -->
-	</f:section>
-</div>
+<!-- theme_t3kit: Templates/ContentElements/Slider.html [end] -->
+</f:section>
 
+</html>
