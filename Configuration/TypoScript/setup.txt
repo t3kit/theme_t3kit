@@ -1,35 +1,26 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:themes/Configuration/TypoScript/setup.txt">
+
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library/" extensions="setupts">
 
-# Add this extensions rootPaths to lib.fluidcontent (fluid_styled_content)
-lib.fluidContent {
-    templateRootPaths {
-        1910 =  EXT:theme_t3kit/Resources/Private/Templates/ContentElements
-        1911 =  EXT:theme_t3kit/Resources/Private/Templates/FluidStyledContent
-    }
-    partialRootPaths {
-        1910 =  EXT:theme_t3kit/Resources/Private/Partials/ContentElements
-        1911 =  EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent
-    }
-    layoutRootPaths {
-        1910 =  EXT:theme_t3kit/Resources/Private/Layouts/ContentElements
-        1911 =  EXT:theme_t3kit/Resources/Private/Layouts/FluidStyledContent
-    }
-}
 # Overrides of fluid_styled_content
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent/" extensions="setupts">
+
 # Add our content elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements/" extensions="setupts">
+
 # Add our Grid elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/GridElements/TypoScript" extensions="setupts">
 
-# Extensions
+# Include ApplicationContext setupts
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/ApplicationContext/" extensions="setupts">
+
+# Extensions:
+# News
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts">
 [global]
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rtehtmlarea')]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">
-[global]
+
+
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('solr')]
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts">
     # Solr indexer
@@ -38,11 +29,15 @@ lib.fluidContent {
     # {$themes.configuration.features.newsDefaultDetailPid}
 [global]
 
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('seo_basics')]
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/seo_basics/TypoScript/setup.ts">
-[global]
+# TODO: rtehtmlarea ?
+# [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rtehtmlarea')]
+#     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Rtehtmlarea/TypoScript/setup.txt">
+# [global]
 
-# Include setupTS files from fileadmin/templates/Configuration/TypoScript
-<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/TypoScript/" extensions="setupts">
+# TODO: seo_basics ?
+# [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('seo_basics')]
+# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/seo_basics/TypoScript/setup.ts">
+# [global]
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/ApplicationContext/" extensions="setupts">
+# Include setupTS files from fileadmin/Configuration/TypoScript
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/" extensions="setupts">

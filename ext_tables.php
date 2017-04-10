@@ -23,9 +23,7 @@ $boot = function ($_EXTKEY) {
             'content-elements-copyrightText' => 'copyrightText.svg',
             'content-elements-contacts' => 'contacts.svg',
             'content-elements-button' => 'customElement.svg',
-            'content-elements-heroImage' => 'fullWidthImage.svg',
-            'content-center-vertical-text-img-left' => 'content-center-vertical-text-img-left.svg',
-            'content-center-vertical-text-img-right' => 'content-center-vertical-text-img-right.svg',
+            'content-elements-heroImage' => 'fullWidthImage.svg'
         ];
         foreach ($contentElementIcons as $identifier => $contentElementIcon) {
             $iconRegistry->registerIcon(

@@ -2,6 +2,13 @@
 # Basic: Basic constants
 #############################################
 
+# Base configuration
+themes.configuration.siteName = t3kit
+themes.languages.default.isoCode = en_GB
+themes.configuration.headerComment = This website is based on t3kit project by Pixelant - www.t3kit.com
+
+
+
 # customsubcategory=header_type= Type of header
 # customsubcategory=development_mode= Development Mode
 # customsubcategory=layout= Layout

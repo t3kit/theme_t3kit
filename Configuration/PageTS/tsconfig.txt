@@ -1,33 +1,14 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/BackendLayouts" extensions="pagets">
+
 # Overrides of fluid_styled_content
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent" extensions="pagets">
+
 # Add our content elements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/ContentElements/ContentElements.pagets">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements" extensions="pagets">
+
 # Add our Grid elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/GridElements/PageTS" extensions="pagets">
-
-# Just delete the backendlayouts which arn't required
-#
-#backendlayouts.Content >
-#backendlayouts.ContentMenu >
-#backendlayouts.ContentMenuSidebar >
-#backendlayouts.ContentSidebar >
-#backendlayouts.ContentSidebarMenu >
-#backendlayouts.Empty >
-#backendlayouts.GridContainer >
-#backendlayouts.MenuContent >
-#backendlayouts.MenuContentSidebar >
-#backendlayouts.MenuSidebarContent >
-#backendlayouts.SidebarContent >
-#backendlayouts.SidebarContentMenu >
-#backendlayouts.SidebarMenuContent >
-#backendlayouts.StartPage >
-#backendlayouts.TopContentContent >
-#backendlayouts.TopContentContentMenu >
-#backendlayouts.TopContentContentSidebar >
-#backendlayouts.TopContentMenuContent >
-#backendlayouts.TopContentMenuContentSidebar >
-#backendlayouts.TopContentSidebarContent >
 
 
 #  Extensions:
@@ -36,21 +17,12 @@
 # News
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/PageTS/tsconfig.txt">
 
+
 # ==================================================
 # Hide "Button Group" element.
 # Added by Themes extension
 # ==================================================
 mod.wizards.newContentElement.wizardItems.forms.elements.buttonContent >
-
-
-# Include  PageTS files from fileadmin/templates/Configuration/PageTS
-<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/templates/Configuration/PageTS" extensions="pagets">
-
-TCEMAIN.permissions {
-	groupid = 3
-	user = show,editcontent,new,edit,delete
-	group = show,editcontent,new,edit,delete
-}
 
 # hide unneeded button content element from Themes ext
 TCEFORM.tt_content.CType.removeItems = themes_buttoncontent_pi1
@@ -60,3 +32,14 @@ TCEFORM.tt_content.tx_themes_variants.disabled = 1
 TCEFORM.tt_content.tx_themes_responsive.disabled = 1
 TCEFORM.tt_content.tx_themes_icon.disabled = 1
 TCEFORM.tt_content.tx_themes_behaviour.disabled = 1
+
+# TODO: check
+TCEMAIN.permissions {
+	groupid = 3
+	user = show,editcontent,new,edit,delete
+	group = show,editcontent,new,edit,delete
+}
+
+# Include  PageTS files from fileadmin/Configuration/PageTS
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/PageTS/" extensions="pagets">
+
