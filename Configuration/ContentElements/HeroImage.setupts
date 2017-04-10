@@ -1,5 +1,5 @@
 tt_content {
-    heroImage =< lib.fluidContent
+    heroImage =< lib.contentElement
     heroImage {
         templateName = HeroImage
         dataProcessing {
@@ -13,6 +13,9 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
+            # "inherit" from lib.fluidContent
+            1910 < lib.fluidContent.dataProcessing.1910
+
         }
         settings {
             maxWidth = 1920
