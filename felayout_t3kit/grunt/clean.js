@@ -1,5 +1,8 @@
 module.exports = {
   lessFolder: {
+    options: {
+      force: true
+    },
     files: [{
       dot: true,
       src: [
@@ -8,6 +11,9 @@ module.exports = {
     }]
   },
   cssFolder: {
+    options: {
+      force: true
+    },
     files: [{
       dot: true,
       src: [

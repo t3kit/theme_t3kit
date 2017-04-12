@@ -8,10 +8,11 @@ module.exports = {
       src: ['<%= temp %>/*.css', '<%= temp %>/*.js']
     },
     options: {
-      proxy: `${conf.var.host}`,
+      proxy: `${conf.var.proxy}`,
       serveStatic: ['<%= temp %>'],
       watchTask: true,
       open: false,
+      port: 9001,
       snippetOptions: {
         rule: {
           match: /<\/head>/i,

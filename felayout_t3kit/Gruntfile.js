@@ -1,4 +1,4 @@
-const conf = require('../conf')
+const conf = require('./conf')
 
 module.exports = function (grunt) {
   require('time-grunt')(grunt)
