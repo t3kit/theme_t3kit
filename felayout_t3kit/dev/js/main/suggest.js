@@ -1,9 +1,9 @@
 /* global tx_solr_suggestUrl, Awesomplete, touchSupport, jQuery */
 
 // container for Search suggestion data
-var mainSearchInputList = {};
+var mainSearchInputList = {}
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // init function

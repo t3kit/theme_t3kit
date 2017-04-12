@@ -1,6 +1,6 @@
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
