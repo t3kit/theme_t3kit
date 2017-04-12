@@ -166,7 +166,7 @@ jQuery(function ($) {
 // elements
 /* global Swiper, jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
@@ -208,7 +208,7 @@ jQuery(function ($) {
 
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
   // document load event
   $(document).ready(function () {
@@ -252,7 +252,7 @@ jQuery(function ($) {
 
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
@@ -278,7 +278,7 @@ jQuery(function ($) {
 
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
@@ -300,7 +300,7 @@ jQuery(function ($) {
 })(jQuery)
 
 /* global Swiper,jQuery */
-(function ($) {
+;(function ($) {
   'use strict'
   // document load event
   $(document).ready(function () {
@@ -412,7 +412,7 @@ jQuery(function ($) {
 
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
@@ -428,7 +428,7 @@ jQuery(function ($) {
 // plugins
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
@@ -495,9 +495,9 @@ $('.js__news-simple-list__dotdotdot').dotdotdot({
 /* global tx_solr_suggestUrl, Awesomplete, touchSupport, jQuery */
 
 // container for Search suggestion data
-var mainSearchInputList = {};
+var mainSearchInputList = {}
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // init function
@@ -563,7 +563,7 @@ var mainSearchInputList = {};
 // ########## general.js ###########
 /* global jQuery */
 
-(function ($) {
+;(function ($) {
   'use strict'
 
   // document load event
