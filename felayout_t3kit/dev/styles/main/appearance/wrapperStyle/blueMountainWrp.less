@@ -1,0 +1,52 @@
+.blue-mountain-wrp {
+    background: @main-color;
+}
+.blue-mountain-wrp a {
+    color: tint(@main-text-color, 100%);
+
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        color: tint(@main-text-color, 100%);
+        border-color: tint(@main-color, 50%);
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+    color: tint(@main-text-color, 100%);
+    border-color: tint(@main-color, 50%);
+    }
+}
+
+.blue-mountain-wrp p {
+    color: shade(@main-text-color, 100%);
+    -webkit-font-smoothing: antialiased;
+
+}
+.blue-mountain-wrp  {
+    h1,h2,h3,h4,h5 {
+        color: tint(@main-text-color, 100%);
+        -webkit-font-smoothing: antialiased;
+    }
+
+}
+
+.blue-mountain-wrp  .icons{
+    color: tint(@main-color, 90%);
+    border-color: tint(@main-color, 50%);
+}
+
+.blue-mountain-wrp .big-icon-text-btn__sham-link{
+    color: tint(@main-color, 90%);
+}
+
+.blue-mountain-wrp .icon-text-btn__sham-link{
+    color: tint(@main-color, 90%);
+}
+
+.blue-mountain-wrp .img-text-link__sham-link{
+    color: tint(@main-color, 90%);
+}

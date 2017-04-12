@@ -1,0 +1,78 @@
+.social-icons {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 30px 0 20px;
+}
+.social-icons__item {
+    position: relative;
+    display: inline-block;
+    color: @social-icons-bg-color;
+    padding-top: 12px;
+    padding: 0 8px;
+    margin: 6px 10px;
+    transition: color .2s;
+
+    & > .icons {
+        position: relative;
+        font-size: 16px;
+        padding: 8px;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);   // ios8 safari fix - only works in this order
+        }
+
+        &:after {
+            transition: border-color .2s;
+            content: '';
+            position: absolute;
+            height: 36px;
+            width: 36px;
+            border: 2px solid fade(@social-icons-bg-color, 30%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);   // ios8 safari fix - only works in this order
+        }
+    }
+}
+.no-touch .footer .social-icons__item {
+    &:hover {
+        color: @social-icons-hover-color;
+
+        & > .icons:after {
+            border-color: fade(@social-icons-hover-color, 50%);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .social-icons__item {
+        margin: 0;
+        margin-right: 8px;
+    }
+}
+
+// =================================
+// === Header Social Icons =========
+// =================================
+.header-middle__social-icon .social-icons {
+    padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .header-middle__social-icon .social-icons {
+        float: right;
+        width: 60%;
+        text-align: right;
+        padding: 0;
+        padding-right: 10px;
+        height: @header-middle-height;
+        line-height: @header-middle-height;
+    }
+}
