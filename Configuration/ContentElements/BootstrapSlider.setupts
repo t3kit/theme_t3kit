@@ -15,7 +15,8 @@ tt_content {
                 as = settings
             }
             # "inherit" from lib.fluidContent
-            1910 < lib.fluidContent.dataProcessing.1910
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
         }
     }
 }
