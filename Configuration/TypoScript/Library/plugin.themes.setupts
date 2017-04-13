@@ -1,4 +1,3 @@
-
 plugin.tx_themes {
     view {
         templateRootPaths {

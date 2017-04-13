@@ -1,19 +1,19 @@
 [globalVar = LIT:less = {$themes.configuration.feLayoutMode}]
     page {
         includeJSFooterlibs {
-            jquery = {$themes.configuration.feLayoutPath}/jquery.js
+            jquery = {$themes.configuration.feLayoutPath}/less/jquery.js
             jquery {
                 external = 0
                 # disableCompression =
                 # excludeFromConcatenation =
             }
-            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.js
+            bootstrap = {$themes.configuration.feLayoutPath}/less/bootstrap.js
             bootstrap {
                 external = 0
                 # disableCompression =
                 # excludeFromConcatenation =
             }
-            components = {$themes.configuration.feLayoutPath}/components.js
+            components = {$themes.configuration.feLayoutPath}/less/components.js
             components {
                 external = 0
                 # disableCompression =
@@ -21,7 +21,7 @@
             }
         }
         includeJSFooter {
-            mainjs = {$themes.configuration.feLayoutPath}/main.js
+            mainjs = {$themes.configuration.feLayoutPath}/less/main.js
             mainjs {
                 external = 0
                 # disableCompression =
@@ -31,22 +31,22 @@
     }
 [global]
 
-[globalVar = LIT:less = {$themes.configuration.feLayoutMode}]
+[globalVar = LIT:css = {$themes.configuration.feLayoutMode}]
     page {
         includeJSFooterlibs {
-            jquery = {$themes.configuration.feLayoutPath}/jquery.js
+            jquery = {$themes.configuration.feLayoutPath}/css/jquery.js
             jquery {
                 external = 0
                 # disableCompression =
                 # excludeFromConcatenation =
             }
-            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.js
+            bootstrap = {$themes.configuration.feLayoutPath}/css/bootstrap.js
             bootstrap {
                 external = 0
                 # disableCompression =
                 # excludeFromConcatenation =
             }
-            components = {$themes.configuration.feLayoutPath}/components.js
+            components = {$themes.configuration.feLayoutPath}/css/components.js
             components {
                 external = 0
                 # disableCompression =
@@ -54,7 +54,7 @@
             }
         }
         includeJSFooter {
-            mainjs = {$themes.configuration.feLayoutPath}/main.js
+            mainjs = {$themes.configuration.feLayoutPath}/css/main.js
             mainjs {
                 external = 0
                 # disableCompression =
