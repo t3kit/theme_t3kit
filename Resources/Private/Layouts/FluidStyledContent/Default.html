@@ -2,7 +2,7 @@
 <f:spaceless>
 
 	<f:comment><!-- ### Wrapper class===frame_class||Margin Top===space_before_class||Margin Bottom===space_after_class ### --></f:comment>
-	<f:if condition="({data.frame_class} && ({data.frame_class} != 'defaultr')) || {data.space_before_class} || {data.space_after_class}">
+	<f:if condition="({data.frame_class} && ({data.frame_class} != 'default')) || {data.space_before_class} || {data.space_after_class}">
 		<div class="{data.frame_class} {data.space_before_class} {data.space_after_class}">
 	</f:if>
 
@@ -29,7 +29,7 @@
 	</div>
 
 	<f:comment><!-- ### Wrapper class===frame_class||Margin Top===space_before_class||Margin Bottom===space_after_class ### --></f:comment>
-	<f:if condition="{data.frame_class} || {data.space_before_class} || {data.space_after_class}">
+	<f:if condition="({data.frame_class} && ({data.frame_class} != 'default')) || {data.space_before_class} || {data.space_after_class}">
 		</div>
 	</f:if>
 
