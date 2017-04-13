@@ -2,6 +2,7 @@
 lib.contentElement {
     templateRootPaths {
         2000 =  EXT:theme_t3kit/Resources/Private/Templates/ContentElements/
+        3000 =  EXT:theme_t3kit/Resources/Private/Templates/FluidStyledContent/
     }
     partialRootPaths {
         2000 =  EXT:theme_t3kit/Resources/Private/Partials/ContentElements/
@@ -11,13 +12,24 @@ lib.contentElement {
     }
 }
 
-lib.fluidContent {
+lib.contentElement {
     dataProcessing {
+
+        # Layout
+        # will add variable layoutClass to FLUIDTEMPLATE
+        800 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
+        800 {
+            classMappings {
+                # example of layout class
+                # TODO:
+                100 = example-generic-layout
+            }
+        }
 
         # Aligning
         # will add variable alignClass to FLUIDTEMPLATE
-        395 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        395 {
+        830 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
+        830 {
             fieldName = aligning
             as = alignClass
             classMappings {
@@ -25,16 +37,35 @@ lib.fluidContent {
                 102 = center-block
             }
         }
+    }
+}
 
-        # Layout
-        # will add variable layoutClass to FLUIDTEMPLATE
-        1910 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        1910 {
+
+# ====================================================
+# FluidStyledContent elements
+# ====================================================
+
+# Table element
+lib.contentElement {
+    dataProcessing {
+        800 {
             classMappings {
-                # 102 = example-generic-layout
+                # Specific layout for Table element
+                310 = table-responsive
+            }
+        }
 
-                # Add an layout class for specific content elements
-                # 110 = class
+        # Table Class
+        # will add variable tableClass to table FLUIDTEMPLATE
+        840 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
+        840 {
+            fieldName = table_class
+            as = tableClass
+            classMappings {
+                110 = table table-striped
+                111 = table table-striped table-bordered
+                112 = table table-striped table-bordered table-condensed
+                113 = table table-bordered table-condensed table-hover
             }
         }
     }

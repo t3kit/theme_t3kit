@@ -1,0 +1,69 @@
+tt_content {
+    bullets {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    div {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    header {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    text {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    textpic {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    textmedia {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    image {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    html {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    list {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+    table {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+            840 < lib.contentElement.dataProcessing.840
+        }
+    }
+    uploads {
+        dataProcessing {
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+    }
+}

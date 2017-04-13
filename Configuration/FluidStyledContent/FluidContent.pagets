@@ -3,7 +3,8 @@
 TCEFORM.tt_content.layout {
     removeItems = 1,2,3
     addItems {
-        # 100 = Example generic layout for all content
+        # TODO:
+        100 = Example generic layout for all content
     }
 }
 
@@ -19,6 +20,7 @@ TCEFORM.tt_content.layout {
 #         }
 #     }
 # }
+
 
 # Appearance
 TCEFORM.tt_content.frame_class.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tt_content.appearance
@@ -90,4 +92,30 @@ TCEFORM.tt_content.aligning {
        101 = Text align center
        102 = Block center
    }
+}
+
+
+# ====================================================
+# FluidStyledContent elements
+# ====================================================
+
+# Table element
+TCEFORM.tt_content.layout {
+    types {
+        table {
+            addItems {
+                --div-- = Table layout:
+                310 = Responsive Table
+            }
+        }
+    }
+}
+TCEFORM.tt_content.table_class {
+    removeItems = bordered,striped
+    addItems {
+        110 = Striped
+        111 = Striped Bordered
+        112 = Striped Bordered Condesed
+        113 = Bordered Condesed Hover
+    }
 }
