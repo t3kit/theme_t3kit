@@ -1,32 +1,27 @@
-<f:layout name="HeaderContentFooter" />
-
-<f:section name="content">
-
-    <f:if condition="{data.pi_flexform.data.columns.lDEF.grid_container.vDEF}">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-    </f:if>
-
-                    <div class="slider-container slider-container-{f:if(condition: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', then: 'effect', else: 'default')}">
-                        <div class="swiper-container slider-container__container js__slider-container__container" data-autoplay="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.autoplay.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.autoplay.vDEF}')}" data-loop="{f:if(condition: data.pi_flexform.data.columns.lDEF.loop.vDEF, then: 'loop')}" data-effect="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', else: 'slider')}" data-slidesperview="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.slidesPerView.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.slidesPerView.vDEF}', else: 3)}" data-speed="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.speed.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.speed.vDEF}', else: 300)}">
-                            <div class="swiper-wrapper slider-container__wrapper js__slider-container__wrapper">
-                                    <f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
-                            </div>
-                        </div>
-                    <f:if condition="{data.pi_flexform.data.columns.lDEF.paggination.vDEF}">
-                        <div class=" swiper-pagination slider-container__pagination js__slider-container__pagination"></div>
-                    </f:if>
-                    <f:if condition="{data.pi_flexform.data.columns.lDEF.button.vDEF}">
-                        <div class="swiper-button-next slider-container__button-next js__slider-container__btn-next"></div>
-                        <div class=" swiper-button-prev slider-container__button-prev js__slider-container__btn-prev"></div>
-                    </f:if>
-                    </div>
-
-    <f:if condition="{data.pi_flexform.data.columns.lDEF.grid_container.vDEF}">
-                </div>
-            </div>
-        </div>
-    </f:if>
-
+<f:layout name="Default" />
+<f:section name="Main">
+	<f:if condition="{data.pi_flexform.data.columns.lDEF.grid_container.vDEF}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+	</f:if>
+	<div class="slider-container slider-container-{f:if(condition: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', then: 'effect', else: 'default')}">
+		<div class="swiper-container slider-container__container js__slider-container__container" data-autoplay="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.autoplay.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.autoplay.vDEF}')}" data-loop="{f:if(condition: data.pi_flexform.data.columns.lDEF.loop.vDEF, then: 'loop')}" data-effect="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', else: 'slider')}" data-slidesperview="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.slidesPerView.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.slidesPerView.vDEF}', else: 3)}" data-speed="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.speed.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.speed.vDEF}', else: 300)}">
+			<div class="swiper-wrapper slider-container__wrapper js__slider-container__wrapper">
+				<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+			</div>
+		</div>
+		<f:if condition="{data.pi_flexform.data.columns.lDEF.paggination.vDEF}">
+			<div class=" swiper-pagination slider-container__pagination js__slider-container__pagination"></div>
+		</f:if>
+		<f:if condition="{data.pi_flexform.data.columns.lDEF.button.vDEF}">
+			<div class="swiper-button-next slider-container__button-next js__slider-container__btn-next"></div>
+			<div class=" swiper-button-prev slider-container__button-prev js__slider-container__btn-prev"></div>
+		</f:if>
+	</div>
+	<f:if condition="{data.pi_flexform.data.columns.lDEF.grid_container.vDEF}">
+		</div>
+		</div>
+		</div>
+	</f:if>
 </f:section>

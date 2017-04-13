@@ -25,7 +25,6 @@ lib.gridelements {
             variables {
                 activeUid = TEXT
                 activeUid.field = data.tx_gridelements_view_children.0.uid
-                #activeUid = adlködöl
             }
             layoutRootPaths {
                 20 = EXT:fluid_styled_content/Resources/Private/Layouts
@@ -41,29 +40,8 @@ lib.gridelements {
                     references.fieldName = media
                 }
                 # "inherit" from lib.fluidContent
-                365 < lib.fluidContent.dataProcessing.365
-                375 < lib.fluidContent.dataProcessing.375
-                385 < lib.fluidContent.dataProcessing.385
-                395 < lib.fluidContent.dataProcessing.395
-
-                # extend "wrapper" class mapping only for GridElements
-                365 {
-                    classMappings {
-                        11 = gridelements-example-wrapper-1
-                        12 = gridelements-example-wrapper-2
-                    }
-                }
-
-
-                1910 < lib.fluidContent.dataProcessing.1910
-
-                # extend "layout" class mapping only for GridElements
-                1910 {
-                    classMappings {
-                        11 = gridelements-example-layout-1
-                        12 = gridelements-example-layout-2
-                    }
-                }
+                800 < lib.contentElement.dataProcessing.800
+                830 < lib.contentElement.dataProcessing.830
             }
         }
     }
