@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Accordion_2_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st3{fill:#FF5335;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FF5335;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#737373;}
+	.st3{fill:#F85B30;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#4BB4DA;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#58595B;}
 </style>
-<path class="st0" d="M0,0h100v100H0V0z"/>
-<polygon class="st1" points="100,23 88,10 76,15 12,25 12,90 22.8,100 100,100 "/>
 <g>
-	<rect x="13.5" y="11.5" class="st2" width="73" height="19"/>
-	<path class="st3" d="M85,13v16H15V13H85 M88,10H12v22h76V10L88,10z"/>
+	<path class="st0" d="M0,0h100v100H0V0z"/>
+	<polygon class="st1" points="100,25.1 88,12 76,15 12,25 12,88 24.2,100 100,100 	"/>
+	<g>
+		<rect x="13" y="13" class="st2" width="74" height="20"/>
+		<path class="st3" d="M86,14v18H14V14H86 M88,12H12v22h76V12L88,12z"/>
+	</g>
+	<g>
+		<rect x="13" y="39" class="st2" width="74" height="48"/>
+		<path class="st3" d="M86,40v46H14V40H86 M88,38H12v50h76V38L88,38z"/>
+	</g>
+	<polygon class="st4" points="29,23 20,17 20,29 	"/>
+	<polygon class="st4" points="26,53 32,44 20,44 	"/>
+	<rect x="20" y="56" class="st5" width="60" height="3"/>
+	<rect x="20" y="63" class="st5" width="60" height="3"/>
+	<rect x="20" y="70" class="st5" width="60" height="3"/>
+	<rect x="20" y="77" class="st5" width="60" height="3"/>
 </g>
-<g>
-	<rect x="13.5" y="39.5" class="st2" width="73" height="49"/>
-	<path class="st3" d="M85,41v46H15V41H85 M88,38H12v52h76V38L88,38z"/>
-</g>
-<polygon class="st4" points="29,21 20,15 20,27 "/>
-<rect x="20" y="56" class="st5" width="60" height="4"/>
-<rect x="20" y="66" class="st5" width="60" height="4"/>
-<rect x="20.1" y="76" class="st5" width="48.9" height="4"/>
-<polygon class="st4" points="26,53 32,44 20,44 "/>
 </svg>
