@@ -26,7 +26,7 @@ themes.configuration.isDevelopment = Development Mode
 themes.configuration.feLayoutMode = less
 
 # cat=theme,expert/layout/; type=string; label=Path to felayout
-themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public/felayout_t3kit
+themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public
 
 # themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}
 
