@@ -22,13 +22,6 @@ lib.responsiveBackgroundImage {
 }
 
 page.cssInline {
-    # Debug related output
-    #1451 = TEXT
-    #1451 {
-    #    data = register:t3kit_responsiveBackgroundImage
-    #    wrap = /*|*/
-    #}
-
     1450 = FILES
     1450 {
 
