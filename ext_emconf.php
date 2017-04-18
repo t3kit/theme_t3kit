@@ -39,7 +39,6 @@ $EM_CONF[$_EXTKEY] = array(
 			'themes' => '7.0.3-7.0.99',
 			'dyncss' => '0.7.9-0.7.99',
 			'dyncss_less' => '0.7.7-0.7.99',
-			't3kit_extension_tools' => '1.2.0-1.2.99',
 			'fluid_styled_content' => '0.0.0-0.0.0',
 			'gridelements' => '7.0.5-7.0.99',
 		),
