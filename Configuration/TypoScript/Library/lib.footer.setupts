@@ -1,0 +1,6 @@
+lib.footer = COA
+lib.footer {
+    10 < styles.content.get
+    10.select.where = {#colPos}=999
+    10.slide = -1
+}

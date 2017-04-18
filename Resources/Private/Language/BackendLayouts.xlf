@@ -68,7 +68,9 @@
             <trans-unit id="area_sub_navigation">
                 <source>Sub Navigation</source>
             </trans-unit>
-
+            <trans-unit id="area_footer">
+                <source>Footer Content (gets inherited to all subpages)</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
