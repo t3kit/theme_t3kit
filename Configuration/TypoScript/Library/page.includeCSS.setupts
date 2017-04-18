@@ -6,11 +6,6 @@
                 # excludeFromConcatenation =
                 # disableCompression =
             }
-            # rteFrontend = EXT:theme_t3kit/Resources/Public/Extensions/Rtehtmlarea/Css/rteFrontend.css
-            # rteFrontend {
-            #     # excludeFromConcatenation =
-            #     # disableCompression =
-            # }
             components = {$themes.configuration.feLayoutPath}/less/components.css
             components {
                 #excludeFromConcatenation =
@@ -38,11 +33,6 @@
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            # rteFrontend = EXT:theme_t3kit/Resources/Public/Extensions/Rtehtmlarea/Css/rteFrontend.css
-            # rteFrontend {
-            #     # excludeFromConcatenation =
-            #     # disableCompression =
-            # }
             components = {$themes.configuration.feLayoutPath}/css/components.css
             components {
                 #excludeFromConcatenation =
@@ -61,12 +51,7 @@
         }
     }
 [global]
-[globalVar = LIT:dev = {$themes.configuration.feLayoutMode}]
-    page {
-        # includeCSS {
-        #     rteFrontend = EXT:theme_t3kit/Resources/Public/Extensions/Rtehtmlarea/Css/rteFrontend.css
-        #     rteFrontend {
-        #     }
-        # }
-    }
-[global]
+
+# [globalVar = LIT:dev = {$themes.configuration.feLayoutMode}]
+#     page {}
+# [global]

@@ -1,0 +1,1 @@
+RTE.default.preset = t3kit_default
