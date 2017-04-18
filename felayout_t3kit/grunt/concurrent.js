@@ -23,6 +23,7 @@ module.exports = {
   lessProcess: {
     tasks: [
       'copy:filesToLessFolder',
+      'copy:iconFontToIconFolder',
       'import:bootstrapLess',
       'import:mainLess',
       'imagemin:toLessFolder'
@@ -33,6 +34,7 @@ module.exports = {
   cssProcess: {
     tasks: [
       'copy:filesToCssFolder',
+      'copy:iconFontToIconFolder',
       'imagemin:toCssFolder'
     ]
   }
