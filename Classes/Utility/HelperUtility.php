@@ -10,7 +10,7 @@ use TYPO3\CMS\Lang\LanguageService;
 
 /**
  * Class MainUtility
- * @package T3kit\T3kitExtensionTools\Utility
+ * @package T3kit\themeT3kit\Utility
  */
 class HelperUtility
 {
