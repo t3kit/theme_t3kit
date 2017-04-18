@@ -1,8 +1,5 @@
-<f:layout name="HeaderContentFooter" />
-
-
-
-<f:section name="content">
+<f:layout name="Default" />
+<f:section name="Main">
 	<div class="panel-group" id="group-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" role="tablist" aria-multiselectable="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.multiselectable.vDEF}', then: 'true', else: 'false')}">
 		<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
 	</div>

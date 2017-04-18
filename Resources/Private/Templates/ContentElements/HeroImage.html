@@ -1,10 +1,9 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:layout name="ContentFooter" />
-
-	<f:section name="content">
-
-	<!-- theme_t3kit: Templates/ContentElements/frameAnimated.html [begin] -->
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+<!-- theme_t3kit: Templates/ContentElements/HeroImage.html [begin] -->
 	<f:if condition="{image}">
 		<div class="hero-image js__hero-image"  style="background-image:url('{f:uri.image(image: image.0, maxWidth:'{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.maxWidth)}')}'); min-height: {settings.elementHeight}px">
 			<div class="hero-image__caption-wrp {f:if(condition: '{settings.contentPosition} == 0', then: '_left-align')}{f:if(condition: '{settings.contentPosition} == 1', then: '_center-align')}{f:if(condition: '{settings.contentPosition} == 2', then: '_right-align')}">
@@ -19,7 +18,7 @@
 						<p class="hero-image__caption-p">{settings.elementText}</p>
 					</f:if>
 					<f:if condition="{data.header_link}">
-						<div class="hero-image__caption-link "> 
+						<div class="hero-image__caption-link ">
 							<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="{f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}"> {data.subheader}</f:link.typolink>
 						</div>
 					</f:if>
@@ -27,6 +26,7 @@
 			</div>
 		</div>
 	</f:if>
-		<!-- theme_t3kit: Templates/ContentElements/frameAnimated.html [end] -->
-	</f:section>
-</div>
+<!-- theme_t3kit: Templates/ContentElements/HeroImage.html [end] -->
+</f:section>
+
+</html>

@@ -1,7 +1,7 @@
 tt_content {
-    responsiveVideo =< lib.fluidContent
+    responsiveVideo =< lib.contentElement
     responsiveVideo {
-        templateName = responsiveVideo
+        templateName = ResponsiveVideo
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -14,17 +14,8 @@ tt_content {
                 as = settings
             }
             # "inherit" from lib.fluidContent
-            365 < lib.fluidContent.dataProcessing.365
-            1910 < lib.fluidContent.dataProcessing.1910
-
-            # extend class mapping only for this element
-            # 1910 {
-                # classMappings {
-                    # # Override the standard default
-                    # 0 = default-class
-                    # 11 = example-class
-                # }
-            # }
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
         }
     }
 }

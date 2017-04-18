@@ -1,114 +1,91 @@
-# Add layoutClass and wrapperClass to fluid_styled_content lib.fluidContent
-lib.fluidContent {
+# t3kit template configuration for content elements which are using FLUIDTEMPLATE
+lib.contentElement {
+    templateRootPaths {
+        2000 =  EXT:theme_t3kit/Resources/Private/Templates/ContentElements/
+        3000 =  EXT:theme_t3kit/Resources/Private/Templates/FluidStyledContent/
+    }
+    partialRootPaths {
+        2000 =  EXT:theme_t3kit/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        2000 =  EXT:theme_t3kit/Resources/Private/Layouts/FluidStyledContent/
+    }
+}
+
+lib.contentElement {
     dataProcessing {
-        # will add variable wrapperClass to FLUIDTEMPLATE
-        # used in "overridden" fluid_styled_content layouts: (appended in class) {wrapperClass}
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
-        365 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        365 {
-            fieldName = wrapper
-            as = wrapperClass
+
+        # Layout
+        # will add variable layoutClass to FLUIDTEMPLATE
+        800 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
+        800 {
             classMappings {
-                # 0 =
-                100 = example-generic-wrapper
-                101 = inverse
-                102 = gray-background
+                # example of layout class (Label => theme_t3kit/Configuration/FluidStyledContent/FluidContent.pagets)
+                # TODO:
+                100 = example-generic-layout
             }
         }
+
+        # Aligning
         # will add variable alignClass to FLUIDTEMPLATE
-        # used in "overridden" fluid_styled_content layouts: (appended in class) {alignClass}
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
-        395 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        395 {
+        830 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
+        830 {
             fieldName = aligning
             as = alignClass
             classMappings {
-                # 0 =
                 101 = text-center
                 102 = center-block
             }
         }
+    }
+}
 
-        # will add variable {wrapperMarginTopClass} to FLUIDTEMPLATE to set a "margin-top" class
-        # used in "overridden" fluid_styled_content layouts: (appended in class)
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
-        375 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        375 {
-            fieldName = wrapper_margin_top
-            as = wrapperMarginTopClass
+
+# ====================================================
+# FluidStyledContent elements
+# ====================================================
+
+# Table element
+lib.contentElement {
+    dataProcessing {
+        800 {
             classMappings {
-                # 0 =
-                101 = margin-top-5
-                102 = margin-top-10
-                103 = margin-top-15
-                104 = margin-top-20
-                105 = margin-top-25
-                106 = margin-top-30
-                107 = margin-top-40
-                108 = margin-top-50
-                109 = margin-top-60
-                110 = margin-top-70
-            }
-        }
-        # will add variable {wrapperMarginBottomClass} to FLUIDTEMPLATE to set a "margin-bottom" class
-        # used in "overridden" fluid_styled_content layouts: (appended in class)
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html
-        385 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        385 {
-            fieldName = wrapper_margin_bottom
-            as = wrapperMarginBottomClass
-            classMappings {
-                # 0 =
-                101 = margin-bottom-5
-                102 = margin-bottom-10
-                103 = margin-bottom-15
-                104 = margin-bottom-20
-                105 = margin-bottom-25
-                106 = margin-bottom-30
-                107 = margin-bottom-40
-                108 = margin-bottom-50
-                109 = margin-bottom-60
-                110 = margin-bottom-70
+                # Specific layout for Table element (Label => theme_t3kit/Configuration/FluidStyledContent/FluidContent.pagets)
+                310 = table-responsive
             }
         }
 
-        # will add variable layoutClass to FLUIDTEMPLATE
-        # can be overriden in the actual elements ts setup
-        # by default it appears it all elements, but can be rewritten to use inside the element
-        # used in "overridden" fluid_styled_content layouts: (appended in class) {layoutClass}
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/ContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderContentFooter.html
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/HeaderFooter.html
-
-        # inside the element. Need to use custom fluid_styled_content layouts
-        # only affective if variable is used in the fluid template file.
-        # Example:fluid_styled_content element Table has layout classes added inside.
-        # theme_t3kit/Configuration/FluidStyledContent/Table.pagets (Layout list in form)
-        # theme_t3kit/Configuration/FluidStyledContent/Table.setupts ("class mappings")
-        # theme_t3kit/Resources/Private/Templates/FluidStyledContent/Table.html (adds {layoutClass} to table tag class attribute)
-        # theme_t3kit/Resources/Private/Layouts/FluidStyledContent/CustomHeaderContentFooter.html (custom fluid_styled_content layout without {layoutClass} as a wrapper)
-        1910 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
-        1910 {
+        # Table Class
+        # will add variable tableClass to table FLUIDTEMPLATE
+        840 = T3kit\themeT3kit\DataProcessing\LayoutClassProcessor
+        840 {
+            fieldName = table_class
+            as = tableClass
             classMappings {
-                # 0 =
-                100 = example-generic-layout
+                110 = table table-striped
+                111 = table table-striped table-bordered
+                112 = table table-striped table-bordered table-condensed
+                113 = table table-bordered table-condensed table-hover
             }
         }
+    }
+}
+
+
+
+# ====================================================
+# GridElements
+# ====================================================
+lib.contentElement {
+    dataProcessing {
+        800 {
+            classMappings {
+                # Specific layout for GridElements (Label => theme_t3kit/Configuration/GridElements/PageTS/AdvColumnGrid.pagets)
+                # TODO:
+                501 = gridelements-example-layout-1
+                502 = gridelements-example-layout-2
+            }
+        }
+
     }
 }

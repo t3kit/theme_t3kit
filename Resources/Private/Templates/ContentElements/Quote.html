@@ -1,30 +1,29 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:layout name="ContentFooter" />
-	<f:debug>{_all}</f:debug>
-
-<f:section name="content">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
 <!-- theme_t3kit: Templates/ContentElements/Quote.html [begin] -->
-<blockquote class="quote">
-	<div class="quote__body">
-		<p class="quote__body-p">{data.bodytext}</p>
-		<span class="quote__body-icon icons icon-t3-quoteMark"></span>
-	</div>
-	<footer class="quote__footer">
-		<f:if condition="{headers.0}">
-			<span class="quote__footer-name">{headers.0}<f:render section="nameSuffix" arguments="{title: headers.1, link: data.header_link}" /></span>
-		</f:if>
-		<f:if condition="{headers.1}">
-			<cite class="quote__footer-title" title="{headers.1}">{headers.1}<f:render section="nameSuffix" arguments="{link: data.header_link}" />
-		</f:if>
-		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" class="quote__footer-link">{data.subheader}</f:link.typolink>
-		</f:if>
-		<f:if condition="{headers.1}">
-			</cite>
-		</f:if>
-	</footer>
-</blockquote>
+	<blockquote class="quote">
+		<div class="quote__body">
+			<p class="quote__body-p">{data.bodytext}</p>
+			<span class="quote__body-icon icons icon-t3-quoteMark"></span>
+		</div>
+		<footer class="quote__footer">
+			<f:if condition="{headers.0}">
+				<span class="quote__footer-name">{headers.0}<f:render section="nameSuffix" arguments="{title: headers.1, link: data.header_link}" /></span>
+			</f:if>
+			<f:if condition="{headers.1}">
+				<cite class="quote__footer-title" title="{headers.1}">{headers.1}<f:render section="nameSuffix" arguments="{link: data.header_link}" />
+			</f:if>
+			<f:if condition="{data.header_link}">
+				<f:link.typolink parameter="{data.header_link}" class="quote__footer-link">{data.subheader}</f:link.typolink>
+			</f:if>
+			<f:if condition="{headers.1}">
+				</cite>
+			</f:if>
+		</footer>
+	</blockquote>
 <!-- theme_t3kit: Templates/ContentElements/Quote.html [end] -->
 </f:section>
 
@@ -32,4 +31,4 @@
 <f:section name="nameSuffix"><f:if condition="{title}"><f:then>, </f:then><f:else><f:if condition="{link}"><f:then>, </f:then></f:if></f:else></f:if></f:section>
 <f:section name="titleSuffix"><f:if condition="{link}"><f:then>, </f:then></f:if></f:section>
 
-</div>
+</html>

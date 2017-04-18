@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="HeroImage" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{fill:#F85B30;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#B7E1F0;}
+	.st5{fill:#4BB4DA;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#4599B7;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#6FC3E1;}
+	.st8{fill:#FFFFFF;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#4BB4DA;}
+	.st10{fill-rule:evenodd;clip-rule:evenodd;fill:#F85B30;}
+	.st11{fill-rule:evenodd;clip-rule:evenodd;fill:#58595B;}
+</style>
+<path class="st0" d="M0,0h100v100H0V0z"/>
+<polygon class="st1" points="100,24.3 88,12 87,78 20.3,78.2 12,88 24.9,100 100,100 "/>
+<g>
+	<rect x="13" y="13.1" class="st2" width="74" height="74"/>
+	<path class="st3" d="M86,14.1v72H14v-72H86 M88,12.1H12v76h76V12.1L88,12.1z"/>
+</g>
+<g>
+	<rect x="13" y="29" class="st4" width="74" height="40.8"/>
+	<path class="st5" d="M86,30v38.8H14V30H86 M88,28H12v42.8h76V28L88,28z"/>
+</g>
+<polygon class="st6" points="51.4,49.9 33.7,69 69,69 "/>
+<polygon class="st7" points="71.1,40.7 50,69 86,69 86,60.7 "/>
+<ellipse class="st8" cx="60.6" cy="38.2" rx="5.6" ry="5.8"/>
+<polygon class="st9" points="28.6,50.2 13.3,69 44,69 "/>
+<g>
+	<rect x="18" y="59.2" class="st10" width="20" height="5.8"/>
+</g>
+<rect x="18" y="37" class="st11" width="21.7" height="5"/>
+<rect x="18" y="45" class="st11" width="33" height="3"/>
+<rect x="18" y="51" class="st11" width="33" height="3"/>
+</svg>

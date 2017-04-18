@@ -1,15 +1,15 @@
 {namespace theme=KayStrobach\Themes\ViewHelpers}
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<f:layout name="ContentFooter" />
-<f:section name="content">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
 <!-- theme_t3kit: Templates/ContentElements/Contacts.html [begin] -->
-
 	<ul class="nav contact-links" >
 		<li><p><span class="icons icon-t3-mobile"></span><span><f:translate key="callUs_label" extensionName="themes"/></span> <a href="tel:{f:cObject(typoscriptObjectPath: 'lib.contacts.phone')}"><f:translate key="callUsTel_label" />{theme:constant(constant: 'themes.configuration.contacts.phone')}</a></p></li>
 		<li><p><span class="icons icon-t3-mail"></span><span><f:translate key="emailUs_label" extensionName="themes"/></span> <f:link.email email="{theme:constant(constant: 'themes.configuration.contacts.email')}" /></p></li>
 	</ul>
-
 <!-- theme_t3kit: Templates/ContentElements/Contacts.html [end] -->
 </f:section>
-</div>
+
+</html>

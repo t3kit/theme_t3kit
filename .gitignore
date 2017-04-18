@@ -8,3 +8,6 @@ bower_components
 *.sublime-*
 .idea
 validation-status.json
+
+.unison*
+._.DS_Store

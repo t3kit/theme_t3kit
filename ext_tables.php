@@ -9,23 +9,19 @@ $boot = function ($_EXTKEY) {
         // Content Elements Icons
         $contentElementIconFilePrefix = 'EXT:' . $_EXTKEY . '/Resources/Public/Icons/ContentElements/';
         $contentElementIcons = [
-            'content-elements-accordion' => 'accordion.svg',
             'content-elements-contentElementSlider' => 'slider.svg',
             'content-elements-bigIconTextButton' => 'bigIconTextButton.svg',
             'content-elements-iconTextButton' => 'iconTextButton.svg',
             'content-elements-imageTextLink' => 'imageTextLink.svg',
             'content-elements-logoCarousel' => 'logoCarousel.svg',
             'content-elements-quote' => 'quote.svg',
-            'content-elements-tabs' => 'tabs.svg',
             'content-elements-fullWidthImage' => 'fullWidthImage.svg',
             'content-elements-responsiveVideo' => 'responsiveVideo.svg',
             'content-elements-socialIcons' => 'socialIcons.svg',
             'content-elements-copyrightText' => 'copyrightText.svg',
             'content-elements-contacts' => 'contacts.svg',
-            'content-elements-button' => 'customElement.svg',
-            'content-elements-heroImage' => 'fullWidthImage.svg',
-            'content-center-vertical-text-img-left' => 'content-center-vertical-text-img-left.svg',
-            'content-center-vertical-text-img-right' => 'content-center-vertical-text-img-right.svg',
+            'content-elements-button' => 'button.svg',
+            'content-elements-heroImage' => 'heroImage.svg'
         ];
         foreach ($contentElementIcons as $identifier => $contentElementIcon) {
             $iconRegistry->registerIcon(
@@ -49,8 +45,10 @@ $boot = function ($_EXTKEY) {
             'grid-elements-collapsible' => 'collapsible.svg',
             'grid-elements-collapsibleGroup' => 'collapsibleGroup.svg',
             'grid-elements-parallax' => 'parallax.svg',
+            'grid-elements-simpleAccordion' => 'simpleAccordion.svg',
             'grid-elements-tabGroup' => 'tabGroup.svg',
-            'grid-elements-tab' => 'tab.svg'
+            'grid-elements-tab' => 'tab.svg',
+            'grid-elements-sliderContainer' => 'sliderContainer.svg'
         ];
         foreach ($gridElementsIcons as $identifier => $gridElementsIcon) {
             $iconRegistry->registerIcon(

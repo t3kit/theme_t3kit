@@ -4,9 +4,6 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.description
             iconIdentifier = content-elements-contentElementSlider
-            tt_content_defValues {
-                CType = contentElementSlider
-            }
         }
     }
     show := addToList(contentElementSlider)
@@ -31,24 +28,7 @@ TCEFORM.tt_content.pi_flexform.contentElementSlider.sDEF.captionAlign {
     }
 }
 
-
-# # Use layout field to customize Layout select-box on contentElementSlider
-# # extend layout select-box only for this element
-# TCEFORM.tt_content.layout {
-#     types {
-#         contentElementSlider {
-#             addItems {
-#                 --div-- = Slider layouts:
-#                 # add value with index 0, to set it as a default, only for this element
-#                 0 = Default layout for this element
-#                 11 = Example layout only for Slider
-#             }
-#         }
-#     }
-# }
-
-
-# # This is for adding options in the selectbox in each slide.
+# This is for adding options in the selectbox in each slide.
 # TCEFORM.sys_file_reference.tx_themet3kit_slide_appearance {
 #      addItems {
 #          --div-- = Slider slide appearances:

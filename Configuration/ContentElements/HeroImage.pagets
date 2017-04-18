@@ -4,9 +4,6 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.description
             iconIdentifier = content-elements-heroImage
-            tt_content_defValues {
-                CType = heroImage
-            }
         }
     }
     show := addToList(heroImage)

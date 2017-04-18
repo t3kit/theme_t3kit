@@ -4,25 +4,8 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:logoCarousel.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:logoCarousel.description
             iconIdentifier = content-elements-logoCarousel
-            tt_content_defValues {
-                CType = logoCarousel
-            }
         }
     }
     show := addToList(logoCarousel)
 }
 
-# # Use layout field to customize Layout select-box on logoCarousel
-# # extend layout select-box only for this element
-# TCEFORM.tt_content.layout {
-#     types {
-#         logoCarousel {
-#             addItems {
-#                 --div-- = LogoCarousel layouts:
-#                 # add value with index 0, to set it as a default, only for this element
-#                 0 = Default layout for this element
-#                 11 = Example layout only for logoCarousel
-#             }
-#         }
-#     }
-# }

@@ -45,3 +45,8 @@ if (file_exists($fixedPostVarsFile)) {
     \TYPO3\CMS\Core\Utility\GeneralUtility::requireOnce($fixedPostVarsFile);
 }
 */
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['imageTextLink']
+	= \T3kit\themeT3kit\Hooks\ImageTextLinkPreviewRenderer::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['t3kit'][] = 'T3kit\\themeT3kit\\ViewHelpers';

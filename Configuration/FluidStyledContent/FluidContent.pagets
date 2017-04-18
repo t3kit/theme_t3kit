@@ -1,93 +1,121 @@
-# Add a wrapper by type, in this case table (all content based on lib.fluidContent)
-# Example to add a wrapper item for content type table
-#TCEFORM.tt_content.wrapper {
-#    types {
-#        table {
-#            # Based on that the default items still exists.
-#            addItems {
-#                100 = Example table wrapper
-#            }
-#        }
-#    }
-#}
-
-
-# Use wrapper field to customize Wrapper select-box on tt_content
-# Add a generic wrapper title (all content based on lib.fluidContent)
-# Example to add a wrapper item for all content types
-TCEFORM.tt_content.wrapper {
-   # Based on that the default items still exists.
-   addItems {
-       # add more wrappers. Interval from 100 to 999
-    #    100 = Example generic wrapper
-       101 = Inverse color of text, links, buttons
-       102 = Gray background
-   }
-}
-
-
-# Use layout field to customize Layout select-box on tt_content
-# Add a generic layout title (all content based on lib.fluidContent)
-# Example to add a layout item for all content types
+# Layout
+# Use layout field to customize Layout select-box for all content elements
 TCEFORM.tt_content.layout {
     removeItems = 1,2,3
     addItems {
-        # add more layouts. Interval from 100 to 9998
-        # 100 = Example generic layout for all content
+        # TODO:
+        100 = Example generic layout for all content
     }
 }
 
-# Add a generic 'aligning' (all content based on lib.fluidContent)
+# Add an layout for specific content elements
+# Example:
+# TCEFORM.tt_content.layout {
+#     types {
+#         imageTextLink {
+#             addItems {
+#                 --div-- = ImageTextLink layouts:
+#                 110 = Label
+#             }
+#         }
+#     }
+# }
+
+
+# Appearance
+TCEFORM.tt_content.frame_class.label = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:tt_content.appearance
+TCEFORM.tt_content.frame_class {
+    removeItems = indent-right,indent-left,indent,ruler-after,ruler-before,none
+}
+
+# Add an appearance for all content elements
+TCEFORM.tt_content.frame_class {
+    addItems {
+        gray-background  = Gray Background
+        blue-mountain-wrp  = Blue Mountain Wrapper
+        blue-mountain-header  = Blue Mountain Header Text
+        inverse  = Inverse color of text, links, buttons
+        saturated-inverse  = Inverse and saturate color of text, links, buttons
+    }
+}
+
+# Add an appearance for specific content elements
+# Example:
+# TCEFORM.tt_content.frame_class {
+#     types {
+#         imageTextLink {
+#             addItems {
+#                 --div-- = ImageTextLink appearance:
+#                 ClassName = Label
+#             }
+#         }
+#     }
+# }
+
+# Space before
+TCEFORM.tt_content.space_before_class {
+    removeItems = extra-small,small,medium,large,extra-large
+    addItems {
+        margin-top-5 = 5px
+        margin-top-10 = 10px
+        margin-top-15 = 15px
+        margin-top-20 = 20px
+        margin-top-25 = 25px
+        margin-top-30 = 30px
+        margin-top-40 = 40px
+        margin-top-50 = 50px
+        margin-top-60 = 60px
+        margin-top-70 = 70px
+    }
+}
+
+# Space after
+TCEFORM.tt_content.space_after_class {
+    removeItems = extra-small,small,medium,large,extra-large
+    addItems {
+        margin-bottom-5 = 5px
+        margin-bottom-10 = 10px
+        margin-bottom-15 = 15px
+        margin-bottom-20 = 20px
+        margin-bottom-25 = 25px
+        margin-bottom-30 = 30px
+        margin-bottom-40 = 40px
+        margin-bottom-50 = 50px
+        margin-bottom-60 = 60px
+        margin-bottom-70 = 70px
+    }
+}
+
+# Aligning
 TCEFORM.tt_content.aligning {
-   # Based on that the default items still exists.
    addItems {
        101 = Text align center
        102 = Block center
    }
 }
 
-# Add a generic 'margin-top' wrapper (all content based on lib.fluidContent)
-TCEFORM.tt_content.wrapper_margin_top {
-   # Based on that the default items still exists.
-   addItems {
-       101 = 5
-       102 = 10
-       103 = 15
-       104 = 20
-       105 = 25
-       106 = 30
-       107 = 40
-       108 = 50
-       109 = 60
-       110 = 70
-   }
+
+# ====================================================
+# FluidStyledContent elements
+# ====================================================
+
+# Table element
+TCEFORM.tt_content.layout {
+    types {
+        table {
+            addItems {
+                --div-- = Table layout:
+                310 = Responsive Table
+            }
+        }
+    }
 }
-
-# Add a generic 'margin-bottom' wrapper (all content based on lib.fluidContent)
-TCEFORM.tt_content.wrapper_margin_bottom {
-   # Based on that the default items still exists.
-   addItems {
-       101 = 5
-       102 = 10
-       103 = 15
-       104 = 20
-       105 = 25
-       106 = 30
-       107 = 40
-       108 = 50
-       109 = 60
-       110 = 70
-   }
-}
-
-
-# Add a generic 'Position and Alignment' wrapper (all content based on lib.fluidContent)
-TCEFORM.tt_content.imageorient {
+TCEFORM.tt_content.table_class {
+    removeItems = bordered,striped
     addItems {
-        101 = Beside Text (Vertical aligned), Right
-        101.icon = content-center-vertical-text-img-right
-
-        102 = Beside Text (Vertical aligned), Left
-        102.icon = content-center-vertical-text-img-left
+        110 = Striped
+        111 = Striped Bordered
+        112 = Striped Bordered Condesed
+        113 = Bordered Condesed Hover
     }
 }

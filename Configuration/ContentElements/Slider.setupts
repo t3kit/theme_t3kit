@@ -1,10 +1,8 @@
 tt_content {
-    contentElementSlider =< lib.fluidContent
+    contentElementSlider =< lib.contentElement
     contentElementSlider {
         templateName = Slider
-
         dataProcessing {
-
             # Process files
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
@@ -16,24 +14,12 @@ tt_content {
                 fieldName = pi_flexform
                 as = settings
             }
-
             # "inherit" from lib.fluidContent
-            365 < lib.fluidContent.dataProcessing.365
-            1910 < lib.fluidContent.dataProcessing.1910
-
-            # extend class mapping only for this element
-            # 1910 {
-                # classMappings {
-                    # # Override the standard default
-                    # 0 = default-class
-                    # 11 = example-class
-                # }
-            # }
-
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
         }
         settings {
             defaultWidth = 1920c
-            # defaultHeight = 400c
             # appearance {
             # # Extend appearance for each slide for this element
             #   10 = example-class

@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="copyright" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Copyright" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
 	.st2{fill:#FFFFFF;}
-	.st3{fill:#FF5335;}
-	.st4{font-family:'Helvetica-Bold';}
-	.st5{font-size:56.714px;}
+	.st3{fill:#F85B30;}
 </style>
 <path class="st0" d="M0,0h100v100H0V0z"/>
-<polygon class="st1" points="100,100 100,39 75,21 51,38 30,77 57.3,100 100,100 "/>
+<polygon class="st1" points="100,100 100,50.7 72,27 62.2,52.2 30,69 67.1,100 100,100 "/>
 <g>
 	<g>
-		<path class="st2" d="M51,80.6c-18.6,0-33.7-14.9-33.7-33.1c0-18.3,15.1-33.1,33.7-33.1c18.6,0,33.7,14.9,33.7,33.1
-			C84.7,65.8,69.6,80.6,51,80.6z"/>
-		<path class="st3" d="M51,17.2c17,0,30.9,13.6,30.9,30.3S68,77.8,51,77.8S20.1,64.2,20.1,47.5S34,17.2,51,17.2 M51,11.6
-			c-20.2,0-36.5,16.1-36.5,36s16.4,36,36.5,36s36.5-16.1,36.5-36S71.2,11.6,51,11.6L51,11.6z"/>
+		<path class="st2" d="M51,76.7c-16,0-29-12.8-29-28.5c0-15.7,13-28.5,29-28.5c16,0,29,12.8,29,28.5C80,63.9,67,76.7,51,76.7z"/>
+		<path class="st3" d="M51,20.6c15.4,0,28,12.4,28,27.5S66.4,75.7,51,75.7S23,63.3,23,48.1S35.5,20.6,51,20.6 M51,18.6
+			c-16.6,0-30,13.2-30,29.5s13.4,29.5,30,29.5s30-13.2,30-29.5S67.6,18.6,51,18.6L51,18.6z"/>
 	</g>
-	<text transform="matrix(1.1139 0 0 1 27.3774 68.0166)" class="st3 st4 st5">C</text>
+	<g>
+		<path class="st3" d="M40.5,36.3c2.7-2.5,6.1-3.7,10.3-3.7c5.6,0,9.7,1.7,12.3,5c1.4,1.9,2.2,3.7,2.3,5.6h-7
+			c-0.4-1.4-1-2.5-1.7-3.3c-1.2-1.3-3.1-2-5.6-2c-2.5,0-4.5,0.9-5.9,2.8c-1.4,1.8-2.2,4.5-2.2,7.8c0,3.4,0.8,5.9,2.3,7.6
+			s3.5,2.5,5.8,2.5c2.4,0,4.2-0.7,5.5-2.2c0.7-0.8,1.3-1.9,1.7-3.5h7c-0.6,3.3-2.1,6-4.6,8s-5.6,3.1-9.5,3.1
+			c-4.8,0-8.5-1.4-11.3-4.2c-2.7-2.8-4.1-6.6-4.1-11.5C35.8,43.2,37.4,39.2,40.5,36.3z"/>
+	</g>
 </g>
 </svg>
