@@ -1,7 +1,0 @@
-tt_content {
-    textmedia {
-        dataProcessing {
-            20 = T3kit\T3kitExtensionTools\Xclass\Frontend\DataProcessing\GalleryProcessor
-        }
-    }
-}

@@ -1,4 +1,3 @@
-{namespace t3kit=T3kit\T3kitExtensionTools\ViewHelpers\Render}
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:layout name="Default" />
@@ -8,7 +7,7 @@
 			<f:for each="{files}" as="file" iteration="fileIterator">
 				<li>
 					<f:if condition="{data.uploads_type} == 1">
-						<t3kit:svg source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"></t3kit:svg>
+						<t3kit:render.svg source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"></t3kit:render.svg>
 					</f:if>
 					<f:if condition="{data.uploads_type} == 2">
 						<f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
@@ -18,7 +17,7 @@
 								</a>
 							</f:then>
 							<f:else>
-								<t3kit:svg source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"></t3kit:svg>
+								<t3kit:render.svg source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"></t3kit:render.svg>
 							</f:else>
 						</f:if>
 					</f:if>
