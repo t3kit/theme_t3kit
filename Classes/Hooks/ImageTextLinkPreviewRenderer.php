@@ -43,6 +43,9 @@ class ImageTextLinkPreviewRenderer implements \TYPO3\CMS\Backend\View\PageLayout
 			if ($row['media']) {
 				$itemContent .= $parentObject->linkEditContent($parentObject->getThumbCodeUnlinked($row, 'tt_content', 'media'), $row);
 			}
+			if ($row['assets']) {
+				$itemContent .= $parentObject->linkEditContent($parentObject->getThumbCodeUnlinked($row, 'tt_content', 'assets'), $row);
+			}
 
 			$drawItem = false;
 		}
