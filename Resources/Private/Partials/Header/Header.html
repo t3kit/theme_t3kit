@@ -99,7 +99,9 @@
 <!-- theme_t3kit: Main menu [end] -->
 
 	<div class="main-navigation__search-box-overlay js__main-navigation__search-box-overlay"></div>
-	<div class="header-top__language-menu-overlay js__header-top__language-menu-overlay"></div>
+	<f:if condition="{theme:constant(constant:'themes.configuration.header.top.menu.language.enableOverlay')}">
+		<div class="header-top__language-menu-overlay js__header-top__language-menu-overlay"></div>
+	</f:if>
 </header>
 
 
