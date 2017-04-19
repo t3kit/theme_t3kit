@@ -52,6 +52,7 @@ check:
     - 'standard:main'
     #CSS
     # - 'csslint'
+    #TODO: stylelint!!!
 
 # ==================================
 # Task helpers  ====================

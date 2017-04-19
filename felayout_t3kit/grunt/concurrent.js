@@ -6,7 +6,6 @@ module.exports = {
   // Run grunt tasks concurrently. Copy files. Default task.
   devProcess: {
     tasks: [
-      'copy:fonts',
       'copy:images',
       'copy:flags',
       'less:bootstrap',

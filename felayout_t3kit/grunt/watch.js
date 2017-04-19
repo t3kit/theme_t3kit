@@ -12,7 +12,6 @@ const jsComponentsFiles = ['<%= dev %>/js/components.js']
 const jsMainFiles = ['<%= dev %>/js/**/*.js', '!<%= dev %>/js/components.js', '!<%= dev %>/js/bootstrap.js', '!<%= dev %>/js/jquery.js']
 
 // other files
-const fontsFiles = '<%= dev %>/fonts/{,*/}*.*'
 const imagesFiles = '<%= dev %>/images/{,*/}*.*'
 
 module.exports = {
@@ -53,10 +52,6 @@ module.exports = {
   },
 
   // DEFAULT watch process - copy images and fonts
-  copyFonts: {
-    files: fontsFiles,
-    tasks: 'newer:copy:fonts'
-  },
   copyImages: {
     files: imagesFiles,
     tasks: 'newer:copy:images'

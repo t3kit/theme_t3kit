@@ -28,6 +28,9 @@ themes.configuration.feLayoutMode = less
 # cat=theme,expert/layout/; type=string; label=Path to felayout
 themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public
 
+# cat=theme,expert/layout/; type=string; label=Icon Fonts Path
+themes.configuration.iconFontsPath = EXT:theme_t3kit/Resources/Public/IconFonts
+
 # themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}
 
 # customsubcategory=spamProtect= SpamProtect

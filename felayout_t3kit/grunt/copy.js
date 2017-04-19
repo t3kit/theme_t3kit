@@ -1,15 +1,6 @@
 module.exports = {
 
     // copy tasks for Main development process
-  fonts: {
-    expand: true,
-    dot: true,
-    cwd: '<%= dev %>',
-    dest: '<%= temp %>',
-    src: [
-      'fonts/{,*/}*.*'
-    ]
-  },
   images: {
     expand: true,
     dot: true,
@@ -57,7 +48,6 @@ module.exports = {
       '*.js',
       'components.css',
       'flags/{,*/}*.*',
-      'fonts/{,*/}*.*'
     ]
   },
 
@@ -70,7 +60,6 @@ module.exports = {
       '*.js',
       '*.css',
       'flags/{,*/}*.*',
-      'fonts/{,*/}*.*'
     ]
   }
 }

@@ -16,7 +16,7 @@
 							<config>
 								<type>user</type>
 								<userFunc>T3kit\themeT3kit\UserFunction\IconFontSelector->renderField</userFunc>
-								<cssFile>EXT:theme_t3kit/Resources/Public/felayout_t3kit/dev/fonts/style.css</cssFile>
+								<cssFile>EXT:theme_t3kit/Resources/Public/IconFonts/style.css</cssFile>
 								<isIcoMoon>1</isIcoMoon>
 							</config>
 						</TCEforms>
