@@ -1,17 +1,32 @@
-lib.menu.language.standard =< lib.fluidContent
+lib.menu.language.standard =< lib.contentElement
 lib.menu.language.standard {
     templateName = LanguageMenuStandard
-
+    variables {
+        defaultLanguageIsoCode = TEXT
+        defaultLanguageIsoCode.value = {$themes.languages.default.isoCodeShort}
+        defaultLanguageFlag = TEXT
+        defaultLanguageFlag.value = {$themes.languages.default.flag}
+        defaultLanguageLabel = TEXT
+        defaultLanguageLabel.value = {$themes.languages.default.label}
+    }
     dataProcessing {
-
-        10 = T3kit\T3kitExtensionTools\DataProcessing\LanguagesProcessor
+        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         10 {
+            special = language
+            special.value = 0
+            special.value {
+                override = 0,{$themes.languages.available}
+                override.if {
+                    isTrue = {$themes.languages.available}
+                }
+            }
             as = languages
-            availableLanguages= {$themes.languages.available}
-            currentLanguageUid= {$themes.languages.current.uid}
-            defaultLanguageIsoCode={$themes.languages.default.isoCodeShort}
-            defaultLanguageFlag={$themes.languages.default.flag}
-            defaultLanguageLabel={$themes.languages.default.label}
+        }
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = sys_language
+            pidInList = root
+            as = sysLanguages
         }
     }
 }
