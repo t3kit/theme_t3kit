@@ -116,7 +116,7 @@ class IconFontSelector
     {
 
         if (!isset($PA['fieldConf']['config']['cssFile'])) {
-            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.missingConfigCssFile', 't3kit_extension_tools'));
+            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.missingConfigCssFile', 'theme_t3kit'));
         }
         $this->collectCssFileInformation($PA['fieldConf']['config']['cssFile']);
 
@@ -159,7 +159,7 @@ class IconFontSelector
                     $fullFilename = rtrim($this->cssFileInformation['dirname'], '/') . '/' . $value;
                     $fileInformation = $this->getFileInformation($fullFilename);
                 } catch (\Exception $e) {
-                    $message = LocalizationUtility::translate('iconFontSelector.exception.iconFileMissing', 't3kit_extension_tools');
+                    $message = LocalizationUtility::translate('iconFontSelector.exception.iconFileMissing', 'theme_t3kit');
                     $message .= ' (' . rtrim($this->cssFileInformation['dirname'], '/') . '/' . $value . ')';
                     throw new \Exception($message, $e->getCode(), $e);
                 }
@@ -191,7 +191,7 @@ class IconFontSelector
                 }
             }
         } catch (\Exception $e) {
-            $message = LocalizationUtility::translate('iconFontSelector.exception.populateItemsFromIcoMoonJson', 't3kit_extension_tools');
+            $message = LocalizationUtility::translate('iconFontSelector.exception.populateItemsFromIcoMoonJson', 'theme_t3kit');
             $message .= ' (' . rtrim($this->cssFileInformation['dirname'], '/') . '/' . $this->icoMoonSelectionJsonFileName . ')';
             throw new \Exception($message, $e->getCode(), $e);
         }
@@ -208,12 +208,12 @@ class IconFontSelector
 
         $fileProperties['filename'] = $filename;
         if (strlen(trim($filename)) == 0 && $throwExeptions) {
-            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.missingFilename', 't3kit_extension_tools'), 20);
+            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.missingFilename', 'theme_t3kit'), 20);
         }
         $fileProperties['absFileName'] = GeneralUtility::getFileAbsFileName($filename);
         $fileProperties['fileExists'] = file_exists($fileProperties['absFileName']);
         if (!$fileProperties['fileExists'] && $throwExeptions) {
-            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.fileExists', 't3kit_extension_tools') . ' (' . $filename . ')', 21);
+            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.fileExists', 'theme_t3kit') . ' (' . $filename . ')', 21);
         }
         $pathInfo = PathUtility::pathinfo($fileProperties['absFileName']);
         $fileProperties['dirname'] = $pathInfo['dirname'];
@@ -222,7 +222,7 @@ class IconFontSelector
         $fileProperties['filename'] = $pathInfo['filename'];
         $fileProperties['isAllowedAbsPath'] = GeneralUtility::isAllowedAbsPath($fileProperties['absFileName']);
         if (!$fileProperties['isAllowedAbsPath'] && $throwExeptions) {
-            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.isAllowedAbsPath', 't3kit_extension_tools'), 22);
+            throw new \Exception(LocalizationUtility::translate('iconFontSelector.exception.isAllowedAbsPath', 'theme_t3kit'), 22);
         }
         $fileProperties['relativePath'] = PathUtility::getRelativePathTo($fileProperties['dirname']);
         return $fileProperties;
@@ -255,7 +255,7 @@ class IconFontSelector
      */
     protected function addStylesAndJavascriptToForm()
     {
-        $extCssRel = ExtensionManagementUtility::extRelPath('t3kit_extension_tools') . 'Resources/Public/Css/BE/iconFontSelector.css';
+        $extCssRel = ExtensionManagementUtility::extRelPath('theme_t3kit') . 'Resources/Public/css/BE/iconFontSelector.css';
         $pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
         $pageRenderer->addCssFile(rtrim($this->cssFileInformation['relativePath'], '/') . '/' . $this->cssFileInformation['basename']);
         $pageRenderer->addCssFile($extCssRel);
@@ -268,7 +268,7 @@ class IconFontSelector
      */
     protected function getExceptionOutput(\Exception $e)
     {
-        $title = LocalizationUtility::translate('iconFontSelector.exception.title', 't3kit_extension_tools');
+        $title = LocalizationUtility::translate('iconFontSelector.exception.title', 'theme_t3kit');
         $message = $e->getMessage();
         $content = '<div class="alert alert-danger">
             <div class="media">
