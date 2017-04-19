@@ -89,3 +89,26 @@ lib.contentElement {
 
     }
 }
+
+# =========================================================================================
+# Custom Popup settings used in custom partial
+# theme_t3kit/Resources/Private/Partials/ContentElements/Media/Rendering/Image.html
+# which is a copy of
+# typo3/sysext/fluid_styled_content/Resources/Private/Partials/Media/Rendering/Image.html
+# with some conditions to set a caption text for data-caption attribute
+# =========================================================================================
+lib.contentElement {
+    settings {
+        media {
+            popup {
+                data-caption {
+                    glue = <br>
+                    includeTitle = 0
+                    includeDescription = 1
+                    includeCopyright = 1
+                    labelCopyright = ©
+                }
+            }
+        }
+    }
+}

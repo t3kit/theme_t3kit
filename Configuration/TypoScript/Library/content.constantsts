@@ -5,3 +5,4 @@ content {
 }
 
 styles.content.textmedia.maxW = 900
+styles.content.textmedia.linkWrap.lightboxEnabled = 1
