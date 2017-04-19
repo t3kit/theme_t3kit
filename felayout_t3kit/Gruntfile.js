@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     data: {
       cssFolder: conf.var.cssFolder,
       lessFolder: conf.var.lessFolder,
+      iconFontFolder: conf.var.iconFontFolder,
       dev: `dev`,
       temp: `temp`,
       components: conf.var.components

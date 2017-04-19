@@ -16,6 +16,11 @@
                 #excludeFromConcatenation =
                 #disableCompression =
             }
+            iconfont = {$themes.configuration.feLayoutPath}/Icons/fonts/style.css
+            iconfont {
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
             maincss = {$themes.configuration.feLayoutPath}/less/main.less
             maincss {
                 #excludeFromConcatenation =
@@ -43,6 +48,11 @@
             #     # excludeFromConcatenation =
             #     # disableCompression =
             # }
+            iconfont = {$themes.configuration.feLayoutPath}/Icons/fonts/style.css
+            iconfont {
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
             components = {$themes.configuration.feLayoutPath}/css/components.css
             components {
                 #excludeFromConcatenation =

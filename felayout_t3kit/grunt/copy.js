@@ -48,6 +48,16 @@ module.exports = {
     ]
   },
 
+  iconFontToIconFolder: {
+    expand: true,
+    dot: true,
+    cwd: '<%= temp %>',
+    dest: '<%= iconFontFolder %>',
+    src: [
+      'fonts/{,*/}*.*'
+    ]
+  },
+
   filesToLessFolder: {
     expand: true,
     dot: true,
@@ -56,8 +66,7 @@ module.exports = {
     src: [
       '*.js',
       'components.css',
-      'flags/{,*/}*.*',
-      'fonts/{,*/}*.*'
+      'flags/{,*/}*.*'
     ]
   },
 
@@ -69,8 +78,7 @@ module.exports = {
     src: [
       '*.js',
       '*.css',
-      'flags/{,*/}*.*',
-      'fonts/{,*/}*.*'
+      'flags/{,*/}*.*'
     ]
   }
 }
