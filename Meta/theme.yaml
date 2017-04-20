@@ -2,8 +2,7 @@
 title            : Base Theme fot t3kit project
 version          : 1.10.1
 description      :  |
-  A t3kit theme template -
-  This theme have two ways how to manipulate with settings. One standard for TYPO3 themes and second real time intuitive interface to change settings. http://t3kit.github.io/theme_t3kit_customizer
+  A t3kit theme template
 
 # Keywords (optional)
 keywords:
