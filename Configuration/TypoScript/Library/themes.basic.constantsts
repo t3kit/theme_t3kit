@@ -1,98 +1,82 @@
+
 #############################################
-# Basic: Basic constants
+# Theme constants [basic]
 #############################################
-
-# Base configuration
-themes.configuration.siteName = t3kit
-themes.languages.default.isoCode = en_GB
-themes.configuration.headerComment = This website is based on t3kit project by Pixelant - www.t3kit.com
-
-
-
-# customsubcategory=header_type= Type of header
-# customsubcategory=development_mode= Development Mode
-# customsubcategory=layout= Layout
-
-# cat=theme,expert//; type=string; label= Base URL (if empty config.absRefPrefix=/ will be set)
-themes.configuration.baseurl =
-
-# cat=theme,expert//; type=string; label= The domain for the site. (ex. www.mysite.com, without http://)
-themes.configuration.siteDomain = t3kit.testserver.pixelant.nu
-
-# cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Development Mode
-themes.configuration.isDevelopment = Development Mode
-
-# cat=theme,expert/layout/; type=options[Less=less,Css=css,Development=dev]; label=FElayout type
-themes.configuration.feLayoutMode = less
-
-# cat=theme,expert/layout/; type=string; label=Path to felayout
-themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public
-
-# cat=theme,expert/layout/; type=string; label=Icon Fonts Path
-themes.configuration.iconFontsPath = EXT:theme_t3kit/Resources/Public/IconFonts
-
-# themes.configuration.felayoutFullPath = {$themes.configuration.feLayoutPath}
-
-# customsubcategory=spamProtect= SpamProtect
-
-# Spam protect email addresses constants
-#############################################
-
-# cat=theme,expert/spamProtect/; type=string; label= E-Mail spam protection: @ replacement
-themes.configuration.spamProtectEmailAddresses.atSubst = @<span style="display:none;">remove-this.</span>
-
-# cat=theme,expert/spamProtect/; type=string; label= E-Mail spam protection: Last dot replacement
-themes.configuration.spamProtectEmailAddresses.lastDotSubst = .<span style="display:none;">remove-this.</span>
-
-
-# customsubcategory=javascript= JavaScript
-# customsubcategory=css= Stylesheets
-
-# Spam protect email addresses constants
-#############################################
-
-# cat=theme,expert/javascript/; type=options[0,1]; label= Compress JavaScript files
-themes.configuration.javascript.compress = 1
-
-# cat=theme,expert/javascript/; type=options[0,1]; label= Concatenate JavaScript files
-themes.configuration.javascript.concatenate = 1
-
-# cat=theme,expert/css/; type=options[0,1]; label= Compress CSS files
-themes.configuration.css.compress = 1
-
-# cat=theme,expert/css/; type=options[0,1]; label= Concatenate CSS files
-themes.configuration.css.concatenate = 1
-
-# customsubcategory=features=Features
-
-#Features
-#############################################
-# cat=theme,expert/features/; type=options[0,1]; label= Enable solr search
-themes.configuration.features.enableSolr = 0
-
-# cat=theme,expert/features/; type=string; label= Base solr core name (no spaces): Will be combined with language ISO code in solr path
-themes.configuration.features.solrBaseCoreName = t3kit
-
-# cat=theme,advanced/features/; type=int+; label= Search target page id
-themes.configuration.features.searchTargetPage = 71
-
-# cat=theme,advanced/features/; type=int+; label= News default detail page id
-themes.configuration.features.newsDefaultDetailPid = 42
-
-
-
 # customsubcategory=contacts= Contacts
-
 # cat=theme,basic/contacts; type=string; label= Phone Number
 themes.configuration.contacts.phone = 555-555555
-
 # cat=theme,basic/contacts; type=string; label= E-Mail address
 themes.configuration.contacts.email = info@info.se
 
-# cat=theme,basic/customPath; type=string; label= Custom Path
-themes.configuration.customPath = fileadmin/custom
 
+
+#############################################
+# Theme constants [advanced]
+#############################################
+# customsubcategory=search= Search configuration
+# cat=theme,advanced/search/; type=int+; label= Search target page id
+themes.configuration.features.searchTargetPage = 71
+
+# customsubcategory=news= News configuration
+# cat=theme,advanced/news/; type=int+; label= News default detail page id
+themes.configuration.features.newsDefaultDetailPid = 42
 
 # customsubcategory=maps= Google map configuration
 # cat=theme,advanced/maps; type=string; label= Google map api key
 themes.configuration.maps.map = //maps.google.com/maps/api/js
+
+
+
+#############################################
+# Theme constants [Expert]
+#############################################
+# customsubcategory=development_mode= Development Mode
+# cat=theme,expert/development_mode/; type=options[Development Mode=1,Production Mode=0]; label= Dev Mode: (Production = Open site for search robots + compress-concat CSS and JS files)
+themes.configuration.isDevelopment = Development Mode
+
+
+# customsubcategory=baseurldomain= Base URL + Domain
+# cat=theme,expert/baseurldomain/; type=string; label= Base URL (if empty config.absRefPrefix=/ will be set)
+themes.configuration.baseurl =
+# cat=theme,expert/baseurldomain/; type=string; label= The domain for the site. (ex. www.mysite.com, without http://)
+themes.configuration.siteDomain = t3kit.testserver.pixelant.nu
+
+
+# customsubcategory=solr= Solr search
+# cat=theme,expert/solr/; type=options[0,1]; label= Enable solr search
+themes.configuration.features.enableSolr = 0
+# cat=theme,expert/solr/; type=string; label= Base solr core name (no spaces): Will be combined with language ISO code in solr path
+themes.configuration.features.solrBaseCoreName = t3kit
+
+
+# customsubcategory=layout= FElayout
+# cat=theme,expert/layout/; type=options[Less=less,Css=css,Development=dev]; label=FElayout mode (css/less/dev)
+themes.configuration.feLayoutMode = less
+# cat=theme,expert/layout/; type=string; label=Path to CSS/LESS files
+themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public
+
+# customsubcategory=customcss= Custom CSS
+# cat=theme,expert/customcss; type=string; label= Custom CSS/LESS path
+themes.configuration.customPath = fileadmin/custom
+
+# customsubcategory=iconFonts= Icon Fonts
+# cat=theme,expert/iconFonts/; type=string; label=Icon Fonts Path
+themes.configuration.iconFontsPath = EXT:theme_t3kit/Resources/Public/IconFonts
+
+
+# customsubcategory=spamProtect= SpamProtect
+# Spam protect email addresses constants
+#############################################
+# cat=theme,expert/spamProtect/; type=string; label= E-Mail spam protection: @ replacement
+themes.configuration.spamProtectEmailAddresses.atSubst = @<span style="display:none;">remove-this.</span>
+# cat=theme,expert/spamProtect/; type=string; label= E-Mail spam protection: Last dot replacement
+themes.configuration.spamProtectEmailAddresses.lastDotSubst = .<span style="display:none;">remove-this.</span>
+
+
+
+
+##########################################################################################
+# more configuration
+##########################################################################################
+themes.languages.default.isoCode = en_GB
+themes.configuration.headerComment = This website is based on t3kit project by Pixelant - www.t3kit.com

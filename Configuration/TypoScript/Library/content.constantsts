@@ -1,7 +1,7 @@
-
 content {
     # always use h2 as default headline
     defaultHeaderType = 2
 }
 
+# Max Image/Media Width
 styles.content.textmedia.maxW = 900
