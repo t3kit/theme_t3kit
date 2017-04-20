@@ -177,9 +177,13 @@ class IconFontSelector
             $filename = rtrim($this->cssFileInformation['dirname'], '/') . '/' . $this->icoMoonSelectionJsonFileName;
             $fileInformation = $this->getFileInformation($filename);
             $jsonData = json_decode(GeneralUtility::getUrl($fileInformation['absFileName']), true);
+            $classSelector = '';
             if (is_array($jsonData['icons']) && count($jsonData['icons']) > 0) {
                 if (isset($jsonData['preferences']['fontPref']['prefix']) && $jsonData['metadata']['name']) {
-                    $this->fontPrefix = $jsonData['preferences']['fontPref']['prefix'];
+                    if (isset($jsonData['preferences']['fontPref']['classSelector'])) {
+                        $classSelector = ltrim($jsonData['preferences']['fontPref']['classSelector'], '.') . ' ';
+                    }
+                    $this->fontPrefix = $classSelector . $jsonData['preferences']['fontPref']['prefix'];
                     foreach ($jsonData['icons'] as $key => $icon) {
                         $title = preg_replace("/([[:alpha:]])([[:digit:]])/", "\\1 \\2", $icon['properties']['name']);
                         $this->items[] = array(
