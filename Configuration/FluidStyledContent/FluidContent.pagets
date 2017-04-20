@@ -3,8 +3,7 @@
 TCEFORM.tt_content.layout {
     removeItems = 1,2,3
     addItems {
-        # TODO:
-        100 = Example generic layout for all content
+        # 100 = Example generic layout for all content
     }
 }
 
@@ -34,8 +33,8 @@ TCEFORM.tt_content.frame_class {
         gray-background  = Gray Background
         blue-mountain-wrp  = Blue Mountain Wrapper
         blue-mountain-header  = Blue Mountain Header Text
-        inverse  = Inverse color of text, links, buttons
-        saturated-inverse  = Inverse and saturate color of text, links, buttons
+        inverse  = Inverse color (text/links/buttons)
+        saturated-inverse  = Inverse and saturate color
     }
 }
 

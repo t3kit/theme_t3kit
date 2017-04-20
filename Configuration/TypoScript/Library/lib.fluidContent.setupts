@@ -21,8 +21,7 @@ lib.contentElement {
         800 {
             classMappings {
                 # example of layout class (Label => theme_t3kit/Configuration/FluidStyledContent/FluidContent.pagets)
-                # TODO:
-                100 = example-generic-layout
+                # 100 = example-generic-layout
             }
         }
 
@@ -81,9 +80,10 @@ lib.contentElement {
         800 {
             classMappings {
                 # Specific layout for GridElements (Label => theme_t3kit/Configuration/GridElements/PageTS/AdvColumnGrid.pagets)
-                # TODO:
-                501 = gridelements-example-layout-1
-                502 = gridelements-example-layout-2
+                501 = mosaic-blue-mountain-odd
+                502 = mosaic-blue-mountain-even
+                503 = mosaic-gray-odd
+                504 = mosaic-gray-even
             }
         }
 

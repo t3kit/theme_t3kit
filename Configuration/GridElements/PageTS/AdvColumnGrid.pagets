@@ -4,9 +4,10 @@ TCEFORM.tt_content.layout {
         gridelements_pi1 {
             addItems {
                 --div-- = Gridelements layouts:
-                # TODO:
-                501 = Gridelements example layout 1
-                502 = Gridelements example layout 2
+                501 = Blue Mountain Mosaic odd
+                502 = Blue Mountain Mosaic even
+                503 = Gray Mosaic odd
+                504 = Gray Mosaic even
             }
         }
     }
@@ -19,9 +20,8 @@ TCEFORM.tt_content.frame_class {
        gridelements_pi1 {
            addItems {
                 --div-- = Gridelements appearance:
-                # TODO:
-                gridelements-example-wrapper-1 = Example Gridelements wrapper 1
-                gridelements-example-wrapper-2 = Example Gridelements wrapper 2
+                # gridelements-example-wrapper-1 = Example Gridelements wrapper 1
+                # gridelements-example-wrapper-2 = Example Gridelements wrapper 2
                 footer__bottom = Footer bottom row wrapper
            }
        }
