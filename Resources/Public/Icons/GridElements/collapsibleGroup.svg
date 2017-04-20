@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="AccordionConteiner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="AccordioncConteiner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st3{fill:#F85B30;}
-	.st4{fill:#4BB4DA;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#F85B30;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill:#F85B30;}
+	.st3{fill:#4BB4DA;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#F85B30;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#58595B;}
-	.st7{opacity:0.51;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#939598;}
+	.st8{opacity:0.1;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 </style>
 <g>
-	<path class="st0" d="M0,0h100v100H0V0z"/>
-	<polygon class="st1" points="100,25 88,12 76,15 12,25 12,88 24,100 100,100 	"/>
+	<path class="st0" d="M0,0h16v16H0V0z"/>
 	<g>
-		<rect x="13" y="13.1" class="st2" width="74" height="74"/>
-		<path class="st3" d="M86,14.1v72H14v-72H86 M88,12.1H12v76h76V12.1L88,12.1z"/>
+		<rect x="1.5" y="1.5" class="st1" width="13" height="13"/>
+		<path class="st2" d="M14,2v12H2V2H14 M15,1H1v14h14V1L15,1z"/>
 	</g>
 	<g>
-		<rect x="20" y="20.1" class="st2" width="60" height="15.9"/>
-		<path class="st4" d="M79,21.1V35H21V21.1H79 M81,19.1H19V37h62V19.1L81,19.1z"/>
+		<rect x="3.5" y="3.5" class="st1" width="9" height="3"/>
+		<path class="st3" d="M12,4v2H4V4H12 M13,3H3v4h10V3L13,3z"/>
 	</g>
 	<g>
-		<rect x="20" y="43" class="st2" width="60" height="37"/>
-		<path class="st4" d="M79,44v35H21V44H79 M81,42H19v39h62V42L81,42z"/>
+		<rect x="3.5" y="6.5" class="st1" width="9" height="6"/>
+		<path class="st3" d="M12,7v5H4V7H12 M13,6H3v7h10V6L13,6z"/>
 	</g>
-	<polygon class="st5" points="32.3,28.1 25,23.2 25,33 	"/>
-	<polygon class="st5" points="29.1,54.3 34,47 24.2,47 	"/>
-	<rect x="25" y="72" class="st6" width="50" height="3"/>
-	<rect x="25" y="65" class="st6" width="50" height="3"/>
-	<rect x="25" y="58" class="st6" width="50" height="3"/>
-	<rect x="17" y="16" class="st7" width="67" height="68"/>
+	<polygon class="st4" points="5.6,5 4.5,4.2 4.5,5.8 	"/>
+	<polygon class="st4" points="5.2,8.6 6,7.5 4.5,7.5 	"/>
 </g>
+<g>
+	<polygon class="st5" points="15,15 1,15 2,16 16,16 	"/>
+</g>
+<g>
+	<polygon class="st5" points="15,15 15,1 16,2 16,16 	"/>
+</g>
+<rect x="5" y="9" class="st6" width="6" height="1"/>
+<rect x="5" y="10.5" class="st7" width="6" height="1"/>
+<rect x="2" y="2" class="st8" width="12" height="12"/>
 </svg>

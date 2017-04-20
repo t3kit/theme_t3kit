@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Tabs" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
@@ -8,27 +9,33 @@
 	.st3{fill:#4BB4DA;}
 	.st4{fill:#F85B30;}
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#58595B;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#939598;}
 </style>
 <g>
-	<path class="st0" d="M0,0h100v100H0V0z"/>
-	<polygon class="st1" points="100,26.1 88,15 87,78 20.3,78.2 12,88 25.2,100 100,100 	"/>
+	<path class="st0" d="M0,0h16v16H0V0z"/>
 	<g>
-		<rect x="67" y="16" class="st2" width="20" height="18"/>
-		<path class="st3" d="M86,17v16H68V17H86 M88,15H66v20h22V15L88,15z"/>
+		<polygon class="st1" points="15,15 1,15 2,16 16,16 		"/>
 	</g>
 	<g>
-		<rect x="42" y="16" class="st2" width="20" height="18"/>
-		<path class="st3" d="M61,17v16H43V17H61 M63,15H41v20h22V15L63,15z"/>
+		<polygon class="st1" points="15,15 15,2 16,3 16,16 		"/>
 	</g>
 	<g>
-		<polygon class="st2" points="13,87 13,13 37,13 37,30.1 87,30.1 87,87 		"/>
-		<path class="st4" d="M36,14v15.1v2l2,0l48,0V86H14V14H36 M38,12H12v76h76V29.1l-50,0V12L38,12z"/>
+		<g>
+			<rect x="6.5" y="2.5" class="st2" width="3" height="2"/>
+			<path class="st3" d="M9,3v1H7V3H9 M10,2H6v3h4V2L10,2z"/>
+		</g>
+		<g>
+			<rect x="11.5" y="2.5" class="st2" width="3" height="2"/>
+			<path class="st3" d="M14,3v1h-2V3H14 M15,2h-4v3h4V2L15,2z"/>
+		</g>
+		<g>
+			<polygon class="st2" points="1.5,14.5 1.5,1.5 4.5,1.5 4.5,4.5 14.5,4.5 14.5,14.5 			"/>
+			<path class="st4" d="M4,2v2v1h1h9v9H2V2H4 M5,1H1v14h14V4H5V1L5,1z"/>
+		</g>
+		<rect x="3" y="6" class="st5" width="8" height="1"/>
+		<rect x="3" y="8" class="st6" width="10" height="1"/>
+		<rect x="3" y="10" class="st6" width="10" height="1"/>
+		<rect x="3" y="12" class="st6" width="10" height="1"/>
 	</g>
-	<rect x="21.3" y="38" class="st5" width="41.7" height="5"/>
-	<rect x="21" y="48" class="st5" width="58" height="3"/>
-	<rect x="21" y="55" class="st5" width="58" height="3"/>
-	<rect x="21" y="62" class="st5" width="58" height="3"/>
-	<rect x="21" y="69" class="st5" width="58" height="3"/>
-	<rect x="21" y="76" class="st5" width="44" height="3"/>
 </g>
 </svg>

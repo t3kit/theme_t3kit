@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="TabsConteiner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+	 y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.st3{fill:#F85B30;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill:#F85B30;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
 	.st4{fill:#4BB4DA;}
 	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#58595B;}
-	.st6{opacity:0.51;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#939598;}
+	.st7{opacity:0.1;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 </style>
 <g>
-	<path class="st0" d="M0,0h100v100H0V0z"/>
-	<polygon class="st1" points="100,24.3 88,12 87,78 20.3,78.2 12,88 24.6,100 100,100 	"/>
+	<path class="st0" d="M0,0h16v16H0V0z"/>
 	<g>
-		<rect x="13" y="13.1" class="st2" width="74" height="74"/>
-		<path class="st3" d="M86,14.1v72H14v-72H86 M88,12.1H12v76h76V12.1L88,12.1z"/>
+		<rect x="1.5" y="1.5" class="st1" width="13" height="13"/>
+		<path class="st2" d="M14,2v12H2V2H14 M15,1H1v14h14V1L15,1z"/>
 	</g>
 	<g>
-		<rect x="65" y="23" class="st2" width="15" height="15"/>
-		<path class="st3" d="M79,24v13H66V24H79 M81,22H64v17h17V22L81,22z"/>
+		<polygon class="st3" points="15,15 1,15 2,16 16,16 		"/>
 	</g>
 	<g>
-		<rect x="45.2" y="23" class="st2" width="14.8" height="15"/>
-		<path class="st3" d="M59,24v13H46.2V24H59 M61,22H44.2v17H61V22L61,22z"/>
+		<polygon class="st3" points="15,15 15,1 16,2 16,16 		"/>
 	</g>
 	<g>
-		<polygon class="st2" points="20,80 20,21 40,21 40,35 80,35 80,80 		"/>
-		<path class="st4" d="M39,22v12v2h2h38v43H21V22H39 M41,20H19v61h62V34H41V20L41,20z"/>
+		<g>
+			<rect x="7.3" y="4" class="st1" width="1.7" height="2"/>
+			<path class="st2" d="M8.5,4.5v1H7.8v-1H8.5 M9.5,3.5H6.8v3h2.7V3.5L9.5,3.5z"/>
+		</g>
+		<g>
+			<rect x="10.8" y="4" class="st1" width="1.7" height="2"/>
+			<path class="st2" d="M12,4.5v1h-0.7v-1H12 M13,3.5h-2.7v3H13V3.5L13,3.5z"/>
+		</g>
+		<g>
+			<polygon class="st1" points="3.5,12.5 3.5,3.5 5.5,3.5 5.5,5.5 12.5,5.5 12.5,12.5 			"/>
+			<path class="st4" d="M5,4v1v1h1h6v6H4V4H5 M6,3H3v10h10V5H6V3L6,3z"/>
+		</g>
+		<rect x="5" y="7" class="st5" width="6" height="1"/>
+		<rect x="5" y="8.5" class="st6" width="6" height="1"/>
+		<rect x="5" y="10" class="st6" width="6" height="1"/>
 	</g>
-	<rect x="26" y="41" class="st5" width="37" height="5"/>
-	<rect x="26" y="50" class="st5" width="48" height="3"/>
-	<rect x="26" y="57" class="st5" width="48" height="3"/>
-	<rect x="26" y="64" class="st5" width="48" height="3"/>
-	<rect x="26" y="71" class="st5" width="48" height="3"/>
-	<rect x="17" y="16" class="st6" width="67" height="68"/>
+	<rect x="2" y="2" class="st7" width="12" height="12"/>
 </g>
 </svg>

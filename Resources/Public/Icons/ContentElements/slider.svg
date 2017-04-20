@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Slider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D3D3D3;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#999999;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#DBF0F8;}
+	.st2{fill:#6D6E71;stroke:#58595B;stroke-linecap:square;stroke-miterlimit:10;}
 	.st3{fill:#F85B30;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#4599B7;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#6FC3E1;}
-	.st6{fill:#FFFFFF;}
-	.st7{fill:#6D6E71;stroke:#58595B;stroke-width:4;stroke-linecap:square;stroke-miterlimit:10;}
-	.st8{fill:#58595B;}
+	.st4{fill:#58595B;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#4BB4DA;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#93D2E9;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#B7E1F0;}
+	.st8{fill:#FFFFFF;}
 </style>
 <g>
-	<path class="st0" d="M0,0h100v100H0V0z"/>
-	<polygon class="st1" points="100,34.2 82,16 81,65 37,65 19,66 54,100 100,100 	"/>
+	<path class="st0" d="M0,0h16v16H0V0z"/>
+	<polygon class="st1" points="16,5 13,2 12,8 12,9 3,12 7,16 16,16 	"/>
 	<g>
-		<rect x="20" y="17" class="st2" width="61" height="48"/>
-		<path class="st3" d="M80,18v46H21V18H80 M82,16H19v50h63V16L82,16z"/>
+		<line class="st2" x1="14" y1="6" x2="15" y2="7"/>
+		<line class="st2" x1="14" y1="8" x2="15" y2="7"/>
 	</g>
-	<polygon class="st4" points="39.1,39.8 21,64 57.3,64 	"/>
-	<polygon class="st5" points="55.7,31.6 31.4,64 80,64 	"/>
-	<ellipse class="st6" cx="32.7" cy="31.5" rx="4.7" ry="4.5"/>
+	<circle class="st3" cx="6" cy="13.4" r="0.6"/>
 	<g>
-		<line class="st7" x1="15" y1="34" x2="8" y2="41"/>
-		<line class="st7" x1="15" y1="48" x2="8" y2="41"/>
+		<circle class="st4" cx="8" cy="13.4" r="0.6"/>
 	</g>
 	<g>
-		<line class="st7" x1="86" y1="34" x2="93" y2="41"/>
-		<line class="st7" x1="86" y1="48" x2="93" y2="41"/>
-	</g>
-	<circle class="st3" cx="38" cy="75" r="4"/>
-	<g>
-		<circle class="st8" cx="50" cy="75" r="4"/>
+		<circle class="st4" cx="10" cy="13.4" r="0.6"/>
 	</g>
 	<g>
-		<circle class="st8" cx="62" cy="75" r="4"/>
+		<rect x="3.5" y="2.5" class="st5" width="9" height="9"/>
+		<path class="st3" d="M12,3v8H4V3H12 M13,2H3v10h10V2L13,2z"/>
+	</g>
+	<polygon class="st6" points="6.3,8.4 4.1,11 8.6,11 	"/>
+	<polygon class="st7" points="9.1,7.2 6.3,11 12,11 	"/>
+	<ellipse class="st8" cx="6.2" cy="6.3" rx="0.8" ry="0.7"/>
+	<g>
+		<line class="st2" x1="2" y1="8" x2="1" y2="7"/>
+		<line class="st2" x1="2" y1="6" x2="1" y2="7"/>
 	</g>
 </g>
 </svg>
