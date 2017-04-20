@@ -20,7 +20,8 @@ page.headerData.185.value (
 page.headerData.186 = TEXT
 page.headerData.186.value (
     <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400italic' rel='stylesheet' type='text/css'>
 )
 
 
