@@ -29,7 +29,7 @@
     # {$themes.configuration.features.newsDefaultDetailPid}
 [global]
 
-# TODO: seo_basics ?
+
 # [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('seo_basics')]
 # <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/seo_basics/TypoScript/setup.ts">
 # [global]

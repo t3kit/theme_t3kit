@@ -33,7 +33,7 @@ TCEFORM.tt_content.tx_themes_responsive.disabled = 1
 TCEFORM.tt_content.tx_themes_icon.disabled = 1
 TCEFORM.tt_content.tx_themes_behaviour.disabled = 1
 
-# TODO: check
+
 TCEMAIN.permissions {
 	groupid = 3
 	user = show,editcontent,new,edit,delete
