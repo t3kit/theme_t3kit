@@ -5,8 +5,8 @@ tt_content {
         dataProcessing {
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
-                references.fieldName = media
-                as = media
+                references.fieldName = assets
+                as = assets
             }
             20 = T3kit\themeT3kit\DataProcessing\FlexFormProcessor
             20 {

@@ -16,8 +16,8 @@
 				</f:then>
 
 				<f:else>
-					<f:if condition="{media}">
-						<f:for each="{media}" as="mediaItem" iteration="mediaIteration">
+					<f:if condition="{assets}">
+						<f:for each="{assets}" as="mediaItem" iteration="mediaIteration">
 							<f:if condition="{mediaIteration.isFirst}">
 								<f:render section="media" arguments="{_all}" />
 							</f:if>
