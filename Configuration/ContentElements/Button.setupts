@@ -12,7 +12,7 @@ tt_content {
             800 < lib.contentElement.dataProcessing.800
             830 < lib.contentElement.dataProcessing.830
             # extend class mapping only for this element
-            1910 {
+            800 {
                 classMappings {
                     # Override the standard default
                     0 = btn btn-default
