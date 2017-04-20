@@ -7,7 +7,7 @@ You can import `selection.json` back to the IcoMoon app using the **Import Icons
 Download preferences:
  - Font name: `icons`
  - Class Prefix: `icon-`
- - CSS selector -> **Use attribute selectors**
+ - CSS selector -> Use a class: `.icon`
 
 
 Also, keep in mind *RESERVED ICONS* for felayout_t3kit: `theme_t3kit/felayout_t3kit/dev/styles/main/icons/icons.less`

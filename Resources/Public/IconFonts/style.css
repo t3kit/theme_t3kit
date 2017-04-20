@@ -23,6 +23,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-alarm:before {
   content: "\e900";
 }

@@ -47,7 +47,7 @@ module.exports = {
     src: [
       '*.js',
       'components.css',
-      'flags/{,*/}*.*',
+      'flags/{,*/}*.*'
     ]
   },
 
@@ -59,7 +59,7 @@ module.exports = {
     src: [
       '*.js',
       '*.css',
-      'flags/{,*/}*.*',
+      'flags/{,*/}*.*'
     ]
   }
 }
