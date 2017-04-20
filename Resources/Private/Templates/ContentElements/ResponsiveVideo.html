@@ -4,8 +4,8 @@
 <f:section name="Header" />
 <f:section name="Main">
 <!-- theme_t3kit: Templates/ContentElements/ResponsiveVideo.html [begin] -->
-	<f:if condition="{media}">
-		<f:for each="{media}" as="video" iteration="videoIteration">
+	<f:if condition="{assets}">
+		<f:for each="{assets}" as="video" iteration="videoIteration">
 			<f:if condition="{video.type} == 4">
 				<div class="embed-responsive embed-responsive-16by9">
 					<f:media
