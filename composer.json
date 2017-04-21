@@ -1,27 +1,64 @@
 {
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.typo3.org/"
-        }
-    ],
-    "name": "t3kit/theme-t3kit",
-    "description": "Theme t3kit",
-    "type": "typo3-cms-extension",
-    "homepage": "http://t3kit.com/",
-    "license": "GPL-2.0+",
-    "support": {
-        "issues": "https://github.com/t3kit/theme_t3kit/issues"
-    },
-    "autoload": {
-        "psr-4": {
-            "T3kit\\themeT3kit\\": "Classes/"
-        }
-    },
-    "minimum-stability": "dev",
-    "require": {
-        "typo3/cms": "^8.5"
-    },
-    "require-dev": {
+  "name": "t3kit/theme-t3kit",
+  "description": "Base Theme fot t3kit project",
+  "type": "typo3-cms-extension",
+  "keywords": ["t3kit", "typo3", "cms", "starter"],
+  "homepage": "http://t3kit.com/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "t3kit Community",
+      "homepage": "https://github.com/t3kit"
     }
+  ],
+  "support": {
+    "issues": "https://github.com/t3kit/theme_t3kit/issues",
+    "forum": "https://typo3.slack.com/messages/t3kit",
+    "source": "https://github.com/t3kit/theme_t3kit",
+    "docs": "https://github.com/t3kit/t3kit/blob/master/README.md"
+  },
+  "autoload": {
+      "psr-4": {
+          "T3kit\\themeT3kit\\": "Classes/"
+      }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/svewap/realurl_404_multilingual"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/pixelant/pxa_newsletter_subscription"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/pixelant/pxa_form_enhancement"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/pixelant/pxa_cookie_bar"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.0",
+    "typo3/cms": "^8.7",
+    "typo3-ter/realurl": "2.2.0",
+    "typo3-themes/themes": "dev-8-0",
+    "gridelementsteam/gridelements": "dev-master",
+    "apache-solr-for-typo3/solr": "6.1.0",
+    "typo3-ter/dyncss-less": "0.7.9",
+    "clickstorm/go_maps_ext": "2.2.0",
+    "b13/seo_basics": "0.9.6",
+    "typo3-ter/news": "5.3.3",
+    "pixelant/pxa-newsletter-subscription": "4.1.0",
+    "pixelant/pxa-form-enhancement": "3.0.0",
+    "pixelant/pxa-cookie-bar": "1.0.7",
+    "wapplersystems/realurl-404-multilingual": "dev-master"
+  }
 }
