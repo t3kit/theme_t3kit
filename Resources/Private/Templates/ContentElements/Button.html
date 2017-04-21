@@ -5,7 +5,7 @@
 <f:section name="Main">
 <!-- theme_t3kit: Templates/ContentElements/Button.html [begin] -->
 	<f:if condition="{data.header_link}">
-		<f:link.typolink parameter="{data.header_link}" class="{f:if(condition: settings.buttonSize, then: ' {settings.buttonSize}')}{f:if(condition: settings.blockLevel, then: ' btn-block')}">{data.header}</f:link.typolink>
+		<f:link.typolink parameter="{data.header_link}" class="btn {f:if(condition: settings.buttonStyle, then: ' {settings.buttonStyle}')} {f:if(condition: settings.buttonSize, then: ' {settings.buttonSize}')}{f:if(condition: settings.blockLevel, then: ' btn-block')}">{data.header}</f:link.typolink>
 	</f:if>
 <!-- theme_t3kit: Templates/ContentElements/Button.html [end] -->
 </f:section>

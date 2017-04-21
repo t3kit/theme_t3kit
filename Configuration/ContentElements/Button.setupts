@@ -11,19 +11,6 @@ tt_content {
             # "inherit" from lib.fluidContent
             800 < lib.contentElement.dataProcessing.800
             830 < lib.contentElement.dataProcessing.830
-            # extend class mapping only for this element
-            800 {
-                classMappings {
-                    # Override the standard default
-                    0 = btn btn-default
-                    11 = btn btn-primary
-                    12 = btn btn-success
-                    13 = btn btn-info
-                    14 = btn btn-warning
-                    15 = btn btn-danger
-                    16 = btn btn-link
-                }
-            }
         }
     }
 }

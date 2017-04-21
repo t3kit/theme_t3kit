@@ -448,6 +448,9 @@
             <trans-unit id="button.header_label">
                 <source>Button text</source>
             </trans-unit>
+            <trans-unit id="button.buttonStyle">
+                <source>Button Style</source>
+            </trans-unit>
             <trans-unit id="button.buttonSize">
                 <source>Button Size</source>
             </trans-unit>
