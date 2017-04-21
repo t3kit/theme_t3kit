@@ -5,3 +5,4 @@ content {
 
 # Max Image/Media Width
 styles.content.textmedia.maxW = 900
+styles.content.textmedia.linkWrap.lightboxEnabled = 1
