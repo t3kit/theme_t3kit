@@ -34,26 +34,5 @@
     <f:variable name="dataCaption">{dataCaption}{file.properties.copyright}</f:variable>
 </f:if>
 
-<f:comment>
-<f:if condition="{file.title}">
-    <f:then>
-        <f:if condition="{file.description}">
-            <f:then>
-                <f:variable name="dataCaption">{file.title}<br />
-                    {file.description}</f:variable>
-            </f:then>
-            <f:else>
-                <f:variable name="dataCaption">{file.title}</f:variable>
-            </f:else>
-        </f:if>
-    </f:then>
-    <f:else>
-        <f:variable name="dataCaption"></f:variable>
-    </f:else>
-</f:if>
-</f:comment>
-
-
-
 <f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" data="{caption:'{dataCaption}'}" />
 </html>
