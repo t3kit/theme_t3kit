@@ -48,7 +48,7 @@ themes.configuration.elem.status.showHeaderMiddleSearch = 1
 
 # customsubcategory=logo=Logo
 # cat=theme,basic/logo; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
-themes.configuration.header.logo.main.file = fileadmin/example_content/logo.png
+themes.configuration.header.logo.main.file = fileadmin/example_content/images/logo.png
 
 # customsubcategory=site=Site
 # cat=theme,basic/site; type=int+; label= Startsite page uid
