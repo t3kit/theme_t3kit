@@ -26,6 +26,7 @@ namespace T3kit\themeT3kit;
 ***************************************************************/
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 
 /**
@@ -100,6 +101,19 @@ class ext_update
             $content .= '<p class="alert alert-warning">' . $this->getCannotMigrateTwbsMessage() . '</p>';
         }
 
+        if ($this->canMigrateMediaToAsset()) {
+            if ($this->needToMigrateMediaToAsset()) {
+                if ($this->migrateMediaToAsset()) {
+                    $content .= '<p class="alert alert-success">Migrated media to assets!</p>';
+                } else {
+                    $content .= '<p class="alert alert-danger">Could not migrate media to assets!</p>';
+                }
+            } else {
+                $content .= '<p class="alert alert-info">Don\'t need to migrate media to assets</p>';
+            }
+        } else {
+            $content .= '<p class="alert alert-warning">' . $this->getCannotMigrateMediaToAssets() . '</p>';
+        }
         return  $content;
     }
 
@@ -457,7 +471,7 @@ class ext_update
             /** @var QueryBuilder $queryBuilder */
             $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
             $ttContent = $queryBuilder
-                ->select('uid', 'CType', 'menu_type')
+                ->select('uid', 'CType')
                 ->from('tt_content')
                 ->where(
                     $queryBuilder->expr()->eq(
@@ -468,6 +482,7 @@ class ext_update
                 ->execute()
                 ->fetchAll();
         }
+
         return count($ttContent) > 0;
     }
 
@@ -524,5 +539,179 @@ class ext_update
         foreach ($pages[0] as $column => $value) {
             $this->ttContentDefinition[$column] = true;
         }
+    }
+
+    protected function canMigrateMediaToAsset()
+    {
+        return isset($this->ttContentDefinition['assets'])
+            && isset($this->ttContentDefinition['media']);
+    }
+
+    protected function getCannotMigrateMediaToAsset()
+    {
+        $message = 'Can\'t migrate assets to media';
+        if (!isset($this->ttContentDefinition['assets'])) {
+            $message .= ', field "assets" doesn\'t exist in table pages';
+        }
+        if (!isset($this->ttContentDefinition['media'])) {
+            $message .= ', field "media" doesn\'t exist in table pages';
+        }
+        return $message;
+    }
+
+    protected function needToMigrateMediaToAsset()
+    {
+        $ttContent = [];
+        $sysFileReference = [];
+
+        if ($this->canMigrateMediaToAsset()) {
+            /** @var QueryBuilder $queryBuilder */
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
+            $ttContent = $queryBuilder
+                ->select('uid', 'header', 'media', 'assets', 'CType')
+                ->from('tt_content')
+                ->where(
+                    $queryBuilder->expr()->eq(
+                        'assets',
+                        $queryBuilder->createNamedParameter(0, \PDO::PARAM_INT)
+                    ),
+                    $queryBuilder->expr()->neq(
+                        'media',
+                        $queryBuilder->createNamedParameter(0, \PDO::PARAM_INT)
+                    ),
+                    $queryBuilder->expr()->neq(
+                        'assets',
+                        $queryBuilder->quoteIdentifier('media')
+                    ),
+                    $queryBuilder->expr()->in(
+                        'CType',
+                        $queryBuilder->createNamedParameter(
+                            ['imageTextLink', 'responsiveVideo', 'gridelements_pi1', 'uploads'],
+                            Connection::PARAM_STR_ARRAY
+                        )
+                    )
+                )
+                ->execute()
+                ->fetchAll();
+
+            $uidList = [];
+            foreach ($ttContent as $index => $values) {
+                $uidList[] = $values['uid'];
+            }
+
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('sys_file_reference');
+            $sysFileReference = $queryBuilder
+                ->select('uid', 'tablenames', 'uid_foreign', 'fieldname')
+                ->from('sys_file_reference')
+                ->where(
+                    $queryBuilder->expr()->eq(
+                        'tablenames',
+                        $queryBuilder->createNamedParameter('tt_content')
+                    ),
+                    $queryBuilder->expr()->eq(
+                        'fieldname',
+                        $queryBuilder->createNamedParameter('media')
+                    ),
+                    $queryBuilder->expr()->in(
+                        'uid_foreign',
+                        $queryBuilder->createNamedParameter(
+                            $uidList,
+                            Connection::PARAM_INT_ARRAY
+                        )
+                    )
+                )
+                ->execute()
+                ->fetchAll();
+        }
+
+        return count($ttContent) > 0 && count($sysFileReference) > 0;
+    }
+
+    protected function migrateMediaToAsset()
+    {
+        $result = false;
+        if ($this->canMigrateMediaToAsset()) {
+
+            $ttContent = [];
+            $sysFileReference = [];
+
+            // Fetch content for migration
+            /** @var QueryBuilder $queryBuilder */
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
+            $ttContent = $queryBuilder
+                ->select('uid', 'header', 'media', 'assets', 'CType')
+                ->from('tt_content')
+                ->where(
+                    $queryBuilder->expr()->eq(
+                        'assets',
+                        $queryBuilder->createNamedParameter(0, \PDO::PARAM_INT)
+                    ),
+                    $queryBuilder->expr()->neq(
+                        'media',
+                        $queryBuilder->createNamedParameter(0, \PDO::PARAM_INT)
+                    ),
+                    $queryBuilder->expr()->neq(
+                        'assets',
+                        $queryBuilder->quoteIdentifier('media')
+                    ),
+                    $queryBuilder->expr()->in(
+                        'CType',
+                        $queryBuilder->createNamedParameter(
+                            ['imageTextLink', 'responsiveVideo', 'gridelements_pi1'],
+                            Connection::PARAM_STR_ARRAY
+                        )
+                    )
+                )
+                ->execute()
+                ->fetchAll();
+
+            $uidList = [];
+            foreach ($ttContent as $index => $values) {
+                $uidList[] = $values['uid'];
+            }
+
+            /** @var QueryBuilder $queryBuilder */
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');
+            $queryBuilder
+                ->update('tt_content')
+                ->where(
+                    $queryBuilder->expr()->in(
+                        'uid',
+                        $queryBuilder->createNamedParameter(
+                            $uidList,
+                            Connection::PARAM_INT_ARRAY
+                        )
+                    )
+                )
+                ->set('assets', $queryBuilder->quoteIdentifier('media'), false)
+                ->set('media', 0)
+                ->execute();
+
+            /** @var QueryBuilder $queryBuilder */
+            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('sys_file_reference');
+            $sysFileReference = $queryBuilder
+                ->update('sys_file_reference')
+                ->where(
+                    $queryBuilder->expr()->eq(
+                        'tablenames',
+                        $queryBuilder->createNamedParameter('tt_content')
+                    ),
+                    $queryBuilder->expr()->eq(
+                        'fieldname',
+                        $queryBuilder->createNamedParameter('media')
+                    ),
+                    $queryBuilder->expr()->in(
+                        'uid_foreign',
+                        $queryBuilder->createNamedParameter(
+                            $uidList,
+                            Connection::PARAM_INT_ARRAY
+                        )
+                    )
+                )
+                ->set('fieldname', 'assets')
+                ->execute();
+            $result = true;
+        }
+        return $result;
     }
 }
