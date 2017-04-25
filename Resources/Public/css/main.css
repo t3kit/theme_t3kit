@@ -1196,23 +1196,23 @@
 .no-touch .footer a:hover {
   color: #85cbe4;
 }
-.footer__quick-links .ce-menu {
+.footer__quick-links ul {
   list-style: none;
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
 }
-.footer__quick-links .ce-menu > li {
+.footer__quick-links ul > li {
   padding: 8px 0;
 }
-.footer__quick-links .ce-menu > li > a {
-  transition: color .2s ease;
+.footer__quick-links ul > li > a {
+  transition: color 0.2s ease;
   color: #50b4d8;
   padding-left: 0;
   padding-bottom: 2px;
   font-weight: 400;
 }
-.footer__quick-links .ce-menu > li > a:hover {
+.footer__quick-links ul > li > a:hover {
   background-color: transparent;
   color: #85cbe4;
 }
@@ -1247,17 +1247,17 @@
   padding-top: 12px;
   border-top: 1px solid #4b4b4b;
 }
-.footer__bottom-nav .ce-menu {
+.footer__bottom-nav ul {
   padding: 0;
   text-align: center;
 }
-.footer__bottom-nav .ce-menu > li {
+.footer__bottom-nav ul > li {
   display: inline-block;
 }
-.footer__bottom-nav .ce-menu > li > a {
+.footer__bottom-nav ul > li > a {
   font-weight: 400;
   text-transform: uppercase;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
   padding: 0 10px;
   font-size: 14px;
   color: #50b4d8;
@@ -1277,7 +1277,7 @@
     border-top: 1px solid #4b4b4b;
     padding-right: 0;
   }
-  .footer__bottom-nav .ce-menu {
+  .footer__bottom-nav ul {
     text-align: right;
   }
   .footer__map-icon {
@@ -2268,31 +2268,31 @@
 }
 .awesomplete input::-webkit-input-placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 .awesomplete input:-ms-input-placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 .awesomplete input::placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 .awesomplete input::-webkit-input-placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 .awesomplete input::-moz-placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 .awesomplete input:-ms-input-placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 .awesomplete input:-moz-placeholder {
   color: #7d7d7d;
-  opacity: .6;
+  opacity: 0.6;
 }
 div.awesomplete {
   width: 100%;

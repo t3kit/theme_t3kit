@@ -876,11 +876,8 @@
 @main-text-color:               #7d7d7d;
 @border-color:                  #ebf3f6;//#eee;
 
-
 @main-link-color:               @main-color;
 @main-link-hover-color:         tint(@main-color, 30%);
-
-
 
 // HEADER
 @header-top-height:             50px;
@@ -897,13 +894,10 @@
 @header-middle-search-btn-hover:lighten(@main-color, 20%);
 @search-text-color: @main-text-color;
 
-
-
 // Logo
 @logo-top:                      25px;
 @logo-left:                     16px;
 @logo-width:                    120px;
-
 
 // Navigation
 @nav-height:                    60px;
@@ -932,7 +926,6 @@
 @breadcrumbs-link-hover-color:  @main-link-hover-color; //lighten(@main-text-color, 15%);
 @breadcrumbs-border-color:      tint(@main-link-color, 70%);
 
-
 // Sub navigation
 @sub-navigation-background:         @main-body-bg;
 @sub-navigation-border:             @border-color;
@@ -945,15 +938,11 @@
 @sub-navigation-link-active-color:  @nav-link-color; //@sub-navigation-link-color;
 @sub-navigation-link-active-bg:     @main-color; //fade(@main-color, 20%);
 
-
-
-
 // FOOTER
 @footer-background:             #181818;
 @footer-color:                  #8d8d8d;
 @footer-link-color:             @main-color;
 @footer-link-hover-color:       @main-link-hover-color;
-
 
 // =========================================================
 // BOOTSTRAP Variables  ====================================
@@ -969,8 +958,6 @@
 @font-family-serif:             Garamond, "Crimson Text", "Times New Roman", serif;
 @font-family-monospace:         Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:              @font-family-sans-serif;
-
-
 
 @font-size-base:          17px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -990,7 +977,6 @@
 @headings-line-height:          1.1;
 @headings-color:                darken(@main-text-color, 30%);//inherit;
 
-
 //== Buttons BOOTSTRAP
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
@@ -1001,7 +987,6 @@
 @btn-default-border:            tint(@main-color, 70%);
 @btn-border-radius-base:        none;
 
-
 @padding-base-vertical:     8px;
 @padding-base-horizontal:   14px;
 
@@ -1011,11 +996,9 @@
 @padding-small-vertical:    5px;
 @padding-small-horizontal:  10px;
 
-
 @border-radius-base:            0;
 @border-radius-large:           0;
 @border-radius-small:           0;
-
 
 //== Panels
 //
@@ -1031,7 +1014,6 @@
 // @panel-default-border:          @light-grey-color;
 // @panel-default-heading-bg:      @light-grey-color;
 
-
 //== Tabs
 // @nav-tabs-border-color:                     @light-grey-color;
 
@@ -1041,35 +1023,9 @@
 @nav-tabs-active-link-hover-color:          @main-text-color;
 // @nav-tabs-active-link-hover-border-color:   @light-grey-color;
 
-
 //== Pills
 @nav-pills-active-link-hover-bg:            @main-color;
 @nav-pills-active-link-hover-color:         #fff;
-
-
-.input-placeholder-color(@color) {
-	&::placeholder {
-		color: @color;
-		opacity: .6;
-	}
-	&::-webkit-input-placeholder
-	{
-		color: @color;
-		opacity: .6;
-	}
-	&::-moz-placeholder {
-		color: @color;
-		opacity: .6;
-	}
-	&:-ms-input-placeholder {
-		color: @color;
-		opacity: .6;
-	}
-	&:-moz-placeholder {
-		color: @color;
-		opacity: .6;
-	}
-}
 
 // Mixins
 // --------------------------------------------------

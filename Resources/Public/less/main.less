@@ -1051,6 +1051,51 @@
 }
 
 
+// =================================
+// === Icons mixin =================
+// =================================
+.icons() {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.input-placeholder-color(@color) {
+    &::placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &::-webkit-input-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &::-moz-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &:-ms-input-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &:-moz-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+}
+
 
 // Custom Variables
 // Primary color
@@ -1061,11 +1106,8 @@
 @main-text-color:               #7d7d7d;
 @border-color:                  #ebf3f6;//#eee;
 
-
 @main-link-color:               @main-color;
 @main-link-hover-color:         tint(@main-color, 30%);
-
-
 
 // HEADER
 @header-top-height:             50px;
@@ -1082,13 +1124,10 @@
 @header-middle-search-btn-hover:lighten(@main-color, 20%);
 @search-text-color: @main-text-color;
 
-
-
 // Logo
 @logo-top:                      25px;
 @logo-left:                     16px;
 @logo-width:                    120px;
-
 
 // Navigation
 @nav-height:                    60px;
@@ -1117,7 +1156,6 @@
 @breadcrumbs-link-hover-color:  @main-link-hover-color; //lighten(@main-text-color, 15%);
 @breadcrumbs-border-color:      tint(@main-link-color, 70%);
 
-
 // Sub navigation
 @sub-navigation-background:         @main-body-bg;
 @sub-navigation-border:             @border-color;
@@ -1130,15 +1168,11 @@
 @sub-navigation-link-active-color:  @nav-link-color; //@sub-navigation-link-color;
 @sub-navigation-link-active-bg:     @main-color; //fade(@main-color, 20%);
 
-
-
-
 // FOOTER
 @footer-background:             #181818;
 @footer-color:                  #8d8d8d;
 @footer-link-color:             @main-color;
 @footer-link-hover-color:       @main-link-hover-color;
-
 
 // =========================================================
 // BOOTSTRAP Variables  ====================================
@@ -1154,8 +1188,6 @@
 @font-family-serif:             Garamond, "Crimson Text", "Times New Roman", serif;
 @font-family-monospace:         Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:              @font-family-sans-serif;
-
-
 
 @font-size-base:          17px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -1175,7 +1207,6 @@
 @headings-line-height:          1.1;
 @headings-color:                darken(@main-text-color, 30%);//inherit;
 
-
 //== Buttons BOOTSTRAP
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
@@ -1186,7 +1217,6 @@
 @btn-default-border:            tint(@main-color, 70%);
 @btn-border-radius-base:        none;
 
-
 @padding-base-vertical:     8px;
 @padding-base-horizontal:   14px;
 
@@ -1196,11 +1226,9 @@
 @padding-small-vertical:    5px;
 @padding-small-horizontal:  10px;
 
-
 @border-radius-base:            0;
 @border-radius-large:           0;
 @border-radius-small:           0;
-
 
 //== Panels
 //
@@ -1216,7 +1244,6 @@
 // @panel-default-border:          @light-grey-color;
 // @panel-default-heading-bg:      @light-grey-color;
 
-
 //== Tabs
 // @nav-tabs-border-color:                     @light-grey-color;
 
@@ -1226,58 +1253,12 @@
 @nav-tabs-active-link-hover-color:          @main-text-color;
 // @nav-tabs-active-link-hover-border-color:   @light-grey-color;
 
-
 //== Pills
 @nav-pills-active-link-hover-bg:            @main-color;
 @nav-pills-active-link-hover-color:         #fff;
 
 
-.input-placeholder-color(@color) {
-	&::placeholder {
-		color: @color;
-		opacity: .6;
-	}
-	&::-webkit-input-placeholder
-	{
-		color: @color;
-		opacity: .6;
-	}
-	&::-moz-placeholder {
-		color: @color;
-		opacity: .6;
-	}
-	&:-ms-input-placeholder {
-		color: @color;
-		opacity: .6;
-	}
-	&:-moz-placeholder {
-		color: @color;
-		opacity: .6;
-	}
-}
-
-
-// ICONS
-// =================================
-// === Icons mixin =================
-// =================================
-.icons() {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icons' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
+// ICONFONT
 
 // =======================================
 // == RESERVED ICONS for felayout_t3kit===
@@ -1316,11 +1297,11 @@
 .logo-carousel__btn-prev:before { content: '\e91b'; } // logo carousel previous
 
 // ===== Main navigation dropdown arrow =====
-@media (min-width: 992px) {
-    .no-touch ._sub .main-navigation__item-link:after {
-        // content: "\e919";
-    }
-}
+// @media (min-width: 992px) {
+//     .no-touch ._sub .main-navigation__item-link:after {
+//         // content: "\e919";
+//     }
+// }
 // Main navigation dropdown arrow mobile touch devices
 .touch .main-navigation__item._sub .main-navigation__open-sub-menu-link:before {
     content: "\ff";
@@ -1336,8 +1317,6 @@
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
-
 
 
 // HEADER
@@ -2655,33 +2634,41 @@
 // =========================================================
 // === Footer ==============================================
 // =========================================================
-.footer{
+.footer {
     background: @footer-background;
     // border-top: 15px solid lighten(@footer-background, 20%);
     border-top: 15px solid @footer-background;
 }
-.footer p{
+
+.footer p {
     color: @footer-color;
     font-weight: 400;
 }
-.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6{
+
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
     color: @footer-color;
     font-weight: 400;
     letter-spacing: 0.2px;
     padding-top: 20px;
 }
-.footer h4{
+
+.footer h4 {
     border-bottom: 1px solid lighten(@footer-background, 20%);
     padding-bottom: 4px;
     // text-transform: uppercase;
 }
-.no-touch .footer a:hover{
+
+.no-touch .footer a:hover {
     color: @footer-link-hover-color;
 }
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
 
 // =================================
 // === Footer Contact ==============
@@ -2704,39 +2691,40 @@
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-
 // =================================
 // === Footer Quick Links===========
 // =================================
-.footer__quick-links{
-}
 
-.footer__quick-links .ce-menu{
+.footer__quick-links ul {
     list-style: none;
     margin: 0;
     padding: 0;
     padding-bottom: 10px;
 }
-.footer__quick-links .ce-menu > li{
+
+.footer__quick-links ul > li {
     padding: 8px 0;
 }
-.footer__quick-links .ce-menu > li > a{
-    transition: color .2s ease;
+
+.footer__quick-links ul > li > a {
+    transition: color 0.2s ease;
     color: @footer-link-color;
     padding-left: 0;
     padding-bottom: 2px;
     font-weight: 400;
     // text-transform: uppercase;
 }
-.footer__quick-links .ce-menu > li > a:hover{
+
+.footer__quick-links ul > li > a:hover {
     background-color: transparent;
     color: @footer-link-hover-color;
 }
 
 @media (max-width: 460px) {
-    .footer__quick-links{
+    .footer__quick-links {
         text-align: center;
     }
+
     .footer__quick-links h4 {
         border: none;
     }
@@ -2744,7 +2732,6 @@
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
 
 // =================================
 // === Footer Logo + contacts=======
@@ -2757,7 +2744,6 @@
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-
 // =================================
 // === Footer Social-icons==========
 // =================================
@@ -2766,12 +2752,10 @@
         padding: 0;
         text-align: right;
     }
-
 }
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
 
 // =================================
 // === Footer Bottom ===============
@@ -2783,27 +2767,31 @@
     background: @footer-background;
     padding-bottom: 10px;
 }
-.footer__bottom .row{
+
+.footer__bottom .row {
     margin-right: 0;
     margin-left: 0;
 }
-.footer__bottom-copyright{
+
+.footer__bottom-copyright {
     padding-top: 12px;
     border-top: 1px solid lighten(@footer-background, 20%);
 }
 
-.footer__bottom-nav .ce-menu{
+.footer__bottom-nav ul {
     padding: 0;
     text-align: center;
 }
-.footer__bottom-nav .ce-menu > li{
+
+.footer__bottom-nav ul > li {
     display: inline-block;
 }
-.footer__bottom-nav .ce-menu > li > a{
+
+.footer__bottom-nav ul > li > a {
     // color: darken(@footer-color, 25%);
     font-weight: 400;
     text-transform: uppercase;
-    transition: color .2s ease;
+    transition: color 0.2s ease;
     padding: 0 10px;
     font-size: 14px;
     color: @footer-link-color;
@@ -2813,46 +2801,49 @@
     .footer__bottom {
         text-align: left;
     }
+
     .footer__bottom-copyright {
         padding-left: 0;
     }
-    .footer__bottom-copyright > p{
+
+    .footer__bottom-copyright > p {
         margin: 0;
     }
-    .footer__bottom-nav{
+
+    .footer__bottom-nav {
         padding-top: 12px;
         border-top: 1px solid lighten(@footer-background, 20%);
         padding-right: 0;
     }
-    .footer__bottom-nav .ce-menu{
+
+    .footer__bottom-nav ul {
         text-align: right;
     }
 
-    .footer__map-icon{
+    .footer__map-icon {
         margin-left: 0;
     }
-
 }
 
 @media (max-width: 991px) {
     .footer__logo-contacts {
         text-align: center;
     }
-    .footer__logo-contacts .ce-textpic .ce-gallery{
-        float: none;
 
+    .footer__logo-contacts .ce-textpic .ce-gallery {
+        float: none;
     }
 
     .footer__logo-contacts .ce-gallery .ce-column {
         float: none;
     }
+
     .footer__logo-contacts .ce-gallery .ce-column img {
         margin: 0 auto;
     }
 }
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
 
 
 // Form Elements
@@ -3532,7 +3523,6 @@
     visibility: visible;
 }
 
-
 // Cards
 .news-cards__item {
     position: relative;
@@ -4067,7 +4057,6 @@
 // -----------------------------------------------------------------------------
 
 
-
 // typicalContentElements
 // Special menus
 .ce-menu {
@@ -4198,7 +4187,6 @@
     margin-top: -0.2em;
     width: 50%;
 }
-
 
 
 // elements
@@ -6447,7 +6435,6 @@
     padding: 0 30px;
 }
 
-
 // =========================================================
 // === Breadcrumbs =========================================
 // =========================================================
@@ -6779,6 +6766,7 @@
     .header-middle-wrp {
         height: auto;
     }
+
     .header-middle__logo {
         // a,
         // a:visited {
@@ -6788,9 +6776,11 @@
             content: none;
         }
     }
+
     p a {
         text-decoration: underline !important;
     }
+
     a[href^="#"],
     a[href^="javascript:"],
     .icons,
@@ -6819,6 +6809,7 @@
     div[id^='jarallax-container'] {
         display: none;
     }
+
     .img-text-link__img-link:after,
     .quote p:before,
     .news-list-category:before,
@@ -6829,28 +6820,34 @@
     .quote__footer-link:after {
         content: none !important;
     }
+
     .icon-text-btn,
     .big-icon-text-btn,
     .img-text-link {
         padding-top: 10px;
         padding-bottom: 20px;
     }
+
     .img-slider {
         max-width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
     }
+
     .img-slider__caption {
         position: relative;
         width: 100%;
     }
+
     .img-slider__caption-p {
         padding: 0;
     }
+
     .img-text-link {
         clear: both;
     }
+
     .img-text-link img {
         width: 240px;
 
@@ -6859,29 +6856,36 @@
             margin-right: 15px;
         }
     }
+
     .divider {
         height: 0;
         border-top: 1px solid #eeeeee;
     }
+
     .quote {
         border: 1px solid #999;
         padding: 0;
     }
+
     .quote__body-p {
         padding: 15px;
         margin-bottom: 0;
     }
+
     .quote__footer {
         padding: 0 15px;
         margin-bottom: 15px;
     }
+
     .news-carousel__item-info {
         position: relative;
         padding: 0;
     }
+
     .news-carousel__media-preview {
         min-height: auto;
     }
+
     .parallax-video {
         height: auto !important;
     }
@@ -6899,6 +6903,7 @@
     float: none;
     margin: 0 auto;
 }
+
 .col-bg-img {
     background-size: cover;
     // background-position: 50%;
@@ -6922,59 +6927,58 @@
 @margin-60: 60px;
 @margin-70: 70px;
 
-.margin-top-5 {margin-top: @margin-5 / 2;}
-.margin-top-10 {margin-top: @margin-10 / 2;}
-.margin-top-15 {margin-top: @margin-15 / 2;}
-.margin-top-20 {margin-top: @margin-20 / 2;}
-.margin-top-25 {margin-top: @margin-25 / 2;}
-.margin-top-30 {margin-top: @margin-30 / 2;}
-.margin-top-40 {margin-top: @margin-40 / 2;}
-.margin-top-50 {margin-top: @margin-50 / 2;}
-.margin-top-60 {margin-top: @margin-60 / 2;}
-.margin-top-70 {margin-top: @margin-70 / 2;}
+.margin-top-5 { margin-top: @margin-5 / 2; }
+.margin-top-10 { margin-top: @margin-10 / 2; }
+.margin-top-15 { margin-top: @margin-15 / 2; }
+.margin-top-20 { margin-top: @margin-20 / 2; }
+.margin-top-25 { margin-top: @margin-25 / 2; }
+.margin-top-30 { margin-top: @margin-30 / 2; }
+.margin-top-40 { margin-top: @margin-40 / 2; }
+.margin-top-50 { margin-top: @margin-50 / 2; }
+.margin-top-60 { margin-top: @margin-60 / 2; }
+.margin-top-70 { margin-top: @margin-70 / 2; }
 
-.margin-bottom-5 {margin-bottom: @margin-5 / 2;}
-.margin-bottom-10 {margin-bottom: @margin-10 / 2;}
-.margin-bottom-15 {margin-bottom: @margin-15 / 2;}
-.margin-bottom-20 {margin-bottom: @margin-20 / 2;}
-.margin-bottom-25 {margin-bottom: @margin-25 / 2;}
-.margin-bottom-30 {margin-bottom: @margin-30 / 2;}
-.margin-bottom-40 {margin-bottom: @margin-40 / 2;}
-.margin-bottom-50 {margin-bottom: @margin-50 / 2;}
-.margin-bottom-60 {margin-bottom: @margin-60 / 2;}
-.margin-bottom-70 {margin-bottom: @margin-70 / 2;}
+.margin-bottom-5 { margin-bottom: @margin-5 / 2; }
+.margin-bottom-10 { margin-bottom: @margin-10 / 2; }
+.margin-bottom-15 { margin-bottom: @margin-15 / 2; }
+.margin-bottom-20 { margin-bottom: @margin-20 / 2; }
+.margin-bottom-25 { margin-bottom: @margin-25 / 2; }
+.margin-bottom-30 { margin-bottom: @margin-30 / 2; }
+.margin-bottom-40 { margin-bottom: @margin-40 / 2; }
+.margin-bottom-50 { margin-bottom: @margin-50 / 2; }
+.margin-bottom-60 { margin-bottom: @margin-60 / 2; }
+.margin-bottom-70 { margin-bottom: @margin-70 / 2; }
 
 @media (min-width: 768px) {
-    .margin-top-5 {margin-top: @margin-5;}
-    .margin-top-10 {margin-top: @margin-10;}
-    .margin-top-15 {margin-top: @margin-15;}
-    .margin-top-20 {margin-top: @margin-20;}
-    .margin-top-25 {margin-top: @margin-25;}
-    .margin-top-30 {margin-top: @margin-30;}
-    .margin-top-40 {margin-top: @margin-40;}
-    .margin-top-50 {margin-top: @margin-50;}
-    .margin-top-60 {margin-top: @margin-60;}
-    .margin-top-70 {margin-top: @margin-70;}
+    .margin-top-5 { margin-top: @margin-5; }
+    .margin-top-10 { margin-top: @margin-10; }
+    .margin-top-15 { margin-top: @margin-15; }
+    .margin-top-20 { margin-top: @margin-20; }
+    .margin-top-25 { margin-top: @margin-25; }
+    .margin-top-30 { margin-top: @margin-30; }
+    .margin-top-40 { margin-top: @margin-40; }
+    .margin-top-50 { margin-top: @margin-50; }
+    .margin-top-60 { margin-top: @margin-60; }
+    .margin-top-70 { margin-top: @margin-70; }
 
-    .margin-bottom-5 {margin-bottom: @margin-5;}
-    .margin-bottom-10 {margin-bottom: @margin-10;}
-    .margin-bottom-15 {margin-bottom: @margin-15;}
-    .margin-bottom-20 {margin-bottom: @margin-20;}
-    .margin-bottom-25 {margin-bottom: @margin-25;}
-    .margin-bottom-30 {margin-bottom: @margin-30;}
-    .margin-bottom-40 {margin-bottom: @margin-40;}
-    .margin-bottom-50 {margin-bottom: @margin-50;}
-    .margin-bottom-60 {margin-bottom: @margin-60;}
-    .margin-bottom-70 {margin-bottom: @margin-70;}
+    .margin-bottom-5 { margin-bottom: @margin-5; }
+    .margin-bottom-10 { margin-bottom: @margin-10; }
+    .margin-bottom-15 { margin-bottom: @margin-15; }
+    .margin-bottom-20 { margin-bottom: @margin-20; }
+    .margin-bottom-25 { margin-bottom: @margin-25; }
+    .margin-bottom-30 { margin-bottom: @margin-30; }
+    .margin-bottom-40 { margin-bottom: @margin-40; }
+    .margin-bottom-50 { margin-bottom: @margin-50; }
+    .margin-bottom-60 { margin-bottom: @margin-60; }
+    .margin-bottom-70 { margin-bottom: @margin-70; }
 }
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-
 // =================================
 // ======== Browsehappy, fix IE ====
 // =================================
-.browsehappy{
+.browsehappy {
     position: absolute;
     width: 100%;
     height: 50px;
@@ -6985,7 +6989,8 @@
     padding-left: 50px;
     color: #000;
     font-family: Arial;
-    a{
+
+    a {
         color: #ff3333;
         font-weight: bold;
     }
@@ -6993,11 +6998,11 @@
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-
 // ==================================================================
 // ======== General(bootstrap) css rewritings  ====
 // ==================================================================
-h1,h2 {
+h1,
+h2 {
     font-family: @font-family-serif;
 }
 
