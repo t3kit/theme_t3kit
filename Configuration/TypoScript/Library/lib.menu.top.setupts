@@ -13,7 +13,13 @@ lib.menu.top.1 {
     NO.stdWrap.wrap.required = 1
     NO.stdWrap.wrap.dataWrap = <span class="icons icon-|"></span>
     NO.stdWrap.innerWrap.noTrimWrap = |&nbsp;||
+    NO.additionalParams = &logintype=logout
+    NO.additionalParams {
+        if.isInList.field = uid
+        if.value = {$themes.configuration.header.top.menu.logoutMenuItemPageUid}
+    }
     ACT < .NO
     ACT.wrapItemAndSub.insertData = 1
     ACT.wrapItemAndSub = <li class="_active uid-{field:uid} point-{register:count_MENUOBJ} first">|</li>|*|<li class="_active uid-{field:uid} point-{register:count_MENUOBJ} middle">|</li>|*|<li class="_active uid-{field:uid} point-{register:count_MENUOBJ} last">|</li>
 }
+
