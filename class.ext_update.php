@@ -586,7 +586,7 @@ class ext_update
                     $queryBuilder->expr()->in(
                         'CType',
                         $queryBuilder->createNamedParameter(
-                            ['imageTextLink', 'responsiveVideo', 'gridelements_pi1', 'uploads'],
+                            ['imageTextLink', 'responsiveVideo'],
                             Connection::PARAM_STR_ARRAY
                         )
                     )
@@ -657,7 +657,7 @@ class ext_update
                     $queryBuilder->expr()->in(
                         'CType',
                         $queryBuilder->createNamedParameter(
-                            ['imageTextLink', 'responsiveVideo', 'gridelements_pi1'],
+                            ['imageTextLink', 'responsiveVideo'],
                             Connection::PARAM_STR_ARRAY
                         )
                     )
