@@ -25,7 +25,8 @@ themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu = 0
 themes.configuration.elem.status.headerTopNavigationAsOneItemInMobileMenu = 1
 # cat=header,advanced/header_top; type=int+; label= Header Top: Container pid where the menu items are located
 themes.configuration.header.top.menu.containerPid = 6
-
+# cat=header,advanced/header_top; type=int+; label= Logout menu item page id : Will add additional link parameter "&logintype=logout" to link.
+themes.configuration.header.top.menu.logoutMenuItemPageUid = 112
 
 #Header Middle
 #############################################
