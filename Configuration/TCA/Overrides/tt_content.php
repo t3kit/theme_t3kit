@@ -25,7 +25,8 @@ call_user_func(function() {
     // ======================= contentName [end] ==========================================
 
 
-    // Example how to configure the backend fields for our new content element
+    // Example how to configure the backend fields for our new content element. Just remove unneeded parts.
+
     // 'showitem' => '
     //     --div--;' .  $coreLanguageFilePrefix .'general,
     //         --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
