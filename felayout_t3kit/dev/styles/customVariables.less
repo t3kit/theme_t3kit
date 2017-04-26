@@ -156,3 +156,30 @@
 //== Pills
 @nav-pills-active-link-hover-bg:            @main-color;
 @nav-pills-active-link-hover-color:         #fff;
+
+.input-placeholder-color(@color) {
+    &::placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &::-webkit-input-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &::-moz-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &:-ms-input-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+
+    &:-moz-placeholder {
+        color: @color;
+        opacity: 0.6;
+    }
+}

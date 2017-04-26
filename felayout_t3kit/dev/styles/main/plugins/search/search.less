@@ -3,21 +3,23 @@
 // =================================
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
-/* search form */
 
+/* search form */
 .tx-solr-search-form {
     margin-bottom: 10px;
 }
+
 .tx-solr-search-form .awesomplete {
     display: inline;
 }
-.tx-solr-search-form .awesomplete input{
+
+.tx-solr-search-form .awesomplete input {
     vertical-align: top;
 }
+
 .tx-solr-search-form .tx-solr-submit {
     color: @text-color;
     background-color: darken(@main-body-bg, 15%);
-    border: none;
     display: inline-block;
     margin-bottom: 0;
     font-weight: normal;
@@ -43,20 +45,15 @@
         margin-top: 10px;
     }
 }
-
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
-
-
-
 // // =================================
 // // === Search Result ===============
 // // =================================
+
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
+
 /* pagination */
-
-
 .search-result-pagination {
     margin-top: 20px;
 }
@@ -70,10 +67,9 @@
     color: @main-text-color;
 }
 
-
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
-/* results */
 
+/* results */
 .tx-solr-search-word {
     font-weight: bold;
 }
@@ -119,15 +115,15 @@
 }
 
 /* ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- */
-/* relevance */
 
+/* relevance */
 .relevance {
     height: 30px;
-    color: lighten(@main-text-color, 25%)
+    color: lighten(@main-text-color, 25%);
 }
 
-.relevance-label,
 .relevance-bar,
+.relevance-label,
 .relevance-percent {
     float: left;
     margin-right: 3px;
@@ -162,18 +158,15 @@
 .tx-solr-relevance-fill {
     background-color: darken(@main-body-bg, 15%);
 }
-
-
 // // -----------------------------------------------------------------------------
 // // -----------------------------------------------------------------------------
 
-
-#tx-solr-search-functions .label-default{
+#tx-solr-search-functions .label-default {
     background: darken(@main-body-bg, 10%);
     color: @main-text-color;
 }
 
-.awesomplete input{ 
+.awesomplete input {
     color: @search-text-color;
     .input-placeholder-color(@search-text-color);
 }
