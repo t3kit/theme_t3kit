@@ -279,20 +279,32 @@
             <trans-unit id="heroImage.flexform.elementHeight">
                 <source>Set height of element</source>
             </trans-unit>
-            <trans-unit id="heroImage.flexform.contentPosition">
-                <source>Set Content position</source>
+            <trans-unit id="heroImage.flexform.horizontalAlignment">
+               <source>Horizontal alignment</source>
+           </trans-unit>
+           <trans-unit id="heroImage.flexform.verticalAlignment">
+               <source>Vertical alignment</source>
+           </trans-unit>
+           <trans-unit id="heroImage.flexform.horizontalAlignment_left">
+                <source>Left align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.horizontalAlignment_center">
+                <source>Center align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.horizontalAlignment_right">
+                <source>Right align</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.verticalAlignment_top">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.verticalAlignment_middle">
+                <source>Middle</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.verticalAlignment_bottom">
+                <source>Bottom</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle">
                 <source>Set Animation Style</source>
-            </trans-unit>
-            <trans-unit id="heroImage.flexform.contentPosition_left">
-                <source>Left align</source>
-            </trans-unit>
-            <trans-unit id="heroImage.flexform.contentPosition_center">
-                <source>Center align</source>
-            </trans-unit>
-            <trans-unit id="heroImage.flexform.contentPosition_right">
-                <source>Right align</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle_disable">
                 <source>Disable</source>
