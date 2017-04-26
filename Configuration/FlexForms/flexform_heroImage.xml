@@ -41,9 +41,9 @@
                       </TCEforms>
                     </linkAsBtn>
 
-                    <contentPosition>
+                    <horizontalAlignment>
                         <TCEforms>
-                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition</label>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.horizontalAlignment</label>
                             <config>
                                 <type>select</type>
                                 <items>
@@ -51,7 +51,19 @@
                                 </items>
                             </config>
                         </TCEforms>
-                    </contentPosition>
+                    </horizontalAlignment>
+
+                    <verticalAlignment>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.verticalAlignment</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </verticalAlignment>
 
                     <animationStyle>
                         <TCEforms>
