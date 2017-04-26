@@ -24,5 +24,6 @@ TCEFORM.tt_content.pi_flexform.heroImage.sDEF.animationStyle {
         1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_1
         2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_2
         3 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_3
+        4 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.animationStyle_4
     }
 }

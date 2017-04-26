@@ -9,13 +9,13 @@
 			<div class="hero-image__caption-wrp {f:if(condition: '{settings.contentPosition} == 0', then: '_left-align')}{f:if(condition: '{settings.contentPosition} == 1', then: '_center-align')}{f:if(condition: '{settings.contentPosition} == 2', then: '_right-align')}">
 				<div class="hero-image__caption {f:if(condition: '{settings.animationStyle} == 0', then: '', else: '_caption-animated-{settings.animationStyle}')}">
 					<f:if condition="{data.header}">
-						<h2 class="hero-image__caption-header">{data.header}</h2>
+						<h2 class="hero-image__caption-header" data-header-content='{data.header}'>{data.header}</h2>
 					</f:if>
 					<f:if condition="{data.bodytext}">
-						<h3 class="hero-image__caption-subheader">{data.bodytext}</h3>
+						<h3 class="hero-image__caption-subheader" data-subheader-content='{data.bodytext}'>{data.bodytext}</h3>
 					</f:if>
 					<f:if condition="{settings.elementText}">
-						<p class="hero-image__caption-p">{settings.elementText}</p>
+						<p class="hero-image__caption-p" data-text-content='{settings.elementText}'>{settings.elementText}</p>
 					</f:if>
 					<f:if condition="{data.header_link}">
 						<div class="hero-image__caption-link ">

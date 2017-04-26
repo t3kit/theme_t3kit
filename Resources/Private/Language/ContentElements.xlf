@@ -306,6 +306,9 @@
             <trans-unit id="heroImage.flexform.animationStyle_3">
                 <source>Animation style 3</source>
             </trans-unit>
+            <trans-unit id="heroImage.flexform.animationStyle_4">
+                <source>Animation style 4</source>
+            </trans-unit>
 
             <trans-unit id="logoCarousel.title">
                 <source>Logo Carousel</source>
