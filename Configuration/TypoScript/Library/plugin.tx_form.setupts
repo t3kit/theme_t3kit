@@ -1,0 +1,14 @@
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:theme_t3kit/Configuration/Yaml/ThemeBaseSetup.yaml
+        }
+    }
+}
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:theme_t3kit/Configuration/Yaml/ThemeBaseSetup.yaml
+        }
+    }
+}
