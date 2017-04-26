@@ -41,17 +41,29 @@
 						</TCEforms>
 					</linkAsBtn>
 
-					<contentPosition>
-						<TCEforms>
-							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition</label>
-							<config>
-								<type>select</type>
-								<items>
+                    <horizontalAlignment>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.horizontalAlignment</label>
+                            <config>
+                                <type>select</type>
+                                <items>
 
-								</items>
-							</config>
-						</TCEforms>
-					</contentPosition>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </horizontalAlignment>
+
+                    <verticalAlignment>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.verticalAlignment</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </verticalAlignment>
 
 					<animationStyle>
 						<TCEforms>
