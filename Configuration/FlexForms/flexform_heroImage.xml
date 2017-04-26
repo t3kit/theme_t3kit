@@ -41,12 +41,22 @@
 						</TCEforms>
 					</linkAsBtn>
 
-					<contentPosition>
-						<TCEforms>
-							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition</label>
-							<config>
-								<type>select</type>
-								<items>
+                    <transparentLayer>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.transparentLayer</label>
+                            <config>
+                                <type>input</type>
+                                <rows>1</rows>
+                            </config>
+                        </TCEforms>
+                    </transparentLayer>
+
+                    <contentPosition>
+                        <TCEforms>
+                            <label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:heroImage.flexform.contentPosition</label>
+                            <config>
+                                <type>select</type>
+                                <items>
 
 								</items>
 							</config>

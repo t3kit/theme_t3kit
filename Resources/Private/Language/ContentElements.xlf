@@ -282,6 +282,9 @@
             <trans-unit id="heroImage.flexform.contentPosition">
                 <source>Set Content position</source>
             </trans-unit>
+            <trans-unit id="heroImage.flexform.transparentLayer">
+                <source>Element overlay color (rgba)</source>
+            </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle">
                 <source>Set Animation Style</source>
             </trans-unit>
