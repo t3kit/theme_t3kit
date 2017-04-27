@@ -45,14 +45,11 @@ cl:
 # Code linters and validators
 # ==================================
 check:
-    #Dev
-    # - 'dev'
     #JS
     - 'standard:grunt'
     - 'standard:main'
     #CSS
-    # - 'csslint'
-    #TODO: stylelint!!!
+    - 'stylelint'
 
 # ==================================
 # Task helpers  ====================
