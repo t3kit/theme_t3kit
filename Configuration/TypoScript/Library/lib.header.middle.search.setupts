@@ -1,4 +1,7 @@
 plugin.tx_solr.templateFiles.searchHeaderMiddle = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiSearch/searchHeaderMiddle.html
 
+lib.header.middle.search = TEXT
+[globalVar = LIT:1 = {$themes.configuration.features.enableSolr}]
 lib.header.middle.search = USER
 lib.header.middle.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchHeaderMiddle->main
+[global]
