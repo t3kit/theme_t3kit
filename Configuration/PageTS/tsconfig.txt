@@ -35,9 +35,9 @@ TCEFORM.tt_content.tx_themes_behaviour.disabled = 1
 
 
 TCEMAIN.permissions {
-	groupid = 3
-	user = show,editcontent,new,edit,delete
-	group = show,editcontent,new,edit,delete
+    groupid = 3
+    user = show,editcontent,new,edit,delete
+    group = show,editcontent,new,edit,delete
 }
 
 # Include  PageTS files from fileadmin/Configuration/PageTS

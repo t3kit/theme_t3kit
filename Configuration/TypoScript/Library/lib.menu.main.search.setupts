@@ -2,6 +2,6 @@ plugin.tx_solr.templateFiles.searchMenuMain = EXT:theme_t3kit/Resources/Private/
 
 lib.menu.main.search = TEXT
 [globalVar = LIT:1 = {$themes.configuration.features.enableSolr}]
-lib.menu.main.search = USER
-lib.menu.main.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchMenuMain->main
+    lib.menu.main.search = USER
+    lib.menu.main.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchMenuMain->main
 [global]

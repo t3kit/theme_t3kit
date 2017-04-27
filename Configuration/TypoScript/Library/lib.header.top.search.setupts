@@ -2,6 +2,6 @@ plugin.tx_solr.templateFiles.searchHeaderTop = EXT:theme_t3kit/Resources/Private
 
 lib.header.top.search = TEXT
 [globalVar = LIT:1 = {$themes.configuration.features.enableSolr}]
-lib.header.top.search = USER
-lib.header.top.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchHeaderTop->main
+    lib.header.top.search = USER
+    lib.header.top.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchHeaderTop->main
 [global]

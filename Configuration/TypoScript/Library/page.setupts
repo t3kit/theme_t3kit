@@ -1,5 +1,5 @@
 [globalString = LIT:{$themes.configuration.baseurl} = /(https?:\/\/)+.+(\/)/]
     config.baseURL = {$themes.configuration.baseurl}
 [else]
-  config.absRefPrefix=/
+    config.absRefPrefix=/
 [global]

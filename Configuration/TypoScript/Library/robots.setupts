@@ -1,50 +1,48 @@
 robotsTxt = PAGE
 robotsTxt {
-  typeNum = 777
-  config {
-    disableAllHeaderCode = 1
-    renderCharset = utf-8
-    additionalHeaders.10.header = Content-type: text/plain
-    xhtml_cleaning = 0
-    tx_realurl_enable = 0
-    admPanel = 0
-    jumpurl_enable = 0
-    debug = 0
-    no_cache=1
-  }
+    typeNum = 777
+    config {
+        disableAllHeaderCode = 1
+        renderCharset = utf-8
+        additionalHeaders.10.header = Content-type: text/plain
+        xhtml_cleaning = 0
+        tx_realurl_enable = 0
+        admPanel = 0
+        jumpurl_enable = 0
+        debug = 0
+        no_cache=1
+    }
 
-  10 = COA
-  10 {
-    10 = TEXT
-    10.value (
-User-agent: *
-Disallow: /fileadmin/_temp_/
-Disallow: /fileadmin/templates/
-Disallow: /typo3/
-Disallow: /typo3_src/
-Disallow: /typo3conf/
-Disallow: /TYPO3.CMS/
+    10 = COA
+    10 {
+        10 = TEXT
+        10.value (
+            User-agent: *
+            Disallow: /fileadmin/_temp_/
+            Disallow: /fileadmin/templates/
+            Disallow: /typo3/
+            Disallow: /typo3_src/
+            Disallow: /typo3conf/
+            Disallow: /TYPO3.CMS/
+        )
 
-
-)
-
-  # Sitemap
+    # Sitemap
     20 = TEXT
     20.wrap = Sitemap: |
     20.stdWrap.typolink {
-      parameter.data = leveluid:0
-      additionalParams = &type=776
-      forceAbsoluteUrl = 1
-      returnLast = url
+            parameter.data = leveluid:0
+            additionalParams = &type=776
+            forceAbsoluteUrl = 1
+            returnLast = url
+        }
     }
-  }
 }
 
 # Different robots.txt for some domains, and disable sitemap
 [globalString = IENV:HTTP_HOST = *typo3konsult.se]
-  robotsTxt.10.10.value (
-User-agent: *
-Disallow: /
-)
-  robotsTxt.10.20 >
+    robotsTxt.10.10.value (
+        User-agent: *
+        Disallow: /
+    )
+    robotsTxt.10.20 >
 [end]
