@@ -1,7 +1,7 @@
 <f:comment>
-<!-- 
-    copy of vendor/typo3/cms/typo3/sysext/fluid_styled_content/Resources/Private/Partials/Media/Rendering/Image.html
-    added data-caption set by variable dataCaption below
+<!--
+	copy of vendor/typo3/cms/typo3/sysext/fluid_styled_content/Resources/Private/Partials/Media/Rendering/Image.html
+	added data-caption set by variable dataCaption below
 -->
 </f:comment>
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
@@ -14,24 +14,24 @@
 <f:variable name="labelCopyright">{settings.media.popup.data-caption.labelCopyright}</f:variable>
 
 <f:if condition="{file.title} && {includeTitle}">
-    <f:variable name="dataCaption">{file.title}</f:variable>
+	<f:variable name="dataCaption">{file.title}</f:variable>
 </f:if>
 
 <f:if condition="{file.description} && {includeDescription}">
-    <f:if condition="{dataCaption -> f:count()} > 0">
-        <f:variable name="dataCaption">{dataCaption}{glue}</f:variable>
-    </f:if>
-    <f:variable name="dataCaption">{dataCaption}{file.description}</f:variable>
+	<f:if condition="{dataCaption -> f:count()} > 0">
+		<f:variable name="dataCaption">{dataCaption}{glue}</f:variable>
+	</f:if>
+	<f:variable name="dataCaption">{dataCaption}{file.description}</f:variable>
 </f:if>
 
 <f:if condition="{file.properties.copyright} && {includeCopyright}">
-    <f:if condition="{dataCaption -> f:count()} > 0">
-        <f:variable name="dataCaption">{dataCaption}{glue}</f:variable>
-    </f:if>
-    <f:if condition="{labelCopyright}">
-        <f:variable name="dataCaption">{dataCaption}{labelCopyright} </f:variable>
-    </f:if>
-    <f:variable name="dataCaption">{dataCaption}{file.properties.copyright}</f:variable>
+	<f:if condition="{dataCaption -> f:count()} > 0">
+		<f:variable name="dataCaption">{dataCaption}{glue}</f:variable>
+	</f:if>
+	<f:if condition="{labelCopyright}">
+		<f:variable name="dataCaption">{dataCaption}{labelCopyright} </f:variable>
+	</f:if>
+	<f:variable name="dataCaption">{dataCaption}{file.properties.copyright}</f:variable>
 </f:if>
 
 <f:media class="image-embed-item" file="{file}" width="{dimensions.width}" height="{dimensions.height}" alt="{file.alternative}" title="{file.title}" data="{caption:'{dataCaption}'}" />

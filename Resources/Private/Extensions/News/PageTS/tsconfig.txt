@@ -1,6 +1,6 @@
 tx_news.templateLayouts {
-        NewsCarousel = News carousel
-        Cards  = News as Cards
-        SimpleList = News as Simple List
-        Timeline = News list with timeline
+    NewsCarousel = News carousel
+    Cards  = News as Cards
+    SimpleList = News as Simple List
+    Timeline = News list with timeline
 }
