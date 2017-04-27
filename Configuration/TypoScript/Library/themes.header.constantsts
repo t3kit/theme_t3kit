@@ -54,7 +54,7 @@ themes.configuration.header.logo.main.file = fileadmin/example_content/images/lo
 # customsubcategory=site=Site
 # cat=theme,basic/site; type=int+; label= Startsite page uid
 themes.configuration.pages.startsite = 1
-# cat=theme,basic/site; type=int+; label= Site Name
+# cat=theme,basic/site; type=string; label= Site Name
 themes.configuration.siteName = t3kit
 
 
