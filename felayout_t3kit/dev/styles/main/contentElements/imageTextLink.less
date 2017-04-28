@@ -12,7 +12,8 @@
 .img-text-link {
     margin: 25px 0 20px;
 }
-@media(min-width: 992px) {
+
+@media (min-width: 992px) {
     .img-text-link {
         margin: 50px 0 40px;
     }
@@ -40,6 +41,7 @@
 
     &:before {
         .icons();
+
         position: absolute;
         font-size: 38px;
         padding: 12px;
@@ -116,7 +118,6 @@
     left: 0;
     opacity: 1;
     visibility: visible;
-    background: -webkit-linear-gradient(to bottom, fade(@main-color, 0%) 0%, fade(@main-color, 80%) 75%);
     background: linear-gradient(to bottom, fade(@main-color, 0%) 0%, fade(@main-color, 80%) 75%);
     transition: all 0.2s;
 }
@@ -350,12 +351,11 @@
         display: none;
         height: 100%;
         width: 100%;
-        background: rgba(255,255,255,0.5);
+        background: rgba(255, 255, 255, 0.5);
         position: absolute;
         top: 0;
         left: 0;
         transition: all 0.5s;
-        -webkittransform: translate3d(150%, 0, 0) skew(45deg);
         transform: translate3d(150%, 0, 0) skew(45deg);
         z-index: 3;
     }
@@ -481,7 +481,8 @@
     background: linear-gradient(to bottom, fade(tint(@main-text-color, 90%), 0%) 0%, fade(tint(@main-text-color, 90%), 80%) 75%);
     transition: all 0.2s;
 }
-@media(min-width: 992px) {
+
+@media (min-width: 992px) {
     .img-text-link._hover-4:after {
         opacity: 0;
         -webkit-transform: translate3d(0, 80%, 0);

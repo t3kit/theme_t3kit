@@ -49,7 +49,7 @@ check:
     - 'standard:grunt'
     - 'standard:main'
     #CSS
-    - 'stylelint'
+    - 'stylelint:less'
 
 # ==================================
 # Task helpers  ====================
