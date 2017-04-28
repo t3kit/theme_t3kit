@@ -7,6 +7,16 @@
   "scripts": {
     "test": "grunt check"
   },
+  "dependencies": {
+    "awesomplete": "1.1.1",
+    "bootstrap": "3.3.7",
+    "flag-icon-css": "2.8.0",
+    "jarallax": "1.7.3",
+    "jquery": "3.2.1",
+    "simplelightbox": "1.10.7",
+    "smtlk-dotdotdot": "1.8.3",
+    "swiper": "3.4.2"
+  },
   "devDependencies": {
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
