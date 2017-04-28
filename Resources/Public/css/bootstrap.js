@@ -732,11 +732,11 @@
 
 }(jQuery);
 
-// @import '../bower_components/bootstrap/js/dropdown.js';
-// @import '../bower_components/bootstrap/js/modal.js';
-// @import '../bower_components/bootstrap/js/tooltip.js';
-// @import '../bower_components/bootstrap/js/popover.js';
-// @import '../bower_components/bootstrap/js/scrollspy.js';
+// @import '../../node_modules/bootstrap/js/dropdown.js';
+// @import '../../node_modules/bootstrap/js/modal.js';
+// @import '../../node_modules/bootstrap/js/tooltip.js';
+// @import '../../node_modules/bootstrap/js/popover.js';
+// @import '../../node_modules/bootstrap/js/scrollspy.js';
 /* ========================================================================
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
@@ -893,5 +893,5 @@
 
 }(jQuery);
 
-// @import '../bower_components/bootstrap/js/affix.js';
+// @import '../../node_modules/bootstrap/js/affix.js';
 //==========================================================
