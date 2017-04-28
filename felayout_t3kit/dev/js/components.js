@@ -2,20 +2,20 @@
 
 // Swiper
 //==============================================================================
-@import "../bower_components/swiper/dist/js/swiper.jquery.js";
+@import "../../node_modules/swiper/dist/js/swiper.jquery.js";
 //==============================================================================
 
 
 // Jquery dot dot dot
 //==============================================================================
-@import '../bower_components/jQuery.dotdotdot/src/jquery.dotdotdot.js';
+@import '../../node_modules/smtlk-dotdotdot/src/jquery.dotdotdot.js';
 //==============================================================================
 
 
 // Ultra lightweight, usable, beautiful autocomplete with zero dependencies.
 // http://leaverou.github.io/awesomplete/
 //==============================================================================
-@import '../bower_components/awesomplete/awesomplete.js';
+@import '../../node_modules/awesomplete/awesomplete.js';
 //==============================================================================
 
 
@@ -23,7 +23,7 @@
 // Touch-friendly image lightbox for mobile and desktop with jQuery
 // https://github.com/andreknieriem/simplelightbox
 //==============================================================================
-@import '../bower_components/simplelightbox/dist/simple-lightbox.js';
+@import '../../node_modules/simplelightbox/dist/simple-lightbox.js';
 //==============================================================================
 
 
@@ -31,6 +31,6 @@
 // JavaScript parallax scrolling
 // https://github.com/nk-o/jarallax
 //==============================================================================
-@import '../bower_components/jarallax/jarallax/jarallax.js';
-@import '../bower_components/jarallax/jarallax/jarallax-video.js';
+@import '../../node_modules/jarallax/jarallax/jarallax.js';
+@import '../../node_modules/jarallax/jarallax/jarallax-video.js';
 //==============================================================================
