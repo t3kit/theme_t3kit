@@ -1,15 +1,15 @@
 // =========================================================
 // === Sub Navigation ======================================
 // =========================================================
+
 .sub-navigation {
     background: @sub-navigation-background;
     padding-bottom: 20px;
-
 }
 
 .sub-navigation__wrp {
     border: 1px solid shade(@sub-navigation-border, 5%);
-    border-width: 1px 0 0 0;
+    border-width: 1px 0 0;
 }
 
 .sub-navigation__item-list {
@@ -17,6 +17,7 @@
     padding: 0;
     margin: 0;
 }
+
 .sub-navigation__link {
     display: block;
     padding: 13px 14px 13px 20px;
@@ -27,9 +28,10 @@
     letter-spacing: 0.2px;
     transition: all 0.1s linear;
     border: 1px solid shade(@sub-navigation-border, 5%);
-    border-width: 0 0 1px 0;
+    border-width: 0 0 1px;
     font-size: 15px;
 }
+
 @media (min-width: 1200px) {
     .sub-navigation__link {
         font-size: 16px;
@@ -144,6 +146,5 @@
     background: shade(@sub-navigation-link-active-bg, 9%);
     color: @sub-navigation-link-active-color;
 }
-
 // =========================================================
 // =========================================================

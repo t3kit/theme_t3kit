@@ -1,5 +1,7 @@
 /**************************************/
+
 /* Default styles for news extension */
+
 /**************************************/
 .news .clear {
     clear: both;
@@ -67,7 +69,7 @@
 }
 
 .news .article .teaser-text {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
 }
 
 .news .article h3 {
@@ -76,7 +78,7 @@
 
 .news .footer {
     clear: both;
-    padding: 10px 0 0 0;
+    padding: 10px 0 0;
     border-top: 1px solid #eee;
     margin-top: 15px;
     color: #888;
@@ -102,7 +104,7 @@
 }
 
 .news .no-news-found {
-    color: #DB0202;
+    color: #db0202;
     font-style: italic;
 }
 
@@ -154,7 +156,7 @@
 .news-single .footer {
     margin-bottom: 20px;
     margin-top: 5px;
-    padding: 10px 0 0 0;
+    padding: 10px 0 0;
     border-bottom: 0;
     border-top: 1px solid #eee;
 }
@@ -164,7 +166,8 @@
     width: 282px;
     margin: 0 0 0 25px;
 }
-.news-single .article .news-img-wrap a{
+
+.news-single .article .news-img-wrap a {
     margin-bottom: 4px;
 }
 
@@ -201,16 +204,15 @@
     margin-bottom: 30px;
 }
 
-.news-related {
-}
-
 .news-related ul {
     list-style: none;
     padding-left: 20px;
 }
+
 .news-related ul li a {
     display: block;
 }
+
 .news-related h4 {
     margin-top: 30px;
 }
@@ -219,16 +221,17 @@
     clear: both;
 }
 
-
 .news-tags {
     color: @main-color;
     list-style: none;
     padding-left: 10px;
 }
-.news-tags li{
+
+.news-tags li {
     display: inline-block;
 }
-.news-tags a{
+
+.news-tags a {
     margin: 4px 12px;
     padding: 0 10px 0 12px;
     background: #ddd;
@@ -239,18 +242,20 @@
     font-size: 12px;
     color: #4e4e4e;
     font-weight: bold;
-    transition: .2s ease all;
-    &:before{
+    transition: 0.2s ease all;
+
+    &:before {
         content: '';
         position: absolute;
         left: -11px;
         top: 0;
-        transition: .2s ease all;
+        transition: 0.2s ease all;
         border-color: transparent #ddd transparent transparent;
         border-style: solid;
         border-width: 11px 11px 11px 0;
     }
-    &:after{
+
+    &:after {
         width: 4px;
         height: 4px;
         content: '';
@@ -261,29 +266,38 @@
         top: 9px;
     }
 }
-.news-tags a:hover, .news-tags a:active{
+
+.news-tags a:active,
+.news-tags a:hover {
     background: @main-color;
     color: #fff;
 }
+
 .news-tags a.active {
     background: @main-color;
     color: #fff;
 }
-.news-tags a.active:before, .news-tags a.active:before {
+
+.news-tags a.active:before,
+.news-tags a.active:before {
     border-color: transparent @main-color transparent transparent;
 }
-.news-tags a:hover:before, .news-tags a:active:before {
-        border-color: transparent @main-color transparent transparent;
+
+.news-tags a:active:before,
+.news-tags a:hover:before {
+    border-color: transparent @main-color transparent transparent;
 }
 
-.news-menu-view ul{
+.news-menu-view ul {
     list-style: none;
     padding-left: 10px;
 }
-.news-menu-view ul .itemactive a{
+
+.news-menu-view ul .itemactive a {
     color: @main-link-hover-color;
 }
-.news-menu-view li li:before{
+
+.news-menu-view li li:before {
     font-family: 'icons';
     speak: none;
     position: relative;
@@ -294,6 +308,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -302,14 +317,17 @@
     padding-right: 8px;
     color: #888;
 }
-.news-categories ul{
+
+.news-categories ul {
     list-style: none;
     padding-left: 10px;
 }
-.news-categories ul li a.active{
+
+.news-categories ul li a.active {
     color: @main-link-hover-color;
 }
-.news-categories li:before{
+
+.news-categories li:before {
     font-family: 'icons';
     speak: none;
     position: relative;
@@ -320,6 +338,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -328,31 +347,32 @@
     // content: "\e680";
     padding-right: 8px;
 }
-.news-categories li li:before{
+
+.news-categories li li:before {
     color: #bbb;
 }
 
-
-.news-article-footer{
+.news-article-footer {
     background: none;
     border: none;
     margin-top: 20px;
     clear: both;
 }
 
-.news-article-footer p > span{
+.news-article-footer p > span {
     display: inline-block;
     // margin: 4px 0;
     margin-right: 2px;
     margin-top: 4px;
 }
 
-.news-article-footer .news-list-date{
+.news-article-footer .news-list-date {
     color: #4e4e4e;
     background: #f5f5f5;
     padding: 4px 10px;
 }
-.news-article-footer .news-list-tags:before{
+
+.news-article-footer .news-list-tags:before {
     font-family: 'icons';
     speak: none;
     position: relative;
@@ -363,6 +383,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -370,19 +391,20 @@
     // content: "\e681";
     padding-right: 6px;
 }
-.news-article-footer .news-list-tags{
+
+.news-article-footer .news-list-tags {
     color: #fff;
     background: @main-color;
     padding: 4px 10px;
-
 }
-.news-article-footer .news-list-author{
+
+.news-article-footer .news-list-author {
     color: #4e4e4e;
     background: #ddd;
     padding: 4px 10px;
-
 }
-.news-article-footer .news-list-category:before{
+
+.news-article-footer .news-list-category:before {
     font-family: 'icons';
     speak: none;
     position: relative;
@@ -393,6 +415,7 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -400,25 +423,17 @@
     // content: "\e680";
     padding-right: 6px;
 }
-.news-article-footer .news-list-category{
+
+.news-article-footer .news-list-category {
     color: #4e4e4e;
     background: #ddd;
     padding: 4px 10px;
-
 }
-
-
-
-
-
 // news small fixes
 .news-single .twitter {
     padding-top: 6px;
 }
-
-
-
 // fix social links on news-single page
-.news-single .article > .facebook{
+.news-single .article > .facebook {
     overflow: hidden;
 }
