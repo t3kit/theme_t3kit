@@ -4,7 +4,7 @@
         this.init( options );
         return this;
     };
-    
+
     Tracker.prototype = {
         /* configurable variables */
         jQuerySrc:  '//code.jquery.com/jquery-1.8.3.min.js',
@@ -224,23 +224,24 @@
             });
         },
 
-        trackT3Search: function($, opts){
+        trackT3Search: function($, opts) {
             var tracker = this;
-            if($(opts.swordCont).size() > 0){
+            if (typeof $(opts.swordCont).size === 'function' && $(opts.swordCont).size() > 0) {
+                //if ($(opts.swordCont).size() > 0) {
                 tracker.push('_trackPageview', '/?q=' + $(opts.swordCont).attr('value'));
             }
         },
 
-        trackT3Print: function($, opts){
+        trackT3Print: function($, opts) {
             var tracker = this;
-            if(getUrlVars()[opts.trigger] == 1){
+            if (getUrlVars()[opts.trigger] == 1) {
                 tracker.push('_trackEvent', opts.category, opts.action, document.URL, opts.value, opts.nonInteraction);
             }
         },
 
-        trackTwitter: function($, opts){
+        trackTwitter: function($, opts) {
             var tracker = this;
-            whenAvailable('twttr', function(twttr){
+            whenAvailable('twttr', function(twttr) {
                 twttr.ready(function (twttr) {
                     twttr.events.bind('click', function(event) {
                         tracker.push('_trackEvent', opts.category, opts.action, extractParamFromUri(event.target.src, 'url'), opts.value, opts.nonInteraction);
