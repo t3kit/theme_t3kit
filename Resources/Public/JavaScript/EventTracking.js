@@ -52,7 +52,7 @@
 
         push: function(event, category, action, label, value, nonInteraction){
             var tracker = this;
-            if(this.debugMode()){
+            if (this.debugMode()) {
                 alert(
                     (isEmptyOrUndefined(event) ? '' : 'Event: ' + event + '\n') +
                     (isEmptyOrUndefined(category) ? '' : 'Category: ' + category + '\n') +
@@ -62,7 +62,7 @@
                     (isEmptyOrUndefined(nonInteraction) ? '' : 'nonInteraction: ' + nonInteraction + '\n')
                 );
             } else {
-                if(tracker.enabled == 1 && tracker.gtm === 1 && typeof(dataLayer) === 'object' && typeof(dataLayer.push) === 'function' ) {
+                if (tracker.enabled == 1 && tracker.gtm === 1 && typeof(dataLayer) === 'object' && typeof(dataLayer.push) === 'function' ) {
                     dataLayer.push({
                         'event': 'GAevent',
                         'eventCategory': category,
@@ -71,7 +71,7 @@
                     });
 
                 }
-                else if(tracker.enabled == 1 && typeof(ga) === 'function'){
+                else if (tracker.enabled == 1 && typeof(ga) === 'function') {
 
                     var track = {'hitType' : 'event'};
                     if(typeof category === 'string') track['eventCategory'] = category;
@@ -83,17 +83,17 @@
                     }
                     ga('send', track);
 
-                } else if(tracker.enabled == 1 && typeof(_gaq) != 'undefined'){
+                } else if (tracker.enabled == 1 && typeof(_gaq) != 'undefined'){
                     _gaq.push([event, category, action, label, value, nonInteraction]);
                 }
             }
         },
 
-        errorLoadingJQuery: function(){
-            //alert('Error loading jQuery');
+        errorLoadingJQuery: function() {
+            // alert('Error loading jQuery');
         },
 
-        startTracking: function(){
+        startTracking: function() {
 
             var tracker = this;
             // load jQuery if it's not avaiable
@@ -111,9 +111,9 @@
                 this.debugMode() && log('Tracking script running in debug mode');
                 if(this.setNoConflict) jQuery.noConflict();
 
-                jQuery(function($){
-                    for(var index in tracker.track){
-                        if(tracker.track.hasOwnProperty(index)){
+                jQuery(function($) {
+                    for (var index in tracker.track) {
+                        if (tracker.track.hasOwnProperty(index)) {
                             typeof tracker.track[index].func && tracker['track' + tracker.track[index].func]($, tracker.track[index]);
                         }
                     }
@@ -122,42 +122,41 @@
 
         },
 
-        trackCustom: function($){
+        trackCustom: function($) {
             var tracker = this;
-            for(i = 0; i < tracker.triggers.length; i++){
-                if(isInt(tracker.triggers[i].selector)){ // typo3 pages
-                    if($('#T3PageId').size() >0 && tracker.triggers[i].selector == $('#T3PageId').attr('value')){
+            for (i = 0; i < tracker.triggers.length; i++) {
+                // TYPO3 pages
+                if (isInt(tracker.triggers[i].selector)) {
+                    if ($('#T3PageId').size() > 0 && tracker.triggers[i].selector == $('#T3PageId').attr('value')) {
                         var trigger = tracker.triggers[i];
-                        if(typeof(trigger.label) != 'undefined' && trigger.label.indexOf('ATTR:') != -1){
+                        if (typeof(trigger.label) != 'undefined' && trigger.label.indexOf('ATTR:') != -1) {
                             var attr = trigger.label.substring(5).toLowerCase();
                             trigger.label = $('#T3PageId').attr(attr);
                         }
                         tracker.push('_trackEvent', trigger.category, trigger.action, trigger.label, trigger.value, trigger.nonInteraction);
                     }
                 } else {
-
                     tracker.log('Track selector: ' + tracker.triggers[i].selector);
-
-                    if( typeof($(tracker.triggers[i].selector).live) == 'function' ){
-                        $(tracker.triggers[i].selector).live('click', {index: i}, function(event){ // selectors
+                    if (typeof($(tracker.triggers[i].selector).live) == 'function') {
+                        // Selectors
+                        $(tracker.triggers[i].selector).live('click', {index: i}, function(event) {
                             var trigger = tracker.triggers[event.data.index];
                             var label = trigger.label;
-                            if(typeof trigger.label == 'function'){
+                            if (typeof trigger.label == 'function') {
                                 label = trigger.label($(this)) ;
                             }
                             tracker.push('_trackEvent', trigger.category, trigger.action, label, trigger.value, trigger.nonInteraction);
                         });
                     } else {
-                        $(document).on('click', tracker.triggers[i].selector, {index: i}, function(event){
+                        $(document).on('click', tracker.triggers[i].selector, {index: i}, function(event) {
                             var trigger = tracker.triggers[event.data.index];
                             var label = trigger.label;
-                            if(typeof trigger.label == 'function'){
+                            if (typeof trigger.label == 'function') {
                                 label = trigger.label($(this)) ;
                             }
                             tracker.push('_trackEvent', trigger.category, trigger.action, label, trigger.value, trigger.nonInteraction);
                         });
                     }
-
                 }
             }
         },
@@ -169,7 +168,7 @@
                 var decryptOffset = opts.decryptOffset || 2; // TYPO3 6 uses 3 instead of 2
 
                 // encrypted typo3 mailto that needs to be decrypted
-                if(this.href.indexOf('linkTo_UnCryptMailto') != -1 && typeof decryptString == 'function' && typeof decryptCharcode == 'function'){
+                if (this.href.indexOf('linkTo_UnCryptMailto') != -1 && typeof decryptString == 'function' && typeof decryptCharcode == 'function'){
                     mailto = this.href.split('javascript:linkTo_UnCryptMailto(\'')[1].slice(0, - 3);
                     mailto = decryptString(mailto , decryptOffset);
                 } else {
@@ -227,7 +226,6 @@
         trackT3Search: function($, opts) {
             var tracker = this;
             if (typeof $(opts.swordCont).size === 'function' && $(opts.swordCont).size() > 0) {
-                //if ($(opts.swordCont).size() > 0) {
                 tracker.push('_trackPageview', '/?q=' + $(opts.swordCont).attr('value'));
             }
         },
