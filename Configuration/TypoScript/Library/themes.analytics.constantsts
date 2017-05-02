@@ -4,7 +4,3 @@
 # customsubcategory=analytics= Analytics
 # cat=theme,expert/analytics/; type=string; label= Google Analytics Account
 themes.configuration.tracking.ga_account =
-# cat=theme,expert/analytics/; type=string; label= Tracking URL
-themes.configuration.tracking.url = http://www.resultify.com/clients
-# cat=theme,expert/analytics/; type=string; label= Tracking Site
-themes.configuration.tracking.site = t3kit
