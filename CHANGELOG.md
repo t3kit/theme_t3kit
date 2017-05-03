@@ -1,4 +1,32 @@
 
+#### v2.0.0 `May 3, 2017`
+- **[FEATURE]** make some of the Favicons typoscript use constants (#188) ([28e8683](https://github.com/t3kit/theme_t3kit/commit/28e8683))
+- **[TASK]** add all FE dependencies using NPM instead of Bower ([85dcca6](https://github.com/t3kit/theme_t3kit/commit/85dcca6))
+- **[TASK]** add cookie-bar and form-enhancement ext. from typo3-ter ([2c0e4f9](https://github.com/t3kit/theme_t3kit/commit/2c0e4f9))
+- **[TASK]** update css/less syntax according to stylelint (#184) ([7405ee1](https://github.com/t3kit/theme_t3kit/commit/7405ee1))
+- **[TASK]** cleanup + code style fixes (.editorconfig) ([9cc29fd](https://github.com/t3kit/theme_t3kit/commit/9cc29fd))
+- **[TASK]** add stylelint to grunt check ([483747c](https://github.com/t3kit/theme_t3kit/commit/483747c))
+- **[TASK]** remove mailForm.less ([efd6bc8](https://github.com/t3kit/theme_t3kit/commit/efd6bc8))
+- **[DOC]** fix REDAME for iconFonts ([19226bc](https://github.com/t3kit/theme_t3kit/commit/19226bc))
+- **[TASK]** remove unneeded styling ([b5ae29c](https://github.com/t3kit/theme_t3kit/commit/b5ae29c))
+- **[TASK]** update pxa_newsletter_subscription to v4.1.2 (#183) ([da9785e](https://github.com/t3kit/theme_t3kit/commit/da9785e))
+- **[BUGFIX]** only enable lib.xxx.search as userFunc if enableSolr is 1 (#182) ([baae04a](https://github.com/t3kit/theme_t3kit/commit/baae04a))
+- **[TASK]** add filemount filedamin/forms to TYPO3 Form (#172) ([d8c1d61](https://github.com/t3kit/theme_t3kit/commit/d8c1d61))
+- **[TASK]** remove csslint and add stylelint to felayout_t3kit ([3924cb5](https://github.com/t3kit/theme_t3kit/commit/3924cb5))
+- **[FIX]** delete unneeded selector in footer, edit according to stylint (#171) ([a4c4abc](https://github.com/t3kit/theme_t3kit/commit/a4c4abc))
+- **[TASK]** add mixins.less, update iconFont styling ([72d2cd7](https://github.com/t3kit/theme_t3kit/commit/72d2cd7))
+- **[FIX]** remove gridelements from migration script, still uses media field (#169) ([46e6c04](https://github.com/t3kit/theme_t3kit/commit/46e6c04))
+- **[TASK]** migrate media to assets for some theme CE:s, fix in twbsButton script (#168) ([41bee7b](https://github.com/t3kit/theme_t3kit/commit/41bee7b))
+- **[FIX]** Collapsible, remove section in template and fix section name in layout Empty (#167) ([c1e65ef](https://github.com/t3kit/theme_t3kit/commit/c1e65ef))
+- **[FIX]** update default constant of logo filename (#165) ([e401a75](https://github.com/t3kit/theme_t3kit/commit/e401a75))
+- **[TASK]** migration queries (#166) ([3dc2177](https://github.com/t3kit/theme_t3kit/commit/3dc2177))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[TASK]** use NPM instead of Bower as a main FE package manager ([9962486](https://github.com/t3kit/theme_t3kit/commit/9962486))
+- **[!!!]** **[TASK]** removed felogin constants (redirects), added new constant.. (#170) ([2496a26](https://github.com/t3kit/theme_t3kit/commit/2496a26))
+
+***
+
 #### v2.0.0-beta.1 `April 21, 2017`
 - **[TASK]** add buttonStyle for Button content el. ([050ae58](https://github.com/t3kit/theme_t3kit/commit/050ae58))
 - **[TASK]** add all needed dependencies for theme_t3kit ([bc4bdf9](https://github.com/t3kit/theme_t3kit/commit/bc4bdf9))
