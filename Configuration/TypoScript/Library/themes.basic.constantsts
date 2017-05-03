@@ -63,6 +63,16 @@ themes.configuration.customPath = fileadmin/custom
 # cat=theme,expert/iconFonts/; type=string; label=Icon Fonts Path
 themes.configuration.iconFontsPath = EXT:theme_t3kit/Resources/Public/IconFonts
 
+# customsubcategory=favicons= Favicons
+# cat=theme,expert/favicons/; type=string; label=Favicons path
+themes.configuration.favicons.path = /favicons
+
+# cat=theme,expert/favicons/; type=color; label=Chrome for Android toolbar color
+themes.configuration.favicons.themeColor = #ffffff
+
+# cat=theme,expert/favicons/; type=color; label=Safari Pinned Tab Icon color
+themes.configuration.favicons.maskIconColor = #5bbad5
+
 
 # customsubcategory=spamProtect= SpamProtect
 # Spam protect email addresses constants
