@@ -570,7 +570,7 @@ call_user_func(function() {
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
 
             --div--;' . $contentElementLanguageFilePrefix . 'fullWidthImage.tabs.image,image,
-                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
 
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
@@ -586,7 +586,76 @@ call_user_func(function() {
         '
     ];
 
+    $GLOBALS['TCA']['tt_content']['types']['fullWidthImage']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config'] = [
+        'cropVariants' => [
+            'default' => [
+                'title' => $contentElementLanguageFilePrefix . 'imageManipulation.default',
+                'selectedRatio' => '5:1',
+                'allowedAspectRatios' => [
+                    '8:1' => [
+                        'title' => '8:1', 'value' => 8 / 1
+                    ],
+                    '5:1' => [
+                        'title' => '5:1', 'value' => 5 / 1
+                    ],
+                    '16:9' => [
+                        'title' => '16:9', 'value' => 16 / 9
+                    ],
+                    '4:3' => [
+                        'title' => '4:3', 'value' => 4 / 3
+                    ],
+                    'NaN' => [
+                        'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free', 'value' => 0.0
+                    ],
+                ],
+            ],
+            'medium' => [
+                'title' => $contentElementLanguageFilePrefix . 'imageManipulation.medium',
+                'selectedRatio' => '5:1',
+                'allowedAspectRatios' => [
+                    '8:1' => [
+                        'title' => '8:1', 'value' => 8 / 1
+                    ],
+                    '5:1' => [
+                        'title' => '5:1', 'value' => 5 / 1
+                    ],
+                    '16:9' => [
+                        'title' => '16:9', 'value' => 16 / 9
+                    ],
+                    '4:3' => [
+                        'title' => '4:3', 'value' => 4 / 3
+                    ],
+                    'NaN' => [
+                        'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free', 'value' => 0.0
+                    ],
+                ],
+            ],
+            'small' => [
+                'title' => $contentElementLanguageFilePrefix . 'imageManipulation.small',
+                'selectedRatio' => '5:1',
+                'allowedAspectRatios' => [
+                    '8:1' => [
+                        'title' => '8:1', 'value' => 8 / 1
+                    ],
+                    '5:1' => [
+                        'title' => '5:1', 'value' => 5 / 1
+                    ],
+                    '16:9' => [
+                        'title' => '16:9', 'value' => 16 / 9
+                    ],
+                    '4:3' => [
+                        'title' => '4:3', 'value' => 4 / 3
+                    ],
+                    'NaN' => [
+                        'title' => 'LLL:EXT:lang/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free', 'value' => 0.0
+                    ],
+                ],
+            ],
+        ],
+    ];
+
     // fullWidthImage flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,fullWidthImage'] = $flexformPath . 'flexform_fullWidthImage.xml';
     // ======================= fullWidthImage [end] ==========================================
 
 
