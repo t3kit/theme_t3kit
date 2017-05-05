@@ -1,5 +1,5 @@
-const css = (file) => `<link rel="stylesheet" type="text/css" href="${file}"/>`
-const js = (file) => `<script src="${file}"></script>`
+const css = (file) => `<link rel="stylesheet" type="text/css" href="/${file}"/>`
+const js = (file) => `<script src="/${file}"></script>`
 const conf = require('../conf')
 
 module.exports = {
@@ -13,6 +13,7 @@ module.exports = {
       watchTask: true,
       open: false,
       port: 9001,
+      ghostMode: false,
       snippetOptions: {
         rule: {
           match: /<\/head>/i,
