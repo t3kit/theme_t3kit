@@ -310,13 +310,19 @@
                 <source>Disable</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle_1">
-                <source>Animation style 1</source>
+                <source>Fade In Down</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle_2">
-                <source>Animation style 2</source>
+                <source>Fade In</source>
             </trans-unit>
             <trans-unit id="heroImage.flexform.animationStyle_3">
-                <source>Animation style 3</source>
+                <source>Fade In Up</source>
+            </trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_4">
+                <source>Fade from up and down, style 1</source>
+            </trans-unit>
+            <trans-unit id="heroImage.flexform.animationStyle_5">
+                <source>Fade from up and down, style 2</source>
             </trans-unit>
 
             <trans-unit id="logoCarousel.title">
