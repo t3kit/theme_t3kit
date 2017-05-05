@@ -6031,31 +6031,36 @@ div.awesomplete li[aria-selected="true"] mark {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    position: relative;
     // max-width: 1920px;
 }
 
-.hero-image__caption-wrp._left-align {
-    text-align: left;
+.hero-image__caption-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-image__caption-wrp._left-align .hero-image__caption {
-    float: left;
-}
-
-.hero-image__caption-wrp._center-align {
-    text-align: center;
+    margin-right: auto;
+    text-align: left;
 }
 
 .hero-image__caption-wrp._center-align .hero-image__caption {
-    margin: auto;
-}
-
-.hero-image__caption-wrp._right-align {
-    text-align: right;
+    text-align: center;
 }
 
 .hero-image__caption-wrp._right-align .hero-image__caption {
-    float: right;
+    margin-left: auto;
+    text-align: right;
+}
+
+.hero-image__caption._top {
+    align-self: flex-start;
+}
+
+.hero-image__caption._bottom {
+    align-self: flex-end;
 }
 
 .hero-image__caption {
@@ -6228,13 +6233,124 @@ div.awesomplete li[aria-selected="true"] mark {
     transform: translate3d(0, 0, 0);
 }
 
+//--------------------------------------------------//
+// animation style 4 -------------------------------//
+//--------------------------------------------------//
 
-// appearance
-.blue-mountain-wrp {
+.hero-image__caption._caption-animated-4 > *:not(.hero-image__caption-link) {
+    position: relative;
+    color: transparent;
+    overflow: hidden;
+
+    &:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        color: @main-body-bg;
+        transition: all 0.6s ease-out;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.hero-image__caption._caption-animated-4 .hero-image__caption-header:after {
+    content: attr(data-header-content);
+    transition-delay: 1s;
+}
+
+.hero-image__caption._caption-animated-4 .hero-image__caption-subheader:after {
+    content: attr(data-subheader-content);
+    transition-delay: 0.8s;
+}
+
+.hero-image__caption._caption-animated-4 .hero-image__caption-p:after {
+    content: attr(data-text-content);
+    transition-delay: 0.6s;
+}
+
+.hero-image__caption._caption-animated-4 .hero-image__caption-link {
+    transition: all 1s ease-out 0.6s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.swiper-slide-active .hero-image__caption._caption-animated-4 > *:not(.hero-image__caption-link):after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.swiper-slide-active .hero-image__caption._caption-animated-4 .hero-image__caption-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hero-image._animated .hero-image__caption._caption-animated-4 > *:not(.hero-image__caption-link):after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hero-image._animated .hero-image__caption._caption-animated-4 .hero-image__caption-link {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+//--------------------------------------------------//
+// animation style 5 -------------------------------//
+//--------------------------------------------------//
+
+.hero-image__caption._caption-animated-5 > * {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.hero-image__caption._caption-animated-5 .hero-image__caption-header {
+    transition-delay: 0.9s;
+    transform: translateY(-40px);
+}
+
+.hero-image__caption._caption-animated-5 .hero-image__caption-subheader {
+    transition-delay: 0.7s;
+    transform: translateY(-40px);
+}
+
+.hero-image__caption._caption-animated-5 .hero-image__caption-p {
+    transform: translateY(40px);
+    transition-delay: 0.7s;
+}
+
+.hero-image__caption._caption-animated-5 .hero-image__caption-link {
+    transition-delay: 0.9s;
+    transform: translateY(40px);
+}
+
+.hero-image._animated,
+.swiper-slide-active {
+    .hero-image__caption._caption-animated-5 .hero-image__caption-p,
+    .hero-image__caption._caption-animated-5 .hero-image__caption-link,
+    .hero-image__caption._caption-animated-5 .hero-image__caption-subheader,
+    .hero-image__caption._caption-animated-5 .hero-image__caption-header {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+// ========================
+// appearance wrappers
+// ========================
+// general
+// =================================
+// General appearance wrappers
+// =================================
+
+.main-color-wrp {
     background: @main-color;
 }
 
-.blue-mountain-wrp a {
+.main-color-wrp a {
     color: tint(@main-text-color, 100%);
 
     &.active,
@@ -6254,12 +6370,12 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 }
 
-.blue-mountain-wrp p {
+.main-color-wrp p {
     color: shade(@main-text-color, 100%);
     -webkit-font-smoothing: antialiased;
 }
 
-.blue-mountain-wrp {
+.main-color-wrp {
     h1,
     h2,
     h3,
@@ -6270,30 +6386,38 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 }
 
-.blue-mountain-wrp .icons {
+.main-color-wrp .icons {
     color: tint(@main-color, 90%);
     border-color: tint(@main-color, 50%);
 }
 
-.blue-mountain-wrp .big-icon-text-btn__sham-link {
+.main-color-wrp .big-icon-text-btn__sham-link {
     color: tint(@main-color, 90%);
 }
 
-.blue-mountain-wrp .icon-text-btn__sham-link {
+.main-color-wrp .icon-text-btn__sham-link {
     color: tint(@main-color, 90%);
 }
 
-.blue-mountain-wrp .img-text-link__sham-link {
+.main-color-wrp .img-text-link__sham-link {
     color: tint(@main-color, 90%);
 }
 
-.blue-mountain-header {
+// =================================
+// General appearance wrappers
+// =================================
+
+.large-header {
     h2 {
         font-size: 48px;
         font-weight: 400;
         font-style: italic;
     }
 }
+
+// =================================
+// General appearance wrappers
+// =================================
 
 .inverse a {
     color: tint(@main-color, 90%);
@@ -6361,6 +6485,10 @@ div.awesomplete li[aria-selected="true"] mark {
     color: tint(@main-color, 90%);
 }
 
+// =================================
+// General appearance wrappers
+// =================================
+
 .saturated-inverse a {
     color: tint(@main-color, 90%);
 
@@ -6424,13 +6552,21 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 }
 
+// =================================
+// General appearance wrappers
+// =================================
+
 // gray-background class
 .gray-background {
     background: tint(@main-text-color, 90%);
 }
 
 
-// gridLayouts
+// ========================
+// layout wrappers
+// ========================
+// gridelements
+// layout wrappers for gridelements
 .mosaic-gray-odd {
     & > .row {
         & > div {
@@ -6464,7 +6600,8 @@ div.awesomplete li[aria-selected="true"] mark {
     padding: 0 30px;
 }
 
-.mosaic-blue-mountain-odd {
+// layout wrappers for gridelements
+.mosaic-main-color-odd {
     & > .row {
         & > div {
             &:nth-child(odd) {
@@ -6528,7 +6665,7 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 }
 
-.mosaic-blue-mountain-even {
+.mosaic-main-color-even {
     & > .row {
         & > div {
             &:nth-child(odd) {
@@ -6592,29 +6729,31 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 }
 
-.mosaic-blue-mountain-even .row > div,
-.mosaic-blue-mountain-odd .row > div {
+.mosaic-main-color-even .row > div,
+.mosaic-main-color-odd .row > div {
     padding: 0 30px;
 }
 
-.mosaic-blue-mountain-even .row > div .big-icon-text-btn__wrp,
-.mosaic-blue-mountain-odd .row > div .big-icon-text-btn__wrp {
+.mosaic-main-color-even .row > div .big-icon-text-btn__wrp,
+.mosaic-main-color-odd .row > div .big-icon-text-btn__wrp {
     margin: 0 -30px;
     padding: 0 30px;
 }
 
-.mosaic-blue-mountain-even .row > div .icon-text-btn__wrp,
-.mosaic-blue-mountain-odd .row > div .icon-text-btn__wrp {
+.mosaic-main-color-even .row > div .icon-text-btn__wrp,
+.mosaic-main-color-odd .row > div .icon-text-btn__wrp {
     margin: 0 -30px;
     padding: 0 30px;
 }
 
-.mosaic-blue-mountain-even .row > div .img-text-link__wrp,
-.mosaic-blue-mountain-odd .row > div .img-text-link__wrp {
+.mosaic-main-color-even .row > div .img-text-link__wrp,
+.mosaic-main-color-odd .row > div .img-text-link__wrp {
     margin: 0 -30px;
     padding: 0 30px;
 }
 
+
+// nav
 // =========================================================
 // === Breadcrumbs =========================================
 // =========================================================
