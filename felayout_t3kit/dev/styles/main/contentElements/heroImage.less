@@ -8,31 +8,36 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    position: relative;
     // max-width: 1920px;
 }
 
-.hero-image__caption-wrp._left-align {
-    text-align: left;
+.hero-image__caption-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-image__caption-wrp._left-align .hero-image__caption {
-    float: left;
-}
-
-.hero-image__caption-wrp._center-align {
-    text-align: center;
+    margin-right: auto;
+    text-align: left;
 }
 
 .hero-image__caption-wrp._center-align .hero-image__caption {
-    margin: auto;
-}
-
-.hero-image__caption-wrp._right-align {
-    text-align: right;
+    text-align: center;
 }
 
 .hero-image__caption-wrp._right-align .hero-image__caption {
-    float: right;
+    margin-left: auto;
+    text-align: right;
+}
+
+.hero-image__caption._top {
+    align-self: flex-start;
+}
+
+.hero-image__caption._bottom {
+    align-self: flex-end;
 }
 
 .hero-image__caption {
