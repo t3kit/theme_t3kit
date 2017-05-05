@@ -590,7 +590,7 @@ call_user_func(function() {
         'cropVariants' => [
             'default' => [
                 'title' => $contentElementLanguageFilePrefix . 'imageManipulation.default',
-                'selectedRatio' => '5:1',
+                'selectedRatio' => 'NaN',
                 'allowedAspectRatios' => [
                     '8:1' => [
                         'title' => '8:1', 'value' => 8 / 1
@@ -611,7 +611,7 @@ call_user_func(function() {
             ],
             'medium' => [
                 'title' => $contentElementLanguageFilePrefix . 'imageManipulation.medium',
-                'selectedRatio' => '5:1',
+                'selectedRatio' => 'NaN',
                 'allowedAspectRatios' => [
                     '8:1' => [
                         'title' => '8:1', 'value' => 8 / 1
@@ -632,7 +632,7 @@ call_user_func(function() {
             ],
             'small' => [
                 'title' => $contentElementLanguageFilePrefix . 'imageManipulation.small',
-                'selectedRatio' => '5:1',
+                'selectedRatio' => 'NaN',
                 'allowedAspectRatios' => [
                     '8:1' => [
                         'title' => '8:1', 'value' => 8 / 1
