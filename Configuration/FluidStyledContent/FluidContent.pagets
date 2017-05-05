@@ -31,8 +31,8 @@ TCEFORM.tt_content.frame_class {
 TCEFORM.tt_content.frame_class {
     addItems {
         gray-background  = Gray Background
-        blue-mountain-wrp  = Blue Mountain Wrapper
-        blue-mountain-header  = Blue Mountain Header Text
+        main-color-wrp  = Main Color Wrapper
+        large-header  = Large Header Text
         inverse  = Inverse color (text/links/buttons)
         saturated-inverse  = Inverse and saturate color
     }

@@ -80,8 +80,8 @@ lib.contentElement {
         800 {
             classMappings {
                 # Specific layout for GridElements (Label => theme_t3kit/Configuration/GridElements/PageTS/AdvColumnGrid.pagets)
-                501 = mosaic-blue-mountain-odd
-                502 = mosaic-blue-mountain-even
+                501 = mosaic-main-color-odd
+                502 = mosaic-main-color-even
                 503 = mosaic-gray-odd
                 504 = mosaic-gray-even
             }

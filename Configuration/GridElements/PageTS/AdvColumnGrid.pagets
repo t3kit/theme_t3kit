@@ -4,8 +4,8 @@ TCEFORM.tt_content.layout {
         gridelements_pi1 {
             addItems {
                 --div-- = Gridelements layouts:
-                501 = Blue Mountain Mosaic odd
-                502 = Blue Mountain Mosaic even
+                501 = Main Color Mosaic odd
+                502 = Main Color Mosaic even
                 503 = Gray Mosaic odd
                 504 = Gray Mosaic even
             }
