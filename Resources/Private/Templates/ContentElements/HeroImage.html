@@ -6,7 +6,7 @@
 <!-- theme_t3kit: Templates/ContentElements/HeroImage.html [begin] -->
 	<f:if condition="{image}">
 		<div class="hero-image js__hero-image"  style="background-image:url('{f:uri.image(image: image.0, maxWidth:'{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.maxWidth)}')}');">
-			<div class="hero-image__caption-wrp {f:if(condition: '{settings.contentPosition} == 0', then: '_left-align')}{f:if(condition: '{settings.contentPosition} == 1', then: '_center-align')}{f:if(condition: '{settings.contentPosition} == 2', then: '_right-align')}" style="min-height: {settings.elementHeight}px; background-color:{f:if(condition: settings.transparentLayer, then: '{settings.transparentLayer}')};">
+			<div class="hero-image__caption-wrp {f:if(condition: '{settings.contentPosition} == 0', then: '_left-align')}{f:if(condition: '{settings.contentPosition} == 1', then: '_center-align')}{f:if(condition: '{settings.contentPosition} == 2', then: '_right-align')}" style="height: {settings.elementHeight}px; background-color:{f:if(condition: settings.transparentLayer, then: '{settings.transparentLayer}')};">
 				<div class="hero-image__caption {f:if(condition: '{settings.animationStyle} == 0', then: '', else: '_caption-animated-{settings.animationStyle}')}">
 					<f:if condition="{data.header}">
 						<h2 class="hero-image__caption-header">{data.header}</h2>
