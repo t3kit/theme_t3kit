@@ -34,7 +34,12 @@
     {
       "type": "git",
       "url": "https://github.com/pixelant/pxa_newsletter_subscription"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/FriendsOfTYPO3/frontend_editing.git"
     }
+
   ],
   "minimum-stability": "dev",
   "require": {
@@ -51,6 +56,7 @@
     "pixelant/pxa-newsletter-subscription": "4.1.2",
     "typo3-ter/pxa-form-enhancement": "3.0.0",
     "typo3-ter/pxa-cookie-bar": "1.0.7",
-    "wapplersystems/realurl-404-multilingual": "dev-master"
+    "wapplersystems/realurl-404-multilingual": "dev-master",
+    "friendsoftypo3/frontend-editing": "v1.0.7"
   }
 }
