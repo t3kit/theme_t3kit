@@ -279,6 +279,9 @@
             <trans-unit id="heroImage.flexform.elementHeight">
                 <source>Set height of element</source>
             </trans-unit>
+			<trans-unit id="heroImage.flexform.transparentLayer">
+                <source>Element overlay color (rgba). Link to online generator: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool</source>
+            </trans-unit>
             <trans-unit id="heroImage.flexform.horizontalAlignment">
                <source>Horizontal alignment</source>
            </trans-unit>
