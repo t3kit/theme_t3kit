@@ -61,6 +61,14 @@
     font-size: @font-size-h3 * 0.77;
 }
 
+.hero-image__caption-link .btn {
+    padding: 10px 36px;
+    background: saturate(spin(@main-color, 177), 30%);
+    border: 1px solid saturate(spin(@main-color, 177), 30%);
+    color: @main-body-bg;
+    margin-top: 10px;
+}
+
 .hero-image__caption-link a:not(.btn) {
     color: @main-body-bg;
     text-decoration: underline;
@@ -80,6 +88,14 @@
 
 .slider-container._full-width .swiper-slide-next .hero-image__caption > * {
     transition: none;
+}
+
+.top-content .slider-container__container {
+    margin: 0;
+}
+
+.top-content .slider-container__pagination {
+    bottom: 5px;
 }
 
 @media (min-width: 768px) {
