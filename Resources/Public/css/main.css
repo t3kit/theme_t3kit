@@ -2514,6 +2514,9 @@ div.awesomplete li[aria-selected="true"] mark {
   background: transparent;
   z-index: 1;
 }
+.frontend_editing .big-icon-text-btn._whole-area-link .big-icon-text-btn__link {
+  z-index: -1;
+}
 .big-icon-text-btn._whole-area-link:hover .big-icon-text-btn__link {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -2597,6 +2600,9 @@ div.awesomplete li[aria-selected="true"] mark {
   background: transparent;
   border: none;
   z-index: 2;
+}
+.frontend_editing .icon-text-btn._whole-area-link .icon-text-btn__link {
+  z-index: -1;
 }
 .icon-text-btn._whole-area-link:hover .icon-text-btn__link {
   background-color: rgba(255, 255, 255, 0.1);
@@ -2687,6 +2693,9 @@ div.awesomplete li[aria-selected="true"] mark {
   background: transparent;
   text-indent: -9999px;
   z-index: 2;
+}
+.frontend_editing .img-text-link._whole-area-link .img-text-link__link {
+  z-index: -1;
 }
 .img-text-link._whole-area-link:hover .img-text-link__link {
   background-color: rgba(255, 255, 255, 0.1);
