@@ -21,5 +21,8 @@ tt_content {
             defaultWidth = 1920c
             defaultHeight = 400c
         }
+        stdWrap {
+            editIcons = tt_content
+        }
     }
 }

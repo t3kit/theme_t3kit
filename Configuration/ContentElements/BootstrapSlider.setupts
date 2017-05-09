@@ -18,5 +18,8 @@ tt_content {
             800 < lib.contentElement.dataProcessing.800
             830 < lib.contentElement.dataProcessing.830
         }
+        stdWrap {
+            editIcons = tt_content
+        }
     }
 }
