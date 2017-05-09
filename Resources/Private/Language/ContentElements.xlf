@@ -376,6 +376,12 @@
             <trans-unit id="fullWidthImage.tabs.image">
                 <source>Image</source>
             </trans-unit>
+            <trans-unit id="fullWidthImage.flexform.sheetGeneral">
+                <source>Settings</source>
+            </trans-unit>
+            <trans-unit id="fullWidthImage.flexform.includeDoubleDensityImages">
+                <source>Include 2x images in sources</source>
+            </trans-unit>
 
 
 
@@ -487,6 +493,16 @@
             <trans-unit id="button.blockLevel">
                 <source>Block level button</source>
             </trans-unit>
+
+			<trans-unit id="imageManipulation.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.small">
+				<source>Small devices (up to 767px)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.medium">
+				<source>Medium devices (from 768px to 991px)</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

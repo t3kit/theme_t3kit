@@ -9,35 +9,23 @@
 			<f:if condition="{imageIteration.isFirst}">
 				<div class="full-width-image">
 					<div class="full-width-image__wrp">
-						<img
-						src="<f:uri.image src="{image.uid}"
-							width="{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"
-							treatIdAsReference="1" />"
-						srcset="
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="320c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 320w,
-
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="640c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 640w ,
-
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="768c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 768w ,
-
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1080c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1080w ,
-
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1280c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1280w ,
-
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1440c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1440w ,
-
-							<f:uri.image src="{image.uid}" treatIdAsReference="1" width="1920c"
-							height="{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultHeight)}"/> 1920w"
-						sizes="100vw"
-						class="img-responsive full-width-image__img"
-						alt="{image.alternative}" >
+						<picture>
+							<source srcset="{f:uri.image(image: image, maxWidth: settings.defaultWidth, cropVariant: 'default')}" media="(min-width: 1200px)">
+							<f:if condition="{settings.includeDoubleDensityImages}">
+								<f:then>
+									<source srcset="{f:uri.image(image: image, maxWidth: '1200', cropVariant: 'default')}, {f:uri.image(image: image, maxWidth: '2400', cropVariant: 'default')} 2x" media="(min-width: 992px)">
+									<source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'medium')}, {f:uri.image(image: image, maxWidth: '1984', cropVariant: 'medium')} 2x" media="(min-width: 768px)">
+									<source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'small')}, {f:uri.image(image: image, maxWidth: '1536', cropVariant: 'small')} 2x" media="(max-width: 767px)">
+								</f:then>
+								<f:else>
+									<source srcset="{f:uri.image(image: image, maxWidth: '1200', cropVariant: 'default')}" media="(min-width: 992px)">
+									<source srcset="{f:uri.image(image: image, maxWidth: '992', cropVariant: 'medium')}" media="(min-width: 768px)">
+									<source srcset="{f:uri.image(image: image, maxWidth: '768', cropVariant: 'small')}" media="(max-width: 767px)">
+								</f:else>
+							</f:if>
+							<!--- Fallback -->
+							<f:image class="img-responsive full-width-image__img" image="{image}" maxWidth="{settings.defaultWidth}" longdesc="{image.description}" cropVariant="default" />
+						</picture>
 					</div>
 				</div>
 			</f:if>
