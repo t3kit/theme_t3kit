@@ -6,7 +6,9 @@
 <!-- theme_t3kit: Templates/ContentElements/Quote.html [begin] -->
 	<blockquote class="quote">
 		<div class="quote__body">
-			<p class="quote__body-p">{data.bodytext}</p>
+			<core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">
+				<p class="quote__body-p">{data.bodytext}</p>
+			</core:contentEditable>
 			<span class="quote__body-icon icons icon-t3-quoteMark"></span>
 		</div>
 		<footer class="quote__footer">
