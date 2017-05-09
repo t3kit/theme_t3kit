@@ -6,6 +6,7 @@ lib.contentElement {
     }
     partialRootPaths {
         2000 =  EXT:theme_t3kit/Resources/Private/Partials/ContentElements/
+        3000 =  EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent/
     }
     layoutRootPaths {
         2000 =  EXT:theme_t3kit/Resources/Private/Layouts/FluidStyledContent/
