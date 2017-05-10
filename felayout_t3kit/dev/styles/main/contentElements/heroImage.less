@@ -41,7 +41,7 @@
 }
 
 .hero-image__caption {
-    padding: 20px 60px;
+    padding: 15px;
     color: @main-body-bg;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
@@ -49,12 +49,16 @@
 
 .hero-image__caption .hero-image__caption-header {
     color: @main-body-bg;
-    font-style: normal;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: @font-size-h2;
 }
 
 .hero-image__caption .hero-image__caption-subheader {
     color: @main-body-bg;
-    font-style: italic;
+    font-style: normal;
+    font-weight: 300;
+    font-size: @font-size-h3 * 0.77;
 }
 
 .hero-image__caption-link .btn {
@@ -94,7 +98,17 @@
     bottom: 5px;
 }
 
+@media (min-width: 768px) {
+    .hero-image__caption .hero-image__caption-subheader {
+        font-size: @font-size-h3;
+    }
+}
+
 @media (min-width: 992px) {
+    .hero-image__caption {
+        padding: 20px 60px;
+    }
+
     .slider-container._full-width .swiper-button-next,
     .slider-container._full-width .swiper-button-prev {
         color: @main-body-bg;
