@@ -18,8 +18,7 @@ tt_content {
             830 < lib.contentElement.dataProcessing.830
         }
         settings {
-            defaultWidth = 1920c
-            defaultHeight = 400c
+            defaultWidth = 2560
         }
     }
 }
