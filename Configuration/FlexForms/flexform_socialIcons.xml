@@ -7,7 +7,7 @@
 			<ROOT>
 				<TCEforms>
 					<sheetTitle>
-						LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:accordion.flexform.sheetGeneral
+						LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.sheetGeneral
 					</sheetTitle>
 				</TCEforms>
 				<type>array</type>

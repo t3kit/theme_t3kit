@@ -6,7 +6,7 @@
 		<sDEF>
 			<ROOT>
 				<TCEforms>
-					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.sheetGeneral</sheetTitle>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.sheetGeneral</sheetTitle>
 				</TCEforms>
 				<type>array</type>
 				<el>
@@ -30,7 +30,7 @@
 
 					<iconClass>
 						<TCEforms>
-							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bigIconTextButton.flexform.iconClass</label>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:icon.flexform.iconClass</label>
 							<config>
 								<type>user</type>
 								<userFunc>T3kit\themeT3kit\UserFunction\IconFontSelector->renderField</userFunc>
