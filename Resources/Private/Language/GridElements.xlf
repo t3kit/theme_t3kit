@@ -1,360 +1,360 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2015-09-19T09:11:39Z" product-name="theme_t3kit">
-        <header/>
-        <body>
-            <trans-unit id="two_column_grid">
-                <source>Two columns grid</source>
-            </trans-unit>
-            <trans-unit id="two_column_grid_description">
-                <source>Preset row with two columns.</source>
-            </trans-unit>
-            <trans-unit id="three_column_grid">
-                <source>Three columns grid</source>
-            </trans-unit>
-            <trans-unit id="three_column_grid_description">
-                <source>Preset row with three columns.</source>
-            </trans-unit>
-            <trans-unit id="four_column_grid">
-                <source>Four columns grid</source>
-            </trans-unit>
-            <trans-unit id="four_column_grid_description">
-                <source>Preset row with four columns.</source>
-            </trans-unit>
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-09-19T09:11:39Z" product-name="theme_t3kit">
+		<header/>
+		<body>
 
-            <trans-unit id="adv_one_column_grid">
-                <source>Advanced one column grid</source>
-            </trans-unit>
-            <trans-unit id="adv_one_column_grid_description">
-                <source>Advanced grid. Preset row with one column. Column width can be adjusted.</source>
-            </trans-unit>
-            <trans-unit id="adv_two_column_grid">
-                <source>Advanced two columns grid</source>
-            </trans-unit>
-            <trans-unit id="adv_two_column_grid_description">
-                <source>Advanced grid. Preset row with two columns. Column width can be adjusted.</source>
-            </trans-unit>
-            <trans-unit id="adv_three_column_grid">
-                <source>Advanced three columns grid</source>
-            </trans-unit>
-            <trans-unit id="adv_three_column_grid_description">
-                <source>Advanced grid. Preset row with three columns. Column width can be adjusted.</source>
-            </trans-unit>
-            <trans-unit id="adv_four_column_grid">
-                <source>Advanced four columns grid</source>
-            </trans-unit>
-            <trans-unit id="adv_four_column_grid_description">
-                <source>Advanced grid. Preset row with four columns. Column width can be adjusted.</source>
-            </trans-unit>
+			<trans-unit id="two_column_grid">
+				<source>Two columns grid</source>
+			</trans-unit>
+			<trans-unit id="two_column_grid_description">
+				<source>Preset row with two columns.</source>
+			</trans-unit>
+			<trans-unit id="three_column_grid">
+				<source>Three columns grid</source>
+			</trans-unit>
+			<trans-unit id="three_column_grid_description">
+				<source>Preset row with three columns.</source>
+			</trans-unit>
+			<trans-unit id="four_column_grid">
+				<source>Four columns grid</source>
+			</trans-unit>
+			<trans-unit id="four_column_grid_description">
+				<source>Preset row with four columns.</source>
+			</trans-unit>
 
+			<trans-unit id="adv_one_column_grid">
+				<source>Advanced one column grid</source>
+			</trans-unit>
+			<trans-unit id="adv_one_column_grid_description">
+				<source>Advanced grid. Preset row with one column. Column width can be adjusted.</source>
+			</trans-unit>
+			<trans-unit id="adv_two_column_grid">
+				<source>Advanced two columns grid</source>
+			</trans-unit>
+			<trans-unit id="adv_two_column_grid_description">
+				<source>Advanced grid. Preset row with two columns. Column width can be adjusted.</source>
+			</trans-unit>
+			<trans-unit id="adv_three_column_grid">
+				<source>Advanced three columns grid</source>
+			</trans-unit>
+			<trans-unit id="adv_three_column_grid_description">
+				<source>Advanced grid. Preset row with three columns. Column width can be adjusted.</source>
+			</trans-unit>
+			<trans-unit id="adv_four_column_grid">
+				<source>Advanced four columns grid</source>
+			</trans-unit>
+			<trans-unit id="adv_four_column_grid_description">
+				<source>Advanced grid. Preset row with four columns. Column width can be adjusted.</source>
+			</trans-unit>
 
+			<trans-unit id="col1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="col2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="col3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="col4">
+				<source>Column 4</source>
+			</trans-unit>
 
+			<trans-unit id="column_1_xs">
+				<source>Column 1 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_1_sm">
+				<source>Column 1 Tablets. "Small devices Tablets (≥768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_1_md">
+				<source>Column 1 Desktops. "Medium devices Desktops (≥992px)"</source>
+			</trans-unit>
+			<trans-unit id="column_1_lg">
+				<source>Column 1 Large devices "Large devices Desktops (≥1200px)"</source>
+			</trans-unit>
+			<trans-unit id="column_2_xs">
+				<source>Column 2 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_2_sm">
+				<source>Column 2 Tablets. "Small devices Tablets (≥768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_2_md">
+				<source>Column 2 Desktops. "Medium devices Desktops (≥992px)"</source>
+			</trans-unit>
+			<trans-unit id="column_2_lg">
+				<source>Column 2 Large devices "Large devices Desktops (≥1200px)"</source>
+			</trans-unit>
+			<trans-unit id="column_3_xs">
+				<source>Column 3 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_3_sm">
+				<source>Column 3 Tablets. "Small devices Tablets (≥768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_3_md">
+				<source>Column 3 Desktops. "Medium devices Desktops (≥992px)"</source>
+			</trans-unit>
+			<trans-unit id="column_3_lg">
+				<source>Column 3 Large devices "Large devices Desktops (≥1200px)"</source>
+			</trans-unit>
+			<trans-unit id="column_4_xs">
+				<source>Column 4 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_4_sm">
+				<source>Column 4 Tablets. "Small devices Tablets (≥768px)"</source>
+			</trans-unit>
+			<trans-unit id="column_4_md">
+				<source>Column 4 Desktops. "Medium devices Desktops (≥992px)"</source>
+			</trans-unit>
+			<trans-unit id="column_4_lg">
+				<source>Column 4 Large devices "Large devices Desktops (≥1200px)"</source>
+			</trans-unit>
 
-            <trans-unit id="col1">
-                <source>Column 1</source>
-            </trans-unit>
-            <trans-unit id="col2">
-                <source>Column 2</source>
-            </trans-unit>
-            <trans-unit id="col3">
-                <source>Column 3</source>
-            </trans-unit>
-            <trans-unit id="col4">
-                <source>Column 4</source>
-            </trans-unit>
+			<trans-unit id="column_1_layout">
+				<source>Column 1 Layout</source>
+			</trans-unit>
+			<trans-unit id="column_2_layout">
+				<source>Column 2 Layout</source>
+			</trans-unit>
+			<trans-unit id="column_3_layout">
+				<source>Column 3 Layout</source>
+			</trans-unit>
+			<trans-unit id="column_4_layout">
+				<source>Column 4 Layout</source>
+			</trans-unit>
 
- 						<trans-unit id="column_1_xs">
-                <source>Column 1 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_1_sm">
-                <source>Column 1 Tablets. "Small devices Tablets (≥768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_1_md">
-                <source>Column 1 Desktops. "Medium devices Desktops (≥992px)"</source>
-            </trans-unit>
-            <trans-unit id="column_1_lg">
-                <source>Column 1 Large devices "Large devices Desktops (≥1200px)"</source>
-            </trans-unit>
- 						<trans-unit id="column_2_xs">
-                <source>Column 2 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_2_sm">
-                <source>Column 2 Tablets. "Small devices Tablets (≥768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_2_md">
-                <source>Column 2 Desktops. "Medium devices Desktops (≥992px)"</source>
-            </trans-unit>
-            <trans-unit id="column_2_lg">
-                <source>Column 2 Large devices "Large devices Desktops (≥1200px)"</source>
-            </trans-unit>
- 						<trans-unit id="column_3_xs">
-                <source>Column 3 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_3_sm">
-                <source>Column 3 Tablets. "Small devices Tablets (≥768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_3_md">
-                <source>Column 3 Desktops. "Medium devices Desktops (≥992px)"</source>
-            </trans-unit>
-            <trans-unit id="column_3_lg">
-                <source>Column 3 Large devices "Large devices Desktops (≥1200px)"</source>
-            </trans-unit>
- 						<trans-unit id="column_4_xs">
-                <source>Column 4 Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_4_sm">
-                <source>Column 4 Tablets. "Small devices Tablets (≥768px)"</source>
-            </trans-unit>
-            <trans-unit id="column_4_md">
-                <source>Column 4 Desktops. "Medium devices Desktops (≥992px)"</source>
-            </trans-unit>
-            <trans-unit id="column_4_lg">
-                <source>Column 4 Large devices "Large devices Desktops (≥1200px)"</source>
-            </trans-unit>
-            <trans-unit id="column_1_layout">
-                <source>Column 1 Layout</source>
-            </trans-unit>
-						<trans-unit id="column_2_layout">
-                <source>Column 2 Layout</source>
-            </trans-unit>
-            <trans-unit id="column_3_layout">
-                <source>Column 3 Layout</source>
-            </trans-unit>
-            <trans-unit id="column_4_layout">
-                <source>Column 4 Layout</source>
-            </trans-unit>
-            <trans-unit id="column_1_offset">
-                <source>Column 1 Offset</source>
-            </trans-unit>
-            <trans-unit id="column_2_offset">
-                <source>Column 2 Offset</source>
-            </trans-unit>
-            <trans-unit id="column_3_offset">
-                <source>Column 3 Offset</source>
-            </trans-unit>
-            <trans-unit id="column_4_offset">
-                <source>Column 4 Offset</source>
-            </trans-unit>
+			<trans-unit id="column_1_offset">
+				<source>Column 1 Offset</source>
+			</trans-unit>
+			<trans-unit id="column_2_offset">
+				<source>Column 2 Offset</source>
+			</trans-unit>
+			<trans-unit id="column_3_offset">
+				<source>Column 3 Offset</source>
+			</trans-unit>
+			<trans-unit id="column_4_offset">
+				<source>Column 4 Offset</source>
+			</trans-unit>
 
+			<trans-unit id="column_1_class">
+				<source>Column 1 Class</source>
+			</trans-unit>
+			<trans-unit id="column_2_class">
+				<source>Column 2 Class</source>
+			</trans-unit>
+			<trans-unit id="column_3_class">
+				<source>Column 3 Class</source>
+			</trans-unit>
+			<trans-unit id="column_4_class">
+				<source>Column 4 Class</source>
+			</trans-unit>
 
-            <trans-unit id="column_1_class">
-              <source>Column 1 Class</source>
-            </trans-unit>
-            <trans-unit id="column_2_class">
-              <source>Column 2 Class</source>
-            </trans-unit>
-            <trans-unit id="column_3_class">
-              <source>Column 3 Class</source>
-            </trans-unit>
-            <trans-unit id="column_4_class">
-              <source>Column 4 Class</source>
-            </trans-unit>
-
-            <trans-unit id="column_1_content_wrapper">
-              <source>Column 1 Content Wrapper</source>
-            </trans-unit>
-            <trans-unit id="column_2_content_wrapper">
-              <source>Column 2 Content Wrapper</source>
-            </trans-unit>
-            <trans-unit id="column_3_content_wrapper">
-              <source>Column 3 Content Wrapper</source>
-            </trans-unit>
-            <trans-unit id="column_4_content_wrapper">
-              <source>Column 4 Content Wrapper</source>
-            </trans-unit>
-
-
-            <trans-unit id="container">
-                <source>Container wrapper</source>
-            </trans-unit>
-            <trans-unit id="grid">
-                <source>Responsive grid settings. Column width on different devices. Based on Bootstrap grid.</source>
-            </trans-unit>
-            <trans-unit id="col-xs">
-                <source>Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
-            </trans-unit>
-            <trans-unit id="col-sm">
-                <source>Tablets. "Small devices Tablets (≥768px)"</source>
-            </trans-unit>
-            <trans-unit id="col-md">
-                <source>Desktops. "Medium devices Desktops (≥992px)"</source>
-            </trans-unit>
-            <trans-unit id="col-lg">
-                <source>Large devices "Large devices Desktops (≥1200px)"</source>
-            </trans-unit>
+			<trans-unit id="column_1_content_wrapper">
+				<source>Column 1 Content Wrapper</source>
+			</trans-unit>
+			<trans-unit id="column_2_content_wrapper">
+				<source>Column 2 Content Wrapper</source>
+			</trans-unit>
+			<trans-unit id="column_3_content_wrapper">
+				<source>Column 3 Content Wrapper</source>
+			</trans-unit>
+			<trans-unit id="column_4_content_wrapper">
+				<source>Column 4 Content Wrapper</source>
+			</trans-unit>
 
 
-            <trans-unit id="parallax">
-                <source>Parallax</source>
-            </trans-unit>
-            <trans-unit id="parallax_description">
-                <source>Background image with Parallax effect</source>
-            </trans-unit>
+			<trans-unit id="container">
+				<source>Container wrapper</source>
+			</trans-unit>
+			<trans-unit id="grid">
+				<source>Responsive grid settings. Column width on different devices. Based on Bootstrap grid.</source>
+			</trans-unit>
+			<trans-unit id="col-xs">
+				<source>Mobile devices. "Extra small devices Phones (&lt;768px)"</source>
+			</trans-unit>
+			<trans-unit id="col-sm">
+				<source>Tablets. "Small devices Tablets (≥768px)"</source>
+			</trans-unit>
+			<trans-unit id="col-md">
+				<source>Desktops. "Medium devices Desktops (≥992px)"</source>
+			</trans-unit>
+			<trans-unit id="col-lg">
+				<source>Large devices "Large devices Desktops (≥1200px)"</source>
+			</trans-unit>
 
-            <trans-unit id="parallax.flexform.title">
-                <source>Parallax settings</source>
-            </trans-unit>
-            <trans-unit id="parallax.flexform.height">
-              <source>Height of parallax element. [auto] by default. Good when you want to have other elements inside of parallax</source>
-            </trans-unit>
-            <trans-unit id="parallax.flexform.bgcolor">
-                <source>Background color (for mobile)</source>
-            </trans-unit>
-            <trans-unit id="parallax.flexform.hide">
-              <source>Hide in mobile</source>
-            </trans-unit>
 
-            <trans-unit id="collapsible">
-                <source>Collapsible</source>
-            </trans-unit>
-            <trans-unit id="collapsible_description">
-                <source>A collapsible container for content elements</source>
-            </trans-unit>
+			<!--Parallax-->
+			<trans-unit id="parallax">
+				<source>Parallax</source>
+			</trans-unit>
+			<trans-unit id="parallax_description">
+				<source>Background image with Parallax effect</source>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.title">
+				<source>Parallax settings</source>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.height">
+				<source>Height of parallax element. [auto] by default. Good when you want to have other elements inside of parallax</source>
+			</trans-unit>
+			<trans-unit id="parallax.flexform.hide">
+				<source>Hide in mobile</source>
+			</trans-unit>
 
-            <trans-unit id="collapsible.flexform.title">
-                <source>Collapsible settings</source>
-            </trans-unit>
-            <trans-unit id="collapsible.flexform.expanded">
-              <source>Expanded by default</source>
-            </trans-unit>
 
-						<trans-unit id="collapsibleGroup">
-                <source>Group of collapsibles</source>
-            </trans-unit>
-            <trans-unit id="collapsibleGroup_description">
-                <source>A group for collapsible elements</source>
-            </trans-unit>
-            <trans-unit id="collapsibleContent">
-                <source>Collapsible Content</source>
-            </trans-unit>
-            <trans-unit id="collapsibleContainers">
-                <source>Collapsibles</source>
-            </trans-unit>
+			<!--Collapsible-->
+			<trans-unit id="collapsible">
+				<source>Collapsible</source>
+			</trans-unit>
+			<trans-unit id="collapsible_description">
+				<source>A collapsible container for content elements</source>
+			</trans-unit>
 
-            <trans-unit id="tab">
-                <source>Tab</source>
-            </trans-unit>
-            <trans-unit id="tab_description">
-                <source>A tab with content elements</source>
-            </trans-unit>
-            <trans-unit id="tabContent">
-                <source>Tab Content</source>
-            </trans-unit>
+			<trans-unit id="collapsible.flexform.title">
+				<source>Collapsible settings</source>
+			</trans-unit>
+			<trans-unit id="collapsible.flexform.expanded">
+				<source>Expanded by default</source>
+			</trans-unit>
 
-						<trans-unit id="tabGroup">
-                <source>Group of tabs</source>
-            </trans-unit>
-            <trans-unit id="tabGroup_description">
-                <source>A container for tab content elements</source>
-            </trans-unit>
-            <trans-unit id="tabContainer">
-                <source>Tabs</source>
-            </trans-unit>
-            <trans-unit id="tabGroup.flexform.title">
-                <source>Tab group settings</source>
-            </trans-unit>
-            <trans-unit id="tabGroup.flexform.tabstyle">
-              <source>Style of tabs</source>
-            </trans-unit>
+			<trans-unit id="collapsibleGroup">
+				<source>Group of collapsibles</source>
+			</trans-unit>
+			<trans-unit id="collapsibleGroup_description">
+				<source>A group for collapsible elements</source>
+			</trans-unit>
+			<trans-unit id="collapsibleContent">
+				<source>Collapsible Content</source>
+			</trans-unit>
+			<trans-unit id="collapsibleContainers">
+				<source>Collapsibles</source>
+			</trans-unit>
 
-            <trans-unit id="simple_accordion">
-            	<source>Simple Accordion</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion_description">
-            	<source>Container with collapsible child elements, which can either be single elements or containers as well</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion_content">
-            	<source>Accordion content</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion.flexform.sheetGeneral">
-            	<source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion.flexform.multiselect">
-            	<source>Multiple items can be expanded at the same time</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion.flexform.accordionMode">
-            	<source>Accordion mode</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion.flexform.accordionMode_firstChildOpen">
-            	<source>First item is expanded at load.</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion.flexform.accordionMode_allClosed">
-            	<source>All items are collapsed at load.</source>
-            </trans-unit>
-            <trans-unit id="simple_accordion.flexform.accordionMode_allOpen">
-            	<source>All items are expanded at load.</source>
-            </trans-unit>
+			<!--Tab-->
+			<trans-unit id="tab">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="tab_description">
+				<source>A tab with content elements</source>
+			</trans-unit>
+			<trans-unit id="tabContent">
+				<source>Tab Content</source>
+			</trans-unit>
 
-            <trans-unit id="sliderContainer">
-                <source>Slider container</source>
-            </trans-unit>
-            <trans-unit id="slider_container">
-                <source>Slider container</source>
-            </trans-unit>
-            <trans-unit id="slider_container_description">
-                <source>Slider container for content elements</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.title">
-                <source>Slider container settings</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.grid_container">
-                <source>Use Bootstrap grid container (only for StartPage/GridContainer Backend Layouts)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.button">
-                <source>Show/hide next and prew button</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.pagination">
-                <source>Show/hide pagination</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.loop">
-                <source>Loop (continuous loop mode)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.effect">
-                <source>Slider effect (only for one slide per view)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.effect.slider">
-                <source>slider</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.effect.flip">
-                <source>"flip" effect (only for one slide per view)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.effect.fade">
-                <source>"fade" effect (only for one slide per view)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.effect.cube">
-                <source>"cube" effect (only for one slide per view)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.effect.coverflow">
-                <source>"coverflow" effect (only for one slide per view)</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.autoplay">
-                <source>Slider autoplay (in sec).</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.autoplay.no_autoplay">
-                <source>no autoplay</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.slidesPerView">
-                <source>Number of slides per carousel view.</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.slidesPerView.one_slide">
-                <source>1 slide</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.slidesPerView.two_slides">
-                <source>2 slides</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.slidesPerView.three_slides">
-                <source>3 slides</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.slidesPerView.four_slides">
-                <source>4 slides</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.slidesPerView.five_slides">
-                <source>5 slides</source>
-            </trans-unit>
-            <trans-unit id="slider_container.flexform.speed">
-                <source>Duration of transition between slides (in sec)</source>
-            </trans-unit>
+			<trans-unit id="tabGroup">
+				<source>Group of tabs</source>
+			</trans-unit>
+			<trans-unit id="tabGroup_description">
+				<source>A container for tab content elements</source>
+			</trans-unit>
+			<trans-unit id="tabContainer">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="tabGroup.flexform.title">
+				<source>Tab group settings</source>
+			</trans-unit>
+			<trans-unit id="tabGroup.flexform.tabstyle">
+				<source>Style of tabs</source>
+			</trans-unit>
 
-        </body>
-    </file>
+
+			<!--Simple accordion-->
+			<trans-unit id="simple_accordion">
+				<source>Simple Accordion</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion_description">
+				<source>Container with collapsible child elements, which can either be single elements or containers as well</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion.flexform.title">
+				<source>Simple accordion settings</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion.flexform.multiselect">
+				<source>Multiple items can be expanded at the same time</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion.flexform.accordionMode">
+				<source>Accordion mode</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion.flexform.accordionMode_firstChildOpen">
+				<source>First item is expanded at load.</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion.flexform.accordionMode_allClosed">
+				<source>All items are collapsed at load.</source>
+			</trans-unit>
+			<trans-unit id="simple_accordion.flexform.accordionMode_allOpen">
+				<source>All items are expanded at load.</source>
+			</trans-unit>
+
+
+			<!--Slider Container-->
+			<trans-unit id="sliderContainer">
+				<source>Slider container</source>
+			</trans-unit>
+			<trans-unit id="slider_container">
+				<source>Slider container</source>
+			</trans-unit>
+			<trans-unit id="slider_container_description">
+				<source>Slider container for content elements</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.title">
+				<source>Slider container settings</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.grid_container">
+				<source>Use Bootstrap grid container (only for StartPage/GridContainer Backend Layouts)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.button">
+				<source>Show/hide next and prew button</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.pagination">
+				<source>Show/hide pagination</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.loop">
+				<source>Loop (continuous loop mode)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.effect">
+				<source>Slider effect (only for one slide per view)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.effect.slider">
+				<source>slider</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.effect.flip">
+				<source>"flip" effect (only for one slide per view)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.effect.fade">
+				<source>"fade" effect (only for one slide per view)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.effect.cube">
+				<source>"cube" effect (only for one slide per view)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.effect.coverflow">
+				<source>"coverflow" effect (only for one slide per view)</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.autoplay">
+				<source>Slider autoplay (in sec).</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.autoplay.no_autoplay">
+				<source>no autoplay</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.slidesPerView">
+				<source>Number of slides per carousel view.</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.slidesPerView.one_slide">
+				<source>1 slide</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.slidesPerView.two_slides">
+				<source>2 slides</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.slidesPerView.three_slides">
+				<source>3 slides</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.slidesPerView.four_slides">
+				<source>4 slides</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.slidesPerView.five_slides">
+				<source>5 slides</source>
+			</trans-unit>
+			<trans-unit id="slider_container.flexform.speed">
+				<source>Duration of transition between slides (in sec)</source>
+			</trans-unit>
+
+		</body>
+	</file>
 </xliff>
