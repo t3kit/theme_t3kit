@@ -26,10 +26,18 @@
 				</f:else>
 			</f:if>
 			<f:if condition="{data.header}">
-				<h3 class="img-text-link__header">{data.header}</h3>
+				<h3 class="img-text-link__header"><core:contentEditable table="tt_content" field="header" uid="{data.uid}">{data.header}</core:contentEditable></h3>
 			</f:if>
 			<f:if condition="{data.bodytext}">
-				<p class="img-text-link__p {f:if(condition: '{settings.hoverEffect}', then: 'js__img-text-link')}">{data.bodytext}</p>
+				<f:if condition="{settings.hoverEffect}">
+					<f:then>
+						<f:comment><!-- can't allow frontend-editing since js crops the text --></f:comment>
+						<p class="img-text-link__p js__img-text-link">{data.bodytext}</p>
+					</f:then>
+					<f:else>
+						<p class="img-text-link__p"><core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">{data.bodytext}</core:contentEditable></p>
+					</f:else>
+				</f:if>
 			</f:if>
 			<f:if condition="{data.header_link}">
 				<f:if condition="{data.subheader}">

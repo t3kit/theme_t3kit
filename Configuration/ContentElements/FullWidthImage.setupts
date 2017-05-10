@@ -20,5 +20,8 @@ tt_content {
         settings {
             defaultWidth = 2560
         }
+        stdWrap {
+            editIcons = tt_content
+        }
     }
 }

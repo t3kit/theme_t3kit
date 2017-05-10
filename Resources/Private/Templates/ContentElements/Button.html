@@ -4,8 +4,20 @@
 <f:section name="Header" />
 <f:section name="Main">
 <!-- theme_t3kit: Templates/ContentElements/Button.html [begin] -->
+	<f:comment><!-- set button classes --></f:comment>
+	<f:variable name="btnClass">btn</f:variable>
+	<f:if condition="{settings.buttonStyle}">
+		<f:variable name="btnClass">{btnClass} {settings.buttonStyle}</f:variable>
+	</f:if>
+	<f:if condition="{settings.buttonSize}">
+		<f:variable name="btnClass">{btnClass} {settings.buttonSize}</f:variable>
+	</f:if>
+	<f:if condition="{settings.blockLevel}">
+		<f:variable name="btnClass">{btnClass} btn-block</f:variable>
+	</f:if>
+
 	<f:if condition="{data.header_link}">
-		<f:link.typolink parameter="{data.header_link}" class="btn {f:if(condition: settings.buttonStyle, then: ' {settings.buttonStyle}')} {f:if(condition: settings.buttonSize, then: ' {settings.buttonSize}')}{f:if(condition: settings.blockLevel, then: ' btn-block')}">{data.header}</f:link.typolink>
+		<f:link.typolink parameter="{data.header_link}" class="{btnClass}">{data.header}</f:link.typolink>
 	</f:if>
 <!-- theme_t3kit: Templates/ContentElements/Button.html [end] -->
 </f:section>

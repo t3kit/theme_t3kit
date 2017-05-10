@@ -10,10 +10,10 @@
 				<span class="big-icon-text-btn__icon icons icon-{settings.iconClass}"></span>
 			</f:if>
 			<f:if condition="{data.header}">
-				<h3 class="big-icon-text-btn__header">{data.header}</h3>
+				<h3 class="big-icon-text-btn__header"><core:contentEditable table="tt_content" field="header" uid="{data.uid}">{data.header}</core:contentEditable></h3>
 			</f:if>
 			<f:if condition="{data.bodytext}">
-				<p class="big-icon-text-btn__p">{data.bodytext}</p>
+				<p class="big-icon-text-btn__p"><core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">{data.bodytext}</core:contentEditable></p>
 			</f:if>
 			<f:if condition="{data.header_link}">
 				<f:if condition="{data.subheader}">

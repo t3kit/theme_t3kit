@@ -1,0 +1,3 @@
+[globalVar = GP:frontend_editing = true]
+    page.bodyTagAdd = class="frontend_editing"
+[global]

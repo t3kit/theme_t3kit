@@ -11,11 +11,11 @@
 					<span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
 				</f:if>
 				<f:if condition="{data.header}">
-					{data.header}
+					<core:contentEditable table="tt_content" field="header" uid="{data.uid}">{data.header}</core:contentEditable>
 				</f:if>
 			</h3>
 			<f:if condition="{data.bodytext}">
-				<p class="icon-text-btn__p">{data.bodytext}</p>
+				<p class="icon-text-btn__p"><core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">{data.bodytext}</core:contentEditable></p>
 			</f:if>
 			<f:if condition="{data.header_link}">
 				<f:if condition="{data.subheader}">
