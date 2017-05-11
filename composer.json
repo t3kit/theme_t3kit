@@ -51,7 +51,7 @@
     "apache-solr-for-typo3/solr": "6.1.0",
     "typo3-ter/dyncss-less": "0.7.9",
     "clickstorm/go_maps_ext": "2.2.0",
-    "b13/seo_basics": "0.9.6",
+    "clickstorm/cs_seo": "2.0.1",
     "typo3-ter/news": "5.3.3",
     "pixelant/pxa-newsletter-subscription": "4.1.2",
     "typo3-ter/pxa-form-enhancement": "3.0.0",
