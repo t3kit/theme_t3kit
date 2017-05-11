@@ -20,7 +20,10 @@
 				<source>Imprint</source>
 			</trans-unit>
 
-			<!-- news custom label -->
+
+			<!--Extensions-->
+			<!--News-->
+			<!-- news custom labels -->
 			<trans-unit id="news.date.text" xml:space="preserve">
 				<source>Published: </source>
 			</trans-unit>
@@ -31,102 +34,14 @@
 				<source>Video</source>
 			</trans-unit>
 
-			<!-- Behaviours labels -->
-			<trans-unit id="content.behaviour.container" xml:space="preserve">
-				<source>Container</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.container_fluid" xml:space="preserve">
-				<source>Container (fluid)</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.fade_in" xml:space="preserve">
-				<source>Fade in</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.screenreader_only" xml:space="preserve">
-				<source>Screenreader only</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.screenreader_only_focusable" xml:space="preserve">
-				<source>Screenreader only (focusable)</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.print_hidden" xml:space="preserve">
-				<source>Hidden for printing</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.print_visible_block" xml:space="preserve">
-				<source>Visible for printing (block)</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.print_visible_inline" xml:space="preserve">
-				<source>Visible for printing (inline)</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.print_visible_inline_block" xml:space="preserve">
-				<source>Visible for printing (inline-block)</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.table_responsive" xml:space="preserve">
-				<source>Responsive table</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.pricing_table" xml:space="preserve">
-				<source>Pricing table</source>
-			</trans-unit>
-
-			<trans-unit id="content.behaviour.navigation_pills" xml:space="preserve">
-				<source>Pills navigation</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.navigation_tabs" xml:space="preserve">
-				<source>Tabs navigation</source>
-			</trans-unit>
-			<trans-unit id="content.behaviour.accordion_first_open" xml:space="preserve">
-				<source>Open first accordion item</source>
-			</trans-unit>
-
-			<trans-unit id="content.variants.panel_primary" xml:space="preserve">
-				<source>Primary Panel</source>
-			</trans-unit>
-			<trans-unit id="content.variants.panel_success" xml:space="preserve">
-				<source>Success Panel</source>
-			</trans-unit>
-			<trans-unit id="content.variants.panel_info" xml:space="preserve">
-				<source>Info Panel</source>
-			</trans-unit>
-			<trans-unit id="content.variants.panel_warning" xml:space="preserve">
-				<source>Warning Panel</source>
-			</trans-unit>
-			<trans-unit id="content.variants.panel_danger" xml:space="preserve">
-				<source>Danger Panel</source>
-			</trans-unit>
-
-			<trans-unit id="content.buttons.default" xml:space="preserve">
-				<source>Default Button</source>
-			</trans-unit>
-			<trans-unit id="content.buttons.primary" xml:space="preserve">
-				<source>Primary Button</source>
-			</trans-unit>
-			<trans-unit id="content.buttons.success" xml:space="preserve">
-				<source>Success Button</source>
-			</trans-unit>
-			<trans-unit id="content.buttons.info" xml:space="preserve">
-				<source>Info Button</source>
-			</trans-unit>
-			<trans-unit id="content.buttons.warning" xml:space="preserve">
-				<source>Warning Button</source>
-			</trans-unit>
-			<trans-unit id="content.buttons.danger" xml:space="preserve">
-				<source>Danger Button</source>
-			</trans-unit>
-
-			<trans-unit id="content.bullets" xml:space="preserve">
-				<source>Panel with List Group</source>
-			</trans-unit>
-			<trans-unit id="content.pricing_table_linktext" xml:space="preserve">
-				<source>Link text</source>
-			</trans-unit>
-			<trans-unit id="content.pricing_table_listheader" xml:space="preserve">
-				<source>List header</source>
-			</trans-unit>
 
 			<!-- ContentElements labels -->
 			<trans-unit id="contentElement.slider.linkText" xml:space="preserve">
 				<source>Read more</source>
 			</trans-unit>
 
-			<!-- warning message for outdated browsers -->
+
+			<!-- Warning message for outdated browsers -->
 			<trans-unit id="content.behaviour.browsehappy.message" xml:space="preserve">
 				<source>You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. </source>
 			</trans-unit>
@@ -134,6 +49,8 @@
 				<source>Please upgrade your browser to improve your experience.</source>
 			</trans-unit>
 
+
+			<!-- Icon Font Selector -->
 			<trans-unit id="iconFontSelector.exception.title">
 				<source>TCA Configuration error</source>
 			</trans-unit>
