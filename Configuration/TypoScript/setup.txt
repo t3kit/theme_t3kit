@@ -20,7 +20,6 @@
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts">
 [global]
 
-
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('solr')]
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts">
     # Solr indexer
@@ -29,10 +28,9 @@
     # {$themes.configuration.features.newsDefaultDetailPid}
 [global]
 
-
-# [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('seo_basics')]
-# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/seo_basics/TypoScript/setup.ts">
-# [global]
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('cs_seo')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/setup.ts">
+[global]
 
 # Include setupTS files from fileadmin/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/" extensions="setupts">
