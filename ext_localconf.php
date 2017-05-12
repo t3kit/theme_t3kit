@@ -3,6 +3,11 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
+if (!TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('frontend_editing')) {
+    // Add an empty placeholder viewhelper if the EXT:frontend_editing is not active
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['core'][] = 'T3kit\\themeT3kit\\ViewHelpers';
+}
+
 $GLOBALS['TYPO3_CONF_VARS']
     ['SC_OPTIONS']
     ['cms/layout/class.tx_cms_layout.php']
