@@ -1,4 +1,4 @@
-<f:layout name="Default" />
+<f:layout name="NoBgImage" />
 <f:section name="Main">
 	<f:if condition="{files.0}">
 		<f:if condition="{files.0.type} == 4">
@@ -11,7 +11,7 @@
 			</f:if>
 		</f:if>
 		<f:if condition="{files.0.type} == 2">
-			<div class="parallax parallax-img {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" style="background-image: url('{f:uri.image(image : files.0.originalFile)}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};" >
+				<div class="parallax parallax-resimg {f:cObject(typoscriptObjectPath:'lib.responsiveBackgroundImage', data:files.0.uid)} {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" style="height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};" >
 		</f:if>
 	</f:if>
 	<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
