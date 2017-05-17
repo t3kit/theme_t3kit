@@ -3,13 +3,13 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit">
 		<header/>
 		<body>
-			<trans-unit id="appearance.description">
+			<trans-unit id="frame_class.description">
 				<source>Select appearance of content element (if available)</source>
 			</trans-unit>
-			<trans-unit id="margin_top.description">
+			<trans-unit id="space_before_class.description">
 				<source>Select a predefined "Margin Top" for the content element (if available)</source>
 			</trans-unit>
-			<trans-unit id="margin_bottom.description">
+			<trans-unit id="space_after_class.description">
 				<source>Select a predefined "Margin Bottom" for the content element (if available)</source>
 			</trans-unit>
 			<trans-unit id="aligning.description">
