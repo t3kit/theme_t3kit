@@ -6,7 +6,7 @@
 		<f:then>
 			<f:if condition="{files.0}">
 				<f:then>
-					<div class="{data.frame_class} {data.space_before_class} {data.space_after_class} col-bg-img" style="background-image: url('{f:uri.image(src: '{files.0.uid}', treatIdAsReference: 1)}')">
+					<div class="{data.frame_class} {data.space_before_class} {data.space_after_class} col-bg-img {f:cObject(typoscriptObjectPath:'lib.responsiveBackgroundImage', data:files.0.uid)}">
 				</f:then>
 				<f:else>
 					<div class="{data.frame_class} {data.space_before_class} {data.space_after_class}">
@@ -15,7 +15,7 @@
 		</f:then>
 		<f:else>
 			<f:if condition="{files.0}">
-				<div class="col-bg-img" style="background-image: url('{f:uri.image(src: '{files.0.uid}', treatIdAsReference: 1)}')">
+				<div class="col-bg-img {f:cObject(typoscriptObjectPath:'lib.responsiveBackgroundImage', data:files.0.uid)}" >
 			</f:if>
 		</f:else>
 	</f:if>
