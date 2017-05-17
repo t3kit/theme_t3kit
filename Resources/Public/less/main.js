@@ -266,6 +266,15 @@ jQuery(function ($) {
         noAndroid: false,
         noIos: true
       })
+      $('.parallax-resimg').each(function () {
+        $(this).jarallax({
+          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
+          speed: 0.5,
+          noAndroid: false,
+          imgSrc: $(this).css('background-image').trim().slice(5, -2),
+          noIos: true
+        })
+      })
       $('.parallax-video').jarallax({
         type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
         speed: 0.5,
@@ -287,6 +296,13 @@ jQuery(function ($) {
     var $slider = $('.slider-container')
     $frame.each(function () {
       var self = $(this)
+      var $p = self.find('.hero-image__caption-p')
+      if ($p.length) {
+        $p.dotdotdot({
+          watch: 'window',
+          height: 55
+        })
+      }
       if (!self.parents('.swiper-wrapper').length) {
         self.addClass('_animated')
       }
