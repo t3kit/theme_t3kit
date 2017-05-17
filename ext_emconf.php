@@ -40,7 +40,7 @@ $EM_CONF[$_EXTKEY] = array(
             'gridelements' => '7.1.0-7.1.99',
             'realurl' => '2.2.0-2.2.99',
             'go_maps_ext' => '2.2.0-2.2.99',
-            'seo_basics' => '0.9.2-0.9.99',
+            'cs_seo' => '2.0.0-2.0.99',
             'news' => '5.3.3-5.3.99',
             'frontend_editing' => '1.0.0-1.0.99'
         ),

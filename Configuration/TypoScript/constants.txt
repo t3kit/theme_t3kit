@@ -5,3 +5,5 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/constants.ts">
 # Solr
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/constants.ts">
+# cs_seo
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/constants.ts">
