@@ -9,6 +9,8 @@
     background-repeat: no-repeat;
     width: 100%;
     position: relative;
+    opacity: 0;
+    transition: opacity 0.2s ease;
     // max-width: 1920px;
 }
 
@@ -95,6 +97,10 @@
     overflow: hidden;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+.slider-container._full-width .hero-image {
+    opacity: 1;
 }
 
 .slider-container._full-width .slider-container__slide {
