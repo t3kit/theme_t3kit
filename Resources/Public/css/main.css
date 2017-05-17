@@ -3845,12 +3845,12 @@ div.awesomplete li[aria-selected="true"] mark {
   position: relative;
 }
 .slider-container__container {
-  margin: 20px 45px 40px;
+  margin: 0 45px;
   position: relative;
   overflow: hidden;
 }
 .slider-container-effect {
-  margin: 20px 15px 45px;
+  margin: 0 15px;
 }
 .slider-container-effect .slider-container__container {
   margin: 0;
@@ -3908,7 +3908,7 @@ div.awesomplete li[aria-selected="true"] mark {
     font-size: 35px;
   }
   .slider-container-effect .slider-container__container {
-    margin: 20px 45px 40px;
+    margin: 0 45px;
     position: relative;
     overflow: hidden;
   }
@@ -3916,7 +3916,7 @@ div.awesomplete li[aria-selected="true"] mark {
 @media (min-width: 1280px) {
   .slider-container-effect {
     max-width: 990px;
-    margin: 20px auto 45px;
+    margin: 0 auto;
   }
 }
 .panel-title > a {
