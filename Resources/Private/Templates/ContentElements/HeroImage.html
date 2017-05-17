@@ -18,8 +18,8 @@
 						<p class="hero-image__caption-p" data-text-content='{settings.elementText}'>{settings.elementText}</p>
 					</f:if>
 					<f:if condition="{data.header_link}">
-						<div class="hero-image__caption-link ">
-							<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="{f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}"> {data.subheader}</f:link.typolink>
+						<div class="hero-image__caption-link-wrp">
+							<f:link.typolink parameter="{data.header_link}" title="{data.header}" class="hero-image__caption-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}"> {data.subheader}</f:link.typolink>
 						</div>
 					</f:if>
 				</div>
