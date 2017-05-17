@@ -1,4 +1,35 @@
 
+#### v2.1.0 `May 17, 2017`
+- **[BUGFIX]** hero Image, fix css selector (#216) ([9e5dcf5](https://github.com/t3kit/theme_t3kit/commit/9e5dcf5))
+- **[FEATURE]** add responsive bg images into gridelements and HeroImage ([19cc05d](https://github.com/t3kit/theme_t3kit/commit/19cc05d))
+- **[BUGFIX]** Slider Container fix top and bottom margins (#214) ([8a23016](https://github.com/t3kit/theme_t3kit/commit/8a23016))
+- **[TASK]** update frontend_editing to version 1.0.8 (#213) ([56033af](https://github.com/t3kit/theme_t3kit/commit/56033af))
+- **[TASK]** update csh id:s (#212) ([3df15df](https://github.com/t3kit/theme_t3kit/commit/3df15df))
+- **[BUGFIX]** Hero Image mobile view, button hover and active state (#207) ([333c65d](https://github.com/t3kit/theme_t3kit/commit/333c65d))
+- **[FEATURE]** responsive background images for parallax element (#211) ([4782fa9](https://github.com/t3kit/theme_t3kit/commit/4782fa9))
+- **[TASK]** cleanup and update locallang language labels (#205) ([fdbaebf](https://github.com/t3kit/theme_t3kit/commit/fdbaebf))
+- **[TASK]** cleanup and update language labels for BElayouts (#204) ([fddf456](https://github.com/t3kit/theme_t3kit/commit/fddf456))
+- **[TASK]** install frontend-editing from typo3-ter ([4c0fec4](https://github.com/t3kit/theme_t3kit/commit/4c0fec4))
+- **[BUGFIX]** Fetch pageTS from current page and not parent page (#206) ([d1bda64](https://github.com/t3kit/theme_t3kit/commit/d1bda64))
+- **[TASK]** cleanup and update language labels for content elements ([0cf7efb](https://github.com/t3kit/theme_t3kit/commit/0cf7efb))
+- **[TASK]** cleanup and update language labels for gridelements ([eaeac4a](https://github.com/t3kit/theme_t3kit/commit/eaeac4a))
+- **[FEATURE]** Hero Image, add semitransparent overlay (#197) ([bec9812](https://github.com/t3kit/theme_t3kit/commit/bec9812))
+- **[BUGFIX]** Hero Image, fix button background and size (#199) ([d31a05c](https://github.com/t3kit/theme_t3kit/commit/d31a05c))
+- **[BUGFIX]** Hero Image inside slider container, fix pagination and margins (#198) ([2300e34](https://github.com/t3kit/theme_t3kit/commit/2300e34))
+- **[TASK]** add appearanceTab as the main folder for wrappers styling ([ee9aa33](https://github.com/t3kit/theme_t3kit/commit/ee9aa33))
+- **[FEATURE]** Hero Image, new animation styles (#195) ([2631abb](https://github.com/t3kit/theme_t3kit/commit/2631abb))
+- **[FEATURE]** Hero Image, add option for vertical alignment (#194) ([4ce7556](https://github.com/t3kit/theme_t3kit/commit/4ce7556))
+- **[BUGFIX]** fix felayout conf to work with subpages ([33389a6](https://github.com/t3kit/theme_t3kit/commit/33389a6))
+- **[DOC]** update README ([baaa225](https://github.com/t3kit/theme_t3kit/commit/baaa225))
+- **[DOC]** update README for felayout ([d7f263a](https://github.com/t3kit/theme_t3kit/commit/d7f263a))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** ** Replace extension seo_basics with cs_seo (#209)**  ([a8fcc37](https://github.com/t3kit/theme_t3kit/commit/a8fcc37))
+- **[!!!]** **[TASK]** change how fullWidthImage img is rendered (#201) ([d1f953c](https://github.com/t3kit/theme_t3kit/commit/d1f953c))
+- **[!!!]** **[TASK]** update Appearance and Layout wrapper labels/classes, make it more semantic ([b9103e1](https://github.com/t3kit/theme_t3kit/commit/b9103e1))
+
+***
+
 #### v2.0.0 `May 3, 2017`
 - **[FEATURE]** make some of the Favicons typoscript use constants (#188) ([28e8683](https://github.com/t3kit/theme_t3kit/commit/28e8683))
 - **[TASK]** add all FE dependencies using NPM instead of Bower ([85dcca6](https://github.com/t3kit/theme_t3kit/commit/85dcca6))
