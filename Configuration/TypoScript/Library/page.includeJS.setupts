@@ -4,6 +4,7 @@
             jquery = {$themes.configuration.feLayoutPath}/less/jquery.js
             jquery {
                 external = 0
+                forceOnTop = 1
                 # disableCompression =
                 # excludeFromConcatenation =
             }
@@ -37,6 +38,7 @@
             jquery = {$themes.configuration.feLayoutPath}/css/jquery.js
             jquery {
                 external = 0
+                forceOnTop = 1
                 # disableCompression =
                 # excludeFromConcatenation =
             }
