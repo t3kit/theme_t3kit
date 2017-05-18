@@ -1,4 +1,10 @@
 
+#### v2.1.1 `May 18, 2017`
+- **[BUGFIX]** prevent sql error when creating new page in page tree. (#217) ([e1afa6c](https://github.com/t3kit/theme_t3kit/commit/e1afa6c))
+- **[DOC]** update README, remove beta tag ([406a4c7](https://github.com/t3kit/theme_t3kit/commit/406a4c7))
+
+***
+
 #### v2.1.0 `May 17, 2017`
 - **[BUGFIX]** hero Image, fix css selector (#216) ([9e5dcf5](https://github.com/t3kit/theme_t3kit/commit/9e5dcf5))
 - **[FEATURE]** add responsive bg images into gridelements and HeroImage ([19cc05d](https://github.com/t3kit/theme_t3kit/commit/19cc05d))
