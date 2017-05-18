@@ -2,6 +2,9 @@
 defined('TYPO3_MODE') or die();
 
 call_user_func(function () {
+    $GLOBALS['TCA']['pages']['columns']['tx_csseo_og_description']['config']['default'] = '';
+    $GLOBALS['TCA']['pages']['columns']['tx_csseo_tw_description']['config']['default'] = '';
+
     $GLOBALS['TCA']['pages']['columns']['tx_themes_icon']['config'] = array (
         'type' => 'user',
         'userFunc' => 'T3kit\themeT3kit\UserFunction\IconFontSelector->renderField',
