@@ -28,6 +28,15 @@
 							</config>
 						</TCEforms>
 					</paggination>
+					<paginationPosition>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.paginationPosition</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</paginationPosition>
 					<loop>
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.loop</label>
