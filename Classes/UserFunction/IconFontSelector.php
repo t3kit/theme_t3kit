@@ -537,8 +537,11 @@ class IconFontSelector
      */
     protected function overridePAByPageTsConfig(&$PA)
     {
-
-        $pageId = $PA['row']['uid'];
+        // by default use pid as pageid, but use uid for pages
+        $pageId = $PA['row']['pid'];
+        if ($PA['table'] === 'pages') {
+            $pageId = $PA['row']['uid'];
+        }
         $cType = $PA['row']['CType'][0];
         $table = $PA['table'];
         $field = $PA['field'];
