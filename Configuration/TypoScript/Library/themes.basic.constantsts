@@ -22,7 +22,7 @@ themes.configuration.features.searchTargetPage = 71
 themes.configuration.features.newsDefaultDetailPid = 42
 
 # customsubcategory=maps= Google map configuration
-# cat=theme,advanced/maps; type=string; label= Google map api key
+# cat=theme,advanced/maps; type=string; label= Google map api url (api key required)
 themes.configuration.maps.map = //maps.google.com/maps/api/js
 
 
