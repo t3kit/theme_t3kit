@@ -15,7 +15,7 @@
 
 # Facebook
 #############################################
-# cat=socialmedia,advanced/socialmedia_facebook/; type=options[0,1]; label= Facebook: Activate?!
+# cat=socialmedia,advanced/socialmedia_facebook/; type=options[Show=1,Hide=0]; label= Facebook: Activate?!
 themes.configuration.socialmedia.useFacebook = 1
 
 # cat=socialmedia,advanced/socialmedia_facebook/; type=string; label= Facebook: Pagelink
@@ -23,7 +23,7 @@ themes.configuration.socialmedia.facebookLink = https://www.facebook.com/typo3
 
 
 # Twitter
-# cat=socialmedia,advanced/socialmedia_twitter/; type=options[0,1]; label= Twitter: Activate?!
+# cat=socialmedia,advanced/socialmedia_twitter/; type=options[Show=1,Hide=0]; label= Twitter: Activate?!
 themes.configuration.socialmedia.useTwitter = 1
 
 # cat=socialmedia,advanced/socialmedia_twitter/; type=string; label= Twitter: Pagelink
@@ -31,7 +31,7 @@ themes.configuration.socialmedia.twitterLink = https://twitter.com/typo3
 
 
 # LinkedIn
-# cat=socialmedia,advanced/socialmedia_linkedin/; type=options[0,1]; label= LinkedIn: Activate?!
+# cat=socialmedia,advanced/socialmedia_linkedin/; type=options[Show=1,Hide=0]; label= LinkedIn: Activate?!
 themes.configuration.socialmedia.useLinkedIn = 1
 
 # cat=socialmedia,advanced/socialmedia_linkedin/; type=string; label= LinkedIn: Pagelink
@@ -39,7 +39,7 @@ themes.configuration.socialmedia.linkedInLink = https://www.linkedin.com/company
 
 
 # Vimeo
-# cat=socialmedia,advanced/socialmedia_vimeo/; type=options[0,1]; label= Vimeo: Activate?!
+# cat=socialmedia,advanced/socialmedia_vimeo/; type=options[Show=1,Hide=0]; label= Vimeo: Activate?!
 themes.configuration.socialmedia.useVimeo = 1
 
 # cat=socialmedia,advanced/socialmedia_vimeo/; type=string; label= Vimeo: Pagelink
@@ -48,7 +48,7 @@ themes.configuration.socialmedia.vimeoLink = https://vimeo.com/135225809
 
 # Google plus
 #############################################
-# cat=socialmedia,advanced/socialmedia_google_plus/; type=options[0,1]; label= Google+: Activate?!
+# cat=socialmedia,advanced/socialmedia_google_plus/; type=options[Show=1,Hide=0]; label= Google+: Activate?!
 themes.configuration.socialmedia.useGooglePlus = 1
 
 # cat=socialmedia,advanced/socialmedia_google_plus/; type=string; label= Google+: Pagelink
@@ -57,7 +57,7 @@ themes.configuration.socialmedia.googlePlusLink = https://plus.google.com/commun
 
 # Pinterest
 # #############################################
-# cat=socialmedia,advanced/socialmedia_pinterest/; type=options[0,1]; label= Pinterest: Activate?!
+# cat=socialmedia,advanced/socialmedia_pinterest/; type=options[Show=1,Hide=0]; label= Pinterest: Activate?!
 themes.configuration.socialmedia.usePinterest = 1
 
 # cat=socialmedia,advanced/socialmedia_pinterest/; type=string; label= Pinterest: Pagelink
@@ -66,7 +66,7 @@ themes.configuration.socialmedia.pinterestLink = https://www.pinterest.com/Visit
 
 # Instagram
 # #############################################
-# cat=socialmedia,advanced/socialmedia_instagram/; type=options[0,1]; label= Instagram: Activate?!
+# cat=socialmedia,advanced/socialmedia_instagram/; type=options[Show=1,Hide=0]; label= Instagram: Activate?!
 themes.configuration.socialmedia.useInstagram = 1
 
 # cat=socialmedia,advanced/socialmedia_instagram/; type=string; label= Instagram: Pagelink
@@ -75,9 +75,8 @@ themes.configuration.socialmedia.instagramLink = https://instagram.com/explore/t
 
 # Youtube
 #############################################
-# cat=socialmedia,advanced/socialmedia_youtube/; type=options[0,1]; label= Youtube: Activate?!
+# cat=socialmedia,advanced/socialmedia_youtube/; type=options[Show=1,Hide=0]; label= Youtube: Activate?!
 themes.configuration.socialmedia.useYoutube = 1
 
 # cat=socialmedia,advanced/socialmedia_youtube/; type=string; label= Youtube: Pagelink
 themes.configuration.socialmedia.youtubeLink = https://www.youtube.com/user/typo3/
-

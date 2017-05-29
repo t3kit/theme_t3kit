@@ -1,9 +1,9 @@
 tt_content {
-    quote =< lib.fluidContent
+    quote =< lib.contentElement
     quote {
         templateName = Quote
         dataProcessing {
-            10 = T3kit\T3kitExtensionTools\DataProcessing\FlexFormProcessor
+            10 = T3kit\themeT3kit\DataProcessing\FlexFormProcessor
             10 {
                 fieldName = pi_flexform
                 as = settings
@@ -15,17 +15,8 @@ tt_content {
                 as = headers
             }
             # "inherit" from lib.fluidContent
-            365 < lib.fluidContent.dataProcessing.365
-            1910 < lib.fluidContent.dataProcessing.1910
-
-            # extend class mapping only for this element
-            # 1910 {
-                # classMappings {
-                    # # Override the standard default
-                    # 0 = default-class
-                    # 11 = example-class
-                # }
-            # }
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
         }
     }
 }

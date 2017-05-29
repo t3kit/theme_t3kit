@@ -3,6 +3,7 @@
     <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit" target-language="no">
         <header></header>
         <body>
+<<<<<<< HEAD
             <trans-unit id="wrapper.description">
                 <source>Select appearance of content element (if available)</source>
                 <target>Velg utseende for innholdselement (hvis tilgjengelig)</target>
@@ -12,9 +13,24 @@
                 <target>Velg en forhåndsdefinert "toppmarg" for innholdselementet (hvis tilgjengelig)</target>
             </trans-unit>
             <trans-unit id="wrapper_margin_bottom.description">
+=======
+            <trans-unit id="frame_class.description">
+                <source>Select appearance of content element (if available)</source>
+                <target>Velg utseende for innholdselement (hvis tilgjengelig)</target>
+            </trans-unit>
+            <trans-unit id="space_before_class.description">
+                <source>Select a predefined "Margin Top" for the content element (if available)</source>
+                <target>Velg en forhåndsdefinert "toppmarg" for innholdselementet (hvis tilgjengelig)</target>
+            </trans-unit>
+            <trans-unit id="space_after_class.description">
+>>>>>>> upstream/master
                 <source>Select a predefined "Margin Bottom" for the content element (if available)</source>
                 <target>Velg en forhåndsdefinert "bunnmarg" for innholdselementet (hvis tilgjengelig)</target>
             </trans-unit>
         </body>
     </file>
+<<<<<<< HEAD
 </xliff>
+=======
+</xliff>
+>>>>>>> upstream/master

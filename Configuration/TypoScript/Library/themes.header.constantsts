@@ -2,52 +2,39 @@
 # Header: Header constants
 #############################################
 
-# customsubcategory=header_top=Header Top
-# customsubcategory=header_middle=Header Middle
-# customsubcategory=logo=Logo
-
 
 
 #Header Top
 #############################################
+# customsubcategory=header_top=Header Top
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top
 themes.configuration.elem.status.showHeaderTop = 1
-
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Contacts
 themes.configuration.elem.status.showHeaderTopContacts = 1
-
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangMenu
 themes.configuration.elem.status.showHeaderTopLangMenu = 0
-
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Search
 themes.configuration.elem.status.showHeaderTopSearch = 0
-
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Main Menu Search
 themes.configuration.elem.status.showHeaderMainMenuSearch = 0
-
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Navigation
 themes.configuration.elem.status.showHeaderTopNavigation = 1
-
+# cat=header,advanced/header_top; type=options[No=0,Yes=1]; label= Header Top Navigation Visible in mobile menu
+themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu = 0
+# cat=header,advanced/header_top; type=options[No=0,Yes=1]; label= Header Top Navigation mobile menu as one item
+themes.configuration.elem.status.headerTopNavigationAsOneItemInMobileMenu = 1
 # cat=header,advanced/header_top; type=int+; label= Header Top: Container pid where the menu items are located
 themes.configuration.header.top.menu.containerPid = 6
-
-
+# cat=header,advanced/header_top; type=int+; label= Logout menu item page id : Will add additional link parameter "&logintype=logout" to link.
+themes.configuration.header.top.menu.logoutMenuItemPageUid = 112
 
 #Header Middle
 #############################################
+# customsubcategory=header_middle=Header Middle
 # cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle
 themes.configuration.elem.status.showHeaderMiddle = 1
-
 # cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle Logo
 themes.configuration.elem.status.showHeaderMiddleLogo = 1
-
-
-
-# Logo
-# cat=header,basic/logo; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
-themes.configuration.header.logo.main.file = EXT:theme_t3kit/Resources/Public/felayout_t3kit/images/t3kit.png
-
-
 
 # Social Icons
 # cat=header,advanced/header_middle; type=options[0,1]; label= Show Header Middle SocIcons
@@ -59,11 +46,22 @@ themes.configuration.elem.status.showHeaderMiddleSearch = 1
 
 
 
-#############################################
-# Header: Header Templates
-#############################################
 
-# customsubcategory=header=Header
+# customsubcategory=logo=Logo
+# cat=theme,basic/logo; type=string; label= Header-Logo: Path and filename (fileadmin/.../logo.png)
+themes.configuration.header.logo.main.file = fileadmin/example_content/images/logo.png
 
-# cat=header,advanced/header; type=options[Default Header=Header]; label= Header Template
+# customsubcategory=site=Site
+# cat=theme,basic/site; type=int+; label= Startsite page uid
+themes.configuration.pages.startsite = 1
+# cat=theme,basic/site; type=string; label= Site Name
+themes.configuration.siteName = t3kit
+
+
+
+#############################################
+# Header Templates
+#############################################
+# customsubcategory=headertmpl= Header Template
+# cat=header,advanced/headertmpl; type=options[Default Header=Header]; label= Header Template
 themes.configuration.header.headerTemplate = Header

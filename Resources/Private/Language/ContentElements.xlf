@@ -1,282 +1,423 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit">
-        <header/>
-        <body>
-            <trans-unit id="tt_content.palette.imageSize">
-                <source>Size of images</source>
-            </trans-unit>
-            <trans-unit id="tt_content.palette.imageSize.imageWidth">
-                <source>Width</source>
-            </trans-unit>
-            <trans-unit id="tt_content.palette.imageSize.imageHeight">
-                <source>Height</source>
-            </trans-unit>
-            <trans-unit id="tt_content.palette.imageSize.imageMaxWidth">
-                <source>Max width</source>
-            </trans-unit>
-            <trans-unit id="tt_content.palette.imageSize.imageMaxHeight">
-                <source>Max height</source>
-            </trans-unit>
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="theme_t3kit">
+		<header/>
+		<body>
 
-            <trans-unit id="tt_content.tabs.settings">
-                <source>Additional settings</source>
-            </trans-unit>
+			<trans-unit id="tt_content.appearance">
+				<source>Appearance</source>
+			</trans-unit>
+			<trans-unit id="tt_content.aligning">
+				<source>Aligning</source>
+			</trans-unit>
+			<trans-unit id="label.default">
+				<source>Default</source>
+			</trans-unit>
 
-            <trans-unit id="tab.contentElements">
-                <source>Content elements</source>
-            </trans-unit>
+			<!--tt_content-->
+			<trans-unit id="tt_content.palette.imageSize">
+				<source>Size of images</source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette.imageSize.imageWidth">
+				<source>Width</source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette.imageSize.imageHeight">
+				<source>Height</source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette.imageSize.imageMaxWidth">
+				<source>Max width</source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette.imageSize.imageMaxHeight">
+				<source>Max height</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tabs.settings">
+				<source>Additional settings</source>
+			</trans-unit>
 
-            <trans-unit id="slider.title">
-                <source>Slider</source>
-            </trans-unit>
-            <trans-unit id="slider.description">
-                <source>Slider with images and optional texts and link</source>
-            </trans-unit>
-            <trans-unit id="slider.tabs.slides">
-                <source>Slides</source>
-            </trans-unit>
-            <trans-unit id="bootstrap.slider.tabs.slides">
-                <source>Slides</source>
-            </trans-unit>
-            <trans-unit id="bootstrap.slider.title">
-                <source>Bootstrap Slider</source>
-            </trans-unit>
-            <trans-unit id="bootstrap.slider.description">
-                <source>Basic slider included from Bootstrap package. Add sliding interval and turn on/off quickselect. </source>
-            </trans-unit>
-            <trans-unit id="bootstrap.tabs.slides">
-                <source>Slides</source>
-            </trans-unit>
-            <trans-unit id="bootstrapSlider.flexform.sheetGeneral">
-                <source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="bootstrapSlider.flexform.interval">
-                <source>Interval in seconds</source>
-            </trans-unit>
-            <trans-unit id="bootstrapSlider.flexform.quickselect">
-                <source>Quickselect</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.title">
-                <source>Icon,Text and Link</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.description">
-                <source>Big icon, header, text and link</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.buttonText">
-                <source>Button text</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.link">
-                <source>Link</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.bodytext">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.flexform.sheetGeneral">
-                <source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="bigIconTextButton.flexform.iconClass">
-                <source>Icon</source>
-            </trans-unit>
+			<!--General-->
+			<trans-unit id="elem.flexform.sheetGeneral">
+				<source>Additional settings</source>
+			</trans-unit>
+			<trans-unit id="elem.flexform.disableWholeAreaLink">
+				<source>Disable whole area link</source>
+			</trans-unit>
+			<trans-unit id="elem.flexform.linkAsBtn">
+				<source>Show link as a button</source>
+			</trans-unit>
+			<trans-unit id="elem.flexform.btnAsLink">
+				<source>Show button as a link</source>
+			</trans-unit>
+			<trans-unit id="icon.flexform.iconClass">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="icon.flexform.iconClass_none">
+				<source>None</source>
+			</trans-unit>
 
-            <trans-unit id="iconTextButton.title">
-                <source>Icon,Text and Button</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.description">
-                <source>Icon,Text and Button</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.buttonText">
-                <source>Button text</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.link">
-                <source>Link</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.bodytext">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.flexform.sheetGeneral">
-                <source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.flexform.iconClass">
-                <source>Icon</source>
-            </trans-unit>
-            <trans-unit id="iconTextButton.flexform.iconClass_none">
-                <source>None</source>
-            </trans-unit>
+			<!--Content elements tab label-->
+			<trans-unit id="tab.contentElements">
+				<source>Content elements</source>
+			</trans-unit>
 
-            <trans-unit id="imageTextLink.title">
-                <source>Image text and link</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.description">
-                <source>Image or media, text and link. Will use image image before media. Will only render one image or one media.</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.bodyText">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.linkText">
-                <source>Link text</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.link">
-                <source>Link</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.tabs.media">
-                <source>Media</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.bodytext">
-                <source>Text</source>
-            </trans-unit>
-            <trans-unit id="imageTextLink.flexform.sheetGeneral">
-                <source>Additional settings</source>
-            </trans-unit>
+			<!--Slider-->
+			<trans-unit id="slider.title">
+				<source>Slider</source>
+			</trans-unit>
+			<trans-unit id="slider.description">
+				<source>Slider with images and optional texts and link</source>
+			</trans-unit>
+			<trans-unit id="slider.tabs.slides">
+				<source>Slides</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay">
+				<source>Slider autoplay</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_None">
+				<source>No autoplay [default]</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_One">
+				<source>1 sec</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_Two">
+				<source>2 sec</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_Three">
+				<source>3 sec</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_Five">
+				<source>5 sec</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_Seven">
+				<source>7 sec</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.autoplay_Ten">
+				<source>10 sec</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.captionAlign">
+				<source>Caption alignment</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.leftAlign">
+				<source>Left align</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.centerAlign">
+				<source>Center align</source>
+			</trans-unit>
+			<trans-unit id="slider.flexform.rightAlign">
+				<source>Right align</source>
+			</trans-unit>
+			<trans-unit id="slider.link.text">
+				<source>Link text</source>
+			</trans-unit>
 
-            <trans-unit id="accordion.title">
-                <source>Accordion</source>
-            </trans-unit>
-            <trans-unit id="accordion.description">
-                <source>Accordion, added records will be used as "accordion", and the record inside "accordian" will be rendered as content.</source>
-            </trans-unit>
-            <trans-unit id="accordion.records_formlabe">
-                <source>Records to use as "accordions", title is displayed as accordian expand/collapse link, and their child records will be rendered inside the accordion.</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.sheetGeneral">
-                <source>Additional settings</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.accordionMode">
-                <source>Accordion mode</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenSingleSelect">
-                <source>First item is expanded at load, only one item can be expanded at the same time.</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.accordionMode_allClosedMultiSelect">
-                <source>All items are collapsed at load, multiple items can be expanded at the same time.</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.accordionMode_allClosedSingleSelect">
-                <source>All items are collapsed at load, only one item can be expanded at the same time.</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.accordionMode_firstChildOpenMultiSelect">
-                <source>First item is expanded at load, multiple items can be expanded at the same time.</source>
-            </trans-unit>
-            <trans-unit id="accordion.flexform.accordionMode_allOpen">
-                <source>All items are expanded at load.</source>
-            </trans-unit>
+			<!--Bootstrap slider-->
+			<trans-unit id="bootstrap.slider.tabs.slides">
+				<source>Slides</source>
+			</trans-unit>
+			<trans-unit id="bootstrap.slider.title">
+				<source>Bootstrap Slider</source>
+			</trans-unit>
+			<trans-unit id="bootstrap.slider.description">
+				<source>Basic slider included from Bootstrap package. Add sliding interval and turn on/off quickselect. </source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.interval">
+				<source>Interval in seconds</source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.quickselect">
+				<source>Quickselect</source>
+			</trans-unit>
 
-            <trans-unit id="logoCarousel.title">
-                <source>Logo Carousel</source>
-            </trans-unit>
-            <trans-unit id="logoCarousel.description">
-                <source>Carousel with images (logos) and optional link</source>
-            </trans-unit>
-            <trans-unit id="logoCarousel.tabs.logos">
-                <source>Logos</source>
-            </trans-unit>
-
-            <trans-unit id="quote.title">
-                <source>Quote</source>
-            </trans-unit>
-            <trans-unit id="quote.description">
-                <source>Quote with optional footer and link</source>
-            </trans-unit>
-            <trans-unit id="quote.linkText">
-                <source>Link text</source>
-            </trans-unit>
-            <trans-unit id="quote.header">
-                <source>Name, Title</source>
-            </trans-unit>
-            <trans-unit id="quote.link">
-                <source>Link</source>
-            </trans-unit>
-            <trans-unit id="quote.bodytext">
-                <source>Quote</source>
-            </trans-unit>
-
-            <trans-unit id="tabs.title">
-                <source>Tabs</source>
-            </trans-unit>
-            <trans-unit id="tabs.description">
-                <source>Tabs with content</source>
-            </trans-unit>
-            <trans-unit id="tabs.layout.0">
-                <source>Tabs</source>
-            </trans-unit>
-            <trans-unit id="tabs.layout.1">
-                <source>Pills</source>
-            </trans-unit>
-
-            <trans-unit id="fullWidthImage.title">
-                <source>Full Width Image</source>
-            </trans-unit>
-            <trans-unit id="fullWidthImage.description">
-                <source>Full Width Image element</source>
-            </trans-unit>
-            <trans-unit id="fullWidthImage.tabs.image">
-                <source>Image</source>
-            </trans-unit>
+			<!--bigIconTextButton Element-->
+			<trans-unit id="bigIconTextButton.title">
+				<source>Big icon,Text and Button</source>
+			</trans-unit>
+			<trans-unit id="bigIconTextButton.description">
+				<source>Big icon, header, text and button</source>
+			</trans-unit>
+			<trans-unit id="bigIconTextButton.buttonText">
+				<source>Button text</source>
+			</trans-unit>
+			<trans-unit id="bigIconTextButton.bodytext">
+				<source>Text</source>
+			</trans-unit>
 
 
+			<!--IconTextButton Element-->
+			<trans-unit id="iconTextButton.title">
+				<source>Icon,Text and Button</source>
+			</trans-unit>
+			<trans-unit id="iconTextButton.description">
+				<source>Icon, header, text and button</source>
+			</trans-unit>
+			<trans-unit id="iconTextButton.buttonText">
+				<source>Button text</source>
+			</trans-unit>
+			<trans-unit id="iconTextButton.bodytext">
+				<source>Text</source>
+			</trans-unit>
 
-            <trans-unit id="responsiveVideo.title">
-                <source>Responsive Video</source>
-            </trans-unit>
-            <trans-unit id="responsiveVideo.description">
-                <source>Responsive Video Element</source>
-            </trans-unit>
-            <trans-unit id="responsiveVideo.tabs.video">
-                <source>Video</source>
-            </trans-unit>
+			<!--ImageTextLink Element-->
+			<trans-unit id="imageTextLink.title">
+				<source>Image text and link</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.description">
+				<source>Image or media, text and link. Will use image before media. Will only render one image or one media.</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.bodyText">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.linkText">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.bodytext">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect">
+				<source>Hover effects</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_disable">
+				<source>Disable</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-1">
+				<source>Hover effect 1</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-2">
+				<source>Hover effect 2</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-3">
+				<source>Hover effect 3</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-4">
+				<source>Hover effect 4</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-5">
+				<source>Hover effect 5</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-6">
+				<source>Hover effect 6</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-7">
+				<source>Hover effect 7</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-8">
+				<source>Hover effect 8</source>
+			</trans-unit>
+			<trans-unit id="imageTextLink.flexform.hoverEffect_hover-9">
+				<source>Hover effect 9</source>
+			</trans-unit>
+
+			<!--HeroImage Element-->
+			<trans-unit id="heroImage.title">
+				<source>Hero Image</source>
+			</trans-unit>
+			<trans-unit id="heroImage.description">
+				<source>Image, header, subheader, text and link. Will render only if image added</source>
+			</trans-unit>
+			<trans-unit id="heroImage.subheader">
+				<source>Sub Header</source>
+			</trans-unit>
+			<trans-unit id="heroImage.linkText">
+				<source>Link Text</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.elementText">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.elementHeight">
+				<source>Set height of element</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.transparentLayer">
+				<source>Element overlay color (rgba). Link to online generator: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.horizontalAlignment">
+			<source>Horizontal alignment</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.verticalAlignment">
+				<source>Vertical alignment</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.horizontalAlignment_left">
+				<source>Left align</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.horizontalAlignment_center">
+				<source>Center align</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.horizontalAlignment_right">
+				<source>Right align</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.verticalAlignment_top">
+				<source>Top</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.verticalAlignment_middle">
+				<source>Middle</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.verticalAlignment_bottom">
+				<source>Bottom</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle">
+				<source>Set Animation Style</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_disable">
+				<source>Disable</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_1">
+				<source>Fade In Down</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_2">
+				<source>Fade In</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_3">
+				<source>Fade In Up</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_4">
+				<source>Fade from up and down, style 1</source>
+			</trans-unit>
+			<trans-unit id="heroImage.flexform.animationStyle_5">
+				<source>Fade from up and down, style 2</source>
+			</trans-unit>
+
+			<!--LogoCarousel Element-->
+			<trans-unit id="logoCarousel.title">
+				<source>Logo Carousel</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.description">
+				<source>Carousel with images (logos) and optional link</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.tabs.logos">
+				<source>Logos</source>
+			</trans-unit>
+
+			<!--Quote Element-->
+			<trans-unit id="quote.title">
+				<source>Quote</source>
+			</trans-unit>
+			<trans-unit id="quote.description">
+				<source>Quote with optional footer and link</source>
+			</trans-unit>
+			<trans-unit id="quote.linkText">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="quote.header">
+				<source>Name, Title</source>
+			</trans-unit>
+			<trans-unit id="quote.bodytext">
+				<source>Quote</source>
+			</trans-unit>
+
+			<!--FullWidthImage Element-->
+			<trans-unit id="fullWidthImage.title">
+				<source>Full Width Image</source>
+			</trans-unit>
+			<trans-unit id="fullWidthImage.description">
+				<source>Full Width Image element</source>
+			</trans-unit>
+			<trans-unit id="fullWidthImage.tabs.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="fullWidthImage.flexform.includeDoubleDensityImages">
+				<source>Include 2x images in sources</source>
+			</trans-unit>
 
 
-            <trans-unit id="socialIcons.title">
-                <source>Social Icons</source>
-            </trans-unit>
-            <trans-unit id="socialIcons.description">
-                <source>Social Icons element</source>
-            </trans-unit>
+			<!--ResponsiveVideo Element-->
+			<trans-unit id="responsiveVideo.title">
+				<source>Responsive Video</source>
+			</trans-unit>
+			<trans-unit id="responsiveVideo.description">
+				<source>Responsive Video Element</source>
+			</trans-unit>
+			<trans-unit id="responsiveVideo.tabs.video">
+				<source>Video</source>
+			</trans-unit>
 
-            <trans-unit id="copyrightText.title">
-                <source>Copyright</source>
-            </trans-unit>
-            <trans-unit id="copyrightText.description">
-                <source>Copyright text element</source>
-            </trans-unit>
+			<!--SocialIcons Element-->
+			<trans-unit id="socialIcons.title">
+				<source>Social Icons</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.description">
+				<source>Social Icons element</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.facebookLink">
+				<source>Facebook: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.googlePlusLink">
+				<source>Google+: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.instagramLink">
+				<source>Instagram: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.linkedInLink">
+				<source>LinkedIn: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.pinterestLink">
+				<source>Pinterest: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.twitterLink">
+				<source>Twitter: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.vimeoLink">
+				<source>Vimeo: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.youtubeLink">
+				<source>Youtube: Pagelink</source>
+			</trans-unit>
 
-            <trans-unit id="contacts.title">
-                <source>Contacts</source>
-            </trans-unit>
-            <trans-unit id="contacts.description">
-                <source>Contact info element</source>
-            </trans-unit>
+			<!--CopyrightText Element-->
+			<trans-unit id="copyrightText.title">
+				<source>Copyright</source>
+			</trans-unit>
+			<trans-unit id="copyrightText.description">
+				<source>Copyright text element</source>
+			</trans-unit>
+
+			<!--Contacts Element-->
+			<trans-unit id="contacts.title">
+				<source>Contacts</source>
+			</trans-unit>
+			<trans-unit id="contacts.description">
+				<source>Contact info element</source>
+			</trans-unit>
+
+			<!--Button Element-->
+			<trans-unit id="button.title">
+				<source>Button</source>
+			</trans-unit>
+			<trans-unit id="button.description">
+				<source>A button with twbs style</source>
+			</trans-unit>
+			<trans-unit id="button.header_label">
+				<source>Button text</source>
+			</trans-unit>
+			<trans-unit id="button.buttonStyle">
+				<source>Button Style</source>
+			</trans-unit>
+			<trans-unit id="button.buttonSize">
+				<source>Button Size</source>
+			</trans-unit>
+			<trans-unit id="button.buttonSize_default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="button.buttonSize_large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="button.buttonSize_small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="button.buttonSize_extraSmall">
+				<source>Extra small</source>
+			</trans-unit>
+			<trans-unit id="button.blockLevel">
+				<source>Block level button</source>
+			</trans-unit>
 
 
-            <trans-unit id="tt_content.wrapper">
-                <source>Appearance</source>
-            </trans-unit>
-            <trans-unit id="tt_content.wrapper.description">
-                <source>Select appearance of content element (if available)</source>
-            </trans-unit>
-            <trans-unit id="tt_content.aligning">
-                <source>Aligning</source>
-            </trans-unit>
-            <trans-unit id="tt_content.wrapper_margin_top">
-                <source>Margin top</source>
-            </trans-unit>
-            <trans-unit id="tt_content.wrapper_margin_bottom">
-                <source>Margin bottom</source>
-            </trans-unit>
-            <trans-unit id="label.default">
-                <source>Default</source>
-            </trans-unit>
-
-
-            <trans-unit id="elem.flexform.linkAsBtn">
-                <source>Show link as a button</source>
-            </trans-unit>
-            <trans-unit id="elem.flexform.btnAsLink">
-                <source>Show button as a link</source>
-            </trans-unit>
-
-            <trans-unit id="icon.flexform.iconClass_none">
-                <source>None</source>
-            </trans-unit>
-        </body>
-    </file>
+			<!--Image Manipulation-->
+			<trans-unit id="imageManipulation.default">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.small">
+				<source>Small devices (up to 767px)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.medium">
+				<source>Medium devices (from 768px to 991px)</source>
+			</trans-unit>
+		</body>
+	</file>
 </xliff>

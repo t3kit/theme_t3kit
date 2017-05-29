@@ -1,0 +1,37 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:elem.flexform.sheetGeneral</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+				<autoplay>
+					<TCEforms>
+						<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.autoplay</label>
+						<config>
+							<type>select</type>
+							<items>
+							</items>
+						</config>
+					</TCEforms>
+				</autoplay>
+				<captionAlign>
+					<TCEforms>
+						<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:slider.flexform.captionAlign</label>
+						<config>
+							<type>select</type>
+								<items>
+								</items>
+						</config>
+					</TCEforms>
+				</captionAlign>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

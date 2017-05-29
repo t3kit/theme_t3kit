@@ -1,26 +1,25 @@
 tt_content {
-    contentElementBootstrapSlider =< lib.fluidContent
+    contentElementBootstrapSlider =< lib.contentElement
     contentElementBootstrapSlider {
         templateName = BootstrapSlider
-
         dataProcessing {
-
             # Process files
             10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
             10 {
                 references.fieldName = image
                 as = slides
             }
-
-            20 = T3kit\T3kitExtensionTools\DataProcessing\FlexFormProcessor
+            20 = T3kit\themeT3kit\DataProcessing\FlexFormProcessor
             20 {
                 fieldName = pi_flexform
                 as = settings
             }
-
             # "inherit" from lib.fluidContent
-            365 < lib.fluidContent.dataProcessing.365
-            1910 < lib.fluidContent.dataProcessing.1910
+            800 < lib.contentElement.dataProcessing.800
+            830 < lib.contentElement.dataProcessing.830
+        }
+        stdWrap {
+            editIcons = tt_content
         }
     }
 }

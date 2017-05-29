@@ -1,10 +1,9 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library" extensions="constantsts">
 
-# Base configuration
-themes.configuration.siteName = t3kit
-themes.languages.default.isoCode = en_GB
-
-
-# Extensions
+# Extensions:
+# News
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/constants.ts">
+# Solr
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/constants.ts">
+# cs_seo
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/constants.ts">

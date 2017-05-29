@@ -1,26 +1,40 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:layout name="ContentFooter" />
-	<f:debug>{_all}</f:debug>
-
-	<f:section name="content">
-	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
-	<div class="icon-text-btn">
-		<h3 class="icon-text-btn__header">
-			<f:if condition="{settings.iconClass}">
-				<span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [begin] -->
+	<div class="icon-text-btn__wrp">
+		<div class="icon-text-btn{f:if(condition: settings.disableWholeAreaLink, then: '', else: ' _whole-area-link')}">
+			<h3 class="icon-text-btn__header">
+				<f:if condition="{settings.iconClass}">
+					<span class="icon-text-btn__icon icons icon-{settings.iconClass}"></span>
+				</f:if>
+				<f:if condition="{data.header}">
+					<core:contentEditable table="tt_content" field="header" uid="{data.uid}">{data.header}</core:contentEditable>
+				</f:if>
+			</h3>
+			<f:if condition="{data.bodytext}">
+				<p class="icon-text-btn__p"><core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">{data.bodytext}</core:contentEditable></p>
 			</f:if>
-			<f:if condition="{data.header}">
-				{data.header}
+			<f:if condition="{data.header_link}">
+				<f:if condition="{data.subheader}">
+					<f:then>
+						<f:link.typolink parameter="{data.header_link}" class="icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
+					</f:then>
+					<f:else>
+						<f:link.typolink parameter="{data.header_link}" class="icon-text-btn__link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.header}</f:link.typolink>
+					</f:else>
+				</f:if>
 			</f:if>
-		</h3>
-		<f:if condition="{data.bodytext}">
-			<p class="icon-text-btn__p">{data.bodytext}</p>
-		</f:if>
-		<f:if condition="{data.header_link}">
-			<f:link.typolink parameter="{data.header_link}" title="{data.subheader}" class="icon-text-btn__link  {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</f:link.typolink>
-		</f:if>
+			<f:if condition="{settings.disableWholeAreaLink} == 0">
+				<f:if condition="{data.subheader}">
+					<span class="icon-text-btn__sham-link {f:if(condition: settings.btnAsLink, then: '', else: 'btn btn-default')}">{data.subheader}</span>
+				</f:if>
+	 		</f:if>
+		</div>
 	</div>
-	<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
-	</f:section>
-</div>
+<!-- theme_t3kit: Templates/ContentElements/IconTextButton.html [end] -->
+</f:section>
+
+</html>

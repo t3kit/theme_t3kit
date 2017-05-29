@@ -1,0 +1,63 @@
+# ==================================
+# Default, command "grunt". Local development.
+# Start static server with livereload (browserSync) on localhost:3000
+# ==================================
+default:
+    - 'dev' #task helper
+    - 'browserSync'
+    - 'watch'
+
+# ==================================
+# Provide all Front-End files plus CSS styling for CMS needs, compile it to separate folder "css".
+# ==================================
+compileCss:
+    # Check code guidelines
+    - 'check'
+    #Dev
+    - 'dev' #task helper
+    #Css
+    - 'clean:cssFolder'
+    - 'concurrent:cssProcess'
+
+# alias to compileCss
+cc:
+    - 'compileCss'
+
+
+# ==================================
+# Provide all Front-End files plus LESS styling for CMS needs, compile it to separate folder "less".
+# ==================================
+compileLess:
+    # Check code guidelines
+    - 'check'
+    #Dev
+    - 'dev' #task helper
+    #Less
+    - 'clean:lessFolder'
+    - 'concurrent:lessProcess'
+
+# alias to compileLess
+cl:
+    - 'compileLess'
+
+
+# ==================================
+# Code linters and validators
+# ==================================
+check:
+    #JS
+    - 'standard:grunt'
+    - 'standard:main'
+    #CSS
+    - 'stylelint:less'
+
+# ==================================
+# Task helpers  ====================
+# ==================================
+dev:
+    #Dev
+    - 'clean:tempFolder'
+    - 'concurrent:devProcess'
+
+# ==================================
+# ==================================

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2013-11-13T17:39:17Z" product-name="theme_t3kit">
+        <header/>
+        <body>
+            <trans-unit id="extmng.fixedPostVarsSaveFilePath">
+                <source>Path to file where to save fixedPostVars configuration</source>
+            </trans-unit>
+            <trans-unit id="extmng.fixedPostVarsConfigurationfFile">
+                <source>Path to file with predefined configuration</source>
+            </trans-unit>
+            <trans-unit id="pages.tx_themet3kit_fixed_post_var_conf">
+                <source>Fixed post var configuration</source>
+            </trans-unit>
+            <trans-unit id="none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="new_conf">
+                <source>News configuration</source>
+            </trans-unit>
+
+            <trans-unit id="realurl_conf.error.title">
+                <source>Error</source>
+            </trans-unit>
+            <trans-unit id="realurl_conf.error.empty_key">
+                <source>Value of "key" could not be empty. Please, check realurl "fixedPostVars" configuration.</source>
+            </trans-unit>
+            <trans-unit id="realurl_conf.error.double_key">
+                <source>Key "%s" already in use. Please, check realurl "fixedPostVars" configuration.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

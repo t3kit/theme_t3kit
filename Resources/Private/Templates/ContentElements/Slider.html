@@ -1,21 +1,17 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-	<f:layout name="ContentFooter" />
-
-	<f:section name="content">
-	<!-- theme_t3kit: Templates/ContentElements/Slider.html [begin] -->
-
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+<!-- theme_t3kit: Templates/ContentElements/Slider.html [begin] -->
 	<f:if condition="{slides}">
-		<!-- <div class="img-slider js__img-slider"> -->
-
-		<div class="img-slider swiper-container js__img-slider">
+		<div class="img-slider swiper-container js__img-slider" data-autoplay="{f:if(condition: '{settings.autoplay} > 0', then: settings.autoplay)}">
 			<div class="swiper-wrapper img-slider__wrp">
-			<!-- <div class=" img-slider__wrp"> -->
 				<f:for each="{slides}" as="image">
-					<div class="swiper-slide img-slider__slide">
+					<div class="swiper-slide img-slider__slide {settings.appearance.{image.referenceProperties.tx_themet3kit_slide_appearance}}">
 						<div data-background="{f:uri.image(src: '{image.uid}', treatIdAsReference:"1", width:'{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}')}" class="swiper-lazy img-slider__slide-bg">
 							<div class="swiper-lazy-preloader"></div>
-							<div class="img-slider__caption">
+							<div class="img-slider__caption {f:if(condition: '{settings.captionAlign} == 0', then: '_left-align')}{f:if(condition: '{settings.captionAlign} == 1', then: '_center-align')}{f:if(condition: '{settings.captionAlign} == 2', then: '_right-align')}">
 								<f:if condition="{image.referenceProperties.alternative}">
 									<h3 class="img-slider__caption-sub-header">{image.referenceProperties.alternative}</h3>
 								</f:if>
@@ -26,7 +22,14 @@
 									<p class="img-slider__caption-p js__img-slider__caption-p">{image.referenceProperties.description}</p>
 								</f:if>
 								<f:if condition="{image.referenceProperties.link}">
-									<f:link.typolink parameter="{image.referenceProperties.link}" class="img-slider__caption-link"><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit" /></f:link.typolink>
+									<f:if condition="{image.referenceProperties.tx_themet3kit_slide_btn_txt}">
+										<f:then>
+											<f:link.typolink parameter="{image.referenceProperties.link}" class="img-slider__caption-link">{image.referenceProperties.tx_themet3kit_slide_btn_txt}</f:link.typolink>
+										</f:then>
+										<f:else>
+											<f:link.typolink parameter="{image.referenceProperties.link}" class="img-slider__caption-link"><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit" /></f:link.typolink>
+										</f:else>
+									</f:if>
 								</f:if>
 							</div>
 						</div>
@@ -43,6 +46,7 @@
 			</f:if>
 		</div>
 	</f:if>
-	<!-- theme_t3kit: Templates/ContentElements/Slider.html [end] -->
-	</f:section>
-</div>
+<!-- theme_t3kit: Templates/ContentElements/Slider.html [end] -->
+</f:section>
+
+</html>

@@ -1,33 +1,28 @@
 [globalVar = LIT:less = {$themes.configuration.feLayoutMode}]
     page {
         includeCSS {
-            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.less
+            bootstrap = {$themes.configuration.feLayoutPath}/less/bootstrap.less
             bootstrap {
                 # excludeFromConcatenation =
                 # disableCompression =
             }
-            rteFrontend = EXT:theme_t3kit/Resources/Public/Extensions/Rtehtmlarea/Css/rteFrontend.css
-            rteFrontend {
-                # excludeFromConcatenation =
-                # disableCompression =
-            }
-            components = {$themes.configuration.feLayoutPath}/components.css
+            components = {$themes.configuration.feLayoutPath}/less/components.css
             components {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            maincss = {$themes.configuration.feLayoutPath}/main.less
+            iconFonts = {$themes.configuration.iconFontsPath}/style.css
+            iconFonts {
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
+            maincss = {$themes.configuration.feLayoutPath}/less/main.less
             maincss {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            customLess = fileadmin/custom/css/custom.less
+            customLess = {$themes.configuration.customPath}/custom.less
             customLess {
-                #excludeFromConcatenation =
-                #disableCompression =
-            }
-            customCss = fileadmin/custom/css/custom.css
-            customCss {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
@@ -38,28 +33,40 @@
 [globalVar = LIT:css = {$themes.configuration.feLayoutMode}]
     page {
         includeCSS {
-            bootstrap = {$themes.configuration.feLayoutPath}/bootstrap.css
+            bootstrap = {$themes.configuration.feLayoutPath}/css/bootstrap.css
             bootstrap {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            rteFrontend = EXT:theme_t3kit/Resources/Public/Extensions/Rtehtmlarea/Css/rteFrontend.css
-            rteFrontend {
-                # excludeFromConcatenation =
-                # disableCompression =
-            }
-            components = {$themes.configuration.feLayoutPath}/components.css
+            components = {$themes.configuration.feLayoutPath}/css/components.css
             components {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            maincss = {$themes.configuration.feLayoutPath}/main.css
+            iconFonts = {$themes.configuration.iconFontsPath}/style.css
+            iconFonts {
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
+            maincss = {$themes.configuration.feLayoutPath}/css/main.css
             maincss {
                 #excludeFromConcatenation =
                 #disableCompression =
             }
-            customCss = fileadmin/custom/css/custom.css
+            customCss = {$themes.configuration.customPath}/custom.css
             customCss {
+                #excludeFromConcatenation =
+                #disableCompression =
+            }
+        }
+    }
+[global]
+
+[globalVar = LIT:dev = {$themes.configuration.feLayoutMode}]
+    page {
+        includeCSS {
+            iconFonts = {$themes.configuration.iconFontsPath}/style.css
+            iconFonts {
                 #excludeFromConcatenation =
                 #disableCompression =
             }

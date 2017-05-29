@@ -1,9 +1,13 @@
 node_modules
 .tmp
-#temp
+temp
 .sass-cache
 .DS_Store
 npm-debug.log
 bower_components
 *.sublime-*
 .idea
+validation-status.json
+
+.unison*
+._.DS_Store

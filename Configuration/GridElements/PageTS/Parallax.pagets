@@ -2,7 +2,7 @@ tx_gridelements.setup.Parallax {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:parallax_description
     flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/Parallax.xml
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/parallax.svg
+    iconIdentifier = grid-elements-parallax
     config {
         colCount = 1
         rowCount = 1

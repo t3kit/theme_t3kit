@@ -1,20 +1,8 @@
 #############################################
 # Footer: Footer constants
 #############################################
-
 # customsubcategory=footer_content=Footer Content
-# customsubcategory=footer_color=Footer Colors
-
-#Footer color
-#############################################
-
-
-
-#Footer content
-#############################################
-
 # cat=footer,advanced/footer_content/; type=int+; label= Footer Content Area: Content id to be displayed in footer area
 themes.configuration.content.footerArea.contentUid = 168
-
 # cat=footer,advanced/footer_content/; type=string; label= Copyright
 themes.configuration.footer.copyright = All rights reserved

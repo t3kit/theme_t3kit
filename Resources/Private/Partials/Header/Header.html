@@ -22,7 +22,7 @@
 						<div class="header-top__contact-tel">
 							<span class="icons icon-t3-mobile"></span>
 							<span class="header-top__contact-tel-title"><f:translate key="callUs_label" /></span>
-							<a class="header-top__contact-tel-link" href="tel:{theme:constant(constant: 'themes.configuration.contacts.phone')}">tel:{theme:constant(constant: 'themes.configuration.contacts.phone')}</a>
+							<a class="header-top__contact-tel-link" href="tel:{f:cObject(typoscriptObjectPath: 'lib.contacts.phone')}">tel:{theme:constant(constant: 'themes.configuration.contacts.phone')}</a>
 						</div>
 						<div class="header-top__contact-email">
 							<span class="icons icon-t3-mail"></span>
@@ -80,19 +80,19 @@
 		</button>
 	</f:if>
 
-	<nav class="main-navigation js__main-navigation">
+	<nav class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')}">
 		<div class="main-navigation__items-wrp js__navigation__items-wrp">
-
 			<ul class="main-navigation__items-list js__main-navigation__items-list">
-
 				<f:cObject typoscriptObjectPath="lib.menu.main" />
+
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu')}">
+					<f:cObject typoscriptObjectPath="lib.menu.topMobile" />
+				</f:if>
 
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMainMenuSearch')}">
 					<f:cObject typoscriptObjectPath="lib.menu.main.search" />
 				</f:if>
-
 			</ul>
-
 		</div>
 	</nav>
 

@@ -2,7 +2,7 @@ tx_gridelements.setup.TabGroup {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabGroup
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:tabGroup_description
     flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/TabGroup.xml
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/tabGroup.svg
+    iconIdentifier = grid-elements-tabGroup
     config {
         colCount = 1
         rowCount = 1

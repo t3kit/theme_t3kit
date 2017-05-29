@@ -1,43 +1,44 @@
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
 
-    <f:layout name="General" />
+<f:layout name="General" />
 
-    <!--
-        =====================
-            Templates/Tag/List.html
-    -->
+<!--
+	=====================
+		Templates/Tag/List.html
+-->
 
-    <f:section name="content">
-        <f:if condition="{tags}">
-            <ul class="news-tags">
-                <f:for each="{tags}" as="tag">
-                    <li>
-                        <f:if condition="{tag.uid} == {overwriteDemand.tags}">
-                            <f:then>
-                                <f:comment>
-                                    Set title tag for active tag
-                                </f:comment>
-                                <n:format.nothing>
-                                    <n:titleTag>
-                                        <n:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - {tag.title}</n:format.htmlentitiesDecode>
-                                    </n:titleTag>
-                                </n:format.nothing>
-                                <f:link.page title="{tag.title}" class="active" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
-                                    {tag.title}
-                                </f:link.page>
-                            </f:then>
-                            <f:else>
-                                <f:link.page title="{tag.title}" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
-                                    {tag.title}
-                                </f:link.page>
-                            </f:else>
-                        </f:if>
-                    </li>
-                </f:for>
-            </ul>
-        </f:if>
-    </f:section>
-</div>
+<f:section name="content">
+	<f:if condition="{tags}">
+		<ul class="news-tags">
+			<f:for each="{tags}" as="tag">
+				<li>
+					<f:if condition="{tag.uid} == {overwriteDemand.tags}">
+						<f:then>
+							<f:comment>
+								Set title tag for active tag
+							</f:comment>
+							<n:format.nothing>
+								<n:titleTag>
+									<f:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - {tag.title}</f:format.htmlentitiesDecode>
+								</n:titleTag>
+							</n:format.nothing>
+							<f:link.page title="{tag.title}" class="active" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+								{tag.title}
+							</f:link.page>
+						</f:then>
+						<f:else>
+							<f:link.page title="{tag.title}" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+								{tag.title}
+							</f:link.page>
+						</f:else>
+					</f:if>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:section>
+
+</html>
 

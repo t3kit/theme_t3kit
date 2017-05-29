@@ -1,0 +1,20 @@
+# content element ordering
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        heroImage.tt_content_defValues.CType = heroImage
+        imageTextLink.tt_content_defValues.CType = imageTextLink
+        bigIconTextButton.tt_content_defValues.CType = bigIconTextButton
+        iconTextButton.tt_content_defValues.CType = iconTextButton
+        button.tt_content_defValues.CType = button
+        contentElementBootstrapSlider.tt_content_defValues.CType = contentElementBootstrapSlider
+        contentElementSlider.tt_content_defValues.CType = contentElementSlider
+        quote.tt_content_defValues.CType = quote
+        logoCarousel.tt_content_defValues.CType = logoCarousel
+        responsiveVideo.tt_content_defValues.CType = responsiveVideo
+        fullWidthImage.tt_content_defValues.CType = fullWidthImage
+        socialIcons.tt_content_defValues.CType = socialIcons
+        contacts.tt_content_defValues.CType = contacts
+        copyrightText.tt_content_defValues.CType = copyrightText
+    }
+}
+

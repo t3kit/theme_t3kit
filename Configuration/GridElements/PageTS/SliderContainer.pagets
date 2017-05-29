@@ -1,0 +1,20 @@
+tx_gridelements.setup.SliderContainer {
+    title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container
+    description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container_description
+    flexformDS = FILE:EXT:theme_t3kit/Configuration/GridElements/FlexForms/SliderContainer.xml
+    iconIdentifier = grid-elements-sliderContainer
+    config {
+        colCount = 1
+        rowCount = 1
+        rows {
+            1 {
+                columns {
+                    1 {
+                        name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:sliderContainer
+                        colPos = 0
+                    }
+                }
+            }
+        }
+    }
+}

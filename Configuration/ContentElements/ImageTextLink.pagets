@@ -4,25 +4,23 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.description
             iconIdentifier = content-elements-imageTextLink
-            tt_content_defValues {
-                CType = imageTextLink
-            }
         }
     }
     show := addToList(imageTextLink)
 }
 
-# # Use layout field to customize Layout select-box on imageTextLink
-# # extend layout select-box only for this element
-# TCEFORM.tt_content.layout {
-#     types {
-#         imageTextLink {
-#             addItems {
-#                 --div-- = ImageTextLink layouts:
-#                 # add value with index 0, to set it as a default, only for this element
-#                 0 = Default layout for this element
-#                 11 = Example layout only for imageTextLink
-#             }
-#         }
-#     }
-# }
+
+TCEFORM.tt_content.pi_flexform.imageTextLink.sDEF.hoverEffect {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_disable
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-1
+        2 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-2
+        3 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-3
+        4 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-4
+        5 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-5
+        6 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-6
+        7 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-7
+        8 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-8
+        9 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:imageTextLink.flexform.hoverEffect_hover-9
+    }
+}

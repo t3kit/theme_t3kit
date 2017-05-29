@@ -1,7 +1,0 @@
-lib.pageTitle = TEXT
-
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('seo_basics')]
-lib.pageTitle.data = page:tx_seo_titletag // page:title
-[else]
-lib.pageTitle.data = page:title
-[global]

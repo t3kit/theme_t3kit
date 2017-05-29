@@ -1,7 +1,7 @@
 tx_gridelements.setup.2ColumnGrid {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:two_column_grid
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:two_column_grid_description
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/2-column-grid.svg
+    iconIdentifier = grid-elements-2ColumnGrid
     config {
         colCount = 2
         rowCount = 1

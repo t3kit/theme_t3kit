@@ -1,5 +1,5 @@
 {namespace theme=KayStrobach\Themes\ViewHelpers}
-{namespace t3kit=T3kit\T3kitExtensionTools\ViewHelpers}
+
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 <f:section name="Default">
@@ -8,9 +8,7 @@
 
 <footer class="footer">
 
-	<f:if condition="{theme:constant(constant: 'themes.configuration.content.footerArea.contentUid')}">
-		<t3kit:render.content id="{theme:constant(constant: 'themes.configuration.content.footerArea.contentUid')}" />
-	</f:if>
+	<f:cObject typoscriptObjectPath="lib.footer" />
 
 </footer>
 

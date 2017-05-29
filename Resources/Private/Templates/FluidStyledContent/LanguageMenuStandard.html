@@ -2,20 +2,60 @@
 	<div class="header-top__language-menu">
 		<f:for each="{languages}" as="language">
 			<f:if condition="{language.active}">
-				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{language.flag}"></span> </a>
+				<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
+				<f:variable name="languageLabel"><f:spaceless><f:render section="getLanguageLabel" arguments="{_all}" /></f:spaceless></f:variable>
+				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{languageFlag}"></span></a>
 			</f:if>
 		</f:for>
 		<div class="header-top__language-menu-box js__header-top__language-menu-box">
 			<f:for each="{languages}" as="language">
-			   <f:link.page addQueryString="1"
-							 additionalParams="{L: language.L}"
+				<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
+				<f:variable name="languageLabel"><f:spaceless><f:render section="getLanguageLabel" arguments="{_all}" /></f:spaceless></f:variable>
+				<f:link.page addQueryString="1"
+							 additionalParams="{L: language.languageUid}"
 							 title="{language.label}"
 							 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
-							 argumentsToBeExcludedFromQueryString="{0: 'id'}">
-						<span class="flag-icon flag-icon-{language.flag}"></span> {language.label}
-				</f:link.page>
+							 argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
+						<span class="flag-icon flag-icon-{languageFlag}"></span> {languageLabel}
+				</f:spaceless></f:link.page>
 			</f:for>
 			<a class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></a>
 		</div>
 	</div>
 </f:if>
+
+<f:comment><!-- need to have current language in language variable --></f:comment>
+<f:section name="getLanguageLabel">
+	<f:variable name="getLanguageLabel">?</f:variable>
+	<f:if condition="{language.languageUid} == 0">
+		<f:then>
+			<f:variable name="getLanguageLabel">{defaultLanguageLabel}</f:variable>
+		</f:then>
+		<f:else>
+			<f:for each="{sysLanguages}" as="sysLanguage">
+				<f:if condition="{sysLanguage.data.uid} == {language.languageUid}">
+					<f:variable name="getLanguageLabel">{sysLanguage.data.title}</f:variable>
+				</f:if>
+			</f:for>
+		</f:else>
+	</f:if>
+	{getLanguageLabel}
+</f:section>
+
+<f:comment><!-- need to have current language in language variable --></f:comment>
+<f:section name="getLanguageFlag">
+	<f:variable name="getLanguageFlag">unknown</f:variable>
+	<f:if condition="{language.languageUid} == 0">
+		<f:then>
+			<f:variable name="getLanguageFlag">{defaultLanguageFlag}</f:variable>
+		</f:then>
+		<f:else>
+			<f:for each="{sysLanguages}" as="sysLanguage">
+				<f:if condition="{sysLanguage.data.uid} == {language.languageUid}">
+					<f:variable name="getLanguageFlag">{sysLanguage.data.flag}</f:variable>
+				</f:if>
+			</f:for>
+		</f:else>
+	</f:if>
+	{getLanguageFlag}
+</f:section>

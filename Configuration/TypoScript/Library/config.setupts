@@ -1,4 +1,3 @@
-
 # Dont use the default JavaScript
 removeDefaultJS = 1
 
@@ -14,17 +13,15 @@ config {
     spamProtectEmailAddresses = 2
     spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
     spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
-    headerComment (
-        This website based on t3kit project by Pixelant - www.t3kit.com
-    )
+    headerComment = {$themes.configuration.headerComment}
+    sendCacheHeaders = 1
 }
 
 
-# Set values from settings
-config.compressCss = {$themes.configuration.css.compress}
-config.compressJs = {$themes.configuration.javascript.compress}
-config.concatenateCss = {$themes.configuration.css.concatenate}
-config.concatenateJs = {$themes.configuration.javascript.concatenate}
+config.compressCss = 1
+config.compressJs = 1
+config.concatenateCss = 1
+config.concatenateJs = 1
 
 # In case of using development mode, disable compression and concatenation
 [globalVar = LIT:1 = {$themes.configuration.isDevelopment}]

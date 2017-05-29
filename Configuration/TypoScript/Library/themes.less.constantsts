@@ -3,95 +3,70 @@
 #############################################
 
 
-#MAIN Variables
-#############################################
-
-# customsubcategory=main_color=Main Color
-# customsubcategory=main_body_colors=Main Body Colors
-# customsubcategory=main_links_colors=Main Links Colors
-# customsubcategory=logo=Logo
-
-
-
 # Main color
 #############################################
+# customsubcategory=main_color=Main Color
 # cat=colors,basic/main_color/; type=color; label= Main Color
 themes.configuration.less.var.mainColor =
 
 
 # Body
 #############################################
+# customsubcategory=main_body_colors=Main Body Colors
 # cat=colors,basic/main_body_colors/; type=color; label= Main Body Background
 themes.configuration.less.var.mainBodyBg =
-
 # cat=colors,basic/main_body_colors/; type=color; label= Main Text Color
 themes.configuration.less.var.mainTextColor =
-
 # cat=colors,basic/main_body_colors/; type=color; label= Main Border Color
 themes.configuration.less.var.borderColor =
 
 
 # Main Links
 #############################################
+# customsubcategory=main_links_colors=Main Links Colors
 # cat=colors,basic/main_links_colors/; type=color; label= Main Link Color
 themes.configuration.less.var.mainLinkColor =
-
 # cat=colors,basic/main_links_colors/; type=color; label= Main Link Hover Color
 themes.configuration.less.var.mainLinkHoverColor =
 
 
 
+
+#############################################
 # Header Variables
 #############################################
-
-# customsubcategory=header_top_colors= Header Top Colors
-# customsubcategory=header_middle_colors= Header Middle Colors
-# customsubcategory=header_main_menu_colors= Main Menu Colors
-
-
 
 #Header Top
 #############################################
 # cat=header,advanced/header_top; type=string; label= Header Top Height
 themes.configuration.less.var.headerTopHeight =
 
+# customsubcategory=header_top_colors= Header Top Colors
 # cat=colors,advanced/header_top_colors; type=color; label= Header Top Background Color
 themes.configuration.less.var.headerTopBgColor =
-
 # cat=colors,advanced/header_top_colors; type=color; label= Header Top Color
 themes.configuration.less.var.headerTopColor =
 
 
-#Header Middle
+#Header middle
 #############################################
-
-# Header middle search
-
 # cat=header,advanced/header_middle; type=string; label= Header Middle Search Height
 themes.configuration.less.var.headerMiddleSearchHeight =
 
+# customsubcategory=header_middle_colors= Header Middle Colors
 # cat=colors,advanced/header_middle_colors; type=color; label= Header Middle Search Btn Background
 themes.configuration.less.var.headerMiddleSearchBtnBg =
-
 # cat=colors,advanced/header_middle_colors; type=color; label= Header Middle Search Btn Hover
 themes.configuration.less.var.headerMiddleSearchBtnHover =
 
-
-# Logo
-# cat=header,basic/logo; type=string; label= Logo Top
-themes.configuration.less.var.logoTop = 30px
-
-# cat=header,basic/logo; type=string; label= Logo Left
-themes.configuration.less.var.logoLeft = 40px
-
-# cat=header,basic/logo; type=string; label= Logo Width
-themes.configuration.less.var.logoWidth = 120px
+# customsubcategory=header_search_field_color= Header Search Field Color
+# cat=colors,advanced/header_search_field_color; type=color; label= Header Search Field Text Color
+themes.configuration.less.var.HeaderSearchFieldTextColor =
 
 
 # Social Icons
 # cat=colors,advanced/header_middle_colors; type=color; label= Social Icons Background Color
 themes.configuration.less.var.socialIconsBgColor =
-
 # cat=colors,advanced/header_middle_colors; type=color; label= Social Icons Hover Color
 themes.configuration.less.var.socialIconsHoverColor =
 
@@ -109,36 +84,27 @@ themes.configuration.less.var.headerBorderColor =
 
 # Navigation
 #############################################
-
 # customsubcategory=main_menu=Main Menu
-
 # cat=menu,advanced/main_menu; type=string; label= Navigation Height
 themes.configuration.less.var.navHeight =
-
 # cat=menu,advanced/main_menu; type=options[left,right]; label= Mobile Navigation Toggle Btn
 themes.configuration.less.var.mobileNavToggleBtn = left
 
+# customsubcategory=header_main_menu_colors= Main Menu Colors
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Color
 themes.configuration.less.var.navLinkColor =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Hover Color
 themes.configuration.less.var.navLinkHoverColor =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Active Color
 themes.configuration.less.var.navLinkActiveColor =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Active Hover Color
 themes.configuration.less.var.navLinkActiveHoverColor =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Hover Background
 themes.configuration.less.var.navLinkHoverBackground =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Link Arrow Color
 themes.configuration.less.var.navLinkArrowColor =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Background Color
 themes.configuration.less.var.navBackgroundColor =
-
 # cat=colors,advanced/header_main_menu_colors; type=color; label= Navigation Search Button Color
 themes.configuration.less.var.navSearchBtnColor =
 
@@ -146,74 +112,62 @@ themes.configuration.less.var.navSearchBtnColor =
 
 # Footer variables
 #############################################
-
 # customsubcategory=footer_color=Footer Colors
-
-#Footer color
-#############################################
 # cat=colors,basic/footer_color/; type=color; label= Footer Background
 themes.configuration.less.var.footerBackground =
-
 # cat=colors,basic/footer_color/; type=color; label= Footer Color
 themes.configuration.less.var.footerColor =
-
 # cat=colors,basic/footer_color/; type=color; label= Footer Link Color
 themes.configuration.less.var.footerLinkColor =
-
 # cat=colors,basic/footer_color/; type=color; label= Footer Link Hover Color
 themes.configuration.less.var.footerLinkHoverColor =
 
 
-
-
-
+#############################################
 # Menu variables
 #############################################
 
-# #customcategory=menu=Theme: Menu
-# customsubcategory=menu_sub_colors= Sub Menu Colors
-# customsubcategory=menu_breadcrumb_colors= Breadcrumbs Colors
-
-
 # Menu sub
 #############################################
+# customsubcategory=menu_sub_colors= Sub Menu Colors
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Background
 themes.configuration.less.var.subNavigationBackground =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Border
 themes.configuration.less.var.subNavigationBorder =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Active Border
 themes.configuration.less.var.subNavigationActiveBorder =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Link Color
 themes.configuration.less.var.subNavigationLinkColor =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Link Hover Color
 themes.configuration.less.var.subNavigationLinkHoverColor =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Link Hover Background
 themes.configuration.less.var.subNavigationLinkHoverBg =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Link Active Color
 themes.configuration.less.var.subNavigationLinkActiveColor =
-
 # cat=colors,advanced/menu_sub_colors; type=color; label= Sub Navigation Link Active Background
 themes.configuration.less.var.subNavigationLinkActiveBg =
 
 
-
-
 # Menu breadcrumb
 #############################################
+# customsubcategory=menu_breadcrumb_colors= Breadcrumbs Colors
 # cat=colors,advanced/menu_breadcrumb_colors; type=color; label= Breadcrumbs Background
 themes.configuration.less.var.breadcrumbsBackground =
-
 # cat=colors,advanced/menu_breadcrumb_colors; type=color; label= Breadcrumbs Link Color
 themes.configuration.less.var.breadcrumbsLinkColor =
-
 # cat=colors,advanced/menu_breadcrumb_colors; type=color; label= Breadcrumbs Link Active Color
 themes.configuration.less.var.breadcrumbsLinkActiveColor =
-
 # cat=colors,advanced/menu_breadcrumb_colors; type=color; label= Breadcrumbs Link Hover Color
 themes.configuration.less.var.breadcrumbsLinkHoverColor =
+
+
+
+# Logo
+#############################################
+# cat=theme,basic/logo; type=string; label= Logo Top
+themes.configuration.less.var.logoTop =
+# cat=theme,basic/logo; type=string; label= Logo Left
+themes.configuration.less.var.logoLeft =
+# cat=theme,basic/logo; type=string; label= Logo Width
+themes.configuration.less.var.logoWidth =
+

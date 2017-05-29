@@ -27,11 +27,11 @@
 		<article class="news-cards__item articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 			<n:excludeDisplayedNews newsItem="{newsItem}"/>
 			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-				<f:if condition="{newsItem.falMedia}">
+				<f:if condition="{newsItem.media}">
 					<div class="news-cards__img-wrap">
-						<f:if condition="{newsItem.falMediaPreviews}">
+						<f:if condition="{newsItem.mediaPreviews}">
 							<f:then>
-									<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+									<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
 										<f:if condition="{mediaElement.originalResource.type} == 2">
 											<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
 										</f:if>

@@ -4,9 +4,6 @@ mod.wizards.newContentElement.wizardItems.contentElements {
             title = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.title
             description = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:quote.description
             iconIdentifier = content-elements-quote
-            tt_content_defValues {
-                CType = quote
-            }
         }
     }
     show := addToList(quote)
@@ -18,17 +15,3 @@ TCEFORM.tt_content.pi_flexform.quote.sDEF.iconClass {
     }
 }
 
-# # Use layout field to customize Layout select-box on quote
-# # extend layout select-box only for this element
-# TCEFORM.tt_content.layout {
-#     types {
-#         quote {
-#             addItems {
-#                 --div-- = Quote layouts:
-#                 # add value with index 0, to set it as a default, only for this element
-#                 0 = Default layout for this element
-#                 11 = Example layout only for quote
-#             }
-#         }
-#     }
-# }

@@ -1,7 +1,7 @@
 tx_gridelements.setup.CollapsibleGroup {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:collapsibleGroup
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:collapsibleGroup_description
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/collapsibleGroup.svg
+    iconIdentifier = grid-elements-collapsibleGroup
     config {
         colCount = 1
         rowCount = 1

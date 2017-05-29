@@ -1,9 +1,4 @@
-
-<f:layout name="{f:if(condition: data.tx_gridelements_container, then: 'Empty', else: 'HeaderContentFooter')}" />
-
-<f:debug>{data}</f:debug>
-<f:debug>{_all}</f:debug>
-
-<f:section name="content">
+<f:layout name="{f:if(condition: data.tx_gridelements_container, then: 'Empty', else: 'Default')}" />
+<f:section name="Main">
 	<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
 </f:section>

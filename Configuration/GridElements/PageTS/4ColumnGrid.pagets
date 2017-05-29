@@ -1,7 +1,7 @@
 tx_gridelements.setup.4ColumnGrid {
     title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:four_column_grid
     description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:four_column_grid_description
-    icon = EXT:theme_t3kit/Resources/Public/Icons/GridElements/4-column-grid.svg
+    iconIdentifier = grid-elements-4ColumnGrid
     config {
         colCount = 4
         rowCount = 1

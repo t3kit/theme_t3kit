@@ -1,0 +1,58 @@
+####
+# Example of what CKEditor can all bring
+###
+
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
+    stylesSet:
+      # block level styles
+      - { name: "White title H2 with blue background", element: "h2", styles: { color: "#fff", background: "#50b4d8" } }
+      - { name: "White title H3 with blue background", element: "h3", styles: { color: "#fff", background: "#50b4d8" } }
+      # Inline styles
+      - { name: "White text color", element: "span", styles: { color: "#fff" } }
+      - { name: "Yellow marker", element: "span", styles: { background-color: "yellow" } }
+
+    format_tags: "p;h1;h2;h3;h4;h5;h6;pre"
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles ] }
+      - { name: forms, groups: [ forms ] }
+      - { name: paragraph, groups: [ align, list, indent, blocks, bidi, paragraph ] }
+      - "/"
+      - { name: basicstyles, groups: [ basicstyles, cleanup ] }
+      - { name: editing, groups: [ find, selection, spellchecker, editing ] }
+      - { name: links, groups: [ links ] }
+      - { name: insert, groups: [ insert ] }
+      - "/"
+      - { name: clipboard, groups: [ clipboard, undo ] }
+      - { name: document, groups: [ mode, document, doctools ] }
+      - { name: colors, groups: [ colors ] }
+      - { name: tools, groups: [ tools ] }
+      - { name: others, groups: [ others ] }
+      - { name: about, groups: [ about ] }
+
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+
+    removePlugins:
+      - quicktable
+
+    removeButtons:
+      - Image
+      - Table

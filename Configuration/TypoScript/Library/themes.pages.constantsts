@@ -1,4 +1,0 @@
-# customsubcategory=pages= Pages
-
-# cat=pages,expert/pages; type=int+; label= Startsite page uid
-themes.configuration.pages.startsite = 1
