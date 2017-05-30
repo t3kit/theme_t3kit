@@ -2037,6 +2037,7 @@
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        z-index: 1;
     }
     // Dropdown arrow
     .no-touch ._sub > .main-navigation__item-link:after {
@@ -5882,6 +5883,14 @@ div.awesomplete li[aria-selected="true"] mark {
             transform: translate(-50%, -50%);
             -webkit-transform: translate(-50%, -50%);
             // ios8 safari fix - only works in this order
+        }
+    }
+
+    &:hover {
+        color: @social-icons-hover-color;
+
+        & > .icons:after {
+            border-color: fade(@social-icons-hover-color, 50%);
         }
     }
 }
