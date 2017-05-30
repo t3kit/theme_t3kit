@@ -42,6 +42,13 @@
             // ios8 safari fix - only works in this order
         }
     }
+    &:hover {
+        color: @social-icons-hover-color;
+
+        & > .icons:after {
+            border-color: fade(@social-icons-hover-color, 50%);
+        }
+    }
 }
 
 .no-touch .footer .social-icons__item {
