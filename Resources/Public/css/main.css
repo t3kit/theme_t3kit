@@ -669,6 +669,7 @@
     visibility: visible;
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    z-index: 1;
   }
   .no-touch ._sub > .main-navigation__item-link:after {
     /* use !important to prevent issues with browser extensions that change fonts */
@@ -3803,6 +3804,12 @@ div.awesomplete li[aria-selected="true"] mark {
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+}
+.social-icons__item:hover {
+  color: #8fcfe6;
+}
+.social-icons__item:hover > .icons:after {
+  border-color: rgba(143, 207, 230, 0.5);
 }
 .no-touch .footer .social-icons__item:hover {
   color: #8fcfe6;
