@@ -13,6 +13,8 @@ themes.configuration.elem.status.showHeaderTop = 1
 themes.configuration.elem.status.showHeaderTopContacts = 1
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangMenu
 themes.configuration.elem.status.showHeaderTopLangMenu = 0
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangLabel
+themes.configuration.elem.status.showHeaderTopLangLabel = 0
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Search
 themes.configuration.elem.status.showHeaderTopSearch = 0
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Main Menu Search

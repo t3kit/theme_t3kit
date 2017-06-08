@@ -1,3 +1,5 @@
+{namespace theme=KayStrobach\Themes\ViewHelpers}
+
 <f:if condition="{languages}">
 	<div class="header-top__language-menu">
 		<f:for each="{languages}" as="language">
@@ -5,6 +7,9 @@
 				<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
 				<f:variable name="languageLabel"><f:spaceless><f:render section="getLanguageLabel" arguments="{_all}" /></f:spaceless></f:variable>
 				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{languageFlag}"></span></a>
+				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangLabel')}">
+					<span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label')}</span>
+				</f:if>
 			</f:if>
 		</f:for>
 		<div class="header-top__language-menu-box js__header-top__language-menu-box">
