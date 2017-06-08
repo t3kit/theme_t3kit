@@ -309,6 +309,9 @@
 			<trans-unit id="slider_container.flexform.paginationPosition">
 				<source>Change pagination position (outside/inside of container)</source>
 			</trans-unit>
+			<trans-unit id="slider_container.flexform.arrowsPosition">
+				<source>Change arrows position (outside/inside of container)</source>
+			</trans-unit>
 			<trans-unit id="slider_container.flexform.loop">
 				<source>Loop (continuous loop mode)</source>
 			</trans-unit>

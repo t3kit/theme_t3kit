@@ -20,10 +20,5 @@
         self.addClass('_animated')
       }
     })
-    $slider.each(function () {
-      if ($(this).find($frame).length) {
-        $(this).addClass('_full-width')
-      }
-    })
   })
 })(jQuery)

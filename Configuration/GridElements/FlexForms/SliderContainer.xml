@@ -37,6 +37,15 @@
 							</config>
 						</TCEforms>
 					</paginationPosition>
+					<arrowsPosition>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.arrowsPosition</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</arrowsPosition>
 					<loop>
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:slider_container.flexform.loop</label>
