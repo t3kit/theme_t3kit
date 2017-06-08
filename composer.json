@@ -30,10 +30,6 @@
     {
       "type": "git",
       "url": "https://github.com/svewap/realurl_404_multilingual"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pixelant/pxa_newsletter_subscription"
     }
   ],
   "minimum-stability": "dev",
@@ -48,7 +44,7 @@
     "clickstorm/go_maps_ext": "2.2.0",
     "clickstorm/cs_seo": "2.0.1",
     "typo3-ter/news": "6.0.0",
-    "pixelant/pxa-newsletter-subscription": "4.1.2",
+    "typo3-ter/pxa-newsletter-subscription": "5.0.2",
     "typo3-ter/pxa-form-enhancement": "3.0.0",
     "typo3-ter/pxa-cookie-bar": "1.0.7",
     "wapplersystems/realurl-404-multilingual": "dev-master",
