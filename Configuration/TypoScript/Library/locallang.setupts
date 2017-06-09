@@ -1,7 +1,7 @@
 plugin.tx_themes {
     _LOCAL_LANG {
         default {
-            languageMenu_label = Website language
+            languageMenu_label = Choose language
             breadcrumb_label = You are here
             imprint_label = Imprint
             quickSearch_label = Search
@@ -13,7 +13,7 @@ plugin.tx_themes {
             search_placeholder = Search...
         }
         sv {
-            languageMenu_label = Webbsidaspråk
+            languageMenu_label = Välj språk
             breadcrumb_label = Du är här
             imprint_label = Imprint
             quickSearch_label = Sök
@@ -25,7 +25,7 @@ plugin.tx_themes {
             search_placeholder = Sök...
         }
         de {
-            languageMenu_label = Website-Sprache
+            languageMenu_label = Wähle deine Sprache aus
             breadcrumb_label = Sie sind hier
             imprint_label = Impressum
             quickSearch_label = Suche
@@ -37,7 +37,7 @@ plugin.tx_themes {
             search_placeholder = Suche...
         }
         da {
-            languageMenu_label = Website-sprog
+            languageMenu_label = Vælg sprog
             breadcrumb_label = Du er her
             imprint_label = Om netstedet
             quickSearch_label = Søg
