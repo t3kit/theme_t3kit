@@ -665,6 +665,18 @@
         .clearfix();
     }
 
+    .main-navigation__items-list._right-pos {
+        text-align: right;
+
+        @media (min-width: 992px) {
+            .main-navigation__item {
+                float: none;
+                text-align: left;
+                display: inline-block;
+            }
+        }
+    }
+
     .main-navigation__item {
         float: left;
     }

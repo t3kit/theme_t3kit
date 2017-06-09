@@ -14,7 +14,8 @@ themes.configuration.menu.main.dropdown = _sub
 themes.configuration.menu.main.dropdownColumns = 0
 # cat=menu,advanced/main_menu; type=options[0,1]; label= Enable/Disable third navigation level
 themes.configuration.menu.main.showThirdNavLevel = 0
-
+# cat=menu,advanced/main_menu; type=options[left, right]; label=  Navbar items position to the right
+themes.configuration.menu.main.navbarPos = left
 
 # Sub Menu
 #############################################
