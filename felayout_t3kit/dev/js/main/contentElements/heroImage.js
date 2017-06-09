@@ -6,7 +6,7 @@
   // document load event
   $(document).ready(function () {
     var $frame = $('.js__hero-image')
-    var $slider = $('.slider-container')
+    // var $slider = $('.slider-container')
     $frame.each(function () {
       var self = $(this)
       var $p = self.find('.hero-image__caption-p')
