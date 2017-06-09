@@ -1,4 +1,22 @@
 
+#### v2.2.0 `June 9, 2017`
+- **[FEATURE]** add option to align navbar menu links to the right (#241) ([13e41c1](https://github.com/t3kit/theme_t3kit/commit/13e41c1))
+- **[FEATURE]** add language dropdown label (#238) ([e7751e5](https://github.com/t3kit/theme_t3kit/commit/e7751e5))
+- **[TASK]** Slider Container, add option to control arrows position (#240) ([b38183a](https://github.com/t3kit/theme_t3kit/commit/b38183a))
+- **[TASK]** update pxa-newsletter-subscription to v 5.0.2 ([504f7f7](https://github.com/t3kit/theme_t3kit/commit/504f7f7))
+- **[TASK]** Update extension ''frontend_editing'' to version 1.0.9 (#235) ([b17fde0](https://github.com/t3kit/theme_t3kit/commit/b17fde0))
+- **[TASK]** Slider Container, add option to control pagination position (#222) ([7fdaede](https://github.com/t3kit/theme_t3kit/commit/7fdaede))
+- **[BUGFIX]** show only one heroImage in SliderContainer when page is loading (#237) ([e4cf7fb](https://github.com/t3kit/theme_t3kit/commit/e4cf7fb))
+- **[BUGFIX]** imageTextLink, fix mobile view (#221) ([e8e9df5](https://github.com/t3kit/theme_t3kit/commit/e8e9df5))
+- **[BUGFIX]** slider container, fix flip animation (#233) ([940a610](https://github.com/t3kit/theme_t3kit/commit/940a610))
+- **[BUGFIX]** imageTextLink, fix mobile view for hover_4 effect (#234) ([1e5d0b0](https://github.com/t3kit/theme_t3kit/commit/1e5d0b0))
+- **[BUGFIX]** move iconFontSelector.css from auto generated css folder ([7f03d91](https://github.com/t3kit/theme_t3kit/commit/7f03d91))
+- **[BUGFIX]** Navbar dropdown with two rows + social icons hover color, fix #224, fix #225 (#232) ([b0bb730](https://github.com/t3kit/theme_t3kit/commit/b0bb730))
+- **[BUGFIX]** force jquery to be included first; otherwise there could be errors from 3rd party extensions which includes theirs scripst before it (#218) ([36567ff](https://github.com/t3kit/theme_t3kit/commit/36567ff))
+- **[FIX]** fix google map configuration label (#227) ([bcaea37](https://github.com/t3kit/theme_t3kit/commit/bcaea37))
+
+***
+
 #### v2.1.1 `May 18, 2017`
 - **[BUGFIX]** prevent sql error when creating new page in page tree. (#217) ([e1afa6c](https://github.com/t3kit/theme_t3kit/commit/e1afa6c))
 - **[DOC]** update README, remove beta tag ([406a4c7](https://github.com/t3kit/theme_t3kit/commit/406a4c7))
