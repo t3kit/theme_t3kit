@@ -292,10 +292,6 @@
   display: block;
   text-align: left;
 }
-.main-flag-language.flag-language {
-  padding-left: 5px;
-  color: #50b4d8;
-}
 .no-touch .header-top__language-menu-box-item:hover {
   color: #85cbe4;
 }
@@ -2818,7 +2814,7 @@ div.awesomplete li[aria-selected="true"] mark {
 .img-text-link._hover-2 .img-text-link__header {
   margin: 0;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   padding: 15px;
   z-index: 3;
   width: 100%;
@@ -3035,7 +3031,7 @@ div.awesomplete li[aria-selected="true"] mark {
   position: absolute;
   padding: 0 30px;
   transition: all 0.4s ease;
-  bottom: -15px;
+  bottom: 0;
   margin: 0;
   z-index: 3;
   text-align: center;
@@ -3095,7 +3091,7 @@ div.awesomplete li[aria-selected="true"] mark {
 .img-text-link._hover-5 .img-text-link__header {
   margin: 0;
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   padding: 15px;
   width: 100%;
   z-index: 3;
@@ -3115,7 +3111,6 @@ div.awesomplete li[aria-selected="true"] mark {
   color: #7d7d7d;
   bottom: 0;
   padding: 8px 15px;
-  width: 100%;
   height: 70px;
   margin: 0;
   display: -ms-flexbox;
@@ -3872,9 +3867,6 @@ div.awesomplete li[aria-selected="true"] mark {
 .slider-container-effect .slider-container__slide {
   padding-left: 10px;
   padding-right: 10px;
-}
-.slider-container__wrapper > .slider-container__slide {
-  background-color: #fff;
 }
 .slider-container__button-next,
 .slider-container__button-prev {
