@@ -1,4 +1,7 @@
-{namespace n=GeorgRinger\News\ViewHelpers}<!--
+{namespace n=GeorgRinger\News\ViewHelpers}
+{namespace v=KayStrobach\Themes\ViewHelpers}
+{namespace xtools=T3kit\T3kitExtensionTools\ViewHelpers}
+<!--
 	=====================
 		Partials/List/Item.html
 -->
@@ -22,13 +25,13 @@
 						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 							<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
 								<f:if condition="{mediaElement.originalResource.type} == 2">
-									<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+									<f:render section="renderImage" arguments="{src:mediaElement.uid, title:mediaElement.originalResource.title, alt:mediaElement.originalResource.alternative, settings:settings, treatIdAsReference:'1'}"/>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 4">
 									<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 5">
-									<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+									<f:render section="renderImage" arguments="{src:mediaElement.uid, title:mediaElement.originalResource.title, alt:mediaElement.originalResource.alternative, settings:settings, treatIdAsReference:'1'}"/>
 								</f:if>
 							</f:alias>
 						</n:link>
@@ -37,7 +40,7 @@
 						<f:if condition="{settings.displayDummyIfNoMedia}">
 							<span class="no-media-element">
 								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-									<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+									<f:render section="renderImage" arguments="{src:settings.list.media.dummyImage, title:'', alt:'', settings:settings, treatIdAsReference:'0'}"/>
 								</n:link>
 							</span>
 						</f:if>
@@ -57,7 +60,8 @@
 								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 									<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
 										<f:if condition="{mediaElement.type} == 0">
-											<f:image src="uploads/tx_news/{mediaElement.image}" title="{mediaElement.title}" alt="{mediaElement.alt}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+											<v:variable.set name="src" value="uploads/tx_news/{mediaElement.image}" />
+											<f:render section="renderImage" arguments="{src:src, title:mediaElement.title, alt:mediaElement.alt, settings:settings, treatIdAsReference:'0'}"/>
 										</f:if>
 										<f:if condition="{mediaElement.type} == 1">
 											<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
@@ -72,7 +76,7 @@
 								<f:if condition="{settings.displayDummyIfNoMedia}">
 									<span class="no-media-element">
 										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-											<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+											<f:render section="renderImage" arguments="{src:settings.list.media.dummyImage, title:'', alt:'', settings:settings, treatIdAsReference:'0'}"/>
 										</n:link>
 									</span>
 								</f:if>
@@ -87,7 +91,7 @@
 							<div class="news-img-wrap">
 								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 									<span class="no-media-element">
-										<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+										<f:render section="renderImage" arguments="{src:settings.list.media.dummyImage, title:'', alt:'', settings:settings, treatIdAsReference:'0'}" />
 									</span>
 								</n:link>
 							</div>
@@ -95,7 +99,6 @@
 					</f:if>
 				</f:else>
 			</f:if>
-
 		</f:else>
 	</f:if>
 
@@ -119,6 +122,12 @@
 	<!-- footer information -->
 	<div class="news-article-footer">
 		<p>
+			<div itemscope itemtype="http://schema.org/Organization" itemprop="publisher">
+				<meta itemprop="name" content="{f:cObject(typoscriptObjectPath: 'lib.siteTitle')}" />
+				<div itemscope itemtype="http://schema.org/ImageObject" itemprop="logo">
+					<meta itemprop="url" content="{f:uri.image(src: settings.list.publisher.logo, absolute: 'true')}" />
+				</div>
+			</div>
 			<!-- date -->
 			<span class="news-list-date">
 				<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
@@ -143,10 +152,19 @@
 
 			<!-- author -->
 			<f:if condition="{newsItem.author}">
-				<span class="news-list-author">
-					<f:translate key="author" arguments="{0:newsItem.author}"/>
+				<span class="news-list-author" itemscope itemtype="http://schema.org/Person" itemprop="author">
+					<f:translate key="author_simple" />
+					<span itemprop="name">{newsItem.author}</span>
 				</span>
 			</f:if>
 		</p>
 	</div>
 </div>
+
+<f:section name="renderImage">
+	<div itemscope itemtype="http://schema.org/ImageObject" itemprop="image">
+		<f:image src="{src}" treatIdAsReference="{treatIdAsReference}" title="{title}" alt="{alt}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" additionalAttributes="{itemprop:'url'}" />
+		<meta itemprop="width" content="{xtools:get.imageDimension(src: src, treatIdAsReference: treatIdAsReference, maxWidth: settings.list.media.image.maxWidth, maxHeight: settings.list.media.image.maxHeight)}" />
+		<meta itemprop="height" content="{xtools:get.imageDimension(src: src, treatIdAsReference: treatIdAsReference, maxWidth: settings.list.media.image.maxWidth, maxHeight: settings.list.media.image.maxHeight, dimensionType: 'height')}" />
+	</div>
+</f:section>
