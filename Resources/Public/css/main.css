@@ -292,6 +292,10 @@
   display: block;
   text-align: left;
 }
+.main-flag-language.flag-language {
+  padding-left: 5px;
+  color: #50b4d8;
+}
 .no-touch .header-top__language-menu-box-item:hover {
   color: #85cbe4;
 }
@@ -625,6 +629,9 @@
   .main-navigation__items-list:after {
     clear: both;
   }
+  .main-navigation__items-list._right-pos {
+    text-align: right;
+  }
   .main-navigation__item {
     float: left;
   }
@@ -661,6 +668,13 @@
 @media (min-width: 992px) and (min-width: 1366px) {
   .main-navigation__items-wrp {
     max-width: 1170px;
+  }
+}
+@media (min-width: 992px) and (min-width: 992px) {
+  .main-navigation__items-list._right-pos .main-navigation__item {
+    float: none;
+    text-align: left;
+    display: inline-block;
   }
 }
 @media (min-width: 992px) {
@@ -2814,7 +2828,7 @@ div.awesomplete li[aria-selected="true"] mark {
 .img-text-link._hover-2 .img-text-link__header {
   margin: 0;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   padding: 15px;
   z-index: 3;
   width: 100%;
@@ -3031,7 +3045,7 @@ div.awesomplete li[aria-selected="true"] mark {
   position: absolute;
   padding: 0 30px;
   transition: all 0.4s ease;
-  bottom: 0;
+  bottom: -15px;
   margin: 0;
   z-index: 3;
   text-align: center;
@@ -3091,7 +3105,7 @@ div.awesomplete li[aria-selected="true"] mark {
 .img-text-link._hover-5 .img-text-link__header {
   margin: 0;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   padding: 15px;
   width: 100%;
   z-index: 3;
@@ -3111,6 +3125,7 @@ div.awesomplete li[aria-selected="true"] mark {
   color: #7d7d7d;
   bottom: 0;
   padding: 8px 15px;
+  width: 100%;
   height: 70px;
   margin: 0;
   display: -ms-flexbox;
@@ -3852,31 +3867,28 @@ div.awesomplete li[aria-selected="true"] mark {
   position: relative;
 }
 .slider-container__container {
-  margin: 0 45px;
   position: relative;
   overflow: hidden;
-}
-.slider-container-effect {
-  margin: 0 15px;
 }
 .slider-container-effect .slider-container__container {
   margin: 0;
   position: relative;
   overflow: hidden;
 }
-.slider-container-effect .slider-container__slide {
-  padding-left: 10px;
-  padding-right: 10px;
+.slider-container__wrapper > .slider-container__slide {
+  background-color: #fff;
 }
 .slider-container__button-next,
 .slider-container__button-prev {
   display: none;
+  width: auto;
+  height: auto;
 }
 .slider-container__button-next {
-  right: 5px;
+  right: 0;
 }
 .slider-container__button-prev {
-  left: -5px;
+  left: 0;
 }
 .slider-container__button-next:before {
   content: '\e675';
@@ -3888,11 +3900,17 @@ div.awesomplete li[aria-selected="true"] mark {
   background: #50b4d8;
 }
 .slider-container__pagination {
-  bottom: -20px;
+  font-size: 0;
+  padding: 10px 0;
   width: 100%;
 }
 .slider-container__pagination > .swiper-pagination-bullet {
   margin: 0 5px;
+}
+@media (min-width: 768px) {
+  ._arrows-outside {
+    padding: 0 40px;
+  }
 }
 @media (min-width: 992px) {
   .slider-container__button-next,
@@ -3915,16 +3933,20 @@ div.awesomplete li[aria-selected="true"] mark {
     font-size: 35px;
   }
   .slider-container-effect .slider-container__container {
-    margin: 0 45px;
     position: relative;
     overflow: hidden;
   }
 }
 @media (min-width: 1280px) {
   .slider-container-effect {
-    max-width: 990px;
     margin: 0 auto;
   }
+}
+._pagination-inside .slider-container__pagination {
+  bottom: 10px;
+}
+._pagination-outside .slider-container__pagination {
+  position: static;
 }
 .panel-title > a {
   display: block;
@@ -4012,18 +4034,11 @@ div.awesomplete li[aria-selected="true"] mark {
   color: #fff;
   text-decoration: underline;
 }
-.slider-container._full-width {
-  max-width: 100% !important;
-  width: 100%;
-  overflow: hidden;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.slider-container._full-width .slider-container__slide {
-  padding: 0;
-}
 .slider-container._full-width .swiper-slide-next .hero-image__caption > * {
   transition: none;
+}
+.frame-type-heroImage + .frame-type-heroImage {
+  display: none;
 }
 @media (min-width: 768px) {
   .hero-image__caption {
@@ -4039,21 +4054,8 @@ div.awesomplete li[aria-selected="true"] mark {
 @media (min-width: 992px) {
   .slider-container._full-width .swiper-button-next,
   .slider-container._full-width .swiper-button-prev {
-    color: #fff;
     width: auto;
     display: block;
-  }
-  .slider-container._full-width .swiper-button-next {
-    right: 10px;
-    left: auto;
-  }
-  .slider-container._full-width .swiper-button-prev {
-    left: 10px;
-    right: auto;
-  }
-  .slider-container._full-width .slider-container__container {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
   }
 }
 .hero-image__caption._caption-animated-1 > * {

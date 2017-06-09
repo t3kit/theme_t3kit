@@ -293,7 +293,7 @@ jQuery(function ($) {
   // document load event
   $(document).ready(function () {
     var $frame = $('.js__hero-image')
-    var $slider = $('.slider-container')
+    // var $slider = $('.slider-container')
     $frame.each(function () {
       var self = $(this)
       var $p = self.find('.hero-image__caption-p')
@@ -305,11 +305,6 @@ jQuery(function ($) {
       }
       if (!self.parents('.swiper-wrapper').length) {
         self.addClass('_animated')
-      }
-    })
-    $slider.each(function () {
-      if ($(this).find($frame).length) {
-        $(this).addClass('_full-width')
       }
     })
   })
@@ -405,8 +400,7 @@ jQuery(function ($) {
           crossFade: true
         },
         flip: {
-          slideShadows: false,
-          limitRotation: true
+          slideShadows: false
         }
       })
       // Makes it possible to skip between slider images if they have links, using the tab button
