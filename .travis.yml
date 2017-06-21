@@ -48,4 +48,4 @@ script:
   - >
     echo;
     echo "Running grunt lessCompile";
-    cd felayout_t3kit/ && grunt compileLess
+    grunt compileLess
