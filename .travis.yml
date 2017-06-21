@@ -22,6 +22,11 @@ cache:
   directories:
     - $HOME/.composer/cache
 
+install:
+  - . $HOME/.nvm/nvm.sh
+  - nvm install stable
+  - nvm use stable
+
 before_install:
   - phpenv config-rm xdebug.ini
   - composer self-update
@@ -37,6 +42,10 @@ script:
 
   - >
     echo;
+    echo "Install NPM dependencies";
+    cd felayout_t3kit/ && npm install
+
+  - >
+    echo;
     echo "Running grunt lessCompile";
-    cd felayout_t3kit/
-    grunt compileLess
+    cd felayout_t3kit/ && grunt compileLess
