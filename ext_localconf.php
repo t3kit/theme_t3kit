@@ -58,3 +58,5 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['t3kit_default']
 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DmitryDulepov\Realurl\Utility::class]['className']
     = \T3kit\themeT3kit\Xclass\Realurl\Utility::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['BE']['interfaces'] = 'frontend,backend';
