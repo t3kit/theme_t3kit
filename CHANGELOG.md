@@ -1,4 +1,13 @@
 
+#### v2.2.1 `July 4, 2017`
+- **[BUGFIX]** decrease view (1700 to 400) priority in ext:theme template, fix #244 ([701bbc8](https://github.com/t3kit/theme_t3kit/commit/701bbc8))
+- **[BUGFIX]** news simple list, fix image scaling (#243) ([47a4f42](https://github.com/t3kit/theme_t3kit/commit/47a4f42))
+- **[FEATURE]** Add dropdown at login page for redirecting to backend or frontend (#251) ([28a32e0](https://github.com/t3kit/theme_t3kit/commit/28a32e0))
+- **[BUGFIX]** fix 'white screen' in frontend for TYPO3 8.7.2, resolves #249 (#250) ([140b350](https://github.com/t3kit/theme_t3kit/commit/140b350))
+- **[BUGFIX]** news item, add class to make image responsive #190 (#242) ([7988d4e](https://github.com/t3kit/theme_t3kit/commit/7988d4e))
+
+***
+
 #### v2.2.0 `June 9, 2017`
 - **[FEATURE]** add option to align navbar menu links to the right (#241) ([13e41c1](https://github.com/t3kit/theme_t3kit/commit/13e41c1))
 - **[FEATURE]** add language dropdown label (#238) ([e7751e5](https://github.com/t3kit/theme_t3kit/commit/e7751e5))
