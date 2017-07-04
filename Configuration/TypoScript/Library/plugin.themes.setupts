@@ -1,13 +1,13 @@
 plugin.tx_themes {
     view {
         templateRootPaths {
-            1700 = EXT:theme_t3kit/Resources/Private/Templates/
+            400 = EXT:theme_t3kit/Resources/Private/Templates/
         }
         partialRootPaths {
-            1700 = EXT:theme_t3kit/Resources/Private/Partials/
+            400 = EXT:theme_t3kit/Resources/Private/Partials/
         }
         layoutRootPaths {
-            1700 = EXT:theme_t3kit/Resources/Private/Layouts/
+            400 = EXT:theme_t3kit/Resources/Private/Layouts/
         }
     }
 }
