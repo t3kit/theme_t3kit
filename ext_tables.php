@@ -21,7 +21,8 @@ $boot = function ($_EXTKEY) {
             'content-elements-copyrightText' => 'copyrightText.svg',
             'content-elements-contacts' => 'contacts.svg',
             'content-elements-button' => 'button.svg',
-            'content-elements-heroImage' => 'heroImage.svg'
+            'content-elements-heroImage' => 'heroImage.svg',
+            'content-elements-contactsCard' => 'contactsCard.svg'
         ];
         foreach ($contentElementIcons as $identifier => $contentElementIcon) {
             $iconRegistry->registerIcon(

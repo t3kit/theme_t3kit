@@ -375,6 +375,35 @@
 				<source>Contact info element</source>
 			</trans-unit>
 
+			<!--Contacts Card-->
+			<trans-unit id="contactsCard.title">
+				<source>Contacts Card</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.description">
+				<source>Contacts Card</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.name"> 
+				<source>Full Name</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.job"> 
+				<source>Job Description</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.contactPhone_1"> 
+				<source>Contact Phone 1</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.contactPhone_2"> 
+				<source>Contact Phone 2</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.mobilePhone"> 
+				<source>Mobile Phone</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.email"> 
+				<source>E-mail</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.linkedInLink"> 
+				<source>Link to LinkedIn Profile</source>
+			</trans-unit>
+
 			<!--Button Element-->
 			<trans-unit id="button.title">
 				<source>Button</source>
