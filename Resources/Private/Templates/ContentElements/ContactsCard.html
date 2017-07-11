@@ -19,45 +19,46 @@
 				</f:else>
 			</f:if>
 		</div>
-		<div class="contacts-card__contacts-wrp">
-			<div class="contacts-card__contacts">
-				<f:if condition="{data.header}">
-					<h3 class="contacts-card__contacts-name">{data.header}</h3>
-				</f:if>
-				<f:if condition="{data.subheader}">
-					<p class="contacts-card__contacts-job">{data.subheader}</p>
-				</f:if>
-				<f:if condition="{settings.contactPhone_1}">
-					<p class="contacts-card__contacts-phone">
-						<span class="icons icon-t3-mobile"></span>
-						<f:translate key="phone_label"></f:translate> {settings.contactPhone_1}</p>
-				</f:if>
-				<f:if condition="settings.contactPhone_2}">
-					<p class="contacts-card__contacts-phone">
-						<span class="icons icon-t3-mobile"></span>
-						<f:translate key="phone_label"></f:translate> {settings.contactPhone_2}</p>
-				</f:if>
-				<f:if condition="{settings.mobilePhone}">
-					<p class="contacts-card__contacts-mobile">
-						<span class="icons icon-smartphone"></span>
-						<f:translate key="phone_label"></f:translate> {settings.mobilePhone}</p>
-				</f:if>
-				<f:if condition="{settings.email}">
-          <div class="contacts-card__contacts-email-wrp">
-						<span class="icons icon-t3-mail"></span>
-						<f:translate key="email_label"></f:translate>
-						<f:link.email email="{settings.email}" class="contacts-card__contacts-email" title="{settings.email}">{settings.email}
+		<div class="contacts-card__contacts">
+			<f:if condition="{data.header}">
+					<h3 class="contacts-card__contact-name">{data.header}</h3>
+			</f:if>
+			<f:if condition="{data.subheader}">
+					<p class="contacts-card__contact-job">{data.subheader}</p>
+			</f:if>
+			<f:if condition="{settings.contactPhone_1}">
+				<div class="contacts-card__contact-phone-wrp">
+					<span class="icons icon-t3-mobile"></span><f:translate key="phone_label"></f:translate>
+					<p class="contacts-card__contact-phone">{settings.contactPhone_1}</p>
+				</div>
+			</f:if>
+			<f:if condition="{settings.contactPhone_2}">
+				<div class="contacts-card__contact-phone-wrp">
+					<span class="icons icon-t3-mobile"></span><f:translate key="phone_label"></f:translate>
+					<p class="contacts-card__contact-phone">{settings.contactPhone_2}</p>
+				</div>
+			</f:if>
+			<f:if condition="{settings.mobilePhone}">
+				<div class="contacts-card__contact-phone-wrp">
+					<span class="icons icon-smartphone"></span><f:translate key="phone_label"></f:translate>
+					<p class="contacts-card__contact-phone">{settings.mobilePhone}</p>
+				</div>
+			</f:if>
+			<f:if condition="{settings.email}">
+          <div class="contacts-card__contact-email-wrp">
+						<span class="icons icon-t3-mail"></span><f:translate key="email_label"></f:translate>
+						<f:link.email email="{settings.email}" class="contacts-card__contact-email" title="{settings.email}">{settings.email}
 						</f:link.email>
 					</div>
-				</f:if>
-				<f:if condition="{settings.linkedInLink}">
-					<div class="contacts-card__contacts-linkedin-wrp">
+			</f:if>
+			<f:if condition="{settings.linkedInLink}">
+					<div class="contacts-card__contact-linkedin-wrp">
 						<span class="icons icon-t3-linkedin"></span>
-						<f:link.external uri="{settings.linkedInLink}" class="contacts-card__contacts-linkedin" defaultScheme="https" target="_blank">{settings.linkedInLink}
+						<f:link.external uri="{settings.linkedInLink}" class="contacts-card__contact-linkedin" defaultScheme="https" target="_blank">{settings.linkedInLink}
 						</f:link.external>
 					</div>
-				</f:if>
-			</div>
+			</f:if>
+		</div>
 </div>
 	
 <!-- theme_t3kit: Templates/ContentElements/ContactsCard.html [end] -->
