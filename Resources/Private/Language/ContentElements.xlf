@@ -380,7 +380,7 @@
 				<source>Contacts Card</source>
 			</trans-unit>
 			<trans-unit id="contactsCard.description">
-				<source>Contacts Card</source>
+				<source>Photo and contact information</source>
 			</trans-unit>
 			<trans-unit id="contactsCard.name"> 
 				<source>Full Name</source>
