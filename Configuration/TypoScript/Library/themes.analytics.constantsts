@@ -1,6 +1,0 @@
-#############################################
-# Google Analytics tracking
-#############################################
-# customsubcategory=analytics= Analytics
-# cat=theme,expert/analytics/; type=string; label= Google Analytics Account
-themes.configuration.tracking.ga_account =
