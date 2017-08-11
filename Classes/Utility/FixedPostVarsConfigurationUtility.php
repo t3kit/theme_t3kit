@@ -8,6 +8,7 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\DatabaseConnection;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\PathUtility;
 
 /**
  * Class FixedPostVarsConfigurationUtility
@@ -186,8 +187,8 @@ class FixedPostVarsConfigurationUtility
      */
     protected function canWriteConfiguration($fileLocation)
     {
-        $typo3confFolder = PATH_typo3conf;
-        return @is_writable($typo3confFolder) && (!file_exists($fileLocation) || @is_writable($fileLocation));
+        $directoryName = PathUtility::dirname($fileLocation);
+        return @is_writable($directoryName) && (!file_exists($fileLocation) || @is_writable($fileLocation));
     }
 
     /**
@@ -205,6 +206,6 @@ class FixedPostVarsConfigurationUtility
             $filePath = PATH_site . 'typo3conf/realurl_fixedPostVars_conf.php';
         }
 
-        return $filePath;
+        return PathUtility::getCanonicalPath($filePath);
     }
 }
