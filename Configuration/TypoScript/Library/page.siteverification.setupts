@@ -1,0 +1,10 @@
+#Google site verification meta tag only for the startpage
+[globalVar = TSFE:id={$themes.configuration.pages.startsite}]
+  page.meta {
+    google-site-verification = TEXT
+    google-site-verification {
+        if.isPositive = {$themes.configuration.tracking.ga_siteVerification}
+        value = {$themes.configuration.tracking.ga_siteVerification}
+    }
+   }
+[end]
