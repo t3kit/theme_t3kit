@@ -35,7 +35,7 @@ TCEFORM.tt_content.tx_themes_behaviour.disabled = 1
 
 
 TCEMAIN.permissions {
-    groupid = 3
+    groupid = 7
     user = show,editcontent,new,edit,delete
     group = show,editcontent,new,edit,delete
 }
