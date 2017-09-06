@@ -11,6 +11,8 @@ plugin.tx_themes {
             emailUs_label = Email us at
             search_label = Search
             search_placeholder = Search...
+            phone_label = TEL
+            email_label = EMAIL
         }
         sv {
             languageMenu_label = Välj språk
@@ -23,6 +25,8 @@ plugin.tx_themes {
             emailUs_label = E-post
             search_label = Sök
             search_placeholder = Sök...
+            phone_label = TEL
+            email_label = EMAIL
         }
         de {
             languageMenu_label = Wähle deine Sprache aus
@@ -35,6 +39,8 @@ plugin.tx_themes {
             emailUs_label = Email an
             search_label = Suche
             search_placeholder = Suche...
+            phone_label = TEL
+            email_label = EMAIL
         }
         da {
             languageMenu_label = Vælg sprog
@@ -47,6 +53,8 @@ plugin.tx_themes {
             emailUs_label = E-post til
             search_label = Søg
             search_placeholder = Søg...
+            phone_label = TEL
+            email_label = EMAIL
         }
     }
 }

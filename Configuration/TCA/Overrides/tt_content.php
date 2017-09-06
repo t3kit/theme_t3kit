@@ -819,6 +819,45 @@ call_user_func(function() {
     // ======================= divider [end] ==========================================
 
 
+    // ======================= contactCard [begin] ==========================================
+    // contactCard CType
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+        'tt_content',
+        'CType',
+        [
+            $contentElementLanguageFilePrefix . 'contactsCard.title',
+            'contactsCard',
+            'content-elements-contactsCard'
+        ],
+        'copyrightText',
+        'after'
+    );
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['contactsCard'] = 'content-elements-contactsCard';
+
+    // contactsCard backend fields
+    $GLOBALS['TCA']['tt_content']['types']['contactsCard'] = [
+        'showitem' => '
+            --div--;' .  $coreLanguageFilePrefix .'general,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
+                header;' . $contentElementLanguageFilePrefix . 'contactsCard.name,
+                --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'contactsCard.job,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.images,image,
+                --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageSize,
+
+            --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'extended,
+        '
+    ];
+
+    // contactsCard flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contactsCard'] = $flexformPath . 'flexform_contactsCard.xml';
+    // ======================= contactCard [end] ==========================================
+
+
 
     //
     // Palettes
