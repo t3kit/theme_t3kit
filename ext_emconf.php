@@ -39,10 +39,10 @@ $EM_CONF[$_EXTKEY] = array(
             'dyncss_less' => '0.7.9-0.7.99',
             'gridelements' => '8.0.0-8.0.99',
             'realurl' => '2.2.0-2.2.99',
-            'go_maps_ext' => '2.2.0-2.2.99',
-            'cs_seo' => '2.0.0-2.0.99',
-            'news' => '5.3.3-5.3.99',
-            'frontend_editing' => '1.0.0-1.0.99'
+            'go_maps_ext' => '2.3.0-2.3.99',
+            'cs_seo' => '2.1.0-2.1.99',
+            'news' => '6.0.0-6.0.99',
+            'frontend_editing' => '1.1.0-1.1.99'
         ),
         'conflicts' => array(
         ),
