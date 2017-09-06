@@ -26,28 +26,26 @@
     {
       "type": "composer",
       "url": "https://composer.typo3.org/"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/svewap/realurl_404_multilingual"
     }
   ],
   "minimum-stability": "dev",
   "require": {
     "php": "^7.0",
-    "typo3/cms": "^8.7",
-    "typo3-ter/realurl": "2.2.1",
-    "typo3-themes/themes": "dev-8-0",
+    "typo3/cms": "~8.7.0",
+    "typo3-themes/themes": "~8.7.0",
+    "typo3-ter/dyncss-less": "~0.7.9",
     "gridelementsteam/gridelements": "dev-master",
-    "apache-solr-for-typo3/solr": "6.1.0",
-    "typo3-ter/dyncss-less": "0.7.9",
-    "clickstorm/go_maps_ext": "2.3.0",
-    "clickstorm/cs_seo": "2.1.2",
-    "typo3-ter/news": "6.0.0",
-    "typo3-ter/pxa-newsletter-subscription": "5.0.2",
-    "typo3-ter/pxa-form-enhancement": "3.0.0",
-    "typo3-ter/pxa-cookie-bar": "1.0.7",
-    "svewap/realurl-404-multilingual": "1.0.9",
-    "typo3-ter/frontend-editing": "1.1.2"
-    }
+    "typo3-ter/realurl": "~2.2.1",
+    "clickstorm/go_maps_ext": "~2.3.0",
+    "clickstorm/cs_seo": "~2.1.2",
+    "typo3-ter/news": "~6.0.0",
+    "typo3-ter/frontend-editing": "~1.1.2"
+  },
+  "suggest": {
+    "apache-solr-for-typo3/solr": "",
+    "typo3-ter/pxa-newsletter-subscription": "",
+    "typo3-ter/pxa-form-enhancement": "",
+    "typo3-ter/pxa-cookie-bar": "",
+    "svewap/realurl-404-multilingual": ""
+  }
 }
