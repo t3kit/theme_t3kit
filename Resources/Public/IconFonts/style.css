@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('fonts/icons.ttf?urtbau') format('truetype'),
-    url('fonts/icons.woff?urtbau') format('woff'),
-    url('fonts/icons.svg?urtbau#icons') format('svg');
+    url('fonts/icons.ttf?ifwz8v') format('truetype'),
+    url('fonts/icons.woff?ifwz8v') format('woff'),
+    url('fonts/icons.svg?ifwz8v#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -416,6 +416,9 @@
 }
 .icon-file-zip:before {
   content: "\e92b";
+}
+.icon-xing:before {
+  content: "\ead4";
 }
 .icon-folder-o:before {
   content: "\f114";

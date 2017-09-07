@@ -346,6 +346,9 @@
 			<trans-unit id="socialIcons.flexform.linkedInLink">
 				<source>LinkedIn: Pagelink</source>
 			</trans-unit>
+			<trans-unit id="socialIcons.flexform.xingLink">
+				<source>XING: Pagelink</source>
+			</trans-unit>
 			<trans-unit id="socialIcons.flexform.pinterestLink">
 				<source>Pinterest: Pagelink</source>
 			</trans-unit>
