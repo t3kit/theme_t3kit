@@ -52,6 +52,16 @@
 							</config>
 						</TCEforms>
 					</linkedInLink>
+					<xingLink>
+						<TCEforms>
+							<label>
+								LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:socialIcons.flexform.xingLink
+							</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</xingLink>
 					<pinterestLink>
 						<TCEforms>
 							<label>

@@ -36,7 +36,19 @@
 					</f:then>
 					<f:else>
 						<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.linkedInLink')}"
-							   target="_blank" title="LinkedIn"><span class="icons icon-t3-linkedin"></span></a>
+						   target="_blank" title="LinkedIn"><span class="icons icon-t3-linkedin"></span></a>
+					</f:else>
+				</f:if>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useXing')}">
+				<f:if condition="{settings.xingLink}">
+					<f:then>
+						<a class="social-icons__item" href="{settings.xingLink}"
+						   target="_blank" title="Xing"><span class="icons icon-t3-xing"></span></a>
+					</f:then>
+					<f:else>
+						<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.xingLink')}"
+						   target="_blank" title="Xing"><span class="icons icon-t3-xing"></span></a>
 					</f:else>
 				</f:if>
 			</f:if>
