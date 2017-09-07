@@ -15,6 +15,7 @@ mod.wizards.newContentElement.wizardItems.contentElements {
         socialIcons.tt_content_defValues.CType = socialIcons
         contacts.tt_content_defValues.CType = contacts
         copyrightText.tt_content_defValues.CType = copyrightText
+        contactsCard.tt_content_defValues.CType = contactsCard
     }
 }
 

@@ -6,6 +6,7 @@
 # customsubcategory=socialmedia_facebook=Facebook
 # customsubcategory=socialmedia_twitter=Twitter
 # customsubcategory=socialmedia_linkedin=LinkedIn
+# customsubcategory=socialmedia_xing=XING
 # customsubcategory=socialmedia_vimeo=Vimeo
 # customsubcategory=socialmedia_google_plus=Google Plus
 # customsubcategory=socialmedia_pinterest=Pinterest
@@ -36,6 +37,13 @@ themes.configuration.socialmedia.useLinkedIn = 1
 
 # cat=socialmedia,advanced/socialmedia_linkedin/; type=string; label= LinkedIn: Pagelink
 themes.configuration.socialmedia.linkedInLink = https://www.linkedin.com/company/typo3-association
+
+# Xing
+# cat=socialmedia,advanced/socialmedia_xing/; type=options[Show=1,Hide=0]; label= XING: Activate?!
+themes.configuration.socialmedia.useXing = 1
+
+# cat=socialmedia,advanced/socialmedia_xing/; type=string; label= XING: Pagelink
+themes.configuration.socialmedia.xingLink = https://www.xing.com/companies/typo3association
 
 
 # Vimeo
