@@ -125,6 +125,24 @@
 			<trans-unit id="bootstrapSlider.flexform.quickselect">
 				<source>Quickselect</source>
 			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.showHeadlineH1">
+				<source>Show first title as H1. Use this option only if the page has no H1 yet.</source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.fixedCaption">
+				<source>Fixed Caption</source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.fixedTitle">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.fixedDescription">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.fixedLinkText">
+				<source>Link Text</source>
+			</trans-unit>
+			<trans-unit id="bootstrapSlider.flexform.fixedLink">
+				<source>Link</source>
+			</trans-unit>
 
 			<!--bigIconTextButton Element-->
 			<trans-unit id="bigIconTextButton.title">

@@ -3,37 +3,67 @@
 <f:layout name="Default" />
 <f:section name="Header" />
 <f:section name="Main">
-<!-- theme_t3kit: Templates/ContentElements/BootstrapSlider.html [begin] -->
 	<f:if condition="{slides}">
-		<div id="carousel-{data.uid}" class="carousel image-slider slide" data-interval="{settings.interval}000" data-ride="carousel">
+		<div id="carousel-{data.uid}" class="carousel image-slider slide"
+			data-interval="{f:if(condition:'{settings.interval}==0', then:'false', else:'{settings.interval}000')}"
+			data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<f:for each="{slides}" as="image" iteration="iteration">
+					<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
+						<f:media
+							file="{image}"
+							height="{data.imageheight}c"
+							width="{data.imagewidth}c"
+							alt="{image.alternative}"
+							title="{image.title}"/>
+
+						<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
+							<f:then> </f:then>
+							<f:else>
+								<f:render section="caption"
+									arguments="{
+									title: image.title,
+									description: image.description,
+									linkText: image.referenceProperties.tx_themet3kit_slide_btn_txt,
+									link: image.link,
+									settings: settings,
+									firstImage: iteration.isFirst}" />
+							</f:else>
+						</f:if>
+					</div>
+				</f:for>
+			</div>
+
+			<f:comment>If one of the fixed settings is enabled show the fixed caption</f:comment>
+			<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
+				<f:render section="caption"
+					arguments="{
+					title: settings.fixedTitle,
+					description: settings.fixedDescription,
+					linkText: settings.fixedLinkText,
+					link: settings.fixedLink,
+					settings: settings,
+					firstImage: 'true'}" />
+			</f:if>
 
 			<f:if condition="{settings.quickselect}">
 				<f:if condition="{slides->f:count()} > 1">
 					<ol class="carousel-indicators">
 						<f:for each="{slides}" as="image" iteration="iteration">
-							<li data-target="#carousel-{data.uid}" data-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')}">
-							</li>
+							<li data-target="#carousel-{data.uid}" data-slide-to="{iteration.index}"
+								class="{f:if(condition: iteration.isFirst, then: 'active')}"></li>
 						</f:for>
 					</ol>
 				</f:if>
 			</f:if>
 
-			<div class="carousel-inner" role="listbox">
-				<f:for each="{slides}" as="image" iteration="iteration">
-					<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
-
-						<f:render section="Image" arguments="{_all}" />
-					</div>
-				</f:for>
-			</div>
-
 			<f:if condition="{slides->f:count()} > 1">
 				<div class="container carousel-control-wrapper">
 					<a class="carousel-control left" href="#carousel-{data.uid}" role="button" data-slide="prev">
-						<span class="swiper-button-prev swiper-button-white"></span>
+						<span class="icons icon-chevron-left"></span>
 					</a>
 					<a class="carousel-control right" href="#carousel-{data.uid}" role="button" data-slide="next">
-						<span class="swiper-button-next swiper-button-white"></span>
+						<span class="icons icon-chevron-right"></span>
 					</a>
 				</div>
 			</f:if>
@@ -41,44 +71,27 @@
 	</f:if>
 </f:section>
 
-<f:section name="Image">
-	<f:image src="{image.uid}" height="{data.imageheight}c" width="{data.imagewidth}c" treatIdAsReference="1"/>
-	<f:if condition="{image.referenceProperties.title}">
-		<f:then>
-			<div class="carousel-caption">
-				<h2 class="img-slider__caption-header">{image.referenceProperties.title}</h2>
+<f:section name="caption">
+	<f:if condition="{title} || {description} || {link}">
+		<div class="carousel-caption">
+			<f:if condition="{title} && {firstImage} && {settings.showHeadlineH1}">
+				<f:then><h1>{title}</h1></f:then>
+				<f:else><h2>{title}</h2></f:else>
+			</f:if>
 
-				<f:if condition="{image.referenceProperties.description}">
-					<p class="img-slider__caption-p js__img-slider__caption-p">{image.referenceProperties.description}</p>
-				</f:if>
+			<f:if condition="{description}">
+				<p class="carousel__description">{description}</p>
+			</f:if>
 
-				<f:if condition="{image.referenceProperties.link}">
-					<f:link.typolink parameter="{image.referenceProperties.link}" class="btn btn-primary"><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit" /></f:link.typolink>
-				</f:if>
-			</div>
-		</f:then>
-		<f:else>
-			<f:then>
-				<f:if condition="{image.referenceProperties.description}">
-					<div class="carousel-caption">
-						<p class="img-slider__caption-p js__img-slider__caption-p">{image.referenceProperties.description}</p>
-
-						<f:if condition="{image.referenceProperties.link}">
-							<f:link.typolink parameter="{image.referenceProperties.link}" class="btn btn-primary"><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit" /></f:link.typolink>
-						</f:if>
-					</div>
-				</f:if>
-			</f:then>
-			<f:else>
-				<f:if condition="{image.referenceProperties.link}">
-					<div class="carousel-caption">
-						<f:link.typolink parameter="{image.referenceProperties.link}" class="btn btn-primary"><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit" /></f:link.typolink>
-					</div>
-				</f:if>
-			</f:else>
-		</f:else>
+			<f:if condition="{link}">
+				<f:link.typolink parameter="{link}" class="btn carousel__btn">
+					<f:if condition="{linkText}">
+						<f:then>{linkText}</f:then>
+						<f:else><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit"/></f:else>
+					</f:if>
+				</f:link.typolink>
+			</f:if>
+		</div>
 	</f:if>
-<!-- theme_t3kit: Templates/ContentElements/BootstrapSlider.html [end] -->
 </f:section>
-
 </html>

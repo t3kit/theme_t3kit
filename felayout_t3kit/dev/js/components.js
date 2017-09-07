@@ -34,3 +34,10 @@
 @import '../../node_modules/jarallax/jarallax/jarallax.js';
 @import '../../node_modules/jarallax/jarallax/jarallax-video.js';
 //==============================================================================
+
+
+// jQuery touch swipe
+// https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+//==============================================================================
+@import '../../node_modules/jquery-touchswipe/jquery.touchSwipe.min.js';
+//==============================================================================
