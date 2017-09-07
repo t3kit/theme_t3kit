@@ -92,17 +92,29 @@
 			</f:if>
 
 			<f:if condition="{settings.detail.showSocialShareButtons}">
-				<div class="facebook">
-					<div class="like">
-						<n:social.facebook.like />
-					</div>
-					<div class="share">
-						<n:social.facebook.share />
-					</div>
-					<div class="twitter">
-						<n:social.twitter>Twitter</n:social.twitter>
-					</div>
-				</div>
+				<f:comment>
+					Care about the privacy of your readers?
+					Checkout https://typo3.org/extensions/repository/view/rx_shariff
+					and it will be used automatically!
+				</f:comment>
+				<n:extensionLoaded extensionKey="rx_shariff">
+					<f:then>
+						<f:render partial="Detail/Shariff" />
+					</f:then>
+					<f:else>
+						<div class="facebook">
+							<div class="like">
+								<n:social.facebook.like />
+							</div>
+							<div class="share">
+								<n:social.facebook.share />
+							</div>
+							<div class="twitter">
+								<n:social.twitter>Twitter</n:social.twitter>
+							</div>
+						</div>
+					</f:else>
+				</n:extensionLoaded>
 			</f:if>
 
 			<f:if condition="{settings.detail.disqusShortname}">

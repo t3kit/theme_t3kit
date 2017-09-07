@@ -588,7 +588,7 @@ var mainSearchInputList = {}
       heightRatio: 0.6
     })
   })
-})(jQuery)
+})(jQuery);
 
 // ^^^^^^^^^^ general.js ^^^^^^^^^^^
 

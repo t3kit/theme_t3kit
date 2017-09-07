@@ -32,5 +32,10 @@
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/setup.ts">
 [global]
 
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rx_shariff')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome/setup.txt">
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/Library/plugin.rx_shariff.setupts">
+[global]
+
 # Include setupTS files from fileadmin/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/" extensions="setupts">
