@@ -1,4 +1,9 @@
 
+#### v2.2.2 `September 8, 2017`
+- **[BUGFIX]** change package name for realurl-404-multilingual ([9f1f7f1](https://github.com/t3kit/theme_t3kit/commit/9f1f7f1))
+
+***
+
 #### v2.2.1 `July 4, 2017`
 - **[BUGFIX]** decrease view (1700 to 400) priority in ext:theme template, fix #244 ([701bbc8](https://github.com/t3kit/theme_t3kit/commit/701bbc8))
 - **[BUGFIX]** news simple list, fix image scaling (#243) ([47a4f42](https://github.com/t3kit/theme_t3kit/commit/47a4f42))
