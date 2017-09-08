@@ -26,10 +26,6 @@
     {
       "type": "composer",
       "url": "https://composer.typo3.org/"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/svewap/realurl_404_multilingual"
     }
   ],
   "minimum-stability": "dev",
@@ -47,7 +43,7 @@
     "typo3-ter/pxa-newsletter-subscription": "5.0.2",
     "typo3-ter/pxa-form-enhancement": "3.0.0",
     "typo3-ter/pxa-cookie-bar": "1.0.7",
-    "wapplersystems/realurl-404-multilingual": "dev-master",
-    "typo3-ter/frontend-editing": "1.0.9"
+    "svewap/realurl-404-multilingual": "1.0.9",
+    "typo3-ter/frontend-editing": "1.1.2"
   }
 }
