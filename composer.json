@@ -37,7 +37,7 @@
     "php": "^7.0",
     "typo3/cms": "^8.7",
     "typo3-ter/realurl": "2.2.1",
-    "typo3-themes/themes": "dev-8-0",
+    "typo3-themes/themes": "8.7.0",
     "gridelementsteam/gridelements": "dev-master",
     "apache-solr-for-typo3/solr": "6.1.0",
     "typo3-ter/dyncss-less": "0.7.9",
