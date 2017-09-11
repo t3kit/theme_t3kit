@@ -9,6 +9,7 @@
 @import 'main/contentElements/heroImage.js';
 @import 'main/contentElements/sliderContainer.js';
 @import 'main/contentElements/imageTextLink.js';
+@import 'main/contentElements/bootstrapSlider.js';
 
 // plugins
 @import 'main/plugins/news/newsCarousel.js';

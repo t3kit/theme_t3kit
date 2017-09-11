@@ -20,8 +20,6 @@
 							</config>
 						</TCEforms>
 					</interval>
-
-					<!-- Show or hide the small circles on bottom of slider to navigate to each slide. -->
 					<quickselect>
 						<TCEforms>
 							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.quickselect</label>
@@ -30,8 +28,76 @@
 							</config>
 						</TCEforms>
 					</quickselect>
+					<showHeadlineH1>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.showHeadlineH1</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</showHeadlineH1>
 				</el>
 			</ROOT>
 		</sDEF>
+		<fixedCaption>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.fixedCaption</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<fixedTitle>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.fixedTitle</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</fixedTitle>
+					<fixedDescription>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.fixedDescription</label>
+							<config>
+								<type>text</type>
+							</config>
+						</TCEforms>
+					</fixedDescription>
+					<fixedLinkText>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.fixedLinkText</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</fixedLinkText>
+					<fixedLink>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:bootstrapSlider.flexform.fixedLink</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+								<softref>typolink,typolink_tag,images,url</softref>
+								<wizards>
+									<_PADDING>2</_PADDING>
+									<link>
+										<type>popup</type>
+										<title>Link</title>
+										<module>
+											<name>wizard_element_browser</name>
+											<urlParameters>
+												<mode>wizard</mode>
+											</urlParameters>
+										</module>
+										<icon>link_popup.gif</icon>
+										<JSopenParams>height=500,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+									</link>
+								</wizards>
+							</config>
+						</TCEforms>
+					</fixedLink>
+				</el>
+			</ROOT>
+		</fixedCaption>
 	</sheets>
 </T3DataStructure>

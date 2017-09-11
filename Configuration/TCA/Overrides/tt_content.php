@@ -354,8 +354,15 @@ call_user_func(function() {
 
     // BootstrapSlider flexform
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = $flexformPath . 'flexform_bootstrapSlider.xml';
-    // ======================= BootstrapSlider [end] ==========================================
 
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['appearance']['collapseAll'] = 0;
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'] = '--div--;tx_themet3kit_slide_btn_txt, --palette--;;imageoverlayPalette, --palette--;;filePalette';
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['2']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['3']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['4']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['5']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
+    // ======================= BootstrapSlider [end] ==========================================
 
 
     // ======================= contentElementSlider [begin] ==========================================

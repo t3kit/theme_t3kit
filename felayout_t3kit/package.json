@@ -13,6 +13,7 @@
     "flag-icon-css": "2.8.0",
     "jarallax": "1.7.3",
     "jquery": "3.2.1",
+    "jquery-touchswipe": "^1.6.15",
     "simplelightbox": "1.10.7",
     "smtlk-dotdotdot": "1.8.3",
     "swiper": "3.4.2"
