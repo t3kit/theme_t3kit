@@ -1,4 +1,9 @@
 
+#### v2.2.3 `September 11, 2017`
+- **[BUGFIX]** set version of themes extension ([297d5e5](https://github.com/t3kit/theme_t3kit/commit/297d5e5))
+
+***
+
 #### v2.2.2 `September 8, 2017`
 - **[BUGFIX]** change package name for realurl-404-multilingual ([9f1f7f1](https://github.com/t3kit/theme_t3kit/commit/9f1f7f1))
 
