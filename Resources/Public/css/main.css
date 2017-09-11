@@ -25,6 +25,9 @@
 .icon-t3-linkedin:before {
   content: "\eaca";
 }
+.icon-t3-xing:before {
+  content: "\ead4";
+}
 .icon-t3-vimeo:before {
   content: "\eaa0";
 }
@@ -1707,7 +1710,7 @@
   background: #ddd;
   padding: 4px 10px;
 }
-.news-single .twitter {
+.news-single .facebook > .twitter {
   padding-top: 6px;
 }
 .news-single .article > .facebook {
@@ -4471,6 +4474,65 @@ div.awesomplete li[aria-selected="true"] mark {
   .top-content .carousel-caption {
     width: 35%;
   }
+}
+.contacts-card {
+  background: #fff;
+  box-shadow: 0 2px 18px -4px #2b2b2b;
+}
+.contacts-card__contacts {
+  text-align: center;
+  padding: 0 32px 40px;
+  border-top: 15px solid #50b4d8;
+}
+.contacts-card__contact-name {
+  font-size: 35px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+.contacts-card__contact-job {
+  color: #50b4d8;
+  margin-bottom: 15px;
+}
+.contacts-card__contacts .icons {
+  color: #50b4d8;
+  margin-right: 4px;
+}
+.contacts-card__contact-phone {
+  color: #000000;
+  display: inline-block;
+  margin: 0;
+}
+.contacts-card__contact-email-wrp,
+.contacts-card__contact-linkedin-wrp {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.contacts-card__contact-email,
+.contacts-card__contact-linkedin {
+  color: #000000;
+}
+.contacts-card__contact-email.active.focus,
+.contacts-card__contact-linkedin.active.focus,
+.contacts-card__contact-email:active.focus,
+.contacts-card__contact-linkedin:active.focus,
+.contacts-card__contact-email.active:focus,
+.contacts-card__contact-linkedin.active:focus,
+.contacts-card__contact-email:active:focus,
+.contacts-card__contact-linkedin:active:focus {
+  color: #000000;
+  text-decoration: underline;
+}
+.contacts-card__contact-email.focus,
+.contacts-card__contact-linkedin.focus,
+.contacts-card__contact-email:focus,
+.contacts-card__contact-linkedin:focus,
+.contacts-card__contact-email:hover,
+.contacts-card__contact-linkedin:hover {
+  color: #000000;
+  text-decoration: underline;
 }
 .main-color-wrp {
   background: #50b4d8;
