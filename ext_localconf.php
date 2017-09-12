@@ -60,3 +60,15 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\DmitryDulepov\Realurl\Utility::cl
     = \T3kit\themeT3kit\Xclass\Realurl\Utility::class;
 
 $GLOBALS['TYPO3_CONF_VARS']['BE']['interfaces'] = 'frontend,backend';
+
+// register to signal slot from SystemInformationToolbarItem to include
+// Themes Development Mode constant setting per "siteroot" to system information
+$signalSlotDispatcher = TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+    \TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class
+);
+$signalSlotDispatcher->connect(
+    \TYPO3\CMS\Backend\Backend\ToolbarItems\SystemInformationToolbarItem::class,
+    'getSystemInformation',
+    \T3kit\themeT3kit\Slot\GetSystemInformationSlot::class,
+    'getSystemInformation'
+);
