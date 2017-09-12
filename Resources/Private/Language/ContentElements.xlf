@@ -108,6 +108,9 @@
 			<trans-unit id="slider.link.text">
 				<source>Link text</source>
 			</trans-unit>
+			<trans-unit id="slider.flexform.useSlideOneHeaderAsPageHeader">
+				<source>Use the Title from the first slide as main header of the page (h1)</source>
+			</trans-unit>
 
 			<!--Bootstrap slider-->
 			<trans-unit id="bootstrap.slider.tabs.slides">
