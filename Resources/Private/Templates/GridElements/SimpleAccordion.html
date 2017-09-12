@@ -1,5 +1,5 @@
 {namespace theme=KayStrobach\Themes\ViewHelpers}
-<f:layout name="{f:if(condition: data.tx_gridelements_container, then: 'Empty', else: 'Default')}" />
+<f:layout name="NoBgImage" />
 <f:section name="Main">
 	<div class="panel-group" id="group-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" role="tablist">
 		<f:for each="{data.tx_gridelements_view_children}" as="panel" iteration="panelnumber">

@@ -7,7 +7,7 @@
 	</f:if>
 
 	<f:comment><!-- ### element body ### --></f:comment>
-	<div id="c{data.uid}" class="frame frame-type-{data.CType} {layoutClass} {f:if(condition: data.layout, then: ' frame-layout-{data.layout}')} {alignClass} {f:if( condition: data.flexform_container, then: ' {data.flexform_container}')}">
+	<div id="c{data.uid}" class="frame frame-type-{data.CType} {layoutClass} {f:if(condition: data.layout, then: ' frame-layout-{data.layout}')} {alignClass}">
 		<f:if condition="{data._LOCALIZED_UID}">
 			<a id="c{data._LOCALIZED_UID}"></a>
 		</f:if>
