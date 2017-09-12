@@ -65,15 +65,17 @@ class GetSystemInformationSlot
 
                         $inProductionMode
                             = $themeConfiguration['isDevelopment'] === '0';
+
                         $themeMode = $inProductionMode
                             ? 'Production'
                             : 'Development';
+
                         $themeStatus = $inProductionMode
                             ? InformationStatus::STATUS_OK
                             : InformationStatus::STATUS_WARNING;
             
                         $sysInfoToolbarItem->addSystemInformation(
-                            'Theme mode [' . $rootSysTemplate['pid'] .']',
+                            'Theme mode [' . $rootSysTemplate['pid'] . ']',
                             $themeMode,
                             'sysinfo-application-context',
                             $themeStatus
