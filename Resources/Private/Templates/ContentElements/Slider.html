@@ -3,11 +3,12 @@
 <f:layout name="Default" />
 <f:section name="Header" />
 <f:section name="Main">
+
 <!-- theme_t3kit: Templates/ContentElements/Slider.html [begin] -->
 	<f:if condition="{slides}">
 		<div class="img-slider swiper-container js__img-slider" data-autoplay="{f:if(condition: '{settings.autoplay} > 0', then: settings.autoplay)}">
 			<div class="swiper-wrapper img-slider__wrp">
-				<f:for each="{slides}" as="image">
+				<f:for each="{slides}" as="image" iteration="slideIteration">
 					<div class="swiper-slide img-slider__slide {settings.appearance.{image.referenceProperties.tx_themet3kit_slide_appearance}}">
 						<div data-background="{f:uri.image(src: '{image.uid}', treatIdAsReference:"1", width:'{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultWidth)}')}" class="swiper-lazy img-slider__slide-bg">
 							<div class="swiper-lazy-preloader"></div>
@@ -16,7 +17,14 @@
 									<h3 class="img-slider__caption-sub-header">{image.referenceProperties.alternative}</h3>
 								</f:if>
 								<f:if condition="{image.referenceProperties.title}">
-									<h2 class="img-slider__caption-header">{image.referenceProperties.title}</h2>
+									<f:if condition="{slideIteration.cycle} == 1 && {settings.useSlideOneHeaderAsPageHeader}">
+										<f:then>
+											<h1 class="img-slider__caption-header">{image.referenceProperties.title}</h1>
+										</f:then>
+										<f:else>
+											<h2 class="img-slider__caption-header">{image.referenceProperties.title}</h2>
+										</f:else>
+									</f:if>
 								</f:if>
 								<f:if condition="{image.referenceProperties.description}">
 									<p class="img-slider__caption-p js__img-slider__caption-p">{image.referenceProperties.description}</p>
