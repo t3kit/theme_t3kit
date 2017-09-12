@@ -41,7 +41,7 @@ $EM_CONF[$_EXTKEY] = array(
             'realurl' => '2.2.0-2.2.99',
             'go_maps_ext' => '2.3.0-2.3.99',
             'cs_seo' => '2.1.2-2.1.99',
-            'news' => '6.0.0-6.0.99',
+            'news' => '6.1.0-6.1.99',
             'frontend_editing' => '1.2.0-1.2.99'
         ),
         'conflicts' => array(
