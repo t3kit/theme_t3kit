@@ -1188,6 +1188,9 @@
   background: #181818;
   border-top: 15px solid #181818;
 }
+.footer a {
+  color: #50b4d8;
+}
 .footer p {
   color: #8d8d8d;
   font-weight: 400;
@@ -1221,7 +1224,6 @@
 }
 .footer__quick-links ul > li > a {
   transition: color 0.2s ease;
-  color: #50b4d8;
   padding-left: 0;
   padding-bottom: 2px;
   font-weight: 400;
@@ -1274,7 +1276,6 @@
   transition: color 0.2s ease;
   padding: 0 10px;
   font-size: 14px;
-  color: #50b4d8;
 }
 @media (min-width: 992px) {
   .footer__bottom {
