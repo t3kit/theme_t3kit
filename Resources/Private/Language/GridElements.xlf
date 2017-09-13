@@ -122,6 +122,16 @@
 			<trans-unit id="column_4_layout">
 				<source>Column 4 Layout</source>
 			</trans-unit>
+			<trans-unit id="column_layout.footer_quick_links">
+				<source>Footer quick links</source>
+			</trans-unit>
+			<trans-unit id="column_layout.footer_copyright">
+				<source>Footer copyright</source>
+			</trans-unit>
+			<trans-unit id="column_layout.footer_bottom_nav">
+				<source>Footer bottom navigation</source>
+			</trans-unit>
+
 
 			<trans-unit id="column_1_offset">
 				<source>Column 1 Offset</source>

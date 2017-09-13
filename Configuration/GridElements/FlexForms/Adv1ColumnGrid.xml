@@ -311,6 +311,18 @@
 													<numIndex index="0">-</numIndex>
 													<numIndex index="1"></numIndex>
 												</numIndex>
+													<numIndex index="1">
+														<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_layout.footer_quick_links</numIndex>
+														<numIndex index="1">footer__quick-links</numIndex>
+													</numIndex>
+													<numIndex index="2">
+														<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_layout.footer_copyright</numIndex>
+														<numIndex index="1">footer__bottom-copyright</numIndex>
+													</numIndex>
+													<numIndex index="3">
+														<numIndex index="0">LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:column_layout.footer_bottom_nav</numIndex>
+														<numIndex index="1">footer__bottom-nav</numIndex>
+													</numIndex>
 											</items>
 											<default></default>
 									</config>
