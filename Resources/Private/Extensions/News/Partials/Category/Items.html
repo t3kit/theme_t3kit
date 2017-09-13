@@ -1,0 +1,15 @@
+<!-- categories -->
+<span class="news-list-category" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	<f:for each="{categories}" as="category" iteration="iterator">
+		<f:if condition="{category.shortcut}">
+			<f:then>
+				<f:link.page pageUid="{category.shortcut}">
+					{category.title}<f:if condition="{iterator.total} > 1 && !{iterator.isLast}">,</f:if>
+				</f:link.page>
+			</f:then>
+			<f:else>
+				{category.title}<f:if condition="{iterator.total} > 1 && !{iterator.isLast}">,</f:if>
+			</f:else>
+		</f:if>
+	</f:for>
+</span>
