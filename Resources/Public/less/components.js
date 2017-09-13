@@ -5369,6 +5369,8 @@ var _ = function (input, o) {
 
 	// Setup
 
+	this.isOpened = false;
+
 	this.input = $(input);
 	this.input.setAttribute("autocomplete", "off");
 	this.input.setAttribute("aria-autocomplete", "list");
@@ -5381,7 +5383,7 @@ var _ = function (input, o) {
 		autoFirst: false,
 		data: _.DATA,
 		filter: _.FILTER_CONTAINS,
-		sort: _.SORT_BYLENGTH,
+		sort: o.sort === false ? false : _.SORT_BYLENGTH,
 		item: _.ITEM,
 		replace: _.REPLACE
 	}, o);
@@ -5410,47 +5412,55 @@ var _ = function (input, o) {
 
 	// Bind events
 
-	$.bind(this.input, {
-		"input": this.evaluate.bind(this),
-		"blur": this.close.bind(this, { reason: "blur" }),
-		"keydown": function(evt) {
-			var c = evt.keyCode;
+	this._events = {
+		input: {
+			"input": this.evaluate.bind(this),
+			"blur": this.close.bind(this, { reason: "blur" }),
+			"keydown": function(evt) {
+				var c = evt.keyCode;
 
-			// If the dropdown `ul` is in view, then act on keydown for the following keys:
-			// Enter / Esc / Up / Down
-			if(me.opened) {
-				if (c === 13 && me.selected) { // Enter
-					evt.preventDefault();
-					me.select();
+				// If the dropdown `ul` is in view, then act on keydown for the following keys:
+				// Enter / Esc / Up / Down
+				if(me.opened) {
+					if (c === 13 && me.selected) { // Enter
+						evt.preventDefault();
+						me.select();
+					}
+					else if (c === 27) { // Esc
+						me.close({ reason: "esc" });
+					}
+					else if (c === 38 || c === 40) { // Down/Up arrow
+						evt.preventDefault();
+						me[c === 38? "previous" : "next"]();
+					}
 				}
-				else if (c === 27) { // Esc
-					me.close({ reason: "esc" });
-				}
-				else if (c === 38 || c === 40) { // Down/Up arrow
-					evt.preventDefault();
-					me[c === 38? "previous" : "next"]();
+			}
+		},
+		form: {
+			"submit": this.close.bind(this, { reason: "submit" })
+		},
+		ul: {
+			"mousedown": function(evt) {
+				var li = evt.target;
+
+				if (li !== this) {
+
+					while (li && !/li/i.test(li.nodeName)) {
+						li = li.parentNode;
+					}
+
+					if (li && evt.button === 0) {  // Only select on left click
+						evt.preventDefault();
+						me.select(li, evt.target);
+					}
 				}
 			}
 		}
-	});
+	};
 
-	$.bind(this.input.form, {"submit": this.close.bind(this, { reason: "submit" })});
-
-	$.bind(this.ul, {"mousedown": function(evt) {
-		var li = evt.target;
-
-		if (li !== this) {
-
-			while (li && !/li/i.test(li.nodeName)) {
-				li = li.parentNode;
-			}
-
-			if (li && evt.button === 0) {  // Only select on left click
-				evt.preventDefault();
-				me.select(li, evt.target);
-			}
-		}
-	}});
+	$.bind(this.input, this._events.input);
+	$.bind(this.input.form, this._events.form);
+	$.bind(this.ul, this._events.ul);
 
 	if (this.input.hasAttribute("list")) {
 		this.list = "#" + this.input.getAttribute("list");
@@ -5500,7 +5510,7 @@ _.prototype = {
 	},
 
 	get opened() {
-		return !this.ul.hasAttribute("hidden");
+		return this.isOpened;
 	},
 
 	close: function (o) {
@@ -5509,6 +5519,7 @@ _.prototype = {
 		}
 
 		this.ul.setAttribute("hidden", "");
+		this.isOpened = false;
 		this.index = -1;
 
 		$.fire(this.input, "awesomplete-close", o || {});
@@ -5516,6 +5527,7 @@ _.prototype = {
 
 	open: function () {
 		this.ul.removeAttribute("hidden");
+		this.isOpened = true;
 
 		if (this.autoFirst && this.index === -1) {
 			this.goto(0);
@@ -5524,16 +5536,39 @@ _.prototype = {
 		$.fire(this.input, "awesomplete-open");
 	},
 
+	destroy: function() {
+		//remove events from the input and its form
+		$.unbind(this.input, this._events.input);
+		$.unbind(this.input.form, this._events.form);
+
+		//move the input out of the awesomplete container and remove the container and its children
+		var parentNode = this.container.parentNode;
+
+		parentNode.insertBefore(this.input, this.container);
+		parentNode.removeChild(this.container);
+
+		//remove autocomplete and aria-autocomplete attributes
+		this.input.removeAttribute("autocomplete");
+		this.input.removeAttribute("aria-autocomplete");
+
+		//remove this awesomeplete instance from the global array of instances
+		var indexOfAwesomplete = _.all.indexOf(this);
+
+		if (indexOfAwesomplete !== -1) {
+			_.all.splice(indexOfAwesomplete, 1);
+		}
+	},
+
 	next: function () {
 		var count = this.ul.children.length;
-
-		this.goto(this.index < count - 1? this.index + 1 : -1);
+		this.goto(this.index < count - 1 ? this.index + 1 : (count ? 0 : -1) );
 	},
 
 	previous: function () {
 		var count = this.ul.children.length;
+		var pos = this.index - 1;
 
-		this.goto(this.selected? this.index - 1 : count - 1);
+		this.goto(this.selected && pos !== -1 ? pos : count - 1);
 	},
 
 	// Should not be used, highlights specific item without any checks!
@@ -5549,6 +5584,9 @@ _.prototype = {
 		if (i > -1 && lis.length > 0) {
 			lis[i].setAttribute("aria-selected", "true");
 			this.status.textContent = lis[i].textContent;
+
+			// scroll to highlighted element in case parent's height is fixed
+			this.ul.scrollTop = lis[i].offsetTop - this.ul.clientHeight + lis[i].clientHeight;
 
 			$.fire(this.input, "awesomplete-highlight", {
 				text: this.suggestions[this.index]
@@ -5596,9 +5634,13 @@ _.prototype = {
 				})
 				.filter(function(item) {
 					return me.filter(item, value);
-				})
-				.sort(this.sort)
-				.slice(0, this.maxItems);
+				});
+
+			if (this.sort !== false) {
+				this.suggestions = this.suggestions.sort(this.sort);
+			}
+
+			this.suggestions = this.suggestions.slice(0, this.maxItems);
 
 			this.suggestions.forEach(function(text) {
 					me.ul.appendChild(me.item(text, value));
@@ -5637,7 +5679,7 @@ _.SORT_BYLENGTH = function (a, b) {
 };
 
 _.ITEM = function (text, input) {
-	var html = input === '' ? text : text.replace(RegExp($.regExpEscape(input.trim()), "gi"), "<mark>$&</mark>");
+	var html = input.trim() === "" ? text : text.replace(RegExp($.regExpEscape(input.trim()), "gi"), "<mark>$&</mark>");
 	return $.create("li", {
 		innerHTML: html,
 		"aria-selected": "false"
@@ -5740,6 +5782,18 @@ $.bind = function(element, o) {
 	}
 };
 
+$.unbind = function(element, o) {
+	if (element) {
+		for (var event in o) {
+			var callback = o[event];
+
+			event.split(/\s+/).forEach(function(event) {
+				element.removeEventListener(event, callback);
+			});
+		}
+	}
+};
+
 $.fire = function(target, type, properties) {
 	var evt = document.createEvent("HTMLEvents");
 
@@ -5806,12 +5860,10 @@ return _;
 // Touch-friendly image lightbox for mobile and desktop with jQuery
 // https://github.com/andreknieriem/simplelightbox
 //==============================================================================
-
 /*
-	By André Rinas, www.andreknieriem.de
+	By André Rinas, www.andrerinas.de
 	Available for use under the MIT License
 */
-
 ;( function( $, window, document, undefined )
 {
 	'use strict';
@@ -5820,6 +5872,7 @@ $.fn.simpleLightbox = function( options )
 {
 
 	var options = $.extend({
+		sourceAttr: 'href',
 		overlay: true,
 		spinner: true,
 		nav: true,
@@ -5945,7 +5998,9 @@ $.fn.simpleLightbox = function( options )
 		wrapper = $('<div>').addClass('sl-wrapper').addClass(options.className),
 		isValidLink = function( element ){
 			if(!options.fileExt) return true;
-			return $( element ).prop( 'tagName' ).toLowerCase() == 'a' && ( new RegExp( '\.(' + options.fileExt + ')$', 'i' ) ).test( $( element ).attr( 'href' ) );
+			var filEext = /\.([0-9a-z]+)(?=[?#])|(\.)(?:[\w]+)$/gmi;
+			var testExt = $( element ).attr( options.sourceAttr ).match(filEext);
+			return testExt && $( element ).prop( 'tagName' ).toLowerCase() == 'a' && ( new RegExp( '\.(' + options.fileExt + ')$', 'i' ) ).test( testExt );
 		},
 		setup = function(){
 			if(options.close) closeBtn.appendTo(wrapper);
@@ -5968,9 +6023,9 @@ $.fn.simpleLightbox = function( options )
 			index = objects.index(elem);
 			curImg = $( '<img/>' )
 				.hide()
-				.attr('src', elem.attr('href'));
-			if(loaded.indexOf(elem.attr('href')) == -1){
-				loaded.push(elem.attr('href'));
+				.attr('src', elem.attr(options.sourceAttr));
+			if(loaded.indexOf(elem.attr(options.sourceAttr)) == -1){
+				loaded.push(elem.attr(options.sourceAttr));
 			}
 			image.html('').attr('style','');
 			curImg.appendTo(image);
@@ -6070,7 +6125,7 @@ $.fn.simpleLightbox = function( options )
 					if( options.animationSlide ) {
 						if( canTransisions ) {
 							slide(0, 100 * dir + 'px');
-							setTimeout( function(){ slide( options.animationSpeed / 1000, 0 + 'px'), 50 });
+							setTimeout( function(){ slide( options.animationSpeed / 1000, 0 + 'px'); }, 50 );
 						}
 						else {
 							css.left = parseInt( $('.sl-image').css( 'left' ) ) + 100 * dir + 'px';
@@ -6195,13 +6250,13 @@ $.fn.simpleLightbox = function( options )
 		preload = function(){
 			var next = (index+1 < 0) ? objects.length -1: (index+1 >= objects.length -1) ? 0 : index+1,
 				prev = (index-1 < 0) ? objects.length -1: (index-1 >= objects.length -1) ? 0 : index-1;
-			$( '<img />' ).attr( 'src', objects.eq(next).attr( 'href' ) ).on('load', function(){
+			$( '<img />' ).attr( 'src', objects.eq(next).attr( options.sourceAttr ) ).on('load', function(){
 				if(loaded.indexOf($(this).attr('src')) == -1){
 					loaded.push($(this).attr('src'));
 				}
 				objects.eq(index).trigger($.Event('nextImageLoaded.simplelightbox'));
 			});
-			$( '<img />' ).attr( 'src', objects.eq(prev).attr( 'href' ) ).on('load', function(){
+			$( '<img />' ).attr( 'src', objects.eq(prev).attr( options.sourceAttr ) ).on('load', function(){
 				if(loaded.indexOf($(this).attr('src')) == -1){
 					loaded.push($(this).attr('src'));
 				}
@@ -6229,8 +6284,8 @@ $.fn.simpleLightbox = function( options )
 					// fadeout old image
 					var elem = objects.eq(index);
 					curImg
-					.attr('src', elem.attr('href'));
-					if(loaded.indexOf(elem.attr('href')) == -1){
+					.attr('src', elem.attr(options.sourceAttr));
+					if(loaded.indexOf(elem.attr(options.sourceAttr)) == -1){
 						spinner.show();
 					}
 					$('.sl-caption').remove();
@@ -6376,7 +6431,7 @@ $.fn.simpleLightbox = function( options )
 //==============================================================================
 /*!
  * Name    : Just Another Parallax [Jarallax]
- * Version : 1.7.3
+ * Version : 1.8.0
  * Author  : _nK https://nkdev.info
  * GitHub  : https://github.com/nk-o/jarallax
  */
@@ -6411,43 +6466,31 @@ $.fn.simpleLightbox = function( options )
         }());
     }
 
-    var supportTransform = (function () {
-        if (!window.getComputedStyle) {
-            return false;
+    // test if css property supported by browser
+    // like "transform"
+    var tempDiv = document.createElement('div');
+    function isPropertySupported (property) {
+        var prefixes = ['O','Moz','ms','Ms','Webkit'];
+        var i = prefixes.length;
+        if (tempDiv.style[property] !== undefined) {
+            return true;
         }
+        property = property.charAt(0).toUpperCase() + property.substr(1);
+        while (--i > -1 && tempDiv.style[prefixes[i] + property] === undefined) { }
+        return i >= 0;
+    }
 
-        var el = document.createElement('p'),
-            has3d,
-            transforms = {
-                'webkitTransform':'-webkit-transform',
-                'OTransform':'-o-transform',
-                'msTransform':'-ms-transform',
-                'MozTransform':'-moz-transform',
-                'transform':'transform'
-            };
+    var supportTransform = isPropertySupported('transform');
+    var supportTransform3D = isPropertySupported('perspective');
 
-        // Add it to the body to get the computed style.
-        (document.body || document.documentElement).insertBefore(el, null);
-
-        for (var t in transforms) {
-            if (typeof el.style[t] !== 'undefined') {
-                el.style[t] = "translate3d(1px,1px,1px)";
-                has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
-            }
-        }
-
-        (document.body || document.documentElement).removeChild(el);
-
-        return typeof has3d !== 'undefined' && has3d.length > 0 && has3d !== "none";
-    }());
-
-    var isAndroid = navigator.userAgent.toLowerCase().indexOf('android') > -1;
-    var isIOs = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    var isOperaOld = !!window.opera;
-    var isEdge = /Edge\/\d+/.test(navigator.userAgent);
-    var isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
-    var isIE10 = !!Function('/*@cc_on return document.documentMode===10@*/')();
-    var isIElt10 = document.all && !window.atob;
+    var ua = navigator.userAgent;
+    var isAndroid = ua.toLowerCase().indexOf('android') > -1;
+    var isIOs = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+    var isFirefox = ua.toLowerCase().indexOf('firefox') > -1;
+    var isIE = ua.indexOf('MSIE ') > -1    // IE 10 or older
+            || ua.indexOf('Trident/') > -1 // IE 11
+            || ua.indexOf('Edge/') > -1;   // Edge
+    var isIElt10 = document.all && !window.atob; // IE 9 or older
 
     var wndW;
     var wndH;
@@ -6477,7 +6520,6 @@ $.fn.simpleLightbox = function( options )
                 imgSrc            : null,
                 imgWidth          : null,
                 imgHeight         : null,
-                enableTransform   : true,
                 elementInViewport : null,
                 zIndex            : -100,
                 noAndroid         : false,
@@ -6493,7 +6535,7 @@ $.fn.simpleLightbox = function( options )
             _this.options    = _this.extend({}, _this.defaults, dataOptions, userOptions);
 
             // stop init if android or ios
-            if(isAndroid && _this.options.noAndroid || isIOs && _this.options.noIos) {
+            if(!supportTransform || isAndroid && _this.options.noAndroid || isIOs && _this.options.noIos) {
                 return;
             }
 
@@ -6522,7 +6564,10 @@ $.fn.simpleLightbox = function( options )
                 height     : _this.options.imgHeight || null,
                 // fix for some devices
                 // use <img> instead of background image - more smoothly
-                useImgTag  : isIOs || isAndroid || isOperaOld || isIE11 || isIE10 || isEdge
+                useImgTag  : isIOs || isAndroid || isIE,
+
+                // position absolute is needed on IE9 and FireFox because fixed position have glitches
+                position   : !supportTransform3D || isFirefox ? 'absolute' : 'fixed'
             };
 
             if(_this.initImg()) {
@@ -6544,7 +6589,10 @@ $.fn.simpleLightbox = function( options )
 
         // add transform property with vendor prefixes
         if(styles.transform) {
-            styles.WebkitTransform = styles.MozTransform = styles.transform;
+            if (supportTransform3D) {
+                styles.transform += ' translateZ(0)';
+            }
+            styles.WebkitTransform = styles.MozTransform = styles.msTransform = styles.OTransform = styles.transform;
         }
 
         for(var k in styles) {
@@ -6590,9 +6638,7 @@ $.fn.simpleLightbox = function( options )
                 overflow         : 'hidden',
                 pointerEvents    : 'none'
             },
-            imageStyles = {
-                position         : 'fixed'
-            };
+            imageStyles = {};
 
         // save default user styles
         _this.$item.setAttribute('data-jarallax-original-styles', _this.$item.getAttribute('style'));
@@ -6620,7 +6666,7 @@ $.fn.simpleLightbox = function( options )
         _this.$item.appendChild(_this.image.$container);
 
         // use img tag
-        if(_this.image.useImgTag && supportTransform && _this.options.enableTransform) {
+        if(_this.image.useImgTag) {
             _this.image.$item = document.createElement('img');
             _this.image.$item.setAttribute('src', _this.image.src);
             imageStyles = _this.extend({
@@ -6639,19 +6685,14 @@ $.fn.simpleLightbox = function( options )
             }, containerStyles, imageStyles);
         }
 
-        // fix for IE9 and less
-        if(isIElt10) {
-            imageStyles.backgroundAttachment = 'fixed';
-        }
-
         // check if one of parents have transform style (without this check, scroll transform will be inverted)
         // discussion - https://github.com/nk-o/jarallax/issues/9
-        _this.parentWithTransform = 0;
+        var parentWithTransform = 0;
         var $itemParents = _this.$item;
-        while ($itemParents !== null && $itemParents !== document && _this.parentWithTransform === 0) {
+        while ($itemParents !== null && $itemParents !== document && parentWithTransform === 0) {
             var parent_transform = _this.css($itemParents, '-webkit-transform') || _this.css($itemParents, '-moz-transform') || _this.css($itemParents, 'transform');
             if(parent_transform && parent_transform !== 'none') {
-                _this.parentWithTransform = 1;
+                parentWithTransform = 1;
 
                 // add transform on parallax container if there is parent with transform
                 _this.css(_this.image.$container, {
@@ -6660,6 +6701,14 @@ $.fn.simpleLightbox = function( options )
             }
             $itemParents = $itemParents.parentNode;
         }
+
+        // absolute position if one of parents have transformations or parallax without scroll
+        if (parentWithTransform || _this.options.type === 'opacity'|| _this.options.type === 'scale' || _this.options.type === 'scale-opacity') {
+            _this.image.position = 'absolute';
+        }
+
+        // add position to parallax block
+        imageStyles.position = _this.image.position;
 
         // parallax image
         _this.css(_this.image.$item, imageStyles);
@@ -6842,13 +6891,6 @@ $.fn.simpleLightbox = function( options )
             resultH = resultW * imgH / imgW;
         }
 
-        // when disabled transformations, height should be >= window height
-        _this.bgPosVerticalCenter = 0;
-        if(isScroll && resultH < wndH && (!supportTransform || !_this.options.enableTransform)) {
-            _this.bgPosVerticalCenter = (wndH - resultH) / 2;
-            resultH = wndH;
-        }
-
         // center parallax image
         if(isScroll) {
             resultML = contL + (contW - resultW) / 2;
@@ -6858,8 +6900,8 @@ $.fn.simpleLightbox = function( options )
             resultMT = (contH - resultH) / 2;
         }
 
-        // fix if parents with transform style
-        if(supportTransform && _this.options.enableTransform && _this.parentWithTransform) {
+        // fix if parallax block in absolute position
+        if(_this.image.position === 'absolute') {
             resultML -= contL;
         }
 
@@ -6895,7 +6937,6 @@ $.fn.simpleLightbox = function( options )
             contT  = rect.top,
             contH  = rect.height,
             styles = {
-                position           : 'absolute',
                 visibility         : 'visible',
                 backgroundPosition : '50% 50%'
             };
@@ -6939,7 +6980,7 @@ $.fn.simpleLightbox = function( options )
 
         // opacity
         if(_this.options.type === 'opacity' || _this.options.type === 'scale-opacity' || _this.options.type === 'scroll-opacity') {
-            styles.transform = 'translate3d(0, 0, 0)';
+            styles.transform = ''; // empty to add translateZ(0) where it is possible
             styles.opacity = visiblePercent;
         }
 
@@ -6951,33 +6992,19 @@ $.fn.simpleLightbox = function( options )
             } else {
                 scale += _this.options.speed * (1 - visiblePercent);
             }
-            styles.transform = 'scale(' + scale + ') translate3d(0, 0, 0)';
+            styles.transform = 'scale(' + scale + ')';
         }
 
         // scroll
         if(_this.options.type === 'scroll' || _this.options.type === 'scroll-opacity') {
             var positionY = _this.parallaxScrollDistance * fromViewportCenter;
 
-            if(supportTransform && _this.options.enableTransform) {
-                // fix if parents with transform style
-                if(_this.parentWithTransform) {
-                    positionY -= contT;
-                }
-
-                styles.transform = 'translate3d(0, ' + positionY + 'px, 0)';
-            } else if (_this.image.useImgTag) {
-                styles.top = positionY + 'px';
-            } else {
-                // vertical centering
-                if(_this.bgPosVerticalCenter) {
-                    positionY += _this.bgPosVerticalCenter;
-                }
-                styles.backgroundPosition = '50% ' + positionY + 'px';
+            // fix if parallax block in absolute position
+            if(_this.image.position === 'absolute') {
+                positionY -= contT;
             }
 
-            // fixed position is not work properly for IE9 and less
-            // solution - use absolute position and emulate fixed by using container offset
-            styles.position = isIElt10 ? 'absolute' : 'fixed';
+            styles.transform = 'translateY(' + positionY + 'px)';
         }
 
         _this.css(_this.image.$item, styles);
@@ -7781,13 +7808,13 @@ $.fn.simpleLightbox = function( options )
             _this.video.getIframe(function (iframe) {
                 var $parent = iframe.parentNode;
                 _this.css(iframe, {
-                    position: 'fixed',
+                    position: _this.image.position,
                     top: '0px', left: '0px', right: '0px', bottom: '0px',
                     width: '100%',
                     height: '100%',
                     maxWidth: 'none',
                     maxHeight: 'none',
-                    visibility: 'visible',
+                    visibility: 'hidden',
                     margin: 0,
                     zIndex: -1
                 });
