@@ -1,4 +1,4 @@
-<f:layout name="Default" />
+<f:layout name="NoBgImage" />
 <f:section name="Main">
 	<ul class="nav {f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'nav-pills', else: 'nav-tabs')}" role="tablist" id="tab-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" >
 		<f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tabIteration">
