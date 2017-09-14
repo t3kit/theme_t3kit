@@ -23,7 +23,9 @@ class Utility extends \DmitryDulepov\Realurl\Utility
         'ö' => 'o',
         'Å' => 'a',
         'Ä' => 'a',
-        'Ö' => 'o'
+        'Ö' => 'o',
+        'ø' => 'o',
+        'Ø' => 'o'
     ];
 
     /**
