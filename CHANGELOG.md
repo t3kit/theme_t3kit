@@ -1,4 +1,41 @@
 
+#### v2.3.0 `September 14, 2017`
+- **[TASK]** update default groupid for new pages (#262) ([27c7582](https://github.com/t3kit/theme_t3kit/commit/27c7582))
+- **[TASK]** added new Norwegian special character to realurl utility (#281) ([e3eb413](https://github.com/t3kit/theme_t3kit/commit/e3eb413))
+- **[TASK]** remove fixed label "tel:" from Header template (#280) ([ac080fe](https://github.com/t3kit/theme_t3kit/commit/ac080fe))
+- **[DOC]** update README, move t3kit 7 info to the bottom ([7c931eb](https://github.com/t3kit/theme_t3kit/commit/7c931eb))
+- **[TASK]** update travis config ([4ff474c](https://github.com/t3kit/theme_t3kit/commit/4ff474c))
+- **[TASK]** update felayout dependencies ([8aebf1c](https://github.com/t3kit/theme_t3kit/commit/8aebf1c))
+- **[FEATURE]** add an option to use the Title from the first slide as main header of the page in the CE Slider (#275) ([f1db53d](https://github.com/t3kit/theme_t3kit/commit/f1db53d))
+- **[TASK]** update news ext. in ext_emconf.php ([9723f51](https://github.com/t3kit/theme_t3kit/commit/9723f51))
+- **[BUGFIX]** output image alt text from media in ImageTextLink CE:s (#274) ([0ac71e2](https://github.com/t3kit/theme_t3kit/commit/0ac71e2))
+- **[TASK]** update extension news to 6.1.x (#273) ([2ba3252](https://github.com/t3kit/theme_t3kit/commit/2ba3252))
+- **[FEATURE]** display Themes 'Development Mode' setting in system informa… (#272) ([670444e](https://github.com/t3kit/theme_t3kit/commit/670444e))
+- **[TASK]** synchronize extension dependencies between composer.json and ext_emconf.php ([5d3f64d](https://github.com/t3kit/theme_t3kit/commit/5d3f64d))
+- **[TASK]** update composer dependencies ([310d31f](https://github.com/t3kit/theme_t3kit/commit/310d31f))
+- **[FEATURE]** Upgrade Bootstrap Slider element. (#269) ([ec026d4](https://github.com/t3kit/theme_t3kit/commit/ec026d4))
+- **[TASK]** Update ''frontend_editing'' to version 1.2.0 (#271) ([ba5105d](https://github.com/t3kit/theme_t3kit/commit/ba5105d))
+- **[TASK]** set version of themes extension (#270) ([6add041](https://github.com/t3kit/theme_t3kit/commit/6add041))
+- **[FEATURE]** Add rx_shariff option in news detail template. (#260) ([57cb425](https://github.com/t3kit/theme_t3kit/commit/57cb425))
+- **[FEATURE]** add XING social icon (#268) ([d439405](https://github.com/t3kit/theme_t3kit/commit/d439405))
+- **[FEATURE]** add new content element Contacts Card (#253) ([53e5546](https://github.com/t3kit/theme_t3kit/commit/53e5546))
+- **[BUGFIX]** Add position absolute for preview image in news simple list. (#257) ([f364e3b](https://github.com/t3kit/theme_t3kit/commit/f364e3b))
+- **[BUGFIX]** make long menu entries always fit in the navigation dropdown (#265) ([f22fb9d](https://github.com/t3kit/theme_t3kit/commit/f22fb9d))
+- **[TASK]** Update frontend_editing to be ''1.1.3'' ([c9b54e0](https://github.com/t3kit/theme_t3kit/commit/c9b54e0))
+- **[TASK]** update extensions: realurl 2.2.0 -> 2.2.1, go_maps_ext 2.2.0 -> 2.3.0, cs_seo 2.0.1 -> 2.1.2 and realurl-404-multilingual master -> 1.0.9 (#264) ([e6ec515](https://github.com/t3kit/theme_t3kit/commit/e6ec515))
+- **[BUGFIX]** change package name for realurl-404-multilingual (#263) ([c35575b](https://github.com/t3kit/theme_t3kit/commit/c35575b))
+- **[BUGFIX]** text and media, fixed image appearance (#258) ([8abc64c](https://github.com/t3kit/theme_t3kit/commit/8abc64c))
+- **[TASK]** Update to use version ''1.1.2'' of frontend_editing ([d81a4c7](https://github.com/t3kit/theme_t3kit/commit/d81a4c7))
+- **[FEATURE]** Add google site verification meta tag. (#256) ([dc4d4ec](https://github.com/t3kit/theme_t3kit/commit/dc4d4ec))
+- **[BUGFIX]** allow "fixedPostVarsSaveFilePath" outside directory "typo3conf" (#259) ([9886326](https://github.com/t3kit/theme_t3kit/commit/9886326))
+- **[BUGFIX]** add TCA overrides for cs_seo only if extension is loaded. (#254) ([d155466](https://github.com/t3kit/theme_t3kit/commit/d155466))
+- **[TASK]** Update to use version 1.1.1 from frontend_editing ([1526ca5](https://github.com/t3kit/theme_t3kit/commit/1526ca5))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[BUGFIX]** use NoBgImage layout for content elements based on gridelements ext. except grids (#278) ([8b950c6](https://github.com/t3kit/theme_t3kit/commit/8b950c6))
+
+***
+
 #### v2.2.1 `July 4, 2017`
 - **[BUGFIX]** decrease view (1700 to 400) priority in ext:theme template, fix #244 ([701bbc8](https://github.com/t3kit/theme_t3kit/commit/701bbc8))
 - **[BUGFIX]** news simple list, fix image scaling (#243) ([47a4f42](https://github.com/t3kit/theme_t3kit/commit/47a4f42))
