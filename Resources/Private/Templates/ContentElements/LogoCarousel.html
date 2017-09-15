@@ -10,10 +10,11 @@
 					<div class="swiper-slide logo-carousel__slide">
 						<f:if condition="{logo.referenceProperties.link}">
 							<f:then>
-								<f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link">
+								<f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link" title="{logo.title}">
 									<f:render section="renderLogo" arguments="{
 										logoUid: logo.uid,
 										alt: logo.alternative,
+										title: logo.title,
 										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
 										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
 										}" />
@@ -23,6 +24,7 @@
 								<f:render section="renderLogo" arguments="{
 										logoUid: logo.uid,
 										alt: logo.alternative,
+										title: logo.title,
 										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
 										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
 										}" />
@@ -39,7 +41,10 @@
 </f:section>
 
 <f:section name="renderLogo">
-	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<f:uri.image src="{logoUid}" maxWidth="{maxWidth}" maxHeight="{maxHeight}" treatIdAsReference="1" />" class="swiper-lazy img-responsive logo-carousel__img" alt="{alt}" >
+	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{f:uri.image(src: logoUid, maxWidth: maxWidth, maxHeight: maxHeight, treatIdAsReference: 1)}"
+		class="swiper-lazy img-responsive logo-carousel__img"
+		alt="{alt}"
+		title="{title}" />
 	<div class="swiper-lazy-preloader"></div>
 </f:section>
 
