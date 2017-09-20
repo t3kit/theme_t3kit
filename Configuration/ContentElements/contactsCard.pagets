@@ -9,3 +9,9 @@ mod.wizards.newContentElement.wizardItems.contentElements {
     show := addToList(contactsCard)
 }
 
+TCEFORM.tt_content.pi_flexform.contactsCard.sDEF.imgAsBg {
+    addItems {
+        0 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:contactsCard.flexform.imgAsBg_None
+        1 = LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:contactsCard.flexform.imgAsBg_One
+    }
+}
