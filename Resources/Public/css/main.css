@@ -4478,11 +4478,33 @@ div.awesomplete li[aria-selected="true"] mark {
 .contacts-card {
   background: #fff;
   box-shadow: 0 2px 18px -4px #2b2b2b;
+  position: relative;
+}
+.contacts-card:hover .contacts-card__contacts._contact-information-overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s,
+                    opacity 300ms;
+}
+.contacts-card .icons {
+  margin-right: 5px;
 }
 .contacts-card__contacts {
   text-align: center;
   padding: 0 32px 40px;
   border-top: 15px solid #50b4d8;
+}
+.contacts-card__contacts._contact-information-overlay {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.53);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms,
+            opacity 300ms;
 }
 .contacts-card__contact-name {
   font-size: 35px;
@@ -4493,6 +4515,7 @@ div.awesomplete li[aria-selected="true"] mark {
 .contacts-card__contact-job {
   color: #50b4d8;
   margin-bottom: 15px;
+  display: block;
 }
 .contacts-card__contacts .icons {
   color: #50b4d8;
@@ -4533,6 +4556,18 @@ div.awesomplete li[aria-selected="true"] mark {
 .contacts-card__contact-linkedin:hover {
   color: #000000;
   text-decoration: underline;
+}
+.contacts-card__contacts-photo._img-overlay {
+  height: auto;
+  width: auto;
+  border-radius: 0;
+  position: relative;
+  padding-bottom: 380px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
 .main-color-wrp {
   background: #50b4d8;
