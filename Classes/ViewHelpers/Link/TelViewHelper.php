@@ -15,8 +15,8 @@ namespace T3kit\themeT3kit\ViewHelpers\Link;
  */
 
 /**
- * Email link view helper.
- * Generates an email link incorporating TYPO3s spamProtectEmailAddresses-settings.
+ * Tel link view helper.
+ * Generates an tel link
  *
  * = Examples
  *
