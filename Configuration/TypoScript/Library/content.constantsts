@@ -3,6 +3,14 @@ content {
     defaultHeaderType = 2
 }
 
-# Max Image/Media Width
-styles.content.textmedia.maxW = 900
-styles.content.textmedia.linkWrap.lightboxEnabled = 1
+styles.content {
+  textmedia {
+    # Max Image/Media Width
+    maxW = 900
+
+    linkWrap.lightboxEnabled = 1
+
+    # No rel attribute needed for lightbox link
+    linkWrap.lightboxRelAttribute =
+  }
+}
