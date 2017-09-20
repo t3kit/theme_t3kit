@@ -53,7 +53,7 @@ lib.gridelements {
                 60 = TEXT
                 60 {
                     field = uid
-                    wrap = id="tab-|"
+                    noTrimWrap = | id="tab-|"|
                 }
 
                 stdWrap.noTrimWrap = |<div role="tabpanel" |>|
