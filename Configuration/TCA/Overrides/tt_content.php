@@ -486,8 +486,7 @@ call_user_func(function() {
         'showitem' => '
             --div--;' .  $coreLanguageFilePrefix .'general,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                header;' . $frontendLanguageFilePrefix . 'header_formlabel,
-
+                --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
             --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
 
