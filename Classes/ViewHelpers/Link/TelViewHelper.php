@@ -21,7 +21,8 @@ namespace T3kit\themeT3kit\ViewHelpers\Link;
  * = Examples
  *
  * <code title="basic tel link">
- * <f:link.tel tel="+46 (0) 40-01 ma 23 45 67" />
+ * {namespace t3kit=T3kit\themeT3kit\ViewHelpers}
+ * <t3kit:link.tel tel="+46 (0) 40-01 ma 23 45 67" />
  * </code>
  * <output>
  * <a href="tel:+464001234567">+46 (0) 40-01 ma 23 45 67</a>
@@ -40,7 +41,7 @@ class TelViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedVie
     public function initializeArguments()
     {
         parent::initializeArguments();
-        $this->registerArgument('tel', 'string', 'The email address to be turned into a link', true);
+        $this->registerArgument('tel', 'string', 'The telephone number to be turned into a link', true);
         $this->registerUniversalTagAttributes();
         $this->registerTagAttribute('name', 'string', 'Specifies the name of an anchor');
         $this->registerTagAttribute('target', 'string', 'Specifies where to open the linked document');
