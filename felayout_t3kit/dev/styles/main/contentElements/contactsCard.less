@@ -14,10 +14,6 @@
             }
         }
     }
-
-    .icons {
-        margin-right: 5px;
-    }
 }
 
 .contacts-card__contacts {
@@ -37,6 +33,14 @@
         transition:
             visibility 0s linear 300ms,
             opacity 300ms;
+
+        .contacts-card__contact-name {
+            color: @main-color;
+        }
+
+        a {
+            color: #fff;
+        }
     }
 }
 
@@ -72,6 +76,7 @@
     margin: 0;
 }
 
+.contacts-card__contact-phone,
 .contacts-card__contact-email,
 .contacts-card__contact-linkedin {
     color: shade(@main-text-color, 100%);
