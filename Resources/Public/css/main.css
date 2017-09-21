@@ -4486,9 +4486,6 @@ div.awesomplete li[aria-selected="true"] mark {
   transition: visibility 0s linear 0s,
                     opacity 300ms;
 }
-.contacts-card .icons {
-  margin-right: 5px;
-}
 .contacts-card__contacts {
   text-align: center;
   padding: 0 32px 40px;
@@ -4505,6 +4502,12 @@ div.awesomplete li[aria-selected="true"] mark {
   opacity: 0;
   transition: visibility 0s linear 300ms,
             opacity 300ms;
+}
+.contacts-card__contacts._contact-information-overlay .contacts-card__contact-name {
+  color: #50b4d8;
+}
+.contacts-card__contacts._contact-information-overlay a {
+  color: #fff;
 }
 .contacts-card__contact-name {
   font-size: 35px;
@@ -4533,25 +4536,33 @@ div.awesomplete li[aria-selected="true"] mark {
   text-overflow: ellipsis;
   margin: 0;
 }
+.contacts-card__contact-phone,
 .contacts-card__contact-email,
 .contacts-card__contact-linkedin {
   color: #000000;
 }
+.contacts-card__contact-phone.active.focus,
 .contacts-card__contact-email.active.focus,
 .contacts-card__contact-linkedin.active.focus,
+.contacts-card__contact-phone:active.focus,
 .contacts-card__contact-email:active.focus,
 .contacts-card__contact-linkedin:active.focus,
+.contacts-card__contact-phone.active:focus,
 .contacts-card__contact-email.active:focus,
 .contacts-card__contact-linkedin.active:focus,
+.contacts-card__contact-phone:active:focus,
 .contacts-card__contact-email:active:focus,
 .contacts-card__contact-linkedin:active:focus {
   color: #000000;
   text-decoration: underline;
 }
+.contacts-card__contact-phone.focus,
 .contacts-card__contact-email.focus,
 .contacts-card__contact-linkedin.focus,
+.contacts-card__contact-phone:focus,
 .contacts-card__contact-email:focus,
 .contacts-card__contact-linkedin:focus,
+.contacts-card__contact-phone:hover,
 .contacts-card__contact-email:hover,
 .contacts-card__contact-linkedin:hover {
   color: #000000;
@@ -4612,6 +4623,14 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 .main-color-wrp .img-text-link__sham-link {
   color: #eef8fb;
+}
+.main-color-wrp .contacts-card__contacts a,
+.main-color-wrp .contacts-card__contacts .icons {
+  color: #000000;
+}
+.main-color-wrp .contacts-card__contacts._contact-information-overlay a,
+.main-color-wrp .contacts-card__contacts._contact-information-overlay .icons {
+  color: #fff;
 }
 .large-header h2 {
   font-size: 48px;

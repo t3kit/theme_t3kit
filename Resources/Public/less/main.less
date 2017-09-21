@@ -7627,10 +7627,6 @@ div.awesomplete li[aria-selected="true"] mark {
             }
         }
     }
-
-    .icons {
-        margin-right: 5px;
-    }
 }
 
 .contacts-card__contacts {
@@ -7650,6 +7646,14 @@ div.awesomplete li[aria-selected="true"] mark {
         transition:
             visibility 0s linear 300ms,
             opacity 300ms;
+
+        .contacts-card__contact-name {
+            color: @main-color;
+        }
+
+        a {
+            color: #fff;
+        }
     }
 }
 
@@ -7685,6 +7689,7 @@ div.awesomplete li[aria-selected="true"] mark {
     margin: 0;
 }
 
+.contacts-card__contact-phone,
 .contacts-card__contact-email,
 .contacts-card__contact-linkedin {
     color: shade(@main-text-color, 100%);
@@ -7785,6 +7790,20 @@ div.awesomplete li[aria-selected="true"] mark {
 
 .main-color-wrp .img-text-link__sham-link {
     color: tint(@main-color, 90%);
+}
+
+.main-color-wrp .contacts-card__contacts {
+    a,
+    .icons {
+        color: shade(@main-text-color, 100%);
+    }
+
+    &._contact-information-overlay {
+        a,
+        .icons {
+            color: #fff;
+        }
+    }
 }
 
 // =================================
