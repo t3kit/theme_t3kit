@@ -2,7 +2,7 @@ page.meta {
 
     X-UA-Compatible = ie=edge
     X-UA-Compatible.httpEquivalent = 1
-    viewport = width=device-width, initial-scale=1.0, user-scalable=no
+    viewport = width=device-width, initial-scale=1.0, user-scalable=yes
 
     mobile-web-app-capable = yes
     apple-mobile-web-app-capable = yes
