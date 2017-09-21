@@ -427,6 +427,18 @@
 			<trans-unit id="contactsCard.flexform.linkedInLink"> 
 				<source>Link to LinkedIn Profile</source>
 			</trans-unit>
+			<trans-unit id="contactsCard.flexform.imgAsBg">
+				<source>Image attribute</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.imgAsBg_None">
+				<source>Image as element [default]</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.imgAsBg_One">
+				<source>Image as background</source>
+			</trans-unit>
+			<trans-unit id="contactsCard.flexform.icons">
+				<source>Do not use icons before text fields</source>
+			</trans-unit>
 
 			<!--Button Element-->
 			<trans-unit id="button.title">

@@ -7614,12 +7614,47 @@ div.awesomplete li[aria-selected="true"] mark {
 .contacts-card {
     background: @main-body-bg;
     box-shadow: 0 2px 18px -4px darken(@main-text-color, 32%);
+    position: relative;
+
+    &:hover {
+        .contacts-card__contacts {
+            &._contact-information-overlay {
+                visibility: visible;
+                opacity: 1;
+                transition:
+                    visibility 0s linear 0s,
+                    opacity 300ms;
+            }
+        }
+    }
 }
 
 .contacts-card__contacts {
     text-align: center;
     padding: 0 32px 40px;
     border-top: 15px solid @main-color;
+
+    &._contact-information-overlay {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        right: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.53);
+        visibility: hidden;
+        opacity: 0;
+        transition:
+            visibility 0s linear 300ms,
+            opacity 300ms;
+
+        .contacts-card__contact-name {
+            color: @main-color;
+        }
+
+        a {
+            color: #fff;
+        }
+    }
 }
 
 .contacts-card__contact-name {
@@ -7632,6 +7667,7 @@ div.awesomplete li[aria-selected="true"] mark {
 .contacts-card__contact-job {
     color: @main-color;
     margin-bottom: 15px;
+    display: block;
 }
 
 .contacts-card__contacts .icons {
@@ -7653,6 +7689,7 @@ div.awesomplete li[aria-selected="true"] mark {
     margin: 0;
 }
 
+.contacts-card__contact-phone,
 .contacts-card__contact-email,
 .contacts-card__contact-linkedin {
     color: shade(@main-text-color, 100%);
@@ -7671,6 +7708,21 @@ div.awesomplete li[aria-selected="true"] mark {
     &:hover {
         color: shade(@main-text-color, 100%);
         text-decoration: underline;
+    }
+}
+
+.contacts-card__contacts-photo {
+    &._img-overlay {
+        height: auto;
+        width: auto;
+        border-radius: 0;
+        position: relative;
+        padding-bottom: 380px;
+        background-size: cover;
+        background-position: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        overflow: hidden;
     }
 }
 
@@ -7738,6 +7790,20 @@ div.awesomplete li[aria-selected="true"] mark {
 
 .main-color-wrp .img-text-link__sham-link {
     color: tint(@main-color, 90%);
+}
+
+.main-color-wrp .contacts-card__contacts {
+    a,
+    .icons {
+        color: shade(@main-text-color, 100%);
+    }
+
+    &._contact-information-overlay {
+        a,
+        .icons {
+            color: #fff;
+        }
+    }
 }
 
 // =================================

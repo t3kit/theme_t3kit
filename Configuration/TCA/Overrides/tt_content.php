@@ -855,6 +855,12 @@ call_user_func(function() {
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
+            --div--;' .  $coreLanguageFilePrefix .'language,
+                --palette--;;language,
+            --div--;' .  $coreLanguageFilePrefix .'access,
+                --palette--;;hidden,
+                --palette--;' . $frontendLanguageFilePrefix . 'palette.access;access,
+            --div--;' .  $coreLanguageFilePrefix .'categories,categories,
             --div--;' .  $coreLanguageFilePrefix .'extended,
         '
     ];
