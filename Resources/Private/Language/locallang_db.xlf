@@ -9,6 +9,9 @@
             <trans-unit id="extmng.fixedPostVarsConfigurationfFile">
                 <source>Path to file with predefined configuration</source>
             </trans-unit>
+            <trans-unit id="extmng.additionalCharacters">
+                <source>Additional characters for speaking url path convert. Example "ä=>a,ö=>0"</source>
+            </trans-unit>
             <trans-unit id="pages.tx_themet3kit_fixed_post_var_conf">
                 <source>Fixed post var configuration</source>
             </trans-unit>
