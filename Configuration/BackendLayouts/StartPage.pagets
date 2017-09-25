@@ -5,15 +5,15 @@ mod.web_layout.BackendLayouts {
         title = StartPage
         config {
             backend_layout {
-                colCount = 1
-                rowCount = 3
+                colCount = 2
+                rowCount = 5
                 rows {
                     1 {
                         columns {
                             1 {
                                 name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_top
                                 rowspan = 1
-                                colspan = 1
+                                colspan = 2
                                 colPos = 3
                             }
                         }
@@ -23,7 +23,7 @@ mod.web_layout.BackendLayouts {
                             1 {
                                 name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_content
                                 rowspan = 1
-                                colspan = 1
+                                colspan = 2
                                 colPos = 0
                             }
                         }
@@ -33,8 +33,30 @@ mod.web_layout.BackendLayouts {
                             1 {
                                 name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_footer
                                 rowspan = 1
-                                colspan = 1
+                                colspan = 2
                                 colPos = 999
+                            }
+                        }
+                    }
+                   4 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_footer_quicklinks
+                                rowspan = 1
+                                colspan = 2
+                                colPos = 1000
+                            }
+                        }
+                    }
+                    5 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_footer_copyright
+                                colPos = 1001
+                            }
+                            2 {
+                                name = LLL:EXT:theme_t3kit/Resources/Private/Language/BackendLayouts.xlf:area_footer_bottom_nav
+                                colPos = 1002
                             }
                         }
                     }
