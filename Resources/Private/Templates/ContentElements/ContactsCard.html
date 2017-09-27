@@ -12,7 +12,7 @@
 					<f:if condition="{imageIteration.isFirst}">
 						<f:if condition="{settings.imgAsBg} == 1">
 							<f:then>
-								<div class="contacts-card__contacts-photo _img-overlay {f:cObject(typoscriptObjectPath:'lib.responsiveBackgroundImage', data:image.uid)}"></div>
+								<div class="contacts-card__contacts-photo _img-overlay {f:cObject(typoscriptObjectPath:'lib.responsiveContactCards', data:image.uid)}"></div>
 							</f:then>
 							<f:else>
 								<f:image class="img-responsive contacts-card__contacts-photo" image="{image}" maxWidth="{settings.defaultWidth}" cropVariant="default" />
