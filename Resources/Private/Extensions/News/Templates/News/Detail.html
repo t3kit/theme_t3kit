@@ -34,7 +34,7 @@
 			<div class="news-article-footer">
 				<p>
 					<!-- date -->
-				<span class="news-list-date">
+					<span class="news-list-date">
 					<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
 						<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
 						<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
@@ -47,7 +47,7 @@
 
 					<f:if condition="{newsItem.tags}">
 						<!-- Tags -->
-					<span class="news-list-tags" itemprop="keywords">
+						<span class="news-list-tags" itemprop="keywords">
 					<f:for each="{newsItem.tags}" as="tag">
 						{tag.title}
 					</f:for>
@@ -56,7 +56,7 @@
 
 					<f:if condition="{newsItem.author}">
 						<!-- author -->
-					<span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+						<span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
 						<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
 					</span>
 					</f:if>
@@ -82,14 +82,78 @@
 				<f:format.html>{newsItem.bodytext}</f:format.html>
 			</div>
 
-			<f:if condition="{settings.backPid}">
-				<!-- Link Back -->
-				<div class="news-backlink-wrap">
-					<f:link.page pageUid="{settings.backPid}">
-						<f:translate key="back-link" />
-					</f:link.page>
-				</div>
+			<f:if condition="{settings.detail.disqusShortname}">
+				<div id="disqus_thread"></div>
+				<n:social.disqus newsItem="{newsItem}"
+									shortName="{settings.detail.disqusShortname}"
+									link="{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}')}" />
 			</f:if>
+
+			<!-- related things -->
+			<div class="clearfix"></div>
+			<div class="news-related-wrap">
+				<div class="row">
+
+				<f:if condition="{newsItem.allRelatedSorted}">
+					<!-- Related news records -->
+					<div class="news-related news-related-news col-sm-4">
+						<h4>
+							<f:translate key="related-news" />
+						</h4>
+						<ul>
+							<f:for each="{newsItem.allRelatedSorted}" as="related">
+								<li>
+									<span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
+									<n:link newsItem="{related}" settings="{settings}" title="{related.title}">
+										{related.title}
+									</n:link>
+								</li>
+							</f:for>
+						</ul>
+					</div>
+				</f:if>
+
+				<f:if condition="{newsItem.relatedFiles}">
+					<!-- FAL related files -->
+					<div class="news-related news-related-files col-sm-4">
+						<h4>
+							<f:translate key="related-files" />
+						</h4>
+						<ul>
+							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
+								<li>
+									<span class="news-related-files-link">
+										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+											{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
+										</a>
+									</span>
+									<span class="news-related-files-size">
+										{relatedFile.originalResource.size -> f:format.bytes()}
+									</span>
+								</li>
+							</f:for>
+						</ul>
+					</div>
+				</f:if>
+
+				<f:if condition="{newsItem.relatedLinks}">
+					<!-- Related links -->
+					<div class="news-related news-related-links col-sm-4">
+						<h4>
+							<f:translate key="related-links" />
+						</h4>
+						<ul>
+							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
+								<li>
+									<f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.page>
+									<f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
+								</li>
+							</f:for>
+						</ul>
+					</div>
+				</f:if>
+				</div>
+			</div>
 
 			<f:if condition="{settings.detail.showSocialShareButtons}">
 				<f:comment>
@@ -117,80 +181,42 @@
 				</n:extensionLoaded>
 			</f:if>
 
-			<f:if condition="{settings.detail.disqusShortname}">
-				<div id="disqus_thread"></div>
-				<n:social.disqus newsItem="{newsItem}"
-									shortName="{settings.detail.disqusShortname}"
-									link="{n:link(newsItem:newsItem, settings:settings, uriOnly:1, configuration:'{forceAbsoluteUrl:1}')}" />
+			<f:if condition="{settings.backPid}">
+				<!-- Link Back -->
+				<div class="news-backlink-wrap">
+					<f:link.page pageUid="{settings.backPid}">
+						<f:translate key="back-link" />
+					</f:link.page>
+				</div>
 			</f:if>
 
-			<!-- related things -->
-			<div class="news-related-wrap">
-
-				<f:if condition="{newsItem.allRelatedSorted}">
-					<!-- Related news records -->
-					<div class="news-related news-related-news">
-						<h4>
-							<f:translate key="related-news" />
-						</h4>
-						<ul>
-							<f:for each="{newsItem.allRelatedSorted}" as="related">
-								<li>
-									<span class="news-related-news-date"><f:format.date format="{f:translate(key:'dateFormat')}">{related.datetime}</f:format.date></span>
-									<n:link newsItem="{related}" settings="{settings}" title="{related.title}">
-										{related.title}
-									</n:link>
-								</li>
-
-							</f:for>
-						</ul>
+			<f:if condition="{settings.detail.showPrevNext}">
+				<f:comment>Show next and previous news item</f:comment>
+				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+					<div class="page-navigation">
+						<f:if condition="{paginated}">
+							<ul class="prev-next">
+								<f:if condition="{paginated.prev}">
+									<li class="previous">
+										<n:link newsItem="{paginated.prev}" settings="{settings}">
+											<f:translate key="paginate_previous"/>
+										</n:link>
+									</li>
+								</f:if>
+								<f:if condition="{paginated.next}">
+									<li class="next">
+										<n:link newsItem="{paginated.next}" settings="{settings}">
+											<f:translate key="paginate_next"/>
+										</n:link>
+									</li>
+								</f:if>
+							</ul>
+						</f:if>
 					</div>
-				</f:if>
-
-				<f:if condition="{newsItem.relatedFiles}">
-					<!-- FAL related files -->
-					<div class="news-related news-related-files">
-						<h4>
-							<f:translate key="related-files" />
-						</h4>
-						<ul>
-							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
-								<li>
-									<span class="news-related-files-link">
-										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
-											{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
-										</a>
-									</span>
-									<span class="news-related-files-size">
-										{relatedFile.originalResource.size -> f:format.bytes()}
-									</span>
-								</li>
-							</f:for>
-						</ul>
-					</div>
-				</f:if>
-
-				<f:if condition="{newsItem.relatedLinks}">
-					<!-- Related links -->
-					<div class="news-related news-related-links">
-						<h4>
-							<f:translate key="related-links" />
-						</h4>
-						<ul>
-							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
-								<li>
-									<f:link.page pageUid="{relatedLink.uri}" title="{relatedLink.title}" target="{n:targetLink(link:relatedLink.uri)}">{f:if(condition: relatedLink.title, then: relatedLink.title, else: relatedLink.uri)}</f:link.page>
-									<f:if condition="{relatedLink.description}"><span>{relatedLink.description}</span></f:if>
-								</li>
-							</f:for>
-						</ul>
-					</div>
-				</f:if>
-			</div>
+				</n:simplePrevNext>
+			</f:if>
 		</f:then>
-		<f:else>
-
-		</f:else>
+		<f:else> </f:else>
 	</f:if>
 </f:section>
 
