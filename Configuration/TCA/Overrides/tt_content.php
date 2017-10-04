@@ -535,6 +535,8 @@ call_user_func(function() {
 
             --div--;' . $contentElementLanguageFilePrefix . 'responsiveVideo.tabs.video,assets,
 
+            --div--;' . $contentElementLanguageFilePrefix . 'responsiveVideo.tabs.video,assets,
+
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -550,6 +552,7 @@ call_user_func(function() {
     ];
 
     // responsiveVideo flexform
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,responsiveVideo'] = $flexformPath . 'flexform_responsiveVideo.xml';
     // ======================= responsiveVideo [end] ==========================================
 
 
