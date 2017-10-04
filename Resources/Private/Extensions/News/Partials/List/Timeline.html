@@ -53,36 +53,36 @@
 						<div class="news-timeline__item js__news-timeline__item {val} collapsed {f:if(condition: iterator.isLast, then: ' last', else: '')}">
 					</f:else>
 				</f:if>
-					<f:if condition="{newsItem.media}">
-						<!-- fal media preview element -->
-						<div class="news-timeline__img-wrap">
-							<f:if condition="{newsItem.mediaPreviews}">
-								<f:then>
-									<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-										<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
-											<f:if condition="{mediaElement.originalResource.type} == 2">
+					<f:if condition="{newsItem.mediaPreviews}">
+						<!-- media preview element -->
+						<f:then>
+							<div class="news-timeline__img-wrap">
+								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+									<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+										<f:if condition="{mediaElement.originalResource.type} == 2">
 												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
-											</f:if>
-											<f:if condition="{mediaElement.originalResource.type} == 4">
-												<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
-											</f:if>
-											<f:if condition="{mediaElement.originalResource.type} == 5">
+										</f:if>
+										<f:if condition="{mediaElement.originalResource.type} == 4">
+											<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+										</f:if>
+										<f:if condition="{mediaElement.originalResource.type} == 5">
 												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
-											</f:if>
-										</f:alias>
-									</n:link>
-								</f:then>
-								<f:else>
-									<f:if condition="{settings.displayDummyIfNoMedia}">
-										<div class="no-media-element">
-											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
-											</n:link>
-										</div>
-									</f:if>
-								</f:else>
+										</f:if>
+									</f:alias>
+								</n:link>
+							</div>
+						</f:then>
+						<f:else>
+							<f:if condition="{settings.displayDummyIfNoMedia}">
+								<div class="news-timeline__img-wrap">
+									<div class="no-media-element">
+										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+											<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+										</n:link>
+									</div>
+								</div>
 							</f:if>
-						</div>
+						</f:else>
 					</f:if>
 
 					<div class="news-timeline__item-text">

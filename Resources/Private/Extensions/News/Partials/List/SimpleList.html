@@ -22,34 +22,34 @@
 	<article class="news-simple-list__item clearfix articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 		<n:excludeDisplayedNews newsItem="{newsItem}"/>
 
-		<f:if condition="{newsItem.media}">
-			<!-- fal media preview element -->
-			<div class="news-simple-list__img-wrap">
-				<f:if condition="{newsItem.mediaPreviews}">
-					<f:then>
-						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-							<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
-								<f:if condition="{mediaElement.originalResource.type} == 2">
-									<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
-								</f:if>
-								<f:if condition="{mediaElement.originalResource.type} == 4">
-									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
-								</f:if>
-								<f:if condition="{mediaElement.originalResource.type} == 5">
-									<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
-								</f:if>
-							</f:alias>
-						</n:link>
-					</f:then>
-					<f:else>
-						<f:if condition="{settings.displayDummyIfNoMedia}">
-							<div class="no-media-element">
-								<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
-							</div>
-						</f:if>
-					</f:else>
+		<f:if condition="{newsItem.mediaPreviews}">
+			<!-- media preview element -->
+			<f:then>
+				<div class="news-simple-list__img-wrap">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+							<f:if condition="{mediaElement.originalResource.type} == 2">
+								<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 4">
+								<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+							</f:if>
+							<f:if condition="{mediaElement.originalResource.type} == 5">
+								<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+							</f:if>
+						</f:alias>
+					</n:link>
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{settings.displayDummyIfNoMedia}">
+					<div class="news-simple-list__img-wrap">
+						<div class="no-media-element">
+							<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+						</div>
+					</div>
 				</f:if>
-			</div>
+			</f:else>
 		</f:if>
 
 		<div class="news-simple-list__text js__news-simple-list__dotdotdot">
