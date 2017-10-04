@@ -25,7 +25,15 @@
 			<trans-unit id="area_footer">
 				<source>Footer Content (gets inherited to all subpages)</source>
 			</trans-unit>
-
+			<trans-unit id="area_footer_quicklinks">
+				<source>Footer Quick Links (gets inherited to all subpages)</source>
+			</trans-unit>
+			<trans-unit id="area_footer_copyright">
+				<source>Footer Copyright (gets inherited to all subpages)</source>
+			</trans-unit>
+			<trans-unit id="area_footer_bottom_nav">
+				<source>Footer Bottom Navigation (gets inherited to all subpages)</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

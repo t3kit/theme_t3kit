@@ -8,8 +8,35 @@
 
 <footer class="footer">
 
-	<f:cObject typoscriptObjectPath="lib.footer" />
+	<f:cObject typoscriptObjectPath="lib.footerContent" />
 
+	<f:if condition="{f:cObject(typoscriptObjectPath:'lib.footerContent.quicklinks')}">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 footer__quick-links">
+					<f:cObject typoscriptObjectPath="lib.footerContent.quicklinks" />
+				</div>
+			</div>
+		</div>
+	</f:if>
+
+	<f:if condition="{f:cObject(typoscriptObjectPath:'lib.footerContent.copyright')} || {f:cObject(typoscriptObjectPath:'lib.footerContent.bottomNav')}">
+		<div class="container">
+			<div class="row">
+				<f:if condition="{f:cObject(typoscriptObjectPath:'lib.footerContent.copyright')}">
+					<div class="col-md-7 footer__bottom-copyright">
+						<f:cObject typoscriptObjectPath="lib.footerContent.copyright" />
+					</div>
+				</f:if>
+
+				<f:if condition="{f:cObject(typoscriptObjectPath:'lib.footerContent.bottomNav')}">
+					<div class="col-md-5 footer__bottom-nav">
+						<f:cObject typoscriptObjectPath="lib.footerContent.bottomNav" />
+					</div>
+				</f:if>
+			</div>
+		</div>
+	</f:if>
 </footer>
 
 <!-- theme_t3kit: Partials/Footer/Footer.html [end] -->

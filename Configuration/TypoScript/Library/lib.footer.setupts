@@ -1,6 +1,27 @@
-lib.footer = COA
-lib.footer {
+lib.footerContent = COA
+lib.footerContent {
     10 < styles.content.get
     10.select.where = {#colPos}=999
+    10.slide = -1
+}
+
+lib.footerContent.quicklinks = COA
+lib.footerContent.quicklinks {
+    10 < styles.content.get
+    10.select.where = {#colPos}=1000
+    10.1slide = -1
+}
+
+lib.footerContent.copyright = COA
+lib.footerContent.copyright {
+    10 < styles.content.get
+    10.select.where = {#colPos}=1001
+    10.slide = -1
+}
+
+lib.footerContent.bottomNav = COA
+lib.footerContent.bottomNav {
+    10 < styles.content.get
+    10.select.where = {#colPos}=1002
     10.slide = -1
 }
