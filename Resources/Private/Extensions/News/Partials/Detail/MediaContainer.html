@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{media}">
+	<f:comment>
+		[PATCH begin]
+		2017-10-29 Anna Färber <anna.faerber@dkd.de>
+		Add additional lightbox__wrp-news class to enable the lightbox.
+		<div class="news-img-wrap">...</div>
+		[PATCH end]
+	</f:comment>
+	<div class="news-img-wrap {f:if(condition:'{settings.detail.media.image.lightbox.enabled}', then:'lightbox__wrp-news' )}">
+		<f:for each="{media}" as="mediaElement">
+			<div class="outer">
+				<f:if condition="{mediaElement.originalResource.type} == 2">
+					<f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+				</f:if>
+				<f:if condition="{mediaElement.originalResource.type} == 4">
+					<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+				</f:if>
+				<f:if condition="{mediaElement.originalResource.type} == 5">
+					<f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+				</f:if>
+			</div>
+		</f:for>
+	</div>
+</f:if>
+</html>
