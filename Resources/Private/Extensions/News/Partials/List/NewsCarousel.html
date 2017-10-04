@@ -9,54 +9,67 @@
 				<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 					<n:excludeDisplayedNews newsItem="{newsItem}"/>
 
-					<f:if condition="{newsItem.media}">
-						<!-- fal media preview element -->
-						<div class="news-carousel__img-wrap">
-							<f:if condition="{newsItem.mediaPreviews}">
-								<f:then>
-									<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-										<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
-											<f:if condition="{mediaElement.originalResource.type} == 2">
-												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
-											</f:if>
-											<f:if condition="{mediaElement.originalResource.type} == 4">
-												<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
-											</f:if>
-											<f:if condition="{mediaElement.originalResource.type} == 5">
-												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
-											</f:if>
-										</f:alias>
-									</n:link>
-								</f:then>
-								<f:else>
-									<f:if condition="{settings.displayDummyIfNoMedia}">
-										<div class="no-media-element">
-											<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-												<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
-											</n:link>
-										</div>
+					<f:if condition="{newsItem.mediaPreviews}">
+						<!-- media preview element -->
+						<f:then>
+							<div class="news-carousel__img-wrap">
+								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+									<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+										<f:if condition="{mediaElement.originalResource.type} == 2">
+											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+										</f:if>
+										<f:if condition="{mediaElement.originalResource.type} == 4">
+											<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+										</f:if>
+										<f:if condition="{mediaElement.originalResource.type} == 5">
+											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+										</f:if>
+									</f:alias>
+								</n:link>
+
+								<div class="news-carousel__item-info">
+									<f:if condition="{newsItem.firstCategory}">
+											<!-- first category -->
+											<span class="news-list-category">{newsItem.firstCategory.title}</span>
 									</f:if>
-								</f:else>
-							</f:if>
+									<!-- date -->
+									<span class="news-list-date">
+										<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+											<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+											<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+										</time>
+									</span>
+								</div>
 
-							<div class="news-carousel__item-info">
-								<f:if condition="{newsItem.firstCategory}">
-										<!-- first category -->
-										<span class="news-list-category">{newsItem.firstCategory.title}</span>
-								</f:if>
-								<!-- date -->
-								<span class="news-list-date">
-									<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-										<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
-										<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-									</time>
-								</span>
 							</div>
+						</f:then>
+						<f:else>
+							<f:if condition="{settings.displayDummyIfNoMedia}">
+								<div class="news-carousel__img-wrap">
+									<div class="no-media-element">
+										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+										<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+										</n:link>
+									</div>
 
-						</div>
+									<div class="news-carousel__item-info">
+										<f:if condition="{newsItem.firstCategory}">
+												<!-- first category -->
+												<span class="news-list-category">{newsItem.firstCategory.title}</span>
+										</f:if>
+										<!-- date -->
+										<span class="news-list-date">
+											<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+												<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+												<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+											</time>
+										</span>
+									</div>
+
+								</div>
+							</f:if>
+						</f:else>
 					</f:if>
-
-
 
 					<!-- header -->
 					<div class="news-article-header">
@@ -66,7 +79,6 @@
 							</n:link>
 						</h3>
 					</div>
-
 
 					<!-- teaser -->
 					<div class="teaser-text">
@@ -79,7 +91,6 @@
 							</f:else>
 						</f:if>
 					</div>
-
 
 				</div>
 
