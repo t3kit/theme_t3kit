@@ -75,11 +75,11 @@
 						<f:else>
 							<f:if condition="{settings.displayDummyIfNoMedia}">
 								<div class="news-timeline__img-wrap">
-									<span class="no-media-element">
+									<div class="no-media-element">
 										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 											<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
 										</n:link>
-									</span>
+									</div>
 								</div>
 							</f:if>
 						</f:else>
