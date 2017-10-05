@@ -347,7 +347,7 @@
 			<trans-unit id="responsiveVideo.tabs.video">
 				<source>Video</source>
 			</trans-unit>
-			<trans-unit id="fullWidthImage.flexform.includeRelatedVideos">
+			<trans-unit id="responsiveVideo.flexform.includeRelatedVideos">
 				<source>Include related videos</source>
 			</trans-unit>
 

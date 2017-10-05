@@ -8,17 +8,17 @@
 		<f:for each="{assets}" as="video" iteration="videoIteration">
 			<f:if condition="{video.type} == 4">
 				<div class="embed-responsive embed-responsive-16by9">
-					<f:if condition="{settings.includeRelatedVideos}">
+					<f:if condition="{settings.includeRelatedVideos}=='0' || {settings.includeRelatedVideos}=='1'">
 						<f:then>
 							<f:media
 								class="embed-responsive-item"
 								file="{video}"
 								alt="{video.alternative}"
 								title="{video.title}"
-								additionalConfig="{relatedVideos: '0'}"
-							/>hej
+								additionalConfig="{relatedVideos: settings.includeRelatedVideos}"
+							/>
 						</f:then>
-						<f:else>då
+						<f:else>
 							<f:media
 								class="embed-responsive-item"
 								file="{video}"

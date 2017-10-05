@@ -534,8 +534,7 @@ call_user_func(function() {
                 header;' . $frontendLanguageFilePrefix . 'header.ALT.div_formlabel,
 
             --div--;' . $contentElementLanguageFilePrefix . 'responsiveVideo.tabs.video,assets,
-
-            --div--;' . $contentElementLanguageFilePrefix . 'responsiveVideo.tabs.video,assets,
+            --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
 
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
