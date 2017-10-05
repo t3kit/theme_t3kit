@@ -347,8 +347,14 @@
 			<trans-unit id="responsiveVideo.tabs.video">
 				<source>Video</source>
 			</trans-unit>
-			<trans-unit id="responsiveVideo.flexform.includeRelatedVideos">
-				<source>Include related videos</source>
+			<trans-unit id="responsiveVideo.flexform.enableShowInfo">
+				<source>Youtube and Vimeo: Show video title and uploader before video starts playing</source>
+			</trans-unit>
+			<trans-unit id="responsiveVideo.flexform.enableRelatedVideos">
+				<source>YouTube: Enable related videos</source>
+			</trans-unit>
+			<trans-unit id="responsiveVideo.flexform.enableLoop">
+				<source>Enable looping - video starts over again from the beginnning when finished</source>
 			</trans-unit>
 
 

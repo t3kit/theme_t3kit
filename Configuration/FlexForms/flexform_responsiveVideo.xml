@@ -10,14 +10,30 @@
 				</TCEforms>
 				<type>array</type>
 				<el>
-					<includeRelatedVideos>
+					<enableShowInfo>
 						<TCEforms>
-							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.flexform.includeRelatedVideos</label>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.flexform.enableShowInfo</label>
 							<config>
 								<type>check</type>
 							</config>
 						</TCEforms>
-					</includeRelatedVideos>
+					</enableShowInfo>
+					<enableRelatedVideos>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.flexform.enableRelatedVideos</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</enableRelatedVideos>
+					<enableLoop>
+						<TCEforms>
+							<label>LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:responsiveVideo.flexform.enableLoop</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</enableLoop>
 				</el>
 			</ROOT>
 		</sDEF>
