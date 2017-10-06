@@ -3527,6 +3527,10 @@
     background: @footer-background;
     // border-top: 15px solid lighten(@footer-background, 20%);
     border-top: 15px solid @footer-background;
+
+    a {
+        color: @footer-link-color;
+    }
 }
 
 .footer p {
@@ -3597,7 +3601,6 @@
 
 .footer__quick-links ul > li > a {
     transition: color 0.2s ease;
-    color: @footer-link-color;
     padding-left: 0;
     padding-bottom: 2px;
     font-weight: 400;
@@ -3683,7 +3686,6 @@
     transition: color 0.2s ease;
     padding: 0 10px;
     font-size: 14px;
-    color: @footer-link-color;
 }
 
 @media (min-width: 992px) {
