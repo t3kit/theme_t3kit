@@ -347,6 +347,16 @@
 			<trans-unit id="responsiveVideo.tabs.video">
 				<source>Video</source>
 			</trans-unit>
+			<trans-unit id="responsiveVideo.flexform.enableShowInfo">
+				<source>Youtube and Vimeo: Show video title and uploader before video starts playing</source>
+			</trans-unit>
+			<trans-unit id="responsiveVideo.flexform.enableRelatedVideos">
+				<source>YouTube: Enable related videos</source>
+			</trans-unit>
+			<trans-unit id="responsiveVideo.flexform.enableLoop">
+				<source>Enable looping - video starts over again from the beginnning when finished</source>
+			</trans-unit>
+
 
 			<!--SocialIcons Element-->
 			<trans-unit id="socialIcons.title">
@@ -406,25 +416,25 @@
 			<trans-unit id="contactsCard.description">
 				<source>Photo and contact information</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.name"> 
+			<trans-unit id="contactsCard.name">
 				<source>Full Name</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.job"> 
+			<trans-unit id="contactsCard.job">
 				<source>Job Description</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.flexform.contactPhone_1"> 
+			<trans-unit id="contactsCard.flexform.contactPhone_1">
 				<source>Contact Phone 1</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.flexform.contactPhone_2"> 
+			<trans-unit id="contactsCard.flexform.contactPhone_2">
 				<source>Contact Phone 2</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.flexform.mobilePhone"> 
+			<trans-unit id="contactsCard.flexform.mobilePhone">
 				<source>Mobile Phone</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.flexform.email"> 
+			<trans-unit id="contactsCard.flexform.email">
 				<source>E-mail</source>
 			</trans-unit>
-			<trans-unit id="contactsCard.flexform.linkedInLink"> 
+			<trans-unit id="contactsCard.flexform.linkedInLink">
 				<source>Link to LinkedIn Profile</source>
 			</trans-unit>
 			<trans-unit id="contactsCard.flexform.imgAsBg">
