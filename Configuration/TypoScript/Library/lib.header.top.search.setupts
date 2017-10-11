@@ -1,7 +1,15 @@
-plugin.tx_solr.templateFiles.searchHeaderTop = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiSearch/searchHeaderTop.html
-
 lib.header.top.search = TEXT
 [globalVar = LIT:1 = {$themes.configuration.features.enableSolr}]
-    lib.header.top.search = USER
-    lib.header.top.search.userFunc = T3kit\themeT3kit\Plugin\Search\SearchHeaderTop->main
+    lib.header.top.search < plugin.tx_solr_PiSearch_Search
+    lib.header.top.search.view {
+        templateRootPaths {
+			100 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/HeaderTopSearch/Templates/
+		}
+		partialRootPaths {
+			100 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/HeaderTopSearch/Partials/
+		}
+		layoutRootPaths {
+			100 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/HeaderTopSearch/Layouts/
+		}
+    }
 [global]

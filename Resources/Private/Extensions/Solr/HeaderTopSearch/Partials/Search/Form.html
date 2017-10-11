@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	  xmlns:s="http://typo3.org/ns/ApacheSolrForTypo3/Solr/ViewHelpers">
+
+<f:section name="Form">
+
+<div class="tx-solr-searchbox">
+
+	<s:searchForm id="tx-solr-search-form-pi-results" additionalFilters="{additionalFilters}">
+		<input type="hidden" name="L" value="{languageUid}" />
+		<input type="hidden" name="id" value="{pageUid}" />
+		
+		<div class="main-navigation__search-btn-wrp _header-top-search-btn">
+				<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">{s:translate(key:'submit',default:'Search')}<span></span></a>
+		</div>
+		<div class="main-navigation__search-box _header-top-search-btn js__main-navigation__search-box" >
+			<input type="search" id="inputText" class="tx-solr-q js-solr-q" name="{pluginNamespace}[q]" value="{q}" placeholder="{s:translate(key:'submit',default:'Search')}"  data-search="searchSuggest"  data-search="searchSuggest" />
+		</div>
+
+	</s:searchForm>
+
+	<s:debug.query />
+</div>
+
+</f:section>
