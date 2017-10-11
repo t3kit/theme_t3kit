@@ -12,3 +12,11 @@ themes.configuration.tracking.ga_account =
 # customsubcategory=googleWebMasterTools= Google Webmaster Tools
 # cat=theme,expert/googleWebMasterTools/; type=string; label= Google Search Console
 themes.configuration.tracking.ga_siteVerification =
+
+
+#############################################
+# Google Tag Manager
+#############################################
+# customsubcategory=googleWebMasterTools= Google Webmaster Tools
+# cat=theme,expert/googleWebMasterTools/; type=string; label= Google Tag Manager Id
+themes.configuration.tracking.ga_gtmid =
