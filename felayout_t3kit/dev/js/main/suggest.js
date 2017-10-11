@@ -1,4 +1,4 @@
-/* global Awesomplete, touchSupport, jQuery */
+/* global forceEnableSuggest, Awesomplete, touchSupport, jQuery */
 
 // container for Search suggestion data
 var mainSearchInputList = {}
@@ -61,7 +61,7 @@ var mainSearchInputList = {}
   $(document).ready(function () {
     // Make it possible to enable suggest even on devices with touch support
     // by setting var forceEnableSuggest = true;
-    var overrideTouchSupport = typeof forceEnableSuggest !== 'undefined' ? forceEnableSuggest : false;
+    var overrideTouchSupport = typeof forceEnableSuggest !== 'undefined' ? forceEnableSuggest : false
 
     if ((!touchSupport || overrideTouchSupport) && $(window).width() >= 992) {
       searchSuggestFn()
