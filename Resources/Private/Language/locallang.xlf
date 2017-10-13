@@ -19,6 +19,9 @@
 			<trans-unit id="imprint_label" xml:space="preserve">
 				<source>Imprint</source>
 			</trans-unit>
+			<trans-unit id="subnavigation.ariaLabel" xml:space="preserve">
+				<source>Subnavigation</source>
+			</trans-unit>
 
 
 			<!--Extensions-->
