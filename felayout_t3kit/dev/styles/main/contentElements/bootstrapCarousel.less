@@ -47,15 +47,14 @@
     }
 
     // Show only center of image, it is only 300px height
-    > .item > img,
-    > .item > a > img {
+    > .item img,
+    > .item > a img {
         height: 100%;
         max-width: none;
         left: 50%;
-        top: 50%;
         position: relative;
         width: auto;
-        .translate(-50%, -50%);
+        .translate(-50%, 0);
     }
 
     > .active,
@@ -217,11 +216,10 @@
         }
 
         // Make images fit in the item size, remove centered image area
-        > .item > img,
-        > .item > a > img {
+        > .item img,
+        > .item > a img {
             width: 100%;
             height: auto;
-            top: 0;
             left: 0;
             transform: none;
         }
