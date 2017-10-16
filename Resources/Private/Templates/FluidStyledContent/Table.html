@@ -3,7 +3,7 @@
 <f:layout name="Default" />
 <f:section name="Main">
 	<f:if condition="{table}">
-		<table class="ce-table{f:if(condition: tableClass, then: ' {tableClass}')}">
+		<table class="ce-table{f:if(condition: tableClass, then: ' {tableClass}', else: ' table')}">
 			<f:if condition="{data.table_caption}">
 				<caption>{data.table_caption}</caption>
 			</f:if>
