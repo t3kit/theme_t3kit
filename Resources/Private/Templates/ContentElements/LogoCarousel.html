@@ -4,13 +4,13 @@
 <f:section name="Main">
 <!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [begin] -->
 	<f:if condition="{logos}">
-		<div class="logo-carousel swiper-container js__logo-carousel">
+		<div class="logo-carousel swiper-container js__logo-carousel" data-autoplay="{f:if(condition:'{settings.interval}==0', then:'false', else:'{settings.interval}')}">
 			<div class="swiper-wrapper logo-carousel__wrp">
 				<f:for each="{logos}" as="logo">
 					<div class="swiper-slide logo-carousel__slide">
 						<f:if condition="{logo.referenceProperties.link}">
 							<f:then>
-								<f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link" title="{logo.title}">
+								<f:link.typolink parameter="{logo.referenceProperties.link}" class="logo-carousel__link" title="{logo.alternative}">
 									<f:render section="renderLogo" arguments="{
 										logoUid: logo.uid,
 										alt: logo.alternative,
@@ -33,8 +33,21 @@
 					</div>
 				</f:for>
 			</div>
-			<div class="js__logo-carousel__btn-next logo-carousel__btn-next swiper-button-next"></div>
-			<div class="js__logo-carousel__btn-prev logo-carousel__btn-prev swiper-button-prev"></div>
+			<div class="js__logo-carousel__btn-next logo-carousel__btn-next swiper-button-next" role="button" tabindex="0"></div>
+			<div class="js__logo-carousel__btn-prev logo-carousel__btn-prev swiper-button-prev" role="button" tabindex="0"></div>
+
+			<f:comment> These labels are used in carousel.js for aria-labels in logo carousel.</f:comment>
+			<script id="js__aria-labels" type="application/json">
+				{
+					"ariaLabel": {
+						"prevSlideMessage": "<f:translate key='logoCarousel.ariaLabel.prevSlideMessage' extensionName='theme_t3kit' />",
+						"nextSlideMessage": "<f:translate key='logoCarousel.ariaLabel.nextSlideMessage' extensionName='theme_t3kit' />",
+						"firstSlideMessage": "<f:translate key='logoCarousel.ariaLabel.firstSlideMessage' extensionName='theme_t3kit' />",
+						"lastSlideMessage": "<f:translate key='logoCarousel.ariaLabel.lastSlideMessage' extensionName='theme_t3kit' />",
+						"paginationBulletMessage": "<f:translate key='logoCarousel.ariaLabel.paginationBulletMessage' extensionName='theme_t3kit' />"
+					}
+				}
+			</script>
 		</div>
 	</f:if>
 <!-- theme_t3kit: Templates/ContentElements/LogoCarousel.html [end] -->

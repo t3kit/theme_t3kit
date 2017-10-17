@@ -45,6 +45,21 @@
 			<trans-unit id="contentElement.slider.linkText" xml:space="preserve">
 				<source>Read more</source>
 			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.nextSlideMessage">
+				<source>Show next item</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.prevSlideMessage">
+				<source>Show previous item</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.firstSlideMessage">
+				<source>This is the first slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.lastSlideMessage">
+				<source>This is the last slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.paginationBulletMessage">
+				<source>Go to slide {{index}}</source>
+			</trans-unit>
 
 
 			<!-- Warning message for outdated browsers -->

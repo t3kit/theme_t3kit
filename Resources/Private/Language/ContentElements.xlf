@@ -304,6 +304,9 @@
 			<trans-unit id="logoCarousel.tabs.logos">
 				<source>Logos</source>
 			</trans-unit>
+			<trans-unit id="logoCarousel.flexform.interval">
+				<source>Interval in milliseconds(ms)</source>
+			</trans-unit>
 
 			<!--Quote Element-->
 			<trans-unit id="quote.title">
