@@ -38,7 +38,7 @@
     color: fade(@nav-link-hover-color, 60%);
 }
 
-@media (min-width: 992px) {
+@media (min-width: @screen-md-min) {
     ._dropdown-menu-with-columns .main-navigation__sub-item-list {
         border-top: 2px solid @header-border-color;
         padding-bottom: 30px;
@@ -109,7 +109,7 @@
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: @screen-sm-max) {
     ._dropdown-menu-with-columns .main-navigation__sub-item-list {
         background: darken(@nav-background-color, 3%);
     }
