@@ -3525,7 +3525,6 @@
 // =========================================================
 .footer {
     background: @footer-background;
-    // border-top: 15px solid lighten(@footer-background, 20%);
     border-top: 15px solid @footer-background;
 }
 
@@ -3549,7 +3548,18 @@
 .footer h4 {
     border-bottom: 1px solid lighten(@footer-background, 20%);
     padding-bottom: 4px;
-    // text-transform: uppercase;
+}
+
+.footer a {
+    transition: color 0.2s ease;
+    color: @footer-link-color;
+    font-weight: 400;
+
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: @footer-link-hover-color;
+    }
 }
 
 .no-touch .footer a:hover {
@@ -3560,61 +3570,26 @@
 // -----------------------------------------------------------------------------
 
 // =================================
-// === Footer Contact ==============
-// =================================
-// .footer__contact .contact-links {
-//     list-style: none;
-//     padding: 0;
-// }
-// @media (min-width: 1200px) {
-//     .footer__contact .contact-links a{
-//         display: inline;
-//     }
-// }
-// @media (min-width: 992px) {
-//     .footer__contact .contact-links a{
-//         display: block;
-//     }
-// }
-
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
-
-// =================================
 // === Footer Quick Links===========
 // =================================
+.footer {
+    div[class*="frame-type-menu_"] > ul {
+        list-style: none;
+        padding: 0;
+        padding-bottom: 10px;
 
-.footer__quick-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 10px;
-}
-
-.footer__quick-links ul > li {
-    padding: 8px 0;
-}
-
-.footer__quick-links ul > li > a {
-    transition: color 0.2s ease;
-    color: @footer-link-color;
-    padding-left: 0;
-    padding-bottom: 2px;
-    font-weight: 400;
-    // text-transform: uppercase;
-}
-
-.footer__quick-links ul > li > a:hover {
-    background-color: transparent;
-    color: @footer-link-hover-color;
+        > li {
+            padding: 8px 0;
+        }
+    }
 }
 
 @media (max-width: 460px) {
-    .footer__quick-links {
+    .footer {
         text-align: center;
     }
 
-    .footer__quick-links h4 {
+    .footer h4 {
         border: none;
     }
 }
@@ -3625,11 +3600,25 @@
 // =================================
 // === Footer Logo + contacts=======
 // =================================
-.footer__logo-contacts .ce-bodytext p {
-    padding-top: 20px;
-    margin: 0;
-}
+.footer {
+    .container:nth-child(2) {
+        .ce-textpic.ce-left {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: center;
 
+            > .ce-gallery {
+                margin-bottom: 0;
+            }
+
+            > .ce-bodytext > p {
+                margin: 20px 0 0;
+                line-height: 1;
+            }
+        }
+    }
+}
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
@@ -3637,7 +3626,7 @@
 // === Footer Social-icons==========
 // =================================
 @media (min-width: 992px) {
-    .footer__social-icons .social-icons {
+    .frame-type-socialIcons .social-icons {
         padding: 0;
         text-align: right;
     }
@@ -3649,90 +3638,58 @@
 // =================================
 // === Footer Bottom ===============
 // =================================
+.footer {
+    .container:nth-child(3) {
+        border-top: 1px solid lighten(@footer-background, 20%);
 
-.footer__bottom {
-    // margin-top: 30px;
-    text-align: center;
-    background: @footer-background;
-    padding-bottom: 10px;
-}
+        div[class*="frame-type-menu_"] > ul {
+            padding: 0;
+            text-align: center;
 
-.footer__bottom .row {
-    margin-right: 0;
-    margin-left: 0;
-}
+            > li {
+                display: inline-block;
+                padding: 0;
 
-.footer__bottom-copyright {
-    padding-top: 12px;
-    border-top: 1px solid lighten(@footer-background, 20%);
-}
+                > a {
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    transition: color 0.2s ease;
+                    padding: 0 10px;
+                    font-size: 14px;
+                }
+            }
+        }
 
-.footer__bottom-nav ul {
-    padding: 0;
-    text-align: center;
-}
-
-.footer__bottom-nav ul > li {
-    display: inline-block;
-}
-
-.footer__bottom-nav ul > li > a {
-    // color: darken(@footer-color, 25%);
-    font-weight: 400;
-    text-transform: uppercase;
-    transition: color 0.2s ease;
-    padding: 0 10px;
-    font-size: 14px;
-    color: @footer-link-color;
+        .frame-type-copyrightText {
+            padding-top: 12px;
+            text-align: center;
+        }
+    }
 }
 
 @media (min-width: 992px) {
-    .footer__bottom {
-        text-align: left;
-    }
+    .footer {
+        .container:nth-child(2) {
+            .ce-textpic.ce-left {
+                justify-content: left;
+                margin-bottom: 15px;
+            }
+        }
 
-    .footer__bottom-copyright {
-        padding-left: 0;
-    }
+        .container:nth-child(3) {
+            div[class*="frame-type-menu_"] > ul {
+                padding-top: 12px;
+                text-align: right;
+                margin-right: -25px; // Make links align with border-top
+            }
 
-    .footer__bottom-copyright > p {
-        margin: 0;
-    }
-
-    .footer__bottom-nav {
-        padding-top: 12px;
-        border-top: 1px solid lighten(@footer-background, 20%);
-        padding-right: 0;
-    }
-
-    .footer__bottom-nav ul {
-        text-align: right;
-    }
-
-    .footer__map-icon {
-        margin-left: 0;
+            .frame-type-copyrightText {
+                margin-left: -15px;
+                text-align: left;
+            }
+        }
     }
 }
-
-@media (max-width: 991px) {
-    .footer__logo-contacts {
-        text-align: center;
-    }
-
-    .footer__logo-contacts .ce-textpic .ce-gallery {
-        float: none;
-    }
-
-    .footer__logo-contacts .ce-gallery .ce-column {
-        float: none;
-    }
-
-    .footer__logo-contacts .ce-gallery .ce-column img {
-        margin: 0 auto;
-    }
-}
-// -----------------------------------------------------------------------------
-// -----------------------------------------------------------------------------
 
 
 // Form Elements
@@ -3759,48 +3716,50 @@
 // === News Letter Subscription=============
 // =================================
 
-.footer__subscribe .alert {
-    width: 66%;
-    clear: both;
-}
+.footer .tx-pxa-newsletter-subscription {
+    .alert {
+        width: 66%;
+        clear: both;
+    }
 
-.footer__subscribe .form-control {
-    margin: 5px auto;
-}
+    .form-control {
+        margin: 5px auto;
+    }
 
-.footer__subscribe .btn,
-.footer__subscribe .form-control {
-    height: 40px;
-}
+    .btn,
+    .form-control {
+        height: 40px;
+    }
 
-.footer__subscribe .btn {
-    background-color: @main-color;
-    border: none;
-    // color: #fff;
-    padding: 0 30px;
-    color: tint(@main-color, 90%);
+    .btn {
+        background-color: @main-color;
+        border: none;
+        // color: #fff;
+        padding: 0 30px;
+        color: tint(@main-color, 90%);
 
-    &.active,
-    &:active {
+        &.active,
+        &:active {
+            &.focus,
+            &:focus {
+                border: none;
+                color: tint(@main-color, 90%);
+                background-color: @main-color;
+            }
+        }
+
         &.focus,
-        &:focus {
+        &:focus,
+        &:hover {
             border: none;
-            color: tint(@main-color, 90%);
+            color: tint(@main-color, 70%);
             background-color: @main-color;
         }
     }
 
-    &.focus,
-    &:focus,
-    &:hover {
-        border: none;
-        color: tint(@main-color, 70%);
-        background-color: @main-color;
+    .input-group {
+        width: 100%;
     }
-}
-
-.footer__subscribe .input-group {
-    width: 100%;
 }
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
@@ -7435,15 +7394,14 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 
     // Show only center of image, it is only 300px height
-    > .item > img,
-    > .item > a > img {
+    > .item img,
+    > .item > a img {
         height: 100%;
         max-width: none;
         left: 50%;
-        top: 50%;
         position: relative;
         width: auto;
-        .translate(-50%, -50%);
+        .translate(-50%, 0);
     }
 
     > .active,
@@ -7605,11 +7563,10 @@ div.awesomplete li[aria-selected="true"] mark {
         }
 
         // Make images fit in the item size, remove centered image area
-        > .item > img,
-        > .item > a > img {
+        > .item img,
+        > .item > a img {
             width: 100%;
             height: auto;
-            top: 0;
             left: 0;
             transform: none;
         }
@@ -8573,16 +8530,11 @@ div.awesomplete li[aria-selected="true"] mark {
     .main-navigation,
     .sub-navigation,
     .logo-carousel,
-    .footer__map,
-    .footer__subscribe,
-    .footer__quick-links,
     .big-icon-text-btn__link,
     .breadcrumbs,
     .footer .social-icons,
-    .footer__bottom-nav,
-    .footer__map,
-    .footer__quick-links,
-    .footer__subscribe,
+    .footer div[class*="frame-type-menu_"],
+    .footer .tx-pxa-newsletter-subscription,
     .header-middle .social-icons,
     .header-middle .tx-solr,
     .header-top-wrp,
