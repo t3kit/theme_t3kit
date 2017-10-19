@@ -13,6 +13,12 @@
 			<trans-unit id="bootstrapCarousel.ariaLabel.control">
 				<target>Zeige Bild %1$s von %2$s</target>
 			</trans-unit>
+			<trans-unit id="skipLinks.mainNav" xml:space="preserve">
+				<target>Direkt zur Hauptnavigation springen</target>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
+				<target>Direkt zum Inhalt springen</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
