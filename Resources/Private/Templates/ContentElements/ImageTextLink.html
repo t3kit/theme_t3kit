@@ -52,7 +52,7 @@
 			<f:if condition="{settings.disableWholeAreaLink} == 0">
 				<f:if condition="{settings.hoverEffect} == 0">
 					<f:if condition="{data.subheader}">
-						<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</span>
+						<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}" aria-hidden="true">{data.subheader}</span>
 					</f:if>
 				</f:if>
 	 		</f:if>
