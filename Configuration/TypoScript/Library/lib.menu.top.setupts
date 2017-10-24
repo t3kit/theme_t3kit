@@ -13,6 +13,9 @@ lib.menu.top.1 {
     NO.stdWrap.wrap.required = 1
     NO.stdWrap.wrap.dataWrap = <span class="icons icon-|"></span>
     NO.stdWrap.innerWrap.noTrimWrap = |&nbsp;||
+    NO.ATagTitle {
+        field = abstract // description // subtitle // title
+    }
     NO.additionalParams = &logintype=logout
     NO.additionalParams {
         if.isInList.field = uid
