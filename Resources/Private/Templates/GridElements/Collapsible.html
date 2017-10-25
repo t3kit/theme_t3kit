@@ -3,7 +3,8 @@
 	<div class="panel panel-default {layoutClass} {alignClass}">
 		<div class="panel-heading" role="tab" id="heading-{data.uid}">
 			<h4 class="panel-title">
-				<a data-toggle="collapse" class="{f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: '', else: 'collapsed')}" data-parent="#group-{data.tx_gridelements_container}" href="#collapse-{data.uid}">{data.header}</a>
+				<f:link.page pageUid="#collapse-{data.uid}" absolute="1" class="{f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: '', else: 'collapsed')}"
+				additionalAttributes="{'data-toggle':'collapse', 'data-target': '#collapse-{data.uid}', 'data-parent': '#group-{data.tx_gridelements_container}'}">{data.header}</f:link.page>
 			</h4>
 		</div>
 		<div id="collapse-{data.uid}" class="panel-collapse collapse {f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: 'in', else: '')}" role="tabpanel">
