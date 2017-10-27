@@ -18,14 +18,14 @@
 </f:if>
 
 <f:if condition="{file.description} && {includeDescription}">
-	<f:if condition="{dataCaption -> f:count()} > 0">
+	<f:if condition="{dataCaption}">
 		<f:variable name="dataCaption">{dataCaption}{glue}</f:variable>
 	</f:if>
 	<f:variable name="dataCaption">{dataCaption}{file.description}</f:variable>
 </f:if>
 
 <f:if condition="{file.properties.copyright} && {includeCopyright}">
-	<f:if condition="{dataCaption -> f:count()} > 0">
+	<f:if condition="{dataCaption}">
 		<f:variable name="dataCaption">{dataCaption}{glue}</f:variable>
 	</f:if>
 	<f:if condition="{labelCopyright}">
