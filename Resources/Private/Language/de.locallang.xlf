@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-10-17T14:30:39Z" product-name="theme_t3kit">
+		<header/>
+		<body>
+			<!--BootstrapCarousel Element-->
+			<trans-unit id="bootstrapCarousel.screenReader.title">
+				<target>Bilderkarussell mit %s Bildern.</target>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.screenReader.slide">
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.ariaLabel.control">
+				<target>Zeige Bild %1$s von %2$s</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
