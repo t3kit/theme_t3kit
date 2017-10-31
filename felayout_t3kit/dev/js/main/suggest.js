@@ -1,4 +1,4 @@
-/* global tx_solr_suggestUrl, Awesomplete, touchSupport, jQuery */
+/* global forceEnableSuggest, Awesomplete, touchSupport, jQuery */
 
 // container for Search suggestion data
 var mainSearchInputList = {}
@@ -29,12 +29,12 @@ var mainSearchInputList = {}
           if (!req) {
             req = true
             $.ajax({
-              url: tx_solr_suggestUrl, // jscs:ignore requireCamelCaseOrUpperCaseIdentifiers
+              url: that.closest('form').data('suggest'),
               dataType: 'json',
               data: {
                 termLowercase: that.val().toLowerCase(),
                 termOriginal: that.val(),
-                L: jQuery('div.tx-solr input[name="L"]').val()
+                L: that.closest('form').find('input[name="L"]').val()
               },
               success: function (data) {
                 req = false
@@ -48,7 +48,7 @@ var mainSearchInputList = {}
             })
           }
         }
-        typeof tx_solr_suggestUrl !== 'undefined' && fetchSuggestData() // eslint-disable-line
+        typeof $(this).closest('form').data('suggest') !== 'undefined' && fetchSuggestData() // eslint-disable-line
       })
       $(this).on('awesomplete-selectcomplete', function () {
         $(this).closest('form').submit()
@@ -59,7 +59,11 @@ var mainSearchInputList = {}
 
   // document load event
   $(document).ready(function () {
-    if (!touchSupport && $(window).width() >= 992) {
+    // Make it possible to enable suggest even on devices with touch support
+    // by setting var forceEnableSuggest = true;
+    var overrideTouchSupport = typeof forceEnableSuggest !== 'undefined' ? forceEnableSuggest : false
+
+    if ((!touchSupport || overrideTouchSupport) && $(window).width() >= 992) {
       searchSuggestFn()
     }
   })

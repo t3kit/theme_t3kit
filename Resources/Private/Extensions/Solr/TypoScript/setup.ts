@@ -10,6 +10,7 @@ plugin.tx_solr.enabled = {$themes.configuration.features.enableSolr}
 plugin.tx_solr.suggest = 1
 plugin.tx_solr.search.faceting = 1
 plugin.tx_solr.search.spellchecking = 1
+
 plugin.tx_solr.search.results.resultsHighlighting = 1
 plugin.tx_solr.search.results.resultsHighlighting.wrap = <mark>|</mark>
 plugin.tx_solr.search.sorting = 1
@@ -29,6 +30,22 @@ plugin.tx_solr.index.queue {
     }
 }
 
+plugin.tx_solr {
+    view {
+        pluginNamespace = tx_solr
+
+        templateRootPaths {
+            50 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates
+        }
+        partialRootPaths {
+            50 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Partials
+        }
+        layoutRootPaths {
+            50 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Layouts
+        }
+    }
+}
+
 ## TEST
 #plugin.tx_solr.general.dateFormat.date =
 ## Just to check pagination with many pages
@@ -37,7 +54,7 @@ plugin.tx_solr.index.queue {
 #plugin.tx_solr.search.results.pagebrowser.pagesAfter = 2
 
 ## Test to enable solr features to see if template is correct
-#plugin.tx_solr.statistics = 1
+plugin.tx_solr.statistics = 1
 #plugin.tx_solr.search.frequentSearches = 1
 #plugin.tx_solr.search.lastSearches = 1
 #plugin.tx_solr.logging.query.searchWords = 1
@@ -46,14 +63,14 @@ plugin.tx_solr.index.queue {
 #plugin.tx_solr.search.frequentSearches.select.ADD_WHERE = AND num_found > 0
 
 ## Solr tools
-#plugin.tx_solr.search.results.showDocumentScoreAnalysis = 0
+plugin.tx_solr.search.results.showDocumentScoreAnalysis = 0
 #plugin.tx_solr.search.frequentSearches.select.ORDER_BY =
 #plugin.tx_solr.search.frequentSearches.select.ADD_WHERE =
 
 ## Test to add more filters
 plugin.tx_solr.search.faceting.facets.category.field = category_stringM
-plugin.tx_solr.search.faceting.facets.category.label = {LLL:EXT:lang/locallang_common.xlf:category}
-plugin.tx_solr.search.faceting.facets.category.label.insertData = 1
+plugin.tx_solr.search.faceting.facets.category.label = TEXT
+plugin.tx_solr.search.faceting.facets.category.label.data = LLL:EXT:lang/locallang_common.xlf:category
 
 plugin.tx_solr.search.faceting.facets.type {
     renderingInstruction = CASE
@@ -76,52 +93,15 @@ plugin.tx_solr.index.queue.pages.fields.category_stringM {
     multiValue = 1
 }
 
-plugin.tx_solr {
-    # Change solr templates to our custom
-    templateFiles {
-        frequentSearches = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiFrequentSearches/frequentsearches.htm
-        pagebrowser      = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiResults/pagebrowser.htm
-        results          = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiResults/results.htm
-        search           = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Templates/PiSearch/search.htm
-    }
-    cssFiles {
-        # Disable solr default css
-        # results = EXT:solr/Resources/Css/PiResults/results.css
-        results >
-        # ui      = EXT:solr/Resources/Css/JQueryUi/jquery-ui.custom.css
-        ui >
-    }
-
-    javascriptFiles {
-        # Disable solr default js
-        library >
-        ui >
-        ui.autocomplete >
-        suggest >
-        ui.datepicker >
-        ui.datepicker.de >
-        ui.datepicker.fr >
-        ui.datepicker.nl >
-        ui.slider >
-        faceting.limitExpansion >
-        faceting.dateRangeHelper >
-        faceting.numericRangeHelper >
-    }
-}
-
 # Change solr core if language other than default
 [globalVar = GP:L > 0]
     plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCode}/
 [global]
 
-
 # Additional when solr is enabled
 [globalVar = LIT:1 = {$themes.configuration.features.enableSolr}]
 
     config.index_enable = 1
-
-    lib.searchbox >
-    lib.searchbox < plugin.tx_solr_PiSearch_Search
 
 [global]
 
@@ -133,3 +113,9 @@ plugin.tx_solr {
 [globalVar = GP:L > 0] && [applicationContext = Development/Docker, Production/Docker]
     plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCodeShort}/
 [global]
+
+# enable suggest on devices with touch support
+#page.jsInline {
+#  1910 = TEXT
+#  1910.value = var forceEnableSuggest = false;
+#}
