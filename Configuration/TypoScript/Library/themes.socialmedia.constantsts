@@ -12,6 +12,7 @@
 # customsubcategory=socialmedia_pinterest=Pinterest
 # customsubcategory=socialmedia_instagram=Instagram
 # customsubcategory=socialmedia_youtube=YouTube
+# customsubcategory=socialmedia_mynewsdesk=Mynewsdesk
 
 
 # Facebook
@@ -88,3 +89,11 @@ themes.configuration.socialmedia.useYoutube = 1
 
 # cat=socialmedia,advanced/socialmedia_youtube/; type=string; label= Youtube: Pagelink
 themes.configuration.socialmedia.youtubeLink = https://www.youtube.com/user/typo3/
+
+# Mynewsdesk
+#############################################
+# cat=socialmedia,advanced/socialmedia_mynewsdesk/; type=options[Show=1,Hide=0]; label= Mynewsdesk: Activate?!
+themes.configuration.socialmedia.useMynewsdesk = 1
+
+# cat=socialmedia,advanced/socialmedia_mynewsdesk/; type=string; label= Mynewsdesk: Pagelink
+themes.configuration.socialmedia.mynewsdeskLink = https://www.mynewsdesk.com/

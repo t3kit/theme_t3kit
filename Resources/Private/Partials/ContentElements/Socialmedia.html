@@ -112,6 +112,18 @@
 					</f:else>
 				</f:if>
 			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useMynewsdesk')}">
+				<f:if condition="{settings.mynewsdeskLink}">
+					<f:then>
+						<a class="social-icons__item" href="{settings.mynewsdeskLink}"
+						   target="_blank" title="Mynewsdesk"><span class="icons icon-t3-mynewsdesk"></span></a>
+					</f:then>
+					<f:else>
+						<a class="social-icons__item" href="{theme:constant(constant:'themes.configuration.socialmedia.mynewsdeskLink')}"
+							   target="_blank" title="Mynewsdesk"><span class="icons icon-t3-mynewsdesk"></span></a>
+					</f:else>
+				</f:if>
+			</f:if>
 		</div>
 
 		<!-- theme_t3kit: Partials/Footer/Socialmedia.html [end] -->
