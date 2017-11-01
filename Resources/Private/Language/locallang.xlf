@@ -25,7 +25,9 @@
 			<trans-unit id="metaNavigation.ariaLabel" xml:space="preserve">
 				<source>Meta navigation</source>
 			</trans-unit>
-
+			<trans-unit id="footer.firstHeadline">
+				<source>Footer</source>
+			</trans-unit>
 
 			<!--Extensions-->
 			<!--News-->
