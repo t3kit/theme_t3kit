@@ -46,6 +46,13 @@
 			<trans-unit id="news.more-link.linktext" xml:space="preserve">
 				<target>Öffne News - </target>
 			</trans-unit>
+			<!-- news pagination aria labels -->
+			<trans-unit id="paginate.list.ariaLabel" xml:space="preserve">
+				<target>Paginierung</target>
+			</trans-unit>
+			<trans-unit id="paginate.page.ariaLabel" xml:space="preserve">
+				<target>Seite</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -2,7 +2,7 @@
 	=====================
 		Partials/List/Item.html
 -->
-<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+<article class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 	<n:excludeDisplayedNews newsItem="{newsItem}"/>
 	<!-- header -->
 	<div class="news-article-header">
@@ -17,16 +17,16 @@
 		<!-- media preview element -->
 		<f:then>
 			<div class="news-img-wrap">
-				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 					<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 						<f:if condition="{mediaElement.originalResource.type} == 2">
-							<f:image src="{mediaElement.uid}" class="img-responsive" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+							<f:media file="{mediaElement}" width="{settings.list.media.image.maxWidth}"/>
 						</f:if>
 						<f:if condition="{mediaElement.originalResource.type} == 4">
 							<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
 						</f:if>
 						<f:if condition="{mediaElement.originalResource.type} == 5">
-							<f:image src="{mediaElement.uid}" class="img-responsive" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
+							<f:media file="{mediaElement}" width="{settings.list.media.image.maxWidth}"/>
 						</f:if>
 					</f:alias>
 				</n:link>
@@ -36,7 +36,7 @@
 			<f:if condition="{settings.displayDummyIfNoMedia}">
 				<div class="news-img-wrap">
 					<span class="no-media-element">
-						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+						<n:link newsItem="{newsItem}" settings="{settings}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 							<f:image src="{settings.list.media.dummyImage}" class="img-responsive" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}"/>
 						</n:link>
 					</span>
@@ -56,7 +56,7 @@
 			</f:else>
 		</f:if>
 
-		<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+		<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 			<f:translate key="more-link"/>
 		</n:link>
 	</div>
@@ -94,4 +94,4 @@
 			</f:if>
 		</p>
 	</div>
-</div>
+</article>
