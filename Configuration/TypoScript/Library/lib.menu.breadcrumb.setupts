@@ -1,55 +1,63 @@
 lib.menu.breadcrumb = COA
 lib.menu.breadcrumb {
-    wrap = <div class="breadcrumbs"><div class="breadcrumbs__wrp container"><ol class="breadcrumbs__list">|</ol></div></div>
-    # Render the rootline breadcrumb
-    10 = HMENU
-    10 {
-        special = rootline
-        special.range = 0|-1
-        includeNotInMenu = {$themes.configuration.menu.breadcrumb.includeNotInMenu}
-        excludeUidList = {$themes.configuration.menu.breadcrumb.excludeUidList},current
-        1 = TMENU
-        1 {
-            noBlur = 1
-            NO {
-                stdWrap.htmlSpecialChars = 1
-                doNotLinkIt = 0
-                linkWrap = <li class="breadcrumbs__list-item"><span class="icons icon-t3-home"></span>|</li> |*| <li class="breadcrumbs__list-item">|</li> |*|
-                ATagParams = class="breadcrumbs__list-link" title="{field:subtitle//field:title}"
-                ATagParams.insertData = 1
-                stdWrap.wrap = <span>|</span>
+    stdWrap.dataWrap = <nav aria-label="{LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:breadcrumb.ariaLabel}"> | </nav>
+
+    10 = TEXT
+    10.data = LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:breadcrumb_label
+    10.wrap = <span class="sr-only"> | </span>
+
+    20 = COA
+    20 {
+        wrap = <div class="breadcrumbs"><div class="breadcrumbs__wrp container"><ol class="breadcrumbs__list">|</ol></div></div>
+        # Render the rootline breadcrumb
+        10 = HMENU
+        10 {
+            special = rootline
+            special.range = 0|-1
+            includeNotInMenu = {$themes.configuration.menu.breadcrumb.includeNotInMenu}
+            excludeUidList = {$themes.configuration.menu.breadcrumb.excludeUidList},current
+            1 = TMENU
+            1 {
+                NO {
+                    stdWrap.htmlSpecialChars = 1
+                    doNotLinkIt = 0
+                    linkWrap = <li class="breadcrumbs__list-item"><span class="icons icon-t3-home"></span>|</li> |*| <li class="breadcrumbs__list-item">|</li> |*|
+                    ATagParams = class="breadcrumbs__list-link"
+                    ATagTitle.field = abstract // description // subtitle // title
+                    stdWrap.wrap = <span class="breadcrumbs__list-item-label">|</span>
+                }
+            }
+        }
+
+        # Render the current page and add an additional item like news category or tag
+        20 = HMENU
+        20 {
+            special = list
+            special.value.data = TSFE:id
+            includeNotInMenu = 1
+            1 = TMENU
+            1 {
+                itemArrayProcFunc = T3kit\themeT3kit\UserFunction\BreadCrumb->addAdditionalItem
+                NO < lib.menu.breadcrumb.10.1.NO
+                NO = 1
+                NO {
+                    doNotLinkIt = 0
+                    linkWrap = <li class="breadcrumbs__list-item">|</li>
+                    stdWrap.override {
+                        data = TSFE:altPageTitle
+                        stripHtml = 1
+                        if {
+                            isTrue.data = TSFE:altPageTitle
+                        }
+                    }
+                }
+                CUR < .NO
+                CUR {
+                    doNotLinkIt = 1
+                    linkWrap = <li class="breadcrumbs__list-item _active">|</li>
+                }
             }
         }
     }
 
-    # Render the current page and add an additional item like news category or tag
-    20 = HMENU
-    20 {
-        special = list
-        special.value.data = TSFE:id
-        includeNotInMenu = 1
-        1 = TMENU
-        1 {
-            itemArrayProcFunc = T3kit\themeT3kit\UserFunction\BreadCrumb->addAdditionalItem
-            noBlur = 1
-            NO < lib.menu.breadcrumb.10.1.NO
-            NO = 1
-            NO {
-                doNotLinkIt = 0
-                linkWrap = <li class="breadcrumbs__list-item">|</li>
-                stdWrap.override {
-                    data = TSFE:altPageTitle
-                    stripHtml = 1
-                    if {
-                        isTrue.data = TSFE:altPageTitle
-                    }
-                }
-            }
-            CUR < .NO
-            CUR {
-                doNotLinkIt = 1
-                linkWrap = <li class="breadcrumbs__list-item _active">|</li>
-            }
-        }
-    }
 }
