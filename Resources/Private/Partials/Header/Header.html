@@ -78,11 +78,11 @@
 		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
 			<span>toggle menu</span>
 		</button>
-		<div class="main-navigation-mobile__language-menu">
-			<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
+		<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
+			<div class="main-navigation-mobile__language-menu">
 				<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
-			</f:if>
-		</div>
+			</div>
+		</f:if>
 	</f:if>
 
 	<nav class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')}">
