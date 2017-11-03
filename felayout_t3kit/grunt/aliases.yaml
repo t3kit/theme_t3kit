@@ -52,6 +52,18 @@ check:
     - 'stylelint:less'
 
 # ==================================
+# compileLess + compileCss + uglifyJs
+# ==================================
+production:
+    - 'compileLess'
+    - 'compileCss'
+    - 'uglify'
+
+# alias to production
+prod:
+    - 'production'
+
+# ==================================
 # Task helpers  ====================
 # ==================================
 dev:
