@@ -19,6 +19,9 @@
 			<trans-unit id="imprint_label" xml:space="preserve">
 				<source>Imprint</source>
 			</trans-unit>
+			<trans-unit id="subnavigation.ariaLabel" xml:space="preserve">
+				<source>Subnavigation</source>
+			</trans-unit>
 
 
 			<!--Extensions-->
@@ -71,6 +74,17 @@
 			</trans-unit>
 			<trans-unit id="iconFontSelector.exception.iconFileMissing">
 				<source>Missing font file included from the css</source>
+			</trans-unit>
+
+			<!--BootstrapCarousel Element-->
+			<trans-unit id="bootstrapCarousel.screenReader.title">
+				<source>Image carousel with %s slides.</source>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.screenReader.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.ariaLabel.control">
+				<source>Show iamge %1$s of %2$s</source>
 			</trans-unit>
 		</body>
 	</file>

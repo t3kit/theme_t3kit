@@ -8,6 +8,11 @@ styles.content {
     # Max Image/Media Width
     maxW = 900
 
+    # Remove fixed width and height for images in lightbox
+    # Calculation for lightbox is done in simple-lightbox.js
+    linkWrap.width =
+    linkWrap.height =
+
     linkWrap.lightboxEnabled = 1
 
     # No rel attribute needed for lightbox link

@@ -392,6 +392,9 @@
 			<trans-unit id="socialIcons.flexform.youtubeLink">
 				<source>Youtube: Pagelink</source>
 			</trans-unit>
+			<trans-unit id="socialIcons.flexform.mynewsdeskLink">
+				<source>Mynewsdesk: Pagelink</source>
+			</trans-unit>
 
 			<!--CopyrightText Element-->
 			<trans-unit id="copyrightText.title">

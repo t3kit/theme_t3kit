@@ -5,6 +5,11 @@
 .footer {
     background: @footer-background;
     border-top: 15px solid @footer-background;
+    margin-top: 50px;
+}
+
+._start-page + .footer {
+    margin: 0;
 }
 
 .footer p {
@@ -48,7 +53,6 @@
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-// =================================
 // === Footer Quick Links===========
 // =================================
 .footer {
@@ -104,8 +108,9 @@
 // =================================
 // === Footer Social-icons==========
 // =================================
-@media (min-width: 992px) {
-    .frame-type-socialIcons .social-icons {
+
+@media (min-width: @screen-md-min) {
+    .footer .social-icons {
         padding: 0;
         text-align: right;
     }

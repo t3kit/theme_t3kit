@@ -103,11 +103,11 @@ lib.contentElement {
         media {
             popup {
                 data-caption {
-                    glue = <br>
-                    includeTitle = 0
-                    includeDescription = 1
-                    includeCopyright = 1
-                    labelCopyright = ©
+                    glue = {$lightbox.dataCaption.glue}
+                    includeTitle = {$lightbox.dataCaption.includeTitle}
+                    includeDescription = {$lightbox.dataCaption.includeDescription}
+                    includeCopyright = {$lightbox.dataCaption.includeCopyright}
+                    labelCopyright = {$lightbox.dataCaption.labelCopyright}
                 }
             }
         }

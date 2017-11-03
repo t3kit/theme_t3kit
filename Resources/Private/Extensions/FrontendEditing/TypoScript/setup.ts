@@ -1,0 +1,1 @@
+config.frontend_editing = 1

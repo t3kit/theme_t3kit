@@ -1,0 +1,8 @@
+# Lightbox data-caption attribute settings
+lightbox.dataCaption {
+    glue = <br>
+    includeTitle = 0
+    includeDescription = 1
+    includeCopyright = 1
+    labelCopyright = ©
+}

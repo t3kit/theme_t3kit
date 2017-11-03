@@ -16,3 +16,14 @@ plugin.tx_news.settings.list.media.dummyImage = typo3conf/ext/theme_t3kit/Resour
 plugin.tx_news.settings.detail.shariffServices = facebook,twitter,whatsapp
 
 plugin.tx_news.settings.detail.showPrevNext = 1
+
+# Lightbox data-caption attribute settings for use in Partials/Detail/MediaImage.html
+plugin.tx_news.settings {
+    detail.media.image.lightbox {
+        glue = {$lightbox.dataCaption.glue}
+        includeTitle = {$lightbox.dataCaption.includeTitle}
+        includeDescription = {$lightbox.dataCaption.includeDescription}
+        includeCopyright = {$lightbox.dataCaption.includeCopyright}
+        labelCopyright = {$lightbox.dataCaption.labelCopyright}
+    }
+}
