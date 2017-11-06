@@ -11,9 +11,10 @@ lib.menu.sub.1 {
     expAll = 0
     NO = 1
     NO {
-    wrapItemAndSub.insertData = 1
-    wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
+        wrapItemAndSub.insertData = 1
+        wrapItemAndSub = <li class="sub-navigation__item _first">|</li>|*|<li class="sub-navigation__item _middle">|</li>|*|<li class="sub-navigation__item _last">|</li>
         ATagParams = class="sub-navigation__link _sub-level-2"
+        ATagTitle.field = abstract // description // subtitle // title
     }
     CUR < .NO
     CUR {
@@ -40,7 +41,7 @@ lib.menu.sub.1 {
         ATagParams = class="sub-navigation__link _sub-level-2 _curent _sub"
     }
 }
-lib.menu.sub.2 < 1
+lib.menu.sub.2 < lib.menu.sub.1
 lib.menu.sub.2 = TMENU
 lib.menu.sub.2 {
     wrap = <ul class="sub-navigation__item-list _sub-list-level-3"> | </ul>
@@ -76,7 +77,7 @@ lib.menu.sub.2 {
         ATagParams = class="sub-navigation__link _sub-level-3 _curent _sub"
     }
 }
-lib.menu.sub.3 < 1
+lib.menu.sub.3 < lib.menu.sub.1
 lib.menu.sub.3 = TMENU
 lib.menu.sub.3 {
     wrap = <ul class="sub-navigation__item-list _sub-list-level-4"> | </ul>
@@ -112,7 +113,7 @@ lib.menu.sub.3 {
         ATagParams = class="sub-navigation__link _sub-level-4 _curent _sub"
     }
 }
-lib.menu.sub.4 < 1
+lib.menu.sub.4 < lib.menu.sub.1
 lib.menu.sub.4 = TMENU
 lib.menu.sub.4 {
     wrap = <ul class="sub-navigation__item-list _sub-list-level-5"> | </ul>
@@ -149,7 +150,7 @@ lib.menu.sub.4 {
         ATagParams = class="sub-navigation__link _sub-level-5 _curent _sub"
     }
 }
-lib.menu.sub.5 < 1
+lib.menu.sub.5 < lib.menu.sub.1
 lib.menu.sub.5 = TMENU
 lib.menu.sub.5 {
     wrap = <ul class="sub-navigation__item-list _sub-list-level-6"> | </ul>
@@ -186,7 +187,7 @@ lib.menu.sub.5 {
         ATagParams = class="sub-navigation__link _sub-level-6 _curent _sub"
     }
 }
-lib.menu.sub.6 < 1
+lib.menu.sub.6 < lib.menu.sub.1
 lib.menu.sub.6 = TMENU
 lib.menu.sub.6 {
     wrap = <ul class="sub-navigation__item-list _sub-list-level-7"> | </ul>
