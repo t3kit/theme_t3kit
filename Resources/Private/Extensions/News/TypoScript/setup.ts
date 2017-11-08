@@ -11,9 +11,12 @@ plugin.tx_news.settings.timeline.cropMaxCharacters = 500
 
 plugin.tx_news.settings.list.media.dummyImage = typo3conf/ext/theme_t3kit/Resources/Public/Extensions/News/images/no_image.png
 
-#If extension rx_shariff is loaded, define services here
-#twitter,facebook,googleplus,linkedin,xing,pinterest,whatsapp,mail,addthis,tumblr,flattr,diaspora,reddit,stumbleupon,threema,info
-plugin.tx_news.settings.detail.shariffServices = facebook,twitter,whatsapp
+plugin.tx_news.settings.detail.shariff < tt_content.list.20.rxshariff_shariff.settings
+plugin.tx_news.settings.detail.shariff {
+    # If extension rx_shariff is loaded, define services here for news detail page
+    # twitter,facebook,googleplus,linkedin,xing,pinterest,whatsapp,mail,addthis,tumblr,flattr,diaspora,reddit,stumbleupon,threema,info
+    services = facebook,twitter,whatsapp
+}
 
 plugin.tx_news.settings.detail.showPrevNext = 1
 
