@@ -1,6 +1,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
+     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+     xmlns:t3kit="http://typo3.org/ns/T3kit/themeT3kit/ViewHelpers">
 
 
 <f:layout name="Detail.html" />
@@ -123,9 +124,16 @@
 							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
 								<li>
 									<span class="news-related-files-link">
-										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+										<f:if condition="{settings.detail.showRelatedFileIcon}">
+											<t3kit:render.svg
+												aria-label="{f:translate(key:'LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file.type')}"
+												source="{f:uri.resource(path: 'Icons/FileIcons/{relatedFile.originalResource.extension}.svg', extensionName: 'theme_t3kit')}" />
+										</f:if>
+										<f:link.typolink parameter="{relatedFile.originalResource.publicUrl}"
+											target="_blank"
+											title="{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}">
 											{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
-										</a>
+										</f:link.typolink>
 									</span>
 									<span class="news-related-files-size">
 										{relatedFile.originalResource.size -> f:format.bytes()}
