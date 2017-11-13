@@ -1,6 +1,6 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
 
-<div class="news-list-view news-cards {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:f="http://www.w3.org/1999/XSL/Transform">
+<div class="news-list-view news-cards {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
 	<f:if condition="{settings.hidePagination}">
 		<f:then>
 			<div class="row">
@@ -52,7 +52,7 @@
 						<f:if condition="{settings.displayDummyIfNoMedia}">
 							<div class="news-cards__img-wrap">
 								<div class="no-media-element">
-									<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+									<div class="news-cards__media-preview" style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
 								</div>
 							</div>
 						</f:if>
@@ -96,7 +96,7 @@
 				</div>
 			</n:link>
 			<div class="news-cards__more-link">
-				<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+				<n:link newsItem="{newsItem}" settings="{settings}" class="more" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 					<f:translate key="more-link"/>
 				</n:link>
 			</div>
