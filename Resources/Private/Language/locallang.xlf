@@ -49,6 +49,9 @@
 			<trans-unit id="news-single-video-header" xml:space="preserve">
 				<source>Video</source>
 			</trans-unit>
+			<trans-unit id="news.more-link.linktext" xml:space="preserve">
+				<source>Open News - </source>
+			</trans-unit>
 
 
 			<!-- ContentElements labels -->

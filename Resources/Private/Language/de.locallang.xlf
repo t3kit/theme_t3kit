@@ -41,6 +41,11 @@
 			<trans-unit id="breadcrumb_label" xml:space="preserve">
 				<target>Sie sind hier</target>
 			</trans-unit>
+			<!--News-->
+			<!-- news custom labels -->
+			<trans-unit id="news.more-link.linktext" xml:space="preserve">
+				<target>Öffne News - </target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
