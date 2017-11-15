@@ -34,13 +34,24 @@
         updateControlAriaLabel($(event.relatedTarget))
       })
 
+      // Extend keydown function from carousel.js
       // Update quick link focus on keyboard use
-      // This is needed because we navigate with left(37) and right(39) key
-      $this.on('keydown.bs.carousel', function (event) {
-        if (event.which === 37 || event.which === 39) {
-          updateFocusOnQuickLinks()
+      $.fn.carousel.Constructor.prototype.keydown = function (e) {
+        if (/input|textarea/i.test(e.target.tagName)) return
+        switch (e.which) {
+          case 37:
+            this.prev()
+            updateFocusOnQuickLinks()
+            break
+          case 39:
+            this.next()
+            updateFocusOnQuickLinks()
+            break
+          default: return
         }
-      })
+
+        e.preventDefault()
+      }
 
         // Set aria-selected and tab index to true only for active item
       function setAriaOnQuickLinks () {
