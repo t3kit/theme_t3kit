@@ -30,7 +30,7 @@
 				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
 			</n:format.nothing>
 			<div class="news-article-header">
-				<h3 itemprop="headline">{newsItem.title}</h3>
+				<h1 itemprop="headline">{newsItem.title}</h1>
 			</div>
 			<div class="news-article-footer">
 				<p>
@@ -98,9 +98,9 @@
 				<f:if condition="{newsItem.allRelatedSorted}">
 					<!-- Related news records -->
 					<div class="news-related news-related-news col-sm-4">
-						<h4>
+						<h2>
 							<f:translate key="related-news" />
-						</h4>
+						</h2>
 						<ul>
 							<f:for each="{newsItem.allRelatedSorted}" as="related">
 								<li>
@@ -117,9 +117,9 @@
 				<f:if condition="{newsItem.relatedFiles}">
 					<!-- FAL related files -->
 					<div class="news-related news-related-files col-sm-4">
-						<h4>
+						<h2>
 							<f:translate key="related-files" />
-						</h4>
+						</h2>
 						<ul>
 							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
 								<li>
@@ -147,9 +147,9 @@
 				<f:if condition="{newsItem.relatedLinks}">
 					<!-- Related links -->
 					<div class="news-related news-related-links col-sm-4">
-						<h4>
+						<h2>
 							<f:translate key="related-links" />
-						</h4>
+						</h2>
 						<ul>
 							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
 								<li>
