@@ -49,6 +49,7 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
         $this->registerArgument('class', 'string', 'Specifies an alternate class for the svg', false);
         $this->registerArgument('width', 'float', 'Specifies a width for the svg', false);
         $this->registerArgument('height', 'float', 'Specifies a height for the svg', false);
+        $this->registerArgument('aria-label', 'string', 'Specifies an aria-label for the svg', false);
     }
 
     /**
@@ -96,6 +97,10 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
 
         // remove xml version tag
         $domXml = dom_import_simplexml($svgElement);
+        $domXml->setAttribute('role', 'img');
+        if (isset($this->arguments['aria-label'])) {
+            $domXml->setAttribute('aria-label', $this->arguments['aria-label']);
+        }
         if (isset($this->arguments['class'])) {
             $domXml->setAttribute('class', $this->arguments['class']);
         }
