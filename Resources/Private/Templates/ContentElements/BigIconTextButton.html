@@ -10,7 +10,14 @@
 				<span class="big-icon-text-btn__icon icons icon-{settings.iconClass}" aria-hidden="true"></span>
 			</f:if>
 			<f:if condition="{data.header}">
-				<h3 class="big-icon-text-btn__header"><core:contentEditable table="tt_content" field="header" uid="{data.uid}">{data.header}</core:contentEditable></h3>
+				<f:render partial="Header/Header" arguments="{
+				header: '{data.header}',
+				layout: '{data.header_layout}',
+				positionClass: 'big-icon-text-btn__header',
+				link: '',
+				uid: '{data.uid}',
+				default: 3
+				}" />
 			</f:if>
 			<f:if condition="{data.bodytext}">
 				<p class="big-icon-text-btn__p"><core:contentEditable table="tt_content" field="bodytext" uid="{data.uid}">{data.bodytext}</core:contentEditable></p>
