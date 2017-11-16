@@ -22,6 +22,9 @@
 			<trans-unit id="subnavigation.ariaLabel" xml:space="preserve">
 				<source>Subnavigation</source>
 			</trans-unit>
+			<trans-unit id="metaNavigation.ariaLabel" xml:space="preserve">
+				<source>Meta navigation</source>
+			</trans-unit>
 
 
 			<!--Extensions-->
