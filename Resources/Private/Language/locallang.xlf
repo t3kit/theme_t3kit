@@ -24,6 +24,11 @@
 			</trans-unit>
 			<trans-unit id="metaNavigation.ariaLabel" xml:space="preserve">
 				<source>Meta navigation</source>
+			<trans-unit id="skipLinks.mainNav" xml:space="preserve">
+				<source>Skip to main navigation</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
+				<source>Skip to main content</source>
 			</trans-unit>
 
 

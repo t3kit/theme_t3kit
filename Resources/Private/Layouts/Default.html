@@ -3,6 +3,14 @@
 <!--[if lte IE 9]>
 	<p class="browsehappy"><f:translate extensionName="theme_t3kit" key="content.behaviour.browsehappy.message" /><a href="http://browsehappy.com/"><f:translate extensionName="theme_t3kit" key="content.behaviour.browsehappy.link" /></a></p>
 <![endif]-->
+<div class="skip-links">
+	<f:link.typolink parameter="{page.uid}#main-navigation" class="skip-links__item sr-only sr-only-focusable">
+		<f:translate key="skipLinks.mainNav" extensionName="theme_t3kit"/>
+	</f:link.typolink>
+	<f:link.typolink parameter="{page.uid}#main-content" class="skip-links__item sr-only sr-only-focusable">
+		<f:translate key="skipLinks.mainContent" extensionName="theme_t3kit"/>
+	</f:link.typolink>
+</div>
 
 <f:render partial="Header/{theme:constant(constant:'themes.configuration.header.headerTemplate')}" section="Default" arguments="{_all}" />
 <f:render section="Default" />
