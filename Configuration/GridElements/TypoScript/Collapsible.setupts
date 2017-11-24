@@ -17,6 +17,7 @@ lib.gridelements {
             }
             partialRootPaths {
                 20 = EXT:fluid_styled_content/Resources/Private/Partials
+                30 = EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent/
             }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Collapsible.html
             dataProcessing {

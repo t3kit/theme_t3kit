@@ -2,10 +2,15 @@
 <f:section name="Main">
 	<div class="panel panel-default {layoutClass} {alignClass}">
 		<div class="panel-heading" role="tab" id="heading-{data.uid}">
-			<h4 class="panel-title">
-				<f:link.page pageUid="#collapse-{data.uid}" absolute="1" class="{f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: '', else: 'collapsed')}"
-				additionalAttributes="{'data-toggle':'collapse', 'data-target': '#collapse-{data.uid}', 'data-parent': '#group-{data.tx_gridelements_container}'}">{data.header}</f:link.page>
-			</h4>
+            <f:variable name="parentHeader">{data.parentgrid_header_layout}</f:variable>
+            <f:render partial="Header/Header" arguments="{
+				header: '{f:render(section: \'accordionLink\', arguments: \'{_all}\')}',
+                layout: '{f:if(condition:\'{parentHeader} > 0 && {parentHeader} < 6 \', then:\'{parentHeader + 1}\')}',
+				positionClass: 'panel-title',
+				link: '',
+				uid: '{data.uid}',
+				default: 4
+				}" />
 		</div>
 		<div id="collapse-{data.uid}" class="panel-collapse collapse {f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: 'in', else: '')}" role="tabpanel">
 			<div class="panel-body">
@@ -13,4 +18,9 @@
 			</div>
 		</div>
 	</div>
+</f:section>
+
+<f:section name="accordionLink">
+	<f:link.page pageUid="#collapse-{data.uid}" absolute="1" class="{f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: '', else: 'collapsed')}"
+				 additionalAttributes="{'data-toggle':'collapse', 'data-target': '#collapse-{data.uid}', 'data-parent': '#group-{data.tx_gridelements_container}'}">{data.header}</f:link.page>
 </f:section>
