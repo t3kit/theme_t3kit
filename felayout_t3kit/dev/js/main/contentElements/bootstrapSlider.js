@@ -10,6 +10,16 @@
       var $control = $this.find('.carousel-control')
       var $btn = $this.find('.carousel__btn')
 
+      // Set tabindex on quicklinks on init
+      $quickLinks.attr('tabindex', 0)
+
+      // add handler to quickLinks to allow changing the slide via enter key
+      $this.on('keydown', $quickLinks, function (e) {
+        if (e.which === 13) {
+          $(e.target).trigger('click')
+        }
+      })
+
       // Enable swipe for each carousel element
       $this.swipe({
         swipe: function (event, direction) {
@@ -58,9 +68,9 @@
         $quickLinks.each(function () {
           var link = $(this)
           if (link.hasClass('active')) {
-            link.attr({'aria-selected': 'true', 'tabindex': '0'})
+            link.attr('aria-selected', 'true')
           } else {
-            link.attr({'aria-selected': 'false', 'tabindex': '-1'})
+            link.attr('aria-selected', 'false')
           }
         })
       }
