@@ -13,6 +13,9 @@
 			<trans-unit id="breadcrumb_label" xml:space="preserve">
 				<source>You are here</source>
 			</trans-unit>
+			<trans-unit id="breadcrumb.ariaLabel" xml:space="preserve">
+				<source>Breadcrumb navigation</source>
+			</trans-unit>
 			<trans-unit id="languageMenu_label" xml:space="preserve">
 				<source>Language:</source>
 			</trans-unit>

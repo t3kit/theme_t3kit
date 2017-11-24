@@ -35,6 +35,12 @@
 			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
 				<target>Direkt zum Inhalt springen</target>
 			</trans-unit>
+			<trans-unit id="breadcrumb.ariaLabel" xml:space="preserve">
+				<target>Brotkrümelnavigation</target>
+			</trans-unit>
+			<trans-unit id="breadcrumb_label" xml:space="preserve">
+				<target>Sie sind hier</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
