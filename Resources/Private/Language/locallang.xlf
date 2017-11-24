@@ -30,7 +30,9 @@
 			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
 				<source>Skip to main content</source>
 			</trans-unit>
-
+			<trans-unit id="footer.firstHeadline">
+				<source>Footer</source>
+			</trans-unit>
 
 			<!--Extensions-->
 			<!--News-->
