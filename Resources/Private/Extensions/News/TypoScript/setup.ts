@@ -19,6 +19,8 @@ plugin.tx_news.settings.detail.shariff {
 }
 
 plugin.tx_news.settings.detail.showPrevNext = 1
+# show a file type icon above the file name
+plugin.tx_news.settings.detail.showRelatedFileIcon = 0
 
 # Lightbox data-caption attribute settings for use in Partials/Detail/MediaImage.html
 plugin.tx_news.settings {
