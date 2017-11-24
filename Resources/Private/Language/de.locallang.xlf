@@ -28,7 +28,7 @@
 			</trans-unit>
 			<trans-unit id="logoCarousel.ariaLabel.paginationBulletMessage">
 				<source>Zum Slide {{index}} springen</source>
-      </trans-unit>
+			</trans-unit>
 			<trans-unit id="skipLinks.mainNav" xml:space="preserve">
 				<target>Direkt zur Hauptnavigation springen</target>
 			</trans-unit>
