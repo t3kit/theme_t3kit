@@ -11,6 +11,8 @@
 themes.configuration.elem.status.showHeaderTop = 1
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Contacts
 themes.configuration.elem.status.showHeaderTopContacts = 1
+# cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top Contacts labels
+themes.configuration.elem.status.showHeaderTopContactsLabels = 1
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangMenu
 themes.configuration.elem.status.showHeaderTopLangMenu = 0
 # cat=header,advanced/header_top; type=options[0,1]; label= Show Header Top LangLabel
