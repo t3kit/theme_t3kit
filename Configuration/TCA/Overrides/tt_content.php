@@ -489,9 +489,9 @@ call_user_func(function() {
             --div--;' .  $coreLanguageFilePrefix .'general,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
-
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -505,6 +505,8 @@ call_user_func(function() {
             --div--;' .  $coreLanguageFilePrefix .'extended,
         '
     ];
+
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,logoCarousel'] = $flexformPath . 'flexform_logoCarousel.xml';
 
     // logoCarousel flexform
     // ======================= logoCarousel [end] ==========================================
