@@ -110,5 +110,25 @@ h1,
 h2 {
     font-family: @font-family-serif;
 }
+
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
+
+// ============================
+// ======== Button styles  ====
+// ============================
+.btn-default {
+    .btn-style--t3kit(@btn-default-color, @btn-default-bg, transparent);
+}
+
+.btn-default--inverted {
+    .btn-style--t3kit(@btn-default-bg, @btn-default-color, transparent);
+}
+
+.btn-bordered {
+    .btn-style--t3kit(@btn-default-bg, transparent, @btn-default-bg);
+}
+
+.btn-bordered--inverted {
+    .btn-style--t3kit(@btn-default-color, transparent, @btn-default-color);
+}
