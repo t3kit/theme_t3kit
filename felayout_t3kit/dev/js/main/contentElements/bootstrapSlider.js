@@ -105,20 +105,20 @@
         var nextLabel
         var prevLabel
 
-        if (element.next().length > 0) {
+        if (element.next().length) {
           nextLabel = element.next().attr('data-controllabel')
         } else {
           nextLabel = element.parent().children('.item').first().attr('data-controllabel')
         }
 
-        if (element.prev().length > 0) {
+        if (element.prev().length) {
           prevLabel = element.prev().attr('data-controllabel')
         } else {
           prevLabel = element.parent().children('.item').last().attr('data-controllabel')
         }
 
-        $slideLeft.attr('aria-label', nextLabel)
-        $slideRight.attr('aria-label', prevLabel)
+        $slideLeft.attr('aria-label', prevLabel)
+        $slideRight.attr('aria-label', nextLabel)
       }
     })
   })
