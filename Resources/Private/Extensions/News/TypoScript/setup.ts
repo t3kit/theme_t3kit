@@ -9,7 +9,7 @@ plugin.tx_news.settings.simpleList.cropMaxCharacters = 280
 
 plugin.tx_news.settings.timeline.cropMaxCharacters = 500
 
-plugin.tx_news.settings.list.media.dummyImage = typo3conf/ext/theme_t3kit/Resources/Public/Extensions/News/images/no_image.png
+plugin.tx_news.settings.list.media.dummyImage = EXT:theme_t3kit/Resources/Public/Extensions/News/images/no_image.png
 
 plugin.tx_news.settings.detail.shariff < tt_content.list.20.rxshariff_shariff.settings
 plugin.tx_news.settings.detail.shariff {
