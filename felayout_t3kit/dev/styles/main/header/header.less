@@ -627,6 +627,17 @@
     line-height: 40px;
 }
 
+// for all links excluding active elements set color on focus
+.main-navigation__item:not(._active),
+.main-navigation__sub-item:not(._active) {
+    .main-navigation__item-link,
+    .main-navigation__sub-item-link {
+        &:focus {
+            color: @nav-link-hover-color;
+        }
+    }
+}
+
 .main-navigation__sub-item-list {
     list-style: none;
     padding: 0;
