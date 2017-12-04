@@ -71,11 +71,18 @@ lib.gridelements {
         cObject = FLUIDTEMPLATE
         cObject {
             layoutRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Layouts
-                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
+                20 = EXT:fluid_styled_content/Resources/Private/Layouts/
+                30 = EXT:theme_t3kit/Resources/Private/Layouts/FluidStyledContent/
+                40 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements/
             }
             partialRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Partials
+                20 = EXT:fluid_styled_content/Resources/Private/Partials/
+                30 = EXT:theme_t3kit/Resources/Private/Partials/ContentElements/
+                40 = EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent/
+            }
+            templateRootPaths {
+                20 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/
+                30 = EXT:theme_t3kit/Resources/Private/Templates/FluidStyledContent/
             }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv1ColumnGrid.html
             dataProcessing {
