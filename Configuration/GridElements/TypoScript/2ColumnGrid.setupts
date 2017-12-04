@@ -1,14 +1,15 @@
 lib.gridelements {
     2ColumnGrid < .defaultGridSetup
     2ColumnGrid {
-        columns.0 {
-            renderObj >
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
+        columns {
+            0 {
+                renderObj = COA
+                renderObj {
+                    20 =< tt_content
+                }
             }
+            1 < .0
         }
-        columns.1 < .columns.0
 
         cObject = FLUIDTEMPLATE
         cObject {

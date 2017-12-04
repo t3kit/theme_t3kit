@@ -2,7 +2,6 @@ lib.gridelements {
     Parallax < .defaultGridSetup
     Parallax {
         columns.0 {
-            renderObj >
             renderObj = COA
             renderObj {
               20 =< tt_content

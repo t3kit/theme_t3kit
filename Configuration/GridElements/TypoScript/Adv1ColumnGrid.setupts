@@ -33,7 +33,6 @@ lib.gridelements {
                 70.noTrimWrap = | |
                 stdWrap.noTrimWrap = |<div class="col1 |">|
             }
-            renderObj >
             renderObj = COA
             renderObj {
               20 =< tt_content

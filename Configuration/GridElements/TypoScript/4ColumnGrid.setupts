@@ -1,16 +1,17 @@
 lib.gridelements {
     4ColumnGrid < .defaultGridSetup
     4ColumnGrid {
-        columns.0 {
-            renderObj >
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
+        columns {
+            0 {
+                renderObj = COA
+                renderObj {
+                    20 =< tt_content
+                }
             }
+            1 < .0
+            2 < .0
+            3 < .0
         }
-        columns.1 < .columns.0
-        columns.2 < .columns.0
-        columns.3 < .columns.0
 
         cObject = FLUIDTEMPLATE
         cObject {
