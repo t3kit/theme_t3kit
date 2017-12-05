@@ -2,7 +2,7 @@ lib.gridelements {
     Adv2ColumnGrid < .Adv1ColumnGrid
     Adv2ColumnGrid {
         columns {
-            1 < .columns.0
+            1 < .0
             1 {
                 prepend {
                     10.field = flexform_column_2_xs
