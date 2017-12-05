@@ -1,16 +1,6 @@
 lib.gridelements {
     2ColumnGrid < .defaultGridSetup
     2ColumnGrid {
-        columns {
-            0 {
-                renderObj = COA
-                renderObj {
-                    20 =< tt_content
-                }
-            }
-            1 < .0
-        }
-
         cObject {
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/2ColumnGrid.html
             dataProcessing {

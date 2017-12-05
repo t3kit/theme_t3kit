@@ -1,13 +1,6 @@
 lib.gridelements {
     Parallax < .defaultGridSetup
     Parallax {
-        columns.0 {
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
-            }
-        }
-
         cObject {
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Parallax.html
             dataProcessing {

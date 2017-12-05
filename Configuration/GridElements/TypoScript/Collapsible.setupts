@@ -1,13 +1,6 @@
 lib.gridelements {
     Collapsible < .defaultGridSetup
     Collapsible {
-        columns.0 {
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
-            }
-        }
-
         cObject {
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Collapsible.html
             dataProcessing {

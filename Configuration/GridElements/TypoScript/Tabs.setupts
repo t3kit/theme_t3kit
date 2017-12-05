@@ -1,68 +1,65 @@
 lib.gridelements {
     Tab < .defaultGridSetup
     Tab {
-        columns.0 {
-            prepend = COA
-            prepend {
-                # increase "tab" counter
-                10 = LOAD_REGISTER
-                10 {
-                    tabNumber.cObject = TEXT
-                    tabNumber.cObject.data = register:tabNumber
-                    tabNumber.cObject.wrap = |+1
-                    tabNumber.prioriCalc = intval
-                }
-
-                # class
-                30 = TEXT
-                30 {
-                    value = class="
-                }
-                35 = TEXT
-                35 {
-                    value = tab-pane
-                }
-                40 = TEXT
-                40 {
-                    value.noTrimWrap = | fade|
-                }
-                45 = TEXT
-                45 {
-                    value.noTrimWrap = | in active|
-                    if {
-                        value = 1
-                        equals.data = register:tabNumber
+        columns {
+            0 < .default
+            0 {
+                prepend = COA
+                prepend {
+                    # increase "tab" counter
+                    10 = LOAD_REGISTER
+                    10 {
+                        tabNumber.cObject = TEXT
+                        tabNumber.cObject.data = register:tabNumber
+                        tabNumber.cObject.wrap = |+1
+                        tabNumber.prioriCalc = intval
                     }
-                }
-                46 = TEXT
-                46 {
-                    value.noTrimWrap = | number-{register:tabNumber}|
-                    value.insertData = 1
-                }
-                47 = TEXT
-                47 {
-                    value.noTrimWrap = | pid-{register:parentUid}|
-                    value.insertData = 1
-                }
-                50 = TEXT
-                50 {
-                    value = "
-                }
-                # id
-                60 = TEXT
-                60 {
-                    field = uid
-                    noTrimWrap = | id="tab-|"|
-                }
 
-                stdWrap.noTrimWrap = |<div role="tabpanel" |>|
-
+                    # class
+                    30 = TEXT
+                    30 {
+                        value = class="
+                    }
+                    35 = TEXT
+                    35 {
+                        value = tab-pane
+                    }
+                    40 = TEXT
+                    40 {
+                        value.noTrimWrap = | fade|
+                    }
+                    45 = TEXT
+                    45 {
+                        value.noTrimWrap = | in active|
+                        if {
+                            value = 1
+                            equals.data = register:tabNumber
+                        }
+                    }
+                    46 = TEXT
+                    46 {
+                        value.noTrimWrap = | number-{register:tabNumber}|
+                        value.insertData = 1
+                    }
+                    47 = TEXT
+                    47 {
+                        value.noTrimWrap = | pid-{register:parentUid}|
+                        value.insertData = 1
+                    }
+                    50 = TEXT
+                    50 {
+                        value = "
+                    }
+                    # id
+                    60 = TEXT
+                    60 {
+                        field = uid
+                        noTrimWrap = | id="tab-|"|
+                    }
+                    stdWrap.noTrimWrap = |<div role="tabpanel" |>|
+                }
+                wrap = |</div>
             }
-            renderObj = COA
-            renderObj {
-                20 =< tt_content
-            }
-            wrap = |</div>
         }
 
         cObject {

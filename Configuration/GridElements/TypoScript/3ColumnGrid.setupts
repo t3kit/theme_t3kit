@@ -1,17 +1,6 @@
 lib.gridelements {
     3ColumnGrid < .defaultGridSetup
     3ColumnGrid {
-        columns {
-            0 {
-                renderObj = COA
-                renderObj {
-                    20 =< tt_content
-                }
-            }
-            1 < .0
-            2 < .0
-        }
-
         cObject {
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/3ColumnGrid.html
         }
