@@ -10,7 +10,7 @@
       // Get json content from element LogoCarousel.html
       var label = JSON.parse($('#js__aria-labels').html())
 
-      $(this).swiper({
+      var swiper = $(this).swiper({
         nextButton: '.js__logo-carousel__btn-next',
         prevButton: '.js__logo-carousel__btn-prev',
         slidesPerView: 5,
@@ -18,6 +18,7 @@
         lazyLoading: true,
         watchSlidesVisibility: true,
         lazyLoadingInPrevNext: true,
+        slideVisibleClass: 'is-visible',
         spaceBetween: 20,
         autoplay: $(this).data('autoplay'),
         a11y: true,
@@ -48,6 +49,15 @@
             slidesPerView: 4
           }
         }
+      })
+      // if the selected swipe is not visible when focused
+      // put it into view
+      $(swiper.slides).each(function (index, element) {
+        $(element).on('focusin', function (e) {
+          if ($(e.target).not('.is-visible')) {
+            swiper.slideTo(index)
+          }
+        })
       })
     })
   })
