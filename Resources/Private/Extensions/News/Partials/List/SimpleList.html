@@ -19,27 +19,23 @@
 
 
 <f:section name="simpleList">
-	<article class="news-simple-list__item clearfix articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+	<article class="news-simple-list__item row clearfix articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 		<n:excludeDisplayedNews newsItem="{newsItem}"/>
 
 		<f:if condition="{newsItem.mediaPreviews}">
 			<!-- media preview element -->
 			<f:then>
-				<div class="news-simple-list__img-wrap">
-					<n:link newsItem="{newsItem}" settings="{settings}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
+					<div class="col-12 col-sm-3 news-simple-list__media-preview">
+					<n:link newsItem="{newsItem}" settings="{settings}" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
-								<div class="news-simple-list__media-preview">
 									<f:media file="{mediaElement}" width="170"/>
-								</div>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
 								<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 5">
-								<div class="news-simple-list__media-preview">
 									<f:media file="{mediaElement}" width="170"/>
-								</div>
 							</f:if>
 						</f:alias>
 					</n:link>
@@ -47,7 +43,7 @@
 			</f:then>
 			<f:else>
 				<f:if condition="{settings.displayDummyIfNoMedia}">
-					<div class="news-simple-list__img-wrap">
+					<div class="news-simple-list__img-wrap col-12 col-sm-3">
 						<div class="no-media-element">
 							<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
 						</div>
@@ -56,7 +52,7 @@
 			</f:else>
 		</f:if>
 
-		<div class="news-simple-list__text js__news-simple-list__dotdotdot">
+		<div class="news-simple-list__text col-12 col-sm-8">
 
 			<!-- date -->
 			<span class="news-list-date news-simple-list__date-wrp">
@@ -90,13 +86,11 @@
 					</f:else>
 				</f:if>
 			</div>
+			<div class="news-simple-list__more-link">
+				<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
+					<f:translate key="more-link"/>
+				</n:link>
+			</div>
 		</div>
-
-		<div class="news-simple-list__more-link">
-			<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
-				<f:translate key="more-link"/>
-			</n:link>
-		</div>
-
 	</article>
 </f:section>
