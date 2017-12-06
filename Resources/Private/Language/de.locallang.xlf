@@ -35,6 +35,9 @@
 			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
 				<target>Direkt zum Inhalt springen</target>
 			</trans-unit>
+			<trans-unit id="skipLinks.subNavigation" xml:space="preserve">
+				<target>Zur Unternavigation springen</target>
+			</trans-unit>
 			<trans-unit id="breadcrumb.ariaLabel" xml:space="preserve">
 				<target>Brotkrümelnavigation</target>
 			</trans-unit>
