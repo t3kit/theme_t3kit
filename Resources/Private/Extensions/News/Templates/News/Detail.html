@@ -126,7 +126,7 @@
 									<span class="news-related-files-link">
 										<f:if condition="{settings.detail.showRelatedFileIcon}">
 											<t3kit:render.svg
-												aria-label="{f:translate(key:'LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file.type')}"
+												aria-label="{f:translate(key:'LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file.type')}: {relatedFile.originalResource.extension}"
 												source="{f:uri.resource(path: 'Icons/FileIcons/{relatedFile.originalResource.extension}.svg', extensionName: 'theme_t3kit')}" />
 										</f:if>
 										<f:link.typolink parameter="{relatedFile.originalResource.publicUrl}"
