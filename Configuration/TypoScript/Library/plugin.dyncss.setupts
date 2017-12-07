@@ -336,4 +336,16 @@ plugin.tx_dyncss.overrides {
         if.isTrue = {$themes.configuration.less.var.footerLinkHoverColor}
     }
 
+    # BUTTONS
+    btn-default-color = TEXT
+    btn-default-color {
+       value = {$themes.configuration.less.var.buttonTextColor}
+        if.isTrue = {$themes.configuration.less.var.buttonTextColor}
+    }
+
+    btn-default-bg = TEXT
+    btn-default-bg {
+           value = {$themes.configuration.less.var.buttonBgColor}
+            if.isTrue = {$themes.configuration.less.var.buttonBgColor}
+    }
 }

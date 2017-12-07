@@ -30,6 +30,14 @@ themes.configuration.less.var.mainLinkColor =
 themes.configuration.less.var.mainLinkHoverColor =
 
 
+# Buttons
+#############################################
+# customsubcategory=button_colors=Button Colors
+# cat=colors,basic/button_colors/; type=color; label= Button Text Color
+themes.configuration.less.var.buttonTextColor =
+# cat=colors,basic/button_colors/; type=color; label= Button Background Color
+themes.configuration.less.var.buttonBgColor =
+
 
 
 #############################################
