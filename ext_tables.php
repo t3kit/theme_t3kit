@@ -64,9 +64,6 @@ $boot = function ($_EXTKEY) {
             'tt_content',
             'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh_tt_content.xml'
         );
-
-        // Add default state for frontend editing to be enabled for all backend users
-        $GLOBALS['TYPO3_USER_SETTINGS']['columns']['frontend_editing']['default'] = 1;
     }
 };
 
