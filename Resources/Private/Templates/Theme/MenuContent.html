@@ -14,7 +14,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-9 col-md-push-3">
-						<f:format.html>{content}</f:format.html>
+						<f:format.raw>{content}</f:format.raw>
 					</div>
 					<div class="col-md-3 col-md-pull-9">
 						<f:render partial="Content/Menu" section="Default" arguments="{_all}" />
@@ -26,7 +26,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
-						<f:format.html>{content}</f:format.html>
+						<f:format.raw>{content}</f:format.raw>
 					</div>
 					<div class="col-md-9">
 						<f:render partial="Content/Main" section="Default" arguments="{_all}" />
