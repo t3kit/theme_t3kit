@@ -23,7 +23,7 @@
 							<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContactsLabels')}">
 								<span class="header-top__contact-tel-title" aria-hidden="true"><f:translate key="callUs_label" /></span>
 							</f:if>
-							<span class="header-top__contact-tel-title"><f:translate key="callUs_label" /></span>
+							<a class="header-top__contact-tel-link" href="tel:{f:cObject(typoscriptObjectPath: 'lib.contacts.phone')}">{theme:constant(constant: 'themes.configuration.contacts.phone')}</a>
 						</div>
 						<div class="header-top__contact-email">
 							<span class="icons icon-t3-mail" aria-hidden="true"></span>
