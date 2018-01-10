@@ -6,34 +6,7 @@
 	<f:if condition="{slides}">
 		<div id="carousel-{data.uid}" class="carousel image-slider slide"
 			data-interval="{f:if(condition:'{settings.interval}==0', then:'false', else:'{settings.interval}000')}"
-			data-ride="carousel">
-			<div class="carousel-inner" role="listbox">
-				<f:for each="{slides}" as="image" iteration="iteration">
-					<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
-						<f:media
-							file="{image}"
-							height="{data.imageheight}c"
-							width="{data.imagewidth}c"
-							alt="{image.alternative}"
-							title="{image.title}"/>
-
-						<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
-							<f:then> </f:then>
-							<f:else>
-								<f:render section="caption"
-									arguments="{
-									title: image.title,
-									description: image.description,
-									linkText: image.referenceProperties.tx_themet3kit_slide_btn_txt,
-									link: image.link,
-									settings: settings,
-									firstImage: iteration.isFirst}" />
-							</f:else>
-						</f:if>
-					</div>
-				</f:for>
-			</div>
-
+			data-ride="carousel" role="complementary">
 			<f:comment>If one of the fixed settings is enabled show the fixed caption</f:comment>
 			<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
 				<f:render section="caption"
@@ -46,26 +19,60 @@
 					firstImage: 'true'}" />
 			</f:if>
 
-			<f:if condition="{settings.quickselect}">
-				<f:if condition="{slides->f:count()} > 1">
-					<ol class="carousel-indicators">
-						<f:for each="{slides}" as="image" iteration="iteration">
-							<li data-target="#carousel-{data.uid}" data-slide-to="{iteration.index}"
-								class="{f:if(condition: iteration.isFirst, then: 'active')}"></li>
-						</f:for>
-					</ol>
-				</f:if>
-			</f:if>
-
 			<f:if condition="{slides->f:count()} > 1">
-				<div class="container carousel-control-wrapper">
-					<a class="carousel-control left" href="#carousel-{data.uid}" role="button" data-slide="prev">
-						<span class="icons icon-chevron-left"></span>
-					</a>
-					<a class="carousel-control right" href="#carousel-{data.uid}" role="button" data-slide="next">
-						<span class="icons icon-chevron-right"></span>
-					</a>
-				</div>
+				<f:then>
+					<f:comment>Quicklinks</f:comment>
+					<f:if condition="{settings.quickselect}">
+						<ol class="carousel-indicators" role="tablist">
+							<f:for each="{slides}" as="image" iteration="i">
+								<li data-target="#carousel-{data.uid}" data-slide-to="{i.index}"
+									class="{f:if(condition: i.isFirst, then: 'active')}"
+									id="carousel-{data.uid}__tab-{i.index}"
+									role="tab" aria-controls="carousel-{data.uid}__tabpanel-{i.index}"
+									aria-selected="{f:if(condition: i.isFirst, then: 'true', else: 'false')}"
+									tabindex="{f:if(condition: i.isFirst, then: '0', else: '-1')}">
+									<span class="sr-only">
+										<f:translate key="bootstrapCarousel.screenReader.slide" extensionName="theme_t3kit" />
+										{i.cycle} {image.title} {image.description}
+									</span>
+								</li>
+							</f:for>
+						</ol>
+					</f:if>
+
+					<f:comment> If more then one image is visible the screen reader attributes should be present</f:comment>
+					<div class="carousel-inner">
+						<f:for each="{slides}" as="image" iteration="i">
+							<div class="item{f:if(condition: i.isFirst, then: ' active')}" id="carousel-{data.uid}__tabpanel-{i.index}"
+								role="tabpanel" aria-labelledby="carousel-{data.uid}__tab-{i.index}"
+								data-controllabel="{f:translate(key:'bootstrapCarousel.ariaLabel.control', arguments:{0: '{i.cycle}', 1: '{f:count(subject: slides)}'}, extensionName:'theme_t3kit')}">
+								<f:render section="image" arguments="{_all}"/>
+							</div>
+						</f:for>
+					</div>
+
+					<f:comment>Prev, Next Arrows</f:comment>
+					<div class="container carousel-control-wrapper">
+						<a class="carousel-control left" href="#carousel-{data.uid}" role="button" data-slide="prev"
+							aria-label="{f:translate(key:'bootstrapCarousel.ariaLabel.prev', extensionName:'theme_t3kit')}">
+							<span class="icons icon-chevron-left"></span>
+						</a>
+						<a class="carousel-control right" href="#carousel-{data.uid}" role="button" data-slide="next"
+							aria-label="{f:translate(key:'bootstrapCarousel.ariaLabel.next', extensionName:'theme_t3kit')}">
+							<span class="icons icon-chevron-right"></span>
+						</a>
+					</div>
+				</f:then>
+
+				<f:else>
+					<div class="carousel-inner">
+						<f:for each="{slides}" as="image" iteration="i">
+							<div class="item{f:if(condition: i.isFirst, then: ' active')}">
+								<f:render section="image" arguments="{_all}"/>
+							</div>
+						</f:for>
+					</div>
+				</f:else>
 			</f:if>
 		</div>
 	</f:if>
@@ -84,7 +91,7 @@
 			</f:if>
 
 			<f:if condition="{link}">
-				<f:link.typolink parameter="{link}" class="btn carousel__btn">
+				<f:link.typolink parameter="{link}" class="btn carousel__btn" additionalAttributes="{role:'button'}">
 					<f:if condition="{linkText}">
 						<f:then>{linkText}</f:then>
 						<f:else><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit"/></f:else>
@@ -92,6 +99,29 @@
 				</f:link.typolink>
 			</f:if>
 		</div>
+	</f:if>
+</f:section>
+
+<f:section name="image">
+	<f:media
+		file="{image}"
+		height="{data.imageheight}c"
+		width="{data.imagewidth}c"
+		alt="{image.alternative}"
+		title="{image.title}"/>
+
+	<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
+		<f:then> </f:then>
+		<f:else>
+			<f:render section="caption"
+				arguments="{
+									title: image.title,
+									description: image.description,
+									linkText: image.referenceProperties.tx_themet3kit_slide_btn_txt,
+									link: image.link,
+									settings: settings,
+									firstImage: i.isFirst}" />
+		</f:else>
 	</f:if>
 </f:section>
 </html>

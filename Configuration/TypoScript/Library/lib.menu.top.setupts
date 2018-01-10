@@ -1,7 +1,7 @@
 lib.menu.top = HMENU
 lib.menu.top.special = directory
 lib.menu.top.special.value = {$themes.configuration.header.top.menu.containerPid}
-lib.menu.top.wrap    = <ul class="nav"> | </ul>
+lib.menu.top.stdWrap.dataWrap    = <nav aria-label="{LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:metaNavigation.ariaLabel}"><ul class="nav"> | </ul></nav>
 lib.menu.top.1 = TMENU
 lib.menu.top.1 {
     expAll = 1
@@ -13,6 +13,9 @@ lib.menu.top.1 {
     NO.stdWrap.wrap.required = 1
     NO.stdWrap.wrap.dataWrap = <span class="icons icon-|"></span>
     NO.stdWrap.innerWrap.noTrimWrap = |&nbsp;||
+    NO.ATagTitle {
+        field = abstract // description // subtitle // title
+    }
     NO.additionalParams = &logintype=logout
     NO.additionalParams {
         if.isInList.field = uid

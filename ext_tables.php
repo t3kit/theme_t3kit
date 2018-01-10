@@ -64,7 +64,6 @@ $boot = function ($_EXTKEY) {
             'tt_content',
             'EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_csh_tt_content.xml'
         );
-
     }
 };
 

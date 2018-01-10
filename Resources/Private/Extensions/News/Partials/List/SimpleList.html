@@ -26,16 +26,20 @@
 			<!-- media preview element -->
 			<f:then>
 				<div class="news-simple-list__img-wrap">
-					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
-								<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+								<div class="news-simple-list__media-preview">
+									<f:media file="{mediaElement}" width="170"/>
+								</div>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
 								<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 5">
-								<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+								<div class="news-simple-list__media-preview">
+									<f:media file="{mediaElement}" width="170"/>
+								</div>
 							</f:if>
 						</f:alias>
 					</n:link>
@@ -89,7 +93,7 @@
 		</div>
 
 		<div class="news-simple-list__more-link">
-			<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+			<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 				<f:translate key="more-link"/>
 			</n:link>
 		</div>

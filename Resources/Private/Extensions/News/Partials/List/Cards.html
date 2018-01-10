@@ -33,13 +33,17 @@
 						<div class="news-cards__img-wrap">
 							<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 								<f:if condition="{mediaElement.originalResource.type} == 2">
-									<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+									<div class="news-cards__media-preview">
+										<f:media file="{mediaElement}" width="{f:if(condition: settings.detail.media.image.maxWidth, then: settings.detail.media.image.maxWidth, else: settings.media.maxWidth)}"/>
+									</div>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 4">
 									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 5">
-									<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+									<div class="news-cards__media-preview">
+										<f:media file="{mediaElement}" width="{f:if(condition: settings.detail.media.image.maxWidth, then: settings.detail.media.image.maxWidth, else: settings.media.maxWidth)}"/>
+									</div>
 								</f:if>
 							</f:alias>
 						</div>
@@ -48,7 +52,7 @@
 						<f:if condition="{settings.displayDummyIfNoMedia}">
 							<div class="news-cards__img-wrap">
 								<div class="no-media-element">
-									<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+									<div class="news-cards__media-preview" style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
 								</div>
 							</div>
 						</f:if>
@@ -92,7 +96,7 @@
 				</div>
 			</n:link>
 			<div class="news-cards__more-link">
-				<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{newsItem.title}">
+				<n:link newsItem="{newsItem}" settings="{settings}" class="more" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 					<f:translate key="more-link"/>
 				</n:link>
 			</div>

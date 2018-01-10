@@ -26,7 +26,14 @@
 				</f:else>
 			</f:if>
 			<f:if condition="{data.header}">
-				<h3 class="img-text-link__header"><core:contentEditable table="tt_content" field="header" uid="{data.uid}">{data.header}</core:contentEditable></h3>
+				<f:render partial="Header/Header" arguments="{
+					header: '{data.header}',
+					layout: '{data.header_layout}',
+					positionClass: 'img-text-link__header',
+					link: '',
+					uid: '{data.uid}',
+					default: 3
+					}" />
 			</f:if>
 			<f:if condition="{data.bodytext}">
 				<f:if condition="{settings.hoverEffect}">
@@ -52,7 +59,7 @@
 			<f:if condition="{settings.disableWholeAreaLink} == 0">
 				<f:if condition="{settings.hoverEffect} == 0">
 					<f:if condition="{data.subheader}">
-						<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}">{data.subheader}</span>
+						<span class="img-text-link__sham-link {f:if(condition: settings.linkAsBtn, then: 'btn btn-default', else: '')}" aria-hidden="true">{data.subheader}</span>
 					</f:if>
 				</f:if>
 	 		</f:if>

@@ -2,7 +2,7 @@
 <f:section name="Main">
 	<ul class="nav {f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'nav-pills', else: 'nav-tabs')}" role="tablist" id="tab-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" >
 		<f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tabIteration">
-		 	<li role="presentation" {f:if(condition: '{tabIteration.index} == 0', then: ' class="active"', else: '')}><a href="#tab-{tab.uid}" aria-controls="tab-{tab.uid}" role="tab" data-toggle="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'pill', else: 'tab')}">{tab.header}</a></li>
+		 	<li {f:if(condition: '{tabIteration.index} == 0', then: ' class="active"', else: '')}><a href="#tab-{tab.uid}" aria-controls="tab-{tab.uid}" role="tab" data-toggle="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'pill', else: 'tab')}">{tab.header}</a></li>
 		</f:for>
 	</ul>
 	<div class="tab-content">

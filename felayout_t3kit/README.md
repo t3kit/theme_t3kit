@@ -40,3 +40,4 @@ npm install
 - Run `grunt check` to check CSS (.stylelintrc) and JS (JS standard) files according code conventions.
 - Run `grunt compileCss` or `grunt cc` to compile all Front-End service files plus **CSS** styling for **t3kit** needs and copy it to `theme_t3kit/Resources/Public/css` folder.
 - Run `grunt compileLess` or `grunt cl` to compile all Front-End service files plus **LESS** styling for **t3kit** needs, copy it to it to `theme_t3kit/Resources/Public/less` folder.
+- Run `grunt production` or `grunt prod` to compile all Front-End service files for production. `compileCss` + `compileLess` + `uglifyJs`

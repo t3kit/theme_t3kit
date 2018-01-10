@@ -102,6 +102,16 @@
 							</config>
 						</TCEforms>
 					</youtubeLink>
+					<mynewsdeskLink>
+						<TCEforms>
+							<label>
+								LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:socialIcons.flexform.mynewsdeskLink
+							</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</mynewsdeskLink>
 				</el>
 			</ROOT>
 		</sDEF>

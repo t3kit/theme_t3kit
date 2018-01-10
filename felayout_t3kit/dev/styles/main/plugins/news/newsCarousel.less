@@ -3,13 +3,13 @@
     margin: 40px 0 20px;
 }
 
-@media (min-width: 992px) and (max-width: 1090px) {
+@media (min-width: @screen-md-min) and (max-width: @screen-md--custom) {
     .news-carousel {
         padding: 0 30px;
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1300px) {
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg--custom) {
     .news-carousel {
         padding: 0 30px;
     }
@@ -17,19 +17,30 @@
 
 .news-carousel__wrapper {
     padding-bottom: 40px;
+    list-style-type: none;
 }
 
 .news-carousel__media-preview {
-    min-height: 180px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+}
+
+// if object-fit property is supported image in 180px height and use object fit.
+@supports (object-fit: cover) {
+    .news-carousel__media-preview {
+        height: 180px;
+        object-fit: cover;
+    }
 }
 
 .news-carousel__img-wrap {
     position: relative;
+
+    a {
+        display: inline-block;
+    }
 }
+
 //header
 .news-carousel__slide .news-article-header h3 {
     font-size: 18px;
@@ -88,9 +99,10 @@
 .news-carousel__btn-next,
 .news-carousel__btn-prev {
     display: none;
+    border: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: @screen-md-min) {
     .news-carousel__btn-next,
     .news-carousel__btn-prev {
         display: block;
@@ -99,7 +111,8 @@
 
         color: @main-color;
         -moz-osx-font-smoothing: grayscale;
-        height: auto;
+        height: 100%;
+        top: 0;
         font-size: 30px;
     }
 }
@@ -112,7 +125,7 @@
     left: -50px;
 }
 
-@media (min-width: 992px) and (max-width: 1090px) {
+@media (min-width: @screen-md-min) and (max-width: @screen-md--custom) {
     .news-carousel__btn-next {
         right: -12px;
     }
@@ -122,7 +135,7 @@
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1300px) {
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg--custom) {
     .news-carousel__btn-next {
         right: -16px;
     }
@@ -159,7 +172,8 @@
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.news-carousel__img-wrap a:hover:after {
+.news-carousel__img-wrap a:hover:after,
+.news-carousel__img-wrap a:focus:after {
     opacity: 0.7;
     visibility: visible;
 }

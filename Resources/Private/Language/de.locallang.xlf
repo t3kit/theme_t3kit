@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-10-17T14:30:39Z" product-name="theme_t3kit">
+		<header/>
+		<body>
+			<!--BootstrapCarousel Element-->
+			<trans-unit id="bootstrapCarousel.screenReader.title">
+				<target>Bilderkarussell mit %s Bildern.</target>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.screenReader.slide">
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="bootstrapCarousel.ariaLabel.control">
+				<target>Zeige Bild %1$s von %2$s</target>
+			</trans-unit>
+			<!--LogoCarousel Element-->
+			<trans-unit id="logoCarousel.ariaLabel.nextSlideMessage">
+				<target>Zeige nächstes Logo</target>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.prevSlideMessage">
+				<target>Zeige vorheriges Logo</target>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.firstSlideMessage">
+				<source>Das ist der erste Slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.lastSlideMessage">
+				<source>Das ist der letzte Slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.paginationBulletMessage">
+				<source>Zum Slide {{index}} springen</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainNav" xml:space="preserve">
+				<target>Direkt zur Hauptnavigation springen</target>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
+				<target>Direkt zum Inhalt springen</target>
+			</trans-unit>
+			<trans-unit id="breadcrumb.ariaLabel" xml:space="preserve">
+				<target>Brotkrümelnavigation</target>
+			</trans-unit>
+			<trans-unit id="breadcrumb_label" xml:space="preserve">
+				<target>Sie sind hier</target>
+			</trans-unit>
+			<!--News-->
+			<!-- news custom labels -->
+			<trans-unit id="news.more-link.linktext" xml:space="preserve">
+				<target>Öffne News - </target>
+			</trans-unit>
+			<!-- news pagination aria labels -->
+			<trans-unit id="paginate.list.ariaLabel" xml:space="preserve">
+				<target>Paginierung</target>
+			</trans-unit>
+			<trans-unit id="paginate.page.ariaLabel" xml:space="preserve">
+				<target>Seite</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

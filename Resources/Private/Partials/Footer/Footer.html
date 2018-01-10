@@ -6,8 +6,10 @@
 <!-- theme_t3kit: Partials/Footer/Footer.html [begin] -->
 
 
-<footer class="footer">
-
+<footer class="footer" role="contentinfo">
+	
+	<f:comment>H2 is needed to provide valid HTML structure https://www.w3.org/WAI/tutorials/page-structure/headings/</f:comment>
+	<h2 class="hidden" aria-hidden="true"><f:translate key="footer.firstHeadline" extensionName="theme_t3kit"/></h2>
 	<f:cObject typoscriptObjectPath="lib.footer" />
 
 </footer>

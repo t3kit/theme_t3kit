@@ -16,18 +16,21 @@
 						<span>toggle menu</span>
 					</button>
 				</div>
-
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContacts')}">
 					<div class="header-top__contact">
 						<div class="header-top__contact-tel">
-							<span class="icons icon-t3-mobile"></span>
-							<span class="header-top__contact-tel-title"><f:translate key="callUs_label" /></span>
+							<span class="icons icon-t3-mobile" aria-hidden="true"></span>
+							<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContactsLabels')}">
+								<span class="header-top__contact-tel-title" aria-hidden="true"><f:translate key="callUs_label" /></span>
+							</f:if>
 							<a class="header-top__contact-tel-link" href="tel:{f:cObject(typoscriptObjectPath: 'lib.contacts.phone')}">{theme:constant(constant: 'themes.configuration.contacts.phone')}</a>
 						</div>
 						<div class="header-top__contact-email">
-							<span class="icons icon-t3-mail"></span>
-							<span class="header-top__contact-email-title"><f:translate key="emailUs_label" /></span>
-							<f:link.email class="header-top__contact-email-link" email="{theme:constant(constant: 'themes.configuration.contacts.email')}" />
+							<span class="icons icon-t3-mail" aria-hidden="true"></span>
+							<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopContactsLabels')}">
+								<span class="header-top__contact-email-title" aria-hidden="true"><f:translate key="emailUs_label" /></span>
+							</f:if>
+							<f:link.email class="header-top__contact-email-link" title="{f:translate(key: 'emailUs_label')}" additionalAttributes="{aria-label: '{f:translate(key: \'emailUs_label\')}'}" email="{theme:constant(constant: 'themes.configuration.contacts.email')}" />
 						</div>
 					</div>
 				</f:if>
@@ -78,17 +81,29 @@
 		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
 			<span>toggle menu</span>
 		</button>
+		<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
+			<div class="main-navigation-mobile__language-menu">
+				<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+			</div>
+		</f:if>
 	</f:if>
 
-	<nav class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')}">
+	<nav id="main-navigation" class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')}">
 		<div class="main-navigation__items-wrp js__navigation__items-wrp">
+			<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLogoInNavigation')}">
+				<div class="main-navigation__logo">
+					<f:cObject typoscriptObjectPath="lib.header.logo.main" />
+				</div>
+			</f:if>
+			<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
+				<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
+			</f:if>
 			<ul class="main-navigation__items-list js__main-navigation__items-list {f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.navbarPos\')} == right', then: '_right-pos')}">
 				<f:cObject typoscriptObjectPath="lib.menu.main" />
 
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu')}">
 					<f:cObject typoscriptObjectPath="lib.menu.topMobile" />
 				</f:if>
-
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMainMenuSearch')}">
 					<f:cObject typoscriptObjectPath="lib.menu.main.search" />
 				</f:if>

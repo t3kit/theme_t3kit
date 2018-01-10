@@ -2,6 +2,9 @@
 	<f:layout name="Default" />
 	<f:section name="Default">
 	<!-- theme_t3kit: Templates/Theme/TopContentSidebarContent.html [begin] -->
+	<f:variable name="content">
+		<f:render partial="Content/Main" section="Default" arguments="{_all}" />
+	</f:variable>
 
 	<div class="top-content">
 		<f:render partial="Content/Top" section="Default" arguments="{_all}" />
@@ -14,7 +17,7 @@
 				<f:render partial="Content/Sidebar" section="Default" arguments="{_all}" />
 			</div>
 			<div class="col-md-9">
-				<f:render partial="Content/Main" section="Default" arguments="{_all}" />
+				<f:format.raw>{content}</f:format.raw>
 			</div>
 		</div>
 	</div>

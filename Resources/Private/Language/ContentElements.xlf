@@ -304,6 +304,9 @@
 			<trans-unit id="logoCarousel.tabs.logos">
 				<source>Logos</source>
 			</trans-unit>
+			<trans-unit id="logoCarousel.flexform.interval">
+				<source>Interval in milliseconds(ms)</source>
+			</trans-unit>
 
 			<!--Quote Element-->
 			<trans-unit id="quote.title">
@@ -391,6 +394,9 @@
 			</trans-unit>
 			<trans-unit id="socialIcons.flexform.youtubeLink">
 				<source>Youtube: Pagelink</source>
+			</trans-unit>
+			<trans-unit id="socialIcons.flexform.mynewsdeskLink">
+				<source>Mynewsdesk: Pagelink</source>
 			</trans-unit>
 
 			<!--CopyrightText Element-->

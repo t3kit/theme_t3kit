@@ -37,5 +37,10 @@
     <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/Library/plugin.rx_shariff.setupts">
 [global]
 
+# Frontend editing
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('frontend_editing')]
+    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/FrontendEditing/TypoScript/setup.ts">
+[global]
+
 # Include setupTS files from fileadmin/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/" extensions="setupts">

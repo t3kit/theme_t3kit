@@ -147,6 +147,7 @@ call_user_func(function() {
             --div--;' .  $coreLanguageFilePrefix .'general,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                header_layout;' . $frontendLanguageFilePrefix . 'header_layout_formlabel,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'imageTextLink.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'imageTextLink.linkText,
                 --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
@@ -198,6 +199,7 @@ call_user_func(function() {
             --div--;' .  $coreLanguageFilePrefix .'general,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 header;' . $frontendLanguageFilePrefix . 'header_formlabel,
+                header_layout;' . $frontendLanguageFilePrefix . 'header_layout_formlabel,
                 --linebreak--,bodytext;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.bodytext,
                 --linebreak--,subheader;' . $contentElementLanguageFilePrefix . 'bigIconTextButton.buttonText,
                 --linebreak--,header_link;' . $frontendLanguageFilePrefix . 'header_link_formlabel,
@@ -356,7 +358,7 @@ call_user_func(function() {
     $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,contentElementBootstrapSlider'] = $flexformPath . 'flexform_bootstrapSlider.xml';
 
     $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['appearance']['collapseAll'] = 0;
-    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'] = '--div--;tx_themet3kit_slide_btn_txt, --palette--;;imageoverlayPalette, --palette--;;filePalette';
+    $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'] = '--div--;,tx_themet3kit_slide_btn_txt, --palette--;;imageoverlayPalette, --palette--;;filePalette';
     $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['1']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
     $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['2']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
     $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['3']['showitem'] = $GLOBALS['TCA']['tt_content']['types']['contentElementBootstrapSlider']['columnsOverrides']['image']['config']['foreign_types']['0']['showitem'];
@@ -487,9 +489,9 @@ call_user_func(function() {
             --div--;' .  $coreLanguageFilePrefix .'general,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.headers;headers,
+                --linebreak--,pi_flexform;' . $contentElementLanguageFilePrefix . 'tt_content.tabs.settings,
             --div--;' . $contentElementLanguageFilePrefix . 'logoCarousel.tabs.logos,image,
                 --palette--;' . $contentElementLanguageFilePrefix . 'tt_content.palette.imageSize;imageMaxSize,
-
             --div--;' . $frontendLanguageFilePrefix . 'tabs.appearance,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.frames;frames,
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.appearanceLinks;appearanceLinks,
@@ -503,6 +505,8 @@ call_user_func(function() {
             --div--;' .  $coreLanguageFilePrefix .'extended,
         '
     ];
+
+    $GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['config']['ds']['*,logoCarousel'] = $flexformPath . 'flexform_logoCarousel.xml';
 
     // logoCarousel flexform
     // ======================= logoCarousel [end] ==========================================
