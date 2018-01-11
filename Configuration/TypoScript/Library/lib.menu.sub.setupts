@@ -3,7 +3,7 @@ lib.menu.sub.entryLevel = 1
 lib.menu.sub.includeNotInMenu = {$themes.configuration.menu.sub.includeNotInMenu}
 lib.menu.sub.excludeUidList = {$themes.configuration.menu.sub.excludeUidList}
 lib.menu.sub.stdWrap {
-    innerWrap = <div class="sub-navigation"><div class="sub-navigation__wrp"><ul class="sub-navigation__item-list _sub-list-level-2"> | </ul></div></div>
+    innerWrap = <div class="sub-navigation" id="sub-navigation"><div class="sub-navigation__wrp"><ul class="sub-navigation__item-list _sub-list-level-2"> | </ul></div></div>
     dataWrap = <nav aria-label="{LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:subnavigation.ariaLabel}"> | </nav>
 }
 lib.menu.sub.1 = TMENU
