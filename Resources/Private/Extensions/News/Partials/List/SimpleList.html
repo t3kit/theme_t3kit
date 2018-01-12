@@ -29,13 +29,13 @@
 					<n:link newsItem="{newsItem}" settings="{settings}" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
-									<f:media file="{mediaElement}" width="170"/>
+									<f:media file="{mediaElement}" width="270"/>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
 								<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 5">
-									<f:media file="{mediaElement}" width="170"/>
+									<f:media file="{mediaElement}" width="270"/>
 							</f:if>
 						</f:alias>
 					</n:link>
