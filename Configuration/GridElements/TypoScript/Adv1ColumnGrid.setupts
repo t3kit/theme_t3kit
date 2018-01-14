@@ -1,91 +1,74 @@
 lib.gridelements {
-    # layoutRootPaths {
-    #     1913 =  EXT:fluid_styled_content/Resources/Private/Layouts/
-    # }
     Adv1ColumnGrid < .defaultGridSetup
     Adv1ColumnGrid {
-        columns.0 {
-            prepend = COA
-            prepend {
-                10 = TEXT
-                10 {
-                    field = flexform_column_1_xs
-                    required = 1
-                    noTrimWrap = | |
-                }
-                20 < .10
-                20.field = flexform_column_1_sm
-                20.noTrimWrap = | |
-                30 < .10
-                30.field = flexform_column_1_md
-                30.noTrimWrap = | |
-                40 < .10
-                40.field = flexform_column_1_lg
-                40.noTrimWrap = | |
-                50 < .10
-                50.field = flexform_column_1_layout
-                50.noTrimWrap = | |
-                60 < .10
-                60.field = flexform_column_1_offset
-                60.noTrimWrap = | |
-                70 < .10
-                70.field = flexform_column_1_class
-                70.noTrimWrap = | |
-                stdWrap.noTrimWrap = |<div class="col1 |">|
-            }
-            renderObj >
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
-            }
-            wrap = |</div>
-
-            # Content wrapper
-            innerWrap.cObject = COA
-            innerWrap.cObject {
-                10 = TEXT
-                10.value = <div
-                20 = COA
-                20 {
+        columns {
+            0 < .default
+            0 {
+                prepend = COA
+                prepend {
                     10 = TEXT
                     10 {
-                        field = flexform_column_1_content_wrapper
+                        field = flexform_column_1_xs
                         required = 1
-                        noTrimWrap = | ||
+                        noTrimWrap = | |
                     }
-
-                    stdWrap {
-                        trim = 1
-                        noTrimWrap = | class="|"|
-                        required = 1
-                    }
+                    20 < .10
+                    20.field = flexform_column_1_sm
+                    20.noTrimWrap = | |
+                    30 < .10
+                    30.field = flexform_column_1_md
+                    30.noTrimWrap = | |
+                    40 < .10
+                    40.field = flexform_column_1_lg
+                    40.noTrimWrap = | |
+                    50 < .10
+                    50.field = flexform_column_1_layout
+                    50.noTrimWrap = | |
+                    60 < .10
+                    60.field = flexform_column_1_offset
+                    60.noTrimWrap = | |
+                    70 < .10
+                    70.field = flexform_column_1_class
+                    70.noTrimWrap = | |
+                    stdWrap.noTrimWrap = |<div class="col1 |">|
                 }
+                wrap = |</div>
 
-                30 = TEXT
-                30.value = >|</div>
-                if.isTrue.field = flexform_column_1_content_wrapper
+                # Content wrapper
+                innerWrap.cObject = COA
+                innerWrap.cObject {
+                    10 = TEXT
+                    10.value = <div
+                    20 = COA
+                    20 {
+                        10 = TEXT
+                        10 {
+                            field = flexform_column_1_content_wrapper
+                            required = 1
+                            noTrimWrap = | ||
+                        }
+
+                        stdWrap {
+                            trim = 1
+                            noTrimWrap = | class="|"|
+                            required = 1
+                        }
+                    }
+
+                    30 = TEXT
+                    30.value = >|</div>
+                    if.isTrue.field = flexform_column_1_content_wrapper
+                }
             }
-
         }
 
-        cObject = FLUIDTEMPLATE
         cObject {
-            layoutRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Layouts
-                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
-            }
-            partialRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Partials
-            }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv1ColumnGrid.html
             dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
                 10 {
                     references.fieldName = media
                 }
-                # "inherit" from lib.fluidContent
-                800 < lib.contentElement.dataProcessing.800
-                830 < lib.contentElement.dataProcessing.830
             }
         }
     }

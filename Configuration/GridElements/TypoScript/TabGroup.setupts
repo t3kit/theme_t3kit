@@ -1,37 +1,25 @@
 lib.gridelements {
     TabGroup < .defaultGridSetup
     TabGroup {
-        columns.0 {
-            # reset "tab" counter
-            prepend = COA
-            prepend {
-                10 = LOAD_REGISTER
-                10 {
-                    tabNumber.cObject = TEXT
-                    tabNumber.cObject.value = 0
+        columns {
+            0 < .default
+            0 {
+                prepend = COA
+                prepend {
+                    10 = LOAD_REGISTER
+                    10 {
+                        tabNumber.cObject = TEXT
+                        tabNumber.cObject.value = 0
+                    }
                 }
-            }
-            renderObj >
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
-
             }
         }
 
         cObject = FLUIDTEMPLATE
         cObject {
-
             variables {
                 activeUid = TEXT
                 activeUid.field = data.tx_gridelements_view_children.0.uid
-            }
-            layoutRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Layouts
-                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
-            }
-            partialRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Partials
             }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/TabGroup.html
             dataProcessing {
@@ -39,9 +27,6 @@ lib.gridelements {
                 10 {
                     references.fieldName = media
                 }
-                # "inherit" from lib.fluidContent
-                800 < lib.contentElement.dataProcessing.800
-                830 < lib.contentElement.dataProcessing.830
             }
         }
     }
