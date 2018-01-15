@@ -25,17 +25,17 @@
 		<f:if condition="{newsItem.mediaPreviews}">
 			<!-- media preview element -->
 			<f:then>
-					<div class="col-12 col-sm-3 news-simple-list__media-preview">
+				<div class="col-12 col-sm-3 news-simple-list__media-preview">
 					<n:link newsItem="{newsItem}" settings="{settings}" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
 						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 							<f:if condition="{mediaElement.originalResource.type} == 2">
-									<f:media file="{mediaElement}" width="270"/>
+								<f:media file="{mediaElement}" width="270"/>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
 								<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 5">
-									<f:media file="{mediaElement}" width="270"/>
+								<f:media file="{mediaElement}" width="270"/>
 							</f:if>
 						</f:alias>
 					</n:link>
@@ -44,9 +44,9 @@
 			<f:else>
 				<f:if condition="{settings.displayDummyIfNoMedia}">
 					<div class="news-simple-list__img-wrap col-12 col-sm-3">
-						<div class="no-media-element">
-							<div class="news-simple-list__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
-						</div>
+						<n:link class="no-media-element" newsItem="{newsItem}" settings="{settings}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
+							<f:image src="{settings.list.media.dummyImage}" additionalAttributes="{role: 'presentation'}" class="img-responsive" title="" alt="" maxWidth="270"/>
+						</n:link>
 					</div>
 				</f:if>
 			</f:else>
