@@ -1966,6 +1966,22 @@
     }
 }
 
+// =================================
+// === Set style for buttons =======
+// =================================
+.btn-style--t3kit(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:focus,
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 10%);
+        border-color: darken(@border, 10%);
+    }
+}
+
 
 // Custom Variables
 // Custom media queries breakpoints
@@ -2098,12 +2114,11 @@
 //== Buttons BOOTSTRAP
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
-
 @btn-font-weight:               normal;
-@btn-default-color:             @main-color;
-@btn-default-bg:                transparent;
-@btn-default-border:            tint(@main-color, 70%);
 @btn-border-radius-base:        none;
+@btn-default-color:             @main-body-bg;
+@btn-default-bg:                @main-color;
+@btn-default-border:            @main-color;
 
 @padding-base-vertical:     8px;
 @padding-base-horizontal:   14px;
@@ -2224,6 +2239,18 @@
 
 
 // HEADER
+.skip-links {
+    text-align: center;
+    background-color: @nav-background-color;
+    line-height: @nav-height;
+}
+
+.skip-links__item {
+    &:focus {
+        color: @nav-link-color;
+    }
+}
+
 // =========================================================
 // === Header ==============================================
 // =========================================================
@@ -2317,11 +2344,11 @@
     display: none;
 }
 
-.header-top > .nav > li {
+.header-top .nav > li {
     display: inline-block;
 }
 
-.header-top > .nav > li > a {
+.header-top .nav > li > a {
     padding: 0 14px;
     display: inline-block;
     // line-height: 50px;
@@ -2329,7 +2356,7 @@
     color: @main-color; //@header-top-color;
 }
 
-.no-touch .header-top > .nav > li > a:hover {
+.no-touch .header-top .nav > li > a:hover {
     color: @main-link-hover-color;
     background: transparent;
 }
@@ -2851,6 +2878,17 @@
 // Open link cross for third navigation level, adjust height
 .main-navigation__sub-item > .main-navigation__open-sub-menu-link {
     line-height: 40px;
+}
+
+// for all links excluding active elements set color on focus
+.main-navigation__item:not(._active),
+.main-navigation__sub-item:not(._active) {
+    .main-navigation__item-link,
+    .main-navigation__sub-item-link {
+        &:focus {
+            color: @nav-link-hover-color;
+        }
+    }
 }
 
 .main-navigation__sub-item-list {
@@ -4345,19 +4383,30 @@
 
 .news-carousel__wrapper {
     padding-bottom: 40px;
+    list-style-type: none;
 }
 
 .news-carousel__media-preview {
-    min-height: 180px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+}
+
+// if object-fit property is supported image in 180px height and use object fit.
+@supports (object-fit: cover) {
+    .news-carousel__media-preview {
+        height: 180px;
+        object-fit: cover;
+    }
 }
 
 .news-carousel__img-wrap {
     position: relative;
+
+    a {
+        display: inline-block;
+    }
 }
+
 //header
 .news-carousel__slide .news-article-header h3 {
     font-size: 18px;
@@ -4416,6 +4465,7 @@
 .news-carousel__btn-next,
 .news-carousel__btn-prev {
     display: none;
+    border: none;
 }
 
 @media (min-width: @screen-md-min) {
@@ -4427,7 +4477,8 @@
 
         color: @main-color;
         -moz-osx-font-smoothing: grayscale;
-        height: auto;
+        height: 100%;
+        top: 0;
         font-size: 30px;
     }
 }
@@ -4487,7 +4538,8 @@
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.news-carousel__img-wrap a:hover:after {
+.news-carousel__img-wrap a:hover:after,
+.news-carousel__img-wrap a:focus:after {
     opacity: 0.7;
     visibility: visible;
 }
@@ -4525,10 +4577,14 @@
     border: 1px solid @border-color;
     margin-bottom: 30px;
     border-radius: 3px;
+
+    > a {
+        display: inline-block;
+    }
 }
 
 .news-cards__media-preview {
-    height: 180px;
+    min-height: 180px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -4570,80 +4626,39 @@
     }
 }
 
-.news-simple-list__img-wrap {
-    margin-right: 20px;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-
-    &:after {
-        content: '';
-        display: block;
-        margin-bottom: 69.2%;
-    }
-}
-
-.news-simple-list__img-wrap a {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.news-simple-list__media-preview {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.news-simple-list__text {
-    overflow: hidden;
-    position: relative;
-    padding: 15px 15px 0;
-    height: auto;
-}
-
 .news-simple-list__item {
     background-color: darken(@main-body-bg, 5%);
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 266px;
+
+    .img-responsive {
+        margin-bottom: 15px;
+    }
+
+    a {
+        display: inline-block;
+    }
+}
+
+// use custom width instead of bootstrap media query;
+// evaluated by testing the ideal value
+@media (min-width: 540px) {
+    .news-simple-list__item {
+        flex-direction: row;
+    }
 }
 
 .news-simple-list__media-preview {
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
-.news-simple-list__more-link {
-    padding: 0 15px 15px;
+    display: block;
 }
 
 .news-simple-list__header h3 {
     font-size: 22px;
 }
 
-@media (min-width: @screen-sm-min) {
-    .news-simple-list__img-wrap {
-        float: left;
-        width: 290px;
-    }
-
-    .news-simple-list__text {
-        height: 168px;
-        padding-left: 0;
-        padding-top: 20px;
-        padding-right: 30px;
-    }
-
-    .news-simple-list__more-link {
-        padding: 0;
-    }
-}
-
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    .news-simple-list__more-link {
-        padding-top: 4px;
-    }
-
     .news-simple-list__header h3 {
         font-size: 19px;
     }
@@ -5088,6 +5103,11 @@ div.awesomplete li[aria-selected="true"] mark {
 // ==================================================================
 // ======== Additional styling for Fluid Styled Content extension  ====
 // ==================================================================
+
+// Make link expand to same size as image to make focus visible on linked images
+.ce-textpic .image a {
+    display: inline-block;
+}
 
 .ce-gallery img {
     display: block;
@@ -6459,10 +6479,15 @@ div.awesomplete li[aria-selected="true"] mark {
     &:before {
         content: '';
         display: block;
-        padding-top: 67.35%;
         background: fade(@main-color, 30%);
-        position: relative;
         z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s;
     }
 }
 
@@ -6501,7 +6526,7 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 
 .img-text-link._hover-9 .img-text-link__img {
-    position: absolute;
+    position: relative;
     width: 100%;
     transition: all 0.3s ease;
     left: 0;
@@ -7093,10 +7118,14 @@ div.awesomplete li[aria-selected="true"] mark {
     position: static;
 }
 
-.panel-title > a {
-    display: block;
-    padding: 10px 15px;
-    margin: -10px -15px;
+.panel-title {
+    font-weight: normal;
+
+    > a {
+        display: block;
+        padding: 10px 15px;
+        margin: -10px -15px;
+    }
 }
 
 .panel-title > a.empty {
@@ -7579,6 +7608,7 @@ div.awesomplete li[aria-selected="true"] mark {
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 2;
     width: @carousel-control-width;
     font-size: @carousel-control-font-size;
     color: @carousel-control-color;
@@ -7695,7 +7725,7 @@ div.awesomplete li[aria-selected="true"] mark {
     // Align caption with content
     .top-content {
         .carousel-caption {
-            left: calc(~'(100vw - (@{container-large-desktop} - @{grid-gutter-width})) / 2');
+            left: calc(~'(100% - (@{container-large-desktop} - @{grid-gutter-width})) / 2');
             width: 45%;
         }
     }
@@ -8859,6 +8889,26 @@ h1,
 h2 {
     font-family: @font-family-serif;
 }
+
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
+
+// ============================
+// ======== Button styles  ====
+// ============================
+.btn-default {
+    .btn-style--t3kit(@btn-default-color, @btn-default-bg, transparent);
+}
+
+.btn-default--inverted {
+    .btn-style--t3kit(@btn-default-bg, @btn-default-color, transparent);
+}
+
+.btn-bordered {
+    .btn-style--t3kit(@btn-default-bg, transparent, @btn-default-bg);
+}
+
+.btn-bordered--inverted {
+    .btn-style--t3kit(@btn-default-color, transparent, @btn-default-color);
+}
 
