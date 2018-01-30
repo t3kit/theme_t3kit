@@ -1,5 +1,4 @@
 plugin.tx_news.settings.defaultDetailPid = {$themes.configuration.features.newsDefaultDetailPid}
-plugin.tx_news.settings.detail.media.image.lightbox.class = {$styles.content.textmedia.linkWrap.lightboxCssClass}
 
 plugin.tx_news.settings.newsCarousel.cropMaxCharacters = 136
 
@@ -22,13 +21,18 @@ plugin.tx_news.settings.detail.showPrevNext = 1
 # show a file type icon above the file name
 plugin.tx_news.settings.detail.showRelatedFileIcon = 0
 
-# Lightbox data-caption attribute settings for use in Partials/Detail/MediaImage.html
 plugin.tx_news.settings {
-    detail.media.image.lightbox {
-        glue = {$lightbox.dataCaption.glue}
-        includeTitle = {$lightbox.dataCaption.includeTitle}
-        includeDescription = {$lightbox.dataCaption.includeDescription}
-        includeCopyright = {$lightbox.dataCaption.includeCopyright}
-        labelCopyright = {$lightbox.dataCaption.labelCopyright}
+    detail.media.image {
+    # Lightbox data-caption attribute settings for use in Partials/Detail/MediaImage.html
+        lightbox {
+            glue = {$lightbox.dataCaption.glue}
+            includeTitle = {$lightbox.dataCaption.includeTitle}
+            includeDescription = {$lightbox.dataCaption.includeDescription}
+            includeCopyright = {$lightbox.dataCaption.includeCopyright}
+            labelCopyright = {$lightbox.dataCaption.labelCopyright}
+            class = {$styles.content.textmedia.linkWrap.lightboxCssClass}
+        }
+
+        maxHeight = 200
     }
 }
