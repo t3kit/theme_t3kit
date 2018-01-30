@@ -33,7 +33,8 @@
 						<div class="news-cards__img-wrap">
 							<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 								<f:if condition="{mediaElement.originalResource.type} == 2">
-									<div class="news-cards__media-preview" style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}px">
+									<div class="news-cards__media-preview"
+										style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px">
 										<f:media file="{mediaElement}" width="768"/>
 									</div>
 								</f:if>
@@ -41,7 +42,8 @@
 									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}"/>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 5">
-									<div class="news-cards__media-preview" style="height:{f:if(condition: settings.detail.media.image.maxHeight, then: settings.detail.media.image.maxHeight, else: settings.media.maxHeight)}px">
+									<div class="news-cards__media-preview"
+										style="height:{f:if(condition: settings.detail.media.image.maxHeight, then: settings.list.media.image.maxHeight, else: settings.media.maxHeight)}px">
 										<f:media file="{mediaElement}" width="768"/>
 									</div>
 								</f:if>
@@ -54,7 +56,7 @@
 								<div class="no-media-element">
 									<div class="news-cards__media-preview"
 										style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');
-										height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}px"></div>
+										height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px"></div>
 								</div>
 							</div>
 						</f:if>

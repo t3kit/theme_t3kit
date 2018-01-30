@@ -5,12 +5,20 @@
     flex-direction: column;
     min-height: 266px;
 
-    .img-responsive {
+    img {
         margin-bottom: 15px;
+        max-width: 100%;
     }
 
     a {
         display: inline-block;
+    }
+}
+
+// max-width:100% is not working in IE so we can set the image width to 100% here
+.IE {
+    .news-simple-list__item img {
+        width: 100%;
     }
 }
 
