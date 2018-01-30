@@ -21,24 +21,25 @@
 }
 
 .news-carousel__media-preview {
-    width: 100%;
-    height: auto;
-}
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
 
-// if object-fit property is supported image in 180px height and use object fit.
-@supports (object-fit: cover) {
-    .news-carousel__media-preview {
-        height: 180px;
-        object-fit: cover;
+    img {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: absolute;
+        max-width: none;
     }
 }
 
 .news-carousel__img-wrap {
     position: relative;
-
-    a {
-        display: inline-block;
-    }
 }
 
 //header
