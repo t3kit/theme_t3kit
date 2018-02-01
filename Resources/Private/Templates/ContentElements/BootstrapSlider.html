@@ -79,11 +79,12 @@
 </f:section>
 
 <f:section name="caption">
-	<f:if condition="{title} || {description} || {link}">
 		<div class="carousel-caption">
-			<f:if condition="{title} && {firstImage} && {settings.showHeadlineH1}">
-				<f:then><h1>{title}</h1></f:then>
-				<f:else><h2>{title}</h2></f:else>
+			<f:if condition="{title}">
+				<f:if condition="{firstImage} && {settings.showHeadlineH1}">
+					<f:then><h1>{title}</h1></f:then>
+					<f:else><h2>{title}</h2></f:else>
+				</f:if>
 			</f:if>
 
 			<f:if condition="{description}">
@@ -99,7 +100,6 @@
 				</f:link.typolink>
 			</f:if>
 		</div>
-	</f:if>
 </f:section>
 
 <f:section name="image">
