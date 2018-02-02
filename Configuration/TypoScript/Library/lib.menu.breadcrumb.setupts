@@ -38,7 +38,7 @@ lib.menu.breadcrumb {
             1 = TMENU
             1 {
                 itemArrayProcFunc = T3kit\themeT3kit\UserFunction\BreadCrumb->addAdditionalItem
-                NO < lib.menu.breadcrumb.10.1.NO
+                NO < lib.menu.breadcrumb.20.10.1.NO
                 NO = 1
                 NO {
                     doNotLinkIt = 0
