@@ -1,0 +1,8 @@
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    // clear columns on two column grid layout
+    .gridelements__four-columns {
+        > .col-sm-6:nth-child(2n+1) {
+            clear: left;
+        }
+    }
+}
