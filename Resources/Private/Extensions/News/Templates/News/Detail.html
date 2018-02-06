@@ -189,6 +189,46 @@
 				</n:extensionLoaded>
 			</f:if>
 
+			<f:if condition="{settings.detail.showPrevNext}">
+				<f:comment>Show next and previous news item</f:comment>
+				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+					<div class="page-navigation">
+						<f:if condition="{paginated}">
+							<f:if condition="{paginated.prev}">
+								<div class="page-navigation__prev">
+									<div class="page-navigation__link-wrp js__dotdotdot">
+										<n:link newsItem="{paginated.prev}" settings="{settings}" class="page-navigation__link">
+											{paginated.prev.title}
+										</n:link>
+									</div>
+									<span class="page-navigation__date">
+											<time datetime="{f:format.date(date:paginated.prev.datetime, format:'Y-m-d')}">
+											<f:format.date format="{f:translate(key:'dateFormat')}">{paginated.prev.datetime}</f:format.date>
+											<meta itemprop="datePublished" content="{f:format.date(date:paginated.prev.datetime, format:'Y-m-d')}"/>
+											</time>
+										</span>
+								</div>
+							</f:if>
+							<f:if condition="{paginated.next}">
+								<div class="page-navigation__next">
+									<div class="page-navigation__link-wrp js__dotdotdot">
+										<n:link newsItem="{paginated.next}" settings="{settings}" class="page-navigation__link">
+											{paginated.next.title}
+										</n:link>
+									</div>
+									<span class="page-navigation__date">
+											<time datetime="{f:format.date(date:paginated.next.datetime, format:'Y-m-d')}">
+											<f:format.date format="{f:translate(key:'dateFormat')}">{paginated.next.datetime}</f:format.date>
+											<meta itemprop="datePublished" content="{f:format.date(date:paginated.next.datetime, format:'Y-m-d')}"/>
+											</time>
+										</span>
+								</div>
+							</f:if>
+						</f:if>
+					</div>
+				</n:simplePrevNext>
+			</f:if>
+
 			<f:if condition="{settings.backPid}">
 				<!-- Link Back -->
 				<div class="news-backlink-wrap">
@@ -197,32 +237,7 @@
 					</f:link.page>
 				</div>
 			</f:if>
-
-			<f:if condition="{settings.detail.showPrevNext}">
-				<f:comment>Show next and previous news item</f:comment>
-				<n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
-					<div class="page-navigation">
-						<f:if condition="{paginated}">
-							<ul class="prev-next">
-								<f:if condition="{paginated.prev}">
-									<li class="previous">
-										<n:link newsItem="{paginated.prev}" settings="{settings}">
-											<f:translate key="paginate_previous"/>
-										</n:link>
-									</li>
-								</f:if>
-								<f:if condition="{paginated.next}">
-									<li class="next">
-										<n:link newsItem="{paginated.next}" settings="{settings}">
-											<f:translate key="paginate_next"/>
-										</n:link>
-									</li>
-								</f:if>
-							</ul>
-						</f:if>
-					</div>
-				</n:simplePrevNext>
-			</f:if>
+		</f:then>
 		</f:then>
 		<f:else> </f:else>
 	</f:if>
