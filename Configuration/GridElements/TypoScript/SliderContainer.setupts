@@ -1,32 +1,13 @@
 lib.gridelements {
     SliderContainer < .defaultGridSetup
     SliderContainer {
-        columns.0 {
-            renderObj >
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
-            }
-        }
-
-        cObject = FLUIDTEMPLATE
         cObject {
-            layoutRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Layouts
-                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
-            }
-            partialRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Partials
-            }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/SliderContainer.html
             dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
                 10 {
                     references.fieldName = media
                 }
-                # "inherit" from lib.fluidContent
-                800 < lib.contentElement.dataProcessing.800
-                830 < lib.contentElement.dataProcessing.830
             }
         }
     }

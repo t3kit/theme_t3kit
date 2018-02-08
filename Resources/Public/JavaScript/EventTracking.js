@@ -216,9 +216,11 @@
                     e.preventDefault();
                     var url = $(this).attr('href');
                     tracker.push('_trackEvent', opts.category, opts.action, this.href, opts.value, opts.nonInteraction);
-                    setTimeout(function(){
-                        location.href = url;
-                    }, 250);
+                    if ($(this).data('rel') !== 'popup') {
+                        setTimeout(function(){
+                            location.href = url;
+                        }, 250);
+                    }
                 }
             });
         },

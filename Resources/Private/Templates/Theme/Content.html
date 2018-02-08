@@ -2,13 +2,15 @@
 	<f:layout name="Default" />
 	<f:section name="Default">
 	<!-- theme_t3kit: Templates/Theme/Content.html [begin] -->
-
+	<f:variable name="content">
+		<f:render partial="Content/Main" section="Default" arguments="{_all}" />
+	</f:variable>
 
 	<f:render partial="Content/Breadcrumbs" section="Default" arguments="{_all}" />
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<f:render partial="Content/Main" section="Default" arguments="{_all}" />
+				<f:format.raw>{content}</f:format.raw>
 			</div>
 		</div>
 	</div>

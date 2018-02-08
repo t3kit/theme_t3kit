@@ -1,21 +1,23 @@
 lib.gridelements {
     Adv2ColumnGrid < .Adv1ColumnGrid
     Adv2ColumnGrid {
-        columns.1 < .columns.0
-        columns.1.prepend {
-            10.field = flexform_column_2_xs
-            20.field = flexform_column_2_sm
-            30.field = flexform_column_2_md
-            40.field = flexform_column_2_lg
-            50.field = flexform_column_2_layout
-            60.field = flexform_column_2_offset
-            70.field = flexform_column_2_class
-            stdWrap.noTrimWrap = |<div class="col2|">|
-        }
-        columns.1 {
-            # Content wrapper
-            innerWrap.cObject.20.10.field = flexform_column_2_content_wrapper
-            innerWrap.cObject.if.isTrue.field = flexform_column_2_content_wrapper
+        columns {
+            1 < .0
+            1 {
+                prepend {
+                    10.field = flexform_column_2_xs
+                    20.field = flexform_column_2_sm
+                    30.field = flexform_column_2_md
+                    40.field = flexform_column_2_lg
+                    50.field = flexform_column_2_layout
+                    60.field = flexform_column_2_offset
+                    70.field = flexform_column_2_class
+                    stdWrap.noTrimWrap = |<div class="col2|">|
+                }
+                # Content wrapper
+                innerWrap.cObject.20.10.field = flexform_column_2_content_wrapper
+                innerWrap.cObject.if.isTrue.field = flexform_column_2_content_wrapper
+            }
         }
         cObject.file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/Adv2ColumnGrid.html
     }

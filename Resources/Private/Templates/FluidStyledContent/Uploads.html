@@ -7,7 +7,8 @@
 			<f:for each="{files}" as="file" iteration="fileIterator">
 				<li>
 					<f:if condition="{data.uploads_type} == 1">
-						<t3kit:render.svg source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"></t3kit:render.svg>
+						<t3kit:render.svg aria-label="{f:translate(key:'LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file.type')}: {file.extension}"
+										  source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"/>
 					</f:if>
 					<f:if condition="{data.uploads_type} == 2">
 						<f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
@@ -17,7 +18,8 @@
 								</a>
 							</f:then>
 							<f:else>
-								<t3kit:render.svg source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"></t3kit:render.svg>
+								<t3kit:render.svg aria-label="{f:translate(key:'LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file.type')}: {file.extension}"
+												  source="{f:uri.resource(path: 'Icons/FileIcons/{file.extension}.svg', extensionName: 'theme_t3kit')}"/>
 							</f:else>
 						</f:if>
 					</f:if>

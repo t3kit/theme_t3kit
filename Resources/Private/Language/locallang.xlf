@@ -13,6 +13,9 @@
 			<trans-unit id="breadcrumb_label" xml:space="preserve">
 				<source>You are here</source>
 			</trans-unit>
+			<trans-unit id="breadcrumb.ariaLabel" xml:space="preserve">
+				<source>Breadcrumb navigation</source>
+			</trans-unit>
 			<trans-unit id="languageMenu_label" xml:space="preserve">
 				<source>Language:</source>
 			</trans-unit>
@@ -22,7 +25,21 @@
 			<trans-unit id="subnavigation.ariaLabel" xml:space="preserve">
 				<source>Subnavigation</source>
 			</trans-unit>
-
+			<trans-unit id="metaNavigation.ariaLabel" xml:space="preserve">
+				<source>Meta navigation</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainNav" xml:space="preserve">
+				<source>Skip to main navigation</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.mainContent" xml:space="preserve">
+				<source>Skip to main content</source>
+			</trans-unit>
+			<trans-unit id="skipLinks.subNavigation" xml:space="preserve">
+				<source>Skip to subnavigation</source>
+			</trans-unit>
+			<trans-unit id="footer.firstHeadline">
+				<source>Footer</source>
+			</trans-unit>
 
 			<!--Extensions-->
 			<!--News-->
@@ -36,11 +53,36 @@
 			<trans-unit id="news-single-video-header" xml:space="preserve">
 				<source>Video</source>
 			</trans-unit>
+			<trans-unit id="news.more-link.linktext" xml:space="preserve">
+				<source>Open News - </source>
+			</trans-unit>
+			<!--- news pagination aria labels -->
+			<trans-unit id="paginate.list.ariaLabel" xml:space="preserve">
+				<source>Pagination</source>
+			</trans-unit>
+			<trans-unit id="paginate.page.ariaLabel" xml:space="preserve">
+				<source>Page</source>
+			</trans-unit>
 
 
 			<!-- ContentElements labels -->
 			<trans-unit id="contentElement.slider.linkText" xml:space="preserve">
 				<source>Read more</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.nextSlideMessage">
+				<source>Show next item</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.prevSlideMessage">
+				<source>Show previous item</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.firstSlideMessage">
+				<source>This is the first slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.lastSlideMessage">
+				<source>This is the last slide</source>
+			</trans-unit>
+			<trans-unit id="logoCarousel.ariaLabel.paginationBulletMessage">
+				<source>Go to slide {{index}}</source>
 			</trans-unit>
 
 

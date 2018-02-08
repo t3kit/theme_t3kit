@@ -136,6 +136,7 @@
     top: 0;
     left: 0;
     bottom: 0;
+    z-index: 2;
     width: @carousel-control-width;
     font-size: @carousel-control-font-size;
     color: @carousel-control-color;
@@ -252,7 +253,7 @@
     // Align caption with content
     .top-content {
         .carousel-caption {
-            left: calc(~'(100vw - (@{container-large-desktop} - @{grid-gutter-width})) / 2');
+            left: calc(~'(100% - (@{container-large-desktop} - @{grid-gutter-width})) / 2');
             width: 45%;
         }
     }

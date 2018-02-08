@@ -13,19 +13,6 @@ TCEFORM.tt_content.layout {
     }
 }
 
-# Use frame_class field to customize appearance select-box for Gridelements
-# Note in this case the class is just taken from the item (className = Label)
-TCEFORM.tt_content.frame_class {
-   types {
-       gridelements_pi1 {
-           addItems {
-                --div-- = Gridelements appearance:
-                footer__bottom = Footer bottom row wrapper
-           }
-       }
-   }
-}
-
 # Layout definitions for advanced columns
 TCEFORM.tt_content.pi_flexform.gridelements_pi1.columns.layout_definition {
     # Example how to add layout class to columns in advanced gridelements

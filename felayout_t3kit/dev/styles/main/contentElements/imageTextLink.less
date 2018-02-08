@@ -1045,10 +1045,15 @@
     &:before {
         content: '';
         display: block;
-        padding-top: 67.35%;
         background: fade(@main-color, 30%);
-        position: relative;
         z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        transition: all 0.5s;
     }
 }
 
@@ -1087,7 +1092,7 @@
 }
 
 .img-text-link._hover-9 .img-text-link__img {
-    position: absolute;
+    position: relative;
     width: 100%;
     transition: all 0.3s ease;
     left: 0;

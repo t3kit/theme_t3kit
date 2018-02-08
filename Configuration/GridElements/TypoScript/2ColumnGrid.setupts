@@ -1,24 +1,7 @@
 lib.gridelements {
     2ColumnGrid < .defaultGridSetup
     2ColumnGrid {
-        columns.0 {
-            renderObj >
-            renderObj = COA
-            renderObj {
-              20 =< tt_content
-            }
-        }
-        columns.1 < .columns.0
-
-        cObject = FLUIDTEMPLATE
         cObject {
-            layoutRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Layouts
-                30 = EXT:theme_t3kit/Resources/Private/Layouts/GridElements
-            }
-            partialRootPaths {
-                20 = EXT:fluid_styled_content/Resources/Private/Partials
-            }
             file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/2ColumnGrid.html
             dataProcessing {
                 # "inherit" from lib.fluidContent

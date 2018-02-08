@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:t3kit="http://typo3.org/ns/T3kit/themeT3kit/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
 <f:layout name="General" />
@@ -16,17 +17,12 @@
 					{year}
 					<ul>
 						<f:for each="{months}" key="month" as="count">
+							<f:variable name="monthName">
+								<f:translate key="month.{month}" />
+							</f:variable>
 							<f:if condition="{0:year, 1:month} == {0:overwriteDemand.year, 1:overwriteDemand.month}">
 								<f:then>
-									<f:comment>
-										Set title tag for date menu active item
-									</f:comment>
-									<n:format.nothing>
-										<n:titleTag>
-											<f:format.htmlentitiesDecode><f:cObject typoscriptObjectPath="lib.pageTitle"/> - <f:translate key="month.{month}" /> {year}</f:format.htmlentitiesDecode>
-										</n:titleTag>
-									</n:format.nothing>
-
+									<t3kit:register key="additionalBreadCrumbItem" value="{monthName} {year}"/>
 									<li class="item itemactive">
 										<f:render section="datemenuLink" arguments="{listPid: listPid, year: year, month: month, count: count, entry: entry, entries: entries}"/>
 									</li>

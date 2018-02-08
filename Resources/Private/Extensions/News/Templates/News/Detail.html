@@ -1,6 +1,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers">
+     xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+     xmlns:t3kit="http://typo3.org/ns/T3kit/themeT3kit/ViewHelpers">
 
 
 <f:layout name="Detail.html" />
@@ -29,7 +30,7 @@
 				<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
 			</n:format.nothing>
 			<div class="news-article-header">
-				<h3 itemprop="headline">{newsItem.title}</h3>
+				<h1 itemprop="headline">{newsItem.title}</h1>
 			</div>
 			<div class="news-article-footer">
 				<p>
@@ -97,9 +98,9 @@
 				<f:if condition="{newsItem.allRelatedSorted}">
 					<!-- Related news records -->
 					<div class="news-related news-related-news col-sm-4">
-						<h4>
+						<h2>
 							<f:translate key="related-news" />
-						</h4>
+						</h2>
 						<ul>
 							<f:for each="{newsItem.allRelatedSorted}" as="related">
 								<li>
@@ -116,16 +117,23 @@
 				<f:if condition="{newsItem.relatedFiles}">
 					<!-- FAL related files -->
 					<div class="news-related news-related-files col-sm-4">
-						<h4>
+						<h2>
 							<f:translate key="related-files" />
-						</h4>
+						</h2>
 						<ul>
 							<f:for each="{newsItem.relatedFiles}" as="relatedFile">
 								<li>
 									<span class="news-related-files-link">
-										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+										<f:if condition="{settings.detail.showRelatedFileIcon}">
+											<t3kit:render.svg
+												aria-label="{f:translate(key:'LLL:EXT:lang/Resources/Private/Language/locallang_tca.xlf:sys_file.type')}: {relatedFile.originalResource.extension}"
+												source="{f:uri.resource(path: 'Icons/FileIcons/{relatedFile.originalResource.extension}.svg', extensionName: 'theme_t3kit')}" />
+										</f:if>
+										<f:link.typolink parameter="{relatedFile.originalResource.publicUrl}"
+											target="_blank"
+											title="{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}">
 											{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
-										</a>
+										</f:link.typolink>
 									</span>
 									<span class="news-related-files-size">
 										{relatedFile.originalResource.size -> f:format.bytes()}
@@ -139,9 +147,9 @@
 				<f:if condition="{newsItem.relatedLinks}">
 					<!-- Related links -->
 					<div class="news-related news-related-links col-sm-4">
-						<h4>
+						<h2>
 							<f:translate key="related-links" />
-						</h4>
+						</h2>
 						<ul>
 							<f:for each="{newsItem.relatedLinks}" as="relatedLink">
 								<li>

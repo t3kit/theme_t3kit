@@ -42,3 +42,19 @@
         opacity: 0.6;
     }
 }
+
+// =================================
+// === Set style for buttons =======
+// =================================
+.btn-style--t3kit(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:focus,
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 10%);
+        border-color: darken(@border, 10%);
+    }
+}

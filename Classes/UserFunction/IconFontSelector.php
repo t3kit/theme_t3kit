@@ -542,6 +542,17 @@ class IconFontSelector
         if ($PA['table'] === 'pages') {
             $pageId = $PA['row']['uid'];
         }
+        // If $config['row']['pid'] is < 0 then it points
+        // to the previous content element on the same page
+        if ($pageId < 0) {
+            $parentRec = BackendUtility::getRecord(
+                    'tt_content',
+                    abs($pageId),
+                    'pid'
+            );
+            $pageId = $parentRec['pid'];
+        }
+        
         $cType = $PA['row']['CType'][0];
         $table = $PA['table'];
         $field = $PA['field'];
