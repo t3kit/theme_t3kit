@@ -27,9 +27,6 @@ config {
 
     moveJsFromHeaderToFooter = 1
     inlineStyle2TempFile = 0
-
-    # html-compress
-    compressBody = 1
 }
 
 # In case of using development mode, disable compression and concatenation
@@ -44,3 +41,16 @@ config {
         compressBody = 0
     }
 [global]
+
+# In case html compressor extension installed
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('html_compress')]
+    config {
+        # html-compress
+        compressBody = 1
+    }
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('html_compress')] && [globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
+    config {
+        # html-compress
+        compressBody = 1
+    }
+[end]

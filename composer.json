@@ -31,14 +31,6 @@
     {
       "type": "composer",
       "url": "https://composer.typo3.org/"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/beardcoder/html_compress.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pixelant/pxa_images_compressor.git"
     }
   ],
   "minimum-stability": "dev",
@@ -57,8 +49,6 @@
     "typo3-ter/pxa-form-enhancement": "~3.0.0",
     "typo3-ter/pxa-cookie-bar": "~1.0.7",
     "svewap/realurl-404-multilingual": "~1.0.9",
-    "markussom/html-compress": "~1.1.1",
-    "pixelant/pxa-images-compressor": "~1.0.4",
     "typo3-ter/frontend-editing": "^1.3"
     }
 }
