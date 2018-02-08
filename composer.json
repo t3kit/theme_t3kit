@@ -2,7 +2,12 @@
   "name": "t3kit/theme-t3kit",
   "description": "Base Theme fot t3kit project",
   "type": "typo3-cms-extension",
-  "keywords": ["t3kit", "typo3", "cms", "starter"],
+  "keywords": [
+    "t3kit",
+    "typo3",
+    "cms",
+    "starter"
+  ],
   "homepage": "http://t3kit.com/",
   "license": "GPL-2.0+",
   "authors": [
@@ -18,14 +23,22 @@
     "docs": "https://github.com/t3kit/t3kit/blob/master/README.md"
   },
   "autoload": {
-      "psr-4": {
-          "T3kit\\themeT3kit\\": "Classes/"
-      }
+    "psr-4": {
+      "T3kit\\themeT3kit\\": "Classes/"
+    }
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/beardcoder/html_compress.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/pixelant/pxa_images_compressor.git"
     }
   ],
   "minimum-stability": "dev",
@@ -44,6 +57,8 @@
     "typo3-ter/pxa-form-enhancement": "~3.0.0",
     "typo3-ter/pxa-cookie-bar": "~1.0.7",
     "svewap/realurl-404-multilingual": "~1.0.9",
-    "typo3-ter/frontend-editing": "~1.2.2"
-    }
+    "typo3-ter/frontend-editing": "~1.2.2",
+    "markussom/html-compress": "~1.1.1",
+    "pixelant/pxa-images-compressor": "~1.0.4"
+  }
 }
