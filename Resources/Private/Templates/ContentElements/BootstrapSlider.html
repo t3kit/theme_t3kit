@@ -9,14 +9,15 @@
 			data-ride="carousel" role="complementary">
 			<f:comment>If one of the fixed settings is enabled show the fixed caption</f:comment>
 			<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
-				<f:render section="caption"
-					arguments="{
-					title: settings.fixedTitle,
-					description: settings.fixedDescription,
-					linkText: settings.fixedLinkText,
-					link: settings.fixedLink,
-					settings: settings,
-					firstImage: 'true'}" />
+				<div class="carousel-caption">
+					<f:render section="caption" arguments="{
+						title: settings.fixedTitle,
+						description: settings.fixedDescription,
+						linkText: settings.fixedLinkText,
+						link: settings.fixedLink,
+						settings: settings,
+						firstImage: 'true'}"/>
+				</div>
 			</f:if>
 
 			<f:if condition="{slides->f:count()} > 1">
@@ -79,27 +80,27 @@
 </f:section>
 
 <f:section name="caption">
-		<div class="carousel-caption">
-			<f:if condition="{title}">
-				<f:if condition="{firstImage} && {settings.showHeadlineH1}">
-					<f:then><h1>{title}</h1></f:then>
-					<f:else><h2>{title}</h2></f:else>
-				</f:if>
-			</f:if>
+	<f:if condition="{title}">
+		<f:if condition="{firstImage} && {settings.showHeadlineH1}">
+			<f:then><h1>{title}</h1></f:then>
+			<f:else><h2>{title}</h2></f:else>
+		</f:if>
+	</f:if>
 
-			<f:if condition="{description}">
-				<p class="carousel__description">{description}</p>
-			</f:if>
+	<f:if condition="{description}">
+		<p class="carousel__description">{description}</p>
+	</f:if>
 
-			<f:if condition="{link}">
-				<f:link.typolink parameter="{link}" class="btn carousel__btn" additionalAttributes="{role:'button'}">
-					<f:if condition="{linkText}">
-						<f:then>{linkText}</f:then>
-						<f:else><f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit"/></f:else>
-					</f:if>
-				</f:link.typolink>
+	<f:if condition="{link}">
+		<f:link.typolink parameter="{link}" class="btn carousel__btn" additionalAttributes="{role:'button'}">
+			<f:if condition="{linkText}">
+				<f:then>{linkText}</f:then>
+				<f:else>
+					<f:translate key="contentElement.slider.linkText" extensionName="theme_t3kit"/>
+				</f:else>
 			</f:if>
-		</div>
+		</f:link.typolink>
+	</f:if>
 </f:section>
 
 <f:section name="image">
@@ -113,14 +114,17 @@
 	<f:if condition="{settings.fixedTitle} || {settings.fixedDescription} || {settings.fixedLink}">
 		<f:then> </f:then>
 		<f:else>
-			<f:render section="caption"
-				arguments="{
-									title: image.title,
-									description: image.description,
-									linkText: image.referenceProperties.tx_themet3kit_slide_btn_txt,
-									link: image.link,
-									settings: settings,
-									firstImage: i.isFirst}" />
+			<f:if condition="{image.title} || {image.description} || {image.link}">
+				<div class="carousel-caption">
+					<f:render section="caption" arguments="{
+										title: image.title,
+										description: image.description,
+										linkText: image.referenceProperties.tx_themet3kit_slide_btn_txt,
+										link: image.link,
+										settings: settings,
+										firstImage: i.isFirst}"/>
+				</div>
+			</f:if>
 		</f:else>
 	</f:if>
 </f:section>
