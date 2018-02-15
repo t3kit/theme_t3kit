@@ -53,16 +53,6 @@
 			<trans-unit id="news-single-video-header" xml:space="preserve">
 				<source>Video</source>
 			</trans-unit>
-			<trans-unit id="news.more-link.linktext" xml:space="preserve">
-				<source>Open News - </source>
-			</trans-unit>
-			<!--- news pagination aria labels -->
-			<trans-unit id="paginate.list.ariaLabel" xml:space="preserve">
-				<source>Pagination</source>
-			</trans-unit>
-			<trans-unit id="paginate.page.ariaLabel" xml:space="preserve">
-				<source>Page</source>
-			</trans-unit>
 
 
 			<!-- ContentElements labels -->
