@@ -1,13 +1,12 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
 <div class="news-list-view news-carousel {f:format.case(value: '{settings.templateLayout}', mode: 'lower')}">
-	<button aria-hidden="true" class="js__news-carousel__btn-prev news-carousel__btn-prev swiper-button-prev"></button>
 	<div class="swiper-container news-carousel__container js__news-carousel">
 	<!-- Additional required wrapper -->
-		<ul class="swiper-wrapper news-carousel__wrapper">
+		<div class="swiper-wrapper news-carousel__wrapper">
 			<f:for each="{news}" as="newsItem" iteration="iterator">
 
-			<li class="swiper-slide news-carousel__slide">
-				<article class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+			<div class="swiper-slide news-carousel__slide">
+				<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 					<n:excludeDisplayedNews newsItem="{newsItem}"/>
 
 					<f:if condition="{newsItem.mediaPreviews}">
@@ -17,19 +16,13 @@
 								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 									<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 										<f:if condition="{mediaElement.originalResource.type} == 2">
-											<div class="news-carousel__media-preview"
-												style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px">
-												<f:media file="{mediaElement}" width="355"/>
-											</div>
+											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 4">
 											<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 5">
-											<div class="news-carousel__media-preview"
-												style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px">
-												<f:media file="{mediaElement}" width="355"/>
-											</div>
+											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
 										</f:if>
 									</f:alias>
 								</n:link>
@@ -53,11 +46,9 @@
 						<f:else>
 							<f:if condition="{settings.displayDummyIfNoMedia}">
 								<div class="news-carousel__img-wrap">
-									<div class="no-media-element" aria-hidden="true">
+									<div class="no-media-element">
 										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-											<div class="news-carousel__media-preview"
-												style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');
-										height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px"></div>
+										<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
 										</n:link>
 									</div>
 
@@ -101,14 +92,15 @@
 						</f:if>
 					</div>
 
-				</article>
+				</div>
 
-			</li>
+			</div>
 
 			</f:for>
-		</ul>
-		<div aria-hidden="true" class="js__news-carousel__pagination news-carousel__pagination swiper-pagination"></div>
+		</div>
+		<div class="js__news-carousel__pagination news-carousel__pagination swiper-pagination"></div>
 	</div>
-	<button aria-hidden="true" class="js__news-carousel__btn-next news-carousel__btn-next swiper-button-next"></button>
+	<div class="js__news-carousel__btn-prev news-carousel__btn-prev swiper-button-prev"></div>
+	<div class="js__news-carousel__btn-next news-carousel__btn-next swiper-button-next"></div>
 
 </div>
