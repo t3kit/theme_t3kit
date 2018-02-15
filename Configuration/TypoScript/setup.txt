@@ -6,6 +6,7 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent/" extensions="setupts">
 
 # Add our content elements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/GridElements/TypoScript/DefaultGrid.setupts">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements/" extensions="setupts">
 
 # Add our Grid elements
