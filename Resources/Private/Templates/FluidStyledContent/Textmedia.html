@@ -8,7 +8,7 @@
 
 </f:section>
 <f:section name="Main">
-	<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')} {f:if(condition:data.image_zoom, then: 'lightbox__wrp-{data.uid}')}">
+	<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
 		<f:if condition="{gallery.position.vertical} != 'below'">
 			<f:render partial="Media/Gallery" arguments="{_all}" />
 		</f:if>
