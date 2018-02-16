@@ -2,31 +2,6 @@
 // General appearance wrappers
 // =================================
 
-.inverse a {
-    color: tint(@main-color, 90%);
-
-    &.active,
-    &:active {
-        &.focus,
-        &:focus {
-            color: tint(@main-text-color, 100%);
-            border-color: tint(@main-color, 70%);
-        }
-    }
-
-    &.focus,
-    &:focus,
-    &:hover {
-        color: tint(@main-text-color, 100%);
-        border-color: tint(@main-color, 70%);
-    }
-}
-
-.inverse p {
-    color: tint(@main-text-color, 90%);
-    -webkit-font-smoothing: antialiased;
-}
-
 .inverse {
     h1,
     h2,
@@ -36,34 +11,59 @@
         color: tint(@main-text-color, 100%);
         -webkit-font-smoothing: antialiased;
     }
-}
 
-.inverse .icons {
-    color: tint(@main-color, 90%);
-    border-color: tint(@main-color, 70%);
-}
+    a {
+        color: tint(@main-color, 90%);
 
-.inverse .btn {
-    // background: saturate(spin(@main-color, 177), 30%);
-    color: tint(@main-color, 90%);
-    // border-color: transparent;
-    &.active,
-    &:active {
+        &.active,
+        &:active {
+            &.focus,
+            &:focus {
+                color: tint(@main-text-color, 100%);
+                border-color: tint(@main-color, 70%);
+            }
+        }
+
         &.focus,
-        &:focus {
+        &:focus,
+        &:hover {
+            color: tint(@main-text-color, 100%);
+            border-color: tint(@main-color, 70%);
+        }
+    }
+
+    p {
+        color: tint(@main-text-color, 90%);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .icons {
+        color: tint(@main-color, 90%);
+        border-color: tint(@main-color, 70%);
+    }
+
+    .btn {
+        // background: saturate(spin(@main-color, 177), 30%);
+        color: tint(@main-color, 90%);
+        // border-color: transparent;
+        &.active,
+        &:active {
+            &.focus,
+            &:focus {
+                // background: saturate(spin(@main-color, 177), 30%);
+                // border-color: transparent;
+            }
+        }
+
+        &.focus,
+        &:focus,
+        &:hover {
             // background: saturate(spin(@main-color, 177), 30%);
             // border-color: transparent;
         }
     }
 
-    &.focus,
-    &:focus,
-    &:hover {
-        // background: saturate(spin(@main-color, 177), 30%);
-        // border-color: transparent;
+    .big-icon-text-btn__sham-link {
+        color: tint(@main-color, 90%);
     }
-}
-
-.inverse .big-icon-text-btn__sham-link {
-    color: tint(@main-color, 90%);
 }
