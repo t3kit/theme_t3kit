@@ -2210,6 +2210,7 @@
 .icon-t3-quoteMark:before { content: "\e0de"; } // quote
 .icon-text-btn__link:after { content: "\e91c"; } // leftIconTextButton
 .icon-text-btn__sham-link:after { content: "\e91c"; } // leftIconTextButton
+.big-icon-text-btn__link:after { content: "\e91c"; } // bigIconTextButton
 .big-icon-text-btn__sham-link:after { content: "\e91c"; } // bigIconTextButton
 .img-text-link__img-link:before { content: "\e943"; } // imageTextLink
 .logo-carousel__btn-next:before { content: '\e91d'; } // logo carousel next
@@ -4383,30 +4384,19 @@
 
 .news-carousel__wrapper {
     padding-bottom: 40px;
-    list-style-type: none;
 }
 
 .news-carousel__media-preview {
-    width: 100%;
-    height: auto;
-}
-
-// if object-fit property is supported image in 180px height and use object fit.
-@supports (object-fit: cover) {
-    .news-carousel__media-preview {
-        height: 180px;
-        object-fit: cover;
-    }
+    min-height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-bottom: 20px;
 }
 
 .news-carousel__img-wrap {
     position: relative;
-
-    a {
-        display: inline-block;
-    }
 }
-
 //header
 .news-carousel__slide .news-article-header h3 {
     font-size: 18px;
@@ -4465,7 +4455,6 @@
 .news-carousel__btn-next,
 .news-carousel__btn-prev {
     display: none;
-    border: none;
 }
 
 @media (min-width: @screen-md-min) {
@@ -4477,8 +4466,7 @@
 
         color: @main-color;
         -moz-osx-font-smoothing: grayscale;
-        height: 100%;
-        top: 0;
+        height: auto;
         font-size: 30px;
     }
 }
@@ -4538,8 +4526,7 @@
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.news-carousel__img-wrap a:hover:after,
-.news-carousel__img-wrap a:focus:after {
+.news-carousel__img-wrap a:hover:after {
     opacity: 0.7;
     visibility: visible;
 }
@@ -4577,14 +4564,10 @@
     border: 1px solid @border-color;
     margin-bottom: 30px;
     border-radius: 3px;
-
-    > a {
-        display: inline-block;
-    }
 }
 
 .news-cards__media-preview {
-    min-height: 180px;
+    height: 180px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -4626,39 +4609,80 @@
     }
 }
 
-.news-simple-list__item {
-    background-color: darken(@main-body-bg, 5%);
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    min-height: 266px;
+.news-simple-list__img-wrap {
+    margin-right: 20px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 
-    .img-responsive {
-        margin-bottom: 15px;
-    }
-
-    a {
-        display: inline-block;
+    &:after {
+        content: '';
+        display: block;
+        margin-bottom: 69.2%;
     }
 }
 
-// use custom width instead of bootstrap media query;
-// evaluated by testing the ideal value
-@media (min-width: 540px) {
-    .news-simple-list__item {
-        flex-direction: row;
-    }
+.news-simple-list__img-wrap a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .news-simple-list__media-preview {
-    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.news-simple-list__text {
+    overflow: hidden;
+    position: relative;
+    padding: 15px 15px 0;
+    height: auto;
+}
+
+.news-simple-list__item {
+    background-color: darken(@main-body-bg, 5%);
+    margin-bottom: 30px;
+}
+
+.news-simple-list__media-preview {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.news-simple-list__more-link {
+    padding: 0 15px 15px;
 }
 
 .news-simple-list__header h3 {
     font-size: 22px;
 }
 
+@media (min-width: @screen-sm-min) {
+    .news-simple-list__img-wrap {
+        float: left;
+        width: 290px;
+    }
+
+    .news-simple-list__text {
+        height: 168px;
+        padding-left: 0;
+        padding-top: 20px;
+        padding-right: 30px;
+    }
+
+    .news-simple-list__more-link {
+        padding: 0;
+    }
+}
+
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .news-simple-list__more-link {
+        padding-top: 4px;
+    }
+
     .news-simple-list__header h3 {
         font-size: 19px;
     }
@@ -7966,31 +7990,6 @@ div.awesomplete li[aria-selected="true"] mark {
 // General appearance wrappers
 // =================================
 
-.inverse a {
-    color: tint(@main-color, 90%);
-
-    &.active,
-    &:active {
-        &.focus,
-        &:focus {
-            color: tint(@main-text-color, 100%);
-            border-color: tint(@main-color, 70%);
-        }
-    }
-
-    &.focus,
-    &:focus,
-    &:hover {
-        color: tint(@main-text-color, 100%);
-        border-color: tint(@main-color, 70%);
-    }
-}
-
-.inverse p {
-    color: tint(@main-text-color, 90%);
-    -webkit-font-smoothing: antialiased;
-}
-
 .inverse {
     h1,
     h2,
@@ -8000,36 +7999,61 @@ div.awesomplete li[aria-selected="true"] mark {
         color: tint(@main-text-color, 100%);
         -webkit-font-smoothing: antialiased;
     }
-}
 
-.inverse .icons {
-    color: tint(@main-color, 90%);
-    border-color: tint(@main-color, 70%);
-}
+    a {
+        color: tint(@main-color, 90%);
 
-.inverse .btn {
-    // background: saturate(spin(@main-color, 177), 30%);
-    color: tint(@main-color, 90%);
-    // border-color: transparent;
-    &.active,
-    &:active {
+        &.active,
+        &:active {
+            &.focus,
+            &:focus {
+                color: tint(@main-text-color, 100%);
+                border-color: tint(@main-color, 70%);
+            }
+        }
+
         &.focus,
-        &:focus {
+        &:focus,
+        &:hover {
+            color: tint(@main-text-color, 100%);
+            border-color: tint(@main-color, 70%);
+        }
+    }
+
+    p {
+        color: tint(@main-text-color, 90%);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .icons {
+        color: tint(@main-color, 90%);
+        border-color: tint(@main-color, 70%);
+    }
+
+    .btn {
+        // background: saturate(spin(@main-color, 177), 30%);
+        color: tint(@main-color, 90%);
+        // border-color: transparent;
+        &.active,
+        &:active {
+            &.focus,
+            &:focus {
+                // background: saturate(spin(@main-color, 177), 30%);
+                // border-color: transparent;
+            }
+        }
+
+        &.focus,
+        &:focus,
+        &:hover {
             // background: saturate(spin(@main-color, 177), 30%);
             // border-color: transparent;
         }
     }
 
-    &.focus,
-    &:focus,
-    &:hover {
-        // background: saturate(spin(@main-color, 177), 30%);
-        // border-color: transparent;
+    .big-icon-text-btn__sham-link {
+        color: tint(@main-color, 90%);
     }
-}
-
-.inverse .big-icon-text-btn__sham-link {
-    color: tint(@main-color, 90%);
 }
 
 // =================================
