@@ -19,12 +19,9 @@ Disallow: /
 [global]
 
 # Disable title generation on news pages
-[globalVar = GP:tx_news_pi1|news > 0] || [globalVar = GP:tx_news_pi1|overwriteDemand|categories > 0] || [globalVar = GP:tx_news_pi1|overwriteDemand|tags > 0]
+[globalVar = GP:tx_news_pi1|news > 0]
     page.headerData.654 >
     page.meta.description >
     config.titleTagFunction >
-[globalVar = GP:tx_news_pi1|overwriteDemand|year > 0] && [globalVar = GP:tx_news_pi1|overwriteDemand|month > 0]
-    page.headerData.654 >
-    page.meta.description >
-    config.titleTagFunction >
+    config.noPageTitle = 0
 [global]
