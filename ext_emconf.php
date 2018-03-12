@@ -35,14 +35,16 @@ $EM_CONF[$_EXTKEY] = array(
     'constraints' => array(
         'depends' => array(
             'typo3'  => '8.7.0-8.7.99',
+            'realurl' => '2.3.2-2.3.99',
             'themes' => '8.7.0-8.7.99',
-            'dyncss_less' => '0.7.9-0.7.99',
             'gridelements' => '8.0.0-8.0.99',
-            'realurl' => '2.2.0-2.2.99',
-            'go_maps_ext' => '2.3.0-2.3.99',
-            'cs_seo' => '2.1.2-2.1.99',
-            'news' => '6.1.0-6.1.99',
-            'frontend_editing' => '1.2.0-1.2.99'
+            'solr' => '7.5.1-7.5.99',
+            'dyncss_less' => '0.7.9-0.7.99',
+            'go_maps_ext' => '2.3.1-2.3.99',
+            'cs_seo' => '2.3.1-2.3.99',
+            'news' => '6.3.0-6.3.99',
+            'realurl_404_multilingual' => '1.0.9-1.0.99',
+            'frontend_editing' => '1.3.3-1.3.99'
         ),
         'conflicts' => array(
         ),
