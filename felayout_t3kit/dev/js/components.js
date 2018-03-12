@@ -31,8 +31,8 @@
 // JavaScript parallax scrolling
 // https://github.com/nk-o/jarallax
 //==============================================================================
-@import '../../node_modules/jarallax/jarallax/jarallax.js';
-@import '../../node_modules/jarallax/jarallax/jarallax-video.js';
+@import '../../node_modules/jarallax/dist/jarallax.js';
+@import '../../node_modules/jarallax/dist/jarallax-video.js';
 //==============================================================================
 
 
