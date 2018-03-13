@@ -3,6 +3,7 @@
 #############################################
 
 # #customcategory=socialmedia=Theme: Socialmedia settings
+# customsubcategory=socialmedia_alternatives=Options
 # customsubcategory=socialmedia_facebook=Facebook
 # customsubcategory=socialmedia_twitter=Twitter
 # customsubcategory=socialmedia_linkedin=LinkedIn
@@ -14,6 +15,9 @@
 # customsubcategory=socialmedia_youtube=YouTube
 # customsubcategory=socialmedia_mynewsdesk=Mynewsdesk
 
+# Social Media Options
+# cat=socialmedia,advanced/socialmedia_alternatives/; type=options[Allow=1,Disallow=0]; label= Use these social links as fallback for unset links in translated "Social Icon" CE:s
+themes.configuration.socialmedia.allowFallback = 1
 
 # Facebook
 #############################################
