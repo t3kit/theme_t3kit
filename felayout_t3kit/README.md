@@ -5,8 +5,8 @@
 ### Required dependencies:
 
 - [Git](https://git-scm.com/)
-- [NodeJs](http://nodejs.org/) >=6.9.1
-- [NPM](https://github.com/npm/npm) >=3.10.8
+- [NodeJs](http://nodejs.org/) >=8.9.0
+- [NPM](https://github.com/npm/npm) >=5.6.0
 - [Grunt-cli](http://gruntjs.com/) >=1.2.0 `npm install -g grunt-cli`
 
 ***
