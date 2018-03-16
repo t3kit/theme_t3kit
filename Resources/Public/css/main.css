@@ -625,6 +625,7 @@
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, max-height 0.2s linear;
+  z-index: 3000;
 }
 @media (max-width: 991px) {
   ._open-mobile-dropdown > .main-navigation__sub-item-list {
