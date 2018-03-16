@@ -17,6 +17,7 @@ editor:
       # block level styles
       - { name: "White title H2 with blue background", element: "h2", styles: { color: "#fff", background: "#50b4d8" } }
       - { name: "White title H3 with blue background", element: "h3", styles: { color: "#fff", background: "#50b4d8" } }
+      - { name: "Lead", element: "p", attributes: { 'class': 'lead' }, styles: { font-size: "16px" } }
       # Inline styles
       - { name: "White text color", element: "span", styles: { color: "#fff" } }
       - { name: "Yellow marker", element: "span", styles: { background-color: "yellow" } }
