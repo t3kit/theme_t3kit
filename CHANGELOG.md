@@ -1,4 +1,17 @@
 
+#### v2.6.0 `March 16, 2018`
+- **[FEATURE]** added 'Lead' paragraph styling for CKEditor (#399) ([5684980](https://github.com/t3kit/theme_t3kit/commit/5684980))
+- **[BUGFIX]** fix main menu sub list not overlaying other menu items. (#395) ([8aa1704](https://github.com/t3kit/theme_t3kit/commit/8aa1704))
+- **[BUGFIX]** Reactivate usage of news detail page constant for solr index (#397) ([ec5e388](https://github.com/t3kit/theme_t3kit/commit/ec5e388))
+- **[FEATURE]** New Social Media Option in Theme configuration (#398) ([342181a](https://github.com/t3kit/theme_t3kit/commit/342181a))
+- **[DOC]** update felayout README, update required dependencies (node/npm) ([80ce262](https://github.com/t3kit/theme_t3kit/commit/80ce262))
+- **[TASK]** add package-lock.json ([e0affbb](https://github.com/t3kit/theme_t3kit/commit/e0affbb))
+- **[TASK]** update FE dependencies ([b51c809](https://github.com/t3kit/theme_t3kit/commit/b51c809))
+- **[TASK]** update dependencies, sync composer.json with ext_emconf.php ([0296923](https://github.com/t3kit/theme_t3kit/commit/0296923))
+- **[BUGFIX]** fix missing translate attribute for languageMenu_label (#396) ([f8b625d](https://github.com/t3kit/theme_t3kit/commit/f8b625d))
+
+***
+
 #### v2.5.0 `February 19, 2018`
 - **[BUGFIX]** render title tag in news single view, fixes t3kit/t3kit#168 (#394) ([3d9cd51](https://github.com/t3kit/theme_t3kit/commit/3d9cd51))
 - **[BUGFIX]** support enlarge on click for CE:s 'Images' and 'Image and text' (#388) ([28a1b50](https://github.com/t3kit/theme_t3kit/commit/28a1b50))
