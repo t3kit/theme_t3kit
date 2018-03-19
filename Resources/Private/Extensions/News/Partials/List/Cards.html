@@ -36,7 +36,7 @@
 									<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 4">
-									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}"/>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 5">
 									<div class="news-cards__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
