@@ -17,24 +17,15 @@
 
 .news-carousel__wrapper {
     padding-bottom: 40px;
+    padding-left: 0;
     list-style-type: none;
 }
 
 .news-carousel__media-preview {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     margin-bottom: 20px;
-    overflow: hidden;
-    position: relative;
 
     img {
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        position: absolute;
-        max-width: none;
+        min-height: 180px;
     }
 }
 
@@ -115,6 +106,7 @@
         height: 100%;
         top: 0;
         font-size: 30px;
+        padding: 0;
     }
 }
 
