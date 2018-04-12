@@ -179,15 +179,24 @@
     .page-navigation {
         margin-top: 0;
 
-        .next,
-        .previous {
-            > a:after {
-                .icons();
+        .next {
+            margin-left: 10px;
+        }
 
-                content: "\e91c";
-                top: 2px;
-                position: relative;
-            }
+        .next a:after,
+        .previous a:before {
+            top: 2px;
+            position: relative;
+
+            .icons();
+        }
+
+        .previous a:before {
+            content: '\e91a';
+        }
+
+        .next a:after {
+            content: "\e91c";
         }
     }
 
