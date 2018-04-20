@@ -1,5 +1,5 @@
-# Dont use the default JavaScript
-removeDefaultJS = 1
+# Don't use the default JavaScript
+config.removeDefaultJS = 1
 
 
 [globalVar = LIT:1 = {$themes.configuration.baseurl}]
@@ -19,15 +19,38 @@ config {
 }
 
 
-config.compressCss = 1
-config.compressJs = 1
-config.concatenateCss = 1
-config.concatenateJs = 1
+config {
+    compressCss = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
+
+    moveJsFromHeaderToFooter = 1
+    inlineStyle2TempFile = 0
+}
 
 # In case of using development mode, disable compression and concatenation
 [globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
-    config.compressCss = 0
-    config.compressJs = 0
-    config.concatenateCss = 0
-    config.concatenateJs = 0
+    config {
+        compressCss = 0
+        compressJs = 0
+        concatenateCss = 0
+        concatenateJs = 0
+
+        # html-compress
+        compressBody = 0
+    }
 [global]
+
+# In case html compressor extension installed
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('html_compress')]
+    config {
+        # html-compress
+        compressBody = 1
+    }
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('html_compress')] && [globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
+    config {
+        # html-compress
+        compressBody = 1
+    }
+[end]
