@@ -42,7 +42,7 @@
 </f:section>
 
 <f:section name="datemenuLink">
-	<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /> {year}</f:link.action>
+	<f:link.action pageUid="{listPid}" arguments="{overwriteDemand:{year: year, month: month}}"><f:translate key="month.{month}" /></f:link.action>
 	({count} <f:translate key="{f:if(condition: '{count} == 1', then: 'entry', else: 'entries')}" />)
 </f:section>
 
