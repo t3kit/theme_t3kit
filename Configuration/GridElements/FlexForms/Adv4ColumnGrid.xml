@@ -163,7 +163,7 @@
 												<numIndex index="1">col-sm-12</numIndex>
 											</numIndex>
 										</items>
-										<default></default>
+										<default>col-sm-6</default>
 								</config>
 						</TCEforms>
 				</column_1_sm>
@@ -529,7 +529,7 @@
 												<numIndex index="1">col-sm-12</numIndex>
 											</numIndex>
 										</items>
-										<default></default>
+										<default>col-sm-6</default>
 								</config>
 						</TCEforms>
 				</column_2_sm>
@@ -895,7 +895,7 @@
 												<numIndex index="1">col-sm-12</numIndex>
 											</numIndex>
 										</items>
-										<default></default>
+										<default>col-sm-6</default>
 								</config>
 						</TCEforms>
 				</column_3_sm>
@@ -1261,7 +1261,7 @@
 												<numIndex index="1">col-sm-12</numIndex>
 											</numIndex>
 										</items>
-										<default></default>
+										<default>col-sm-6</default>
 								</config>
 						</TCEforms>
 				</column_4_sm>
