@@ -1,7 +1,3 @@
-# Dont use the default JavaScript
-removeDefaultJS = 1
-
-
 [globalVar = LIT:1 = {$themes.configuration.baseurl}]
     # Set the baseurl
     config.baseURL = {$themes.configuration.baseurl}
@@ -23,6 +19,9 @@ config.compressCss = 1
 config.compressJs = 1
 config.concatenateCss = 1
 config.concatenateJs = 1
+
+config.moveJsFromHeaderToFooter = 1
+config.inlineStyle2TempFile = 0
 
 # In case of using development mode, disable compression and concatenation
 [globalVar = LIT:1 = {$themes.configuration.isDevelopment}]
