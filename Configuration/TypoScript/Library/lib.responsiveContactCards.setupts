@@ -57,7 +57,7 @@ page.cssInline {
                     file {
                         import.data = file:current:uid
                         treatIdAsReference = 1
-                        width = 212
+                        maxW = 212
                     }
                 }
 
@@ -70,31 +70,31 @@ page.cssInline {
             20 = TEXT
             20.cObject < .10
             20 {
-                cObject.cObject.file.width = 256
+                cObject.cObject.file.maxW = 256
                 noTrimWrap = | @media (max-width: 767px) { | } |
             }
             30 = TEXT
             30.cObject < .10
             30 {
-                cObject.cObject.file.width = 384
+                cObject.cObject.file.maxW = 384
                 noTrimWrap = | @media (min-width: 992px) { | } |
             }
             60 = TEXT
             60.cObject < .10
             60 {
-                cObject.cObject.file.width = 414
+                cObject.cObject.file.maxW = 414
                 noTrimWrap = | @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) { | } |
             }
             70 = TEXT
             70.cObject < .10
             70 {
-                cObject.cObject.file.width = 512
+                cObject.cObject.file.maxW = 512
                 noTrimWrap = | @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) { | } |
             }
             80 = TEXT
             80.cObject < .10
             80 {
-                cObject.cObject.file.width = 768
+                cObject.cObject.file.maxW = 768
                 noTrimWrap = | @media (min-width: 992px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 992px) and (min-resolution: 2dppx) { | } |
             }
         }
