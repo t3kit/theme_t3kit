@@ -70,7 +70,7 @@ page.cssInline {
             20 = TEXT
             20.cObject < .10
             20 {
-                cObject.cObject.file.maxW = 992px
+                cObject.cObject.file.maxW = 992
                 noTrimWrap = | @media (min-width: 768px) { | } |
             }
 
