@@ -230,7 +230,7 @@
 													<numIndex index="1">col-md-12</numIndex>
 												</numIndex>
 											</items>
-											<default></default>
+											<default>col-md-12</default>
 									</config>
 							</TCEforms>
 					</column_1_md>
