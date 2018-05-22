@@ -17,30 +17,25 @@
 
 # Extensions:
 # News
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts">
-[global]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts" condition="[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]">
 
+# Solr
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('solr')]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts">
     # Solr indexer
     # Put index queue modifications here, wont work with INCLUDE_TYPOSCRIPT from scheduler task indexer
     plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = {$themes.configuration.features.newsDefaultDetailPid}
 [global]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts" condition="[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('solr')]">
 
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('cs_seo')]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/setup.ts">
-[global]
+# cs_seo
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/setup.ts" condition="[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('cs_seo')]">
 
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rx_shariff')]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome/setup.txt">
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/Library/plugin.rx_shariff.setupts">
-[global]
+# rx_shariff
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome/setup.txt" condition="[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rx_shariff')]">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/Library/plugin.rx_shariff.setupts" condition="[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('rx_shariff')]">
 
 # Frontend editing
-[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('frontend_editing')]
-    <INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/FrontendEditing/TypoScript/setup.ts">
-[global]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/FrontendEditing/TypoScript/setup.ts" condition="[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('frontend_editing')]">
 
 # Include setupTS files from fileadmin/Configuration/TypoScript
 <INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/" extensions="setupts">

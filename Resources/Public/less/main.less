@@ -2000,6 +2000,33 @@
 }
 
 
+// =====================================================================
+// Add link arrow with circle on pseudo elements before or after =======
+// =====================================================================
+.link-arrow--circle(@color: @main-link-color; @position: left) {
+  &:before,
+  &:after {
+    color: @color;
+    display: inline-block;
+
+    .icons();
+  }
+
+  & when (@position = left) {
+    &:before {
+      content: "\e91a";
+      margin-right: 3px;
+    }
+  }
+
+  & when (@position = right) {
+    &:after {
+      content: "\e91c";
+      margin-left: 3px;
+    }
+  }
+}
+
 // Custom Variables
 // Custom media queries breakpoints
 @screen-xs--custom: 520px;
@@ -4076,22 +4103,60 @@
 
 .news-single {
     .page-navigation {
-        margin-top: 0;
+        margin-bottom: 25px;
 
-        .next,
-        .previous {
-            > a:after {
-                .icons();
+        // clearfix for .page-navigation
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
 
-                content: "\e91c";
+        &__prev,
+        &__next {
+            width: 50%;
+            float: left;
+            position: relative;
+
+            &:before,
+            &:after {
+                position: absolute;
                 top: 2px;
-                position: relative;
             }
         }
-    }
 
-    .pagination {
-        margin-top: 0;
+        &__next {
+            text-align: right;
+            padding: 0 25px 0 15px;
+
+            .link-arrow--circle(@position: right);
+
+            &:after {
+                right: 0;
+            }
+        }
+
+        &__prev {
+            padding: 0 15px 0 25px;
+
+            .link-arrow--circle();
+
+            &:before {
+                left: 0;
+            }
+        }
+
+        // Set max-height to crop words with dotdotdot.js after two lines
+        &__link-wrp {
+            max-height: 45px;
+        }
+
+        &__date {
+            display: block;
+            font-size: @font-size-small;
+            margin-top: 5px;
+        }
     }
 
     .news-article-footer {
@@ -4107,13 +4172,7 @@
     float: left;
     margin-bottom: 20px;
 
-    > a:before {
-        .icons();
-
-        content: "\e91a";
-        top: 2px;
-        position: relative;
-    }
+    .link-arrow--circle();
 }
 
 @media (max-width: 580px) {
@@ -4131,7 +4190,7 @@
 }
 
 .news-single .teaser-text {
-    font-size: 15px;
+    font-size: 20px;
     color: #888;
 }
 
@@ -4152,6 +4211,7 @@
 .news-related ul {
     list-style: none;
     padding-left: 0;
+    display: inline-block;
 }
 
 .news-related ul li a {
@@ -4374,10 +4434,12 @@
     background: #ddd;
     padding: 4px 10px;
 }
+
 // news small fixes
 .news-single .facebook > .twitter {
     padding-top: 6px;
 }
+
 // fix social links on news-single page
 .news-single .article > .facebook {
     overflow: hidden;
@@ -5152,31 +5214,38 @@ div.awesomplete li[aria-selected="true"] mark {
     font-size: 13px;
 }
 
-.ce-below .ce-gallery[data-ce-columns='2'] .ce-column, .ce-above .ce-gallery[data-ce-columns='2'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='2'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='2'] .ce-column {
     width: calc(~"50% - 10px");
 }
 
-.ce-below .ce-gallery[data-ce-columns='3'] .ce-column, .ce-above .ce-gallery[data-ce-columns='3'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='3'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='3'] .ce-column {
     width: calc(~"100% / 3 - 10px");
 }
 
-.ce-below .ce-gallery[data-ce-columns='4'] .ce-column, .ce-above .ce-gallery[data-ce-columns='4'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='4'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='4'] .ce-column {
     width: calc(~"100% / 4 - 10px");
 }
 
-.ce-below .ce-gallery[data-ce-columns='5'] .ce-column, .ce-above .ce-gallery[data-ce-columns='5'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='5'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='5'] .ce-column {
     width: calc(~"100% / 5 - 10px");
 }
 
-.ce-below .ce-gallery[data-ce-columns='6'] .ce-column, .ce-above .ce-gallery[data-ce-columns='6'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='6'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='6'] .ce-column {
     width: calc(~"100% / 6 - 10px");
 }
 
-.ce-below .ce-gallery[data-ce-columns='7'] .ce-column, .ce-above .ce-gallery[data-ce-columns='7'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='7'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='7'] .ce-column {
     width: calc(~"100% / 7 - 10px");
 }
 
-.ce-below .ce-gallery[data-ce-columns='8'] .ce-column, .ce-above .ce-gallery[data-ce-columns='8'] .ce-column {
+.ce-below .ce-gallery[data-ce-columns='8'] .ce-column,
+.ce-above .ce-gallery[data-ce-columns='8'] .ce-column {
     width: calc(~"100% / 8 - 10px");
 }
 

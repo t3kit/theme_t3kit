@@ -997,6 +997,17 @@ objectFitImages()
       })
     })
   })
+
+  // Apply dotdotdot.js jquery function on elements with ".js__dotdotdot" class.
+  var $dotdotdot = $('.js__dotdotdot')
+
+  if ($dotdotdot.length) {
+    $dotdotdot.each(function () {
+      $(this).dotdotdot({
+        watch: 'window'
+      })
+    })
+  }
 })(jQuery)
 
 // ^^^^^^^^^^ general.js ^^^^^^^^^^^

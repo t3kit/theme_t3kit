@@ -75,3 +75,30 @@
     -ms-transform: @string;
     -o-transform: @string;
 }
+
+// =====================================================================
+// Add link arrow with circle on pseudo elements before or after =======
+// =====================================================================
+.link-arrow--circle(@color: @main-link-color; @position: left) {
+  &:before,
+  &:after {
+    color: @color;
+    display: inline-block;
+
+    .icons();
+  }
+
+  & when (@position = left) {
+    &:before {
+      content: "\e91a";
+      margin-right: 3px;
+    }
+  }
+
+  & when (@position = right) {
+    &:after {
+      content: "\e91c";
+      margin-left: 3px;
+    }
+  }
+}
