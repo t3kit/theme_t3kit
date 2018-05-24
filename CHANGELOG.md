@@ -1,4 +1,23 @@
 
+#### v2.7.0 `May 24, 2018`
+- **[BUGFIX]** make conditions work within INCLUDE_TYPOSCRIPT by escape backslashes (#415) ([b3e7ee6](https://github.com/t3kit/theme_t3kit/commit/b3e7ee6))
+- **[BUGFIX]** fix fluid parse error in News detail template ([52e08c1](https://github.com/t3kit/theme_t3kit/commit/52e08c1))
+- **[TASK]** update dependencies (gridelements, TYPO3, cookie-bar) ([1f5392e](https://github.com/t3kit/theme_t3kit/commit/1f5392e))
+- **[TASK]** use georgringer/news instead of typo3-ter/news package ([71dfe30](https://github.com/t3kit/theme_t3kit/commit/71dfe30))
+- **[BUGFIX]** never upscaling smaller background images in bg image and contact cards elem. (#412) ([0864a20](https://github.com/t3kit/theme_t3kit/commit/0864a20))
+- **[TASK]** added default column-value in 'Advanced one column grid' (col-md-12). (#414) ([db9b569](https://github.com/t3kit/theme_t3kit/commit/db9b569))
+- **[TASK]** update npm devDependencies ([4ad8020](https://github.com/t3kit/theme_t3kit/commit/4ad8020))
+- **[TASK]** update package-lock file (npm audit) ([8594842](https://github.com/t3kit/theme_t3kit/commit/8594842))
+- **[BUGFIX]** don't create inline-css for background unless value exists. (#413) ([b9a1fcb](https://github.com/t3kit/theme_t3kit/commit/b9a1fcb))
+- **[FEATURE]** make news detail page navigation display next and prev news item title & date (#390) ([c6c3b24](https://github.com/t3kit/theme_t3kit/commit/c6c3b24))
+- **[TASK]** typoscript include contitions (#410) ([086f56c](https://github.com/t3kit/theme_t3kit/commit/086f56c))
+- **[TASK]** update config for production mode (moveJsToFooter + inlineStyle) ([0376bda](https://github.com/t3kit/theme_t3kit/commit/0376bda))
+- **[BUGFIX]** News detail view, fix teaser text font size (#408) ([0cffeb7](https://github.com/t3kit/theme_t3kit/commit/0cffeb7))
+- **[BUGFIX]** news date menu, removed unneeded year from month name (#406) ([5930162](https://github.com/t3kit/theme_t3kit/commit/5930162))
+- **[TASK]** felogin: Frontend validation (#401) ([ae26f12](https://github.com/t3kit/theme_t3kit/commit/ae26f12))
+
+***
+
 #### v2.6.0 `March 16, 2018`
 - **[FEATURE]** added 'Lead' paragraph styling for CKEditor (#399) ([5684980](https://github.com/t3kit/theme_t3kit/commit/5684980))
 - **[BUGFIX]** fix main menu sub list not overlaying other menu items. (#395) ([8aa1704](https://github.com/t3kit/theme_t3kit/commit/8aa1704))
