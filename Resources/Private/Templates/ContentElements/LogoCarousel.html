@@ -21,13 +21,15 @@
 								</f:link.typolink>
 							</f:then>
 							<f:else>
-								<f:render section="renderLogo" arguments="{
+								<div class="logo-carousel__wrapper">
+									<f:render section="renderLogo" arguments="{
 										logoUid: logo.uid,
 										alt: logo.alternative,
 										title: logo.title,
 										maxWidth: '{f:if(condition: data.imagewidth, then: data.imagewidth, else: settings.defaultMaxWidth)}',
 										maxHeight: '{f:if(condition: data.imageheight, then: data.imageheight, else: settings.defaultMaxHeight)}'
 										}" />
+								</div>
 							</f:else>
 						</f:if>
 					</div>
