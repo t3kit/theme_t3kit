@@ -1982,6 +1982,23 @@
     }
 }
 
+/*
+  This mixin can be used to set the object-fit:
+  .object-fit(contain);
+*/
+.object-fit(@fit: fill) {
+    -o-object-fit: @fit;
+    object-fit: @fit;
+    font-family: 'object-fit: @{fit}';
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+}
+
 // =====================================================================
 // Add link arrow with circle on pseudo elements before or after =======
 // =====================================================================
@@ -4447,19 +4464,22 @@
 
 .news-carousel__wrapper {
     padding-bottom: 40px;
+    padding-left: 0;
+    list-style-type: none;
 }
 
 .news-carousel__media-preview {
-    min-height: 180px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     margin-bottom: 20px;
+
+    img {
+        min-height: 180px;
+    }
 }
 
 .news-carousel__img-wrap {
     position: relative;
 }
+
 //header
 .news-carousel__slide .news-article-header h3 {
     font-size: 18px;
@@ -4518,6 +4538,7 @@
 .news-carousel__btn-next,
 .news-carousel__btn-prev {
     display: none;
+    border: none;
 }
 
 @media (min-width: @screen-md-min) {
@@ -4529,8 +4550,10 @@
 
         color: @main-color;
         -moz-osx-font-smoothing: grayscale;
-        height: auto;
+        height: 100%;
+        top: 0;
         font-size: 30px;
+        padding: 0;
     }
 }
 
@@ -4589,7 +4612,8 @@
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.news-carousel__img-wrap a:hover:after {
+.news-carousel__img-wrap a:hover:after,
+.news-carousel__img-wrap a:focus:after {
     opacity: 0.7;
     visibility: visible;
 }
@@ -4630,10 +4654,6 @@
 }
 
 .news-cards__media-preview {
-    height: 180px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     margin-bottom: 20px;
 }
 
@@ -4672,51 +4692,26 @@
     }
 }
 
-.news-simple-list__img-wrap {
-    margin-right: 20px;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-
-    &:after {
-        content: '';
-        display: block;
-        margin-bottom: 69.2%;
-    }
+.news-simple-list__item {
+    background-color: #f2f2f2;
+    margin-bottom: 30px;
 }
 
-.news-simple-list__img-wrap a {
-    position: absolute;
+.news-simple-list__img-wrap {
+    margin-right: 20px;
     width: 100%;
-    height: 100%;
 }
 
 .news-simple-list__media-preview {
     width: 100%;
     height: 100%;
-    position: absolute;
 }
 
 .news-simple-list__text {
     overflow: hidden;
     position: relative;
-    padding: 15px 15px 0;
+    padding: 15px;
     height: auto;
-}
-
-.news-simple-list__item {
-    background-color: darken(@main-body-bg, 5%);
-    margin-bottom: 30px;
-}
-
-.news-simple-list__media-preview {
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
-.news-simple-list__more-link {
-    padding: 0 15px 15px;
 }
 
 .news-simple-list__header h3 {
@@ -4727,25 +4722,18 @@
     .news-simple-list__img-wrap {
         float: left;
         width: 290px;
+        height: 200px;
     }
 
     .news-simple-list__text {
-        height: 168px;
+        height: 200px;
         padding-left: 0;
         padding-top: 20px;
         padding-right: 30px;
     }
-
-    .news-simple-list__more-link {
-        padding: 0;
-    }
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    .news-simple-list__more-link {
-        padding-top: 4px;
-    }
-
     .news-simple-list__header h3 {
         font-size: 19px;
     }
@@ -4858,9 +4846,7 @@
 
 .news-timeline__media-preview {
     height: 250px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .news-timeline__item-text {
@@ -9004,5 +8990,22 @@ h2 {
 
 .btn-bordered--inverted {
     .btn-style--t3kit(@btn-default-color, transparent, @btn-default-color);
+}
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+// ============================
+// ======== Object fit styles  ====
+// ============================
+.object-fit {
+    .object-fit(cover);
+    .transform(none);
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 

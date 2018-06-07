@@ -59,6 +59,23 @@
     }
 }
 
+/*
+  This mixin can be used to set the object-fit:
+  .object-fit(contain);
+*/
+.object-fit(@fit: fill) {
+    -o-object-fit: @fit;
+    object-fit: @fit;
+    font-family: 'object-fit: @{fit}';
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+}
+
 // =====================================================================
 // Add link arrow with circle on pseudo elements before or after =======
 // =====================================================================

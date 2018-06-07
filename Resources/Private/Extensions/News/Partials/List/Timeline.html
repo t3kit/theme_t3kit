@@ -60,13 +60,17 @@
 								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 									<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 										<f:if condition="{mediaElement.originalResource.type} == 2">
-												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											<div class="news-timeline__media-preview">
+												<f:media file="{mediaElement}" class="object-fit"/>
+											</div>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 4">
 											<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 5">
-												<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											<div class="news-timeline__media-preview">
+												<f:media file="{mediaElement}" class="object-fit"/>
+											</div>
 										</f:if>
 									</f:alias>
 								</n:link>
@@ -77,7 +81,9 @@
 								<div class="news-timeline__img-wrap">
 									<div class="no-media-element">
 										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-											<div class="news-timeline__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+											<div class="news-timeline__media-preview">
+												<f:image src="{settings.list.media.dummyImage}" class="img-responsive object-fit" title="" alt="" />
+											</div>
 										</n:link>
 									</div>
 								</div>
