@@ -22,6 +22,7 @@
           imgSrc: $(this).css('background-image').trim().slice(5, -2),
           noIos: true
         })
+        $(this).css('z-index', 'unset')
       })
       $('.parallax-video').jarallax({
         type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
