@@ -4710,8 +4710,12 @@
 .news-simple-list__text {
     overflow: hidden;
     position: relative;
-    padding: 15px;
+    padding: 15px 15px 0;
     height: auto;
+}
+
+.news-simple-list__more-link {
+    padding: 0 15px 15px;
 }
 
 .news-simple-list__header h3 {
@@ -4726,10 +4730,14 @@
     }
 
     .news-simple-list__text {
-        height: 200px;
+        height: 168px;
         padding-left: 0;
         padding-top: 20px;
         padding-right: 30px;
+    }
+
+    .news-simple-list__more-link {
+        padding: 0;
     }
 }
 
@@ -6954,6 +6962,7 @@ div.awesomplete li[aria-selected="true"] mark {
     padding: 10px 30px;
 }
 
+.logo-carousel__img-wrp,
 .logo-carousel__link {
     height: 100%;
 
