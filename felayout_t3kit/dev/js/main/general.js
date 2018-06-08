@@ -1,5 +1,6 @@
 // ########## general.js ###########
 /* global jQuery */
+/* global objectFitImages */
 
 ;(function ($) {
   'use strict'
@@ -29,6 +30,9 @@
       })
     })
   }
+
+  // call object-fit-images plugin
+  objectFitImages()
 })(jQuery)
 
 // ^^^^^^^^^^ general.js ^^^^^^^^^^^

@@ -17,6 +17,4 @@
 
 @import 'main/suggest.js';
 
-@import 'main/ofi.js';
-
 @import 'main/general.js';
