@@ -7,7 +7,7 @@ page.headerData.185.value (
     <link rel="apple-touch-icon" sizes="180x180" href="{$themes.configuration.favicons.path}/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="{$themes.configuration.favicons.path}/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="{$themes.configuration.favicons.path}/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="{$themes.configuration.favicons.path}/manifest.json">
+    <link rel="manifest" href="{$themes.configuration.favicons.path}/site.webmanifest">
     <link rel="mask-icon" href="{$themes.configuration.favicons.path}/safari-pinned-tab.svg" color="{$themes.configuration.favicons.maskIconColor}">
     <link rel="shortcut icon" href="{$themes.configuration.favicons.path}/favicon.ico">
     <meta name="msapplication-config" content="{$themes.configuration.favicons.path}/browserconfig.xml">
