@@ -18,7 +18,7 @@
           type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
           speed: 0.5,
           disableParallax: /iPad|iPhone|iPod/, // disable Ios
-          imgSrc: $(this).css('background-image').trim().slice(5, -2)
+          imgSrc: $(this).css('background-image').match(/\(([^)]+)\)/)[1].replace(/"/g, '')
         })
       })
       $('.parallax-video').jarallax({
