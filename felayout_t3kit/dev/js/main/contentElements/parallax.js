@@ -11,20 +11,20 @@
       $('.parallax-img').jarallax({
         type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
         speed: 0.5,
-        disableParallax: /iPad|iPhone|iPod/ // disable Ios
+        disableParallax: /iPad|iPhone|iPod|Edge/ // disable Ios and Microsoft Edge
       })
       $('.parallax-resimg').each(function () {
         $(this).jarallax({
           type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
           speed: 0.5,
-          disableParallax: /iPad|iPhone|iPod/, // disable Ios
+          disableParallax: /iPad|iPhone|iPod|Edge/, // disable Ios and Microsoft Edge
           imgSrc: $(this).css('background-image').match(/\(([^)]+)\)/)[1].replace(/"/g, '')
         })
       })
       $('.parallax-video').jarallax({
         type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
         speed: 0.5,
-        disableParallax: /iPad|iPhone|iPod|Android/ // disable Ios and Android
+        disableParallax: /iPad|iPhone|iPod|Android|Edge/ // disable Ios, Android and Microsoft Edge
       })
     }
   })
