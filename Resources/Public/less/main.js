@@ -287,8 +287,6 @@ jQuery(function ($) {
         disableParallax: /iPad|iPhone|iPod|Edge/ // disable Ios and Microsoft Edge
       })
       $('.parallax-resimg').each(function () {
-        console.log($(this).css('background-image'))
-        console.log($(this).css('background-image').match(/\(([^)]+)\)/)[1].replace(/"/g, ''))
         $(this).jarallax({
           type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
           speed: 0.5,
@@ -297,7 +295,6 @@ jQuery(function ($) {
         })
       })
       $('.parallax-video').each(function () {
-        console.log($(this).attr('data-video-url'))
         $(this).jarallax({
           type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
           speed: 0.5,
