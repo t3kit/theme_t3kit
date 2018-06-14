@@ -20,11 +20,11 @@ tt_content {
         }
         settings {
             defaultWidth = 1920c
-            # appearance {
-            # # Extend appearance for each slide for this element
-            #   10 = example-class
-            #   20 = example-class
-            # }
+            appearance {
+            # Extend appearance for each slide for this element
+               10 = _light-transparent-bg
+               20 = _dark-transparent-bg
+            }
         }
     }
 }
