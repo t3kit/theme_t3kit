@@ -16,13 +16,13 @@
 								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 									<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 										<f:if condition="{mediaElement.originalResource.type} == 2">
-											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1, maxWidth: 767)}');"></div>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 4">
 											<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 5">
-											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1)}');"></div>
+											<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: mediaElement.uid, treatIdAsReference: 1, maxWidth: 767)}');"></div>
 										</f:if>
 									</f:alias>
 								</n:link>
@@ -48,7 +48,7 @@
 								<div class="news-carousel__img-wrap">
 									<div class="no-media-element">
 										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-										<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1)}');"></div>
+										<div class="news-carousel__media-preview"  style="background-image:url('{f:uri.image(src: settings.list.media.dummyImage, treatIdAsReference: 1, maxWidth: 767)}');"></div>
 										</n:link>
 									</div>
 
