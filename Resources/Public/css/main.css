@@ -4085,6 +4085,12 @@ div.awesomplete li[aria-selected="true"] mark {
   max-width: 1920px;
   margin: 0 auto;
 }
+.parallax:before,
+.parallax:after {
+  content: "";
+  display: table;
+  height: 0;
+}
 @media (min-width: 480px) {
   .no-touch.nonIE .parallax-video {
     background-image: none !important;
