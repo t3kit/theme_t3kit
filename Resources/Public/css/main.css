@@ -2735,14 +2735,20 @@ div.awesomplete li[aria-selected="true"] mark {
   padding: 0 15px;
   margin: 0 -15px;
 }
+.icon-text-btn__header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
 .icon-text-btn__icon {
   padding: 10px;
   border: 2px solid #cbe9f3;
   border-radius: 50%;
   color: #50b4d8;
-  margin-right: 10px;
   margin-bottom: 4px;
   display: inline-block;
+  margin-right: 15px;
 }
 .icon-right .icon-text-btn__icon {
   float: right;
