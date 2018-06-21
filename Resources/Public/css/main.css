@@ -5111,6 +5111,10 @@ div.awesomplete li[aria-selected="true"] mark {
   border: 1px solid #dfe7ea;
   border-width: 0 0 1px;
   font-size: 15px;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
 }
 @media (min-width: 1200px) {
   .sub-navigation__link {

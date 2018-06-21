@@ -8473,6 +8473,9 @@ div.awesomplete li[aria-selected="true"] mark {
     border: 1px solid shade(@sub-navigation-border, 5%);
     border-width: 0 0 1px;
     font-size: 15px;
+    hyphens: auto;
+    // ie11 and edge hyphens polyfill
+    word-wrap: break-word;
 }
 
 @media (min-width: @screen-lg-min) {
