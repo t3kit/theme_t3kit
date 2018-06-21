@@ -1,0 +1,52 @@
+lib.header.middle.socialmedia =< lib.contentElement
+lib.header.middle.socialmedia {
+    templateName = SocialIcons
+    settings {
+        ## To override links in middle header social media element
+        # facebookLink =
+        # twitterLink =
+        # linkedInLink =
+        # xingLink =
+        # vimeoLink =
+        # googlePlusLink =
+        # pinterestLink =
+        # instagramLink =
+        # youtubeLink =
+        # mynewsdeskLink =
+    }
+    variables {
+        # set fluid variable "allowLinksFromConstants"
+        # to use as a condition in template if social links from constants are allowed
+        allowLinksFromConstants = TEXT
+        allowLinksFromConstants {
+            # default to "false"
+            value = 0
+            stdWrap {
+                # override to "true" for default language
+                override = 1
+                override {
+                    if {
+                        value = 0
+                        equals.data = TSFE:sys_language_uid
+                    }
+                }
+                stdWrap {
+                    # override to "true" for non default languages AND allowFallback is "true"
+                    override = 1
+                    override {
+                        if {
+                            value = 0
+                            isGreaterThan.data = TSFE:sys_language_uid
+                            isTrue.cObject = TEXT
+                            isTrue.cObject {
+                                value = 1
+                                if.value = 1
+                                if.equals = {$themes.configuration.socialmedia.allowFallback}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

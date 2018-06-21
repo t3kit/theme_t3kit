@@ -63,7 +63,7 @@
 
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSocIcons')}">
 					<div class="header-middle__social-icon">
-						<f:render partial="ContentElements/Socialmedia" section="Default" />
+						<f:cObject typoscriptObjectPath="lib.header.middle.socialmedia" />
 					</div>
 				</f:if>
 				<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderMiddleSearch')}">
