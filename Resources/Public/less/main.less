@@ -7110,6 +7110,13 @@ div.awesomplete li[aria-selected="true"] mark {
     background-position: 50% 50%;
     max-width: 1920px;
     margin: 0 auto;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        height: 0;
+    }
 }
 
 @media (min-width: @screen-xs-min) {
