@@ -11,7 +11,7 @@
 			Don't want classes btn btn-default when link is on "whole area"
 		-->
 	</f:comment>
-	<f:variable name="anchorClass">{f:if(condition: '{settings.disableWholeAreaLink} != 1 && {settings.btnAsLink} != 1' , then: '', else: ' btn btn-default')}</f:variable>
+	<f:variable name="anchorClass">{f:if(condition: '{settings.disableWholeAreaLink} == 1 && {settings.btnAsLink} != 1' , then: ' btn btn-default', else: '')}</f:variable>
 
 	<div class="icon-text-btn__wrp">
 		<div class="icon-text-btn{f:if(condition: settings.disableWholeAreaLink, then: '', else: ' _whole-area-link')}">
