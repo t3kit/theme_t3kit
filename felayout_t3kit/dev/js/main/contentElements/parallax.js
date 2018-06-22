@@ -9,25 +9,25 @@
     // https://github.com/nk-o/jarallax
     if (!$('html').hasClass('IE')) { // disabled in IE since scrolling looks jerky
       $('.parallax-img').jarallax({
-        type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
+        type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
         speed: 0.5,
-        noAndroid: false,
-        noIos: true
+        disableParallax: /iPad|iPhone|iPod|Edge/ // disable Ios and Microsoft Edge
       })
       $('.parallax-resimg').each(function () {
         $(this).jarallax({
-          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
+          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
           speed: 0.5,
-          noAndroid: false,
-          imgSrc: $(this).css('background-image').trim().slice(5, -2),
-          noIos: true
+          disableParallax: /iPad|iPhone|iPod|Edge/, // disable Ios and Microsoft Edge
+          imgSrc: $(this).css('background-image').match(/\(([^)]+)\)/)[1].replace(/"/g, '')
         })
       })
-      $('.parallax-video').jarallax({
-        type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
-        speed: 0.5,
-        noAndroid: true,
-        noIos: true
+      $('.parallax-video').each(function () {
+        $(this).jarallax({
+          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
+          speed: 0.5,
+          disableParallax: /iPad|iPhone|iPod|Android/, // disable Ios and Android
+          videoSrc: $(this).attr('data-video-url')
+        })
       })
     }
   })

@@ -6435,16 +6435,246 @@ $.fn.simpleLightbox = function( options )
 //==============================================================================
 /*!
  * Name    : Just Another Parallax [Jarallax]
- * Version : 1.9.3
+ * Version : 1.10.3
  * Author  : nK <https://nkdev.info>
  * GitHub  : https://github.com/nk-o/jarallax
  */
-;(function() {
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof global !== "undefined") {
+    win = global;
+} else if (typeof self !== "undefined") {
+    win = self;
+} else {
+    win = {};
+}
+
+module.exports = win;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (callback) {
+
+	if (document.readyState === 'complete' || document.readyState === 'interactive') {
+		// Already ready or interactive, execute callback
+		callback.call();
+	} else if (document.attachEvent) {
+		// Old browsers
+		document.attachEvent('onreadystatechange', function () {
+			if (document.readyState === 'interactive') callback.call();
+		});
+	} else if (document.addEventListener) {
+		// Modern browsers
+		document.addEventListener('DOMContentLoaded', callback);
+	}
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var g;
+
+// This works in non-strict mode
+g = function () {
+	return this;
+}();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(12);
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _liteReady = __webpack_require__(1);
+
+var _liteReady2 = _interopRequireDefault(_liteReady);
+
+var _global = __webpack_require__(0);
+
+var _jarallax = __webpack_require__(13);
+
+var _jarallax2 = _interopRequireDefault(_jarallax);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// no conflict
+var oldPlugin = _global.window.jarallax;
+_global.window.jarallax = _jarallax2.default;
+_global.window.jarallax.noConflict = function () {
+    _global.window.jarallax = oldPlugin;
+    return this;
+};
+
+// jQuery support
+if (typeof _global.jQuery !== 'undefined') {
+    var jQueryPlugin = function jQueryPlugin() {
+        var args = arguments || [];
+        Array.prototype.unshift.call(args, this);
+        var res = _jarallax2.default.apply(_global.window, args);
+        return (typeof res === 'undefined' ? 'undefined' : _typeof(res)) !== 'object' ? res : this;
+    };
+    jQueryPlugin.constructor = _jarallax2.default.constructor;
+
+    // no conflict
+    var oldJqPlugin = _global.jQuery.fn.jarallax;
+    _global.jQuery.fn.jarallax = jQueryPlugin;
+    _global.jQuery.fn.jarallax.noConflict = function () {
+        _global.jQuery.fn.jarallax = oldJqPlugin;
+        return this;
+    };
+}
+
+// data-jarallax initialization
+(0, _liteReady2.default)(function () {
+    (0, _jarallax2.default)(document.querySelectorAll('[data-jarallax]'));
+});
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _liteReady = __webpack_require__(1);
+
+var _liteReady2 = _interopRequireDefault(_liteReady);
+
+var _rafl = __webpack_require__(14);
+
+var _rafl2 = _interopRequireDefault(_rafl);
+
+var _global = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -6458,37 +6688,29 @@ var supportTransform = function () {
     }
     return false;
 }();
-var ua = navigator.userAgent;
-var isAndroid = ua.toLowerCase().indexOf('android') > -1;
-var isIOs = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-
-// requestAnimationFrame polyfill
-var rAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
-    setTimeout(callback, 1000 / 60);
-};
-
-// init events
-function addEventListener(el, eventName, handler) {
-    el.addEventListener(eventName, handler);
-}
 
 // Window data
 var wndW = void 0;
 var wndH = void 0;
 var wndY = void 0;
 var forceResizeParallax = false;
+var forceScrollParallax = false;
 function updateWndVars(e) {
-    wndW = window.innerWidth || document.documentElement.clientWidth;
-    wndH = window.innerHeight || document.documentElement.clientHeight;
-    if ((typeof e === 'undefined' ? 'undefined' : _typeof(e)) === 'object' && (e.type === 'load' || e.type === 'DOMContentLoaded')) {
+    wndW = _global.window.innerWidth || document.documentElement.clientWidth;
+    wndH = _global.window.innerHeight || document.documentElement.clientHeight;
+    if ((typeof e === 'undefined' ? 'undefined' : _typeof(e)) === 'object' && (e.type === 'load' || e.type === 'dom-loaded')) {
         forceResizeParallax = true;
     }
 }
 updateWndVars();
-addEventListener(window, 'resize', updateWndVars);
-addEventListener(window, 'orientationchange', updateWndVars);
-addEventListener(window, 'load', updateWndVars);
-addEventListener(window, 'DOMContentLoaded', updateWndVars);
+_global.window.addEventListener('resize', updateWndVars);
+_global.window.addEventListener('orientationchange', updateWndVars);
+_global.window.addEventListener('load', updateWndVars);
+(0, _liteReady2.default)(function () {
+    updateWndVars({
+        type: 'dom-loaded'
+    });
+});
 
 // list with all jarallax instances
 // need to render all in one scroll/resize event
@@ -6501,16 +6723,17 @@ function updateParallax() {
         return;
     }
 
-    if (window.pageYOffset !== undefined) {
-        wndY = window.pageYOffset;
+    if (_global.window.pageYOffset !== undefined) {
+        wndY = _global.window.pageYOffset;
     } else {
         wndY = (document.documentElement || document.body.parentNode || document.body).scrollTop;
     }
 
     var isResized = forceResizeParallax || !oldPageData || oldPageData.width !== wndW || oldPageData.height !== wndH;
-    var isScrolled = isResized || !oldPageData || oldPageData.y !== wndY;
+    var isScrolled = forceScrollParallax || isResized || !oldPageData || oldPageData.y !== wndY;
 
     forceResizeParallax = false;
+    forceScrollParallax = false;
 
     if (isResized || isScrolled) {
         jarallaxList.forEach(function (item) {
@@ -6529,8 +6752,24 @@ function updateParallax() {
         };
     }
 
-    rAF(updateParallax);
+    (0, _rafl2.default)(updateParallax);
 }
+
+// ResizeObserver
+var resizeObserver = global.ResizeObserver ? new global.ResizeObserver(function (entry) {
+    if (entry && entry.length) {
+        (0, _rafl2.default)(function () {
+            entry.forEach(function (item) {
+                if (item.target && item.target.jarallax) {
+                    if (!forceResizeParallax) {
+                        item.target.jarallax.onResize();
+                    }
+                    forceScrollParallax = true;
+                }
+            });
+        });
+    }
+}) : false;
 
 var instanceID = 0;
 
@@ -6557,8 +6796,9 @@ var Jarallax = function () {
             keepImg: false, // keep <img> tag in it's default place
             elementInViewport: null,
             zIndex: -100,
-            noAndroid: false,
-            noIos: false,
+            disableParallax: false,
+            disableVideo: false,
+            automaticResize: true, // use ResizeObserver to recalculate position and size of parallax image
 
             // video
             videoSrc: null,
@@ -6578,6 +6818,7 @@ var Jarallax = function () {
         var deprecatedDataAttribute = self.$item.getAttribute('data-jarallax');
         var oldDataOptions = JSON.parse(deprecatedDataAttribute || '{}');
         if (deprecatedDataAttribute) {
+            // eslint-disable-next-line no-console
             console.warn('Detected usage of deprecated data-jarallax JSON options, you should use pure data-attribute options. See info here - https://github.com/nk-o/jarallax/issues/53');
         }
 
@@ -6606,11 +6847,64 @@ var Jarallax = function () {
         // fix speed option [-1.0, 2.0]
         self.options.speed = Math.min(2, Math.max(-1, parseFloat(self.options.speed)));
 
+        // deprecated noAndroid and noIos options
+        if (self.options.noAndroid || self.options.noIos) {
+            // eslint-disable-next-line no-console
+            console.warn('Detected usage of deprecated noAndroid or noIos options, you should use disableParallax option. See info here - https://github.com/nk-o/jarallax/#disable-on-mobile-devices');
+
+            // prepare fallback if disableParallax option is not used
+            if (!self.options.disableParallax) {
+                if (self.options.noIos && self.options.noAndroid) {
+                    self.options.disableParallax = /iPad|iPhone|iPod|Android/;
+                } else if (self.options.noIos) {
+                    self.options.disableParallax = /iPad|iPhone|iPod/;
+                } else if (self.options.noAndroid) {
+                    self.options.disableParallax = /Android/;
+                }
+            }
+        }
+
+        // prepare disableParallax callback
+        if (typeof self.options.disableParallax === 'string') {
+            self.options.disableParallax = new RegExp(self.options.disableParallax);
+        }
+        if (self.options.disableParallax instanceof RegExp) {
+            var disableParallaxRegexp = self.options.disableParallax;
+            self.options.disableParallax = function () {
+                return disableParallaxRegexp.test(navigator.userAgent);
+            };
+        }
+        if (typeof self.options.disableParallax !== 'function') {
+            self.options.disableParallax = function () {
+                return false;
+            };
+        }
+
+        // prepare disableVideo callback
+        if (typeof self.options.disableVideo === 'string') {
+            self.options.disableVideo = new RegExp(self.options.disableVideo);
+        }
+        if (self.options.disableVideo instanceof RegExp) {
+            var disableVideoRegexp = self.options.disableVideo;
+            self.options.disableVideo = function () {
+                return disableVideoRegexp.test(navigator.userAgent);
+            };
+        }
+        if (typeof self.options.disableVideo !== 'function') {
+            self.options.disableVideo = function () {
+                return false;
+            };
+        }
+
         // custom element to check if parallax in viewport
         var elementInVP = self.options.elementInViewport;
         // get first item from array
         if (elementInVP && (typeof elementInVP === 'undefined' ? 'undefined' : _typeof(elementInVP)) === 'object' && typeof elementInVP.length !== 'undefined') {
-            elementInVP = elementInVP[0];
+            var _elementInVP = elementInVP;
+
+            var _elementInVP2 = _slicedToArray(_elementInVP, 1);
+
+            elementInVP = _elementInVP2[0];
         }
         // check if dom element
         if (!(elementInVP instanceof Element)) {
@@ -6626,7 +6920,7 @@ var Jarallax = function () {
             // position fixed is needed for the most of browsers because absolute position have glitches
             // on MacOS with smooth scroll there is a huge lags with absolute position - https://github.com/nk-o/jarallax/issues/75
             // on mobile devices better scrolled with absolute position
-            position: isAndroid || isIOs ? 'absolute' : 'fixed'
+            position: /iPad|iPhone|iPod|Android/.test(navigator.userAgent) ? 'absolute' : 'fixed'
         };
 
         if (self.initImg() && self.canInitParallax()) {
@@ -6641,7 +6935,7 @@ var Jarallax = function () {
         key: 'css',
         value: function css(el, styles) {
             if (typeof styles === 'string') {
-                return window.getComputedStyle(el).getPropertyValue(styles);
+                return _global.window.getComputedStyle(el).getPropertyValue(styles);
             }
 
             // add transform property with vendor prefix
@@ -6727,7 +7021,7 @@ var Jarallax = function () {
     }, {
         key: 'canInitParallax',
         value: function canInitParallax() {
-            return supportTransform && !(isAndroid && this.options.noAndroid) && !(isIOs && this.options.noIos);
+            return supportTransform && !this.options.disableParallax();
         }
     }, {
         key: 'init',
@@ -6792,12 +7086,14 @@ var Jarallax = function () {
                 // use div with background image
             } else {
                 self.image.$item = document.createElement('div');
-                imageStyles = self.extend({
-                    'background-position': self.options.imgPosition,
-                    'background-size': self.options.imgSize,
-                    'background-repeat': self.options.imgRepeat,
-                    'background-image': 'url("' + self.image.src + '")'
-                }, containerStyles, imageStyles);
+                if (self.image.src) {
+                    imageStyles = self.extend({
+                        'background-position': self.options.imgPosition,
+                        'background-size': self.options.imgSize,
+                        'background-repeat': self.options.imgRepeat,
+                        'background-image': 'url("' + self.image.src + '")'
+                    }, containerStyles, imageStyles);
+                }
             }
 
             if (self.options.type === 'opacity' || self.options.type === 'scale' || self.options.type === 'scale-opacity' || self.options.speed === 1) {
@@ -6830,6 +7126,11 @@ var Jarallax = function () {
             self.coverImage();
             self.clipContainer();
             self.onScroll(true);
+
+            // ResizeObserver
+            if (self.options.automaticResize && resizeObserver) {
+                resizeObserver.observe(self.$item);
+            }
 
             // call onInit event
             if (self.options.onInit) {
@@ -6935,8 +7236,9 @@ var Jarallax = function () {
 
             var self = this;
             var rect = self.image.$container.getBoundingClientRect();
-            var width = rect.width;
-            var height = rect.height;
+            var width = rect.width,
+                height = rect.height;
+
 
             if (!self.$clipStyles) {
                 self.$clipStyles = document.createElement('style');
@@ -6963,6 +7265,7 @@ var Jarallax = function () {
             var rect = self.image.$container.getBoundingClientRect();
             var contH = rect.height;
             var speed = self.options.speed;
+
             var isScroll = self.options.type === 'scroll' || self.options.type === 'scroll-opacity';
             var scrollDist = 0;
             var resultH = contH;
@@ -7160,47 +7463,260 @@ var plugin = function plugin(items) {
 };
 plugin.constructor = Jarallax;
 
-// no conflict
-var oldPlugin = window.jarallax;
-window.jarallax = plugin;
-window.jarallax.noConflict = function () {
-    window.jarallax = oldPlugin;
-    return this;
-};
+exports.default = plugin;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-// jQuery support
-if (typeof jQuery !== 'undefined') {
-    var jQueryPlugin = function jQueryPlugin() {
-        var args = arguments || [];
-        Array.prototype.unshift.call(args, this);
-        var res = plugin.apply(window, args);
-        return (typeof res === 'undefined' ? 'undefined' : _typeof(res)) !== 'object' ? res : this;
-    };
-    jQueryPlugin.constructor = Jarallax;
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
 
-    // no conflict
-    var oldJqPlugin = jQuery.fn.jarallax;
-    jQuery.fn.jarallax = jQueryPlugin;
-    jQuery.fn.jarallax.noConflict = function () {
-        jQuery.fn.jarallax = oldJqPlugin;
-        return this;
-    };
+"use strict";
+
+
+var global = __webpack_require__(0);
+
+/**
+ * `requestAnimationFrame()`
+ */
+
+var request = global.requestAnimationFrame || global.webkitRequestAnimationFrame || global.mozRequestAnimationFrame || fallback;
+
+var prev = +new Date();
+function fallback(fn) {
+  var curr = +new Date();
+  var ms = Math.max(0, 16 - (curr - prev));
+  var req = setTimeout(fn, ms);
+  return prev = curr, req;
 }
 
-// data-jarallax initialization
-addEventListener(window, 'DOMContentLoaded', function () {
-    plugin(document.querySelectorAll('[data-jarallax]'));
-});
-}());
+/**
+ * `cancelAnimationFrame()`
+ */
 
+var cancel = global.cancelAnimationFrame || global.webkitCancelAnimationFrame || global.mozCancelAnimationFrame || clearTimeout;
+
+if (Function.prototype.bind) {
+  request = request.bind(global);
+  cancel = cancel.bind(global);
+}
+
+exports = module.exports = request;
+exports.cancel = cancel;
+
+/***/ })
+/******/ ]);
 /*!
- * Name    : Video Worker (wrapper for Youtube, Vimeo and Local videos)
- * Version : 1.9.3
+ * Name    : Video Background Extension for Jarallax
+ * Version : 1.0.1
  * Author  : nK <https://nkdev.info>
  * GitHub  : https://github.com/nk-o/jarallax
  */
-;(function() {
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof global !== "undefined") {
+    win = global;
+} else if (typeof self !== "undefined") {
+    win = self;
+} else {
+    win = {};
+}
+
+module.exports = win;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (callback) {
+
+	if (document.readyState === 'complete' || document.readyState === 'interactive') {
+		// Already ready or interactive, execute callback
+		callback.call();
+	} else if (document.attachEvent) {
+		// Old browsers
+		document.attachEvent('onreadystatechange', function () {
+			if (document.readyState === 'interactive') callback.call();
+		});
+	} else if (document.addEventListener) {
+		// Modern browsers
+		document.addEventListener('DOMContentLoaded', callback);
+	}
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var g;
+
+// This works in non-strict mode
+g = function () {
+	return this;
+}();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(9);
+
+/***/ }),
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _videoWorker = __webpack_require__(3);
+
+var _videoWorker2 = _interopRequireDefault(_videoWorker);
+
+var _global = __webpack_require__(0);
+
+var _global2 = _interopRequireDefault(_global);
+
+var _liteReady = __webpack_require__(1);
+
+var _liteReady2 = _interopRequireDefault(_liteReady);
+
+var _jarallaxVideo = __webpack_require__(10);
+
+var _jarallaxVideo2 = _interopRequireDefault(_jarallaxVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// add video worker globally to fallback jarallax < 1.10 versions
+_global2.default.VideoWorker = _global2.default.VideoWorker || _videoWorker2.default;
+
+(0, _jarallaxVideo2.default)();
+
+// data-jarallax-video initialization
+(0, _liteReady2.default)(function () {
+    if (typeof jarallax !== 'undefined') {
+        jarallax(document.querySelectorAll('[data-jarallax-video]'));
+    }
+});
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -7236,18 +7752,13 @@ Deferred.prototype = {
     }
 };
 
-// init events
-function addEventListener(el, eventName, handler) {
-    el.addEventListener(eventName, handler);
-}
-
 var ID = 0;
 var YoutubeAPIadded = 0;
 var VimeoAPIadded = 0;
 var loadingYoutubePlayer = 0;
 var loadingVimeoPlayer = 0;
-var loadingYoutubeDeffer = new Deferred();
-var loadingVimeoDeffer = new Deferred();
+var loadingYoutubeDefer = new Deferred();
+var loadingVimeoDefer = new Deferred();
 
 var VideoWorker = function () {
     function VideoWorker(url, options) {
@@ -7258,13 +7769,13 @@ var VideoWorker = function () {
         self.url = url;
 
         self.options_default = {
-            autoplay: 1,
-            loop: 1,
-            mute: 1,
-            volume: 0,
-            controls: 0,
+            autoplay: false,
+            loop: false,
+            mute: false,
+            volume: 100,
+            showContols: true,
 
-            // start / end video time in ms
+            // start / end video time in seconds
             startTime: 0,
             endTime: 0
         };
@@ -7330,6 +7841,7 @@ var VideoWorker = function () {
                     // eslint-disable-next-line no-useless-escape
                     var match = val.match(/^(mp4|webm|ogv|ogg)\:(.*)/);
                     if (match && match[1] && match[2]) {
+                        // eslint-disable-next-line prefer-destructuring
                         result[match[1] === 'ogv' ? 'ogg' : match[1]] = match[2];
                         ready = 1;
                     }
@@ -7470,6 +7982,114 @@ var VideoWorker = function () {
             }
         }
     }, {
+        key: 'mute',
+        value: function mute() {
+            var self = this;
+            if (!self.player) {
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.mute) {
+                self.player.mute();
+            }
+
+            if (self.type === 'vimeo' && self.player.setVolume) {
+                self.player.setVolume(0);
+            }
+
+            if (self.type === 'local') {
+                self.$video.muted = true;
+            }
+        }
+    }, {
+        key: 'unmute',
+        value: function unmute() {
+            var self = this;
+            if (!self.player) {
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.mute) {
+                self.player.unMute();
+            }
+
+            if (self.type === 'vimeo' && self.player.setVolume) {
+                self.player.setVolume(self.options.volume);
+            }
+
+            if (self.type === 'local') {
+                self.$video.muted = false;
+            }
+        }
+    }, {
+        key: 'setVolume',
+        value: function setVolume() {
+            var volume = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+            var self = this;
+            if (!self.player || !volume) {
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.setVolume) {
+                self.player.setVolume(volume);
+            }
+
+            if (self.type === 'vimeo' && self.player.setVolume) {
+                self.player.setVolume(volume);
+            }
+
+            if (self.type === 'local') {
+                self.$video.volume = volume / 100;
+            }
+        }
+    }, {
+        key: 'getVolume',
+        value: function getVolume(callback) {
+            var self = this;
+            if (!self.player) {
+                callback(false);
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.getVolume) {
+                callback(self.player.getVolume());
+            }
+
+            if (self.type === 'vimeo' && self.player.getVolume) {
+                self.player.getVolume().then(function (volume) {
+                    callback(volume);
+                });
+            }
+
+            if (self.type === 'local') {
+                callback(self.$video.volume * 100);
+            }
+        }
+    }, {
+        key: 'getMuted',
+        value: function getMuted(callback) {
+            var self = this;
+            if (!self.player) {
+                callback(null);
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.isMuted) {
+                callback(self.player.isMuted());
+            }
+
+            if (self.type === 'vimeo' && self.player.getVolume) {
+                self.player.getVolume().then(function (volume) {
+                    callback(!!volume);
+                });
+            }
+
+            if (self.type === 'local') {
+                callback(self.$video.muted);
+            }
+        }
+    }, {
         key: 'getImageURL',
         value: function getImageURL(callback) {
             var self = this;
@@ -7518,21 +8138,29 @@ var VideoWorker = function () {
                 request = null;
             }
         }
+
+        // fallback to the old version.
+
     }, {
         key: 'getIframe',
         value: function getIframe(callback) {
+            this.getVideo(callback);
+        }
+    }, {
+        key: 'getVideo',
+        value: function getVideo(callback) {
             var self = this;
 
-            // return generated iframe
-            if (self.$iframe) {
-                callback(self.$iframe);
+            // return generated video block
+            if (self.$video) {
+                callback(self.$video);
                 return;
             }
 
-            // generate new iframe
+            // generate new video block
             self.onAPIready(function () {
                 var hiddenDiv = void 0;
-                if (!self.$iframe) {
+                if (!self.$video) {
                     hiddenDiv = document.createElement('div');
                     hiddenDiv.style.display = 'none';
                 }
@@ -7550,7 +8178,7 @@ var VideoWorker = function () {
                     };
 
                     // hide controls
-                    if (!self.options.controls) {
+                    if (!self.options.showContols) {
                         self.playerOptions.playerVars.iv_load_policy = 3;
                         self.playerOptions.playerVars.modestbranding = 1;
                         self.playerOptions.playerVars.controls = 0;
@@ -7575,6 +8203,16 @@ var VideoWorker = function () {
                                 self.play(self.options.startTime);
                             }
                             self.fire('ready', e);
+
+                            // volumechange
+                            setInterval(function () {
+                                self.getVolume(function (volume) {
+                                    if (self.options.volume !== volume) {
+                                        self.options.volume = volume;
+                                        self.fire('volumechange', e);
+                                    }
+                                });
+                            }, 150);
                         },
                         onStateChange: function onStateChange(e) {
                             // loop
@@ -7592,29 +8230,30 @@ var VideoWorker = function () {
                                 self.fire('pause', e);
                             }
                             if (e.data === YT.PlayerState.ENDED) {
-                                self.fire('end', e);
+                                self.fire('ended', e);
                             }
 
-                            // check for end of video and play again or stop
-                            if (self.options.endTime) {
-                                if (e.data === YT.PlayerState.PLAYING) {
-                                    ytProgressInterval = setInterval(function () {
-                                        if (self.options.endTime && self.player.getCurrentTime() >= self.options.endTime) {
-                                            if (self.options.loop) {
-                                                self.play(self.options.startTime);
-                                            } else {
-                                                self.pause();
-                                            }
+                            // progress check
+                            if (e.data === YT.PlayerState.PLAYING) {
+                                ytProgressInterval = setInterval(function () {
+                                    self.fire('timeupdate', e);
+
+                                    // check for end of video and play again or stop
+                                    if (self.options.endTime && self.player.getCurrentTime() >= self.options.endTime) {
+                                        if (self.options.loop) {
+                                            self.play(self.options.startTime);
+                                        } else {
+                                            self.pause();
                                         }
-                                    }, 150);
-                                } else {
-                                    clearInterval(ytProgressInterval);
-                                }
+                                    }
+                                }, 150);
+                            } else {
+                                clearInterval(ytProgressInterval);
                             }
                         }
                     };
 
-                    var firstInit = !self.$iframe;
+                    var firstInit = !self.$video;
                     if (firstInit) {
                         var div = document.createElement('div');
                         div.setAttribute('id', self.playerID);
@@ -7623,11 +8262,11 @@ var VideoWorker = function () {
                     }
                     self.player = self.player || new window.YT.Player(self.playerID, self.playerOptions);
                     if (firstInit) {
-                        self.$iframe = document.getElementById(self.playerID);
+                        self.$video = document.getElementById(self.playerID);
 
                         // get video width and height
-                        self.videoWidth = parseInt(self.$iframe.getAttribute('width'), 10) || 1280;
-                        self.videoHeight = parseInt(self.$iframe.getAttribute('height'), 10) || 720;
+                        self.videoWidth = parseInt(self.$video.getAttribute('width'), 10) || 1280;
+                        self.videoHeight = parseInt(self.$video.getAttribute('height'), 10) || 720;
                     }
                 }
 
@@ -7640,7 +8279,7 @@ var VideoWorker = function () {
                     self.playerOptions += '&transparent=0';
 
                     // hide controls
-                    if (!self.options.controls) {
+                    if (!self.options.showContols) {
                         self.playerOptions += '&badge=0&byline=0&portrait=0&title=0';
                     }
 
@@ -7650,16 +8289,16 @@ var VideoWorker = function () {
                     // loop
                     self.playerOptions += '&loop=' + (self.options.loop ? 1 : 0);
 
-                    if (!self.$iframe) {
-                        self.$iframe = document.createElement('iframe');
-                        self.$iframe.setAttribute('id', self.playerID);
-                        self.$iframe.setAttribute('src', 'https://player.vimeo.com/video/' + self.videoID + '?' + self.playerOptions);
-                        self.$iframe.setAttribute('frameborder', '0');
-                        hiddenDiv.appendChild(self.$iframe);
+                    if (!self.$video) {
+                        self.$video = document.createElement('iframe');
+                        self.$video.setAttribute('id', self.playerID);
+                        self.$video.setAttribute('src', 'https://player.vimeo.com/video/' + self.videoID + '?' + self.playerOptions);
+                        self.$video.setAttribute('frameborder', '0');
+                        hiddenDiv.appendChild(self.$video);
                         document.body.appendChild(hiddenDiv);
                     }
 
-                    self.player = self.player || new Vimeo.Player(self.$iframe);
+                    self.player = self.player || new Vimeo.Player(self.$video);
 
                     // get video width and height
                     self.player.getVideoWidth().then(function (width) {
@@ -7685,8 +8324,10 @@ var VideoWorker = function () {
                     self.player.on('timeupdate', function (e) {
                         if (!vmStarted) {
                             self.fire('started', e);
+                            vmStarted = 1;
                         }
-                        vmStarted = 1;
+
+                        self.fire('timeupdate', e);
 
                         // check for end of video and play again or stop
                         if (self.options.endTime) {
@@ -7711,10 +8352,13 @@ var VideoWorker = function () {
                         self.fire('pause', e);
                     });
                     self.player.on('ended', function (e) {
-                        self.fire('end', e);
+                        self.fire('ended', e);
                     });
                     self.player.on('loaded', function (e) {
                         self.fire('ready', e);
+                    });
+                    self.player.on('volumechange', function (e) {
+                        self.fire('volumechange', e);
                     });
                 }
 
@@ -7726,44 +8370,46 @@ var VideoWorker = function () {
                     element.appendChild(source);
                 }
                 if (self.type === 'local') {
-                    if (!self.$iframe) {
-                        self.$iframe = document.createElement('video');
+                    if (!self.$video) {
+                        self.$video = document.createElement('video');
 
                         // mute
                         if (self.options.mute) {
-                            self.$iframe.muted = true;
-                        } else if (self.$iframe.volume) {
-                            self.$iframe.volume = self.options.volume / 100;
+                            self.$video.muted = true;
+                        } else if (self.$video.volume) {
+                            self.$video.volume = self.options.volume / 100;
                         }
 
                         // loop
                         if (self.options.loop) {
-                            self.$iframe.loop = true;
+                            self.$video.loop = true;
                         }
 
                         // autoplay enable on mobile devices
-                        self.$iframe.setAttribute('playsinline', '');
-                        self.$iframe.setAttribute('webkit-playsinline', '');
+                        self.$video.setAttribute('playsinline', '');
+                        self.$video.setAttribute('webkit-playsinline', '');
 
-                        self.$iframe.setAttribute('id', self.playerID);
-                        hiddenDiv.appendChild(self.$iframe);
+                        self.$video.setAttribute('id', self.playerID);
+                        hiddenDiv.appendChild(self.$video);
                         document.body.appendChild(hiddenDiv);
 
                         Object.keys(self.videoID).forEach(function (key) {
-                            addSourceToLocal(self.$iframe, self.videoID[key], 'video/' + key);
+                            addSourceToLocal(self.$video, self.videoID[key], 'video/' + key);
                         });
                     }
 
-                    self.player = self.player || self.$iframe;
+                    self.player = self.player || self.$video;
 
                     var locStarted = void 0;
-                    addEventListener(self.player, 'playing', function (e) {
+                    self.player.addEventListener('playing', function (e) {
                         if (!locStarted) {
                             self.fire('started', e);
                         }
                         locStarted = 1;
                     });
-                    addEventListener(self.player, 'timeupdate', function () {
+                    self.player.addEventListener('timeupdate', function (e) {
+                        self.fire('timeupdate', e);
+
                         // check for end of video and play again or stop
                         if (self.options.endTime) {
                             if (self.options.endTime && this.currentTime >= self.options.endTime) {
@@ -7775,16 +8421,16 @@ var VideoWorker = function () {
                             }
                         }
                     });
-                    addEventListener(self.player, 'play', function (e) {
+                    self.player.addEventListener('play', function (e) {
                         self.fire('play', e);
                     });
-                    addEventListener(self.player, 'pause', function (e) {
+                    self.player.addEventListener('pause', function (e) {
                         self.fire('pause', e);
                     });
-                    addEventListener(self.player, 'ended', function (e) {
-                        self.fire('end', e);
+                    self.player.addEventListener('ended', function (e) {
+                        self.fire('ended', e);
                     });
-                    addEventListener(self.player, 'loadedmetadata', function () {
+                    self.player.addEventListener('loadedmetadata', function () {
                         // get video width and height
                         self.videoWidth = this.videoWidth || 1280;
                         self.videoHeight = this.videoHeight || 720;
@@ -7796,9 +8442,15 @@ var VideoWorker = function () {
                             self.play(self.options.startTime);
                         }
                     });
+                    self.player.addEventListener('volumechange', function (e) {
+                        self.getVolume(function (volume) {
+                            self.options.volume = volume;
+                        });
+                        self.fire('volumechange', e);
+                    });
                 }
 
-                callback(self.$iframe);
+                callback(self.$video);
             });
         }
     }, {
@@ -7860,13 +8512,13 @@ var VideoWorker = function () {
                     // Creates deferred so, other players know when to wait.
                     window.onYouTubeIframeAPIReady = function () {
                         window.onYouTubeIframeAPIReady = null;
-                        loadingYoutubeDeffer.resolve('done');
+                        loadingYoutubeDefer.resolve('done');
                         callback();
                     };
                 } else if ((typeof YT === 'undefined' ? 'undefined' : _typeof(YT)) === 'object' && YT.loaded === 1) {
                     callback();
                 } else {
-                    loadingYoutubeDeffer.done(function () {
+                    loadingYoutubeDefer.done(function () {
                         callback();
                     });
                 }
@@ -7879,14 +8531,14 @@ var VideoWorker = function () {
                     var vimeoInterval = setInterval(function () {
                         if (typeof Vimeo !== 'undefined') {
                             clearInterval(vimeoInterval);
-                            loadingVimeoDeffer.resolve('done');
+                            loadingVimeoDefer.resolve('done');
                             callback();
                         }
                     }, 20);
                 } else if (typeof Vimeo !== 'undefined') {
                     callback();
                 } else {
-                    loadingVimeoDeffer.done(function () {
+                    loadingVimeoDefer.done(function () {
                         callback();
                     });
                 }
@@ -7902,15 +8554,33 @@ var VideoWorker = function () {
     return VideoWorker;
 }();
 
-window.VideoWorker = VideoWorker;
+exports.default = VideoWorker;
 
-/*!
- * Name    : Video Background Extension for Jarallax
- * Version : 1.0.0
- * Author  : nK http://nkdev.info
- * GitHub  : https://github.com/nk-o/jarallax
- */
-(function () {
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = jarallaxVideo;
+
+var _videoWorker = __webpack_require__(3);
+
+var _videoWorker2 = _interopRequireDefault(_videoWorker);
+
+var _global = __webpack_require__(0);
+
+var _global2 = _interopRequireDefault(_global);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function jarallaxVideo() {
+    var jarallax = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _global2.default.jarallax;
+
     if (typeof jarallax === 'undefined') {
         return;
     }
@@ -7924,10 +8594,10 @@ window.VideoWorker = VideoWorker;
 
         defInit.apply(self);
 
-        if (self.video) {
-            self.video.getIframe(function (iframe) {
-                var $parent = iframe.parentNode;
-                self.css(iframe, {
+        if (self.video && !self.options.disableVideo()) {
+            self.video.getVideo(function (video) {
+                var $parent = video.parentNode;
+                self.css(video, {
                     position: self.image.position,
                     top: '0px',
                     left: '0px',
@@ -7940,10 +8610,10 @@ window.VideoWorker = VideoWorker;
                     margin: 0,
                     zIndex: -1
                 });
-                self.$video = iframe;
-                self.image.$container.appendChild(iframe);
+                self.$video = video;
+                self.image.$container.appendChild(video);
 
-                // remove parent iframe element (created by VideoWorker)
+                // remove parent video element (created by VideoWorker)
                 $parent.parentNode.removeChild($parent);
             });
         }
@@ -7954,9 +8624,9 @@ window.VideoWorker = VideoWorker;
     Jarallax.prototype.coverImage = function () {
         var self = this;
         var imageData = defCoverImage.apply(self);
-        var node = self.image.$item.nodeName;
+        var node = self.image.$item ? self.image.$item.nodeName : false;
 
-        if (imageData && self.video && (node === 'IFRAME' || node === 'VIDEO')) {
+        if (imageData && self.video && node && (node === 'IFRAME' || node === 'VIDEO')) {
             var h = imageData.image.height;
             var w = h * self.image.width / self.image.height;
             var ml = (imageData.container.width - w) / 2;
@@ -8013,7 +8683,10 @@ window.VideoWorker = VideoWorker;
             return defaultResult;
         }
 
-        var video = new VideoWorker(self.options.videoSrc, {
+        var video = new _videoWorker2.default(self.options.videoSrc, {
+            autoplay: true,
+            loop: true,
+            showContols: false,
             startTime: self.options.videoStartTime || 0,
             endTime: self.options.videoEndTime || 0,
             mute: self.options.videoVolume ? 0 : 1,
@@ -8112,14 +8785,10 @@ window.VideoWorker = VideoWorker;
 
         defDestroy.apply(self);
     };
+}
 
-    // data-jarallax-video initialization
-    addEventListener(window, 'DOMContentLoaded', function () {
-        jarallax(document.querySelectorAll('[data-jarallax-video]'));
-    });
-})();
-}());
-
+/***/ })
+/******/ ]);
 //==============================================================================
 
 
