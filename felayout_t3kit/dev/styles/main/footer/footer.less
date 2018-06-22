@@ -116,6 +116,22 @@
     }
 }
 
+.footer .social-icons {
+    .social-icons__item {
+        color: @social-icons-bg-color;
+    }
+}
+
+.no-touch .footer .social-icons__item {
+    &:hover {
+        color: @social-icons-hover-color;
+
+        & > .icons:after {
+            border-color: fade(@social-icons-hover-color, 50%);
+        }
+    }
+}
+
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
