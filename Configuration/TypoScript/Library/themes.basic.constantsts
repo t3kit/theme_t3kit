@@ -89,4 +89,4 @@ themes.configuration.spamProtectEmailAddresses.lastDotSubst = .<span style="disp
 # more configuration
 ##########################################################################################
 themes.languages.default.isoCode = en_GB
-themes.configuration.headerComment = This website is based on t3kit v8.6.0 - www.t3kit.com
+themes.configuration.headerComment = This website is based on t3kit v8.7.0 - www.t3kit.com

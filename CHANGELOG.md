@@ -1,4 +1,26 @@
 
+#### v2.8.0 `June 27, 2018`
+- **[BUGFIX]** fix js error when ariaLabels object is empty in LogoCarousel CE ([abf817f](https://github.com/t3kit/theme_t3kit/commit/abf817f))
+- **[BUGFIX]** add a possibility to choose an empty value for the column in Adv1ColumnGrid CE ([0b13c3e](https://github.com/t3kit/theme_t3kit/commit/0b13c3e))
+- **[FEATURE]** add options for each slide to have a transparent background (#425) ([c4a9317](https://github.com/t3kit/theme_t3kit/commit/c4a9317))
+- **[BUGFIX]** add possibility to have top/bottom margin of element inside parallax element (#434) ([245550b](https://github.com/t3kit/theme_t3kit/commit/245550b))
+- **[BUGFIX]** use CSS color variable for social icons in footer (#433) ([bcd686f](https://github.com/t3kit/theme_t3kit/commit/bcd686f))
+- **[BUGFIX]** add word wrap behavior for subnavigation items (#422) ([fdda947](https://github.com/t3kit/theme_t3kit/commit/fdda947))
+- **[BUGFIX]** Use class for logo carousel aria labels (#426) ([13c03d9](https://github.com/t3kit/theme_t3kit/commit/13c03d9))
+- **[BUGFIX]** jumping animation (clicking the header panel of collapsible) (#427) ([cb48742](https://github.com/t3kit/theme_t3kit/commit/cb48742))
+- **[BUGFIX]** show more-link in newsSimpleList elem. ([da0767a](https://github.com/t3kit/theme_t3kit/commit/da0767a))
+- **[TASK]** use object-fit-images as a component in felayout ([1b4d57a](https://github.com/t3kit/theme_t3kit/commit/1b4d57a))
+- **[FEATURE]** Use <img> + object-fit in News ext. instead of background-images. Accessibility ([4a7bed6](https://github.com/t3kit/theme_t3kit/commit/4a7bed6))
+- **[TASK]** make logo carousel linked logos same size as non linked logos. (#409) ([788496b](https://github.com/t3kit/theme_t3kit/commit/788496b))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[TASK]** update favicon settings, add msapplication-TileColor and site.webmanifest (favicongenerator) ([e954219](https://github.com/t3kit/theme_t3kit/commit/e954219))
+- **[!!!]** **[BUGFIX]** Fix incorrect class of link in IconTextButton CE, fixes #419 (#420) ([dcc9e66](https://github.com/t3kit/theme_t3kit/commit/dcc9e66))
+- **[!!!]** **[TASK]** Update Parallax (Jarallax), fix #423 (#424) ([f4bded1](https://github.com/t3kit/theme_t3kit/commit/f4bded1))
+- **[!!!]** **[BUGFIX]** fix header middle social media icons (#432) ([d61162e](https://github.com/t3kit/theme_t3kit/commit/d61162e))
+
+***
+
 #### v2.7.0 `May 24, 2018`
 - **[BUGFIX]** make conditions work within INCLUDE_TYPOSCRIPT by escape backslashes (#415) ([b3e7ee6](https://github.com/t3kit/theme_t3kit/commit/b3e7ee6))
 - **[BUGFIX]** fix fluid parse error in News detail template ([52e08c1](https://github.com/t3kit/theme_t3kit/commit/52e08c1))
