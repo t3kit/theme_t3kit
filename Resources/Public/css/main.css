@@ -3891,6 +3891,12 @@ div.awesomplete li[aria-selected="true"] mark {
 .img-slider__pagination .swiper-pagination-bullet {
   background: #fff;
 }
+._light-transparent-bg .img-slider__caption {
+  background: rgba(255, 255, 255, 0.3);
+}
+._dark-transparent-bg .img-slider__caption {
+  background: rgba(0, 0, 0, 0.3);
+}
 @media (min-width: 768px) {
   .img-slider__caption {
     padding: 30px 50px;

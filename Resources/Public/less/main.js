@@ -217,7 +217,7 @@ jQuery(function ($) {
 
     // Get json content from element LogoCarousel.html
     var ariaLabels = document.getElementsByClassName('js__aria-labels')
-    if (ariaLabels) {
+    if (ariaLabels && ariaLabels.length > 0) {
       // Use only first aria label object because they are all equal
       var label = JSON.parse(ariaLabels[0].innerHTML)
 
