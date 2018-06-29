@@ -1,0 +1,18 @@
+lib.gridelements {
+  EqualHeightGrid {
+    columns.10 {
+      renderObj >
+      renderObj = COA
+      renderObj {
+        20 =< tt_content
+      }
+    }
+
+    cObject >
+    cObject < lib.gridelements.Adv1ColumnGrid.cObject
+    cObject.file >
+    cObject.file = EXT:theme_t3kit/Resources/Private/Templates/GridElements/EqualHeightGrid.html
+  }
+}
+
+tt_content.gridelements_pi1.20.10.setup.EqualHeightGrid < lib.gridelements.EqualHeightGrid

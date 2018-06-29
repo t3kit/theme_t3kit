@@ -10,6 +10,9 @@
 # Add our Grid elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/GridElements/PageTS" extensions="pagets">
 
+# Add Equal Height Grid elements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/ContentElements/EqualHeightGrid.pagets">
+
 
 # Extensions:
 # RTE
