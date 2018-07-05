@@ -12,7 +12,7 @@ lib.menu.top.1 {
     NO.stdWrap.wrap.field = tx_themes_icon
     NO.stdWrap.wrap.required = 1
     NO.stdWrap.wrap.dataWrap = <span class="icons icon-|"></span>
-    NO.stdWrap.innerWrap.noTrimWrap = |&nbsp;||
+    NO.stdWrap.innerWrap.noTrimWrap = |||
     NO.ATagTitle {
         field = abstract // description // subtitle // title
     }
