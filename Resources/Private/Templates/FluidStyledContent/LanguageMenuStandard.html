@@ -7,7 +7,7 @@
 				<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
 				<f:variable name="languageLabel"><f:spaceless><f:render section="getLanguageLabel" arguments="{_all}" /></f:spaceless></f:variable>
 				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{languageFlag}"></span><f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangLabel')}">
-					<span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label' extensionName='theme_t3kit')}</span>
+					<span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label', extensionName:'theme_t3kit')}</span>
 				</f:if></a>
 			</f:if>
 		</f:for>
