@@ -32,9 +32,7 @@
   "require": {
     "php": "^7.0",
     "typo3/cms": "dev-master as 8.7.17",
-    "typo3-ter/realurl": "~2.3.2",
-    "typo3-themes/themes": "~8.7.0",
-    "typo3-ter/gridelements": "~8.2.1",
+    "typo3-ter/gridelements": "dev-master",
     "typo3-ter/solr": "~7.5.0",
     "typo3-ter/dyncss-less": "0.7.9",
     "typo3-ter/go-maps-ext": "~2.3.1",
