@@ -33,7 +33,7 @@
     "php": "^7.0",
     "typo3/cms": "dev-master",
     "gridelementsteam/gridelements": "dev-master",
-    "typo3-ter/solr": "dev-master",
+    "apache-solr-for-typo3/solr": "dev-master",
     "typo3-ter/go-maps-ext": "~2.3.1",
     "georgringer/news": "dev-master"
     }
