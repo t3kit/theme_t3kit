@@ -31,12 +31,12 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.0",
-    "typo3/cms": "dev-master as 8.7.17",
+    "typo3/cms": "dev-master",
     "gridelementsteam/gridelements": "dev-master",
     "typo3-ter/solr": "~7.5.0",
     "typo3-ter/go-maps-ext": "~2.3.1",
     "typo3-ter/cs-seo": "~2.3.3",
-    "georgringer/news": "~7.0.5",
+    "georgringer/news": "dev-master",
     "typo3-ter/pxa-form-enhancement": "~3.1.1",
     "typo3-ter/pxa-cookie-bar": "~2.0.1"
     }
