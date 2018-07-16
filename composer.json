@@ -31,7 +31,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.0",
-    "typo3/cms": "dev-master",
+    "typo3/cms": "dev-master as 8.7.17",
     "typo3-ter/realurl": "~2.3.2",
     "typo3-themes/themes": "~8.7.0",
     "typo3-ter/gridelements": "~8.2.1",
