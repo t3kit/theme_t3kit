@@ -37,7 +37,6 @@
     "typo3-ter/go-maps-ext": "~2.3.1",
     "typo3-ter/cs-seo": "~2.3.3",
     "georgringer/news": "dev-master",
-    "typo3-ter/pxa-form-enhancement": "~3.1.1",
     "typo3-ter/pxa-cookie-bar": "~2.0.1"
     }
 }
