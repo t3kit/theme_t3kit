@@ -36,13 +36,13 @@ $EM_CONF[$_EXTKEY] = array(
         'depends' => array(
             'typo3'  => '9.3.0-9.9.99',
             'gridelements' => '8.2.0-8.2.99',
-            'solr' => '7.5.1-7.5.99',
             'news' => '6.3.0-6.3.99',
         ),
         'conflicts' => array(
         ),
         'suggests' => array(
             'realurl' => '2.3.2-2.3.99',
+            'solr' => '7.5.1-7.5.99',
         ),
     ),
     '_md5_values_when_last_written' => 'a:0:{}',
