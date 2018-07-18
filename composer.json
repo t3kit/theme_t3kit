@@ -30,11 +30,13 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": "^7.0",
+    "php": "^7.2",
     "typo3/minimal": "^9.3",
     "gridelementsteam/gridelements": "dev-master",
-    "apache-solr-for-typo3/solr": "dev-master",
     "georgringer/news": "dev-master"
+  },
+  "suggest": {
+    "apache-solr-for-typo3/solr": "dev-master"
   },
   "extra": {
     "typo3/cms": {

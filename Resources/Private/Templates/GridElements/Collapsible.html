@@ -5,7 +5,7 @@
             <f:variable name="parentHeader">{data.parentgrid_header_layout}</f:variable>
             <f:render partial="Header/Header" arguments="{
 				header: '{f:render(section: \'accordionLink\', arguments: \'{_all}\')}',
-                layout: '{f:if(condition:\'{parentHeader} > 0 && {parentHeader} < 6 \', then:\'{parentHeader + 1}\')}',
+                layout: '{f:if(condition:\'{parentHeader} > 0 && {parentHeader} < 6 \', then:\'{parentHeader} + 1\')}',
 				positionClass: 'panel-title',
 				link: '',
 				uid: '{data.uid}',

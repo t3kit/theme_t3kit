@@ -37,7 +37,7 @@
 					<f:then>
 						<div id="collapse-{panel.uid}" class="panel-collapse collapse {f:if(condition: '{panelnumber.index} == 0', then: 'in', else: '')}" role="tabpanel" aria-expanded="{f:if(condition: '{panelnumber.index} == 0', then: 'true', else: 'false')}" aria-labelledby="heading-{panel.uid}">
 							<div class="panel-body">
-								<f:format.raw>{theme:arrayIndex(object: data, index: 'tx_gridelements_view_child_{panel.uid}')}</f:format.raw>
+								<f:format.raw>{data.tx_gridelements_view_child_{panel.uid}}</f:format.raw>
 							</div>
 						</div>
 					</f:then>
@@ -46,14 +46,14 @@
 							<f:then>
 								<div id="collapse-{panel.uid}" class="panel-collapse collapse in" role="tabpanel" aria-expanded="true" aria-labelledby="heading-{panel.uid}">
 									<div class="panel-body">
-										<f:format.raw>{theme:arrayIndex(object: data, index: 'tx_gridelements_view_child_{panel.uid}')}</f:format.raw>
+										<f:format.raw>{data.tx_gridelements_view_child_{panel.uid}}</f:format.raw>
 									</div>
 								</div>
 							</f:then>
 							<f:else>
 								<div id="collapse-{panel.uid}" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="heading-{panel.uid}">
 									<div class="panel-body">
-										<f:format.raw>{theme:arrayIndex(object: data, index: 'tx_gridelements_view_child_{panel.uid}')}</f:format.raw>
+										<f:format.raw>{data.tx_gridelements_view_child_{panel.uid}}</f:format.raw>
 									</div>
 								</div>
 							</f:else>

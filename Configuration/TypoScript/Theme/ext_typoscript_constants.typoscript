@@ -1,0 +1,10 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library" extensions="constantsts">
+
+# Extensions:
+# News
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/constants.ts">
+# Solr
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/constants.ts">
+
+# Temporary always use css for now
+themes.configuration.feLayoutMode = css

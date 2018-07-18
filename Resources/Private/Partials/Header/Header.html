@@ -21,16 +21,16 @@
 						<div class="header-top__contact-tel">
 							<span class="icons icon-t3-mobile" aria-hidden="true"></span>
 							<f:if condition="{settings.showHeaderTopContactsLabels}">
-								<span class="header-top__contact-tel-title" aria-hidden="true"><f:translate key="callUs_label" /></span>
+								<span class="header-top__contact-tel-title" aria-hidden="true"><f:translate key="callUs_label" extensionName="ThemeT3kit" /></span>
 							</f:if>
 							<a class="header-top__contact-tel-link" href="tel:{f:cObject(typoscriptObjectPath: 'lib.contacts.phone')}">{settings.contacts.phone}</a>
 						</div>
 						<div class="header-top__contact-email">
 							<span class="icons icon-t3-mail" aria-hidden="true"></span>
 							<f:if condition="{settings.showHeaderTopContactsLabels}">
-								<span class="header-top__contact-email-title" aria-hidden="true"><f:translate key="emailUs_label" /></span>
+								<span class="header-top__contact-email-title" aria-hidden="true"><f:translate key="emailUs_label" extensionName="ThemeT3kit" /></span>
 							</f:if>
-							<f:link.email class="header-top__contact-email-link" title="{f:translate(key: 'emailUs_label')}" additionalAttributes="{aria-label: '{f:translate(key: \'emailUs_label\')}'}" email="{settings.contacts.email}" />
+							<f:link.email class="header-top__contact-email-link" title="{f:translate(key: 'emailUs_label', extensionName:'ThemeT3kit')}" additionalAttributes="{aria-label: '{f:translate(key: \'emailUs_label\',  extensionName: \'ThemeT3kit\')}'}" email="{settings.contacts.email}" />
 						</div>
 					</div>
 				</f:if>
@@ -98,7 +98,7 @@
 			<f:if condition="{settings.menu.main.enableLangMenuInNavigation}">
 				<f:cObject typoscriptObjectPath="lib.menu.language.standard" />
 			</f:if>
-			<ul class="main-navigation__items-list js__main-navigation__items-list {f:if(condition: '{settings.menu.main.navbarPos)} == right', then: '_right-pos')}">
+			<ul class="main-navigation__items-list js__main-navigation__items-list {f:if(condition: '{settings.menu.main.navbarPos} == right', then: '_right-pos')}">
 				<f:cObject typoscriptObjectPath="lib.menu.main" />
 
 				<f:if condition="{status.headerTopNavigationVisibleInMobileMenu}">

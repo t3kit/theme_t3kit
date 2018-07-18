@@ -1,0 +1,2 @@
+# Backward compatibility
+@import 'EXT:theme_t3kit/Configuration/TypoScript/Theme/ext_typoscript_setup.typoscript'

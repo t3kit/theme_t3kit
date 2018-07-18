@@ -2,6 +2,13 @@
 defined('TYPO3_MODE') or die();
 
 call_user_func(function () {
+    // BackendLayouts
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        'theme_t3kit',
+        'Configuration/TSconfig/Page/theme_t3kit.typoscript',
+        'Theme - t3kit'
+    );
+
     if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('cs_seo')) {
         $GLOBALS['TCA']['pages']['columns']['tx_csseo_og_description']['config']['default'] = '';
         $GLOBALS['TCA']['pages']['columns']['tx_csseo_tw_description']['config']['default'] = '';

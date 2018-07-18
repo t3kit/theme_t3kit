@@ -1,0 +1,235 @@
+
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library/" extensions="setupts">
+
+# Overrides of fluid_styled_content
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/FluidStyledContent/" extensions="setupts">
+
+# Add our content elements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/GridElements/TypoScript/DefaultGrid.setupts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/ContentElements/" extensions="setupts">
+
+# Add our Grid elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/GridElements/TypoScript" extensions="setupts">
+
+# Include ApplicationContext setupts
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/ApplicationContext/" extensions="setupts">
+
+# Extensions:
+# News
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/News/TypoScript/setup.ts" condition="[userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('news')]">
+
+# Solr
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('solr')]
+    # Solr indexer
+    # Put index queue modifications here, wont work with INCLUDE_TYPOSCRIPT from scheduler task indexer
+    plugin.tx_solr.index.queue.news.fields.url.typolink.parameter = {$themes.configuration.features.newsDefaultDetailPid}
+[global]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/setup.ts" condition="[userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('solr')]">
+
+# cs_seo
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/cs_seo/TypoScript/setup.ts" condition="[userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('cs_seo')]">
+
+# rx_shariff
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:rx_shariff/Configuration/TypoScript/WithoutJQueryAndFontawesome/setup.txt" condition="[userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('rx_shariff')]">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/Library/plugin.rx_shariff.setupts" condition="[userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('rx_shariff')]">
+
+# Frontend editing
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Resources/Private/Extensions/FrontendEditing/TypoScript/setup.ts" condition="[userFunc = TYPO3\\CMS\\Core\\Utility\\ExtensionManagementUtility::isLoaded('frontend_editing')]">
+
+# Include setupTS files from fileadmin/Configuration/TypoScript
+<INCLUDE_TYPOSCRIPT: source="DIR:fileadmin/Configuration/TypoScript/" extensions="setupts">
+
+# Temporary add variables etc stuff that theme exension did when theme was choosen
+
+page = PAGE
+page.typeNum = 0
+
+page.includeCSS.customCss >
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+  format = html
+  file = EXT:theme_t3kit/Resources/Private/Templates/Theme/StartPage.html
+  partialRootPath = EXT:theme_t3kit/Resources/Private/Partials/
+  layoutRootPath = EXT:theme_t3kit/Resources/Private/Layouts/
+  variables {
+    content_main < styles.content.get
+    content_main.select.where = colPos = 0
+    content_column_1 < styles.content.get
+    content_column_1.select.where = colPos = 1
+    content_column_2 < styles.content.get
+    content_column_2.select.where = colPos = 2
+  }
+  settings {
+    // theme_t3kit/Resources/Private/Layouts/Default.html
+      // themes.configuration.header.headerTemplate
+      header.headerTemplate = Header 
+            
+    // theme_t3kit/Resources/Private/Partials/Header/Header.html
+      // themes.configuration.elem.status.showHeaderTop
+      showHeaderTop = {$themes.configuration.elem.status.showHeaderTop}
+      // themes.configuration.elem.status.showHeaderTopContacts
+      showHeaderTopContacts = {$themes.configuration.elem.status.showHeaderTopContacts}
+      // themes.configuration.elem.status.showHeaderTopContactsLabels
+      showHeaderTopContactsLabels = {$themes.configuration.elem.status.showHeaderTopContactsLabels}
+      // themes.configuration.contacts.phone
+      // (also in theme_t3kit/Resources/Private/Templates/ContentElements/Contacts.html)
+      contacts.phone = {$themes.configuration.contacts.phone}
+      // themes.configuration.contacts.email
+      // (also in theme_t3kit/Resources/Private/Templates/ContentElements/Contacts.html)
+      contacts.email = {$themes.configuration.contacts.email}
+      // themes.configuration.elem.status.showHeaderTopLangMenu
+      showHeaderTopLangMenu = {$themes.configuration.elem.status.showHeaderTopLangMenu}
+      // themes.configuration.elem.status.showHeaderTopSearch
+      showHeaderTopSearch = {$themes.configuration.elem.status.showHeaderTopSearch}
+      // themes.configuration.elem.status.showHeaderTopNavigation
+      showHeaderTopNavigation = {$themes.configuration.elem.status.showHeaderTopNavigation}
+      // themes.configuration.elem.status.showHeaderMiddle
+      showHeaderMiddle = {$themes.configuration.elem.status.showHeaderMiddle}
+      // themes.configuration.elem.status.showHeaderMiddleLogo
+      showHeaderMiddleLogo = {$themes.configuration.elem.status.showHeaderMiddleLogo}
+      // themes.configuration.elem.status.showHeaderMiddleSocIcons
+      showHeaderMiddleSocIcons = {$themes.configuration.elem.status.showHeaderMiddleSocIcons}
+      // themes.configuration.elem.status.showHeaderMiddleSearch
+      showHeaderMiddleSearch = {$themes.configuration.elem.status.showHeaderMiddleSearch}
+      // themes.configuration.menu.main.enableLangMenuInNavigation
+      enableLangMenuInNavigation = {$themes.configuration.menu.main.enableLangMenuInNavigation}
+      // themes.configuration.menu.main.dropdownColumns
+      menu.main.dropdownColumns = {$themes.configuration.menu.main.dropdownColumns}
+      // themes.configuration.menu.main.enableLogoInNavigation
+      menu.main.enableLogoInNavigation = {$themes.configuration.menu.main.enableLogoInNavigation}
+      // themes.configuration.menu.main.navbarPos
+      menu.main.navbarPos = {$themes.configuration.menu.main.navbarPos}
+      // themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu
+      headerTopNavigationVisibleInMobileMenu = {$themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu}
+      // themes.configuration.elem.status.showHeaderMainMenuSearch
+      showHeaderMainMenuSearch = {$themes.configuration.elem.status.showHeaderMainMenuSearch}
+      
+    // theme_t3kit/Resources/Private/Partials/ContentElements/Socialmedia.html
+      // themes.configuration.socialmedia.useFacebook
+      socialmedia.useFacebook = {$themes.configuration.socialmedia.useFacebook}
+      // themes.configuration.socialmedia.facebookLink
+      socialmedia.facebookLink = {$themes.configuration.socialmedia.facebookLink}
+      // themes.configuration.socialmedia.useTwitter
+      socialmedia.useTwitter = {$themes.configuration.socialmedia.useTwitter}
+      // themes.configuration.socialmedia.twitterLink
+      socialmedia.twitterLink = {$themes.configuration.socialmedia.twitterLink}
+      // themes.configuration.socialmedia.useLinkedIn
+      socialmedia.useLinkedIn = {$themes.configuration.socialmedia.useLinkedIn}
+      // themes.configuration.socialmedia.linkedInLink
+      socialmedia.linkedInLink = {$themes.configuration.socialmedia.linkedInLink}
+      // themes.configuration.socialmedia.useXing
+      socialmedia.useXing = {$themes.configuration.socialmedia.useXing}
+      // themes.configuration.socialmedia.xingLink
+      socialmedia.xingLink = {$themes.configuration.socialmedia.xingLink}
+      // themes.configuration.socialmedia.useGooglePlus
+      socialmedia.useGooglePlus = {$themes.configuration.socialmedia.useGooglePlus}
+      // themes.configuration.socialmedia.googlePlusLink
+      socialmedia.googlePlusLink = {$themes.configuration.socialmedia.googlePlusLink}
+      // themes.configuration.socialmedia.usePinterest
+      socialmedia.usePinterest = {$themes.configuration.socialmedia.usePinterest}
+      // themes.configuration.socialmedia.pinterestLink
+      socialmedia.pinterestLink = {$themes.configuration.socialmedia.pinterestLink}
+      // themes.configuration.socialmedia.useInstagram
+      socialmedia.useInstagram = {$themes.configuration.socialmedia.useInstagram}
+      // themes.configuration.socialmedia.instagramLink
+      socialmedia.instagramLink = {$themes.configuration.socialmedia.instagramLink}
+      // themes.configuration.socialmedia.useYoutube
+      socialmedia.useYoutube = {$themes.configuration.socialmedia.useYoutube}
+      // themes.configuration.socialmedia.youtubeLink
+      socialmedia.youtubeLink = {$themes.configuration.socialmedia.youtubeLink}
+      // themes.configuration.socialmedia.useMynewsdesk
+      socialmedia.useMynewsdesk = {$themes.configuration.socialmedia.useMynewsdesk}
+      // themes.configuration.socialmedia.mynewsdeskLink
+      socialmedia.mynewsdeskLink = {$themes.configuration.socialmedia.mynewsdeskLink}
+
+    // theme_t3kit/Resources/Private/Templates/Theme/MenuContent.html
+    // and theme_t3kit/Resources/Private/Templates/Theme/MenuContentSidebar.html
+    // and theme_t3kit/Resources/Private/Templates/Theme/MenuSidebarContent.html
+    // and theme_t3kit/Resources/Private/Templates/Theme/TopContentMenuContent.html
+    // and theme_t3kit/Resources/Private/Templates/Theme/TopContentMenuContentSidebar.html
+      // themes.configuration.menu.sub.underContentInMobile
+      menu.sub.underContentInMobile = {$themes.configuration.menu.sub.underContentInMobile}
+
+    // theme_t3kit/Resources/Private/Partials/Content/Breadcrumbs.html
+      // themes.configuration.menu.breadcrumb.showBreadcrumbs
+      menu.breadcrumb.showBreadcrumbs = {$themes.configuration.menu.breadcrumb.showBreadcrumbs}
+      // themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile
+      menu.breadcrumb.hideBreadcrumbsInMobile = {$themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile}
+        
+    // heme_t3kit/Resources/Private/Templates/FluidStyledContent/LanguageMenuStandard.html
+      // themes.configuration.elem.status.showHeaderTopLangLabel
+      showHeaderTopLangLabel = {$themes.configuration.elem.status.showHeaderTopLangLabel}
+
+  }
+}
+
+page.10.file.stdWrap.cObject = CASE
+page.10.file.stdWrap.cObject {
+  key.data = levelfield:-1, backend_layout_next_level, slide
+  key.override.field = backend_layout
+  
+  default = TEXT
+  default.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/StartPage.html
+    
+  pagets__Content = TEXT
+  pagets__Content.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/Content.html
+
+  pagets__ContentMenu = TEXT
+  pagets__ContentMenu.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/ContentMenu.html
+
+  pagets__ContentMenuSidebar = TEXT
+  pagets__ContentMenuSidebar.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/ContentMenuSidebar.html
+
+  pagets__ContentSidebar = TEXT
+  pagets__ContentSidebar.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/ContentSidebar.html
+
+  pagets__ContentSidebarMenu = TEXT
+  pagets__ContentSidebarMenu.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/ContentSidebarMenu.html
+
+  pagets__Empty = TEXT
+  pagets__Empty.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/Empty.html
+
+  pagets__GridContainer = TEXT
+  pagets__GridContainer.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/GridContainer.html
+
+  pagets__MenuContent = TEXT
+  pagets__MenuContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/MenuContent.html
+
+  pagets__MenuContentSidebar = TEXT
+  pagets__MenuContentSidebar.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/MenuContentSidebar.html
+
+  pagets__MenuSidebarContent = TEXT
+  pagets__MenuSidebarContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/MenuSidebarContent.html
+
+  pagets__SidebarContent = TEXT
+  pagets__SidebarContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/SidebarContent.html
+
+  pagets__SidebarContentMenu = TEXT
+  pagets__SidebarContentMenu.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/SidebarContentMenu.html
+
+  pagets__SidebarMenuContent = TEXT
+  pagets__SidebarMenuContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/SidebarMenuContent.html
+
+  pagets__StartPage = TEXT
+  pagets__StartPage.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/StartPage.html
+
+  pagets__TopContentContent = TEXT
+  pagets__TopContentContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/TopContentContent.html
+
+  pagets__TopContentContentMenu = TEXT
+  pagets__TopContentContentMenu.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/TopContentContentMenu.html
+
+  pagets__TopContentContentSidebar = TEXT
+  pagets__TopContentContentSidebar.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/TopContentContentSidebar.html
+
+  pagets__TopContentMenuContent = TEXT
+  pagets__TopContentMenuContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/TopContentMenuContent.html
+
+  pagets__TopContentMenuContentSidebar = TEXT
+  pagets__TopContentMenuContentSidebar.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/TopContentMenuContentSidebar.html
+
+  pagets__TopContentSidebarContent = TEXT
+  pagets__TopContentSidebarContent.value = EXT:theme_t3kit/Resources/Private/Templates/Theme/TopContentSidebarContent.html
+}

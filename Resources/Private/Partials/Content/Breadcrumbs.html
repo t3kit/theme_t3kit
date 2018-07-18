@@ -4,14 +4,14 @@
 	<f:section name="Default">
 	<!-- theme_t3kit: Partials/Content/Breadcrumbs.html [begin] -->
 
-	<f:if condition="{theme:constant(constant:'themes.configuration.menu.breadcrumb.showBreadcrumbs')}">
-		<f:if condition="{theme:constant(constant:'themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile')}">
+	<f:if condition="{settings.menu.breadcrumb.showBreadcrumbs}">
+		<f:if condition="{menu.breadcrumb.hideBreadcrumbsInMobile}">
 			<div class="hidden-sm hidden-xs">
 		</f:if>
 
 		<f:cObject typoscriptObjectPath="lib.menu.breadcrumb"/>
 
-		<f:if condition="{theme:constant(constant:'themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile')}">
+		<f:if condition="{menu.breadcrumb.hideBreadcrumbsInMobile}">
 			</div>
 		</f:if>
 	</f:if>
