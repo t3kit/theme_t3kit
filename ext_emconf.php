@@ -34,21 +34,15 @@ $EM_CONF[$_EXTKEY] = array(
     'CGLcompliance_note' => '',
     'constraints' => array(
         'depends' => array(
-            'typo3'  => '8.7.0-8.7.99',
-            'realurl' => '2.3.2-2.3.99',
-            'themes' => '8.7.0-8.7.99',
+            'typo3'  => '9.3.0-9.9.99',
             'gridelements' => '8.2.0-8.2.99',
             'solr' => '7.5.1-7.5.99',
-            'dyncss_less' => '0.7.9-0.7.99',
-            'go_maps_ext' => '2.3.1-2.3.99',
-            'cs_seo' => '2.3.1-2.3.99',
             'news' => '6.3.0-6.3.99',
-            'realurl_404_multilingual' => '1.0.9-1.0.99',
-            'frontend_editing' => '1.3.3-1.3.99'
         ),
         'conflicts' => array(
         ),
         'suggests' => array(
+            'realurl' => '2.3.2-2.3.99',
         ),
     ),
     '_md5_values_when_last_written' => 'a:0:{}',
