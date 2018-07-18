@@ -37,11 +37,5 @@
   },
   "suggest": {
     "apache-solr-for-typo3/solr": "dev-master"
-  },
-  "extra": {
-    "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": "web"
-    }
   }
 }
