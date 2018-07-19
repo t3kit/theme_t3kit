@@ -46,6 +46,7 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
+        $this->registerArgument('source', 'string', 'Specifies the source file', true);
         $this->registerArgument('class', 'string', 'Specifies an alternate class for the svg', false);
         $this->registerArgument('width', 'float', 'Specifies a width for the svg', false);
         $this->registerArgument('height', 'float', 'Specifies a height for the svg', false);
