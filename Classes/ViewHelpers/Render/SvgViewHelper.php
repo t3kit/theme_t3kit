@@ -56,11 +56,10 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
     /**
      * Generate a list from the content
      *
-     * @param string $source
      */
-    public function render($source)
+    public function render()
     {
-        $sourceAbs = PATH_site . $source;
+        $sourceAbs = PATH_site . $this->arguments['source'];
 
         if (!file_exists($sourceAbs)) {
             return '<!-- unable to open file: ' . $source . ' (missing) -->';
