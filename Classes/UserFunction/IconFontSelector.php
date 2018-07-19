@@ -259,9 +259,18 @@ class IconFontSelector
      */
     protected function addStylesAndJavascriptToForm()
     {
-        $extCssRel = ExtensionManagementUtility::extRelPath('theme_t3kit') . 'Resources/Public/BE/css/iconFontSelector.css';
-        $pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
-        $pageRenderer->addCssFile(rtrim($this->cssFileInformation['relativePath'], '/') . '/' . $this->cssFileInformation['basename']);
+        $extPath = ExtensionManagementUtility::extPath('theme_t3kit');
+        $extWebPath = PathUtility::getAbsoluteWebPath($extPath);
+        $extCssRel = $extWebPath . 'Resources/Public/BE/css/iconFontSelector.css';
+
+        $pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+            \TYPO3\CMS\Core\Page\PageRenderer::class
+        );
+        $pageRenderer->addCssFile(
+            rtrim($this->cssFileInformation['relativePath'], '/') .
+            '/' .
+            $this->cssFileInformation['basename']
+        );
         $pageRenderer->addCssFile($extCssRel);
     }
 
