@@ -14,6 +14,8 @@ namespace T3kit\themeT3kit\ViewHelpers\Link;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
+
 /**
  * Tel link view helper.
  * Generates an tel link
@@ -28,7 +30,7 @@ namespace T3kit\themeT3kit\ViewHelpers\Link;
  * <a href="tel:+464001234567">+46 (0) 40-01 ma 23 45 67</a>
  * </output>
  */
-class TelViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper
+class TelViewHelper extends AbstractTagBasedViewHelper
 {
     /**
      * @var string
