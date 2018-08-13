@@ -8,9 +8,6 @@
 
 	<f:comment><!-- ### element body ### --></f:comment>
 	<div id="c{data.uid}" class="frame frame-type-{data.CType} {layoutClass} {f:if(condition: data.layout, then: ' frame-layout-{data.layout}')} {alignClass}">
-		<f:if condition="{data._LOCALIZED_UID}">
-			<a id="c{data._LOCALIZED_UID}"></a>
-		</f:if>
 		<f:render section="Before" optional="true">
 			<f:render partial="DropIn/Before/All" arguments="{_all}" />
 		</f:render>
