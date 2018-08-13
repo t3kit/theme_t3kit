@@ -3,6 +3,7 @@
 namespace T3kit\themeT3kit\Utility;
 
 use Doctrine\DBAL\Query\QueryBuilder;
+use Psr\Log\LoggerAwareTrait;
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\DatabaseConnection;
@@ -16,6 +17,7 @@ use TYPO3\CMS\Core\Utility\PathUtility;
  */
 class FixedPostVarsConfigurationUtility
 {
+    use LoggerAwareTrait;
 
     /**
      * Update configuration file of fixed post vars
@@ -27,9 +29,8 @@ class FixedPostVarsConfigurationUtility
         $filePath = $this->getSaveFilePath();
 
         if (!$this->canWriteConfiguration($filePath)) {
-            throw new \RuntimeException(
-                $filePath . ' is not writable.',
-                1485349703
+            $this->logger->error(
+                'Could not write realurl configuration to file "' . $filePath . '"'
             );
         }
 
@@ -146,35 +147,23 @@ class FixedPostVarsConfigurationUtility
     {
         $field = 'tx_themet3kit_fixed_post_var_conf';
 
-        if (version_compare(TYPO3_version, '8.0', '<')) {
-            /** @var DatabaseConnection $dbConnection */
-            $dbConnection = $GLOBALS['TYPO3_DB'];
-
-            $pages = $dbConnection->exec_SELECTgetRows(
-                'uid, ' . $field,
-                'pages',
-                $field . ' != \'0\' AND ' . $field . ' != \'\''
-                . BackendUtility::deleteClause('pages')
-            );
-        } else {
-            /** @var QueryBuilder $queryBuilder */
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
-            $pages = $queryBuilder
-                ->select('uid', 'tx_themet3kit_fixed_post_var_conf')
-                ->from('pages')
-                ->where(
-                    $queryBuilder->expr()->neq(
-                        $field,
-                        $queryBuilder->createNamedParameter('')
-                    ),
-                    $queryBuilder->expr()->neq(
-                        $field,
-                        $queryBuilder->createNamedParameter('0')
-                    )
+        /** @var QueryBuilder $queryBuilder */
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
+        $pages = $queryBuilder
+            ->select('uid', 'tx_themet3kit_fixed_post_var_conf')
+            ->from('pages')
+            ->where(
+                $queryBuilder->expr()->neq(
+                    $field,
+                    $queryBuilder->createNamedParameter('')
+                ),
+                $queryBuilder->expr()->neq(
+                    $field,
+                    $queryBuilder->createNamedParameter('0')
                 )
-                ->execute()
-                ->fetchAll();
-        }
+            )
+            ->execute()
+            ->fetchAll();
 
         return $pages;
     }

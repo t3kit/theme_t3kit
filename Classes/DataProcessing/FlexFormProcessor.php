@@ -14,6 +14,7 @@ namespace T3kit\themeT3kit\DataProcessing;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Core\Service\FlexFormService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
@@ -56,7 +57,7 @@ class FlexFormProcessor implements DataProcessorInterface {
         $fieldName = $cObj->stdWrapValue('fieldName', $processorConfiguration, 'pi_flexform');
 
         // parse flexform
-        $flexformService = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Service\\FlexFormService');
+        $flexformService = GeneralUtility::makeInstance(FlexFormService::class);
         $processedData[$targetVariableName] = $flexformService->convertFlexFormContentToArray($cObj->data[$fieldName]);
 
         // if targetvariable is settings, try to merge it with contentObjectConfiguration['settings.']

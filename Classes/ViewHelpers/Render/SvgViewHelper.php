@@ -1,6 +1,8 @@
 <?php
 namespace T3kit\themeT3kit\ViewHelpers\Render;
 
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -25,7 +27,7 @@ namespace T3kit\themeT3kit\ViewHelpers\Render;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class SvgViewHelper extends AbstractViewHelper
 {
 
     /**
