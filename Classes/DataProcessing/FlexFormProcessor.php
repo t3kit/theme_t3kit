@@ -14,7 +14,7 @@ namespace T3kit\themeT3kit\DataProcessing;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Core\Service\FlexFormService;
+use TYPO3\CMS\Extbase\Service\FlexFormService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
