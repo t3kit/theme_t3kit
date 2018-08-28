@@ -21,6 +21,6 @@
 </f:section>
 
 <f:section name="accordionLink">
-	<f:link.page pageUid="#collapse-{data.uid}" absolute="1" class="{f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: '', else: 'collapsed')}"
-				 additionalAttributes="{'data-toggle':'collapse', 'data-parent': '#group-{data.tx_gridelements_container}'}">{data.header}</f:link.page>
+	<f:link.external uri="#collapse-{data.uid}" defaultScheme="" class="{f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: '', else: 'collapsed')}"
+									 additionalAttributes="{'data-toggle':'collapse', 'data-parent': '#group-{data.tx_gridelements_container}'}">{data.header}</f:link.external>
 </f:section>
