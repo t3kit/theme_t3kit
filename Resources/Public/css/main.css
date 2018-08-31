@@ -203,7 +203,7 @@
   color: #8fcfe6;
   font-size: 14px;
   position: relative;
-  padding-right: 6px;
+  padding-right: 10px;
 }
 @media (min-width: 768px) {
   .header-top .nav {
@@ -1198,7 +1198,7 @@
     margin-top: 0;
     float: right;
     top: 0;
-    right: 20px;
+    right: 15px;
     height: 110px;
   }
 }
