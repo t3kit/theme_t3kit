@@ -12,6 +12,9 @@
 # Add our Grid elements
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/GridElements/TypoScript" extensions="setupts">
 
+# Add Equal Height Grid elements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/GridElements/TypoScript/EqualHeightGrid.setupts">
+
 # Include ApplicationContext setupts
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/ApplicationContext/" extensions="setupts">
 

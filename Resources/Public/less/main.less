@@ -3938,6 +3938,31 @@
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
+@media (min-width: 992px) {
+    .equal-height-container .frame-type-gridelements_pi1 .row {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+
+    .equal-height-container .frame-type-gridelements_pi1 .row > [class*="col-"] {
+        display: -webkit-flex;
+        display: flex;
+        flex: 1;
+    }
+
+    .equal-height-container {
+        .frame-type-gridelements_pi1 {
+            .row > [class*="col-"],
+            .row > [class*="col-"] .img-text-link__wrp {
+                display: -webkit-flex;
+                display: flex;
+            }
+        }
+    }
+}
+
 
 // ext News
 /**************************************/

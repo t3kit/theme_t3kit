@@ -1,0 +1,18 @@
+tx_gridelements.setup.EqualHeightGrid {
+      title = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:gridelements.equalheight.title
+      description = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:gridelements.equalheight.description
+      config {
+        colCount = 1
+        rowCount = 1
+        rows {
+          1 {
+            columns {
+              1 {
+                name = LLL:EXT:theme_t3kit/Resources/Private/Language/GridElements.xlf:gridelements.equalheight.name
+                colPos = 10
+              }
+            }
+          }
+        }
+      }
+    }

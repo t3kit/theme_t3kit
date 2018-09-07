@@ -1426,6 +1426,25 @@
 .footer .tx-pxa-newsletter-subscription .input-group {
   width: 100%;
 }
+@media (min-width: 992px) {
+  .equal-height-container .frame-type-gridelements_pi1 .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .equal-height-container .frame-type-gridelements_pi1 .row > [class*="col-"] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1;
+        flex: 1;
+  }
+  .equal-height-container .frame-type-gridelements_pi1 .row > [class*="col-"],
+  .equal-height-container .frame-type-gridelements_pi1 .row > [class*="col-"] .img-text-link__wrp {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /**************************************/
 /* Default styles for news extension */
 /**************************************/
