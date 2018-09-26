@@ -31,7 +31,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.2",
-    "typo3/minimal": "^9.3",
+    "typo3/minimal": "^9.4",
     "gridelementsteam/gridelements": "dev-master",
     "georgringer/news": "dev-master"
   },
