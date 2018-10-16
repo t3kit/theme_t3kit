@@ -16,13 +16,13 @@
 				<span class="quote__footer-name">{headers.0}<f:render section="nameSuffix" arguments="{title: headers.1, link: data.header_link}" /></span>
 			</f:if>
 			<f:if condition="{headers.1}">
-				<cite class="quote__footer-title" title="{headers.1}">{headers.1}<f:render section="nameSuffix" arguments="{link: data.header_link}" />
+				<span class="quote__footer-title" title="{headers.1}">{headers.1}<f:render section="nameSuffix" arguments="{link: data.header_link}">
 			</f:if>
 			<f:if condition="{data.header_link}">
 				<f:link.typolink parameter="{data.header_link}" class="quote__footer-link">{data.subheader}</f:link.typolink>
 			</f:if>
 			<f:if condition="{headers.1}">
-				</cite>
+				</span>
 			</f:if>
 		</footer>
 	</blockquote>
