@@ -4096,6 +4096,37 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 .slider-container {
   position: relative;
+  height: 0;
+  overflow: hidden;
+}
+.slider-container_loader {
+  display: block;
+  width: 46px;
+  height: 46px;
+  height: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+.slider-container_loader:after {
+  content: " ";
+  display: block;
+  top: 50%;
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #50b4d8;
+  border-color: #50b4d8 transparent #50b4d8 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .slider-container__container {
   position: relative;
