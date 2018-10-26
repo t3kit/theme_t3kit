@@ -1,4 +1,16 @@
 
+#### v2.9.0 `October 26, 2018`
+- **[BUGFIX]** fix collapsible element, fix the issue with collapsed class on the a-tag ([0cee30e](https://github.com/t3kit/theme_t3kit/commit/0cee30e))
+- **[FEATURE]** add a preloader until slider container is initialized (#442) ([d134468](https://github.com/t3kit/theme_t3kit/commit/d134468))
+- **[TASK]** register icons outside BE if-statement so it can show content element icons in frontend editing (#449) ([60f58de](https://github.com/t3kit/theme_t3kit/commit/60f58de))
+- **[BUGFIX]** fix language menu label add missing comma (#445) ([f1a6e7c](https://github.com/t3kit/theme_t3kit/commit/f1a6e7c))
+- **[TASK]** Adapting header style (#443) ([308552a](https://github.com/t3kit/theme_t3kit/commit/308552a))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[BUGFIX]** disable divider heading from being displayed (#444) ([a256c79](https://github.com/t3kit/theme_t3kit/commit/a256c79))
+
+***
+
 #### v2.8.0 `June 27, 2018`
 - **[BUGFIX]** fix js error when ariaLabels object is empty in LogoCarousel CE ([abf817f](https://github.com/t3kit/theme_t3kit/commit/abf817f))
 - **[BUGFIX]** add a possibility to choose an empty value for the column in Adv1ColumnGrid CE ([0b13c3e](https://github.com/t3kit/theme_t3kit/commit/0b13c3e))
