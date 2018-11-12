@@ -38,7 +38,7 @@
     "apache-solr-for-typo3/solr": "~7.5.0",
     "kaystrobach/dyncss-less": "0.7.9",
     "clickstorm/go_maps_ext": "~2.3.1",
-    "clickstorm/cs-seo": "~2.3.3",
+    "clickstorm/cs_seo": "~2.3.3",
     "georgringer/news": "~6.3.0",
     "pixelant/pxa-newsletter-subscription": "~5.0.2",
     "pixelant/pxa-form-enhancement": "~3.1.1",
