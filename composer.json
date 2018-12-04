@@ -48,9 +48,9 @@
     "gridelementsteam/gridelements": "dev-master",
     "clickstorm/go_maps_ext": "dev-master",
     "georgringer/news": "dev-master",
-    "pixelant/pxa-newsletter-subscription": "dev-typo3-v9",
+    "pixelant/pxa-newsletter-subscription": "~9.0.2",
     "pixelant/pxa-form-enhancement": "dev-master",
-    "pixelant/pxa-cookie-bar": "dev-master",
+    "pixelant/pxa-cookie-bar": "~2.1.1",
     "friendsoftypo3/frontend-editing": "~1.4.3"
     }
 }
