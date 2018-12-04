@@ -51,7 +51,7 @@
     "kaystrobach/dyncss-less": "0.7.9",
     "clickstorm/go_maps_ext": "~2.3.1",
     "clickstorm/cs_seo": "~2.3.3",
-    "georgringer/news": "~6.3.0",
+    "georgringer/news": "dev-master",
     "pixelant/pxa-newsletter-subscription": "~5.0.2",
     "pixelant/pxa-form-enhancement": "~3.1.1",
     "pixelant/pxa-cookie-bar": "~2.0.1",
