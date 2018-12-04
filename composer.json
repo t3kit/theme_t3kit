@@ -31,19 +31,19 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.0",
-    "typo3/cms": "~8.7.14",
-    "typo3-ter/realurl": "~2.3.2",
+    "typo3/cms-core": "~8.7.14",
+    "dmitryd/typo3-realurl": "~2.3.2",
     "typo3-themes/themes": "~8.7.0",
-    "typo3-ter/gridelements": "~8.2.1",
-    "typo3-ter/solr": "~7.5.0",
-    "typo3-ter/dyncss-less": "0.7.9",
-    "typo3-ter/go-maps-ext": "~2.3.1",
-    "typo3-ter/cs-seo": "~2.3.3",
+    "gridelementsteam/gridelements": "~8.2.1",
+    "apache-solr-for-typo3/solr": "~7.5.0",
+    "kaystrobach/dyncss-less": "0.7.9",
+    "clickstorm/go_maps_ext": "~2.3.1",
+    "clickstorm/cs_seo": "~2.3.3",
     "georgringer/news": "~6.3.0",
-    "typo3-ter/pxa-newsletter-subscription": "~5.0.2",
-    "typo3-ter/pxa-form-enhancement": "~3.1.1",
-    "typo3-ter/pxa-cookie-bar": "~2.0.1",
-    "typo3-ter/realurl-404-multilingual": "~1.0.9",
-    "typo3-ter/frontend-editing": "~1.3.7"
+    "pixelant/pxa-newsletter-subscription": "~5.0.2",
+    "pixelant/pxa-form-enhancement": "~3.1.1",
+    "pixelant/pxa-cookie-bar": "~2.0.1",
+    "svewap/realurl-404-multilingual": "~1.0.9",
+    "friendsoftypo3/frontend-editing": "~1.3.7"
     }
 }
