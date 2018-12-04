@@ -147,10 +147,14 @@ class ImageRenderer implements FileRendererInterface
 
         $this->processSourceCollection($originalFile, $defaultProcessConfiguration);
 
-        $processedFile = $originalFile->process(
-            ProcessedFile::CONTEXT_IMAGECROPSCALEMASK,
-            $defaultProcessConfiguration
-        );
+        if ((int)$defaultProcessConfiguration['width'] <= (int)$this->defaultWidth) {
+            $processedFile = $originalFile->process(
+                ProcessedFile::CONTEXT_IMAGECROPSCALEMASK,
+                $defaultProcessConfiguration
+            );
+        } else {
+            $processedFile = $originalFile;
+        }
 
         $width = $processedFile->getProperty('width');
         $height = $processedFile->getProperty('height');
