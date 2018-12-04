@@ -46,7 +46,7 @@
 
     "dmitryd/typo3-realurl": "~2.3.2",
     "typo3-themes/themes": "~8.7.0",
-    "gridelementsteam/gridelements": "~8.2.1",
+    "gridelementsteam/gridelements": "dev-master",
     "apache-solr-for-typo3/solr": "~7.5.0",
     "kaystrobach/dyncss-less": "0.7.9",
     "clickstorm/go_maps_ext": "~2.3.1",
