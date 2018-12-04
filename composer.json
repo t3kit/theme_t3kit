@@ -52,9 +52,9 @@
     "clickstorm/go_maps_ext": "~2.3.1",
     "clickstorm/cs_seo": "~2.3.3",
     "georgringer/news": "dev-master",
-    "pixelant/pxa-newsletter-subscription": "~5.0.2",
-    "pixelant/pxa-form-enhancement": "~3.1.1",
-    "pixelant/pxa-cookie-bar": "~2.0.1",
+    "pixelant/pxa-newsletter-subscription": "dev-typo3-v9",
+    "pixelant/pxa-form-enhancement": "dev-master",
+    "pixelant/pxa-cookie-bar": "dev-master",
     "svewap/realurl-404-multilingual": "~1.0.9",
     "friendsoftypo3/frontend-editing": "~1.4.3"
     }
