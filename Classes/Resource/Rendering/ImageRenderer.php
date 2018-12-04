@@ -133,7 +133,7 @@ class ImageRenderer implements FileRendererInterface
             $originalFile = $file;
         }
 
-        $defaultProcessConfiguration['width'] = '360m';
+        $defaultProcessConfiguration['width'] = '1260m';
 
         try {
             $cropVariantCollection = CropVariantCollection::create((string)$file->getProperty('crop'));
