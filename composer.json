@@ -30,8 +30,20 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": "^7.0",
-    "typo3/cms-core": "~8.7.14",
+    "php": "^7.2",
+
+    "typo3/cms-backend": "~9.5.1",
+    "typo3/cms-core": "~9.5.1",
+    "typo3/cms-extbase": "~9.5.1",
+    "typo3/cms-extensionmanager": "~9.5.1",
+    "typo3/cms-fluid": "~9.5.1",
+    "typo3/cms-frontend": "~9.5.1",
+    "typo3/cms-install": "~9.5.1",
+    "typo3/cms-fluid-styled-content": "~9.5.1",
+    "typo3/cms-rte-ckeditor": "~9.5.1",
+    "typo3/cms-form": "~9.5.1",
+    "typo3/cms-felogin": "~9.5.1",
+
     "dmitryd/typo3-realurl": "~2.3.2",
     "typo3-themes/themes": "~8.7.0",
     "gridelementsteam/gridelements": "~8.2.1",
