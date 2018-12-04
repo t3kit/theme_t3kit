@@ -46,7 +46,6 @@
 
 
     "gridelementsteam/gridelements": "dev-master",
-    "apache-solr-for-typo3/solr": "dev-master",
     "clickstorm/go_maps_ext": "dev-master",
     "georgringer/news": "dev-master",
     "pixelant/pxa-newsletter-subscription": "dev-typo3-v9",
