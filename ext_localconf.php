@@ -72,3 +72,9 @@ $signalSlotDispatcher->connect(
     \T3kit\themeT3kit\Slot\GetSystemInformationSlot::class,
     'getSystemInformation'
 );
+
+call_user_func(function () {
+    /** @var \TYPO3\CMS\Core\Resource\Rendering\RendererRegistry $rendererRegistry */
+    $rendererRegistry = \TYPO3\CMS\Core\Resource\Rendering\RendererRegistry::getInstance();
+    $rendererRegistry->registerRendererClass(\T3kit\themeT3kit\Resource\Rendering\ImageRenderer::class);
+});
