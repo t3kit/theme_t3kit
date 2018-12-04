@@ -44,18 +44,14 @@
     "typo3/cms-form": "~9.5.1",
     "typo3/cms-felogin": "~9.5.1",
 
-    "dmitryd/typo3-realurl": "~2.3.2",
-    "typo3-themes/themes": "~8.7.0",
+
     "gridelementsteam/gridelements": "dev-master",
     "apache-solr-for-typo3/solr": "dev-master",
-    "kaystrobach/dyncss-less": "0.7.9",
     "clickstorm/go_maps_ext": "dev-master",
-    "clickstorm/cs_seo": "~4.0.0",
     "georgringer/news": "dev-master",
     "pixelant/pxa-newsletter-subscription": "dev-typo3-v9",
     "pixelant/pxa-form-enhancement": "dev-master",
     "pixelant/pxa-cookie-bar": "dev-master",
-    "svewap/realurl-404-multilingual": "~1.0.9",
     "friendsoftypo3/frontend-editing": "~1.4.3"
     }
 }
