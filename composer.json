@@ -45,7 +45,7 @@
     "typo3/cms-felogin": "~9.5.1",
 
 
-    "gridelementsteam/gridelements": "dev-master",
+    "gridelementsteam/gridelements": "~9.0.0",
     "clickstorm/go_maps_ext": "dev-master",
     "georgringer/news": "dev-master",
     "pixelant/pxa-newsletter-subscription": "~9.0.2",
