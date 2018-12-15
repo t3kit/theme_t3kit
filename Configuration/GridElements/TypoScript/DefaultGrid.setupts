@@ -9,6 +9,7 @@ lib.gridelements {
             20 = EXT:fluid_styled_content/Resources/Private/Partials/
             30 = EXT:theme_t3kit/Resources/Private/Partials/ContentElements/
             40 = EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent/
+            40 = EXT:theme_t3kit/Resources/Private/Partials/GridElements/
         }
         templateRootPaths {
             20 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/
@@ -19,6 +20,10 @@ lib.gridelements {
             # "inherit" from lib.fluidContent
             800 < lib.contentElement.dataProcessing.800
             830 < lib.contentElement.dataProcessing.830
+            200 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            200 {
+                references.fieldName = media
+            }
         }
     }
 }

@@ -1,4 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:variable name="container">{data.pi_flexform.data.columns.lDEF.container.vDEF}</f:variable>
+
 <f:spaceless>
 
 	<f:comment><!-- ### Wrapper class===frame_class||Margin Top===space_before_class||Margin Bottom===space_after_class||Background Image end if set ### --></f:comment>
@@ -21,7 +24,7 @@
 	</f:if>
 
 	<f:comment><!-- ### element body ### --></f:comment>
-	<div id="c{data.uid}" class="frame frame-type-{data.CType} {layoutClass} {f:if(condition: data.layout, then: ' frame-layout-{data.layout}')} {alignClass} {f:if( condition: data.flexform_container, then: ' {data.flexform_container}')}">
+	<div id="c{data.uid}" class="frame frame-type-{data.CType} {layoutClass} {f:if(condition: data.layout, then: ' frame-layout-{data.layout}')} {alignClass} {f:if( condition: container, then: ' {container}')}">
 		<f:if condition="{data._LOCALIZED_UID}">
 			<a id="c{data._LOCALIZED_UID}"></a>
 		</f:if>

@@ -1,0 +1,7 @@
+<f:variable name="row">{children.1}</f:variable>
+<f:variable name="col">{col}</f:variable>
+
+<f:for each="{row.{col}}" as="elem">
+
+		<f:cObject typoscriptObjectPath="tt_content.{elem.data.CType}" data="{elem.data}"/>
+</f:for>

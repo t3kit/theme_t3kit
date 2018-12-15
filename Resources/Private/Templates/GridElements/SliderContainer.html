@@ -8,7 +8,7 @@
 	<div class="slider-container slider-container-{f:if(condition: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', then: 'effect', else: 'default')} {f:if(condition: '{data.pi_flexform.data.columns.lDEF.paginationPosition.vDEF}', then: '_pagination-outside', else: '_pagination-inside')} {f:if(condition: '{data.pi_flexform.data.columns.lDEF.arrowsPosition.vDEF}', then: '_arrows-outside', else: '_arrows-inside')}">
 		<div class="swiper-container slider-container__container js__slider-container__container" data-autoplay="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.autoplay.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.autoplay.vDEF}')}" data-loop="{f:if(condition: data.pi_flexform.data.columns.lDEF.loop.vDEF, then: 'loop')}" data-effect="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.effect.vDEF}', else: 'slider')}" data-slidesperview="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.slidesPerView.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.slidesPerView.vDEF}', else: 3)}" data-speed="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.speed.vDEF}', then: '{data.pi_flexform.data.columns.lDEF.speed.vDEF}', else: 300)}">
 			<div class="swiper-wrapper slider-container__wrapper js__slider-container__wrapper">
-				<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+				<f:render partial="RenederColumns" arguments="{children: children, col: 0}"/>
 			</div>
 		</div>
 		<f:if condition="{data.pi_flexform.data.columns.lDEF.paggination.vDEF}">
