@@ -17,6 +17,10 @@ lib.gridelements {
             40 = EXT:theme_t3kit/Resources/Private/Templates/GridElements/
         }
         dataProcessing {
+            10.default.options {
+                respectColumns = 1
+                respectRows = 1
+            }
             # "inherit" from lib.fluidContent
             800 < lib.contentElement.dataProcessing.800
             830 < lib.contentElement.dataProcessing.830
