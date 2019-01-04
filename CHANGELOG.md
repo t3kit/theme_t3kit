@@ -1,4 +1,34 @@
 
+#### v2.10.0-alpha `January 4, 2019`
+
+- **[TASK]** install cs_seo extension (#456) ([140062b](https://github.com/t3kit/theme_t3kit/commit/140062b))
+- **[BUGFIX]** implement LoggerAwareInterface interface in order to get logger inject (#455) ([dfe0bc4](https://github.com/t3kit/theme_t3kit/commit/dfe0bc4))
+- **[TASK]** setup default Gridelements options ([790b500](https://github.com/t3kit/theme_t3kit/commit/790b500))
+- **[BUGFIX]** fix rendering of content elements inside gridelements columns (#454) ([78814ed](https://github.com/t3kit/theme_t3kit/commit/78814ed))
+- **[BUGFIX]** fix gridelements templateRootPaths ([b36b185](https://github.com/t3kit/theme_t3kit/commit/b36b185))
+- **[TASK]** update Gridelements extension to v9 ([30023da](https://github.com/t3kit/theme_t3kit/commit/30023da))
+- **[BUGFIX]** use correct FlexFormService in FlexFormProcessor ([7c8db4e](https://github.com/t3kit/theme_t3kit/commit/7c8db4e))
+- **[TASK]** update pxa_newsletter_subscription, form-enhancement and cookie-bar  ext-s ([c112243](https://github.com/t3kit/theme_t3kit/commit/c112243))
+- **[BUGFIX]** use correct FlexFormService in FlexFormProcessor ([68554f3](https://github.com/t3kit/theme_t3kit/commit/68554f3))
+- **[TASK]** remove usage of deprecated classes and functions. Log error if not possible to write to realurl config, instead of throwing exception ([217d628](https://github.com/t3kit/theme_t3kit/commit/217d628))
+- **[TASK]** use argument source ([f4c9e02](https://github.com/t3kit/theme_t3kit/commit/f4c9e02))
+- **[TASK]** register argument source ([a10f0a1](https://github.com/t3kit/theme_t3kit/commit/a10f0a1))
+- **[TASK]** replace removed extRelPath ([e46e794](https://github.com/t3kit/theme_t3kit/commit/e46e794))
+- **[TASK]** remove realurl, themes, dyncss, less-cs_seo, 404 extensions ([c54abb3](https://github.com/t3kit/theme_t3kit/commit/c54abb3))
+- **[TASK]** use master branch for solr ext. ([58a823a](https://github.com/t3kit/theme_t3kit/commit/58a823a))
+- **[TASK]** update cs_seo and go_maps_ext extensions ([8a97ecd](https://github.com/t3kit/theme_t3kit/commit/8a97ecd))
+- **[TASK]** update PXA extensions ([bbad05e](https://github.com/t3kit/theme_t3kit/commit/bbad05e))
+- **[TASK]** use last version of frontend-editing ext. 1.4.3 ([11874f0](https://github.com/t3kit/theme_t3kit/commit/11874f0))
+- **[TASK]** use master branch for gridelements ext. ([ff27784](https://github.com/t3kit/theme_t3kit/commit/ff27784))
+- **[TASK]** use master branch for NEWS ext. ([27a08c2](https://github.com/t3kit/theme_t3kit/commit/27a08c2))
+- **[TASK]** update typo3 to v9.5 ([008cee4](https://github.com/t3kit/theme_t3kit/commit/008cee4))
+- **[BUGFIX]** Fix packages names and solve dependancy to typo3-core to its packages (#452) ([6be2ed4](https://github.com/t3kit/theme_t3kit/commit/6be2ed4))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[TASK]** adapt grid templates to use with Gridelements v9 ([a78d995](https://github.com/t3kit/theme_t3kit/commit/a78d995))
+
+***
+
 #### v2.9.0 `October 26, 2018`
 - **[BUGFIX]** fix collapsible element, fix the issue with collapsed class on the a-tag ([0cee30e](https://github.com/t3kit/theme_t3kit/commit/0cee30e))
 - **[FEATURE]** add a preloader until slider container is initialized (#442) ([d134468](https://github.com/t3kit/theme_t3kit/commit/d134468))
