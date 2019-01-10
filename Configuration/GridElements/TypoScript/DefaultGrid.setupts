@@ -9,7 +9,7 @@ lib.gridelements {
             20 = EXT:fluid_styled_content/Resources/Private/Partials/
             30 = EXT:theme_t3kit/Resources/Private/Partials/ContentElements/
             40 = EXT:theme_t3kit/Resources/Private/Partials/FluidStyledContent/
-            40 = EXT:theme_t3kit/Resources/Private/Partials/GridElements/
+            50 = EXT:theme_t3kit/Resources/Private/Partials/GridElements/
         }
         templateRootPaths {
             20 = EXT:theme_t3kit/Resources/Private/Templates/ContentElements/
