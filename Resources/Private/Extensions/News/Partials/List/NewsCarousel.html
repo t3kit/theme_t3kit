@@ -18,7 +18,7 @@
 									<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
 										<f:if condition="{mediaElement.originalResource.type} == 2">
 											<div class="news-carousel__media-preview">
-												<f:media file="{mediaElement}" class="object-fit"/>
+												<f:media file="{mediaElement}" class="object-fit" style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px"/>
 											</div>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 4">
@@ -26,7 +26,7 @@
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 5">
 											<div class="news-carousel__media-preview">
-												<f:media file="{mediaElement}" class="object-fit"/>
+												<f:media file="{mediaElement}" class="object-fit" style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px"/>
 											</div>
 										</f:if>
 									</f:alias>
@@ -54,7 +54,7 @@
 									<div class="no-media-element" aria-hidden="true">
 										<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
 											<div class="news-carousel__media-preview">
-												<f:image src="{settings.list.media.dummyImage}" class="img-responsive object-fit" title="" alt="" />
+												<f:image src="{settings.list.media.dummyImage}" class="img-responsive object-fit" title="" alt="" style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px" />
 											</div>
 										</n:link>
 									</div>
