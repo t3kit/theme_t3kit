@@ -130,6 +130,7 @@ jQuery(function ($) {
   var $languageMenuBtn = $('.js__header-top__language-menu-btn')
   var $languageMenuBox = $('.js__header-top__language-menu-box')
   var $languageMenuBoxCloseBtn = $('.js__header-top__language-menu-box-close-btn')
+  var $metaNavigationNav = $('.js__header-top_meta-nav')
 
   $mainNavigationSearchBtn.on('click', function (e) {
     e.preventDefault()
@@ -149,6 +150,7 @@ jQuery(function ($) {
     e.preventDefault()
     $languageMenuBox.addClass('_language-menu-box-visible')
     $languageMenuOverlay.toggleClass('_language-menu-box-overlay-visible')
+    $metaNavigationNav.addClass('hidden')
   })
   $languageMenuOverlay.on('click', function () {
     $(this).toggleClass('_language-menu-box-overlay-visible')
@@ -157,5 +159,6 @@ jQuery(function ($) {
   $languageMenuBoxCloseBtn.on('click', function () {
     $languageMenuOverlay.toggleClass('_language-menu-box-overlay-visible')
     $languageMenuBox.removeClass('_language-menu-box-visible')
+    $metaNavigationNav.removeClass('hidden')
   })
 })
