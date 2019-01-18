@@ -16,14 +16,14 @@
 				<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
 				<f:variable name="languageLabel"><f:spaceless><f:render section="getLanguageLabel" arguments="{_all}" /></f:spaceless></f:variable>
 				<f:link.page addQueryString="1"
-							 additionalParams="{L: language.languageUid}"
-							 title="{language.label}"
-							 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
-							 argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
-						<span class="flag-icon flag-icon-{languageFlag}"></span> {languageLabel}
+										 additionalParams="{L: language.languageUid}"
+										 title="{language.label}"
+										 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
+										 argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
+					<span class="flag-icon flag-icon-{languageFlag}"></span> {languageLabel}
 				</f:spaceless></f:link.page>
 			</f:for>
-			<a class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></a>
+			<button class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></button>
 		</div>
 	</div>
 </f:if>
