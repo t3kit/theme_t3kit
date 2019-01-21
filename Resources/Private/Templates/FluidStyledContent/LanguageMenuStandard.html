@@ -3,7 +3,7 @@
 <f:if condition="{languages}">
 	<div class="header-top__language-menu">
 		<f:for each="{languages}" as="language">
-            <f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
+			<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
 			<f:if condition="{language.active}">
 				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{languageFlag}"></span><f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangLabel')}">
 					<span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label', extensionName:'theme_t3kit')}</span>
@@ -12,10 +12,10 @@
 		</f:for>
 		<div class="header-top__language-menu-box js__header-top__language-menu-box">
 			<f:for each="{languages}" as="language">
-                <f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
+			<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
 				<f:link.page addQueryString="1"
-							 additionalParams="{L: language.languageUid}"
-							 title="{language.label}"
+							 additionalParams="{L: language.languageId}"
+							 title="{language.title}"
 							 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
 							 argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
 						<span class="flag-icon flag-icon-{languageFlag}"></span> {language.navigationTitle}
@@ -40,6 +40,6 @@
 				</f:if>
 			</f:for>
 		</f:else>
-    </f:if>
+	</f:if>
 	{getLanguageFlag}
 </f:section>
