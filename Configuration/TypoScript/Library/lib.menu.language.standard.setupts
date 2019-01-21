@@ -10,17 +10,10 @@ lib.menu.language.standard {
         defaultLanguageLabel.value = {$themes.languages.default.label}
     }
     dataProcessing {
-        10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
         10 {
-            special = language
-            special.value = 0
-            special.value {
-                override = 0,{$themes.languages.available}
-                override.if {
-                    isTrue = {$themes.languages.available}
-                }
-            }
-            as = languages
+           languages = auto
+           as = languages
         }
         20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         20 {
