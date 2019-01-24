@@ -2584,6 +2584,51 @@ div.awesomplete li[aria-selected="true"] mark {
 .ce-above .ce-gallery[data-ce-columns='8'] .ce-column {
   width: calc(100% / 8 - 10px);
 }
+[class*="lightbox__wrp-"] a {
+  position: relative;
+}
+[class*="lightbox__wrp-"] a:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  font-size: 22px;
+  color: #eef8fb;
+  z-index: 110;
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+  content: '\e9cb';
+}
+[class*="lightbox__wrp-"] a.lightbox:before {
+  content: '\e987';
+}
+[class*="lightbox__wrp-"] a:hover:before {
+  opacity: 1;
+}
+@media (min-width: 768px) {
+  [class*="lightbox__wrp-"] a:before {
+    bottom: 10px;
+    right: 10px;
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  [class*="lightbox__wrp-"] a:before {
+    bottom: 14px;
+    right: 14px;
+    font-size: 34px;
+  }
+}
 .sl-overlay {
   background: #313131;
   opacity: 0.8;
