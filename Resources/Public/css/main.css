@@ -5625,6 +5625,7 @@ h2 {
   color: #fff;
   background-color: #50b4d8;
   border-color: transparent;
+  white-space: normal;
 }
 .btn-default:focus,
 .btn-default:hover {
@@ -5636,6 +5637,7 @@ h2 {
   color: #50b4d8;
   background-color: #fff;
   border-color: transparent;
+  white-space: normal;
 }
 .btn-default--inverted:focus,
 .btn-default--inverted:hover {
@@ -5647,6 +5649,7 @@ h2 {
   color: #50b4d8;
   background-color: transparent;
   border-color: #50b4d8;
+  white-space: normal;
 }
 .btn-bordered:focus,
 .btn-bordered:hover {
@@ -5658,6 +5661,7 @@ h2 {
   color: #fff;
   background-color: transparent;
   border-color: #fff;
+  white-space: normal;
 }
 .btn-bordered--inverted:focus,
 .btn-bordered--inverted:hover {
