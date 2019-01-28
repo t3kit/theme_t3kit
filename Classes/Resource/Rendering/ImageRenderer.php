@@ -134,6 +134,12 @@ class ImageRenderer implements FileRendererInterface
         }
 
         $defaultProcessConfiguration['width'] = '1260m';
+        if($width === 0 || $width > 1260) {
+            $defaultProcessConfiguration['width'] = '1260m';
+        } else {
+            $defaultProcessConfiguration['width'] = $width.'m';
+        }
+
 
         try {
             $cropVariantCollection = CropVariantCollection::create((string)$file->getProperty('crop'));
@@ -146,15 +152,10 @@ class ImageRenderer implements FileRendererInterface
         }
 
         $this->processSourceCollection($originalFile, $defaultProcessConfiguration);
-
-        if ((int)$defaultProcessConfiguration['width'] <= (int)$this->defaultWidth) {
-            $processedFile = $originalFile->process(
-                ProcessedFile::CONTEXT_IMAGECROPSCALEMASK,
-                $defaultProcessConfiguration
-            );
-        } else {
-            $processedFile = $originalFile;
-        }
+        $processedFile = $originalFile->process(
+            ProcessedFile::CONTEXT_IMAGECROPSCALEMASK,
+            $defaultProcessConfiguration
+        );
 
         $width = $processedFile->getProperty('width');
         $height = $processedFile->getProperty('height');
@@ -190,7 +191,7 @@ class ImageRenderer implements FileRendererInterface
                     $this->sizes[] = trim($sourceCollection['sizes'], ' ,');
                 }
 
-                if ((int)$sourceCollection['width'] > (int)$this->defaultWidth) {
+                if ((int)$sourceCollection['width'] > (int)$this->defaultWidth*2) {
                     throw new \RuntimeException();
                 }
 
