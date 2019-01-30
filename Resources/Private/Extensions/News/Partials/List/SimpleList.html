@@ -19,86 +19,81 @@
 
 
 <f:section name="simpleList">
-	<article class="news-simple-list__item clearfix articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+	<article class="TOTEST news-simple-list__item clearfix articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
 		<n:excludeDisplayedNews newsItem="{newsItem}"/>
-
-		<f:if condition="{newsItem.mediaPreviews}">
-			<!-- media preview element -->
-			<f:then>
-				<div class="news-simple-list__img-wrap">
-					<n:link newsItem="{newsItem}" settings="{settings}" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
-						<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
-							<f:if condition="{mediaElement.originalResource.type} == 2">
-								<div class="news-simple-list__media-preview">
-									<f:media file="{mediaElement}" class="object-fit"/>
-								</div>
-							</f:if>
-							<f:if condition="{mediaElement.originalResource.type} == 4">
-								<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
-							</f:if>
-							<f:if condition="{mediaElement.originalResource.type} == 5">
-								<div class="news-simple-list__media-preview">
-									<f:media file="{mediaElement}" class="object-fit"/>
-								</div>
-							</f:if>
-						</f:alias>
-					</n:link>
-				</div>
-			</f:then>
-			<f:else>
-				<f:if condition="{settings.displayDummyIfNoMedia}">
+		<n:link class="news-simple-list__link" newsItem="{newsItem}" settings="{settings}" additionalAttributes="{aria-label: '{f:translate(key:\'news.more-link.linktext\', extensionName:\'Theme_t3kit\')}{newsItem.title}'}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
+			<f:if condition="{newsItem.mediaPreviews}">
+				<f:comment>Media preview element</f:comment>
+				<f:then>
 					<div class="news-simple-list__img-wrap">
-						<div class="no-media-element">
-							<n:link newsItem="{newsItem}" settings="{settings}" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
+							<f:alias map="{mediaElement: '{newsItem.mediaPreviews.0}'}">
+								<f:if condition="{mediaElement.originalResource.type} == 2">
+									<div class="news-simple-list__media-preview">
+										<f:media file="{mediaElement}" class="object-fit"/>
+									</div>
+								</f:if>
+								<f:if condition="{mediaElement.originalResource.type} == 4">
+									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}" />
+								</f:if>
+								<f:if condition="{mediaElement.originalResource.type} == 5">
+									<div class="news-simple-list__media-preview">
+										<f:media file="{mediaElement}" class="object-fit"/>
+									</div>
+								</f:if>
+							</f:alias>
+					</div>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.displayDummyIfNoMedia}">
+						<div class="news-simple-list__img-wrap">
+							<div class="no-media-element">
 								<div class="news-simple-list__media-preview">
 									<f:image src="{settings.list.media.dummyImage}" class="img-responsive object-fit" title="" alt="" />
 								</div>
-							</n:link>
+							</div>
 						</div>
-					</div>
-				</f:if>
-			</f:else>
-		</f:if>
-
-		<div class="news-simple-list__text js__news-simple-list__dotdotdot">
-
-			<!-- date -->
-			<span class="news-list-date news-simple-list__date-wrp">
-				<span class="news-simple-list__date-text">
-					<f:translate extensionName="Theme_t3kit" key="news.date.text"/>
-				</span>
-				<span class="news-simple-list__date">
-					<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-						<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-						<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
-					</time>
-				</span>
-			</span>
-
-			<!-- header -->
-			<f:if condition="{newsItem.title}">
-				<div class="news-article-header news-simple-list__header">
-					<h3>{newsItem.title}</h3>
-				</div>
+					</f:if>
+				</f:else>
 			</f:if>
 
+			<div class="news-simple-list__text js__news-simple-list__dotdotdot">
 
-			<!-- teaser -->
-			<div class="teaser-text news-simple-list__teaser">
-				<f:if condition="{newsItem.teaser}">
-					<f:then>
-						<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.simpleList.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
-					</f:then>
-					<f:else>
-						<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.simpleList.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
-					</f:else>
+				<f:comment>Date</f:comment>
+				<span class="news-list-date news-simple-list__date-wrp">
+					<span class="news-simple-list__date-text">
+						<f:translate extensionName="Theme_t3kit" key="news.date.text"/>
+					</span>
+					<span class="news-simple-list__date">
+						<time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+							<meta itemprop="datePublished" content="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}" />
+						</time>
+					</span>
+				</span>
+
+				<f:comment>Header</f:comment>
+				<f:if condition="{newsItem.title}">
+					<div class="news-article-header news-simple-list__header">
+						<h3>{newsItem.title}</h3>
+					</div>
 				</f:if>
+
+
+				<f:comment>Teaser</f:comment>
+				<div class="teaser-text news-simple-list__teaser">
+					<f:if condition="{newsItem.teaser}">
+						<f:then>
+							<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.simpleList.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+						</f:then>
+						<f:else>
+							<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.simpleList.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+						</f:else>
+					</f:if>
+				</div>
 			</div>
-		</div>
-		<div class="news-simple-list__more-link">
-			<n:link newsItem="{newsItem}" settings="{settings}" class="more" title="{f:translate(key:'news.more-link.linktext', extensionName:'Theme_t3kit')}{newsItem.title}">
+			<div class="news-simple-list__more-text">
 				<f:translate key="more-link"/>
-			</n:link>
-		</div>
+			</div>
+		</n:link>
 	</article>
 </f:section>
