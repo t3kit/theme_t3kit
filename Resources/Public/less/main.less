@@ -5276,6 +5276,64 @@ div.awesomplete li[aria-selected="true"] mark {
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
+// ============================
+// ======== Lightbox styles  ====
+// ============================
+[class*="lightbox__wrp-"] {
+    a {
+        position: relative;
+
+        &:before {
+            .icons();
+
+            position: absolute;
+            bottom: 7px;
+            right: 7px;
+            font-size: 22px;
+            color: tint(@main-color, 90%);
+            z-index: 110;
+            opacity: 0.7;
+            transition: opacity 0.5s ease;
+
+            // External link icon
+            content: '\e9cb';
+        }
+
+        &.lightbox:before {
+            // Lightbox zoom-in icon
+            content: '\e987';
+        }
+
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    [class*="lightbox__wrp-"] {
+        a {
+            &:before {
+                bottom: 10px;
+                right: 10px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    [class*="lightbox__wrp-"] {
+        a {
+            &:before {
+                bottom: 14px;
+                right: 14px;
+                font-size: 34px;
+            }
+        }
+    }
+}
+
 // Simplelightbox
 // https://github.com/andreknieriem/simplelightbox
 
