@@ -1,6 +1,8 @@
 <?php
 namespace T3kit\themeT3kit\ViewHelpers\Render;
 
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -25,7 +27,7 @@ namespace T3kit\themeT3kit\ViewHelpers\Render;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class SvgViewHelper extends AbstractViewHelper
 {
 
     /**
@@ -46,6 +48,7 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
     public function initializeArguments()
     {
         parent::initializeArguments();
+        $this->registerArgument('source', 'string', 'Specifies the source file', true);
         $this->registerArgument('class', 'string', 'Specifies an alternate class for the svg', false);
         $this->registerArgument('width', 'float', 'Specifies a width for the svg', false);
         $this->registerArgument('height', 'float', 'Specifies a height for the svg', false);
@@ -55,11 +58,10 @@ class SvgViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
     /**
      * Generate a list from the content
      *
-     * @param string $source
      */
-    public function render($source)
+    public function render()
     {
-        $sourceAbs = PATH_site . $source;
+        $sourceAbs = PATH_site . $this->arguments['source'];
 
         if (!file_exists($sourceAbs)) {
             return '<!-- unable to open file: ' . $source . ' (missing) -->';

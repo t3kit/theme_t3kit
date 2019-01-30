@@ -1,11 +1,15 @@
 <f:layout name="NoBgImage" />
 <f:section name="Main">
 	<ul class="nav {f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'nav-pills', else: 'nav-tabs')}" role="tablist" id="tab-{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" >
-		<f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tabIteration">
-		 	<li {f:if(condition: '{tabIteration.index} == 0', then: ' class="active"', else: '')}><a href="#tab-{tab.uid}" aria-controls="tab-{tab.uid}" role="tab" data-toggle="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'pill', else: 'tab')}">{tab.header}</a></li>
+		<f:for each="{children.1.0}" as="tab" iteration="tabIteration">
+			<li {f:if(condition: '{tabIteration.index} == 0', then: ' class="active"', else: '')}><a href="#tab-{tab.data.uid}" aria-controls="tab-{tab.data.uid}" role="tab" data-toggle="{f:if(condition: '{data.pi_flexform.data.columns.lDEF.tabstyle.vDEF}', then: 'pill', else: 'tab')}">{tab.data.header}</a></li>
 		</f:for>
 	</ul>
 	<div class="tab-content">
-		<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+		<f:for each="{children.1.0}" as="tab" iteration="tabIteration">
+			<div role="tabpanel" class="tab-pane {f:if(condition: '{tabIteration.index} == 0', then: ' active', else: '')}" id="tab-{tab.data.uid}">
+				<f:cObject typoscriptObjectPath="lib.content.gridelementsRender" >{tab.data.uid}</f:cObject>
+			</div>
+		</f:for>
 	</div>
 </f:section>

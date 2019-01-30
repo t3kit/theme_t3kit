@@ -5276,6 +5276,64 @@ div.awesomplete li[aria-selected="true"] mark {
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
+// ============================
+// ======== Lightbox styles  ====
+// ============================
+[class*="lightbox__wrp-"] {
+    a {
+        position: relative;
+
+        &:before {
+            .icons();
+
+            position: absolute;
+            bottom: 7px;
+            right: 7px;
+            font-size: 22px;
+            color: tint(@main-color, 90%);
+            z-index: 110;
+            opacity: 0.7;
+            transition: opacity 0.5s ease;
+
+            // External link icon
+            content: '\e9cb';
+        }
+
+        &.lightbox:before {
+            // Lightbox zoom-in icon
+            content: '\e987';
+        }
+
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    [class*="lightbox__wrp-"] {
+        a {
+            &:before {
+                bottom: 10px;
+                right: 10px;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    [class*="lightbox__wrp-"] {
+        a {
+            &:before {
+                bottom: 14px;
+                right: 14px;
+                font-size: 34px;
+            }
+        }
+    }
+}
+
 // Simplelightbox
 // https://github.com/andreknieriem/simplelightbox
 
@@ -7122,6 +7180,41 @@ div.awesomplete li[aria-selected="true"] mark {
 
 .slider-container {
     position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.slider-container_loader {
+    display: block;
+    width: 46px;
+    height: 46px;
+    height: 350px;
+    position: relative;
+    margin: 0 auto;
+
+    &:after {
+        content: " ";
+        display: block;
+        top: 50%;
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        margin: 1px;
+        border-radius: 50%;
+        border: 5px solid @main-color;
+        border-color: @main-color transparent @main-color transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .slider-container__container {
@@ -7673,7 +7766,7 @@ div.awesomplete li[aria-selected="true"] mark {
     background-color: rgba(0, 0, 0, 0.4);
     bottom: 0;
     text-align: center;
-    padding: 20px 20px 45px;
+    padding: 20px 45px 45px;
     width: 100%;
 
     /* Better Font Rendering =========== */
@@ -7796,7 +7889,7 @@ div.awesomplete li[aria-selected="true"] mark {
 
     .carousel-caption {
         text-align: left;
-        padding: 15px 25px 25px 65px;
+        padding: 15px 45px 25px;
     }
 
     // Indicators stands in carousel caption area

@@ -23,3 +23,14 @@ lib.content.top {
     50 < styles.content.get
     50.select.where = colPos=3
 }
+
+# Use for gridelements columns render
+lib.content.gridelementsRender = COA
+lib.content.gridelementsRender {
+    50 = RECORDS
+    50 {
+        tables = tt_content
+        source.current = 1
+        dontCheckPid = 1
+    }
+}

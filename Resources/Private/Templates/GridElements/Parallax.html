@@ -14,6 +14,6 @@
 				<div class="parallax parallax-resimg clearfix {f:cObject(typoscriptObjectPath:'lib.responsiveBackgroundImage', data:files.0.uid)} {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" style="height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};" >
 		</f:if>
 	</f:if>
-	<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+	<f:render partial="RenederColumns" arguments="{children: children, col: 0}"/>
 </div>
 </f:section>

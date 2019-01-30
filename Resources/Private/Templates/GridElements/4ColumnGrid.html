@@ -3,16 +3,16 @@
 	<f:comment><!-- ### Content ### --></f:comment>
 	<div class="row">
 		<div class="col-md-3">
-			<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+			<f:render partial="RenederColumns" arguments="{children: children, col: 0}"/>
 		</div>
 		<div class="col-md-3">
-			<f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>
+			<f:render partial="RenederColumns" arguments="{children: children, col: 1}"/>
 		</div>
 		<div class="col-md-3">
-			<f:format.raw>{data.tx_gridelements_view_column_2}</f:format.raw>
+			<f:render partial="RenederColumns" arguments="{children: children, col: 2}"/>
 		</div>
 		<div class="col-md-3">
-			<f:format.raw>{data.tx_gridelements_view_column_3}</f:format.raw>
+			<f:render partial="RenederColumns" arguments="{children: children, col: 3}"/>
 		</div>
 	</div>
 </f:section>

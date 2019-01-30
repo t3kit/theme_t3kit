@@ -3,10 +3,11 @@
 
 namespace T3kit\themeT3kit\Utility;
 
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Messaging\FlashMessageQueue;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Lang\LanguageService;
+use TYPO3\CMS\Core\Localization\LanguageService;
 
 /**
  * Class MainUtility
@@ -29,11 +30,7 @@ class HelperUtility
     public static function getExtConf()
     {
         if (self::$extConf === null) {
-            if (isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['theme_t3kit'])) {
-                self::$extConf = unserialize((string)$GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['theme_t3kit']);
-            } else {
-                self::$extConf = [];
-            }
+            self::$extConf = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('theme_t3kit') ?: [];
         }
 
         return self::$extConf;

@@ -1,10 +1,47 @@
 <f:layout name="Default" />
 <f:section name="Main">
+
+	<f:variable name="column_1_xs">{data.pi_flexform.data.columns.lDEF.column_1_xs.vDEF}</f:variable>
+	<f:variable name="column_1_sm">{data.pi_flexform.data.columns.lDEF.column_1_sm.vDEF}</f:variable>
+	<f:variable name="column_1_md">{data.pi_flexform.data.columns.lDEF.column_1_md.vDEF}</f:variable>
+	<f:variable name="column_1_lg">{data.pi_flexform.data.columns.lDEF.column_1_lg.vDEF}</f:variable>
+	<f:variable name="column_1_offset">{data.pi_flexform.data.columns.lDEF.column_1_offset.vDEF}</f:variable>
+	<f:variable name="column_1_class">{data.pi_flexform.data.columns.lDEF.column_1_class.vDEF}</f:variable>
+
+	<f:variable name="column_2_xs">{data.pi_flexform.data.columns.lDEF.column_2_xs.vDEF}</f:variable>
+	<f:variable name="column_2_sm">{data.pi_flexform.data.columns.lDEF.column_2_sm.vDEF}</f:variable>
+	<f:variable name="column_2_md">{data.pi_flexform.data.columns.lDEF.column_2_md.vDEF}</f:variable>
+	<f:variable name="column_2_lg">{data.pi_flexform.data.columns.lDEF.column_2_lg.vDEF}</f:variable>
+	<f:variable name="column_2_offset">{data.pi_flexform.data.columns.lDEF.column_2_offset.vDEF}</f:variable>
+	<f:variable name="column_2_class">{data.pi_flexform.data.columns.lDEF.column_2_class.vDEF}</f:variable>
+
+	<f:variable name="column_3_xs">{data.pi_flexform.data.columns.lDEF.column_3_xs.vDEF}</f:variable>
+	<f:variable name="column_3_sm">{data.pi_flexform.data.columns.lDEF.column_3_sm.vDEF}</f:variable>
+	<f:variable name="column_3_md">{data.pi_flexform.data.columns.lDEF.column_3_md.vDEF}</f:variable>
+	<f:variable name="column_3_lg">{data.pi_flexform.data.columns.lDEF.column_3_lg.vDEF}</f:variable>
+	<f:variable name="column_3_offset">{data.pi_flexform.data.columns.lDEF.column_3_offset.vDEF}</f:variable>
+	<f:variable name="column_3_class">{data.pi_flexform.data.columns.lDEF.column_3_class.vDEF}</f:variable>
+
+	<f:variable name="column_4_xs">{data.pi_flexform.data.columns.lDEF.column_4_xs.vDEF}</f:variable>
+	<f:variable name="column_4_sm">{data.pi_flexform.data.columns.lDEF.column_4_sm.vDEF}</f:variable>
+	<f:variable name="column_4_md">{data.pi_flexform.data.columns.lDEF.column_4_md.vDEF}</f:variable>
+	<f:variable name="column_4_lg">{data.pi_flexform.data.columns.lDEF.column_4_lg.vDEF}</f:variable>
+	<f:variable name="column_4_offset">{data.pi_flexform.data.columns.lDEF.column_4_offset.vDEF}</f:variable>
+	<f:variable name="column_4_class">{data.pi_flexform.data.columns.lDEF.column_4_class.vDEF}</f:variable>
+
 	<f:comment><!-- ### Content ### --></f:comment>
 	<div class="row">
-		<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
-		<f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>
-		<f:format.raw>{data.tx_gridelements_view_column_2}</f:format.raw>
-		<f:format.raw>{data.tx_gridelements_view_column_3}</f:format.raw>
+			<div class="col1 {column_1_xs} {column_1_sm} {column_1_md} {column_1_lg} {column_1_offset} {column_1_class} ">
+				<f:render partial="RenederColumns" arguments="{children: children, col: 0}"/>
+			</div>
+			<div class="col2 {column_2_xs} {column_2_sm} {column_2_md} {column_2_lg} {column_2_offset} {column_2_class} ">
+				<f:render partial="RenederColumns" arguments="{children: children, col: 1}"/>
+			</div>
+			<div class="col3 {column_3_xs} {column_3_sm} {column_3_md} {column_3_lg} {column_3_offset} {column_3_class} ">
+				<f:render partial="RenederColumns" arguments="{children: children, col: 2}"/>
+			</div>
+			<div class="col4 {column_4_xs} {column_4_sm} {column_4_md} {column_4_lg} {column_4_offset} {column_4_class} ">
+				<f:render partial="RenederColumns" arguments="{children: children, col: 3}"/>
+			</div>
 	</div>
 </f:section>

@@ -1,0 +1,5 @@
+<f:variable name="row">{children.1}</f:variable>
+
+<f:for each="{row.{col}}" as="elem">
+	<f:cObject typoscriptObjectPath="lib.content.gridelementsRender">{elem.data.uid}</f:cObject>
+</f:for>

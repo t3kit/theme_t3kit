@@ -14,7 +14,7 @@
 		</div>
 		<div id="collapse-{data.uid}" class="panel-collapse collapse {f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: 'in', else: '')}" role="tabpanel">
 			<div class="panel-body">
-				<f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+				<f:render partial="RenederColumns" arguments="{children: children, col: 0}"/>
 			</div>
 		</div>
 	</div>
