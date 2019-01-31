@@ -319,7 +319,7 @@
 				<source>Link text</source>
 			</trans-unit>
 			<trans-unit id="quote.header">
-				<source>Name, Title</source>
+				<source>Author name, Title of cited work</source>
 			</trans-unit>
 			<trans-unit id="quote.bodytext">
 				<source>Quote</source>

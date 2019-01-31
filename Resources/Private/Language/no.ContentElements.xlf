@@ -228,8 +228,8 @@
                 <target>Lenketekst</target>
             </trans-unit>
             <trans-unit id="quote.header">
-                <source>Name, Title</source>
-                <target>Navn, Tittel</target>
+                <source>Author name, Title of cited work</source>
+                <target>Forfatternavn, Tittel på sitert arbeid</target>
             </trans-unit>
             <trans-unit id="quote.link">
                 <source>Link</source>
