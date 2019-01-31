@@ -228,10 +228,11 @@
   background: #fff;
   z-index: 4000;
   text-align: right;
-  padding-right: 60px;
+  padding-right: 50px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  border-bottom: 1px solid #ebf3f6;
 }
 .header-top__language-menu-box-close-btn:after,
 .header-top__language-menu-box-close-btn:before {
@@ -242,7 +243,7 @@
   width: 18px;
   top: 50%;
   margin-top: -1px;
-  right: 10px;
+  right: 15px;
   margin-left: -11px;
   background: #50b4d8;
   -webkit-backface-visibility: hidden;
@@ -289,19 +290,21 @@
   line-height: 50px;
   color: rgba(125, 125, 125, 0.5);
   font-size: 14px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 .no-touch .header-top__language-menu-btn:hover {
   color: rgba(125, 125, 125, 0.5);
 }
 .header-top__language-menu-box-close-btn {
   display: block;
-  right: 10px;
+  right: 4px;
   top: 0;
   width: 50px;
   height: 50px;
   position: absolute;
   cursor: pointer;
+  border: none;
+  background: transparent;
 }
 .header-top__language-menu-box-item {
   color: #7d7d7d;

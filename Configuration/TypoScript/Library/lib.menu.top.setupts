@@ -1,7 +1,7 @@
 lib.menu.top = HMENU
 lib.menu.top.special = directory
 lib.menu.top.special.value = {$themes.configuration.header.top.menu.containerPid}
-lib.menu.top.stdWrap.dataWrap    = <nav aria-label="{LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:metaNavigation.ariaLabel}"><ul class="nav"> | </ul></nav>
+lib.menu.top.stdWrap.dataWrap    = <nav aria-label="{LLL:EXT:theme_t3kit/Resources/Private/Language/locallang.xlf:metaNavigation.ariaLabel}"><ul class="nav js__header-top_meta-nav"> | </ul></nav>
 lib.menu.top.1 = TMENU
 lib.menu.top.1 {
     expAll = 1
