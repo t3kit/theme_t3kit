@@ -1,28 +1,33 @@
 {namespace theme=KayStrobach\Themes\ViewHelpers}
 
 <f:if condition="{languages}">
-	<div class="header-top__language-menu">
-		<f:for each="{languages}" as="language">
-			<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
-			<f:if condition="{language.active}">
-				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{languageFlag}"></span><f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangLabel')}">
-					<span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label', extensionName:'theme_t3kit')}</span>
-				</f:if></a>
-			</f:if>
-		</f:for>
-		<div class="header-top__language-menu-box js__header-top__language-menu-box">
+	<div class="dropdown language-menu_dropdown">
+		<button class="btn language-menu_dropdown-button dropdown-toggle" type="button" id="language-menu" data-toggle="dropdown">
+			<f:translate key="languageMenu_label" extensionName="theme_t3kit"/>
+			<span class="language-menu_dropdown-button__caret caret"></span>
+		</button>
+		<ul role="menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="language-menu">
 			<f:for each="{languages}" as="language">
-			<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
-				<f:link.page addQueryString="1"
-							 additionalParams="{L: language.languageId}"
-							 title="{language.title}"
-							 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
-							 argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
-						<span class="flag-icon flag-icon-{languageFlag}"></span> {language.navigationTitle}
-				</f:spaceless></f:link.page>
+				<f:if condition="{language.active}">
+					<f:then>
+						<li role="presentation" class="active"><a href="#" role="menuitem" tabindex="-1">{language.title}</a></li>
+					</f:then>
+					<f:else>
+						<li role="separator" class="divider"></li>
+						<li role="presentation">
+							<f:link.page addQueryString="1"
+								additionalParams="{L: language.languageId}"
+								title="{language.title}"
+								class="header-top__language-menu-item-link"
+								additionalAttributes="{role: 'menuitem', tabindex: '-1'}"
+								argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
+								{language.navigationTitle}
+							</f:spaceless></f:link.page>
+						</li>
+					</f:else>
+				</f:if>
 			</f:for>
-			<a class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></a>
-		</div>
+		</ul>
 	</div>
 </f:if>
 

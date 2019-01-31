@@ -5,7 +5,7 @@
 @import '../../node_modules/bootstrap/js/button.js';
 @import '../../node_modules/bootstrap/js/carousel.js';
 @import '../../node_modules/bootstrap/js/collapse.js';
-// @import '../../node_modules/bootstrap/js/dropdown.js';
+@import '../../node_modules/bootstrap/js/dropdown.js';
 // @import '../../node_modules/bootstrap/js/modal.js';
 // @import '../../node_modules/bootstrap/js/tooltip.js';
 // @import '../../node_modules/bootstrap/js/popover.js';

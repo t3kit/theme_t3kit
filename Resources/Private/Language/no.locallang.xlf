@@ -11,8 +11,8 @@
                 <target>Du er her</target>
             </trans-unit>
             <trans-unit id="languageMenu_label" xml:space="preserve">
-                <source>Language:</source>
-                <target>Språk:</target>
+                <source>LANGUAGE</source>
+                <target>SPRÅK</target>
             </trans-unit>
             <trans-unit id="imprint_label" xml:space="preserve">
                 <source>Imprint</source>
