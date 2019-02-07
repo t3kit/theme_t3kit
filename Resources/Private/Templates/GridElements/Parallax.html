@@ -4,9 +4,12 @@
 		<f:if condition="{files.0.type} == 4">
 			<f:if condition="{files.1}">
 				<f:then>
-					<div class="parallax parallax-video clearfix {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" data-video-url="{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style="background-image: url('{f:uri.image(image : files.1.originalFile)}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};" >				</f:then>
+					<div class="parallax parallax-video clearfix {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" 
+					data-video-url="{f:if(condition: '{files.0.extension} !== youtube', then: '{files.0.extension}:')}{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style="background-image: url('{f:uri.image(image : files.1.originalFile)}'); height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};">
+				</f:then>
 				<f:else>
-					<div class="parallax parallax-video clearfix {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" data-video-url="{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style=" height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};" >
+					<div class="parallax parallax-video clearfix {f:if(condition: data.pi_flexform.data.columns.lDEF.hideInMobile.vDEF, then: ' hidden-xs hidden-sm')}" 
+					data-video-url="{f:if(condition: '{files.0.extension} !== youtube', then: '{files.0.extension}:')}{f:uri.typolink(parameter: 'file:{files.0.originalFile.uid}')}" style=" height: {f:if(condition: data.pi_flexform.data.columns.lDEF.height.vDEF, then: data.pi_flexform.data.columns.lDEF.height.vDEF, else: 'auto')};" >
 				</f:else>
 			</f:if>
 		</f:if>
