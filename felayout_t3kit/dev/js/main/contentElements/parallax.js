@@ -3,7 +3,7 @@
 ;(function ($) {
   'use strict'
 
-    // document load event
+  // document load event
   $(document).ready(function () {
     // Parallax
     // https://github.com/nk-o/jarallax
@@ -26,7 +26,7 @@
           videoSrc: $(this).attr('data-video-url')
         })
       })
-    } else { //disabled parallax in IE since scrolling looks jerky
+    } else { // disabled parallax in IE since scrolling looks jerky
       $('.parallax-img').jarallax({
         type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
         speed: 0.5,
