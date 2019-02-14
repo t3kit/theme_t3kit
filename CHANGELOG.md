@@ -1,4 +1,25 @@
 
+#### v2.10.0-beta `February 14, 2019`
+
+- **[BUGFIX]** fix focus outline for main menu dropdown arrow (touch devices) (#477) ([3cc0d76](https://github.com/t3kit/theme_t3kit/commit/3cc0d76))
+- **[TASK]** add space instead of margin-left to Contacts CE (#475) ([5df7c3a](https://github.com/t3kit/theme_t3kit/commit/5df7c3a))
+- **[BUGFIX]** removed the wrong style and aria attributes from footer, add bootstrap class "sr-only" (#472) ([d852042](https://github.com/t3kit/theme_t3kit/commit/d852042))
+- **[BUGFIX]** add extension name to data-video-url if it is not a youtube video (#473) ([e5f2278](https://github.com/t3kit/theme_t3kit/commit/e5f2278))
+- **[BUGFIX]** fix issue with parallax plugin not showing on mobile devices,IE,Edge (#476) ([5ae78ef](https://github.com/t3kit/theme_t3kit/commit/5ae78ef))
+- **[BUGFIX]** fix language menu select focus bug accessibility ([c008996](https://github.com/t3kit/theme_t3kit/commit/c008996))
+- **[BUGFIX]** Use more semantic labels in quote CE ([fd5d67b](https://github.com/t3kit/theme_t3kit/commit/fd5d67b))
+- **[FEATURE]** Add link and lightbox icon for images (#467) ([49e069c](https://github.com/t3kit/theme_t3kit/commit/49e069c))
+- **[BUGFIX]** correct TYPO3 and PHP version (.travis) (#468) ([2dce134](https://github.com/t3kit/theme_t3kit/commit/2dce134))
+- **[TASK]** add possibility to adjust image height using Max height input in news ext (News Carousel) ([a4d9d3b](https://github.com/t3kit/theme_t3kit/commit/a4d9d3b))
+- **[BUGFIX]** fix TAB content element ([156833c](https://github.com/t3kit/theme_t3kit/commit/156833c))
+- **[TASK]** update language navigation menu (#463) ([7c76272](https://github.com/t3kit/theme_t3kit/commit/7c76272))
+- **[BUGFIX]** fix distance of the text from the arrow bootstrap slider  (#461) ([1819d93](https://github.com/t3kit/theme_t3kit/commit/1819d93))
+- **[BUGFIX]** add missing variables for advanced 4 column grid (#462) ([a04b0cc](https://github.com/t3kit/theme_t3kit/commit/a04b0cc))
+- **[BUGFIX]** adapt accordion template to use with Gridelements v9 (#457) ([83c08d0](https://github.com/t3kit/theme_t3kit/commit/83c08d0))
+- **[BUGFIX]** change partialRootPaths to include partials from FluidStyledContent (#458) ([a8ef057](https://github.com/t3kit/theme_t3kit/commit/a8ef057))
+
+***
+
 #### v2.10.0-alpha `January 4, 2019`
 
 - **[TASK]** install cs_seo extension (#456) ([140062b](https://github.com/t3kit/theme_t3kit/commit/140062b))
