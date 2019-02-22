@@ -52,6 +52,7 @@
     "pixelant/pxa-form-enhancement": "dev-master",
     "pixelant/pxa-cookie-bar": "~2.1.1",
     "friendsoftypo3/frontend-editing": "~1.4.3",
-    "clickstorm/cs_seo": "~4.0.0"
-    }
+    "clickstorm/cs_seo": "~4.0.0",
+    "apache-solr-for-typo3/solr": "^9.0"
+  }
 }
