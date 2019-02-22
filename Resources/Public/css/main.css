@@ -2780,6 +2780,9 @@ div.awesomplete li[aria-selected="true"] mark {
   background: transparent;
   z-index: 1;
 }
+.big-icon-text-btn._whole-area-link .big-icon-text-btn__link:active {
+  box-shadow: none;
+}
 .frontend_editing .big-icon-text-btn._whole-area-link .big-icon-text-btn__link {
   z-index: -1;
 }
