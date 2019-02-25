@@ -49,7 +49,7 @@
 			</p>
 		</f:if>
 
-		<f:if condition="{hasSearched}">
+		<f:if condition="{resultSet.hasSearched}">
 			<f:if condition="{resultSet.usedSearch.numberOfResults}">
 				<f:render partial="Result/PerPage" section="PerPage" arguments="{resultSet: resultSet}" />
 			</f:if>
