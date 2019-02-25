@@ -102,6 +102,18 @@
 .flag-icon-de.flag-icon-squared {
   background-image: url(flags/1x1/de.svg);
 }
+.flag-icon-en {
+  background-image: url(flags/4x3/gb.svg);
+}
+.flag-icon-en.flag-icon-squared {
+  background-image: url(flags/1x1/gb.svg);
+}
+.flag-icon-en-us-gb {
+  background-image: url(flags/4x3/gb.svg);
+}
+.flag-icon-en-us-gb.flag-icon-squared {
+  background-image: url(flags/1x1/gb.svg);
+}
 .flag-icon-gl {
   background-image: url(flags/4x3/gl.svg);
 }
