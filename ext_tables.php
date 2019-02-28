@@ -65,7 +65,6 @@ $boot = function ($_EXTKEY) {
     );
 
     if (TYPO3_MODE === 'BE') {
-
         // Add context sensitive help (csh) for the haiku table
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr(
             'tt_content',
