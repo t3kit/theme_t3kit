@@ -15,7 +15,7 @@
 								<div class="contacts-card__contacts-photo _img-overlay {f:cObject(typoscriptObjectPath:'lib.responsiveContactCards', data:image.uid)}"></div>
 							</f:then>
 							<f:else>
-								<f:image class="img-responsive contacts-card__contacts-photo" image="{image}" maxWidth="{settings.defaultWidth}" cropVariant="default" />
+								<f:image class="img-responsive contacts-card__contacts-photo" image="{image}" maxWidth="{data.imagewidth}" maxHeight="{data.imageheight}" cropVariant="default" />
 							</f:else>
 						</f:if>
 					</f:if>
