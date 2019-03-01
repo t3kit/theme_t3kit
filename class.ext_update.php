@@ -59,20 +59,6 @@ class ext_update
 
         $this->loadTableDefinitions();
 
-        if ($this->canMigrateFixedPostVar()) {
-            if ($this->needToMigrateFixedPostVar()) {
-                if ($this->migrateFixedPostVars()) {
-                    $content .= '<p class="alert alert-success">Pages "FixedPostVar" where migrated!</p>';
-                } else {
-                    $content .= '<p class="alert alert-danger">Pages "FixedPostVar" where not migrated!</p>';
-                }
-            } else {
-                $content .= '<p class="alert alert-info">Don\'t need to migrate pages "FixedPostVar"</p>';
-            }
-        } else {
-            $content .= '<p class="alert alert-warning">' . $this->getCannotMigrateFixedPostVarMessage() . '</p>';
-        }
-
         if ($this->canMigrateMenus()) {
             if ($this->needToMigrateMenus()) {
                 if ($this->migrateMenus()) {
@@ -126,82 +112,6 @@ class ext_update
     public function access()
     {
         return true;
-    }
-
-    protected function canMigrateFixedPostVar()
-    {
-        return isset($this->pagesDefiniton['tx_t3kitextensiontools_fixed_post_var_conf'])
-            && isset($this->pagesDefiniton['tx_themet3kit_fixed_post_var_conf']);
-    }
-
-    protected function getCannotMigrateFixedPostVarMessage()
-    {
-        $message = 'Can\'t migrate FixedPostVars';
-        if (!isset($this->pagesDefiniton['tx_t3kitextensiontools_fixed_post_var_conf'])) {
-            $message .= ', field "tx_t3kitextensiontools_fixed_post_var_conf" doesn\'t exist in table tt_content';
-        }
-        if (!isset($this->pagesDefiniton['tx_themet3kit_fixed_post_var_conf'])) {
-            $message .= ', field "tx_themet3kit_fixed_post_var_conf" doesn\'t exist in table tt_content';
-        }
-        return $message;
-    }
-
-    protected function needToMigrateFixedPostVar()
-    {
-        $pages = [];
-        if ($this->canMigrateFixedPostVar()) {
-            /** @var QueryBuilder $queryBuilder */
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
-            $pages = $queryBuilder
-                ->select('uid', 'title', 'tx_t3kitextensiontools_fixed_post_var_conf', 'tx_themet3kit_fixed_post_var_conf')
-                ->from('pages')
-                ->where(
-                    $queryBuilder->expr()->neq(
-                        'tx_t3kitextensiontools_fixed_post_var_conf',
-                        $queryBuilder->createNamedParameter('')
-                    ),
-                    $queryBuilder->expr()->neq(
-                        'tx_t3kitextensiontools_fixed_post_var_conf',
-                        $queryBuilder->createNamedParameter('0')
-                    ),
-                    $queryBuilder->expr()->neq(
-                        'tx_t3kitextensiontools_fixed_post_var_conf',
-                        $queryBuilder->quoteIdentifier('tx_themet3kit_fixed_post_var_conf')
-                    )
-                )
-                ->execute()
-                ->fetchAll();
-        }
-        return count($pages) > 0;
-    }
-
-    protected function migrateFixedPostVars()
-    {
-        $result = false;
-        if ($this->canMigrateFixedPostVar()) {
-            /** @var QueryBuilder $queryBuilder */
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('pages');
-            $queryBuilder
-                ->update('pages')
-                ->where(
-                    $queryBuilder->expr()->neq(
-                        'tx_t3kitextensiontools_fixed_post_var_conf',
-                        $queryBuilder->createNamedParameter('')
-                    ),
-                    $queryBuilder->expr()->neq(
-                        'tx_t3kitextensiontools_fixed_post_var_conf',
-                        $queryBuilder->createNamedParameter('0')
-                    ),
-                    $queryBuilder->expr()->neq(
-                        'tx_t3kitextensiontools_fixed_post_var_conf',
-                        $queryBuilder->quoteIdentifier('tx_themet3kit_fixed_post_var_conf')
-                    )
-                )
-                ->set('tx_themet3kit_fixed_post_var_conf', $queryBuilder->quoteIdentifier('tx_t3kitextensiontools_fixed_post_var_conf'), false)
-                ->execute();
-            $result = true;
-        }
-        return $result;
     }
 
     protected function canMigrateMenus()
