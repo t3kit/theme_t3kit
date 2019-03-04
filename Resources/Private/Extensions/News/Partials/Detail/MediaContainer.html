@@ -9,17 +9,19 @@
 	</f:comment>
 	<div class="news-img-wrap {f:if(condition:'{settings.detail.media.image.lightbox.enabled}', then:'lightbox__wrp-news' )}">
 		<f:for each="{media}" as="mediaElement">
-			<div class="outer">
-				<f:if condition="{mediaElement.originalResource.type} == 2">
-					<f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
-				</f:if>
-				<f:if condition="{mediaElement.originalResource.type} == 4">
-					<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
-				</f:if>
-				<f:if condition="{mediaElement.originalResource.type} == 5">
-					<f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
-				</f:if>
-			</div>
+			<f:if condition="{mediaElement.showinpreview} != 2">
+				<div class="outer">
+					<f:if condition="{mediaElement.originalResource.type} == 2">
+						<f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+					</f:if>
+					<f:if condition="{mediaElement.originalResource.type} == 4">
+						<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+					</f:if>
+					<f:if condition="{mediaElement.originalResource.type} == 5">
+						<f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+					</f:if>
+				</div>
+			</f:if>
 		</f:for>
 	</div>
 </f:if>

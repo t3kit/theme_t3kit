@@ -15,10 +15,3 @@ CREATE TABLE sys_file_reference (
   tx_themet3kit_slide_btn_txt varchar(255) DEFAULT '' NOT NULL,
   tx_themet3kit_slide_appearance int(11) unsigned DEFAULT '0' NOT NULL
 );
-
-#
-# Modifying pages table
-#
-CREATE TABLE pages (
-  tx_themet3kit_fixed_post_var_conf varchar(100) DEFAULT '0' NOT NULL
-);
