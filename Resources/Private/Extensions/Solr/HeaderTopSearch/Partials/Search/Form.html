@@ -7,9 +7,11 @@
 <div class="tx-solr-searchbox">
 
 	<s:searchForm id="tx-solr-search-form-pi-results" additionalFilters="{additionalFilters}">
-		<input type="hidden" name="L" value="{languageUid}" />
-		<input type="hidden" name="id" value="{pageUid}" />
-		
+		<f:if condition="{addPageAndLanguageId}">
+			<input type="hidden" name="L" value="{languageUid}" />
+			<input type="hidden" name="id" value="{pageUid}" />
+		</f:if>
+
 		<div class="main-navigation__search-btn-wrp _header-top-search-btn">
 				<a class="main-navigation__search-btn js__main-navigation__search-btn" href="">{s:translate(key:'submit',default:'Search')}<span></span></a>
 		</div>
