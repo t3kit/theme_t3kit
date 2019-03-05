@@ -49,7 +49,7 @@
 			</p>
 		</f:if>
 
-		<f:if condition="{hasSearched}">
+		<f:if condition="{resultSet.hasSearched}">
 			<f:if condition="{resultSet.usedSearch.numberOfResults}">
 				<f:render partial="Result/PerPage" section="PerPage" arguments="{resultSet: resultSet}" />
 			</f:if>
@@ -65,7 +65,7 @@
 	</div>
 
 	<div id="tx-solr-search-functions" class="col-md-3">
-		<f:if condition="{hasSearched}">
+		<f:if condition="{resultSet.hasSearched}">
 			<f:if condition="{resultSet.usedSearchRequest.contextTypoScriptConfiguration.searchSorting}">
 				<f:render partial="Result/Sorting" section="Sorting" arguments="{resultSet:resultSet}" />
 			</f:if>

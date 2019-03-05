@@ -8,8 +8,10 @@
 	<div class="tx-solr-searchbox">
 
 		<s:searchForm id="tx-solr-search-form-pi-results" additionalFilters="{additionalFilters}">
-			<input type="hidden" name="L" value="{languageUid}" />
-			<input type="hidden" name="id" value="{pageUid}" />
+			<f:if condition="{addPageAndLanguageId}">
+				<input type="hidden" name="L" value="{languageUid}" />
+				<input type="hidden" name="id" value="{pageUid}" />
+			</f:if>
 
 			<div class="header-middle__search-wrp" >
 				<div class="header-middle__search-box" >

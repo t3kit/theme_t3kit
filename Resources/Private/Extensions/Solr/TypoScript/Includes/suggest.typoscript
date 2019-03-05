@@ -1,0 +1,32 @@
+# Enable search field autocomplete/suggest
+# Ajaxify the suggest/results
+tx_solr_suggest = PAGE
+tx_solr_suggest {
+    typeNum = 7384
+    config {
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 0
+        admPanel = 0
+        additionalHeaders = Content-type: text/plain
+        no_cache = 0
+    }
+
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = Solr
+        pluginName = pi_suggest
+        vendorName = ApacheSolrForTypo3
+        controller = Suggest
+        action = suggest
+    }
+}
+
+# Enable suggest
+plugin.tx_solr.search {
+    suggest = 1
+    suggest {
+        numberOfSuggestions = 10
+        suggestField = spell
+    }
+}

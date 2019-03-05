@@ -1,6 +1,3 @@
-[applicationContext = Development/Docker]
+#[applicationContext = Development/Docker]
 
-    # set solr host to t3kit_solr
-    plugin.tx_solr.solr.host = t3kit_solr
-
-[global]
+#[global]
