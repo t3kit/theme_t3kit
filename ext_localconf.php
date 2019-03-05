@@ -42,7 +42,3 @@ $signalSlotDispatcher->connect(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
     '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/tsconfig.txt">'
 );
-
-
-$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['solr']['IndexQueuePageIndexer']['dataUrlModifier'] =
-    \T3kit\themeT3kit\Hooks\Solr\PageIndexerDataUrlModifier::class;
