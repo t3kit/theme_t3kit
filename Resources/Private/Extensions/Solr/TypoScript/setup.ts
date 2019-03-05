@@ -7,7 +7,6 @@
 plugin.tx_solr.enabled = {$themes.configuration.features.enableSolr}
 
 # Solr default ts setup
-plugin.tx_solr.suggest = 1
 plugin.tx_solr.search.faceting = 1
 plugin.tx_solr.search.spellchecking = 1
 
@@ -130,3 +129,4 @@ plugin.tx_solr.index.queue.pages.fields.category_stringM {
 
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/IndexConfiguration/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/Includes/" extensions="typoscript">
