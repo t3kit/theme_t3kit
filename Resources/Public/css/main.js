@@ -705,6 +705,7 @@ var mainSearchInputList = {}
         autoFirst: true
       })
       var req = false
+
       $(this).on('keyup.search.suggest', function (e) {
         var c = e.keyCode
         if (c === 13 || c === 27 || c === 38 || c === 40) {
@@ -716,16 +717,19 @@ var mainSearchInputList = {}
             req = true
             $.ajax({
               url: that.closest('form').data('suggest'),
-              dataType: 'json',
+              dataType: 'jsonp',
+              jsonp: 'tx_solr[callback]',
               data: {
-                termLowercase: that.val().toLowerCase(),
-                termOriginal: that.val(),
-                L: that.closest('form').find('input[name="L"]').val()
+                tx_solr: {
+                  queryString: that.val().toLowerCase()
+                }
               },
               success: function (data) {
+                var suggestions = data.suggestions || []
+
                 req = false
                 var arrr = []
-                $.each(data, function (term) {
+                $.each(suggestions, function (term) {
                   arrr.push(term)
                 })
                 mainSearchInputList['searchItem' + index]._list = arrr
