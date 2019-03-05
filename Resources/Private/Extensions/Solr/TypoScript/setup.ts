@@ -15,7 +15,19 @@ plugin.tx_solr.search.results.resultsHighlighting = 1
 plugin.tx_solr.search.results.resultsHighlighting.wrap = <mark>|</mark>
 plugin.tx_solr.search.sorting = 1
 plugin.tx_solr.search.targetPage = {$themes.configuration.features.searchTargetPage}
-plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.default.isoCode}/
+
+
+plugin.tx_solr.solr {
+    read.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.default.isoCodeShort}/
+    write.path < .read.path
+}
+
+[globalVar = GP:L > 0]
+    plugin.tx_solr.solr {
+        read.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCodeShort}/
+        write.path < .read.path
+    }
+[end]
 
 # Add teaser to search query
 plugin.tx_solr.search.query.queryFields := addToList(abstract^39.0)
@@ -78,7 +90,7 @@ plugin.tx_solr.search.faceting.facets.type {
         key.field = optionValue
         # pages
         pages = TEXT
-        pages.value = {LLL:EXT:lang/locallang_common.xlf:pages}
+        pages.value = {LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:pages}
         pages.insertData = 1
         # tx_news
         tx_news_domain_model_news = TEXT
@@ -93,10 +105,6 @@ plugin.tx_solr.index.queue.pages.fields.category_stringM {
     multiValue = 1
 }
 
-# Change solr core if language other than default
-[globalVar = GP:L > 0]
-    plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCode}/
-[global]
 
 # Additional when solr is enabled
 [globalVar = LIT:1 = {$themes.configuration.features.enableSolr}]
@@ -107,11 +115,11 @@ plugin.tx_solr.index.queue.pages.fields.category_stringM {
 
 ## Docker configuration
 [applicationContext = Development/Docker, Production/Docker]
-    plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.default.isoCodeShort}/
-[global]
-
-[globalVar = GP:L > 0] && [applicationContext = Development/Docker, Production/Docker]
-    plugin.tx_solr.solr.path = /solr/{$themes.configuration.features.solrBaseCoreName}_{$themes.languages.current.isoCodeShort}/
+    # set solr host to t3kit_solr
+    plugin.tx_solr.solr {
+        read.host = t3kit_solr
+        write.host = t3kit_solr
+    }
 [global]
 
 # enable suggest on devices with touch support
@@ -119,3 +127,6 @@ plugin.tx_solr.index.queue.pages.fields.category_stringM {
 #  1910 = TEXT
 #  1910.value = var forceEnableSuggest = false;
 #}
+
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Resources/Private/Extensions/Solr/TypoScript/IndexConfiguration/" extensions="typoscript">
