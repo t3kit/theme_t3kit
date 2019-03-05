@@ -36,10 +36,10 @@ var mainSearchInputList = {}
               data: {
                 tx_solr: {
                   queryString: that.val().toLowerCase()
-                },
+                }
               },
               success: function (data) {
-                var suggestions = data.suggestions || [];
+                var suggestions = data.suggestions || []
 
                 req = false
                 var arrr = []
