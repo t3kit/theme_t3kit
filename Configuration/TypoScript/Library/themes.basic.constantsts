@@ -46,7 +46,7 @@ themes.configuration.siteDomain = t3kit.testserver.pixelant.nu
 # cat=theme,expert/solr/; type=options[0,1]; label= Enable solr search
 themes.configuration.features.enableSolr = 0
 # cat=theme,expert/solr/; type=string; label= Base solr core name (no spaces): Will be combined with language ISO code in solr path
-themes.configuration.features.solrBaseCoreName = t3kit
+themes.configuration.features.solrBaseCoreName = core
 
 
 # customsubcategory=layout= FElayout
