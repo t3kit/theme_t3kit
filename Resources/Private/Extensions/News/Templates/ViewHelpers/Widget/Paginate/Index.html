@@ -45,16 +45,16 @@
 								</f:widget.link>
 							</f:then>
 							<f:else>
-								<f:widget.link addQueryStringMethod="GET">
+								<f:link.page>
 									<f:translate key="paginate_previous" />
-								</f:widget.link>
+								</f:link.page>
 							</f:else>
 						</f:if>
 					</li>
 				</f:if>
 				<f:if condition="{pagination.displayRangeStart} > 1">
 					<li class="first">
-						<f:widget.link addQueryStringMethod="GET">1</f:widget.link>
+						<f:link.page>1</f:link.page>
 					</li>
 				</f:if>
 				<f:if condition="{pagination.hasLessPages}">
@@ -74,7 +74,7 @@
 										<f:widget.link addQueryStringMethod="GET" arguments="{currentPage: page.number}">{page.number}</f:widget.link>
 									</f:then>
 									<f:else>
-										<f:widget.link addQueryStringMethod="GET">{page.number}</f:widget.link>
+										<f:link.page>{page.number}</f:link.page>
 									</f:else>
 								</f:if>
 							</li>
