@@ -1,45 +1,28 @@
-{namespace theme=KayStrobach\Themes\ViewHelpers}
-
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:theme="http://typo3.org/ns/KayStrobach/Themes/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 <f:if condition="{languages}">
-	<div class="header-top__language-menu">
-		<f:for each="{languages}" as="language">
-			<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
-			<f:if condition="{language.active}">
-				<a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#"><span class="main-flag-icon flag-icon flag-icon-{languageFlag}"></span><f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangLabel')}">
-					<span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label', extensionName:'theme_t3kit')}</span>
-				</f:if></a>
-			</f:if>
-		</f:for>
-		<div class="header-top__language-menu-box js__header-top__language-menu-box">
-			<f:for each="{languages}" as="language">
-			<f:variable name="languageFlag"><f:spaceless><f:render section="getLanguageFlag" arguments="{_all}" /></f:spaceless></f:variable>
-				<f:link.page addQueryString="1"
-							 additionalParams="{L: language.languageId}"
-							 title="{language.title}"
-							 class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}"
-							 argumentsToBeExcludedFromQueryString="{0: 'id'}"><f:spaceless>
-						<span class="flag-icon flag-icon-{languageFlag}"></span> {language.navigationTitle}
-				</f:spaceless></f:link.page>
-			</f:for>
-			<button class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></button>
-		</div>
-	</div>
+    <div class="header-top__language-menu">
+        <f:for each="{languages}" as="language">
+            <f:if condition="{language.active}">
+                <a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="/#">
+                    <span class="main-flag-icon flag-icon flag-icon-{language.flagIdentifier}"></span>
+                    <f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTopLangLabel')}">
+                        <span class="main-flag-language flag-language">{f:translate(key:'languageMenu_label', extensionName:'ThemeT3kit')}</span>
+                    </f:if>
+                </a>
+            </f:if>
+        </f:for>
+        <div class="header-top__language-menu-box js__header-top__language-menu-box">
+            <f:for each="{languages}" as="language">
+                <a href="{language.link}"
+                   title="{language.title}"
+                   class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}">
+                    <span class="flag-icon flag-icon-{language.flagIdentifier}"></span> {language.navigationTitle}
+                </a>
+            </f:for>
+            <button class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></button>
+        </div>
+    </div>
 </f:if>
-
-<f:comment><!-- need to have current language in language variable --></f:comment>
-<f:section name="getLanguageFlag">
-	<f:variable name="getLanguageFlag">unknown</f:variable>
-	<f:if condition="{language.languageId} == 0">
-		<f:then>
-			<f:variable name="getLanguageFlag">{defaultLanguageFlag}</f:variable>
-		</f:then>
-		<f:else>
-			<f:for each="{sysLanguages}" as="sysLanguage">
-				<f:if condition="{sysLanguage.data.uid} == {language.languageId}">
-					<f:variable name="getLanguageFlag">{sysLanguage.data.flag}</f:variable>
-				</f:if>
-			</f:for>
-		</f:else>
-	</f:if>
-	{getLanguageFlag}
-</f:section>
+</html>
