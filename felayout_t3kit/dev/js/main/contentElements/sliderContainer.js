@@ -44,7 +44,7 @@
           widthForMediumLaptop = 3
         }
         var slider = new Swiper(currentSlider, {
-          containerModifierClass: 'js__slider-container__container',
+          containerModifierClass: 'swiper-container-',
           wrapperClass: 'js__slider-container__wrapper',
           slideClass: 'js__slider-container__slide',
           nextButton: currentSlider.parent().find('.js__slider-container__btn-next'),
