@@ -45,11 +45,11 @@
     "typo3/cms-felogin": "~9.5.1",
 
 
-    "gridelementsteam/gridelements": "dev-master",
-    "clickstorm/go_maps_ext": "dev-master",
-    "georgringer/news": "dev-master",
+    "gridelementsteam/gridelements": "~9.1.1",
+    "clickstorm/go_maps_ext": "~3.1.0",
+    "georgringer/news": "~7.1.0",
     "pixelant/pxa-newsletter-subscription": "~9.0.2",
-    "pixelant/pxa-form-enhancement": "dev-master",
+    "pixelant/pxa-form-enhancement": "~3.2.2",
     "pixelant/pxa-cookie-bar": "~2.1.1",
     "friendsoftypo3/frontend-editing": "~1.4.3",
     "clickstorm/cs_seo": "^4.1.0",
