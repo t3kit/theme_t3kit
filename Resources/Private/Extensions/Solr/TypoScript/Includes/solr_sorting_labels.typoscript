@@ -1,0 +1,67 @@
+plugin.tx_solr.search {
+    sorting {
+        # Override labels
+        options {
+            relevance {
+                label = Relevance
+            }
+
+            title {
+                label = Title
+            }
+
+            type {
+                label = Type
+            }
+
+            author {
+                label = Author
+            }
+
+            created {
+                label = Creation Date
+            }
+        }
+    }
+
+    faceting.facets {
+        type {
+            label = Content Type
+        }
+    }
+}
+
+[siteLanguage("locale") == "sv_SE.UTF-8"]
+    plugin.tx_solr.search {
+        sorting {
+            # Override labels
+            options {
+                relevance {
+                    label = Relevans
+                }
+
+                title {
+                    label = Titel
+                }
+
+                type {
+                    label = Typ
+                }
+
+                author {
+                    label = Skriven av
+                }
+
+                created {
+                    label = Skapad datum
+                }
+            }
+        }
+
+        faceting.facets {
+            type {
+                label = Innehållstyp
+            }
+        }
+    }
+[global]
