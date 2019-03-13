@@ -18,14 +18,10 @@
 					<f:if condition="{tag.uid} == {overwriteDemand.tags}">
 						<f:then>
 							<t3kit:register key="additionalBreadCrumbItem" value="{tag.title}"/>
-							<f:link.page title="{tag.title}" class="active" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
-								{tag.title}
-							</f:link.page>
+							<f:render section="tagLink" arguments="{tag: tag, class: 'active'}" />
 						</f:then>
 						<f:else>
-							<f:link.page title="{tag.title}" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
-								{tag.title}
-							</f:link.page>
+							<f:render section="tagLink" arguments="{tag: tag}" />
 						</f:else>
 					</f:if>
 				</li>
@@ -34,5 +30,19 @@
 	</f:if>
 </f:section>
 
+<f:section name="tagLink">
+	<f:if condition="{settings.listPid}">
+		<f:then>
+			<f:link.page title="{tag.title}" class="{class}" pageUid="{settings.listPid}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+				{tag.title}
+			</f:link.page>
+		</f:then>
+		<f:else>
+			<f:link.page title="{tag.title}" class="{class}" additionalParams="{tx_news_pi1:{overwriteDemand:{tags: tag}}}">
+				{tag.title}
+			</f:link.page>
+		</f:else>
+	</f:if>
+</f:section>
 </html>
 

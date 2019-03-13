@@ -28,14 +28,10 @@
 					<f:if condition="{category.item.uid} == {overwriteDemand.categories}">
 						<f:then>
 							<t3kit:register key="additionalBreadCrumbItem" value="{category.item.title}"/>
-							<f:link.page title="{category.item.title}" class="active" pageUid="{settings.listPid}"
-											additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
-							</f:link.page>
+							<f:render section="categoryLink" arguments="{category: category, class: 'active'}" />
 						</f:then>
 						<f:else>
-							<f:link.page title="{category.item.title}" pageUid="{settings.listPid}"
-											additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">{category.item.title}
-							</f:link.page>
+							<f:render section="categoryLink" arguments="{category: category}" />
 						</f:else>
 					</f:if>
 
@@ -48,5 +44,24 @@
 	</div>
 </f:section>
 
+<f:section name="categoryLink">
+	<f:if condition="{settings.listPid}">
+		<f:then>
+			<f:link.page title="{category.item.title}"
+						 class="{class}"
+						 pageUid="{settings.listPid}"
+						 additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">
+				{category.item.title}
+			</f:link.page>
+		</f:then>
+		<f:else>
+			<f:link.page title="{category.item.title}"
+						 class="{class}"
+						 additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}">
+				{category.item.title}
+			</f:link.page>
+		</f:else>
+	</f:if>
+</f:section>
 </html>
 
