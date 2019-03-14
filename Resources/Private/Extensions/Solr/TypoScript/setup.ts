@@ -81,7 +81,7 @@ plugin.tx_solr.search.results.showDocumentScoreAnalysis = 0
 ## Test to add more filters
 plugin.tx_solr.search.faceting.facets.category.field = category_stringM
 plugin.tx_solr.search.faceting.facets.category.label = TEXT
-plugin.tx_solr.search.faceting.facets.category.label.data = LLL:EXT:lang/locallang_common.xlf:category
+plugin.tx_solr.search.faceting.facets.category.label.data = LLL:EXT:core/Resources/Private/Language/locallang_common.xlf:category
 
 plugin.tx_solr.search.faceting.facets.type {
     renderingInstruction = CASE
