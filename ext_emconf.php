@@ -34,14 +34,12 @@ $EM_CONF[$_EXTKEY] = array(
     'CGLcompliance_note' => '',
     'constraints' => array(
         'depends' => array(
-            'typo3'  => '9.5.0-9.5.99'
+            'typo3'  => '9.5.0-9.5.99',
+            'news' => '7.1.0-7.9.99'
         ),
         'conflicts' => array(
         ),
         'suggests' => array(
         ),
     ),
-    '_md5_values_when_last_written' => 'a:0:{}',
 );
-
-?>
