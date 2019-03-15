@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace T3kit\themeT3kit\DataProcessing;
 
+use TYPO3\CMS\Core\Utility\ArrayUtility;
+
 /**
  * Extend original class with menuLevelConfig
  *
@@ -39,7 +41,7 @@ class LanguageMenuProcessor extends \TYPO3\CMS\Frontend\DataProcessing\LanguageM
                 ]
             ]
         ];
-        $this->menuLevelConfig = array_merge_recursive($this->menuLevelConfig, $additionalMenuConfig);
+        ArrayUtility::mergeRecursiveWithOverrule($this->menuLevelConfig, $additionalMenuConfig);
 
         parent::__construct();
     }
