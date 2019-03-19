@@ -55,6 +55,12 @@ plugin.tx_solr {
             50 = EXT:theme_t3kit/Resources/Private/Extensions/Solr/Layouts
         }
     }
+
+    _LOCAL_LANG {
+        sv {
+            faceting_resultsNarrowedBy = Sökning begränsad på
+        }
+    }
 }
 
 ## TEST
