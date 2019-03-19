@@ -1,4 +1,29 @@
 
+#### v2.10.0 `March 19, 2019`
+
+- **[TASK]** fix spelling of swedish label (#496) ([f000bed](https://github.com/t3kit/theme_t3kit/commit/f000bed))
+- **[BUGFIX]** use TYPO3 ArrayUtility to merge language menu config (#495) ([5d92478](https://github.com/t3kit/theme_t3kit/commit/5d92478))
+- **[TASK]** add slug replacements of special chars for "pages" and 'news" tables (#494) ([edff67e](https://github.com/t3kit/theme_t3kit/commit/edff67e))
+- **[BUGFIX]** use valid path for category label (#493) ([b031e7a](https://github.com/t3kit/theme_t3kit/commit/b031e7a))
+- **[TASK]** use new version of pxa-form-enhancement ext. ([6bdebe8](https://github.com/t3kit/theme_t3kit/commit/6bdebe8))
+- **[TASK]** update ext-s, use versions instead of dev-master ([da42bf5](https://github.com/t3kit/theme_t3kit/commit/da42bf5))
+- **[TASK]** use current page as list page, when listPid is not set (#490) ([9ddb216](https://github.com/t3kit/theme_t3kit/commit/9ddb216))
+- **[TASK]** rebuild how the language menu is rendered, respect site configuration (#486) ([c62a724](https://github.com/t3kit/theme_t3kit/commit/c62a724))
+- **[BUGFIX]** fixes slider container effects (#489) ([373a3bc](https://github.com/t3kit/theme_t3kit/commit/373a3bc))
+- **[TASK]** remove get parameters for first page url on news list view (#488) ([98a17e1](https://github.com/t3kit/theme_t3kit/commit/98a17e1))
+- **[TASK]** change default solr core name to 'core' (#487) ([22b8a27](https://github.com/t3kit/theme_t3kit/commit/22b8a27))
+- **[TASK]** update cs_seo ([5e4f8c7](https://github.com/t3kit/theme_t3kit/commit/5e4f8c7))
+- **[FEATURE]** add ext. Solr support (#485) ([e8ee00d](https://github.com/t3kit/theme_t3kit/commit/e8ee00d))
+- **[BUGFIX]** remove box-shadow on active state when clicking big-icon-text element with whole area as link (#480) ([3342e0d](https://github.com/t3kit/theme_t3kit/commit/3342e0d))
+- **[TASK]** Clean-up realurl stuff (#484) ([3e9c68d](https://github.com/t3kit/theme_t3kit/commit/3e9c68d))
+- **[BUGFIX]** change maxWidth and add maxHeight to use correct parameter (#481) ([9b0ccf4](https://github.com/t3kit/theme_t3kit/commit/9b0ccf4))
+- **[BUGFIX]** add if-statement for media, if showinpreview is enabled/disabled (#482) ([6c65146](https://github.com/t3kit/theme_t3kit/commit/6c65146))
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[TASK]** update Gridelements config to use new approach w/DataProcessing ([50b9e8f](https://github.com/t3kit/theme_t3kit/commit/50b9e8f))
+
+***
+
 #### v2.10.0-beta `February 14, 2019`
 
 - **[BUGFIX]** fix focus outline for main menu dropdown arrow (touch devices) (#477) ([3cc0d76](https://github.com/t3kit/theme_t3kit/commit/3cc0d76))
