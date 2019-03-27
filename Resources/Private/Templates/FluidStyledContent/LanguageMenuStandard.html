@@ -15,11 +15,20 @@
         </f:for>
         <div class="header-top__language-menu-box js__header-top__language-menu-box">
             <f:for each="{languages}" as="language">
-                <a href="{language.link}"
-                   title="{language.title}"
-                   class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}">
-                    <span class="flag-icon flag-icon-{language.flagIdentifier}"></span> {language.navigationTitle}
-                </a>
+                <f:if condition="{language.available}">
+                    <f:then>
+                        <a href="{language.link}"
+                           title="{language.title}"
+                           class="header-top__language-menu-box-item{f:if(condition: language.active, then: ' active')}">
+                            <span class="flag-icon flag-icon-{language.flagIdentifier}"></span> {language.navigationTitle}
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <span title="{language.title}" class="header-top__language-menu-box-item">
+                            <span class="flag-icon flag-icon-{language.flagIdentifier}"></span> {language.navigationTitle}
+                        </span>
+                    </f:else>
+                </f:if>
             </f:for>
             <button class="header-top__language-menu-box-close-btn js__header-top__language-menu-box-close-btn"></button>
         </div>
