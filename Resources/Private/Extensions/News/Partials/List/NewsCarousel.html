@@ -22,7 +22,9 @@
 											</div>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 4">
-											<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+											<div class="news-carousel__media-preview">
+												<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+											</div>
 										</f:if>
 										<f:if condition="{mediaElement.originalResource.type} == 5">
 											<div class="news-carousel__media-preview">

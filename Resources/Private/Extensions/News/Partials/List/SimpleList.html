@@ -34,7 +34,9 @@
 								</div>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 4">
-								<f:media file="{mediaElement}" class="object-fit" additionalConfig="{loop: '0', autoplay: '0'}" />
+								<div class="news-simple-list__media-preview">
+									<f:media file="{mediaElement}" class="object-fit" additionalConfig="{loop: '0', autoplay: '0'}" />
+								</div>
 							</f:if>
 							<f:if condition="{mediaElement.originalResource.type} == 5">
 								<div class="news-simple-list__media-preview">

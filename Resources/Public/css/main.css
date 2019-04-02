@@ -1928,7 +1928,8 @@
   margin-bottom: 20px;
 }
 .news-carousel__media-preview img,
-.news-carousel__media-preview iframe {
+.news-carousel__media-preview iframe,
+.news-carousel__media-preview video {
   min-height: 180px;
 }
 .news-carousel__img-wrap {
