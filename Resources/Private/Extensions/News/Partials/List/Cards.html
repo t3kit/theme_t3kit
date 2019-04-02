@@ -39,7 +39,10 @@
 									</div>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 4">
-									<f:media file="{mediaElement}" additionalConfig="{loop: '0', autoplay: '0'}"/>
+									<div class="news-cards__media-preview"
+										style="height:{f:if(condition:settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}px">
+										<f:media file="{mediaElement}" width="768" class="object-fit" additionalConfig="{loop: '0', autoplay: '0'}"/>
+									</div>
 								</f:if>
 								<f:if condition="{mediaElement.originalResource.type} == 5">
 									<div class="news-cards__media-preview"
