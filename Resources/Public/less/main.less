@@ -2067,6 +2067,7 @@
 
 // Navigation
 @nav-height:                    60px;
+@nav-height-md:                 300px;
 @nav-link-color:                #fff;
 @nav-link-hover-color:          @nav-link-color;
 @nav-link-active-color:         @main-color;
@@ -2689,6 +2690,12 @@
     line-height: @nav-height;
 }
 
+@media (min-width: @screen-md-min) {
+    .main-navigation .header-top__language-menu-btn {
+        line-height: @nav-height-md;
+    }
+}
+
 .main-navigation .header-top__language-menu-box {
     width: 100%;
     height: 100%;
@@ -2698,6 +2705,12 @@
 .main-navigation .header-top__language-menu-box .header-top__language-menu-box-item {
     color: @nav-link-color;
     line-height: @nav-height;
+}
+
+@media (min-width: @screen-md-min) {
+    .main-navigation .header-top__language-menu-box .header-top__language-menu-box-item {
+        line-height: @nav-height-md;
+    }
 }
 
 .main-navigation .header-top__language-menu {
@@ -2747,6 +2760,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    height: @nav-height;
 }
 
 .main-navigation__search-box._header-top-search-btn._search-box-visible {
@@ -3023,7 +3037,7 @@
     }
 
     .main-navigation-fixed .header {
-        padding-bottom: @nav-height;
+        padding-bottom: @nav-height-md;
     }
 
     .main-navigation__items-wrp {
@@ -3063,6 +3077,7 @@
 
     .main-navigation__item-link {
         border: none;
+        line-height: @nav-height-md;
     }
 
     .main-navigation__open-sub-menu-link {
@@ -3159,7 +3174,7 @@
         color: @nav-link-arrow-color;
         position: relative;
         font-size: 30px;
-        line-height: @nav-height;
+        line-height: @nav-height-md;
         top: auto;
         left: auto;
         margin: 0;
@@ -3234,6 +3249,12 @@
     z-index: 3;
     margin: 0 auto;
     -webkit-tap-highlight-color: rgba(120, 120, 120, 0.3);
+}
+
+@media (min-width: @screen-md-min) {
+    .main-navigation__search-btn {
+        height: @nav-height-md;
+    }
 }
 
 .main-navigation__search-btn:after,
@@ -3416,6 +3437,7 @@
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s 0s, visibility 0s 0.3s;
+        height: @nav-height-md;
     }
 }
 
