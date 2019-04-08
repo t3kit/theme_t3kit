@@ -1580,7 +1580,6 @@
 .news-single .page-navigation__prev,
 .news-single .page-navigation__next {
   width: 50%;
-  float: left;
   position: relative;
 }
 .news-single .page-navigation__prev:before,
@@ -1591,6 +1590,7 @@
   top: 2px;
 }
 .news-single .page-navigation__next {
+  float: right;
   text-align: right;
   padding: 0 25px 0 15px;
 }
@@ -1618,6 +1618,7 @@
   right: 0;
 }
 .news-single .page-navigation__prev {
+  float: left;
   padding: 0 15px 0 25px;
 }
 .news-single .page-navigation__prev:before,
