@@ -3952,6 +3952,12 @@
     clear: both;
 }
 
+.news iframe,
+.news video {
+    border: 0;
+    display: block;
+}
+
 .news .nav ul {
     float: left;
     display: inline;
@@ -4491,7 +4497,9 @@
 .news-carousel__media-preview {
     margin-bottom: 20px;
 
-    img {
+    img,
+    iframe,
+    video {
         min-height: 180px;
     }
 }

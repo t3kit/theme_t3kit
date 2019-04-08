@@ -1435,6 +1435,11 @@
 .news .clear {
   clear: both;
 }
+.news iframe,
+.news video {
+  border: 0;
+  display: block;
+}
 .news .nav ul {
   float: left;
   display: inline;
@@ -1923,7 +1928,9 @@
 .news-carousel__media-preview {
   margin-bottom: 20px;
 }
-.news-carousel__media-preview img {
+.news-carousel__media-preview img,
+.news-carousel__media-preview iframe,
+.news-carousel__media-preview video {
   min-height: 180px;
 }
 .news-carousel__img-wrap {
