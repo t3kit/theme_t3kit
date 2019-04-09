@@ -419,21 +419,25 @@
   background: #fff;
   top: 1px;
 }
-.main-navigation .header-top__language-menu-box-close-btn {
-  top: 5px;
-}
 .main-navigation .header-top__language-menu-btn {
   line-height: 60px;
 }
+.main-navigation .header-top__language-menu-box-close-btn {
+  height: 60px;
+}
 @media (min-width: 992px) {
   .main-navigation .header-top__language-menu-btn {
-    line-height: 300px;
+    line-height: 60px;
+  }
+  .main-navigation .header-top__language-menu-box-close-btn {
+    height: 60px;
   }
 }
 .main-navigation .header-top__language-menu-box {
   width: 100%;
   height: 100%;
   background-color: #2b2b2b;
+  border-bottom-width: 0;
 }
 .main-navigation .header-top__language-menu-box .header-top__language-menu-box-item {
   color: #fff;
@@ -441,7 +445,7 @@
 }
 @media (min-width: 992px) {
   .main-navigation .header-top__language-menu-box .header-top__language-menu-box-item {
-    line-height: 300px;
+    line-height: 60px;
   }
 }
 .main-navigation .header-top__language-menu {
@@ -694,7 +698,7 @@
     z-index: 7000;
   }
   .main-navigation-fixed .header {
-    padding-bottom: 300px;
+    padding-bottom: 60px;
   }
   .main-navigation__items-wrp {
     max-width: 970px;
@@ -726,7 +730,7 @@
   }
   .main-navigation__item-link {
     border: none;
-    line-height: 300px;
+    line-height: 60px;
   }
   .main-navigation__open-sub-menu-link {
     display: none;
@@ -846,7 +850,7 @@
     color: rgba(255, 255, 255, 0.5);
     position: relative;
     font-size: 30px;
-    line-height: 300px;
+    line-height: 60px;
     top: auto;
     left: auto;
     margin: 0;
@@ -910,7 +914,7 @@
 }
 @media (min-width: 992px) {
   .main-navigation__search-btn {
-    height: 300px;
+    height: 60px;
   }
 }
 .main-navigation__search-btn:after,
@@ -1059,7 +1063,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s 0s, visibility 0s 0.3s;
-    height: 300px;
+    height: 60px;
   }
 }
 @media (min-width: 1200px) {
@@ -5372,7 +5376,7 @@ div.awesomplete li[aria-selected="true"] mark {
   ._dropdown-menu-with-columns .main-navigation__item._sub.open > .main-navigation__item-link:before {
     content: '';
     position: absolute;
-    top: 52px;
+    bottom: 0;
     left: 50%;
     margin-left: -8px;
     width: 0;
@@ -5399,7 +5403,7 @@ div.awesomplete li[aria-selected="true"] mark {
   .touch ._dropdown-menu-with-columns .main-navigation__item._sub._open-tablet-dropdown > .main-navigation__item-link:before {
     content: '';
     position: absolute;
-    top: 52px;
+    bottom: 0;
     left: 50%;
     margin-left: -8px;
     width: 0;

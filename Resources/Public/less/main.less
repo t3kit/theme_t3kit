@@ -2067,7 +2067,7 @@
 
 // Navigation
 @nav-height:                    60px;
-@nav-height-md:                 300px;
+@nav-height-md:                 @nav-height;    // change to have unique nav-height in desktop
 @nav-link-color:                #fff;
 @nav-link-hover-color:          @nav-link-color;
 @nav-link-active-color:         @main-color;
@@ -2682,17 +2682,21 @@
     top: 1px;
 }
 
-.main-navigation .header-top__language-menu-box-close-btn {
-    top: 5px;
-}
-
 .main-navigation .header-top__language-menu-btn {
     line-height: @nav-height;
+}
+
+.main-navigation .header-top__language-menu-box-close-btn {
+    height: @nav-height;
 }
 
 @media (min-width: @screen-md-min) {
     .main-navigation .header-top__language-menu-btn {
         line-height: @nav-height-md;
+    }
+
+    .main-navigation .header-top__language-menu-box-close-btn {
+        height: @nav-height-md;
     }
 }
 
@@ -2700,6 +2704,7 @@
     width: 100%;
     height: 100%;
     background-color: @nav-background-color;
+    border-bottom-width: 0;
 }
 
 .main-navigation .header-top__language-menu-box .header-top__language-menu-box-item {
@@ -2723,7 +2728,6 @@
 }
 
 ._header-top-search-btn .main-navigation__search-btn {
-    // height: 50px;
     height: @header-top-height;
 }
 
@@ -8787,7 +8791,7 @@ div.awesomplete li[aria-selected="true"] mark {
     ._dropdown-menu-with-columns .main-navigation__item._sub.open > .main-navigation__item-link:before {
         content: '';
         position: absolute;
-        top: 52px;
+        bottom: 0;
         left: 50%;
         margin-left: -8px;
         width: 0;
@@ -8804,8 +8808,8 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 
     .touch ._dropdown-menu-with-columns .tablet-arrow .main-navigation__open-sub-menu-link {
-        top: -@nav-height;
-        height: @nav-height;
+        top: -@nav-height-md;
+        height: @nav-height-md;
     }
 
     .touch ._dropdown-menu-with-columns .main-navigation__item._sub._open-tablet-dropdown > .main-navigation__item-link {
@@ -8819,7 +8823,7 @@ div.awesomplete li[aria-selected="true"] mark {
     .touch ._dropdown-menu-with-columns .main-navigation__item._sub._open-tablet-dropdown > .main-navigation__item-link:before {
         content: '';
         position: absolute;
-        top: 52px;
+        bottom: 0;
         left: 50%;
         margin-left: -8px;
         width: 0;
