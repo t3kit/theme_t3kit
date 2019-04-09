@@ -19,7 +19,10 @@ themes.configuration.features.searchTargetPage = 71
 
 # customsubcategory=news= News configuration
 # cat=theme,advanced/news/; type=int+; label= News default detail page id
-themes.configuration.features.newsDefaultDetailPid = 42
+themes.configuration.features.newsDefaultDetailPid = 44
+# customsubcategory=news= News configuration
+# cat=theme,advanced/news/; type=int+; label= News storage PID
+themes.configuration.features.newsStoragePid = 41
 
 # customsubcategory=maps= Google map configuration
 # cat=theme,advanced/maps; type=string; label= Google map api url (api key required)
