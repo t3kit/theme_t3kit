@@ -605,10 +605,12 @@
 .main-navigation__open-sub-menu-link:after {
   transform: rotate(90deg);
 }
-._open-mobile-dropdown > .main-navigation__open-sub-menu-link:before {
+._open-mobile-dropdown > .main-navigation__open-sub-menu-link:before,
+._open-mobile-dropdown > .tablet-arrow > .main-navigation__open-sub-menu-link:before {
   transform: rotate(45deg);
 }
-._open-mobile-dropdown > .main-navigation__open-sub-menu-link:after {
+._open-mobile-dropdown > .main-navigation__open-sub-menu-link:after,
+._open-mobile-dropdown > .tablet-arrow > .main-navigation__open-sub-menu-link:after {
   transform: rotate(135deg);
 }
 .main-navigation__sub-item > .main-navigation__open-sub-menu-link {
