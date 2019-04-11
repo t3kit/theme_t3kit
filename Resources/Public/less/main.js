@@ -14,8 +14,10 @@ jQuery(function ($) {
   var $dropdownMenuWithColumns = $('.js__dropdown-menu-with-columns .js__main-navigation__item._sub')
 
   if (!touchSupport) {
-    $dropdownMenuWithColumns.hover(function () {
-      $(this).toggleClass('open')
+    $dropdownMenuWithColumns.mouseenter(function () {
+      $(this).addClass('open')
+    }).mouseleave(function () {
+      $(this).removeClass('open')
     })
   }
 
