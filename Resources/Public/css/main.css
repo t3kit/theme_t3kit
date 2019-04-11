@@ -817,6 +817,7 @@
     visibility: visible;
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    z-index: 3000;
   }
   .touch .main-navigation__item._sub .main-navigation__open-sub-menu-link:before {
     /* use !important to prevent issues with browser extensions that change fonts */
