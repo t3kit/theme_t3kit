@@ -7,8 +7,8 @@
                 <target>Du er her</target>
             </trans-unit>
             <trans-unit id="languageMenu_label" xml:space="preserve">
-                <source>Språk:</source>
-                <target>Språk:</target>
+                <source>Språk</source>
+                <target>Språk</target>
             </trans-unit>
             <trans-unit id="imprint_label" xml:space="preserve">
                 <source>Om nettstedet</source>
