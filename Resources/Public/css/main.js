@@ -148,18 +148,24 @@ jQuery(function ($) {
     $mainNavigationSearchBtn.toggleClass('_search-close-btn')
     $mainNavigationSearchBox.toggleClass('_search-box-visible')
   })
+
   $languageMenuBtn.on('click', function (e) {
     e.preventDefault()
     $languageMenuBox.addClass('_language-menu-box-visible')
-    $languageMenuOverlay.toggleClass('_language-menu-box-overlay-visible')
-    $metaNavigationNav.addClass('hidden')
+    $languageMenuOverlay.addClass('_language-menu-box-overlay-visible')
+
+    // hide meta-navigation if showHeaderTopLangMenu = 1
+    if ($('.header-top .js__header-top__language-menu-box').length) {
+      $metaNavigationNav.addClass('hidden')
+    }
   })
   $languageMenuOverlay.on('click', function () {
-    $(this).toggleClass('_language-menu-box-overlay-visible')
+    $(this).removeClass('_language-menu-box-overlay-visible')
     $languageMenuBox.removeClass('_language-menu-box-visible')
+    $metaNavigationNav.removeClass('hidden')
   })
   $languageMenuBoxCloseBtn.on('click', function () {
-    $languageMenuOverlay.toggleClass('_language-menu-box-overlay-visible')
+    $languageMenuOverlay.removeClass('_language-menu-box-overlay-visible')
     $languageMenuBox.removeClass('_language-menu-box-visible')
     $metaNavigationNav.removeClass('hidden')
   })
