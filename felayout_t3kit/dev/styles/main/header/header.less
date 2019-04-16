@@ -356,7 +356,7 @@
 @media (min-width: @screen-sm-min) {
     .header-middle__logo {
         float: left;
-        width: 40%;
+        width: auto;
         text-align: left;
     }
 
@@ -906,6 +906,21 @@
 // =================================
 // Search
 
+// .tx-solr-searchbox contains .main-navigation__search-btn and .main-navigation__search-box
+// by setting it to relative position, the search-field can now float (responsive)
+.header-top-wrp .tx-solr-searchbox,
+.main-navigation .tx-solr-searchbox {
+    position: relative;
+    float: right;
+}
+
+@media (max-width: @screen-sm-max) {
+    // removes relative position to make header-top searchbox full width
+    .header-top-wrp .tx-solr-searchbox {
+        position: initial;
+    }
+}
+
 .main-navigation__search-btn-wrp {
     display: none;
     float: right;
@@ -1106,33 +1121,22 @@
 .main-navigation__search-box {
     position: relative;
     height: @nav-height;
-    width: 100%;
-    top: 0;
+    width: 100vw;
+    bottom: 0;
     left: auto;
     right: 0;
     z-index: 3000;
 }
 
-@media (min-width: @screen-sm-min) {
-    .main-navigation__search-box {
-        // width: 50%;
-    }
-}
-
 @media (min-width: @screen-md-min) {
+    // search-box in both header-top and main-navigation
     .main-navigation__search-box {
-        width: 46%;
+        width: 450px;
         position: absolute;
         right: 60px;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s 0s, visibility 0s 0.3s;
-    }
-}
-
-@media (min-width: @screen-lg-min) {
-    .main-navigation__search-box {
-        width: 36%;
     }
 }
 
