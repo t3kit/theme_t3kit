@@ -136,17 +136,20 @@ jQuery(function ($) {
 
   $mainNavigationSearchBtn.on('click', function (e) {
     e.preventDefault()
-    $(this).toggleClass('_search-close-btn')
     $mainNavigationSearchBox.toggleClass('_search-box-visible')
     if ($mainNavigationSearchBox.hasClass('_search-box-visible')) {
       $mainNavigationSearchBox.find('input[type="search"]').focus()
+      $mainNavigationSearchBtn.addClass('_search-close-btn')
+      $mainNavigationSearchBoxOverlay.addClass('_search-box-overlay-visible')
+    } else {
+      $mainNavigationSearchBtn.removeClass('_search-close-btn')
+      $mainNavigationSearchBoxOverlay.removeClass('_search-box-overlay-visible')
     }
-    $mainNavigationSearchBoxOverlay.toggleClass('_search-box-overlay-visible')
   })
   $mainNavigationSearchBoxOverlay.on('click', function () {
-    $(this).toggleClass('_search-box-overlay-visible')
-    $mainNavigationSearchBtn.toggleClass('_search-close-btn')
-    $mainNavigationSearchBox.toggleClass('_search-box-visible')
+    $(this).removeClass('_search-box-overlay-visible')
+    $mainNavigationSearchBtn.removeClass('_search-close-btn')
+    $mainNavigationSearchBox.removeClass('_search-box-visible')
   })
 
   $languageMenuBtn.on('click', function (e) {
