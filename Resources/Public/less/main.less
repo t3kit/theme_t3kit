@@ -2954,7 +2954,6 @@
     transform: scale(1, 0);
     transition: -webkit-transform 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, max-height 0.2s linear;
     transition: transform 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, max-height 0.2s linear;
-    z-index: 3000;
 }
 
 @media (max-width: @screen-sm-max) {
@@ -3151,6 +3150,7 @@
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        z-index: 3000;
     }
 
     .touch .main-navigation__item._sub .main-navigation__open-sub-menu-link:before {

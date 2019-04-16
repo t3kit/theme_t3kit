@@ -632,7 +632,6 @@
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, max-height 0.2s linear;
-  z-index: 3000;
 }
 @media (max-width: 991px) {
   ._open-mobile-dropdown > .main-navigation__sub-item-list {
@@ -818,6 +817,7 @@
     visibility: visible;
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    z-index: 3000;
   }
   .touch .main-navigation__item._sub .main-navigation__open-sub-menu-link:before {
     /* use !important to prevent issues with browser extensions that change fonts */
