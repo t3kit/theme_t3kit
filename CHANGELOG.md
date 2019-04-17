@@ -1,4 +1,23 @@
 
+#### v2.10.1 `April 17, 2019`
+
+- **[BUGFIX]** - search-button in main-navigation is hidden under search-box when language-menu-box is enabled. (#508) ([eff2552](https://github.com/t3kit/theme_t3kit/commit/eff2552))
+- **[BUGFIX]** mobile: no expanded submenu cross in main-navigation when using dropdownColumns (#514) ([29a26e5](https://github.com/t3kit/theme_t3kit/commit/29a26e5))
+- **[BUGFIX]** searchBtn/searchBox toggle rewrite. (#515) ([08b1ecd](https://github.com/t3kit/theme_t3kit/commit/08b1ecd))
+- **[BUGFIX]** language menu in main-nav alignment when using dropdownColumns (#516) ([f28b2cd](https://github.com/t3kit/theme_t3kit/commit/f28b2cd))
+- **[BUGFIX]** Main Navigation dropdown hover flickering between dropdowns. (#512) ([ac34c19](https://github.com/t3kit/theme_t3kit/commit/ac34c19))
+- **[BUGFIX]** ie11 and edge social-icons underline fix (#521) ([50c2e52](https://github.com/t3kit/theme_t3kit/commit/50c2e52))
+- **[BUGFIX]** hovering on dropdownColumns before js has loaded will invert the toggle-effect (#510) ([bb66922](https://github.com/t3kit/theme_t3kit/commit/bb66922))
+- **[BUGFIX]** If search button is clicked (in header-top or main-navigation) before js is loaded, user is sent to index-page. Similar fix for language-menu-btn. Removal of double attribute (data-search) in tag. (#509) ([a7142b3](https://github.com/t3kit/theme_t3kit/commit/a7142b3))
+- **[BUGFIX]** Meta navigation hidden when using language menu in main-naivgation. Doesn't reappear when clicking languageMenuOverlay to close it. (#518) ([9bf7fd3](https://github.com/t3kit/theme_t3kit/commit/9bf7fd3))
+- **[BUGFIX]** removal of colon in languageMenu_label (#520) ([a83f289](https://github.com/t3kit/theme_t3kit/commit/a83f289))
+- **[TASK]** add sitemap config for News records ([6f02333](https://github.com/t3kit/theme_t3kit/commit/6f02333))
+- **[BUGFIX]** add video (internal, vimeo, youtube) support for different news list views (#501) ([45cc3c3](https://github.com/t3kit/theme_t3kit/commit/45cc3c3))
+- **[BUGFIX]** news-single page navigation 'next record link' aligned to left when no 'previous record link'. (#500) ([3422e9d](https://github.com/t3kit/theme_t3kit/commit/3422e9d))
+- **[BUGFIX]** language menu item should not be clickable in case language is unavailable (#498) ([0a2df0b](https://github.com/t3kit/theme_t3kit/commit/0a2df0b))
+
+***
+
 #### v2.10.0 `March 19, 2019`
 
 - **[TASK]** fix spelling of swedish label (#496) ([f000bed](https://github.com/t3kit/theme_t3kit/commit/f000bed))
