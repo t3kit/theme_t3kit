@@ -12,6 +12,16 @@
 				</TCEforms>
 				<type>array</type>
 				<el>
+					<overrideThemeConstants>
+						<TCEforms>
+							<label>
+								LLL:EXT:theme_t3kit/Resources/Private/Language/ContentElements.xlf:socialIcons.flexform.overrideThemeConstants
+							</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</overrideThemeConstants>
 					<facebookLink>
 						<TCEforms>
 							<label>

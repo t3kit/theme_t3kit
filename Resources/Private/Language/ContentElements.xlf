@@ -398,6 +398,9 @@
 			<trans-unit id="socialIcons.flexform.mynewsdeskLink">
 				<source>Mynewsdesk: Pagelink</source>
 			</trans-unit>
+			<trans-unit id="socialIcons.flexform.overrideThemeConstants">
+				<source>Override theme constants</source>
+			</trans-unit>
 
 			<!--CopyrightText Element-->
 			<trans-unit id="copyrightText.title">

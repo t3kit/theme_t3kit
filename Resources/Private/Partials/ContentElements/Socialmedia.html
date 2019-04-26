@@ -4,145 +4,181 @@
 	<f:section name="Default">
 		<!-- theme_t3kit: Partials/Footer/Socialmedia.html [begin] -->
 		<div class="social-icons">
-			<f:comment><!-- facebookLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useFacebook')}">
-				<f:if condition="{settings.facebookLink}">
-					<f:then>
-						<f:variable name="facebookLink">{settings.facebookLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="facebookLink">{theme:constant(constant:'themes.configuration.socialmedia.facebookLink')}</f:variable>
+			<f:if condition="{settings.overrideThemeConstants}">
+				<f:then>
+					<f:comment><!-- facebookLink --></f:comment>
+					<f:variable name="facebookLink">{settings.facebookLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: facebookLink, linkTitle: 'Facebook', iconClass: 'icons icon-t3-facebook'}"/>
+					<f:comment><!-- twitterLink --></f:comment>
+					<f:variable name="twitterLink">{settings.twitterLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: twitterLink, linkTitle: 'Twitter', iconClass: 'icons icon-t3-twitter'}"/>
+					<f:comment><!-- linkedInLink --></f:comment>
+					<f:variable name="linkedInLink">{settings.linkedInLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: linkedInLink, linkTitle: 'LinkedIn', iconClass: 'icons icon-t3-linkedin'}"/>
+					<f:comment><!-- xingLink --></f:comment>
+					<f:variable name="xingLink">{settings.xingLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: xingLink, linkTitle: 'Xing', iconClass: 'icons icon-t3-xing'}"/>
+					<f:comment><!-- vimeoLink --></f:comment>
+					<f:variable name="vimeoLink">{settings.vimeoLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: vimeoLink, linkTitle: 'Vimeo', iconClass: 'icons icon-t3-vimeo'}"/>
+					<f:comment><!-- googlePlusLink --></f:comment>
+					<f:variable name="googlePlusLink">{settings.googlePlusLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: googlePlusLink, linkTitle: 'Googleplus', iconClass: 'icons icon-t3-googleplus'}"/>
+					<f:comment><!-- pinterestLink --></f:comment>
+					<f:variable name="pinterestLink">{settings.pinterestLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: pinterestLink, linkTitle: 'Pinterest', iconClass: 'icons icon-t3-pinterest'}"/>
+					<f:comment><!-- instagramLink --></f:comment>
+					<f:variable name="instagramLink">{settings.instagramLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: instagramLink, linkTitle: 'Instagram', iconClass: 'icons icon-t3-instagram'}"/>
+					<f:comment><!-- youtubeLink --></f:comment>
+					<f:variable name="youtubeLink">{settings.youtubeLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: youtubeLink, linkTitle: 'Youtube', iconClass: 'icons icon-t3-youtube'}"/>
+					<f:comment><!-- mynewsdeskLink --></f:comment>
+					<f:variable name="mynewsdeskLink">{settings.mynewsdeskLink}</f:variable>
+					<f:render section="SocialmediaLink" arguments="{linkHref: mynewsdeskLink, linkTitle: 'Mynewsdesk', iconClass: 'icons icon-t3-mynewsdesk'}"/>
+				</f:then>
+				<f:else>
+					<f:comment><!-- facebookLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useFacebook')}">
+						<f:if condition="{settings.facebookLink}">
+							<f:then>
+								<f:variable name="facebookLink">{settings.facebookLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="facebookLink">{theme:constant(constant:'themes.configuration.socialmedia.facebookLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: facebookLink, linkTitle: 'Facebook', iconClass: 'icons icon-t3-facebook'}"/>
-			</f:if>
-			<f:comment><!-- twitterLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useTwitter')}">
-				<f:if condition="{settings.twitterLink}">
-					<f:then>
-						<f:variable name="twitterLink">{settings.twitterLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="twitterLink">{theme:constant(constant:'themes.configuration.socialmedia.twitterLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: facebookLink, linkTitle: 'Facebook', iconClass: 'icons icon-t3-facebook'}"/>
+					</f:if>
+					<f:comment><!-- twitterLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useTwitter')}">
+						<f:if condition="{settings.twitterLink}">
+							<f:then>
+								<f:variable name="twitterLink">{settings.twitterLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="twitterLink">{theme:constant(constant:'themes.configuration.socialmedia.twitterLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: twitterLink, linkTitle: 'Twitter', iconClass: 'icons icon-t3-twitter'}"/>
-			</f:if>
-			<f:comment><!-- linkedInLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useLinkedIn')}">
-				<f:if condition="{settings.linkedInLink}">
-					<f:then>
-						<f:variable name="linkedInLink">{settings.linkedInLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="linkedInLink">{theme:constant(constant:'themes.configuration.socialmedia.linkedInLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: twitterLink, linkTitle: 'Twitter', iconClass: 'icons icon-t3-twitter'}"/>
+					</f:if>
+					<f:comment><!-- linkedInLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useLinkedIn')}">
+						<f:if condition="{settings.linkedInLink}">
+							<f:then>
+								<f:variable name="linkedInLink">{settings.linkedInLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="linkedInLink">{theme:constant(constant:'themes.configuration.socialmedia.linkedInLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: linkedInLink, linkTitle: 'LinkedIn', iconClass: 'icons icon-t3-linkedin'}"/>
-			</f:if>
-			<f:comment><!-- xingLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useXing')}">
-				<f:if condition="{settings.xingLink}">
-					<f:then>
-						<f:variable name="xingLink">{settings.xingLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="xingLink">{theme:constant(constant:'themes.configuration.socialmedia.xingLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: linkedInLink, linkTitle: 'LinkedIn', iconClass: 'icons icon-t3-linkedin'}"/>
+					</f:if>
+					<f:comment><!-- xingLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useXing')}">
+						<f:if condition="{settings.xingLink}">
+							<f:then>
+								<f:variable name="xingLink">{settings.xingLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="xingLink">{theme:constant(constant:'themes.configuration.socialmedia.xingLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: xingLink, linkTitle: 'Xing', iconClass: 'icons icon-t3-xing'}"/>
-			</f:if>
-			<f:comment><!-- vimeoLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useVimeo')}">
-				<f:if condition="{settings.vimeoLink}">
-					<f:then>
-						<f:variable name="vimeoLink">{settings.vimeoLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="vimeoLink">{theme:constant(constant:'themes.configuration.socialmedia.vimeoLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: xingLink, linkTitle: 'Xing', iconClass: 'icons icon-t3-xing'}"/>
+					</f:if>
+					<f:comment><!-- vimeoLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useVimeo')}">
+						<f:if condition="{settings.vimeoLink}">
+							<f:then>
+								<f:variable name="vimeoLink">{settings.vimeoLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="vimeoLink">{theme:constant(constant:'themes.configuration.socialmedia.vimeoLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: vimeoLink, linkTitle: 'Vimeo', iconClass: 'icons icon-t3-vimeo'}"/>
-			</f:if>
-			<f:comment><!-- googlePlusLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useGooglePlus')}">
-				<f:if condition="{settings.googlePlusLink}">
-					<f:then>
-						<f:variable name="googlePlusLink">{settings.googlePlusLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="googlePlusLink">{theme:constant(constant:'themes.configuration.socialmedia.googlePlusLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: vimeoLink, linkTitle: 'Vimeo', iconClass: 'icons icon-t3-vimeo'}"/>
+					</f:if>
+					<f:comment><!-- googlePlusLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useGooglePlus')}">
+						<f:if condition="{settings.googlePlusLink}">
+							<f:then>
+								<f:variable name="googlePlusLink">{settings.googlePlusLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="googlePlusLink">{theme:constant(constant:'themes.configuration.socialmedia.googlePlusLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: googlePlusLink, linkTitle: 'Googleplus', iconClass: 'icons icon-t3-googleplus'}"/>
-			</f:if>
-			<f:comment><!-- pinterestLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.usePinterest')}">
-				<f:if condition="{settings.pinterestLink}">
-					<f:then>
-						<f:variable name="pinterestLink">{settings.pinterestLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="pinterestLink">{theme:constant(constant:'themes.configuration.socialmedia.pinterestLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: googlePlusLink, linkTitle: 'Googleplus', iconClass: 'icons icon-t3-googleplus'}"/>
+					</f:if>
+					<f:comment><!-- pinterestLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.usePinterest')}">
+						<f:if condition="{settings.pinterestLink}">
+							<f:then>
+								<f:variable name="pinterestLink">{settings.pinterestLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="pinterestLink">{theme:constant(constant:'themes.configuration.socialmedia.pinterestLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: pinterestLink, linkTitle: 'Pinterest', iconClass: 'icons icon-t3-pinterest'}"/>
-			</f:if>
-			<f:comment><!-- instagramLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useInstagram')}">
-				<f:if condition="{settings.instagramLink}">
-					<f:then>
-						<f:variable name="instagramLink">{settings.instagramLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="instagramLink">{theme:constant(constant:'themes.configuration.socialmedia.instagramLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: pinterestLink, linkTitle: 'Pinterest', iconClass: 'icons icon-t3-pinterest'}"/>
+					</f:if>
+					<f:comment><!-- instagramLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useInstagram')}">
+						<f:if condition="{settings.instagramLink}">
+							<f:then>
+								<f:variable name="instagramLink">{settings.instagramLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="instagramLink">{theme:constant(constant:'themes.configuration.socialmedia.instagramLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: instagramLink, linkTitle: 'Instagram', iconClass: 'icons icon-t3-instagram'}"/>
-			</f:if>
-			<f:comment><!-- youtubeLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useYoutube')}">
-				<f:if condition="{settings.youtubeLink}">
-					<f:then>
-						<f:variable name="youtubeLink">{settings.youtubeLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="youtubeLink">{theme:constant(constant:'themes.configuration.socialmedia.youtubeLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: instagramLink, linkTitle: 'Instagram', iconClass: 'icons icon-t3-instagram'}"/>
+					</f:if>
+					<f:comment><!-- youtubeLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useYoutube')}">
+						<f:if condition="{settings.youtubeLink}">
+							<f:then>
+								<f:variable name="youtubeLink">{settings.youtubeLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="youtubeLink">{theme:constant(constant:'themes.configuration.socialmedia.youtubeLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: youtubeLink, linkTitle: 'Youtube', iconClass: 'icons icon-t3-youtube'}"/>
-			</f:if>
-			<f:comment><!-- mynewsdeskLink --></f:comment>
-			<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useMynewsdesk')}">
-				<f:if condition="{settings.mynewsdeskLink}">
-					<f:then>
-						<f:variable name="mynewsdeskLink">{settings.mynewsdeskLink}</f:variable>
-					</f:then>
-					<f:else>
-						<f:if condition="{allowLinksFromConstants}">
-							<f:variable name="mynewsdeskLink">{theme:constant(constant:'themes.configuration.socialmedia.mynewsdeskLink')}</f:variable>
+						<f:render section="SocialmediaLink" arguments="{linkHref: youtubeLink, linkTitle: 'Youtube', iconClass: 'icons icon-t3-youtube'}"/>
+					</f:if>
+					<f:comment><!-- mynewsdeskLink --></f:comment>
+					<f:if condition="{theme:constant(constant:'themes.configuration.socialmedia.useMynewsdesk')}">
+						<f:if condition="{settings.mynewsdeskLink}">
+							<f:then>
+								<f:variable name="mynewsdeskLink">{settings.mynewsdeskLink}</f:variable>
+							</f:then>
+							<f:else>
+								<f:if condition="{allowLinksFromConstants}">
+									<f:variable name="mynewsdeskLink">{theme:constant(constant:'themes.configuration.socialmedia.mynewsdeskLink')}</f:variable>
+								</f:if>
+							</f:else>
 						</f:if>
-					</f:else>
-				</f:if>
-				<f:render section="SocialmediaLink" arguments="{linkHref: mynewsdeskLink, linkTitle: 'Mynewsdesk', iconClass: 'icons icon-t3-mynewsdesk'}"/>
+						<f:render section="SocialmediaLink" arguments="{linkHref: mynewsdeskLink, linkTitle: 'Mynewsdesk', iconClass: 'icons icon-t3-mynewsdesk'}"/>
+					</f:if>
+				</f:else>
 			</f:if>
 		</div>
 		<!-- theme_t3kit: Partials/Footer/Socialmedia.html [end] -->
