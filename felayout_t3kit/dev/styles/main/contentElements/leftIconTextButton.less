@@ -10,11 +10,13 @@
 }
 
 .icon-text-btn__icon {
+    float: left;
+    margin-top: -0.5em;
     padding: 10px;
     border: 2px solid tint(@main-color, 70%);
     border-radius: 50%;
     color: @main-color;
-    margin-right: 10px;
+    margin-right: 16px;
     margin-bottom: 4px;
     display: inline-block;
 }
@@ -45,6 +47,16 @@
 
 .icon-text-btn__p {
     margin-bottom: 18px;
+}
+
+.icon-text-btn__header {
+    padding-top: 0.5em;
+
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
 }
 
 .icon-text-btn__sham-link {

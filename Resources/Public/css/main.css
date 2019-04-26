@@ -2821,11 +2821,13 @@ div.awesomplete li[aria-selected="true"] mark {
   margin: 0 -15px;
 }
 .icon-text-btn__icon {
+  float: left;
+  margin-top: -0.5em;
   padding: 10px;
   border: 2px solid #cbe9f3;
   border-radius: 50%;
   color: #50b4d8;
-  margin-right: 10px;
+  margin-right: 16px;
   margin-bottom: 4px;
   display: inline-block;
 }
@@ -2860,6 +2862,14 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 .icon-text-btn__p {
   margin-bottom: 18px;
+}
+.icon-text-btn__header {
+  padding-top: 0.5em;
+}
+.icon-text-btn__header:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 .icon-text-btn__sham-link {
   color: #50b4d8;
