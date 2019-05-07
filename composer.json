@@ -31,9 +31,17 @@
   "minimum-stability": "dev",
   "require": {
     "php": "^7.2",
-    "typo3/minimal": "^9.3",
-    "gridelementsteam/gridelements": "dev-master",
-    "georgringer/news": "dev-master"
+    "typo3/cms-backend": "~9.5.1",
+    "typo3/cms-core": "~9.5.1",
+    "typo3/cms-extbase": "~9.5.1",
+    "typo3/cms-extensionmanager": "~9.5.1",
+    "typo3/cms-fluid": "~9.5.1",
+    "typo3/cms-frontend": "~9.5.1",
+    "typo3/cms-install": "~9.5.1",
+    "typo3/cms-fluid-styled-content": "~9.5.1",
+    "typo3/cms-rte-ckeditor": "~9.5.1",
+    "typo3/cms-form": "~9.5.1",
+    "typo3/cms-felogin": "~9.5.1",
   },
   "suggest": {
     "apache-solr-for-typo3/solr": "dev-master"
