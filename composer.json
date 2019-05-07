@@ -41,7 +41,7 @@
     "typo3/cms-fluid-styled-content": "~9.5.1",
     "typo3/cms-rte-ckeditor": "~9.5.1",
     "typo3/cms-form": "~9.5.1",
-    "typo3/cms-felogin": "~9.5.1",
+    "typo3/cms-felogin": "~9.5.1"
   },
   "suggest": {
     "apache-solr-for-typo3/solr": "dev-master"
