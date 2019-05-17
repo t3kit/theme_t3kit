@@ -71,7 +71,7 @@ plugin.tx_solr {
 #plugin.tx_solr.search.results.pagebrowser.pagesAfter = 2
 
 ## Test to enable solr features to see if template is correct
-plugin.tx_solr.statistics = 1
+plugin.tx_solr.statistics = 0
 #plugin.tx_solr.search.frequentSearches = 1
 #plugin.tx_solr.search.lastSearches = 1
 #plugin.tx_solr.logging.query.searchWords = 1
