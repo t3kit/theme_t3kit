@@ -1,4 +1,12 @@
 
+#### v2.10.2 `May 21, 2019`
+
+- **[BUGFIX]** fix header layout in Collapsible CE ([d24ee44](https://github.com/t3kit/theme_t3kit/commit/d24ee44))
+- **[TASK]** update gridelements to v9.2.1 ([e042647](https://github.com/t3kit/theme_t3kit/commit/e042647))
+- **[TASK]** turn of solr statistics by default fix#522 ([d52e264](https://github.com/t3kit/theme_t3kit/commit/d52e264))
+
+***
+
 #### v2.10.1 `April 17, 2019`
 
 - **[BUGFIX]** - search-button in main-navigation is hidden under search-box when language-menu-box is enabled. (#508) ([eff2552](https://github.com/t3kit/theme_t3kit/commit/eff2552))
