@@ -2,15 +2,13 @@
 <f:section name="Main">
 	<div class="panel panel-default {layoutClass} {alignClass}">
 		<div class="panel-heading" role="tab" id="heading-{data.uid}">
-            <f:variable name="parentHeader">{data.parentgrid_header_layout}</f:variable>
-            <f:render partial="Header/Header" arguments="{
-				header: '{f:render(section: \'accordionLink\', arguments: \'{_all}\')}',
-                layout: '{f:if(condition:\'{parentHeader} > 0 && {parentHeader} < 6 \', then:\'{parentHeader + 1}\')}',
-				positionClass: 'panel-title',
-				link: '',
-				uid: '{data.uid}',
-				default: 4
-				}" />
+			<f:render partial="Header/Header" arguments="{
+				header: '{f:render(section: \'accordionLink\', arguments: \'{_all}\')}', 
+				layout: '{data.header_layout}',
+				positionClass: 'panel-title', 
+				link: '', 
+				uid: '{data.uid}', 
+				default: 4 }" />
 		</div>
 		<div id="collapse-{data.uid}" class="panel-collapse collapse {f:if(condition: data.pi_flexform.data.columns.lDEF.expanded.vDEF, then: 'in', else: '')}" role="tabpanel">
 			<div class="panel-body">
