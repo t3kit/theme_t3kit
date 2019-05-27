@@ -26,6 +26,18 @@
     {
       "type": "composer",
       "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/t3kit/themes"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/t3kit/TYPO3.dyncss"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/t3kit/TYPO3.dyncss_less"
     }
   ],
   "minimum-stability": "dev",
@@ -44,6 +56,9 @@
     "typo3/cms-form": "~9.5.1",
     "typo3/cms-felogin": "~9.5.1",
 
+    "typo3-themes/themes": "dev-typo3_9.x",
+    "kaystrobach/dyncss": "dev-typo3_9.x",
+    "kaystrobach/dyncss-less": "dev-typo3_9.x",
 
     "gridelementsteam/gridelements": "~9.2.1",
     "clickstorm/go_maps_ext": "~3.1.0",
