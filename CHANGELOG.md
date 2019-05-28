@@ -1,4 +1,12 @@
 
+#### v2.10.3 `May 28, 2019`
+
+- **[TASK]** update frontend_editing to v1.5.0 ([36009f3](https://github.com/t3kit/theme_t3kit/commit/36009f3))
+- **[BUGFIX]** fix the order of required extensions ([b282b92](https://github.com/t3kit/theme_t3kit/commit/b282b92))
+- **[TASK]** add Dyncss and Themes as a theme_t3kit deps ([d061bc7](https://github.com/t3kit/theme_t3kit/commit/d061bc7))
+
+***
+
 #### v2.10.2 `May 21, 2019`
 
 - **[BUGFIX]** fix header layout in Collapsible CE ([d24ee44](https://github.com/t3kit/theme_t3kit/commit/d24ee44))
