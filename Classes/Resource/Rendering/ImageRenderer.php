@@ -203,8 +203,11 @@ class ImageRenderer implements FileRendererInterface
                     $localProcessingConfiguration
                 );
 
-                $url = $configuration->getAbsRefPrefix() . $processedFile->getPublicUrl();
-                var_dump($url, $processedFile->getPublicUrl());
+                $url = $processedFile->getPublicUrl();
+                if(!GeneralUtility::isValidUrl($url)) {
+                    $url = $configuration->getAbsRefPrefix() . $url;
+                }
+
                 $this->data['data-' . $sourceCollection['dataKey']] = $url;
                 $this->srcset[] = $url . rtrim(' ' . $sourceCollection['srcset'] ?: '');
             } catch (\Exception $ignoredException) {
