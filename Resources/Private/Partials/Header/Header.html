@@ -5,7 +5,7 @@
 
 <!-- theme_t3kit: Partials/Header/Header.html [begin] -->
 
-<header class="header">
+<header class="header {f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.mobileNavigationToBottom\')} == 1', then: 'header-top__bottom')}">
 	<div class="header-top-wrp">
 
 		<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}">
