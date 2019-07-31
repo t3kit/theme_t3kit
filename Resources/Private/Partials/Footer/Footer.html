@@ -6,7 +6,7 @@
 <!-- theme_t3kit: Partials/Footer/Footer.html [begin] -->
 
 
-<footer class="footer" role="contentinfo">
+<footer class="footer  {f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.mobileNavigationToBottom\')} == 1', then: 'mobile-nav__bottom')}" role="contentinfo">
 	
 	<f:comment>H2 is needed to provide valid HTML structure https://www.w3.org/WAI/tutorials/page-structure/headings/</f:comment>
 	<h2 class="sr-only"><f:translate key="footer.firstHeadline" extensionName="theme_t3kit"/></h2>
