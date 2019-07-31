@@ -124,6 +124,11 @@
   }
 }
 @media (max-width: 991px) {
+  .header-top__bottom > .main-navigation__toggle-btn {
+    bottom: 0;
+    top: auto;
+    z-index: 5001;
+  }
   .header-top__bottom .header-top-wrp {
     position: static;
     padding-bottom: 0;
