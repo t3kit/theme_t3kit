@@ -147,6 +147,10 @@
   .header-top__bottom .main-navigation__items-wrp {
     display: block !important;
   }
+  .header-top__bottom .header-top__language-menu-box {
+    top: auto;
+    bottom: 0;
+  }
   .mobile-menu-opened .header-top__bottom .main-navigation__items-wrp {
     padding-bottom: 50px !important;
   }
