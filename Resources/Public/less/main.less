@@ -2321,6 +2321,43 @@
     }
 }
 
+@media (max-width: @screen-sm-max) {
+    .header-top__bottom {
+        .header-top-wrp {
+            position: static;
+            padding-bottom: 0;
+        }
+
+        .header-top {
+            bottom: 0;
+        }
+
+        .main-navigation {
+            transform: translateY(100vh);
+            transition: transform 0.3s ease;
+            height: calc(~"100vh - @{header-top-height}");
+            min-height: calc(~"100vh - @{header-top-height}");
+            z-index: 5000;
+            top: 0;
+        }
+
+        .main-navigation__items-wrp {
+            display: block !important;
+        }
+    }
+
+    .mobile-menu-opened .header-top__bottom {
+        .main-navigation__items-wrp {
+            padding-bottom: @header-top-height !important;
+        }
+
+        .main-navigation {
+            transform: translateY(0);
+            top: 0;
+        }
+    }
+}
+
 .header-top {
     background: @header-top-bg-color;
     position: fixed;
@@ -3738,6 +3775,17 @@
 
 .no-touch .footer a:hover {
     color: @footer-link-hover-color;
+}
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+// === Footer space mobile navigation is placed on bottom ===========
+// ==================================================================
+@media (max-width: @screen-sm-max) {
+    .footer.mobile-nav__bottom {
+        margin-bottom: @header-top-height;
+    }
 }
 
 // -----------------------------------------------------------------------------
