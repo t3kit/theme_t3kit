@@ -20,7 +20,7 @@ themes.configuration.menu.main.navbarPos = left
 themes.configuration.menu.main.enableLogoInNavigation = 0
 # cat=menu,advanced/main_menu; type=options[0,1]; label= Enable LangMenu in navigation menu
 themes.configuration.menu.main.enableLangMenuInNavigation = 0
-# cat=menu,advanced/main_menu; type=options[0,1]; label= Enable Mobile Navigation to bottom
+# cat=menu,advanced/main_menu; type=options[No=0,Yes=1]; label= Move the mobile button to the bottom of the page
 themes.configuration.menu.main.mobileNavigationToBottom = 0
 
 
