@@ -23,54 +23,6 @@
     }
 }
 
-@media (max-width: @screen-sm-max) {
-    .header-top__bottom {
-        & > .main-navigation__toggle-btn {
-            bottom: 0;
-            top: auto;
-            z-index: 5001;
-        }
-
-        .header-top-wrp {
-            position: static;
-            padding-bottom: 0;
-        }
-
-        .header-top {
-            bottom: 0;
-        }
-
-        .main-navigation {
-            transform: translateY(100vh);
-            transition: transform 0.3s ease;
-            height: calc(~"100vh - @{header-top-height}");
-            min-height: calc(~"100vh - @{header-top-height}");
-            z-index: 5000;
-            top: 0;
-        }
-
-        .main-navigation__items-wrp {
-            display: block !important;
-        }
-
-        .header-top__language-menu-box {
-            top: auto;
-            bottom: 0;
-        }
-    }
-
-    .mobile-menu-opened .header-top__bottom {
-        .main-navigation__items-wrp {
-            padding-bottom: @header-top-height !important;
-        }
-
-        .main-navigation {
-            transform: translateY(0);
-            top: 0;
-        }
-    }
-}
-
 .header-top {
     background: @header-top-bg-color;
     position: fixed;
@@ -1434,4 +1386,47 @@
     line-height: @header-middle-search-height;
     margin-left: 2px;
     display: block;
+}
+
+// =================================
+// === Mobile bottom toggle menu  ==
+// =================================
+@media (max-width: @screen-sm-max) {
+    .mobile-nav__bottom {
+        & > .main-navigation__toggle-btn {
+            bottom: 0;
+            top: auto;
+            z-index: 5001;
+        }
+
+        .header-top-wrp {
+            position: static;
+            padding-bottom: 0;
+        }
+
+        .header-top {
+            bottom: 0;
+        }
+
+        .main-navigation__mobile-bottom {
+            transform: translateY(100vh);
+            transition: transform 0.3s ease;
+            height: calc(~"100vh - @{header-top-height}");
+            min-height: calc(~"100vh - @{header-top-height}");
+            z-index: 5000;
+            top: 0;
+        }
+
+        .header-top__language-menu-box {
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    .mobile-menu-opened {
+        .main-navigation__mobile-bottom {
+            transform: translateY(0);
+            top: 0;
+        }
+    }
 }
