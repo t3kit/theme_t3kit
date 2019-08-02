@@ -95,7 +95,7 @@ themes.configuration.less.var.headerBorderColor =
 # customsubcategory=main_menu=Main Menu
 # cat=menu,advanced/main_menu; type=string; label= Navigation Height
 themes.configuration.less.var.navHeight =
-# cat=menu,advanced/main_menu; type=options[left,right]; label= Mobile Navigation Toggle Btn
+# cat=menu,advanced/main_menu; type=options[left,right,bottom_right]; label= Mobile Navigation Toggle Btn
 themes.configuration.less.var.mobileNavToggleBtn = left
 
 # customsubcategory=header_main_menu_colors= Main Menu Colors

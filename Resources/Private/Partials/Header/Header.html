@@ -5,7 +5,7 @@
 
 <!-- theme_t3kit: Partials/Header/Header.html [begin] -->
 
-<header class="header {f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.mobileNavigationToBottom\')} == 1', then: 'mobile-nav__bottom')}">
+<header class="header {f:if(condition: '{theme:constant(constant:\'themes.configuration.less.var.mobileNavToggleBtn\')} == \'bottom_right\'', then: 'mobile-nav__bottom')}">
 	<div class="header-top-wrp">
 
 		<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}">
@@ -88,7 +88,7 @@
 		</f:if>
 	</f:if>
 
-	<nav id="main-navigation" class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')} {f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.mobileNavigationToBottom\')} == 1', then: 'main-navigation__mobile-bottom')}">
+	<nav id="main-navigation" class="main-navigation js__main-navigation{f:if(condition: '{theme:constant(constant:\'themes.configuration.menu.main.dropdownColumns\')} == 1', then: ' _dropdown-menu-with-columns js__dropdown-menu-with-columns')} {f:if(condition: '{theme:constant(constant:\'themes.configuration.less.var.mobileNavToggleBtn\')} == \'bottom_right\'', then: 'main-navigation__mobile-bottom')}">
 		<div class="main-navigation__items-wrp js__navigation__items-wrp">
 			<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLogoInNavigation')}">
 				<div class="main-navigation__logo">

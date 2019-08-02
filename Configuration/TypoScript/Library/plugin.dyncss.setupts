@@ -67,6 +67,15 @@ plugin.tx_dyncss.overrides {
     mobile-nav-toggle-btn {
         value = {$themes.configuration.less.var.mobileNavToggleBtn}
         if.isTrue = {$themes.configuration.less.var.mobileNavToggleBtn}
+        value {
+            override = right
+            override {
+                if {
+                    value = bottom_right
+                    equals.dataWrap = {$themes.configuration.less.var.mobileNavToggleBtn}
+                }
+            }
+        }
     }
 
     header-middle-height = TEXT
