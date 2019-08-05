@@ -78,7 +78,7 @@
 <!-- theme_t3kit: Main menu [begin] -->
 
 	<f:if condition="{theme:constant(constant:'themes.configuration.elem.status.showHeaderTop')}==0">
-		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn" >
+		<button type="button" class="main-navigation__toggle-btn js__main-navigation__toggle-btn {f:if(condition: '{theme:constant(constant:\'themes.configuration.less.var.mobileNavToggleBtn\')} == \'bottom_right\'   || {theme:constant(constant:\'themes.configuration.less.var.mobileNavToggleBtn\')} == \'right\'', then: 'navigation-toggle__mobile-right')}" >
 			<span>toggle menu</span>
 		</button>
 		<f:if condition="{theme:constant(constant:'themes.configuration.menu.main.enableLangMenuInNavigation')}">
