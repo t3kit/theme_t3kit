@@ -1281,8 +1281,8 @@
 }
 @media (max-width: 991px) {
   .mobile-nav__bottom > .main-navigation__toggle-btn {
-    bottom: 0;
     top: auto;
+    bottom: 0;
     z-index: 5001;
   }
   .mobile-nav__bottom .header-top-wrp {
