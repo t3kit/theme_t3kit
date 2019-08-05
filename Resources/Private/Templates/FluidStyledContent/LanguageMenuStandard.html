@@ -2,7 +2,7 @@
       xmlns:theme="http://typo3.org/ns/KayStrobach/Themes/ViewHelpers"
       data-namespace-typo3-fluid="true">
 <f:if condition="{languages}">
-    <div class="header-top__language-menu">
+    <div class="header-top__language-menu  {f:if(condition: '{theme:constant(constant:\'themes.configuration.less.var.mobileNavToggleBtn\')} == \'bottom_right\'  || {theme:constant(constant:\'themes.configuration.less.var.mobileNavToggleBtn\')} == \'right\'', then: 'navigation-language__mobile-right')}">
         <f:for each="{languages}" as="language">
             <f:if condition="{language.active}">
                 <a class="header-top__language-menu-btn js__header-top__language-menu-btn" href="#">
