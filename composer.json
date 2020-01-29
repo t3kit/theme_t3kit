@@ -60,7 +60,7 @@
     "kaystrobach/dyncss": "dev-typo3_9.x",
     "kaystrobach/dyncss-less": "dev-typo3_9.x",
 
-    "gridelementsteam/gridelements": "~9.2.1",
+    "gridelementsteam/gridelements": "~9.4.1",
     "clickstorm/go_maps_ext": "~3.1.0",
     "georgringer/news": "~7.1.0",
     "pixelant/pxa-newsletter-subscription": "~9.0.2",
