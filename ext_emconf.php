@@ -15,7 +15,7 @@ $EM_CONF[$_EXTKEY] = array(
     'description' => 'Base TYPO3 Theme fot t3kit project',
     'category' => 'templates',
     'shy' => 0,
-    'version' => '2.10.3',
+    'version' => '2.10.4',
     'dependencies' => '',
     'conflicts' => '',
     'priority' => '',
@@ -39,7 +39,7 @@ $EM_CONF[$_EXTKEY] = array(
             'dyncss_less' => '0.8.0-0.8.99',
             'themes' => '8.7.6-8.7.99',
             'news' => '7.1.0-7.9.99',
-            'frontend_editing' => '1.4.6-1.9.99'
+            'frontend_editing' => '1.4.6-2.9.99'
         ),
         'conflicts' => array(
         ),
